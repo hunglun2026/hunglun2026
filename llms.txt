@@ -12,6 +12,20 @@
 - 信箱：gfeh@hunglun.com
 - 正式官網：https://www.hunglun.com/
 
+## 服務項目分頁（每項服務的完整說明）
+- Google AI Pro for Education 授權導入：https://hunglun-new.pages.dev/services/google-ai-pro.html
+- Google Workspace for Education 導入與認證培訓：https://hunglun-new.pages.dev/services/google-workspace.html
+- 數位學習軟體導入：https://hunglun-new.pages.dev/services/digital-learning.html
+- Chromebook 與智慧教室建置：https://hunglun-new.pages.dev/services/chromebook.html
+- 標案設備採購（台銀共同供應契約）：https://hunglun-new.pages.dev/services/procurement.html
+- AI 應用與客製工具開發：https://hunglun-new.pages.dev/services/ai-development.html
+- 公開資料查詢系統開發：https://hunglun-new.pages.dev/services/open-data.html
+- 校園行政自動化：https://hunglun-new.pages.dev/services/campus-admin.html
+- 客製會員與管理系統：https://hunglun-new.pages.dev/services/member-system.html
+- 品牌形象官網建置：https://hunglun-new.pages.dev/services/brand-website.html
+- SEO／AEO／GEO 搜尋引擎優化：https://hunglun-new.pages.dev/services/seo-aeo-geo.html
+- 官方 LINE 帳號設計：https://hunglun-new.pages.dev/services/line-oa.html
+
 ## 已上線成果
 - [藥品許可證外觀查詢系統](https://lun-med-search.pages.dev/)：22,000+ 筆食藥署藥品資料，看外觀找藥、查仿單 PDF，每日自動更新。
 - [動物用藥許可證查詢](https://lun-vet-rx.pages.dev/)：農業部開放資料近萬筆，免驗證碼即時搜尋，每週自動更新。

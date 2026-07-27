@@ -634,3 +634,50 @@ a:hover { text-decoration: underline; }
 img.logo-dark { display: none; }
 :root[data-theme="dark"] img.logo-light { display: none; }
 :root[data-theme="dark"] img.logo-dark { display: block; }
+
+/* ---------- 服務項目：可點擊卡片（點進去看該服務的獨立說明頁） ---------- */
+a.svc-card { text-decoration: none; color: inherit; }
+a.svc-card:hover { text-decoration: none; }
+a.svc-card:hover h3 { color: var(--accent); }
+.svc-more {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+a.svc-card:hover .svc-more { transform: translateX(3px); }
+.svc-more { transition: transform 0.2s ease; }
+
+/* 服務內頁：麵包屑、CTA 區塊、上下篇導覽 */
+.crumbs {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.crumbs a { color: var(--muted); }
+.crumbs a:hover { color: var(--accent); }
+.svc-cta {
+  margin-top: 48px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+.svc-cta .btn { margin-right: 10px; margin-top: 8px; }
+.svc-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+.svc-pager a { color: var(--muted); }
+.svc-pager a:hover { color: var(--accent); }
+@media (max-width: 640px) {
+  .svc-pager { flex-direction: column; gap: 10px; }
+  .svc-cta { padding: 22px; }
+}
