@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>會員集點系統設計筆記｜鴻綸科技</title>
+<meta name="description" content="會員集點系統知識：集點系統怎麼運作、QR Code集點原理、紙本集點卡vs數位系統比較、店家導入會員系統該注意什麼。鴻綸科技整理的會員系統應用知識。">
+<link rel="canonical" href="https://hunglun-new.pages.dev/knowledge/membership.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="會員集點系統設計筆記｜鴻綸科技">
+<meta property="og:description" content="會員集點系統運作原理、QR Code應用、導入評估完整介紹。">
+<meta property="og:url" content="https://hunglun-new.pages.dev/knowledge/membership.html">
+<meta property="og:image" content="https://hunglun-new.pages.dev/assets/hunglun-logo-dark.png">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=4">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://hunglun-new.pages.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "常見問題", "item": "https://hunglun-new.pages.dev/faq.html" },
+    { "@type": "ListItem", "position": 3, "name": "會員集點系統筆記", "item": "https://hunglun-new.pages.dev/knowledge/membership.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "dateModified": "2026-07-25",
+  "mainEntity": [
+    { "@type": "Question", "name": "數位會員集點系統是怎麼運作的？", "acceptedAnswer": { "@type": "Answer", "text": "數位會員集點系統通常是：顧客用手機掃描店家的 QR Code（或店員掃描顧客的會員條碼）完成集點/消費登記，系統後台自動累積點數與消費紀錄，達到門檻可線上兌換優惠或商品。跟傳統紙本集點卡最大的差別在於：資料不會因為卡片遺失而消失、店家能後台看到會員的消費頻率與偏好，方便規劃行銷活動。" } },
+    { "@type": "Question", "name": "QR Code 集點的原理是什麼？安全嗎？", "acceptedAnswer": { "@type": "Answer", "text": "QR Code 本質上是把一串文字/網址編碼成方形圖案，手機相機掃描後解碼還原成原始內容（通常是連到某個網頁或帶有識別碼的連結）。用在集點系統時，每位會員或每筆交易會產生獨立的 QR Code，掃描後由後台系統核對身分與交易紀錄再加點，只要系統本身有做好身分驗證與防重複掃描機制，就不用擔心被偽造或重複刷點的問題。" } },
+    { "@type": "Question", "name": "紙本集點卡跟數位會員系統該怎麼選？", "acceptedAnswer": { "@type": "Answer", "text": "紙本集點卡優點是製作成本低、顧客不用下載任何東西；缺點是容易遺失、無法蒐集顧客消費數據、也無法主動推播優惠訊息。數位會員系統前期建置成本較高，但長期能累積顧客數據做精準行銷（例如針對常客推送生日優惠）、降低集點卡遺失造成的糾紛。對於想長期經營顧客關係、而不只是做單次促銷的店家，數位系統的投資報酬率通常更高。" } },
+    { "@type": "Question", "name": "會員系統需要顧客額外下載 App 嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不一定。App 型會員系統體驗較完整，但下載門檻會降低顧客使用意願；另一種常見作法是「網頁版會員系統」（Web App），顧客只要用手機瀏覽器打開網址或掃 QR Code 就能直接使用，不用安裝任何東西，對小型店家來說是更輕量、顧客接受度更高的方案。鴻綸科技開發的會員集點系統即採用網頁版架構，雲端部署免維護伺服器，以較低成本讓中小型店家也能擁有自己的數位會員系統。" } },
+    { "@type": "Question", "name": "店家導入會員系統，該規劃哪些角色權限？", "acceptedAnswer": { "@type": "Answer", "text": "常見角色包括：一般會員（查詢自己的點數與消費紀錄）、櫃檯人員（協助掃碼加點、核銷優惠）、店長/管理者（查看整體營運數據、調整優惠規則）、系統管理員（後台維護）。角色權限規劃得當，可以避免櫃檯人員誤動到系統設定，也能讓不同層級的使用者只看到自己需要的功能，降低操作錯誤風險。" } },
+    { "@type": "Question", "name": "小型店家想導入會員集點系統，需要多少預算與時間？", "acceptedAnswer": { "@type": "Answer", "text": "費用主要看功能複雜度：單純的集點與兌換功能相對單純，若需要多角色權限管理、行銷推播、跟既有POS系統串接，開發時程與費用會隨之增加。建議先想清楚核心需求（不用一開始就求全）,再請廠商評估報價，避免功能規格模糊導致溝通落差。" } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/"><img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技 Hunglun Technology"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技 Hunglun Technology"></a>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="/brand.html">首頁</a>
+      <a href="/about.html">關於我們</a>
+      <a href="/services.html">服務項目</a>
+      <a href="/projects.html">精選專案</a>
+      <a href="/faq.html">常見問題</a>
+      <a href="/local-food.html">在地嚮導</a>
+      <a href="/tools.html" class="mobile-tools-link">資源分享</a>
+      <a href="/contact.html" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <div class="nav-tools">
+        <a href="/tools.html" class="nav-tools-trigger">資源分享</a>
+      </div>
+      <a href="/contact.html" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="section-sub reveal" style="margin:0 0 10px;text-align:center;"><a href="/faq.html">常見問題</a> ／ 會員集點系統筆記</p>
+    <h1>會員集點系統設計筆記</h1>
+    <p>運作原理、紙本vs數位比較、角色權限與導入評估。</p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">最後更新：2026 年 7 月</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap" style="max-width:780px;">
+    <details class="faq-item reveal" open>
+      <summary>數位會員集點系統是怎麼運作的？</summary>
+      <div class="faq-a">數位會員集點系統通常是：顧客用手機掃描店家的 QR Code（或店員掃描顧客的會員條碼）完成集點/消費登記，系統後台自動累積點數與消費紀錄，達到門檻可線上兌換優惠或商品。跟傳統紙本集點卡最大的差別在於：資料不會因為卡片遺失而消失、店家能後台看到會員的消費頻率與偏好，方便規劃行銷活動。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>QR Code 集點的原理是什麼？安全嗎？</summary>
+      <div class="faq-a">QR Code 本質上是把一串文字/網址編碼成方形圖案，手機相機掃描後解碼還原成原始內容（通常是連到某個網頁或帶有識別碼的連結）。用在集點系統時，每位會員或每筆交易會產生獨立的 QR Code，掃描後由後台系統核對身分與交易紀錄再加點，只要系統本身有做好身分驗證與防重複掃描機制，就不用擔心被偽造或重複刷點的問題。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>紙本集點卡跟數位會員系統該怎麼選？</summary>
+      <div class="faq-a">紙本集點卡優點是製作成本低、顧客不用下載任何東西；缺點是容易遺失、無法蒐集顧客消費數據、也無法主動推播優惠訊息。數位會員系統前期建置成本較高，但長期能累積顧客數據做精準行銷（例如針對常客推送生日優惠）、降低集點卡遺失造成的糾紛。對於想長期經營顧客關係、而不只是做單次促銷的店家，數位系統的投資報酬率通常更高。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>會員系統需要顧客額外下載 App 嗎？</summary>
+      <div class="faq-a">不一定。App 型會員系統體驗較完整，但下載門檻會降低顧客使用意願；另一種常見作法是「網頁版會員系統」（Web App），顧客只要用手機瀏覽器打開網址或掃 QR Code 就能直接使用，不用安裝任何東西，對小型店家來說是更輕量、顧客接受度更高的方案。鴻綸科技開發的會員集點系統即採用網頁版架構，雲端部署免維護伺服器，以較低成本讓中小型店家也能擁有自己的數位會員系統。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>店家導入會員系統，該規劃哪些角色權限？</summary>
+      <div class="faq-a">常見角色包括：一般會員（查詢自己的點數與消費紀錄）、櫃檯人員（協助掃碼加點、核銷優惠）、店長/管理者（查看整體營運數據、調整優惠規則）、系統管理員（後台維護）。角色權限規劃得當，可以避免櫃檯人員誤動到系統設定，也能讓不同層級的使用者只看到自己需要的功能，降低操作錯誤風險。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>小型店家想導入會員集點系統，需要多少預算與時間？</summary>
+      <div class="faq-a">費用主要看功能複雜度：單純的集點與兌換功能相對單純，若需要多角色權限管理、行銷推播、跟既有POS系統串接，開發時程與費用會隨之增加。建議先想清楚核心需求（不用一開始就求全）,再請廠商評估報價，避免功能規格模糊導致溝通落差。</div>
+    </details>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2 class="section-title reveal">延伸閱讀</h2>
+    <p class="section-sub reveal">更多品牌經營與數位工具知識。</p>
+    <div class="grid">
+      <a class="card reveal" href="/knowledge/line-oa.html">
+        <div class="card-body"><h3>LINE 官方帳號心法</h3><p>圖文選單、自動回覆、經營策略。</p></div>
+      </a>
+      <a class="card reveal" href="https://antia-members.pages.dev/" target="_blank" rel="noopener">
+        <div class="card-body"><h3>會員集點系統</h3><p>看鴻綸科技開發的客戶委託案例實例。</p></div>
+      </a>
+      <a class="card reveal" href="/services.html#member-system">
+        <div class="card-body"><h3>客製會員與管理系統服務</h3><p>看鴻綸科技怎麼協助店家導入會員系統。</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="section-title reveal">想建置自己的會員系統？</h2>
+    <p class="section-sub reveal">告訴我們您的經營型態與需求，我們評估最適合的方案。</p>
+    <a class="btn btn-primary reveal" href="/contact.html">聯絡我們</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技">
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h4>網站導覽</h4>
+        <ul>
+          <li><a href="/brand.html">首頁</a></li>
+          <li><a href="/about.html">關於我們</a></li>
+          <li><a href="/services.html">服務項目</a></li>
+          <li><a href="/projects.html">精選專案</a></li>
+          <li><a href="/faq.html">常見問題</a></li>
+          <li><a href="/local-food.html">在地嚮導</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>聯絡方式</h4>
+        <ul class="footer-contact">
+          <li>電話：<a href="tel:+88666371192">06-6371192</a></li>
+          <li>信箱：<a href="mailto:gfeh@hunglun.com">gfeh@hunglun.com</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">正式官網 hunglun.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved.</div>
+    <div class="visit-counter">👀 累計瀏覽人次：<span id="visitCount">--</span></div>
+  </div>
+</footer>
+<div class="contact-fab">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://line.me/R/ti/p/%40gdm6961p" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號" title="LINE 官方帳號"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img src="/assets/icon-gmap-colorful.png" alt=""></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shen@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 shen@hunglun.com（開啟 Gmail）" title="寄信給 shen@hunglun.com"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14h-18z" /><path d="M3 6.5l9 6.5l9 -6.5" /></svg></a>
+</div>
+
+
+<script src="/assets/main.js"></script>
+</body>
+</html>

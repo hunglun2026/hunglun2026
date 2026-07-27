@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>個資法與校園資安須知｜鴻綸科技</title>
+<meta name="description" content="個資法與校園資安須知：個人資料保護法是什麼、學校常見的個資風險、導入AI/雲端工具前該檢查什麼、資料最小化原則、學生個資保護實務。鴻綸科技整理的校園資安知識。">
+<link rel="canonical" href="https://hunglun-new.pages.dev/knowledge/privacy.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="個資法與校園資安須知｜鴻綸科技">
+<meta property="og:description" content="個資法基礎觀念、校園常見風險與AI工具導入檢查重點。">
+<meta property="og:url" content="https://hunglun-new.pages.dev/knowledge/privacy.html">
+<meta property="og:image" content="https://hunglun-new.pages.dev/assets/hunglun-logo-dark.png">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=4">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://hunglun-new.pages.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "常見問題", "item": "https://hunglun-new.pages.dev/faq.html" },
+    { "@type": "ListItem", "position": 3, "name": "個資法與校園資安須知", "item": "https://hunglun-new.pages.dev/knowledge/privacy.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "dateModified": "2026-07-25",
+  "mainEntity": [
+    { "@type": "Question", "name": "個人資料保護法（個資法）保護的是哪些資訊？", "acceptedAnswer": { "@type": "Answer", "text": "台灣《個人資料保護法》保護的是可以直接或間接識別出特定個人的資料，例如姓名、身分證字號、照片、聯絡方式、成績、健康紀錄等。學校日常處理的學生姓名、班級座號、家長聯絡方式、成績單，都屬於受保護的個人資料，蒐集、處理、利用都必須符合法規的特定目的與告知義務，不能任意轉作其他用途或外流。" } },
+    { "@type": "Question", "name": "學校在數位化過程中，常見的個資風險有哪些？", "acceptedAnswer": { "@type": "Answer", "text": "常見風險包括：1）把含有學生個資的檔案（Excel名單、回條照片）上傳到不明第三方工具，不清楚對方會不會保存或用於其他目的；2）共用電腦帳號沒有妥善管理，前一位使用者的資料被後面的人看到；3）雲端硬碟資料夾權限設定過於寬鬆，非相關人員也能存取；4）畢業生/離職教職員的帳號沒有及時停用，殘留資料存取權限。" } },
+    { "@type": "Question", "name": "資料最小化原則是什麼？為什麼校園系統要遵守？", "acceptedAnswer": { "@type": "Answer", "text": "資料最小化原則是指系統只蒐集「完成該項功能所必要」的最少資料，不多蒐集用不到的欄位。例如一個活動報名系統，如果功能只需要姓名與班級，就不該額外要求身分證字號或家長職業。校園系統遵守這個原則，能大幅降低萬一發生資料外洩事故時的衝擊範圍，也是符合個資法「特定目的內利用」精神的具體作法。" } },
+    { "@type": "Question", "name": "學校導入 AI 工具或第三方系統前，該檢查哪些資安項目？", "acceptedAnswer": { "@type": "Answer", "text": "建議檢查：1）資料是否會被該工具保存，保存多久、用於什麼目的（尤其是會不會用於訓練 AI 模型）；2）是否有資料傳輸加密（網址是否為 https）；3）廠商是否有明確的隱私權政策與資料刪除機制；4）是否符合教育機構常見的資料治理要求（如僅供教育目的使用、不轉售第三方）。導入前先確認這些項目，比事後出問題再補救更務實。" } },
+    { "@type": "Question", "name": "「資料在瀏覽器端處理、不上傳伺服器」對隱私保護有什麼實質意義？", "acceptedAnswer": { "@type": "Answer", "text": "如果一套工具的資料處理全部在使用者自己的瀏覽器完成，沒有把檔案傳到廠商的伺服器儲存，代表即使該廠商的伺服器未來遭駭或員工不慎外洩，也不會牽涉到使用者上傳過的資料（因為根本沒有存過）。這是「隱私設計（Privacy by Design）」的一種具體實踐方式。鴻綸科技開發的學生回條辨識系統即是以瀏覽器前端處理為主，辨識結果直接匯出成使用者自己的 Excel 檔案，網站本身不建立學生資料庫、不留存回條影像。" } },
+    { "@type": "Question", "name": "萬一發生個資外洩，學校/機構應該怎麼處理？", "acceptedAnswer": { "@type": "Answer", "text": "個資法規定，一旦發現個人資料遭竊取、竄改、洩漏等情事，應以適當方式通知當事人。實務上建議機構事先建立標準處理流程：立即控管損害範圍（例如封鎖存取管道）、釐清外洩原因與影響人數、依規定通知當事人與必要時通報主管機關、事後檢討修補系統漏洞，避免同樣問題再發生。平時建立資安意識與應變流程，遠比事後補救有效。" } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/"><img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技 Hunglun Technology"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技 Hunglun Technology"></a>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="/brand.html">首頁</a>
+      <a href="/about.html">關於我們</a>
+      <a href="/services.html">服務項目</a>
+      <a href="/projects.html">精選專案</a>
+      <a href="/faq.html">常見問題</a>
+      <a href="/local-food.html">在地嚮導</a>
+      <a href="/tools.html" class="mobile-tools-link">資源分享</a>
+      <a href="/contact.html" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <div class="nav-tools">
+        <a href="/tools.html" class="nav-tools-trigger">資源分享</a>
+      </div>
+      <a href="/contact.html" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="section-sub reveal" style="margin:0 0 10px;text-align:center;"><a href="/faq.html">常見問題</a> ／ 個資法與校園資安須知</p>
+    <h1>個資法與校園資安須知</h1>
+    <p>校園常見個資風險、資料最小化原則、AI工具導入檢查重點。</p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">最後更新：2026 年 7 月（一般性法規知識，實際個案請洽詢專業法律意見）</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap" style="max-width:780px;">
+    <details class="faq-item reveal" open>
+      <summary>個人資料保護法（個資法）保護的是哪些資訊？</summary>
+      <div class="faq-a">台灣《個人資料保護法》保護的是可以直接或間接識別出特定個人的資料，例如姓名、身分證字號、照片、聯絡方式、成績、健康紀錄等。學校日常處理的學生姓名、班級座號、家長聯絡方式、成績單，都屬於受保護的個人資料，蒐集、處理、利用都必須符合法規的特定目的與告知義務，不能任意轉作其他用途或外流。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>學校在數位化過程中，常見的個資風險有哪些？</summary>
+      <div class="faq-a">常見風險包括：1）把含有學生個資的檔案（Excel名單、回條照片）上傳到不明第三方工具，不清楚對方會不會保存或用於其他目的；2）共用電腦帳號沒有妥善管理，前一位使用者的資料被後面的人看到；3）雲端硬碟資料夾權限設定過於寬鬆，非相關人員也能存取；4）畢業生/離職教職員的帳號沒有及時停用，殘留資料存取權限。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>資料最小化原則是什麼？為什麼校園系統要遵守？</summary>
+      <div class="faq-a">資料最小化原則是指系統只蒐集「完成該項功能所必要」的最少資料，不多蒐集用不到的欄位。例如一個活動報名系統，如果功能只需要姓名與班級，就不該額外要求身分證字號或家長職業。校園系統遵守這個原則，能大幅降低萬一發生資料外洩事故時的衝擊範圍，也是符合個資法「特定目的內利用」精神的具體作法。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>學校導入 AI 工具或第三方系統前，該檢查哪些資安項目？</summary>
+      <div class="faq-a">建議檢查：1）資料是否會被該工具保存，保存多久、用於什麼目的（尤其是會不會用於訓練 AI 模型）；2）是否有資料傳輸加密（網址是否為 https）；3）廠商是否有明確的隱私權政策與資料刪除機制；4）是否符合教育機構常見的資料治理要求（如僅供教育目的使用、不轉售第三方）。導入前先確認這些項目，比事後出問題再補救更務實。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>「資料在瀏覽器端處理、不上傳伺服器」對隱私保護有什麼實質意義？</summary>
+      <div class="faq-a">如果一套工具的資料處理全部在使用者自己的瀏覽器完成，沒有把檔案傳到廠商的伺服器儲存，代表即使該廠商的伺服器未來遭駭或員工不慎外洩，也不會牽涉到使用者上傳過的資料（因為根本沒有存過）。這是「隱私設計（Privacy by Design）」的一種具體實踐方式。鴻綸科技開發的學生回條辨識系統即是以瀏覽器前端處理為主，辨識結果直接匯出成使用者自己的 Excel 檔案，網站本身不建立學生資料庫、不留存回條影像。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>萬一發生個資外洩，學校/機構應該怎麼處理？</summary>
+      <div class="faq-a">個資法規定，一旦發現個人資料遭竊取、竄改、洩漏等情事，應以適當方式通知當事人。實務上建議機構事先建立標準處理流程：立即控管損害範圍（例如封鎖存取管道）、釐清外洩原因與影響人數、依規定通知當事人與必要時通報主管機關、事後檢討修補系統漏洞，避免同樣問題再發生。平時建立資安意識與應變流程，遠比事後補救有效。</div>
+    </details>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2 class="section-title reveal">延伸閱讀</h2>
+    <p class="section-sub reveal">更多AI應用與資料安全相關知識。</p>
+    <div class="grid">
+      <a class="card reveal" href="/knowledge/ocr.html">
+        <div class="card-body"><h3>AI OCR 辨識解析</h3><p>OCR原理、準確率與資料安全評估。</p></div>
+      </a>
+      <a class="card reveal" href="/knowledge/gemini.html">
+        <div class="card-body"><h3>Gemini 方案懶人包</h3><p>個人版/教育版/企業版資料訓練政策比較。</p></div>
+      </a>
+      <a class="card reveal" href="/about.html">
+        <div class="card-body"><h3>關於鴻綸科技</h3><p>了解我們的服務理念與 Google 官方認證。</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="section-title reveal">想評估校園系統的資安規劃？</h2>
+    <p class="section-sub reveal">告訴我們您的現況，我們一起檢視資料處理流程。</p>
+    <a class="btn btn-primary reveal" href="/contact.html">聯絡我們</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技">
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h4>網站導覽</h4>
+        <ul>
+          <li><a href="/brand.html">首頁</a></li>
+          <li><a href="/about.html">關於我們</a></li>
+          <li><a href="/services.html">服務項目</a></li>
+          <li><a href="/projects.html">精選專案</a></li>
+          <li><a href="/faq.html">常見問題</a></li>
+          <li><a href="/local-food.html">在地嚮導</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>聯絡方式</h4>
+        <ul class="footer-contact">
+          <li>電話：<a href="tel:+88666371192">06-6371192</a></li>
+          <li>信箱：<a href="mailto:gfeh@hunglun.com">gfeh@hunglun.com</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">正式官網 hunglun.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved.</div>
+    <div class="visit-counter">👀 累計瀏覽人次：<span id="visitCount">--</span></div>
+  </div>
+</footer>
+<div class="contact-fab">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://line.me/R/ti/p/%40gdm6961p" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號" title="LINE 官方帳號"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img src="/assets/icon-gmap-colorful.png" alt=""></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shen@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 shen@hunglun.com（開啟 Gmail）" title="寄信給 shen@hunglun.com"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14h-18z" /><path d="M3 6.5l9 6.5l9 -6.5" /></svg></a>
+</div>
+
+
+<script src="/assets/main.js"></script>
+</body>
+</html>

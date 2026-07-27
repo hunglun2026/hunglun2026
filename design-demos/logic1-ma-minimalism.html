@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>鴻綸科技 — 間</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600&family=Zen+Old+Mincho:wght@400;500;600&display=swap');
+
+  :root{
+    --paper: #f5f1e8;
+    --paper-deep: #efe9dc;
+    --ink: #1c1a17;
+    --ink-soft: #4a453e;
+    --ink-faint: #948d7f;
+    --seal: #a83232;
+    --line: rgba(28,26,23,0.14);
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html,body{
+    width:1440px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Serif TC", "Zen Old Mincho", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body{
+    background-image:
+      repeating-linear-gradient(0deg, rgba(28,26,23,0.012) 0px, rgba(28,26,23,0.012) 1px, transparent 1px, transparent 3px),
+      radial-gradient(ellipse at 20% 10%, rgba(168,50,50,0.02), transparent 60%);
+  }
+
+  .rule{
+    border: none;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ===== Header ===== */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 40px 100px;
+  }
+  header img.logo{
+    height: 34px;
+    width:auto;
+    display:block;
+  }
+  nav{
+    display:flex;
+    gap:56px;
+  }
+  nav span{
+    font-size:14px;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    font-weight:400;
+    position:relative;
+    cursor:default;
+  }
+  nav span::after{
+    content:"";
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    padding: 140px 100px 160px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    position:relative;
+  }
+  .hero .kicker{
+    font-size:13px;
+    letter-spacing:0.4em;
+    color: var(--seal);
+    margin-bottom: 36px;
+    writing-mode: horizontal-tb;
+  }
+  .hero .kicker::before{
+    content:"印";
+    display:inline-block;
+    border:1px solid var(--seal);
+    color:var(--seal);
+    font-size:12px;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    text-align:center;
+    margin-right:14px;
+    letter-spacing:0;
+  }
+  .hero h1{
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    max-width: 900px;
+    margin-bottom: 56px;
+  }
+  .hero h1 .accent{
+    color: var(--seal);
+  }
+  .hero p.sub{
+    font-size: 16.5px;
+    line-height: 2.15;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    max-width: 640px;
+    font-weight:300;
+    margin-bottom: 76px;
+  }
+
+  .cta-row{
+    display:flex;
+    gap:56px;
+    align-items:center;
+  }
+  .cta-primary{
+    font-size:14.5px;
+    letter-spacing:0.2em;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 18px 44px;
+  }
+  .cta-secondary{
+    font-size:14.5px;
+    letter-spacing:0.2em;
+    color: var(--ink);
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  /* Google badge, floated to the right within hero, framed in generous white space */
+  .badge-frame{
+    position:absolute;
+    right: 100px;
+    top: 150px;
+    background:#ffffff;
+    padding: 26px 30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+  .badge-frame img{
+    width: 220px;
+    display:block;
+  }
+  .badge-frame span{
+    font-size:11px;
+    letter-spacing:0.15em;
+    color:#5f6368;
+    font-family: sans-serif;
+  }
+
+  /* ===== Stats ===== */
+  .stats{
+    padding: 0 100px 160px;
+  }
+  .stats-inner{
+    display:flex;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .stat{
+    flex:1;
+    padding: 64px 40px;
+    text-align:center;
+    position:relative;
+  }
+  .stat:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top: 30%;
+    height: 40%;
+    width:1px;
+    background: var(--line);
+  }
+  .stat .num{
+    font-size: 46px;
+    font-weight:500;
+    color: var(--ink);
+    letter-spacing:0.05em;
+    margin-bottom: 20px;
+  }
+  .stat .num .seal-dot{
+    color: var(--seal);
+  }
+  .stat .label{
+    font-size:13px;
+    color: var(--ink-faint);
+    letter-spacing:0.1em;
+    line-height:1.8;
+    font-weight:300;
+  }
+
+  /* ===== Why us ===== */
+  .why{
+    padding: 0 100px 180px;
+  }
+  .why-head{
+    display:flex;
+    align-items:baseline;
+    gap:28px;
+    margin-bottom: 100px;
+  }
+  .why-head .jp{
+    font-size:13px;
+    letter-spacing:0.4em;
+    color: var(--seal);
+  }
+  .why-head h2{
+    font-size:30px;
+    font-weight:500;
+    letter-spacing:0.1em;
+    color:var(--ink);
+  }
+
+  .why-list{
+    display:flex;
+    flex-direction:column;
+  }
+  .why-item{
+    display:flex;
+    gap:64px;
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+    align-items:flex-start;
+  }
+  .why-list .why-item:last-child{
+    border-bottom: 1px solid var(--line);
+  }
+  .why-item .idx{
+    font-size:15px;
+    color: var(--ink-faint);
+    letter-spacing:0.1em;
+    padding-top:6px;
+    min-width: 50px;
+  }
+  .why-item .icon{
+    font-size: 15px;
+    font-weight:500;
+    min-width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align:center;
+    color: var(--seal);
+    border: 1px solid var(--seal);
+    letter-spacing:0;
+  }
+  .why-item .content h3{
+    font-size:19px;
+    font-weight:500;
+    letter-spacing:0.06em;
+    color: var(--ink);
+    margin-bottom:18px;
+  }
+  .why-item .content p{
+    font-size:14.5px;
+    line-height:2.1;
+    color: var(--ink-soft);
+    font-weight:300;
+    max-width: 720px;
+  }
+
+  /* ===== Footer ===== */
+  footer{
+    padding: 70px 100px 90px;
+    border-top: 1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  footer img.logo{
+    height: 26px;
+    opacity:0.85;
+  }
+  footer .contact{
+    display:flex;
+    gap:48px;
+    font-size:13px;
+    color: var(--ink-faint);
+    letter-spacing:0.05em;
+    font-weight:300;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="D:/ClaudeOnly/SteveProject/hunglun-new/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技">
+  <nav>
+    <span>首頁</span>
+    <span>關於我們</span>
+    <span>服務項目</span>
+    <span>客戶案例</span>
+    <span>網頁效果</span>
+    <span>常見問題</span>
+    <span>聯絡我們</span>
+  </nav>
+</header>
+
+<hr class="rule">
+
+<section class="hero">
+  <div class="kicker">GOOGLE FOR EDUCATION PARTNER</div>
+  <h1>Google 官方認證<br>教育科技<span class="accent">・</span>夥伴</h1>
+  <p class="sub">
+    鴻綸科技是台南在地的 Google for Education Professional Development Partner，名列 Google 官方全球高等教育專業發展夥伴名冊。提供 Google AI Pro for Education、Google Workspace 授權導入與智慧教室建置，並自主開發多項教育行政工具、實際上線運作中。
+  </p>
+  <div class="cta-row">
+    <div class="cta-primary">瀏覽客戶案例</div>
+    <div class="cta-secondary">委託開發洽詢</div>
+  </div>
+
+  <div class="badge-frame">
+    <img src="D:/ClaudeOnly/SteveProject/hunglun-new/assets/gfe-partner-badge.png" alt="Google for Education Partner Badge">
+    <span>OFFICIAL PARTNER BADGE</span>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="num">Google<span class="seal-dot">.</span></div>
+      <div class="label">for Education<br>認證夥伴</div>
+    </div>
+    <div class="stat">
+      <div class="num">AI Pro<span class="seal-dot">.</span></div>
+      <div class="label">for Education<br>授權導入</div>
+    </div>
+    <div class="stat">
+      <div class="num">5<span class="seal-dot">.</span></div>
+      <div class="label">自主開發工具<br>已上線</div>
+    </div>
+    <div class="stat">
+      <div class="num">台南<span class="seal-dot">.</span></div>
+      <div class="label">在地服務<br>全台導入</div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="why-head">
+    <span class="jp">選擇鴻綸的理由</span>
+    <h2>Why Us</h2>
+  </div>
+  <div class="why-list">
+    <div class="why-item">
+      <div class="idx">01</div>
+      <div class="icon">認</div>
+      <div class="content">
+        <h3>Google 官方認證夥伴</h3>
+        <p>Google for Education Professional Development Partner，名列 Google 官方全球高等教育專業發展夥伴名冊（台灣僅少數廠商入選），提供 Google AI Pro for Education、Google Workspace 正規授權導入與顧問服務。</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="idx">02</div>
+      <div class="icon">教</div>
+      <div class="content">
+        <h3>教育現場出身</h3>
+        <p>長期服務台灣教育界，深知學校行政與教學痛點，導入的方案是老師「真的會用」的方案。</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="idx">03</div>
+      <div class="icon">速</div>
+      <div class="content">
+        <h3>快速交付、持續維運</h3>
+        <p>採用現代雲端架構（Cloudflare 全球節點），授權開通快、上線快、免維護伺服器。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="logo" src="D:/ClaudeOnly/SteveProject/hunglun-new/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技">
+  <div class="contact">
+    <span>06-6371192</span>
+    <span>gfeh@hunglun.com</span>
+    <span>台南市新營區綠川路10號</span>
+  </div>
+</footer>
+
+</body>
+</html>

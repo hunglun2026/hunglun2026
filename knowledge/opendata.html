@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>政府開放資料應用手冊｜鴻綸科技</title>
+<meta name="description" content="政府開放資料（Open Data）知識：開放資料是什麼、怎麼查詢政府資料集、開放資料能拿來做什麼系統、更新頻率與可靠性怎麼判斷。鴻綸科技整理的開放資料應用知識。">
+<link rel="canonical" href="https://hunglun-new.pages.dev/knowledge/opendata.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="政府開放資料應用手冊｜鴻綸科技">
+<meta property="og:description" content="政府開放資料查詢、應用開發、更新機制完整介紹。">
+<meta property="og:url" content="https://hunglun-new.pages.dev/knowledge/opendata.html">
+<meta property="og:image" content="https://hunglun-new.pages.dev/assets/hunglun-logo-dark.png">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=4">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://hunglun-new.pages.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "常見問題", "item": "https://hunglun-new.pages.dev/faq.html" },
+    { "@type": "ListItem", "position": 3, "name": "開放資料應用手冊", "item": "https://hunglun-new.pages.dev/knowledge/opendata.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "dateModified": "2026-07-25",
+  "mainEntity": [
+    { "@type": "Question", "name": "政府開放資料（Open Data）是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "政府開放資料是政府機關依政策主動公開、開放外界自由取用與應用的公務資料集，例如藥品許可證資料庫、動物用藥登記資料、氣象資料等，通常會標示授權方式（多為可自由利用、註明來源即可）。這些資料原本分散在各機關網站的官方查詢系統，格式與查詢體驗常常不夠友善，第三方開發者可以把資料抓下來做成更好用的應用。" } },
+    { "@type": "Question", "name": "開放資料要去哪裡查詢或下載？", "acceptedAnswer": { "@type": "Answer", "text": "台灣主要的開放資料入口是政府資料開放平臺（data.gov.tw），各部會也有自己的開放資料專區，例如衛福部食品藥物管理署（TFDA）的藥品許可證資料、農業部的動物用藥登記資料。資料通常提供 CSV、JSON、API 等格式下載，實際使用前建議先確認資料集的更新頻率與欄位說明文件，避免抓到過期或格式跟預期不同的資料。" } },
+    { "@type": "Question", "name": "開放資料可以拿來做什麼樣的系統？", "acceptedAnswer": { "@type": "Answer", "text": "常見應用類型包括：查詢系統（把政府龐大的資料庫做成好搜尋的網頁介面）、儀表板視覺化（把統計資料做成圖表）、比對服務（跨資料集交叉比對）、通知提醒（資料異動時主動通知）。鴻綸科技開發的藥品許可證外觀查詢系統與動物用藥許可證查詢，就是把食藥署與農業部的開放資料，做成免驗證碼、即時搜尋、手機友善的查詢工具，解決官方系統查詢體驗較不理想的問題。" } },
+    { "@type": "Question", "name": "開放資料會不會過期？資料可靠嗎？", "acceptedAnswer": { "@type": "Answer", "text": "開放資料的可靠性取決於原始機關的更新頻率與資料品質，如果開發的應用只抓一次資料就沒再更新，內容很快就會過期。比較負責任的作法是建立自動同步排程，定期重新抓取最新資料。鴻綸科技的查詢系統設有自動同步機制，藥品資料每日更新、動物用藥資料每週更新，確保使用者查到的都是跟官方資料庫同步的最新狀態，不需要人工手動維護。" } },
+    { "@type": "Question", "name": "使用政府開放資料開發應用，有法律或授權上要注意的地方嗎？", "acceptedAnswer": { "@type": "Answer", "text": "多數政府開放資料採用相對寬鬆的開放授權（例如政府資料開放授權條款），允許重製、散布、改作，但通常要求標示資料來源與是否經過改作。實際使用前建議詳讀該資料集標示的授權條款，尤其若要商業使用或大量整合多個資料源，要確認每個資料集各自的授權規定是否相容，避免誤用受限制的資料。" } },
+    { "@type": "Question", "name": "機構想把自己的內部資料或查詢需求做成類似的開放資料應用，該怎麼開始？", "acceptedAnswer": { "@type": "Answer", "text": "建議先確認：1）資料來源是公開的政府資料，還是內部私有資料（兩者在架構與資安考量上不同）；2）資料更新頻率，決定要不要建自動同步排程；3）主要使用族群與查詢情境，決定介面設計方向。鴻綸科技已有多個公開資料查詢系統的實作經驗，可協助評估資料來源可行性、規劃自動同步架構，並依需求開發客製化的查詢介面。" } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/"><img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技 Hunglun Technology"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技 Hunglun Technology"></a>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="/brand.html">首頁</a>
+      <a href="/about.html">關於我們</a>
+      <a href="/services.html">服務項目</a>
+      <a href="/projects.html">精選專案</a>
+      <a href="/faq.html">常見問題</a>
+      <a href="/local-food.html">在地嚮導</a>
+      <a href="/tools.html" class="mobile-tools-link">資源分享</a>
+      <a href="/contact.html" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <div class="nav-tools">
+        <a href="/tools.html" class="nav-tools-trigger">資源分享</a>
+      </div>
+      <a href="/contact.html" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="section-sub reveal" style="margin:0 0 10px;text-align:center;"><a href="/faq.html">常見問題</a> ／ 開放資料應用手冊</p>
+    <h1>政府開放資料應用手冊</h1>
+    <p>從資料來源、查詢方式到應用開發與可靠性判斷。</p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">最後更新：2026 年 7 月</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap" style="max-width:780px;">
+    <details class="faq-item reveal" open>
+      <summary>政府開放資料（Open Data）是什麼？</summary>
+      <div class="faq-a">政府開放資料是政府機關依政策主動公開、開放外界自由取用與應用的公務資料集，例如藥品許可證資料庫、動物用藥登記資料、氣象資料等，通常會標示授權方式（多為可自由利用、註明來源即可）。這些資料原本分散在各機關網站的官方查詢系統，格式與查詢體驗常常不夠友善，第三方開發者可以把資料抓下來做成更好用的應用。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>開放資料要去哪裡查詢或下載？</summary>
+      <div class="faq-a">台灣主要的開放資料入口是政府資料開放平臺（data.gov.tw），各部會也有自己的開放資料專區，例如衛福部食品藥物管理署（TFDA）的藥品許可證資料、農業部的動物用藥登記資料。資料通常提供 CSV、JSON、API 等格式下載，實際使用前建議先確認資料集的更新頻率與欄位說明文件，避免抓到過期或格式跟預期不同的資料。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>開放資料可以拿來做什麼樣的系統？</summary>
+      <div class="faq-a">常見應用類型包括：查詢系統（把政府龐大的資料庫做成好搜尋的網頁介面）、儀表板視覺化（把統計資料做成圖表）、比對服務（跨資料集交叉比對）、通知提醒（資料異動時主動通知）。鴻綸科技開發的藥品許可證外觀查詢系統與動物用藥許可證查詢，就是把食藥署與農業部的開放資料，做成免驗證碼、即時搜尋、手機友善的查詢工具，解決官方系統查詢體驗較不理想的問題。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>開放資料會不會過期？資料可靠嗎？</summary>
+      <div class="faq-a">開放資料的可靠性取決於原始機關的更新頻率與資料品質，如果開發的應用只抓一次資料就沒再更新，內容很快就會過期。比較負責任的作法是建立自動同步排程，定期重新抓取最新資料。鴻綸科技的查詢系統設有自動同步機制，藥品資料每日更新、動物用藥資料每週更新，確保使用者查到的都是跟官方資料庫同步的最新狀態，不需要人工手動維護。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>使用政府開放資料開發應用，有法律或授權上要注意的地方嗎？</summary>
+      <div class="faq-a">多數政府開放資料採用相對寬鬆的開放授權（例如政府資料開放授權條款），允許重製、散布、改作，但通常要求標示資料來源與是否經過改作。實際使用前建議詳讀該資料集標示的授權條款，尤其若要商業使用或大量整合多個資料源，要確認每個資料集各自的授權規定是否相容，避免誤用受限制的資料。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>機構想把自己的內部資料或查詢需求做成類似的開放資料應用，該怎麼開始？</summary>
+      <div class="faq-a">建議先確認：1）資料來源是公開的政府資料，還是內部私有資料（兩者在架構與資安考量上不同）；2）資料更新頻率，決定要不要建自動同步排程；3）主要使用族群與查詢情境，決定介面設計方向。鴻綸科技已有多個公開資料查詢系統的實作經驗，可協助評估資料來源可行性、規劃自動同步架構，並依需求開發客製化的查詢介面。</div>
+    </details>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2 class="section-title reveal">延伸閱讀</h2>
+    <p class="section-sub reveal">更多資料應用與系統開發知識。</p>
+    <div class="grid">
+      <a class="card reveal" href="/knowledge/website.html">
+        <div class="card-body"><h3>網站架設攻略</h3><p>網域、主機、CMS、建置費用估算。</p></div>
+      </a>
+      <a class="card reveal" href="https://lun-med-search.pages.dev/" target="_blank" rel="noopener">
+        <div class="card-body"><h3>藥品許可證外觀查詢系統</h3><p>免費線上體驗開放資料應用實例。</p></div>
+      </a>
+      <a class="card reveal" href="/services.html#open-data-system">
+        <div class="card-body"><h3>公開資料查詢系統開發服務</h3><p>看鴻綸科技怎麼協助開發客製查詢系統。</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="section-title reveal">想把資料做成好用的查詢系統？</h2>
+    <p class="section-sub reveal">告訴我們您的資料來源與需求，我們評估可行的開發方案。</p>
+    <a class="btn btn-primary reveal" href="/contact.html">聯絡我們</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技">
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h4>網站導覽</h4>
+        <ul>
+          <li><a href="/brand.html">首頁</a></li>
+          <li><a href="/about.html">關於我們</a></li>
+          <li><a href="/services.html">服務項目</a></li>
+          <li><a href="/projects.html">精選專案</a></li>
+          <li><a href="/faq.html">常見問題</a></li>
+          <li><a href="/local-food.html">在地嚮導</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>聯絡方式</h4>
+        <ul class="footer-contact">
+          <li>電話：<a href="tel:+88666371192">06-6371192</a></li>
+          <li>信箱：<a href="mailto:gfeh@hunglun.com">gfeh@hunglun.com</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">正式官網 hunglun.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved.</div>
+    <div class="visit-counter">👀 累計瀏覽人次：<span id="visitCount">--</span></div>
+  </div>
+</footer>
+<div class="contact-fab">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://line.me/R/ti/p/%40gdm6961p" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號" title="LINE 官方帳號"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img src="/assets/icon-gmap-colorful.png" alt=""></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shen@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 shen@hunglun.com（開啟 Gmail）" title="寄信給 shen@hunglun.com"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14h-18z" /><path d="M3 6.5l9 6.5l9 -6.5" /></svg></a>
+</div>
+
+
+<script src="/assets/main.js"></script>
+</body>
+</html>

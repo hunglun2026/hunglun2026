@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>網站架設新手攻略｜鴻綸科技</title>
+<meta name="description" content="網站架設基礎知識：網域、主機、CMS 是什麼、SEO/AEO/GEO 差別、網站建置費用怎麼估、靜態網站與動態網站差異。鴻綸科技整理的網站架設新手攻略。">
+<link rel="canonical" href="https://hunglun-new.pages.dev/knowledge/website.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="網站架設新手攻略｜鴻綸科技">
+<meta property="og:description" content="網域、主機、SEO/AEO/GEO、建置費用等網站架設基礎知識。">
+<meta property="og:url" content="https://hunglun-new.pages.dev/knowledge/website.html">
+<meta property="og:image" content="https://hunglun-new.pages.dev/assets/hunglun-logo-dark.png">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=4">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://hunglun-new.pages.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "常見問題", "item": "https://hunglun-new.pages.dev/faq.html" },
+    { "@type": "ListItem", "position": 3, "name": "網站架設攻略", "item": "https://hunglun-new.pages.dev/knowledge/website.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "dateModified": "2026-07-25",
+  "mainEntity": [
+    { "@type": "Question", "name": "架一個網站需要哪些基本東西？", "acceptedAnswer": { "@type": "Answer", "text": "基本上需要三樣：1）網域（Domain），就是網址，例如 hunglun.com；2）主機／託管服務（Hosting），存放網站檔案並讓瀏覽器能連上；3）網站本身的程式碼或內容管理系統（CMS）。此外通常還會搭配 SSL 憑證（讓網址開頭是 https，資料傳輸加密）與 DNS 設定（把網域指向正確的主機）。" } },
+    { "@type": "Question", "name": "靜態網站跟動態網站差在哪？", "acceptedAnswer": { "@type": "Answer", "text": "靜態網站是預先寫好固定的 HTML/CSS/JS 檔案，使用者看到的內容不會因人而異，載入速度快、成本低，適合形象官網、活動頁面；動態網站則會即時從資料庫抓資料組成頁面（例如會員系統、電商後台），彈性大但架構較複雜、需要伺服器運算資源。像鴻綸科技這個官網就是零 build 純靜態網站，部署在 Cloudflare Pages，載入速度快且維護成本低。" } },
+    { "@type": "Question", "name": "什麼是 CMS（內容管理系統）？一定要用嗎？", "acceptedAnswer": { "@type": "Answer", "text": "CMS（Content Management System）是讓非工程師也能自行編輯網站內容（文字、圖片、上下架文章）的後台系統，例如 WordPress。不是每個網站都需要 CMS：如果內容更新頻率低、由固定的人（如工程師或代管廠商）負責維護，純手工寫的靜態網站反而更快、更安全、維護成本更低；如果需要行銷團隊頻繁自行發文，CMS 會比較方便。" } },
+    { "@type": "Question", "name": "SEO、AEO、GEO 分別是什麼？網站架設時要一起規劃嗎？", "acceptedAnswer": { "@type": "Answer", "text": "SEO（搜尋引擎優化）讓網站在 Google 等傳統搜尋結果中排名更好；AEO（答案引擎優化）讓內容能被直接提取成搜尋結果最上方的「精選摘要」；GEO（生成式引擎優化）讓 ChatGPT、Gemini、Perplexity 等 AI 在回答問題時願意引用你的網站內容。三者做法有重疊（清楚的結構化內容、正確的 meta 標籤、Schema.org 結構化資料），建議在網站建置初期就一併規劃，而不是上線後才補，這樣結構跟內容從一開始就對齊搜尋引擎與 AI 引擎的閱讀邏輯。" } },
+    { "@type": "Question", "name": "網站建置費用大概怎麼估？", "acceptedAnswer": { "@type": "Answer", "text": "費用主要看三個因素：1）頁面數量與內容複雜度（純形象頁 vs 含會員系統、後台管理的複雜網站）；2）是否需要客製設計或套版即可；3）是否需要額外功能（如金流串接、多語系、AI 客服）。單純形象官網通常是最經濟的選項，若需要動態後台或客製功能，費用會隨系統複雜度增加。建議先想清楚實際需求（給誰看、要達成什麼目標），再請廠商依需求報價，避免規格模糊導致報價落差過大。鴻綸科技接案時習慣先了解客戶實際的行銷情境與預算範圍，再建議零 build 靜態站或動態系統，不會不管需求就一律推最貴的方案。" } },
+    { "@type": "Question", "name": "網站架好之後，還需要持續維護什麼？", "acceptedAnswer": { "@type": "Answer", "text": "常見的持續維護項目包括：1）網域與 SSL 憑證到期續約；2）內容更新（新消息、產品資訊）；3）安全性更新（尤其是用 CMS 系統的網站，外掛與核心程式需要定期更新避免被入侵）；4）SEO 表現追蹤與內容優化；5）備份，避免網站被駭或誤刪時求助無門。零 build 純靜態網站因為沒有資料庫與外掛系統，安全維護的負擔會比動態 CMS 網站小很多。" } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/"><img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技 Hunglun Technology"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技 Hunglun Technology"></a>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="/brand.html">首頁</a>
+      <a href="/about.html">關於我們</a>
+      <a href="/services.html">服務項目</a>
+      <a href="/projects.html">精選專案</a>
+      <a href="/faq.html">常見問題</a>
+      <a href="/local-food.html">在地嚮導</a>
+      <a href="/tools.html" class="mobile-tools-link">資源分享</a>
+      <a href="/contact.html" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <div class="nav-tools">
+        <a href="/tools.html" class="nav-tools-trigger">資源分享</a>
+      </div>
+      <a href="/contact.html" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="section-sub reveal" style="margin:0 0 10px;text-align:center;"><a href="/faq.html">常見問題</a> ／ 網站架設攻略</p>
+    <h1>網站架設新手攻略</h1>
+    <p>網域、主機、SEO/AEO/GEO、費用估算，建置前的基本觀念。</p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">最後更新：2026 年 7 月</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap" style="max-width:780px;">
+    <details class="faq-item reveal" open>
+      <summary>架一個網站需要哪些基本東西？</summary>
+      <div class="faq-a">基本上需要三樣：1）網域（Domain），就是網址，例如 hunglun.com；2）主機／託管服務（Hosting），存放網站檔案並讓瀏覽器能連上；3）網站本身的程式碼或內容管理系統（CMS）。此外通常還會搭配 SSL 憑證（讓網址開頭是 https，資料傳輸加密）與 DNS 設定（把網域指向正確的主機）。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>靜態網站跟動態網站差在哪？</summary>
+      <div class="faq-a">靜態網站是預先寫好固定的 HTML/CSS/JS 檔案，使用者看到的內容不會因人而異，載入速度快、成本低，適合形象官網、活動頁面；動態網站則會即時從資料庫抓資料組成頁面（例如會員系統、電商後台），彈性大但架構較複雜、需要伺服器運算資源。像鴻綸科技這個官網就是零 build 純靜態網站，部署在 Cloudflare Pages，載入速度快且維護成本低。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>什麼是 CMS（內容管理系統）？一定要用嗎？</summary>
+      <div class="faq-a">CMS（Content Management System）是讓非工程師也能自行編輯網站內容（文字、圖片、上下架文章）的後台系統，例如 WordPress。不是每個網站都需要 CMS：如果內容更新頻率低、由固定的人（如工程師或代管廠商）負責維護，純手工寫的靜態網站反而更快、更安全、維護成本更低；如果需要行銷團隊頻繁自行發文，CMS 會比較方便。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>SEO、AEO、GEO 分別是什麼？網站架設時要一起規劃嗎？</summary>
+      <div class="faq-a">SEO（搜尋引擎優化）讓網站在 Google 等傳統搜尋結果中排名更好；AEO（答案引擎優化）讓內容能被直接提取成搜尋結果最上方的「精選摘要」；GEO（生成式引擎優化）讓 ChatGPT、Gemini、Perplexity 等 AI 在回答問題時願意引用你的網站內容。三者做法有重疊（清楚的結構化內容、正確的 meta 標籤、Schema.org 結構化資料），建議在網站建置初期就一併規劃，而不是上線後才補，這樣結構跟內容從一開始就對齊搜尋引擎與 AI 引擎的閱讀邏輯。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>網站建置費用大概怎麼估？</summary>
+      <div class="faq-a">費用主要看三個因素：1）頁面數量與內容複雜度（純形象頁 vs 含會員系統、後台管理的複雜網站）；2）是否需要客製設計或套版即可；3）是否需要額外功能（如金流串接、多語系、AI 客服）。單純形象官網通常是最經濟的選項，若需要動態後台或客製功能，費用會隨系統複雜度增加。建議先想清楚實際需求（給誰看、要達成什麼目標），再請廠商依需求報價，避免規格模糊導致報價落差過大。鴻綸科技接案時習慣先了解客戶實際的行銷情境與預算範圍，再建議零 build 靜態站或動態系統，不會不管需求就一律推最貴的方案。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>網站架好之後，還需要持續維護什麼？</summary>
+      <div class="faq-a">常見的持續維護項目包括：1）網域與 SSL 憑證到期續約；2）內容更新（新消息、產品資訊）；3）安全性更新（尤其是用 CMS 系統的網站，外掛與核心程式需要定期更新避免被入侵）；4）SEO 表現追蹤與內容優化；5）備份，避免網站被駭或誤刪時求助無門。零 build 純靜態網站因為沒有資料庫與外掛系統，安全維護的負擔會比動態 CMS 網站小很多。</div>
+    </details>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2 class="section-title reveal">延伸閱讀</h2>
+    <p class="section-sub reveal">更多數位轉型相關知識。</p>
+    <div class="grid">
+      <a class="card reveal" href="/knowledge/computer.html">
+        <div class="card-body"><h3>電腦與雲端手冊</h3><p>硬體、作業系統與雲端服務基礎觀念。</p></div>
+      </a>
+      <a class="card reveal" href="/services.html#brand-website">
+        <div class="card-body"><h3>品牌形象官網建置服務</h3><p>看鴻綸科技怎麼協助企業建置官網。</p></div>
+      </a>
+      <a class="card reveal" href="/services.html#seo-aeo-geo">
+        <div class="card-body"><h3>SEO／AEO／GEO 搜尋引擎優化服務</h3><p>看鴻綸科技怎麼協助網站被搜尋與 AI 引擎看見。</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="section-title reveal">想建置或優化官網？</h2>
+    <p class="section-sub reveal">從規劃、設計到 SEO/AEO/GEO，我們一手包辦。</p>
+    <a class="btn btn-primary reveal" href="/contact.html">聯絡我們</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img class="logo-light" src="/assets/hunglun-logo-company-light.png?v=3" alt="鴻綸科技"><img class="logo-dark" src="/assets/hunglun-logo-dark-header.png?v=3" alt="鴻綸科技">
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h4>網站導覽</h4>
+        <ul>
+          <li><a href="/brand.html">首頁</a></li>
+          <li><a href="/about.html">關於我們</a></li>
+          <li><a href="/services.html">服務項目</a></li>
+          <li><a href="/projects.html">精選專案</a></li>
+          <li><a href="/faq.html">常見問題</a></li>
+          <li><a href="/local-food.html">在地嚮導</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>聯絡方式</h4>
+        <ul class="footer-contact">
+          <li>電話：<a href="tel:+88666371192">06-6371192</a></li>
+          <li>信箱：<a href="mailto:gfeh@hunglun.com">gfeh@hunglun.com</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">正式官網 hunglun.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved.</div>
+    <div class="visit-counter">👀 累計瀏覽人次：<span id="visitCount">--</span></div>
+  </div>
+</footer>
+<div class="contact-fab">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://line.me/R/ti/p/%40gdm6961p" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號" title="LINE 官方帳號"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img src="/assets/icon-gmap-colorful.png" alt=""></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shen@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 shen@hunglun.com（開啟 Gmail）" title="寄信給 shen@hunglun.com"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14h-18z" /><path d="M3 6.5l9 6.5l9 -6.5" /></svg></a>
+</div>
+
+
+<script src="/assets/main.js"></script>
+</body>
+</html>

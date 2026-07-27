@@ -1,0 +1,50 @@
+# 鴻綸科技｜Google for Education 認證夥伴
+
+> 鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）是位於台南新營的教育科技公司，Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education、Google Workspace for Education 授權導入服務。本網站同時展示公司自主開發、已正式上線的教育行政 AI 工具。
+
+> 本網站全站頁面正文完整版（供 AI 模型/答案引擎一次抓取所有頁面內容）：https://hunglun-new.pages.dev/llms-full.txt
+
+## 公司資訊
+- 地址：台南市新營區綠川路10號
+- 電話：06-6371192
+- 信箱：gfeh@hunglun.com
+- 正式官網：https://www.hunglun.com/
+
+## 已上線成果
+- [藥品許可證外觀查詢系統](https://lun-med-search.pages.dev/)：22,000+ 筆食藥署藥品資料，看外觀找藥、查仿單 PDF，每日自動更新。
+- [動物用藥許可證查詢](https://lun-vet-rx.pages.dev/)：農業部開放資料近萬筆，免驗證碼即時搜尋，每週自動更新。
+- [學生回條 AI 辨識系統](https://lunslip.pages.dev/)：AI 視覺辨識家長同意書，自動比對名單並匯出 Excel。
+- [校園照片 Word 填入工具](https://lun-school-pic-v2.pages.dev/)：活動照片自動填入 Word 表格圖片格，本機處理不上傳。
+- [小綸出題小幫手](https://lunquiz.pages.dev/)：AI 依課程知識或上傳教材命題，支援單選/複選/填充/簡答，可調整難度與語言。
+- [會員集點系統（客戶委託案例）](https://antia-members.pages.dev/)：店家客製會員集點與後台管理系統，四種角色權限，雲端部署。
+- [伊登森活 Idun Beauty SPA（客戶委託案例）](https://idun10.pages.dev/)：台南東區美容 SPA 官方網站，8 個獨立頁面各自具備完整 SEO/AEO 結構化資料。
+
+## 網站頁面
+- 首頁（連續捲動巡覽全站）：https://hunglun-new.pages.dev/
+- 品牌介紹（點選導覽列「首頁」）：https://hunglun-new.pages.dev/brand.html
+- 關於我們：https://hunglun-new.pages.dev/about.html
+- 服務項目（含網頁效果 Live Demo 分頁）：https://hunglun-new.pages.dev/services.html
+- 精選專案：https://hunglun-new.pages.dev/projects.html
+- 資源分享（依用途分類：校園小程式／資料查詢網站）：https://hunglun-new.pages.dev/tools.html
+- 常見問題與知識庫（分類導覽）：https://hunglun-new.pages.dev/faq.html
+- 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://hunglun-new.pages.dev/local-food.html
+- 聯絡我們：https://hunglun-new.pages.dev/contact.html
+
+## 知識庫分類頁（每頁皆為獨立問答式內容，含 FAQPage 結構化資料）
+- [Chromebook 選購指南](https://hunglun-new.pages.dev/knowledge/chromebook.html)：Chromebook 是什麼、優缺點、載具管理授權（CEU）、校園採購須知。
+- [AI 入門百科](https://hunglun-new.pages.dev/knowledge/ai.html)：AI、生成式 AI、大型語言模型（LLM）、AI 幻覺、校園導入 AI 注意事項。
+- [電腦與雲端手冊](https://hunglun-new.pages.dev/knowledge/computer.html)：硬體規格、作業系統選擇、雲端服務、校園電腦教室與網路規劃。
+- [Google for Education 指南](https://hunglun-new.pages.dev/knowledge/google.html)：Google for Education、Workspace 基礎版/進階版、認證夥伴計畫、申請流程。
+- [Gemini 方案懶人包](https://hunglun-new.pages.dev/knowledge/gemini.html)：Gemini 個人版/教育版/企業版差異、資料訓練政策比較、Google AI Pro for Education 方案價格（依帳號規模階梯報價，詳細金額請洽詢）。
+- [網站架設攻略](https://hunglun-new.pages.dev/knowledge/website.html)：網域、主機、CMS、SEO/AEO/GEO 差異、建置費用估算、上線後維護。
+- [AI OCR 辨識解析](https://hunglun-new.pages.dev/knowledge/ocr.html)：OCR原理、AI OCR與傳統OCR差異、準確率、校園應用場景、資料安全評估重點。
+- [開放資料應用手冊](https://hunglun-new.pages.dev/knowledge/opendata.html)：開放資料是什麼、查詢下載方式、應用開發類型、可靠性與授權注意事項。
+- [LINE 官方帳號心法](https://hunglun-new.pages.dev/knowledge/line-oa.html)：LINE OA與個人帳號差異、圖文選單設計、自動回覆設定、經營常見失誤。
+- [會員集點系統筆記](https://hunglun-new.pages.dev/knowledge/membership.html)：數位集點系統運作原理、QR Code安全性、紙本vs數位比較、角色權限規劃。
+- [個資法與校安須知](https://hunglun-new.pages.dev/knowledge/privacy.html)：個資法保護範圍、校園常見個資風險、資料最小化原則、AI工具導入前的資安檢查重點。
+- [網站速度優化攻略](https://hunglun-new.pages.dev/knowledge/webperf.html)：Core Web Vitals（LCP/INP/CLS）、網站速度與SEO排名關聯、效能檢測與改善方式。
+
+## 教育數位轉型與採購情境
+- 服務對象涵蓋台灣 K12 中小學與大專院校，協助學校端評估、導入 Google AI Pro for Education（Gemini 教育版）與 Google Workspace for Education，並提供教師研習與 Chromebook 智慧教室建置。
+- 針對校園採購流程提供估價單、規格書等文件支援，可依學校經費規模討論導入方案（詳情請洽聯絡我們頁面確認最新方案）。
+- 自主開發之校園小工具聚焦「解決學校行政現場的具體困擾」：回條批次辨識、藥品/動物用藥公開資料查詢、活動照片排版、AI 命題，皆可免費線上體驗。
