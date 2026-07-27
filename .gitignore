@@ -1,0 +1,3 @@
+# 舊官網 sitemap（domain migration 工作參考用，不要部署到網站根目錄
+# 免得 Google 爬到一份全是舊網址的 sitemap）
+sitemap/

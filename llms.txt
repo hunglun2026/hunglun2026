@@ -5,8 +5,10 @@
 > 本網站全站頁面正文完整版（供 AI 模型/答案引擎一次抓取所有頁面內容）：https://hunglun-new.pages.dev/llms-full.txt
 
 ## 公司資訊
+- 創立：2013年3月
+- 官方資歷：2017年成為Google官方授權在台教育合作發展夥伴，2019年取得專業化夥伴資格；教育部國中小行動教育推動計畫指定廠商；訓練中心具五位Google認證講師與兩位認證網域管理員；台灣銀行共同供應契約供應商
 - 地址：台南市新營區綠川路10號
-- 電話：06-6371192
+- 電話：06-6371192　傳真：06-6371112
 - 信箱：gfeh@hunglun.com
 - 正式官網：https://www.hunglun.com/
 
@@ -26,6 +28,7 @@
 - 服務項目（含網頁效果 Live Demo 分頁）：https://hunglun-new.pages.dev/services.html
 - 精選專案：https://hunglun-new.pages.dev/projects.html
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://hunglun-new.pages.dev/tools.html
+- 活動剪影（2017–2020 歷年參與及協辦的教育研習、成果展與 Google 教育活動紀錄，共19場）：https://hunglun-new.pages.dev/events.html
 - 常見問題與知識庫（分類導覽）：https://hunglun-new.pages.dev/faq.html
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://hunglun-new.pages.dev/local-food.html
 - 聯絡我們：https://hunglun-new.pages.dev/contact.html
