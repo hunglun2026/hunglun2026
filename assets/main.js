@@ -59,11 +59,11 @@ document.querySelectorAll('img.lightbox').forEach((img) => {
   });
 });
 
-// 瀏覽人數計數器（Cloudflare Worker + KV，每次進頁+1，從23999起算）
+// 瀏覽人數計數器（Cloudflare Worker + KV，每次進頁+1，從145956起算）
 const visitCountEl = document.getElementById('visitCount');
 if (visitCountEl) {
-  fetch('https://hunglun-new-visits.steve-edu711.workers.dev')
+  fetch('https://huglun2026-visits.hunglun2026.workers.dev')
     .then((r) => r.json())
     .then((data) => { visitCountEl.textContent = data.count.toLocaleString(); })
-    .catch(() => { visitCountEl.textContent = '23,999'; });
+    .catch(() => { visitCountEl.textContent = '145,956'; });
 }

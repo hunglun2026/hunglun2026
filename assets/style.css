@@ -89,6 +89,21 @@ a:hover { text-decoration: underline; }
 }
 .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 1; min-width: 0; max-width: 55%; margin-right: auto; }
 .brand img { height: auto; width: auto; max-height: 90px; max-width: 100%; display: block; }
+.header-visit-counter {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  white-space: nowrap;
+  margin-right: 12px;
+}
+.header-visit-counter span { color: var(--accent); font-weight: 600; }
 .main-nav { display: flex; gap: 6px; flex-wrap: wrap; }
 .main-nav a {
   color: var(--muted);
@@ -560,6 +575,7 @@ a:hover { text-decoration: underline; }
 .contact-fab a.fab-map img { width: 26px; height: 26px; }
 .contact-fab a.fab-mail { background: var(--accent); }
 @media (max-width: 480px) {
+  .header-visit-counter { display: none; }
   .hero-badge { letter-spacing: 0.12em; }
   .contact-fab { right: 12px; bottom: 16px; padding: 6px 8px; gap: 8px; }
   .fab-label { display: none; }
@@ -601,6 +617,7 @@ a:hover { text-decoration: underline; }
 @media (max-width: 860px) {
   .brand img { max-height: 72px; }
   .header-inner { padding: 10px 16px; }
+  .header-visit-counter { font-size: 0.72rem; padding: 4px 10px; margin-right: 6px; }
   .wrap { padding: 0 16px; }
   .section { padding: 56px 0; }
   .btn { padding: 13px 22px; }
