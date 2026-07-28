@@ -12,6 +12,7 @@ BRAND.md
 品牌形象企劃書.md
 14.LOGO/
 wix-import/
+design-demos/
 
 # wrangler 本機開發快取（跑 wrangler pages dev 產生，不要部署）
 .wrangler/

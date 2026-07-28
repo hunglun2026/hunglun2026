@@ -59,57 +59,11 @@ document.querySelectorAll('img.lightbox').forEach((img) => {
   });
 });
 
-// 瀏覽人數計數器（Cloudflare Worker + KV，每次進頁+1，從145956起算）
+// 瀏覽人數計數器（Cloudflare Worker + KV，每次進頁+1，接續舊官網從 409260 起算）
 const visitCountEl = document.getElementById('visitCount');
 if (visitCountEl) {
   fetch('https://huglun2026-visits.hunglun2026.workers.dev')
     .then((r) => r.json())
     .then((data) => { visitCountEl.textContent = data.count.toLocaleString(); })
     .catch(() => { visitCountEl.textContent = '409,260'; });
-}
-
-/* ---------- 聯絡表單 ---------- */
-var contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  var statusEl = document.getElementById('cfStatus');
-  var submitBtn = document.getElementById('cfSubmit');
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var fd = new FormData(contactForm);
-    var payload = {
-      name: (fd.get('name') || '').trim(),
-      org: (fd.get('org') || '').trim(),
-      email: (fd.get('email') || '').trim(),
-      phone: (fd.get('phone') || '').trim(),
-      message: (fd.get('message') || '').trim(),
-      website: fd.get('website') || '',
-    };
-    function fail(msg) {
-      statusEl.textContent = msg;
-      statusEl.className = 'form-status err';
-    }
-    if (!payload.name || !payload.message) return fail('請填寫姓名與詢問內容。');
-    if (!payload.email && !payload.phone) return fail('Email 與電話至少要留一個，我們才回覆得了。');
-
-    submitBtn.disabled = true;
-    statusEl.textContent = '送出中…';
-    statusEl.className = 'form-status';
-
-    fetch('https://hunglun2026-contact.hunglun2026.workers.dev', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
-      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
-      .then(function (res) {
-        if (!res.ok) throw new Error(res.d && res.d.error ? res.d.error : '送出失敗');
-        statusEl.textContent = '已送出，我們會盡快回覆您。謝謝！';
-        statusEl.className = 'form-status ok';
-        contactForm.reset();
-      })
-      .catch(function (err) {
-        fail(err.message + '　也可以直接撥 06-6371192 或寄到 gfeh@hunglun.com。');
-      })
-      .finally(function () { submitBtn.disabled = false; });
-  });
 }
