@@ -22,7 +22,6 @@
 - 公開資料查詢系統開發：https://hunglun2026.pages.dev/services/open-data
 - 校園行政自動化：https://hunglun2026.pages.dev/services/campus-admin
 - 客製會員與管理系統：https://hunglun2026.pages.dev/services/member-system
-- 品牌形象官網建置：https://hunglun2026.pages.dev/services/brand-website
 - SEO／AEO／GEO 搜尋引擎優化：https://hunglun2026.pages.dev/services/seo-aeo-geo
 - 官方 LINE 帳號設計：https://hunglun2026.pages.dev/services/line-oa
 
@@ -37,7 +36,6 @@
 
 ## 網站頁面
 - 首頁（連續捲動巡覽全站）：https://hunglun2026.pages.dev/
-- 品牌介紹（點選導覽列「首頁」）：https://hunglun2026.pages.dev/brand
 - 關於我們：https://hunglun2026.pages.dev/about
 - 服務項目（含網頁效果 Live Demo 分頁）：https://hunglun2026.pages.dev/services
 - 精選專案：https://hunglun2026.pages.dev/projects

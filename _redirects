@@ -6,3 +6,5 @@
 # 因為 _redirects 不支援 query string 比對。
 /index.php / 301
 /contact.php /contact 301
+# brand（原 nav「首頁」）已併入關於我們
+/brand /about 301

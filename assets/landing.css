@@ -319,8 +319,8 @@ body.landing { overflow-x: hidden; }
   .tour-zoom-panel { inset: 12vh 4vw 8vh; }
   .tour-zoom-text { left: 20px; right: 20px; bottom: 24px; max-width: none; }
   .tour-zoom-dots { right: 6px; }
-  /* 手機端壓縮巡覽總捲動距離（桌面700vh／7段=100vh/段 → 手機約65vh/段），拇指少滑幾次就能看完一段 */
-  #tourZoom.tour-zoom { height: 460vh !important; }
+  /* 手機端壓縮巡覽總捲動距離（桌面600vh／6段=100vh/段 → 手機約65vh/段），拇指少滑幾次就能看完一段 */
+  #tourZoom.tour-zoom { height: 395vh !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
