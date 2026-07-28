@@ -1,3 +1,17 @@
 # 舊官網 sitemap（domain migration 工作參考用，不要部署到網站根目錄
 # 免得 Google 爬到一份全是舊網址的 sitemap）
 sitemap/
+
+# ── 內部文件與素材：一律不放這個資料夾 ──
+# 這個資料夾的內容會整包部署成公開網站，任何放進來的檔案都能被外部直接下載。
+# 2026-07-28 實測發現 進度.md／BRAND.md／品牌形象企劃書.md／14.LOGO/ 都已公開可讀，
+# 已改放到同層的 ../hunglun2026-內部資料/（仍受 ClaudeOnly repo 備份與跨電腦同步）。
+# 以下規則是防呆，避免日後又被誤放回來。
+進度.md
+BRAND.md
+品牌形象企劃書.md
+14.LOGO/
+wix-import/
+
+# wrangler 本機開發快取（跑 wrangler pages dev 產生，不要部署）
+.wrangler/

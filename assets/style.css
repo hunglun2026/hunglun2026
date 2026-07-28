@@ -104,10 +104,10 @@ a:hover { text-decoration: underline; }
   margin-right: 12px;
 }
 .header-visit-counter span { color: var(--accent); font-weight: 600; }
-.main-nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.main-nav { display: flex; gap: 4px; flex-wrap: wrap; }
 .main-nav a {
   color: var(--muted);
-  padding: 8px 12px;
+  padding: 8px 9px;
   font-size: 0.92rem;
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -396,6 +396,7 @@ a:hover { text-decoration: underline; }
 .svc-tab:hover { color: var(--text); }
 .prose { max-width: 760px; margin: 0 auto; }
 .prose h2 { margin: 32px 0 14px; font-size: 1.3rem; font-weight: 400; color: var(--text); }
+.prose h3 { margin: 28px 0 12px; font-size: 1.05rem; font-weight: 400; color: var(--text); }
 .prose p, .prose li { color: var(--muted); }
 .prose ul { padding-left: 24px; }
 .breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; }
@@ -592,8 +593,9 @@ a:hover { text-decoration: underline; }
   html { scroll-behavior: auto; }
 }
 
-/* ---------- Header／導覽列在裝不下前先收成漢堡選單，避免 main-nav 換行造成排版跑掉 ---------- */
-@media (max-width: 1400px) {
+/* ---------- Header／導覽列在裝不下前先收成漢堡選單，避免 main-nav 換行造成排版跑掉 ----------
+   斷點需 ≥ 單行容納 nav 所需的最小寬度（實測 1502px），加入代理軟體後由 1400px 上調至 1520px */
+@media (max-width: 1520px) {
   .nav-toggle { display: block; }
   .main-nav {
     display: none;
@@ -680,4 +682,68 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
 @media (max-width: 640px) {
   .svc-pager { flex-direction: column; gap: 10px; }
   .svc-cta { padding: 22px; }
+}
+
+/* ---------- 活動剪影圖文卡片 ---------- */
+.event-list { list-style: none; display: grid; gap: 26px; }
+.event-item {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+}
+.event-item:last-child { border-bottom: none; padding-bottom: 0; }
+.event-item img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  filter: grayscale(0.15);
+  transition: filter 0.4s ease;
+}
+.event-item:hover img { filter: grayscale(0); }
+.event-item .event-body { color: var(--muted); }
+.event-item .event-title {
+  display: block;
+  color: var(--text);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.event-item .event-date {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted-faint);
+  margin-right: 10px;
+}
+@media (max-width: 640px) {
+  .event-item { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* ---------- 規格／方案比較表 ---------- */
+.spec-table-wrap { overflow-x: auto; margin: 22px 0; }
+.spec-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.spec-table th,
+.spec-table td {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  color: var(--muted);
+}
+.spec-table thead th {
+  background: var(--bg-soft);
+  color: var(--text);
+  font-weight: 500;
+}
+.spec-table tbody th {
+  background: var(--bg-soft);
+  color: var(--text);
+  font-weight: 400;
+  white-space: nowrap;
 }

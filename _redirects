@@ -1,2 +1,8 @@
 /effect-home.html / 301
-/effects.html /services.html 301
+/effects.html /services 301
+
+# ── 舊 PHP 官網（www.hunglun.com）純路徑網址的 301 對應 ──
+# 帶 nav／tId 問號參數的 22 筆在 functions/submain.php.js 處理，
+# 因為 _redirects 不支援 query string 比對。
+/index.php / 301
+/contact.php /contact 301

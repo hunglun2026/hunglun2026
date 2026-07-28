@@ -34,4 +34,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://hunglun-new.pages.dev/sitemap.xml
+Sitemap: https://hunglun2026.pages.dev/sitemap.xml

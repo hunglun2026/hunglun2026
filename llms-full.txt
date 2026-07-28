@@ -5,7 +5,7 @@
 
 ## 鴻綸科技｜Google for Education 認證夥伴・全站導覽
 
-https://hunglun-new.pages.dev/
+https://hunglun2026.pages.dev/
 
 鴻綸科技｜Google for Education 認證夥伴・全站導覽
 品牌總覽
@@ -52,7 +52,7 @@ Chromebook／智慧教室
 
 ## 鴻綸科技｜Google for Education 認證夥伴・台南教育科技
 
-https://hunglun-new.pages.dev/brand.html
+https://hunglun2026.pages.dev/brand
 
 鴻綸科技 · GOOGLE FOR EDUCATION 認證夥伴
 Google 官方認證
@@ -88,7 +88,7 @@ Google 官方認證
 
 ## 關於我們｜鴻綸科技 Google for Education 認證夥伴
 
-https://hunglun-new.pages.dev/about.html
+https://hunglun2026.pages.dev/about
 
 關於鴻綸科技
 鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）是位於台南新營的教育科技公司，長期服務台灣教育界，是 Google for Education Professional Development Partner（專業發展合作夥伴），名列 Google 官方全球高等教育專業發展夥伴名冊。
@@ -113,7 +113,7 @@ Google 官方授權導入——從帳號開通、網域管理到教師培訓，�
 
 ## 服務項目｜Google AI Pro for Education 授權・教育方案｜鴻綸科技
 
-https://hunglun-new.pages.dev/services.html
+https://hunglun2026.pages.dev/services
 
 服務項目
 從 Google AI Pro for Education 授權導入到教育方案整合，一站式服務。
@@ -185,7 +185,7 @@ LINE 官方帳號經營知識 →
 
 ## 精選專案｜已上線 AI 應用工具一覽｜鴻綸科技
 
-https://hunglun-new.pages.dev/projects.html
+https://hunglun2026.pages.dev/projects
 
 精選專案
 每一項都已正式上線、實際運作中。點「前往體驗」直接使用。
@@ -228,7 +228,7 @@ QR Code 集點・雲端後台
 
 ## 資源分享｜免費AI工具分類導覽｜鴻綸科技
 
-https://hunglun-new.pages.dev/tools.html
+https://hunglun2026.pages.dev/tools
 
 資源分享
 依用途分類，快速找到需要的工具，全部免費開放使用。
@@ -267,7 +267,7 @@ AI 智慧出題・支援多種題型
 
 ## 常見問題與知識庫｜Chromebook・AI・Google・Gemini・網站架設｜鴻綸科技
 
-https://hunglun-new.pages.dev/faq.html
+https://hunglun2026.pages.dev/faq
 
 常見問題與知識庫
 關於我們的工具、服務與委託開發，以及 Chromebook／AI／Google／Gemini／網站架設等知識分類。
@@ -331,7 +331,7 @@ AEO（Answer Engine Optimization）是讓網站內容能直接被搜尋引擎或
 
 ## 在地嚮導：新營・鹽水・東山美食地圖｜鴻綸科技
 
-https://hunglun-new.pages.dev/local-food.html
+https://hunglun2026.pages.dev/local-food
 
 在地嚮導：新營・鹽水・東山
 鴻綸科技總部在新營，這是我們深耕在地多年的私房推薦：以新營為中心，向外延伸到鹽水、東山，各10家必吃小吃，共30家。
@@ -505,7 +505,7 @@ SEO/AEO/GEO 差異、建置費用估算。
 
 ## 聯絡我們｜鴻綸科技股份有限公司（台南新營）
 
-https://hunglun-new.pages.dev/contact.html
+https://hunglun2026.pages.dev/contact
 
 聯絡我們
 Google AI Pro for Education 授權、Google 教育方案、設備建置、AI 工具開發——歡迎來電或來信洽詢。
@@ -524,7 +524,7 @@ gfeh@hunglun.com
 
 ## 網站導覽｜鴻綸科技 Google for Education Professional Development Partner
 
-https://hunglun-new.pages.dev/landing.html
+https://hunglun2026.pages.dev/landing
 
 網站導覽｜鴻綸科技 Google for Education Professional Development Partner
 進入官網首頁 →
@@ -642,7 +642,7 @@ Google AI Pro 導入服務全台皆可申請；K12 研習以新營為中心方�
 
 ## AI 是什麼？人工智慧新手入門｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/ai.html
+https://hunglun2026.pages.dev/knowledge/ai
 
 常見問題 ／ AI 入門百科
 AI 是什麼？人工智慧新手入門
@@ -679,7 +679,7 @@ AI 應用與客製工具開發
 
 ## Chromebook 選購與校園導入指南｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/chromebook.html
+https://hunglun2026.pages.dev/knowledge/chromebook
 
 常見問題 ／ Chromebook 選購指南
 Chromebook 選購與校園導入指南
@@ -716,7 +716,7 @@ Chromebook 與智慧教室建置服務
 
 ## 電腦與雲端服務入門手冊｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/computer.html
+https://hunglun2026.pages.dev/knowledge/computer
 
 常見問題 ／ 電腦與雲端手冊
 電腦與雲端服務入門手冊
@@ -751,7 +751,7 @@ Chromebook 與智慧教室建置服務
 
 ## Gemini AI 方案比較與價格懶人包｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/gemini.html
+https://hunglun2026.pages.dev/knowledge/gemini
 
 常見問題 ／ Gemini 方案懶人包
 Gemini AI 方案比較與價格懶人包
@@ -814,7 +814,7 @@ Google AI Pro for Education 授權導入
 
 ## Google for Education 完全指南｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/google.html
+https://hunglun2026.pages.dev/knowledge/google
 
 常見問題 ／ Google for Education 指南
 Google for Education 完全指南
@@ -849,7 +849,7 @@ Google Workspace for Education 導入服務
 
 ## LINE 官方帳號經營心法｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/line-oa.html
+https://hunglun2026.pages.dev/knowledge/line-oa
 
 常見問題 ／ LINE 官方帳號心法
 LINE 官方帳號經營心法
@@ -884,7 +884,7 @@ LINE 官方帳號適合哪些行業或機構經營？
 
 ## 會員集點系統設計筆記｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/membership.html
+https://hunglun2026.pages.dev/knowledge/membership
 
 常見問題 ／ 會員集點系統筆記
 會員集點系統設計筆記
@@ -919,7 +919,7 @@ LINE 官方帳號心法
 
 ## AI OCR 文件辨識全解析｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/ocr.html
+https://hunglun2026.pages.dev/knowledge/ocr
 
 常見問題 ／ AI OCR 辨識解析
 AI OCR 文件辨識全解析
@@ -954,7 +954,7 @@ AI 入門百科
 
 ## 政府開放資料應用手冊｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/opendata.html
+https://hunglun2026.pages.dev/knowledge/opendata
 
 常見問題 ／ 開放資料應用手冊
 政府開放資料應用手冊
@@ -989,7 +989,7 @@ https://hunglun-new.pages.dev/knowledge/opendata.html
 
 ## 個資法與校園資安須知｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/privacy.html
+https://hunglun2026.pages.dev/knowledge/privacy
 
 常見問題 ／ 個資法與校園資安須知
 個資法與校園資安須知
@@ -1024,7 +1024,7 @@ Gemini 方案懶人包
 
 ## 網站速度優化攻略｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/webperf.html
+https://hunglun2026.pages.dev/knowledge/webperf
 
 常見問題 ／ 網站速度優化攻略
 網站速度優化攻略
@@ -1059,7 +1059,7 @@ SEO／AEO／GEO 搜尋引擎優化服務
 
 ## 網站架設新手攻略｜鴻綸科技
 
-https://hunglun-new.pages.dev/knowledge/website.html
+https://hunglun2026.pages.dev/knowledge/website
 
 常見問題 ／ 網站架設攻略
 網站架設新手攻略
