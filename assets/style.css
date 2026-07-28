@@ -17,7 +17,9 @@
   --grid-line: rgba(0, 0, 0, 0.05);
   --hero-glow-1: transparent;
   --hero-glow-2: transparent;
-  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  /* 全站統一 Noto Sans TC。這個變數名沿用 --mono（原本是 JetBrains Mono），
+     現在只作為「數字、標籤等次要文字」的字型出口，字型本身已改成跟內文一致 */
+  --mono: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
   --radius: 4px;
   --maxw: 1080px;
 }

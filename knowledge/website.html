@@ -16,7 +16,7 @@
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css?v=5">
 <script type="application/ld+json">
 {
@@ -38,9 +38,9 @@
     { "@type": "Question", "name": "架一個網站需要哪些基本東西？", "acceptedAnswer": { "@type": "Answer", "text": "基本上需要三樣：1）網域（Domain），就是網址，例如 hunglun.com；2）主機／託管服務（Hosting），存放網站檔案並讓瀏覽器能連上；3）網站本身的程式碼或內容管理系統（CMS）。此外通常還會搭配 SSL 憑證（讓網址開頭是 https，資料傳輸加密）與 DNS 設定（把網域指向正確的主機）。" } },
     { "@type": "Question", "name": "靜態網站跟動態網站差在哪？", "acceptedAnswer": { "@type": "Answer", "text": "靜態網站是預先寫好固定的 HTML/CSS/JS 檔案，使用者看到的內容不會因人而異，載入速度快、成本低，適合形象官網、活動頁面；動態網站則會即時從資料庫抓資料組成頁面（例如會員系統、電商後台），彈性大但架構較複雜、需要伺服器運算資源。像鴻綸科技這個官網就是零 build 純靜態網站，部署在 Cloudflare Pages，載入速度快且維護成本低。" } },
     { "@type": "Question", "name": "什麼是 CMS（內容管理系統）？一定要用嗎？", "acceptedAnswer": { "@type": "Answer", "text": "CMS（Content Management System）是讓非工程師也能自行編輯網站內容（文字、圖片、上下架文章）的後台系統，例如 WordPress。不是每個網站都需要 CMS：如果內容更新頻率低、由固定的人（如工程師或代管廠商）負責維護，純手工寫的靜態網站反而更快、更安全、維護成本更低；如果需要行銷團隊頻繁自行發文，CMS 會比較方便。" } },
-    { "@type": "Question", "name": "SEO、AEO、GEO 分別是什麼？網站架設時要一起規劃嗎？", "acceptedAnswer": { "@type": "Answer", "text": "SEO（搜尋引擎優化）讓網站在 Google 等傳統搜尋結果中排名更好；AEO（答案引擎優化）讓內容能被直接提取成搜尋結果最上方的「精選摘要」；GEO（生成式引擎優化）讓 ChatGPT、Gemini、Perplexity 等 AI 在回答問題時願意引用你的網站內容。三者做法有重疊（清楚的結構化內容、正確的 meta 標籤、Schema.org 結構化資料），建議在網站建置初期就一併規劃，而不是上線後才補，這樣結構跟內容從一開始就對齊搜尋引擎與 AI 引擎的閱讀邏輯。" } },
+    { "@type": "Question", "name": "SEO、AEO、GEO 分別是什麼？網站架設時要一起規劃嗎？", "acceptedAnswer": { "@type": "Answer", "text": "SEO（搜尋引擎最佳化）讓網站在 Google 等傳統搜尋結果中排名更好；AEO（答案引擎最佳化）讓內容能被直接提取成搜尋結果最上方的「精選摘要」；GEO（生成式引擎最佳化）讓 ChatGPT、Gemini、Perplexity 等 AI 在回答問題時願意引用你的網站內容。三者做法有重疊（清楚的結構化內容、正確的 meta 標籤、Schema.org 結構化資料），建議在網站建置初期就一併規劃，而不是上線後才補，這樣結構跟內容從一開始就對齊搜尋引擎與 AI 引擎的閱讀邏輯。" } },
     { "@type": "Question", "name": "網站建置費用大概怎麼估？", "acceptedAnswer": { "@type": "Answer", "text": "費用主要看三個因素：1）頁面數量與內容複雜度（純形象頁 vs 含會員系統、後台管理的複雜網站）；2）是否需要客製設計或套版即可；3）是否需要額外功能（如金流串接、多語系、AI 客服）。單純形象官網通常是最經濟的選項，若需要動態後台或客製功能，費用會隨系統複雜度增加。建議先想清楚實際需求（給誰看、要達成什麼目標），再請廠商依需求報價，避免規格模糊導致報價落差過大。鴻綸科技接案時習慣先了解客戶實際的行銷情境與預算範圍，再建議零 build 靜態站或動態系統，不會不管需求就一律推最貴的方案。" } },
-    { "@type": "Question", "name": "網站架好之後，還需要持續維護什麼？", "acceptedAnswer": { "@type": "Answer", "text": "常見的持續維護項目包括：1）網域與 SSL 憑證到期續約；2）內容更新（新消息、產品資訊）；3）安全性更新（尤其是用 CMS 系統的網站，外掛與核心程式需要定期更新避免被入侵）；4）SEO 表現追蹤與內容優化；5）備份，避免網站被駭或誤刪時求助無門。零 build 純靜態網站因為沒有資料庫與外掛系統，安全維護的負擔會比動態 CMS 網站小很多。" } }
+    { "@type": "Question", "name": "網站架好之後，還需要持續維護什麼？", "acceptedAnswer": { "@type": "Answer", "text": "常見的持續維護項目包括：1）網域與 SSL 憑證到期續約；2）內容更新（新消息、產品資訊）；3）安全性更新（尤其是用 CMS 系統的網站，外掛與核心程式需要定期更新避免被入侵）；4）SEO 表現追蹤與內容最佳化；5）備份，避免網站被駭或誤刪時求助無門。零 build 純靜態網站因為沒有資料庫與外掛系統，安全維護的負擔會比動態 CMS 網站小很多。" } }
   ]
 }
 </script>
@@ -96,7 +96,7 @@
     </details>
     <details class="faq-item reveal">
       <summary>SEO、AEO、GEO 分別是什麼？網站架設時要一起規劃嗎？</summary>
-      <div class="faq-a">SEO（搜尋引擎優化）讓網站在 Google 等傳統搜尋結果中排名更好；AEO（答案引擎優化）讓內容能被直接提取成搜尋結果最上方的「精選摘要」；GEO（生成式引擎優化）讓 ChatGPT、Gemini、Perplexity 等 AI 在回答問題時願意引用你的網站內容。三者做法有重疊（清楚的結構化內容、正確的 meta 標籤、Schema.org 結構化資料），建議在網站建置初期就一併規劃，而不是上線後才補，這樣結構跟內容從一開始就對齊搜尋引擎與 AI 引擎的閱讀邏輯。</div>
+      <div class="faq-a">SEO（搜尋引擎最佳化）讓網站在 Google 等傳統搜尋結果中排名更好；AEO（答案引擎最佳化）讓內容能被直接提取成搜尋結果最上方的「精選摘要」；GEO（生成式引擎最佳化）讓 ChatGPT、Gemini、Perplexity 等 AI 在回答問題時願意引用你的網站內容。三者做法有重疊（清楚的結構化內容、正確的 meta 標籤、Schema.org 結構化資料），建議在網站建置初期就一併規劃，而不是上線後才補，這樣結構跟內容從一開始就對齊搜尋引擎與 AI 引擎的閱讀邏輯。</div>
     </details>
     <details class="faq-item reveal">
       <summary>網站建置費用大概怎麼估？</summary>
@@ -104,7 +104,7 @@
     </details>
     <details class="faq-item reveal">
       <summary>網站架好之後，還需要持續維護什麼？</summary>
-      <div class="faq-a">常見的持續維護項目包括：1）網域與 SSL 憑證到期續約；2）內容更新（新消息、產品資訊）；3）安全性更新（尤其是用 CMS 系統的網站，外掛與核心程式需要定期更新避免被入侵）；4）SEO 表現追蹤與內容優化；5）備份，避免網站被駭或誤刪時求助無門。零 build 純靜態網站因為沒有資料庫與外掛系統，安全維護的負擔會比動態 CMS 網站小很多。</div>
+      <div class="faq-a">常見的持續維護項目包括：1）網域與 SSL 憑證到期續約；2）內容更新（新消息、產品資訊）；3）安全性更新（尤其是用 CMS 系統的網站，外掛與核心程式需要定期更新避免被入侵）；4）SEO 表現追蹤與內容最佳化；5）備份，避免網站被駭或誤刪時求助無門。零 build 純靜態網站因為沒有資料庫與外掛系統，安全維護的負擔會比動態 CMS 網站小很多。</div>
     </details>
   </div>
 </section>
@@ -121,7 +121,7 @@
         <div class="card-body"><h3>品牌形象官網建置服務</h3><p>看鴻綸科技怎麼協助企業建置官網。</p></div>
       </a>
       <a class="card reveal" href="/services#seo-aeo-geo">
-        <div class="card-body"><h3>SEO／AEO／GEO 搜尋引擎優化服務</h3><p>看鴻綸科技怎麼協助網站被搜尋與 AI 引擎看見。</p></div>
+        <div class="card-body"><h3>SEO／AEO／GEO 搜尋引擎最佳化服務</h3><p>看鴻綸科技怎麼協助網站被搜尋與 AI 引擎看見。</p></div>
       </a>
     </div>
   </div>
@@ -129,7 +129,7 @@
 
 <section class="section">
   <div class="wrap" style="text-align:center;">
-    <h2 class="section-title reveal">想建置或優化官網？</h2>
+    <h2 class="section-title reveal">想建置或最佳化官網？</h2>
     <p class="section-sub reveal">從規劃、設計到 SEO/AEO/GEO，我們一手包辦。</p>
     <a class="btn btn-primary reveal" href="/contact">聯絡我們</a>
   </div>
@@ -159,7 +159,6 @@
         <ul class="footer-contact">
           <li>電話：<a href="tel:+88666371192">06-6371192</a></li>
           <li>信箱：<a href="mailto:gfeh@hunglun.com">gfeh@hunglun.com</a></li>
-          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">正式官網 hunglun.com</a></li>
         </ul>
       </div>
     </div>
