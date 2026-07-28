@@ -14,6 +14,7 @@
 
 ## 服務項目分頁（每項服務的完整說明）
 - Google AI Pro for Education 授權導入：https://hunglun2026.pages.dev/services/google-ai-pro
+- 企業級 AI 導入（Gemini Enterprise、Google Workspace 企業版）：https://hunglun2026.pages.dev/services/enterprise-ai
 - Google Workspace for Education 導入與認證培訓（含 Education Fundamentals／Standard／Teaching and Learning Upgrade／Education Plus 四版本比較表：Fundamentals 為符合資格教育機構免費、整個網域共享 100 TB 儲存空間；T&L Upgrade 每授權另附 100 GB；Education Plus 每授權另附 20 GB 且 Google Meet 會議上限 500 人）：https://hunglun2026.pages.dev/services/google-workspace
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓；各軟體功能細節見「代理軟體」頁）：https://hunglun2026.pages.dev/services/digital-learning
 - Chromebook 與智慧教室建置（ASUS Chromebook CM30 Detachable〔CM3001〕與 CM32 Detachable〔CM3206〕皆為可拆卸 2 合 1、通過 MIL-STD 810H 軍規標準；CEU 載具管理授權；學校單位可免費借用 Chromebook 評估試用）：https://hunglun2026.pages.dev/services/chromebook
