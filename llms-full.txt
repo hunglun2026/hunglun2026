@@ -298,7 +298,7 @@ AEO（Answer Engine Optimization）是讓網站內容能直接被搜尋引擎或
 
 ## 在地嚮導：新營・鹽水・東山美食地圖｜鴻綸科技
 
-https://hunglun2026.pages.dev/local-food
+https://hunglun2026.pages.dev/services#local-food
 
 在地嚮導：新營・鹽水・東山
 鴻綸科技總部在新營，這是我們深耕在地多年的私房推薦：以新營為中心，向外延伸到鹽水、東山，各10家必吃小吃，共30家。

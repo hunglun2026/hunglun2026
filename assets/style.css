@@ -307,6 +307,9 @@ a:hover { text-decoration: underline; }
 .card:hover .svc-photo,
 .tour-zoom-panel:hover .l-tour-photo { filter: grayscale(0%) contrast(100%); }
 .card-visual img.food-photo { width: 100%; height: 100%; object-fit: cover; }
+/* 情境照片型卡片（活動剪影等）：照片填滿視覺區，不用圖示的 76px 尺寸 */
+.card-visual.photo-visual { height: 190px; padding: 0; overflow: hidden; }
+.card-visual.photo-visual img { width: 100%; height: 100%; object-fit: cover; }
 /* 美食照片容器：磨砂玻璃背景手法（仿Spotify專輯封面）——原圖本身構圖過滿過緊，
    用contain留白會出現像跑版的letterbox黑邊。改用同張圖片模糊放大當背景，前景圖縮小
    置中、加圓角陰影，視覺上緩解特寫照片的壓迫感，不需要重新生成圖片。 */
