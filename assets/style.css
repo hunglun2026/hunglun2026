@@ -717,6 +717,7 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   border-bottom: 1px solid var(--line);
 }
 .event-item:last-child { border-bottom: none; padding-bottom: 0; }
+.event-item--noimg { grid-template-columns: 1fr; }
 .event-item img {
   display: block;
   width: 100%;

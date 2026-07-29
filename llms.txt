@@ -41,7 +41,7 @@
 - 精選專案（已上線的 AI 應用工具與客戶委託案例，收在服務項目頁的分頁）：https://hunglun2026.pages.dev/services#projects
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://hunglun2026.pages.dev/tools
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://hunglun2026.pages.dev/software
-- 活動剪影（2017–2020 歷年參與及協辦的教育研習、成果展與 Google 教育活動紀錄，共19場）：https://hunglun2026.pages.dev/events
+- 活動剪影（2017–2020 歷年參與及協辦的教育研習、成果展與 Google 教育活動紀錄，共20場）：https://hunglun2026.pages.dev/events
 - 常見問題與知識庫（分類導覽）：https://hunglun2026.pages.dev/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://hunglun2026.pages.dev/local-food
 - 聯絡我們：https://hunglun2026.pages.dev/contact
