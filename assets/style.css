@@ -712,6 +712,31 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   .svc-cta { padding: 22px; }
 }
 
+/* ---------- 台銀標設備類別卡 ---------- */
+.bot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 22px 0 8px;
+}
+.bot-cat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.bot-cat:hover { border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.bot-cat img { width: 100%; height: 96px; object-fit: contain; }
+.bot-cat span { font-size: 0.86rem; text-align: center; line-height: 1.5; }
+.bot-cat--text { justify-content: center; min-height: 130px; background: var(--bg-soft); }
+.prose .bot-grid a { color: var(--text); }
+:target { scroll-margin-top: 120px; }
+
 /* ---------- 台銀標設備圖示 ---------- */
 .bot-gallery {
   display: grid;
