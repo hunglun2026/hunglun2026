@@ -22,6 +22,12 @@
   --mono: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
   --radius: 4px;
   --maxw: 1080px;
+  /* 版面留白：全站垂直節奏集中在這裡，要整體放鬆/收緊改這幾個值即可 */
+  --sp-hero-top: 96px;
+  --sp-hero-bottom: 104px;
+  --sp-section: 56px;
+  --sp-head-top: 52px;
+  --sp-head-bottom: 32px;
 }
 
 :root[data-theme="dark"] {
@@ -53,7 +59,7 @@ body {
   font-weight: 300;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.85;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -65,7 +71,7 @@ a:hover { text-decoration: underline; }
 @media (max-width: 768px) {
   body {
     letter-spacing: 0.02em;
-    line-height: 1.9;
+    line-height: 1.8;
     -webkit-text-stroke: 0.15px currentColor;
   }
   .btn, .card-body h3, h1, h2 { font-weight: 400; }
@@ -183,7 +189,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding: 140px 0 160px;
+  padding: var(--sp-hero-top) 0 var(--sp-hero-bottom);
   text-align: left;
   overflow: hidden;
   background: var(--bg);
@@ -193,30 +199,30 @@ a:hover { text-decoration: underline; }
   font-size: clamp(1.9rem, 4.2vw, 2.9rem);
   font-weight: 300;
   letter-spacing: 0.01em;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 .hero h1 .grad {
   color: var(--text);
   font-weight: 300;
 }
 .hero p.lead {
-  margin: 28px 0 0;
+  margin: 20px 0 0;
   max-width: 640px;
   color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.1rem);
-  line-height: 2.1;
+  line-height: 1.85;
   font-weight: 300;
 }
 .hero-badge {
   display: inline-block;
-  margin-bottom: 44px;
+  margin-bottom: 28px;
   color: var(--accent);
   font-size: 0.78rem;
   letter-spacing: 0.35em;
   font-weight: 500;
   word-break: keep-all;
 }
-.hero-cta { margin-top: 56px; display: flex; gap: 24px; justify-content: flex-start; flex-wrap: wrap; align-items: center; }
+.hero-cta { margin-top: 36px; display: flex; gap: 24px; justify-content: flex-start; flex-wrap: wrap; align-items: center; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -239,10 +245,10 @@ a:hover { text-decoration: underline; }
 .btn-sm { padding: 9px 20px; font-size: 0.86rem; }
 
 /* ---------- Sections ---------- */
-.section { padding: 72px 0; }
+.section { padding: var(--sp-section) 0; }
 .section.alt { background: transparent; border: none; }
 .section-title { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 400; text-align: left; }
-.section-sub { text-align: left; color: var(--muted); font-weight: 300; margin: 14px 0 56px; max-width: 620px; }
+.section-sub { text-align: left; color: var(--muted); font-weight: 300; margin: 12px 0 36px; max-width: 620px; }
 .eyebrow {
   display: block;
   text-align: left;
@@ -340,7 +346,7 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 12px 28px rgba(0,0,0,0.3);
 }
 .v-blue, .v-indigo, .v-cyan, .v-teal, .v-navy { background: var(--bg-soft); }
-.card-body { padding: 26px 26px 30px; display: flex; flex-direction: column; flex: 1; }
+.card-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
 .card-body h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 8px; }
 .h3-icon { width: 18px; height: 18px; vertical-align: -3px; color: var(--accent); stroke-width: 1.6; margin-right: 2px; }
 .card-body h3 a { color: var(--text); }
@@ -396,7 +402,7 @@ a:hover { text-decoration: underline; }
 .faq-item .faq-a { padding: 0 4px 22px; color: var(--muted); }
 
 /* ---------- Content pages ---------- */
-.page-head { padding: 72px 0 44px; text-align: center; background: var(--bg); }
+.page-head { padding: var(--sp-head-top) 0 var(--sp-head-bottom); text-align: center; background: var(--bg); }
 .page-head h1 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 400; }
 .page-head p { color: var(--muted); margin-top: 14px; max-width: 640px; margin-inline: auto; }
 .svc-tabs { display: flex; gap: 8px; justify-content: center; margin-top: 28px; border-bottom: 1px solid var(--grid-line); }
@@ -558,7 +564,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 56px 0 40px;
+  padding: 44px 0 32px;
   background: var(--bg);
   color: var(--muted);
   font-size: 0.88rem;
@@ -690,7 +696,7 @@ a:hover { text-decoration: underline; }
   .header-inner { padding: 10px 16px; }
   .header-visit-counter { font-size: 0.72rem; padding: 4px 10px; margin-right: 6px; }
   .wrap { padding: 0 16px; }
-  .section { padding: 56px 0; }
+  .section { padding: 40px 0; }
   .btn { padding: 13px 22px; }
   .hero-cta .btn { width: 100%; max-width: 320px; }
   .card-actions .btn { flex: 1; text-align: center; min-width: 120px; }
@@ -698,7 +704,8 @@ a:hover { text-decoration: underline; }
   .stat { flex: 1 1 calc(50% - 10px); min-width: 0; }
   .stat .num { font-size: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
-  .hero { padding: 72px 0 60px; }
+  .hero { padding: 56px 0 44px; }
+  .page-head { padding: 36px 0 24px; }
 }
 
 /* ---------- Logo 深/淺色切換（放在最後確保覆蓋 .brand img／.footer-logo img） ---------- */

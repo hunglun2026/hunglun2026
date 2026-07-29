@@ -51,10 +51,13 @@ document.querySelectorAll('img.lightbox').forEach((img) => {
     const overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
     overlay.innerHTML = `<button class="lightbox-close" aria-label="關閉">✕</button><img src="${img.src}" alt="${img.alt}">`;
-    overlay.addEventListener('click', () => overlay.remove());
-    document.addEventListener('keydown', function onEsc(e) {
-      if (e.key === 'Escape') { overlay.remove(); document.removeEventListener('keydown', onEsc); }
-    });
+    function onEsc(e) { if (e.key === 'Escape') close(); }
+    function close() {
+      overlay.remove();
+      document.removeEventListener('keydown', onEsc);
+    }
+    overlay.addEventListener('click', close);
+    document.addEventListener('keydown', onEsc);
     document.body.appendChild(overlay);
   });
 });
