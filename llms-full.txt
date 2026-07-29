@@ -55,9 +55,9 @@ Chromebook／智慧教室
 https://hunglun2026.pages.dev/about
 
 關於鴻綸科技
-鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）總部位於台南新營，2013 年創立，服務範圍遍及全台。團隊在 IT 這行做了十幾年，客戶從各級學校、政府機關到中小企業都有，其中又以學校為主。創立以來就是那幾件事：誠信、實在、技術到位、服務跟到底——東西要能用，出了狀況找得到人。
-2017 年，我們成為 Google 官方授權在台的教育合作發展夥伴，2019 年再取得專業化夥伴資格，名列 Google 官方全球高等教育專業發展夥伴名冊；在 Google Cloud 合作夥伴體系中，專業領域（Specialization）認定為 Education。同時也是教育部國中小行動教育推動計畫指定廠商，訓練中心備有五位認證講師與兩位認證網域管理員。
-認證是門檻，不是重點。真正決定成敗的，是導入之後老師敢不敢用、學生用得順不順。所以我們把力氣放在教育訓練與售後服務——說人話、把流程走完、有問題找得到人。
+鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）總部位於台南新營，2013 年創立，服務全台各級學校、政府機關與企業，其中以學校為主。
+2017 年成為 Google 官方授權在台的教育合作發展夥伴，2019 年取得專業化夥伴資格，2026 年再取得高等教育（大學端）專業發展夥伴資格，名列 Google 官方全球名冊；在 Google Cloud 合作夥伴體系中，專業領域認定為 Education。
+認證是門檻，不是重點。導入之後老師敢不敢用、有問題找不找得到人，才是我們最在意的事。
 Google Cloud Partner・Specialization：Education
 節錄自 Google 官方《Higher Education Professional Development Partners》名冊（亞太區）
 我們做什麼
