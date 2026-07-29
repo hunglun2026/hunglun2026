@@ -16,7 +16,6 @@
 - Google AI Pro for Education 授權導入：https://hunglun2026.pages.dev/services/google-ai-pro
 - 企業級 AI 導入（Gemini Enterprise、Google Workspace 企業版）：https://hunglun2026.pages.dev/services/enterprise-ai
 - Google Workspace for Education 導入與認證培訓（含 Education Fundamentals／Standard／Teaching and Learning Upgrade／Education Plus 四版本比較表：Fundamentals 為符合資格教育機構免費、整個網域共享 100 TB 儲存空間；T&L Upgrade 每授權另附 100 GB；Education Plus 每授權另附 20 GB 且 Google Meet 會議上限 500 人）：https://hunglun2026.pages.dev/services/google-workspace
-- 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓；各軟體功能細節見「代理軟體」頁）：https://hunglun2026.pages.dev/services/digital-learning
 - Chromebook 與智慧教室建置（ASUS Chromebook CM30 Detachable〔CM3001〕與 CM32 Detachable〔CM3206〕皆為可拆卸 2 合 1、通過 MIL-STD 810H 軍規標準；CEU 載具管理授權；學校單位可免費借用 Chromebook 評估試用）：https://hunglun2026.pages.dev/services/chromebook
 - 標案設備採購（台銀共同供應契約）：https://hunglun2026.pages.dev/services/procurement
 - AI 應用與客製工具開發：https://hunglun2026.pages.dev/services/ai-development
@@ -39,9 +38,9 @@
 - 首頁（連續捲動巡覽全站）：https://hunglun2026.pages.dev/
 - 關於我們：https://hunglun2026.pages.dev/about
 - 服務項目（含網頁效果 Live Demo 分頁）：https://hunglun2026.pages.dev/services
-- 精選專案：https://hunglun2026.pages.dev/projects
+- 精選專案（已上線的 AI 應用工具與客戶委託案例，收在服務項目頁的分頁）：https://hunglun2026.pages.dev/services#projects
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://hunglun2026.pages.dev/tools
-- 代理軟體（鴻綸代理的教育軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://hunglun2026.pages.dev/software
+- 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://hunglun2026.pages.dev/software
 - 活動剪影（2017–2020 歷年參與及協辦的教育研習、成果展與 Google 教育活動紀錄，共19場）：https://hunglun2026.pages.dev/events
 - 常見問題與知識庫（分類導覽）：https://hunglun2026.pages.dev/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://hunglun2026.pages.dev/local-food

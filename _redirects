@@ -8,3 +8,6 @@
 /contact.php /contact 301
 # brand（原 nav「首頁」）已併入關於我們
 /brand /about 301
+# 精選專案已併入服務項目分頁；數位學習軟體導入改由 /software 承接
+/projects /services 301
+/services/digital-learning /software 301

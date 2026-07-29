@@ -150,9 +150,9 @@ LINE 官方帳號經營知識 →
 ---
 
 
-## 精選專案｜已上線 AI 應用工具一覽｜鴻綸科技
+## 精選專案（服務項目頁分頁）｜已上線 AI 應用工具一覽｜鴻綸科技
 
-https://hunglun2026.pages.dev/projects
+https://hunglun2026.pages.dev/services#projects
 
 精選專案
 每一項都已正式上線、實際運作中。點「前往體驗」直接使用。
