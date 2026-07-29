@@ -16,6 +16,7 @@
 - Google AI Pro for Education 授權導入：https://hunglun2026.pages.dev/services/google-ai-pro
 - 企業級 AI 導入（Gemini Enterprise、Google Workspace 企業版）：https://hunglun2026.pages.dev/services/enterprise-ai
 - Google Workspace for Education 導入與認證培訓（含 Education Fundamentals／Standard／Teaching and Learning Upgrade／Education Plus 四版本比較表：Fundamentals 為符合資格教育機構免費、整個網域共享 100 TB 儲存空間；T&L Upgrade 每授權另附 100 GB；Education Plus 每授權另附 20 GB 且 Google Meet 會議上限 500 人）：https://hunglun2026.pages.dev/services/google-workspace
+- 校園研習（針對 K-12（國小、國中、高中職）與大學端的教師、行政人員與學生，規劃 Google AI 研習課程，由 Google 認證講師到校授課。課程模組含 Gemini 備課、AI 出題與評量、NotebookLM、行政減負、AI 素養與學術倫理、認證考照衝刺）：https://hunglun2026.pages.dev/services/campus-training
 - Chromebook 與智慧教室建置（ASUS Chromebook CM30 Detachable〔CM3001〕與 CM32 Detachable〔CM3206〕皆為可拆卸 2 合 1、通過 MIL-STD 810H 軍規標準；CEU 載具管理授權；學校單位可免費借用 Chromebook 評估試用）：https://hunglun2026.pages.dev/services/chromebook
 - 標案設備採購（台銀共同供應契約）：https://hunglun2026.pages.dev/services/procurement
 - AI 應用與客製工具開發：https://hunglun2026.pages.dev/services/ai-development
@@ -37,8 +38,8 @@
 ## 網站頁面
 - 首頁（連續捲動巡覽全站）：https://hunglun2026.pages.dev/
 - 關於我們：https://hunglun2026.pages.dev/about
-- 服務項目（含網頁效果 Live Demo 分頁）：https://hunglun2026.pages.dev/services
-- 精選專案（已上線的 AI 應用工具與客戶委託案例，收在服務項目頁的分頁）：https://hunglun2026.pages.dev/services#projects
+- 服務項目（含網站效果 Live Demo 分頁）：https://hunglun2026.pages.dev/services
+- 成功案例（已上線的 AI 應用工具與客戶委託案例，收在服務項目頁的分頁）：https://hunglun2026.pages.dev/services#projects
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://hunglun2026.pages.dev/tools
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://hunglun2026.pages.dev/software
 - 活動剪影（2017–2020 歷年參與及協辦的教育研習、成果展與 Google 教育活動紀錄，共20場）：https://hunglun2026.pages.dev/events
