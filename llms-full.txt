@@ -55,7 +55,10 @@ Chromebook／智慧教室
 https://hunglun2026.pages.dev/about
 
 關於鴻綸科技
-鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）是位於台南新營的教育科技公司，長期服務台灣教育界，是 Google for Education Professional Development Partner（專業發展合作夥伴），名列 Google 官方全球高等教育專業發展夥伴名冊。
+鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）總部位於台南新營，2013 年創立，服務範圍遍及全台。團隊在 IT 這行做了十幾年，客戶從各級學校、政府機關到中小企業都有，其中又以學校為主。創立以來就是那幾件事：誠信、實在、技術到位、服務跟到底——東西要能用，出了狀況找得到人。
+2017 年，我們成為 Google 官方授權在台的教育合作發展夥伴，2019 年再取得專業化夥伴資格，名列 Google 官方全球高等教育專業發展夥伴名冊；在 Google Cloud 合作夥伴體系中，專業領域（Specialization）認定為 Education。同時也是教育部國中小行動教育推動計畫指定廠商，訓練中心備有五位認證講師與兩位認證網域管理員。
+認證是門檻，不是重點。真正決定成敗的，是導入之後老師敢不敢用、學生用得順不順。所以我們把力氣放在教育訓練與售後服務——說人話、把流程走完、有問題找得到人。
+Google Cloud Partner・Specialization：Education
 節錄自 Google 官方《Higher Education Professional Development Partners》名冊（亞太區）
 我們做什麼
 多年來，我們協助全台各級學校導入 Google 教育解決方案，包括 Google AI Pro for Education（Gemini Pro 教育版）授權導入、Google Workspace for Education、Chromebook 行動學習裝置、智慧教室與校園網路建置。我們也提供企業客戶 Google Workspace 企業版與 Gemini 企業版（Gemini Enterprise）授權導入服務。在服務教育現場的過程中，我們也看見許多重複、繁瑣、卻長期沒有好工具的日常行政工作，於是把這些困擾一個一個做成「打開瀏覽器就能用」的工具。
@@ -263,7 +266,7 @@ LINE 官方帳號心法
 網站速度、SEO排名關聯、效能檢測。
 公司與服務常見問題
 鴻綸科技是什麼公司？
-鴻綸科技股份有限公司是位於台南新營的教育科技公司，為 Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education 授權導入、Google Workspace、Chromebook、智慧教室建置，並自主開發多項教育行政工具，包括藥品查詢系統、學生回條 AI 辨識系統等。
+鴻綸科技股份有限公司總部位於台南新營，是服務全台的教育科技公司，為 Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education 授權導入、Google Workspace、Chromebook、智慧教室建置，並自主開發多項教育行政工具，包括藥品查詢系統、學生回條 AI 辨識系統等。
 鴻綸科技有代理 Google AI Pro for Education 嗎？
 有。鴻綸科技是 Google for Education Professional Development Partner，可協助學校辦理 Google AI Pro for Education 帳號開通、授權導入與使用規劃，並提供教師培訓，讓學校在合規授權下導入 Gemini 教育應用。歡迎來信 gfeh@hunglun.com 或致電 06-6371192 洽詢。
 精選專案中的工具可以免費使用嗎？
@@ -273,7 +276,7 @@ LINE 官方帳號心法
 可以委託鴻綸科技開發客製 AI 工具嗎？
 可以。我們接受學校、機構與企業的客製開發委託，範圍包括 AI 文件辨識、資料查詢系統、行政流程自動化、會員管理系統等。歡迎來信 gfeh@hunglun.com 或致電 06-6371192 討論需求，我們會先了解您的工作流程再提出務實的方案與報價。
 鴻綸科技的服務範圍只在台南嗎？
-不是。公司位於台南新營，但服務全台。網頁工具類產品透過雲端交付，全台皆可使用；Google 教育方案導入、設備建置與教育訓練也可到校服務。
+不是。公司總部位於台南新營，服務範圍遍及全台。網頁工具類產品透過雲端交付，全台皆可使用；Google 教育方案導入、設備建置與教育訓練也可到校服務。
 學校想導入 Google for Education 或 Google AI Pro for Education，怎麼開始？
 鴻綸科技是 Google for Education Professional Development Partner，可協助學校從 Google Workspace for Education 申請、網域管理設定、Chromebook 載具管理到 Google AI Pro for Education 授權導入與教師認證培訓。請透過電話 06-6371192 或信箱 gfeh@hunglun.com 聯繫，我們會依學校現況規劃導入步驟。
 回條辨識系統會保存學生個資嗎？
@@ -551,7 +554,7 @@ Google AI Pro for Education 授權導入、Workspace 培訓、Chromebook 建置�
 8 條常見問題快速解答
 全台服務範圍涵蓋全台灣
 08 · 聯絡我們
-位於台南新營
+總部位於台南新營
 服務範圍不限地區
 Google AI Pro 導入服務全台皆可申請；K12 研習以新營為中心方圓 100 公里；也接受全台學校與機構委託客製開發，歡迎來信或致電洽詢。
 聯絡我們 →
@@ -587,13 +590,13 @@ Google AI Pro 導入服務全台皆可申請；K12 研習以新營為中心方�
 自製工具全部上線
 常見問題
 鴻綸科技是什麼公司？
-鴻綸科技股份有限公司是位於台南新營的教育科技公司，為 Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education 授權導入、Google Workspace、Chromebook、智慧教室建置，並自主開發多項教育行政工具。
+鴻綸科技股份有限公司總部位於台南新營，是服務全台的教育科技公司，為 Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education 授權導入、Google Workspace、Chromebook、智慧教室建置，並自主開發多項教育行政工具。
 鴻綸科技有代理 Google AI Pro for Education 嗎？
 有。鴻綸科技是 Google for Education Professional Development Partner，可協助學校辦理 Google AI Pro for Education 帳號開通、授權導入與使用規劃，並提供教師培訓。
 精選專案中的工具可以免費使用嗎？
 藥品許可證外觀查詢系統與動物用藥許可證查詢為公開免費服務，任何人都可以直接使用。學生回條辨識與校園照片工具主要供合作學校使用，也開放線上體驗。
 鴻綸科技的服務範圍只在台南嗎？
-不是。公司位於台南新營，但服務全台。網頁工具類產品透過雲端交付，全台皆可使用；Google 教育方案導入、設備建置與教育訓練也可到校服務。
+不是。公司總部位於台南新營，服務範圍遍及全台。網頁工具類產品透過雲端交付，全台皆可使用；Google 教育方案導入、設備建置與教育訓練也可到校服務。
 還想看更多？
 直接進入官網
 首頁有完整的品牌介紹、認證亮點與服務摘要。

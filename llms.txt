@@ -1,6 +1,6 @@
 # 鴻綸科技｜Google for Education 認證夥伴
 
-> 鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）是位於台南新營的教育科技公司，Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education、Google Workspace for Education 授權導入服務。本網站同時展示公司自主開發、已正式上線的教育行政 AI 工具。
+> 鴻綸科技股份有限公司（Hunglun Technology Co., Ltd.）總部位於台南新營，是服務全台的教育科技公司，Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education、Google Workspace for Education 授權導入服務。本網站同時展示公司自主開發、已正式上線的教育行政 AI 工具。
 
 > 本網站全站頁面正文完整版（供 AI 模型/答案引擎一次抓取所有頁面內容）：https://hunglun2026.pages.dev/llms-full.txt
 
