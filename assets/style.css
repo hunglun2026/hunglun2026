@@ -538,10 +538,15 @@ a:hover { text-decoration: underline; }
   max-width: 240px;
   margin: 28px auto 0;
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 10px;
   padding: 10px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  /* 與下方 Google 名冊節錄圖一致的四色外框 */
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: #4285f4;
+  border-right-color: #ea4335;
+  border-bottom-color: #fbbc05;
+  border-left-color: #34a853;
 }
 
 /* ---------- Footer ---------- */
