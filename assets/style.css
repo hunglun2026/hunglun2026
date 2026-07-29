@@ -712,6 +712,51 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   .svc-cta { padding: 22px; }
 }
 
+/* ---------- 台銀標設備圖示 ---------- */
+.bot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin: 20px 0 8px;
+}
+.bot-figure { margin: 0; }
+.bot-figure img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 10px;
+}
+.bot-figure figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+/* ---------- Google for Education 產品家族卡 ---------- */
+.gfe-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+  background: linear-gradient(150deg, rgba(66,133,244,0.07), rgba(52,168,83,0.07) 55%, rgba(251,188,5,0.08));
+}
+.gfe-card h3 { font-size: 1.35rem; font-weight: 400; margin-bottom: 6px; }
+.gfe-card ul { list-style: none; margin-top: 18px; display: grid; gap: 12px; }
+.gfe-card li { padding-left: 22px; position: relative; color: var(--muted); }
+.gfe-card li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.72em;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--dot, #4285f4);
+}
+.gfe-card li strong { color: var(--text); font-weight: 500; }
+.gfe-card .btn { margin-top: 26px; }
+
 /* ---------- 活動剪影圖文卡片 ---------- */
 .event-list { list-style: none; display: grid; gap: 26px; }
 .event-item {
