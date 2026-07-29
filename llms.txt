@@ -10,6 +10,7 @@
 - 地址：台南市新營區綠川路10號
 - 電話：06-6371192　傳真：06-6371112
 - 信箱：gfeh@hunglun.com
+LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 正式官網：https://www.hunglun.com/
 
 ## 服務項目分頁（每項服務的完整說明）
@@ -17,7 +18,7 @@
 - Google AI 企業級授權導入（Gemini Enterprise、Google Workspace 企業版）：https://hunglun2026.pages.dev/services/enterprise-ai
 - Google Workspace for Education 導入與認證培訓（含 Education Fundamentals／Standard／Teaching and Learning Upgrade／Education Plus 四版本比較表：Fundamentals 為符合資格教育機構免費、整個網域共享 100 TB 儲存空間；T&L Upgrade 每授權另附 100 GB；Education Plus 每授權另附 20 GB 且 Google Meet 會議上限 500 人）：https://hunglun2026.pages.dev/services/google-workspace
 - Google AI 校園研習（針對 K-12（國小、國中、高中職）與大學端的教師、行政人員與學生，規劃 Google AI 研習課程，由 Google 認證講師到校授課。課程模組含 Gemini 備課、AI 出題與評量、NotebookLM、行政減負、AI 素養與學術倫理、認證考照衝刺）：https://hunglun2026.pages.dev/services/campus-training
-- Chromebook 與智慧教室建置（ASUS Chromebook CM30 Detachable〔CM3001〕與 CM32 Detachable〔CM3206〕皆為可拆卸 2 合 1、通過 MIL-STD 810H 軍規標準；CEU 載具管理授權；學校單位可免費借用 Chromebook 評估試用）：https://hunglun2026.pages.dev/services/chromebook
+- Chromebook 與智慧教室建置（ASUS Chromebook CX14〔CX1405〕與 CM32 Detachable〔CM3206〕，皆通過 MIL-STD 810H 軍規標準；CEU 載具管理授權；學校單位可免費借用 Chromebook 評估試用）：https://hunglun2026.pages.dev/services/chromebook
 - 標案設備採購（台銀共同供應契約）：https://hunglun2026.pages.dev/services/procurement
 - AI 應用與客製工具開發：https://hunglun2026.pages.dev/services/ai-development
 - 公開資料查詢系統開發：https://hunglun2026.pages.dev/services/open-data
