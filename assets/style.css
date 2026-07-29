@@ -532,6 +532,9 @@ a:hover { text-decoration: underline; }
   font-size: 0.85rem;
   margin-top: 12px;
 }
+/* 標題裡的 Google wordmark 配色（由 main.js 自動包起來） */
+.g-word { white-space: nowrap; font-weight: 500; letter-spacing: 0.005em; }
+
 .partner-badge {
   display: block;
   width: 100%;
