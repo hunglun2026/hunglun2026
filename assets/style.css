@@ -564,25 +564,33 @@ a:hover { text-decoration: underline; }
   font-size: 0.88rem;
 }
 .footer-grid { display: grid; gap: 32px; grid-template-columns: 1.7fr 1fr 1.35fr; }
-.footer-grid h4 { color: var(--text); font-size: 0.9rem; font-weight: 500; margin-bottom: 14px; }
+/* 頁尾兩欄清單共用同一套節奏：小標題 → 髮絲線分隔的列，hover 時淡底＋往右挪一點 */
+.footer-grid h4 {
+  color: var(--muted-faint);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
 .footer-grid ul { list-style: none; }
-.footer-grid li { margin-bottom: 8px; }
-.footer-grid a { color: var(--muted); text-decoration: none; }
-.footer-grid a:hover { color: var(--accent); text-decoration: underline; }
-/* 聯絡方式：名片式細線清單。左欄是固定寬的類別標籤，右欄是可點的內容，
-   外部連結補一個右上箭頭。不用圖示，維持頁尾安靜、與全站細線風格一致。 */
-.footer-contact { display: block; border-top: 1px solid var(--line); }
-.footer-contact li { margin: 0; border-bottom: 1px solid var(--line); }
-.footer-contact a {
+.footer-nav, .footer-contact { border-top: 1px solid var(--line); }
+.footer-nav li, .footer-contact li { margin: 0; border-bottom: 1px solid var(--line); }
+.footer-nav a, .footer-contact a {
   display: grid;
-  grid-template-columns: 46px 1fr auto;
   align-items: baseline;
   gap: 14px;
   padding: 11px 2px;
+  min-height: 44px;
   color: var(--muted) !important;
   transition: background 0.2s ease, padding-left 0.2s ease;
 }
-.footer-contact a:hover { background: var(--bg-soft); padding-left: 8px; text-decoration: none !important; }
+.footer-nav a { grid-template-columns: 1fr auto; font-size: 0.9rem; color: var(--text) !important; align-items: center; }
+.footer-nav a::after { content: "›"; color: var(--muted-faint); font-size: 0.95rem; transition: transform 0.2s ease, color 0.2s ease; }
+.footer-nav a:hover::after { color: var(--accent); transform: translateX(3px); }
+.footer-nav a:hover, .footer-contact a:hover { background: var(--bg-soft); padding-left: 8px; text-decoration: none !important; }
+/* 聯絡方式：名片式細線清單。左欄是固定寬的類別標籤，右欄是可點的內容，
+   外部連結補一個右上箭頭。不用圖示，維持頁尾安靜、與全站細線風格一致。 */
+.footer-contact a { grid-template-columns: 46px 1fr auto; }
 .fc-key {
   font-size: 0.68rem;
   letter-spacing: 0.16em;
@@ -602,7 +610,7 @@ a:hover { text-decoration: underline; }
 .fc-go { font-size: 0.78rem; color: var(--muted-faint); transition: transform 0.2s ease, color 0.2s ease; }
 .footer-contact a:hover .fc-go { color: var(--accent); transform: translate(2px, -2px); }
 @media (prefers-reduced-motion: reduce) {
-  .footer-contact a, .fc-go { transition: none; }
+  .footer-nav a, .footer-nav a::after, .footer-contact a, .fc-go { transition: none; }
 }
 .footer-logo img { height: 56px; width: auto; margin-bottom: 18px; }
 .footer-logo p { line-height: 1.8; margin-bottom: 20px; }
