@@ -16,8 +16,10 @@
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=5">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/style.css?v=6">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -101,7 +103,7 @@
     <p class="section-sub reveal">為校園行政工作寫的自動化小工具。</p>
     <div class="grid">
       <article class="card reveal">
-        <div class="card-visual"><img src="/assets/icon-proj-slip.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-slip.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3><a href="https://lunslip.pages.dev/" target="_blank" rel="noopener">學生回條 AI 辨識系統</a></h3>
           <div class="tagline">拍照上傳・自動統計・匯出 Excel</div>
@@ -114,7 +116,7 @@
       </article>
 
       <article class="card reveal">
-        <div class="card-visual"><img src="/assets/icon-proj-photo.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-photo.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3><a href="https://lun-school-pic-v2.pages.dev/" target="_blank" rel="noopener">校園照片 Word 填入工具</a></h3>
           <div class="tagline">所見即所得・照片自動排版</div>
@@ -126,7 +128,7 @@
       </article>
 
       <article class="card reveal">
-        <div class="card-visual"><img src="/assets/icon-proj-quiz.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-quiz.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3><a href="https://lunquiz.pages.dev/" target="_blank" rel="noopener">小綸出題小幫手</a></h3>
           <div class="tagline">AI 智慧出題・支援多種題型</div>
@@ -146,7 +148,7 @@
     <p class="section-sub reveal">整合政府開放資料，比官方系統更快更好用。</p>
     <div class="grid">
       <article class="card reveal">
-        <div class="card-visual"><img src="/assets/icon-proj-med.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-med.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3><a href="https://lun-med-search.pages.dev/" target="_blank" rel="noopener">藥品許可證外觀查詢系統</a></h3>
           <div class="tagline">看外觀找藥・查仿單 PDF</div>
@@ -159,7 +161,7 @@
       </article>
 
       <article class="card reveal">
-        <div class="card-visual"><img src="/assets/icon-proj-vet.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-vet.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3><a href="https://lun-vet-rx.pages.dev/" target="_blank" rel="noopener">動物用藥許可證查詢</a></h3>
           <div class="tagline">免驗證碼・即打即搜</div>
@@ -218,11 +220,11 @@
   <span class="fab-label">線上諮詢</span>
   <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
   <a class="fab-line" href="https://line.me/R/ti/p/%40gdm6961p" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號 @gdm6961p" title="LINE 官方帳號（電腦版請搜尋 ID：@gdm6961p）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
-  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img src="/assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img width="160" height="160" src="/assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
   <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shen@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 shen@hunglun.com（開啟 Gmail）" title="寄信給 shen@hunglun.com"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14h-18z" /><path d="M3 6.5l9 6.5l9 -6.5" /></svg></a>
 </div>
 
 
-<script src="/assets/main.js"></script>
+<script src="/assets/main.js?v=6"></script>
 </body>
 </html>
