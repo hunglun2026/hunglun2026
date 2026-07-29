@@ -1060,11 +1060,11 @@ SEO／AEO／GEO 搜尋引擎優化服務
 
 ---
 
-## 校園研習｜K-12 與大學端 Google AI 研習課程｜鴻綸科技
+## Google AI 校園研習｜K-12 與大學端 Google AI 研習課程｜鴻綸科技
 
 https://hunglun2026.pages.dev/services/campus-training
 
-校園研習
+Google AI 校園研習
 針對 K-12（國小、國中、高中職）與大學端的教師、行政人員與學生，規劃 Google AI 研習課程，由 Google 認證講師到校授課。
 研習對象：K-12 教師（備課、教材、出題批改、班級經營）、K-12 行政（公文摘要、通知單、報表統計）、K-12 學生（AI 素養、專題製作、資料查證）、大學端教師（課程設計、文獻整理）、大學端行政與學生（行政流程、報告簡報、學術倫理）。
 課程模組：Gemini 入門提示語、AI 備課工作坊、AI 出題與評量、NotebookLM 應用、行政減負、AI 素養與學術倫理、Chromebook 課堂經營、Google 認證考照衝刺、學生專題實作、校長主任場。
