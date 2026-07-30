@@ -16,11 +16,11 @@
 const MAP = {
   // ── 各分類總覽頁 ──
   "2": "/about",                          // 公司簡介
-  "8": "/services/google-workspace",      // Google 教育 總覽
+  "8": "/google",                         // Google 教育 總覽
   "9": "/services/chromebook",            // Chromebook 總覽
-  "3": "/services/digital-learning",      // 雲端數位學習 總覽
+  "3": "/software",                       // 雲端數位學習 總覽（直接指現址，避免 301 接 301）
   "4": "/services/procurement",           // 台銀標專區 總覽
-  "5": "/services/google-workspace",      // Google 認證培訓 總覽
+  "5": "/services/campus-training",       // Google 認證培訓 總覽
   "7": "/events",                         // 活動剪影
 
   // ── Google 教育子頁 ──
@@ -36,7 +36,7 @@ const MAP = {
   "3:32": "/services/chromebook",         // Chromebook 行動學習載具
   "3:33": "/software",                    // 數位雲端教室輔助軟體（Edpuzzle／Kami／Padlet 等）
   "3:34": "/services/chromebook",         // 智慧情境教室
-  "3:35": "/knowledge/chromebook",        // Cloudready Chrome OS
+  "3:35": "/knowledge/privacy",           // 該分類實際只有隱私權政策一頁
 
   // ── 台銀標子頁 ──
   // 註：原本這四筆指向 #computers／#peripherals／#systems，但頁面上並無這些錨點，
@@ -48,7 +48,7 @@ const MAP = {
   "4:13": "/services/procurement",                       // 耗材標
 
   // ── Google 認證培訓子頁 ──
-  "5:24": "/services/google-workspace", // 認證課程明細（L1／L2／網域管理／訓練講師）
+  "5:24": "/services/campus-training",  // 認證課程明細（L1／L2／網域管理／訓練講師）
 };
 
 export function onRequest({ request }) {
