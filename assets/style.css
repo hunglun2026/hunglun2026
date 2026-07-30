@@ -796,6 +796,64 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   overflow: hidden;
 }
 .bot-hero-img img { display: block; width: 100%; height: auto; }
+/* ---------- 台銀標契約品項表 ---------- */
+.bot-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  align-items: flex-end;
+  padding: 18px;
+  margin: 26px 0 14px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+.bot-filter label { display: flex; flex-direction: column; gap: 6px; font-size: 0.82rem; color: var(--muted); }
+.bot-filter input {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+}
+.bot-filter input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.bot-filter .bot-range { flex-direction: row; align-items: center; gap: 8px; }
+.bot-filter .bot-range input { width: 108px; }
+.bot-filter button {
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.bot-filter button:hover { border-color: var(--accent); color: var(--accent); }
+.bot-count { font-size: 0.85rem; color: var(--muted); margin: 0 0 10px; }
+/* 表格較寬，讓它自己橫向捲動，不要撐破頁面 */
+.bot-table-scroll { overflow-x: auto; border: 1px solid var(--line); }
+.bot-table-scroll table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.bot-table-scroll th,
+.bot-table-scroll td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.bot-table-scroll thead th {
+  position: sticky;
+  top: 0;
+  background: var(--bg-soft);
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1;
+}
+.bot-table-scroll tbody tr:last-child td { border-bottom: 0; }
+.bot-table-scroll tbody tr:hover { background: var(--glow); }
+.bot-table-scroll .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bot-table-scroll .nowrap { white-space: nowrap; }
+.bot-empty { padding: 28px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 768px) {
+  .bot-filter { padding: 14px; gap: 12px 14px; }
+  .bot-filter .bot-range input { width: 92px; }
+  .bot-table-scroll table { font-size: 0.82rem; }
+  .bot-table-scroll th, .bot-table-scroll td { padding: 8px 10px; }
+}
 :target { scroll-margin-top: 120px; }
 
 /* ---------- 台銀標設備圖示 ---------- */

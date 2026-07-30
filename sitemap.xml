@@ -30,13 +30,27 @@
   <url><loc>https://hunglun2026.pages.dev/services/campus-training</loc><priority>0.8</priority></url>
   <url><loc>https://hunglun2026.pages.dev/services/chromebook</loc><priority>0.7</priority></url>
   <url><loc>https://hunglun2026.pages.dev/services/procurement</loc><priority>0.7</priority></url>
-  <url><loc>https://hunglun2026.pages.dev/services/procurement/desktop</loc><priority>0.5</priority></url>
-  <url><loc>https://hunglun2026.pages.dev/services/procurement/monitor</loc><priority>0.5</priority></url>
-  <url><loc>https://hunglun2026.pages.dev/services/procurement/tablet</loc><priority>0.5</priority></url>
-  <url><loc>https://hunglun2026.pages.dev/services/procurement/projector</loc><priority>0.5</priority></url>
-  <url><loc>https://hunglun2026.pages.dev/services/procurement/gpu</loc><priority>0.5</priority></url>
-  <url><loc>https://hunglun2026.pages.dev/services/procurement/camera</loc><priority>0.5</priority></url>
-  <url><loc>https://hunglun2026.pages.dev/services/procurement/software</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/desktop</loc><priority>0.6</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/monitor</loc><priority>0.6</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/tablet</loc><priority>0.6</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/gpu</loc><priority>0.6</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/camera</loc><priority>0.6</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software</loc><priority>0.6</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-cad</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-virtual</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-iam</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-network</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-endpoint</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-message</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-web</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-vuln</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-file</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-ai</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-microsoft</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-oss</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-db</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-admin</loc><priority>0.5</priority></url>
+  <url><loc>https://hunglun2026.pages.dev/services/procurement/software/sw-elearning</loc><priority>0.5</priority></url>
   <url><loc>https://hunglun2026.pages.dev/services/ai-development</loc><priority>0.7</priority></url>
   <url><loc>https://hunglun2026.pages.dev/services/open-data</loc><priority>0.7</priority></url>
   <url><loc>https://hunglun2026.pages.dev/services/campus-admin</loc><priority>0.7</priority></url>
