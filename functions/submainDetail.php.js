@@ -10,19 +10,15 @@
  */
 
 // key：sId
+// 註：筆記型電腦（9）、儲存系統設備（10）、精簡型電腦（11）、印表機耗材（38）、
+// 電腦週邊設備用品（39）、伺服器（40）、超融合系統設備（83）目前缺貨，
+// 站上已無對應子頁，這些 sId 會落到下面的預設值導向總覽頁。
 const MAP = {
-  "7": "/services/procurement/desktop",     // 個人電腦之主機
-  "8": "/services/procurement/monitor",     // 個人電腦之顯示器
-  "9": "/services/procurement/laptop",      // 筆記型電腦
-  "10": "/services/procurement/storage",    // 儲存系統設備
-  "11": "/services/procurement/thin",       // 精簡型電腦
-  "12": "/services/procurement/gpu",        // 顯示卡
-  "13": "/services/procurement/tablet",     // 平板電腦
-  "14": "/services/procurement/camera",     // 彩色數位相機及攝影機
-  "38": "/services/procurement/consumable", // 印表機耗材
-  "39": "/services/procurement/peripheral", // 電腦週邊設備用品
-  "40": "/services/procurement/server",     // 伺服器
-  "83": "/services/procurement/hci",        // 超融合系統設備
+  "7": "/services/procurement/desktop",  // 個人電腦之主機
+  "8": "/services/procurement/monitor",  // 個人電腦之顯示器
+  "12": "/services/procurement/gpu",     // 顯示卡
+  "13": "/services/procurement/tablet",  // 平板電腦
+  "14": "/services/procurement/camera",  // 彩色數位相機及攝影機
 };
 
 export function onRequest({ request }) {
