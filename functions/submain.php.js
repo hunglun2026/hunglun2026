@@ -39,10 +39,12 @@ const MAP = {
   "3:35": "/knowledge/chromebook",        // Cloudready Chrome OS
 
   // ── 台銀標子頁 ──
-  "4:10": "/services/procurement#computers",    // 電腦標
-  "4:11": "/services/procurement#peripherals",  // 電腦週邊標
-  "4:12": "/services/procurement#systems",      // 伺服器＆儲存設備標
-  "4:13": "/services/procurement#peripherals",  // 耗材標
+  // 註：原本這四筆指向 #computers／#peripherals／#systems，但頁面上並無這些錨點，
+  // 等於轉址後停在頁首。改指向實際存在的區塊與各設備類別子頁。
+  "4:10": "/services/procurement#categories",            // 電腦標
+  "4:11": "/services/procurement/peripheral",            // 電腦週邊標
+  "4:12": "/services/procurement/server",                // 伺服器＆儲存設備標
+  "4:13": "/services/procurement/consumable",            // 耗材標
 
   // ── Google 認證培訓子頁 ──
   "5:24": "/services/google-workspace", // 認證課程明細（L1／L2／網域管理／訓練講師）
