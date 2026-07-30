@@ -406,9 +406,21 @@ a:hover { text-decoration: underline; }
 .page-head h1 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 400; }
 .page-head p { color: var(--muted); margin-top: 14px; max-width: 640px; margin-inline: auto; }
 .svc-tabs { display: flex; gap: 8px; justify-content: center; margin-top: 28px; border-bottom: 1px solid var(--grid-line); }
-.svc-tab { font: inherit; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; padding: 10px 18px; cursor: pointer; }
+/* 標籤文字不折行；窄螢幕改成整列可橫向滑動，不要把「解決方案」斷成兩行 */
+.svc-tab { font: inherit; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; padding: 10px 18px; cursor: pointer; white-space: nowrap; }
 .svc-tab.active { color: var(--text); border-bottom-color: var(--accent); }
 .svc-tab:hover { color: var(--text); }
+@media (max-width: 560px) {
+  .svc-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .svc-tabs::-webkit-scrollbar { display: none; }
+  .svc-tab { padding: 10px 12px; font-size: 0.92rem; }
+}
 .prose { max-width: 760px; margin: 0 auto; }
 .prose h2 { margin: 32px 0 14px; font-size: 1.3rem; font-weight: 400; color: var(--text); }
 .prose h3 { margin: 28px 0 12px; font-size: 1.05rem; font-weight: 400; color: var(--text); }
@@ -838,7 +850,8 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
 .bot-count { font-size: 0.85rem; color: var(--muted); margin: 0 0 10px; }
 /* 表格較寬，讓它自己橫向捲動，不要撐破頁面 */
 .bot-table-scroll { overflow-x: auto; border: 1px solid var(--line); }
-.bot-table-scroll table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+/* min-width 讓窄螢幕改成整張表橫向捲動，而不是把欄位壓成一行兩個字 */
+.bot-table-scroll table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 0.88rem; }
 .bot-table-scroll th,
 .bot-table-scroll td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
 .bot-table-scroll thead th {
@@ -859,6 +872,8 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   .bot-filter .bot-range input { width: 92px; }
   .bot-table-scroll table { font-size: 0.82rem; }
   .bot-table-scroll th, .bot-table-scroll td { padding: 8px 10px; }
+  /* 提示表格可以左右滑，否則使用者不會發現右邊還有欄位 */
+  .bot-count::after { content: "（表格可左右滑動）"; }
 }
 :target { scroll-margin-top: 120px; }
 
