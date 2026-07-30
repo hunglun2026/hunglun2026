@@ -19,7 +19,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600&display=swap"></noscript>
-<link rel="stylesheet" href="/assets/style.css?v=6">
+<link rel="stylesheet" href="/assets/style.css?v=7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -105,53 +105,59 @@
     <h2 id="categories">契約項下設備類別</h2>
     <p>點下面任一類別可以看說明；需要哪一類直接跟我們說，我們協助對契約項目與規格。</p>
     <div class="bot-grid">
-      <a class="bot-cat" href="#cat-desktop">
+      <a class="bot-cat" href="/services/procurement/desktop">
         <img width="560" height="560" src="/assets/images/bot-desktop.webp" alt="個人電腦之主機" loading="lazy" decoding="async">
         <span>個人電腦之主機</span>
       </a>
-      <a class="bot-cat" href="#cat-monitor">
+      <a class="bot-cat" href="/services/procurement/monitor">
         <img width="560" height="723" src="/assets/images/bot-monitor.webp" alt="個人電腦之顯示器" loading="lazy" decoding="async">
         <span>個人電腦之顯示器</span>
       </a>
-      <a class="bot-cat bot-cat--text" href="#cat-laptop"><span>筆記型電腦</span></a>
-      <a class="bot-cat bot-cat--text" href="#cat-thin"><span>精簡型電腦</span></a>
-      <a class="bot-cat" href="#cat-tablet">
+      <a class="bot-cat" href="/services/procurement/laptop">
+        <img width="320" height="224" src="/assets/images/bot-laptop.webp" alt="筆記型電腦" loading="lazy" decoding="async">
+        <span>筆記型電腦</span>
+      </a>
+      <a class="bot-cat" href="/services/procurement/thin">
+        <img width="256" height="168" src="/assets/images/bot-thin.webp" alt="精簡型電腦" loading="lazy" decoding="async">
+        <span>精簡型電腦</span>
+      </a>
+      <a class="bot-cat" href="/services/procurement/tablet">
         <img width="560" height="402" src="/assets/images/bot-tablet.webp" alt="平板電腦" loading="lazy" decoding="async">
         <span>平板電腦</span>
       </a>
-      <a class="bot-cat" href="#cat-server">
+      <a class="bot-cat" href="/services/procurement/server">
         <img width="560" height="560" src="/assets/images/bot-server.webp" alt="伺服器" loading="lazy" decoding="async">
         <span>伺服器</span>
       </a>
-      <a class="bot-cat" href="#cat-storage">
+      <a class="bot-cat" href="/services/procurement/storage">
         <img width="560" height="560" src="/assets/images/bot-storage.webp" alt="儲存系統設備" loading="lazy" decoding="async">
         <span>儲存系統設備</span>
       </a>
-      <a class="bot-cat" href="#cat-hci">
+      <a class="bot-cat" href="/services/procurement/hci">
         <img width="560" height="560" src="/assets/images/bot-hci.webp" alt="超融合系統設備" loading="lazy" decoding="async">
         <span>超融合系統設備</span>
       </a>
-      <a class="bot-cat" href="#cat-projector">
+      <a class="bot-cat" href="/services/procurement/projector">
         <img width="560" height="560" src="/assets/images/bot-projector.webp" alt="投影機" loading="lazy" decoding="async">
         <span>投影機</span>
       </a>
-      <a class="bot-cat" href="#cat-gpu">
+      <a class="bot-cat" href="/services/procurement/gpu">
         <img width="560" height="376" src="/assets/images/bot-gpu.webp" alt="顯示卡" loading="lazy" decoding="async">
         <span>顯示卡</span>
       </a>
-      <a class="bot-cat" href="#cat-camera">
+      <a class="bot-cat" href="/services/procurement/camera">
         <img width="560" height="501" src="/assets/images/bot-camera.webp" alt="彩色數位相機及攝影機" loading="lazy" decoding="async">
         <span>彩色數位相機及攝影機</span>
       </a>
-      <a class="bot-cat" href="#cat-consumable">
+      <a class="bot-cat" href="/services/procurement/consumable">
         <img width="560" height="560" src="/assets/images/bot-consumable.webp" alt="印表機耗材" loading="lazy" decoding="async">
         <span>印表機耗材</span>
       </a>
-      <a class="bot-cat" href="#cat-peripheral">
+      <a class="bot-cat" href="/services/procurement/peripheral">
         <img width="560" height="560" src="/assets/images/bot-peripheral.webp" alt="電腦週邊設備用品" loading="lazy" decoding="async">
         <span>電腦週邊設備用品</span>
       </a>
-      <a class="bot-cat" href="#cat-software">
+      <a class="bot-cat" href="/services/procurement/software">
         <img width="560" height="305" src="/assets/images/bot-software.webp" alt="電腦軟體" loading="lazy" decoding="async">
         <span>電腦軟體</span>
       </a>
@@ -159,23 +165,23 @@
 
     <h2>各類別說明</h2>
     <ul class="feature-list" style="margin-top:16px;">
-      <li id="cat-desktop"><strong>個人電腦之主機</strong>：ASUS 商用桌機為主，依文書、教學或繪圖需求配不同等級的 CPU 與記憶體，可加購三年到府保固。</li>
-      <li id="cat-monitor"><strong>個人電腦之顯示器</strong>：23.8 吋到 27 吋的護眼型液晶顯示器，教室與辦公室最常見的搭配。</li>
-      <li id="cat-laptop"><strong>筆記型電腦</strong>：文書型到效能型都在契約內，行政用機與教師配發機是最常見的兩種需求。</li>
-      <li id="cat-thin"><strong>精簡型電腦</strong>：體積小、耗電低、故障率低，適合圖書館查詢站、教室固定機位與雲端桌面環境。</li>
-      <li id="cat-tablet"><strong>平板電腦</strong>：行動教學與行政巡檢用，可搭配載具管理方案一起導入。</li>
-      <li id="cat-server"><strong>伺服器</strong>：機架式與直立式伺服器，校務系統、檔案伺服器與虛擬化平台的基礎。</li>
-      <li id="cat-storage"><strong>儲存系統設備</strong>：集中式儲存與備份設備，處理監視錄影、教學影音與校務資料的長期保存。</li>
-      <li id="cat-hci"><strong>超融合系統設備</strong>：運算、儲存與網路整併在同一套設備，適合要導入虛擬化但人力有限的單位。</li>
-      <li id="cat-projector"><strong>投影機</strong>：一般教室的短焦、雷射光源機種，可搭配電動布幕與互動觸控大屏一起規劃。</li>
-      <li id="cat-gpu"><strong>顯示卡</strong>：專業繪圖卡，設計、3D 與 AI 運算課程用得到。</li>
-      <li id="cat-camera"><strong>彩色數位相機及攝影機</strong>：活動紀錄與教學影片拍攝，含相機、攝影機與相關配件。</li>
-      <li id="cat-consumable"><strong>印表機耗材</strong>：原廠碳粉匣、墨水匣與紙張，走契約採購省去逐次比價。</li>
-      <li id="cat-peripheral"><strong>電腦週邊設備用品</strong>：印表機、掃描器、UPS、鍵鼠與線材等日常會用到的週邊。</li>
-      <li id="cat-software"><strong>電腦軟體</strong>：作業系統、文書、防毒、虛擬化與繪圖軟體授權；教育版與商用版適用對象不同，我們會先確認學校適用哪一種再報價。</li>
+      <li id="cat-desktop"><strong><a href="/services/procurement/desktop">個人電腦之主機</a></strong>：ASUS 商用桌機為主，依文書、教學或繪圖需求配不同等級的 CPU 與記憶體，可加購三年到府保固。</li>
+      <li id="cat-monitor"><strong><a href="/services/procurement/monitor">個人電腦之顯示器</a></strong>：23.8 吋到 27 吋的護眼型液晶顯示器，教室與辦公室最常見的搭配。</li>
+      <li id="cat-laptop"><strong><a href="/services/procurement/laptop">筆記型電腦</a></strong>：文書型到效能型都在契約內，行政用機與教師配發機是最常見的兩種需求。</li>
+      <li id="cat-thin"><strong><a href="/services/procurement/thin">精簡型電腦</a></strong>：體積小、耗電低、故障率低，適合圖書館查詢站、教室固定機位與雲端桌面環境。</li>
+      <li id="cat-tablet"><strong><a href="/services/procurement/tablet">平板電腦</a></strong>：行動教學與行政巡檢用，可搭配載具管理方案一起導入。</li>
+      <li id="cat-server"><strong><a href="/services/procurement/server">伺服器</a></strong>：機架式與直立式伺服器，校務系統、檔案伺服器與虛擬化平台的基礎。</li>
+      <li id="cat-storage"><strong><a href="/services/procurement/storage">儲存系統設備</a></strong>：集中式儲存與備份設備，處理監視錄影、教學影音與校務資料的長期保存。</li>
+      <li id="cat-hci"><strong><a href="/services/procurement/hci">超融合系統設備</a></strong>：運算、儲存與網路整併在同一套設備，適合要導入虛擬化但人力有限的單位。</li>
+      <li id="cat-projector"><strong><a href="/services/procurement/projector">投影機</a></strong>：一般教室的短焦、雷射光源機種，可搭配電動布幕與互動觸控大屏一起規劃。</li>
+      <li id="cat-gpu"><strong><a href="/services/procurement/gpu">顯示卡</a></strong>：專業繪圖卡，設計、3D 與 AI 運算課程用得到。</li>
+      <li id="cat-camera"><strong><a href="/services/procurement/camera">彩色數位相機及攝影機</a></strong>：活動紀錄與教學影片拍攝，含相機、攝影機與相關配件。</li>
+      <li id="cat-consumable"><strong><a href="/services/procurement/consumable">印表機耗材</a></strong>：原廠碳粉匣、墨水匣與紙張，走契約採購省去逐次比價。</li>
+      <li id="cat-peripheral"><strong><a href="/services/procurement/peripheral">電腦週邊設備用品</a></strong>：印表機、掃描器、UPS、鍵鼠與線材等日常會用到的週邊。</li>
+      <li id="cat-software"><strong><a href="/services/procurement/software">電腦軟體</a></strong>：作業系統、文書、防毒、虛擬化與繪圖軟體授權；教育版與商用版適用對象不同，我們會先確認學校適用哪一種再報價。</li>
     </ul>
 
-    <p style="font-size:0.88rem;color:var(--muted);">實際可供項目與規格依台灣銀行共同供應契約當期公告為準，正式資訊以<a href="https://web.pcc.gov.tw/pis/prac/downloadGroupClient/readDownloadGroupClient?id=42000000" target="_blank" rel="noopener">政府電子採購網</a>與<a href="https://www.bot.com.tw/Procurement/Procure_supply/Supply_index/Pages/default.aspx" target="_blank" rel="noopener">臺灣銀行共同供應契約專區</a>公告為準，需要哪一類設備可以直接問我們。</p>
+    <p style="font-size:0.88rem;color:var(--muted);">實際可供項目與規格依台灣銀行共同供應契約當期公告為準，正式資訊以<a href="https://web.pcc.gov.tw/pis/prac/downloadGroupClient/readDownloadGroupClient?id=42000000" target="_blank" rel="noopener">政府電子採購網</a>與<a href="https://www.bot.com.tw/Procurement/Procure_supply/Supply_index/Pages/default.aspx" target="_blank" rel="noopener">臺灣銀行共同供應契約專區</a>公告為準；<strong>保固條件一律以原廠公告為主</strong>。需要哪一類設備可以直接問我們。</p>
 
     <div class="svc-cta">
       <h2 style="margin-top:0;">要走共同供應契約採購？</h2>
@@ -233,6 +239,6 @@
 </div>
 
 
-<script src="/assets/main.js?v=6"></script>
+<script src="/assets/main.js?v=7"></script>
 </body>
 </html>
