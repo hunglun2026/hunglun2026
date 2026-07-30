@@ -786,17 +786,12 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
 /* 台銀標各類別子頁的主視覺 */
 .bot-hero-img {
   border: 1px solid var(--line);
-  background: var(--card);
-  padding: 24px;
-  margin: 0 0 28px;
-  display: flex;
-  justify-content: center;
+  background: #fff;
+  max-width: 420px;
+  margin: 0 auto 32px;
+  overflow: hidden;
 }
-.bot-hero-img img { width: auto; max-width: 100%; height: 220px; object-fit: contain; }
-@media (max-width: 768px) {
-  .bot-hero-img { padding: 16px; }
-  .bot-hero-img img { height: 160px; }
-}
+.bot-hero-img img { display: block; width: 100%; height: auto; }
 :target { scroll-margin-top: 120px; }
 
 /* ---------- 台銀標設備圖示 ---------- */
