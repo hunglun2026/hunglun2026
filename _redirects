@@ -4,11 +4,16 @@
 # 這條在 DNS 尚未指向 Cloudflare Pages 前不會有任何作用，可以先放著。
 https://hunglun.com/* https://www.hunglun.com/:splat 301
 
-# 2026-08-03 啟用：DNS 已指向 Cloudflare Pages，www.hunglun.com 供新站、
-# apex 301 導向 www 都已實測正常，測試網址不必再保留直接訪問的能力。
-# 讓 hunglun2026.pages.dev 也導向正式網域，避免被 Google 當成重複內容
-# （各頁已有 canonical 指向 www，但 canonical 只是建議，301 才是強制）。
-https://hunglun2026.pages.dev/* https://www.hunglun.com/:splat 301
+# ⚠️ 不要再把下面這條打開（2026-08-03 實測過，無效，別再試一次）
+# Cloudflare Pages 的 _redirects **不支援**以 *.pages.dev 為來源轉到自訂網域，
+# 寫了不會報錯、但完全不會生效（同檔案的純路徑規則在 pages.dev 上是正常的，
+# 所以不是部署問題，是產品限制）。官方指定做法是改用 Bulk Redirects。
+# https://hunglun2026.pages.dev/* https://www.hunglun.com/:splat 301
+#
+# 現況評估：pages.dev 每一頁的 canonical 都已指向 https://www.hunglun.com/，
+# Google 會把權重歸給正式網域，重複內容風險已經處理掉了。
+# 真的要做到 301，得到 Cloudflare 儀表板（hunglun2026@gmail.com 帳號）
+# → Bulk Redirects 設一條，屬 zone 層級設定，不在這個檔案裡。
 
 /effect-home.html / 301
 /effects.html /services 301
