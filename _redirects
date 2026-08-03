@@ -4,10 +4,11 @@
 # 這條在 DNS 尚未指向 Cloudflare Pages 前不會有任何作用，可以先放著。
 https://hunglun.com/* https://www.hunglun.com/:splat 301
 
-# DNS 切換並驗證無誤後，再把下面這條的註解拿掉，
-# 讓測試網址 hunglun2026.pages.dev 也導向正式網域，避免被 Google 當成重複內容。
-# 現在就啟用的話，正式網域尚未生效期間會把人導到還在運作的舊站，所以先關著。
-# https://hunglun2026.pages.dev/* https://www.hunglun.com/:splat 301
+# 2026-08-03 啟用：DNS 已指向 Cloudflare Pages，www.hunglun.com 供新站、
+# apex 301 導向 www 都已實測正常，測試網址不必再保留直接訪問的能力。
+# 讓 hunglun2026.pages.dev 也導向正式網域，避免被 Google 當成重複內容
+# （各頁已有 canonical 指向 www，但 canonical 只是建議，301 才是強制）。
+https://hunglun2026.pages.dev/* https://www.hunglun.com/:splat 301
 
 /effect-home.html / 301
 /effects.html /services 301
