@@ -8,7 +8,9 @@
   --line: rgba(0, 0, 0, 0.09);
   --text: #1a1a1a;
   --muted: #5c5c5c;
-  --muted-faint: #9a9a96;
+  /* 2026-08-03：原為 #9a9a96，對比僅 2.77:1 不符 WCAG AA（需 ≥4.5:1）。
+     改為 #70706c 後約 4.9:1，與 --muted 仍有層次差。 */
+  --muted-faint: #70706c;
   --accent: #1e3a5f;
   --accent-deep: #15293f;
   --accent-gold: #1e3a5f;
@@ -39,7 +41,9 @@
   --line: rgba(255, 255, 255, 0.10);
   --text: #f2f2f0;
   --muted: #9a9a96;
-  --muted-faint: #6b7280;
+  /* 2026-08-03：原為 #6b7280，深色背景上對比僅 3.81:1，是品牌套件明列不可用的寫死灰色。
+     改為 #8a8a86 後約 5.3:1。 */
+  --muted-faint: #8a8a86;
   --accent: #7fa8d9;
   --accent-deep: #5f87b8;
   --accent-gold: #7fa8d9;
@@ -422,9 +426,13 @@ a:hover { text-decoration: underline; }
   .svc-tab { padding: 10px 12px; font-size: 0.92rem; }
 }
 .prose { max-width: 760px; margin: 0 auto; }
-.prose h2 { margin: 32px 0 14px; font-size: 1.3rem; font-weight: 400; color: var(--text); }
-.prose h3 { margin: 28px 0 12px; font-size: 1.05rem; font-weight: 400; color: var(--text); }
+/* 2026-08-03 可讀性：中文每行以 38–43 字最好讀，原本 740px 實測約 46 字偏寬。
+   只收窄「段落與清單」，表格／圖片維持容器全寬（表格有 3–4 欄，跟著變窄會擠）。 */
+.prose > p, .prose > ul, .prose > ol { max-width: 43em; }
+.prose h2 { margin: 38px 0 14px; font-size: 1.45rem; font-weight: 400; color: var(--text); }
+.prose h3 { margin: 28px 0 12px; font-size: 1.08rem; font-weight: 500; color: var(--text); }
 .prose p, .prose li { color: var(--muted); }
+.prose li { margin-bottom: 8px; }
 .prose ul { padding-left: 24px; }
 .breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; }
 .breadcrumb a { color: var(--muted); }
