@@ -711,7 +711,14 @@ a:hover { text-decoration: underline; }
 /* ---------- RWD ---------- */
 @media (max-width: 860px) {
   .brand img { max-height: 72px; }
-  .header-inner { padding: 10px 16px; }
+  /* 手機版 logo 太小：原本被 .brand 的 max-width:55% 夾住，只剩 39px 高，
+     遠低於上面 72px 的上限。390px 手機的一列空間是
+     logo 243 + 間距16 + ☰45 + 間距16 + 主題鈕38 = 358，一格不剩，
+     所以除了解除 55% 的夾制，也把邊距與間距收緊挪出空間給 logo。
+     Google 夥伴徽章要完整保留，不縮小、不裁掉。實測 39px → 55px。 */
+  .brand { max-width: 100%; }
+  .header-inner { padding: 8px 10px; gap: 8px; }
+  .nav-toggle { padding: 6px 10px; }
   .header-visit-counter { font-size: 0.72rem; padding: 4px 10px; margin-right: 6px; }
   .wrap { padding: 0 16px; }
   .section { padding: 40px 0; }
