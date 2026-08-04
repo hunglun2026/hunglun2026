@@ -102,3 +102,43 @@ if (visitCountEl) {
     });
   });
 })();
+
+/* 頁尾信箱的「複製」按鈕：桌機使用者點 mailto 會被拉去開郵件軟體，
+   多數人其實只是想把地址複製起來貼到別的地方。按鈕獨立於 <a> 之外，
+   不影響原本點連結寄信的行為。Clipboard API 在非 https 或舊瀏覽器不可用，
+   退回 execCommand 的隱藏 textarea 作法。 */
+(function () {
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.fc-copy') : null;
+    if (!btn) return;
+    e.preventDefault();
+    var text = btn.getAttribute('data-copy') || '';
+    var label = btn.getAttribute('data-label') || '複製';
+
+    function done() {
+      btn.textContent = '已複製';
+      btn.classList.add('copied');
+      setTimeout(function () {
+        btn.textContent = label;
+        btn.classList.remove('copied');
+      }, 1600);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); done(); } catch (err) { /* 複製不成就維持原樣 */ }
+      document.body.removeChild(ta);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else {
+      fallback();
+    }
+  });
+})();

@@ -636,6 +636,25 @@ a:hover { text-decoration: underline; }
   margin-top: 3px;
   letter-spacing: 0.01em;
 }
+/* 信箱那列多一顆「複製」按鈕：桌機使用者常只是想複製地址，不想被拉去開郵件軟體 */
+.footer-contact li.fc-has-copy { display: flex; align-items: center; gap: 6px; }
+.footer-contact li.fc-has-copy > a { flex: 1; min-width: 0; }
+.fc-copy {
+  flex: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  min-height: 32px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.fc-copy:hover { color: var(--accent); border-color: var(--accent); background: var(--bg-soft); }
+.fc-copy.copied { color: var(--accent); border-color: var(--accent); }
 .fc-go { font-size: 0.78rem; color: var(--muted-faint); transition: transform 0.2s ease, color 0.2s ease; }
 .footer-contact a:hover .fc-go { color: var(--accent); transform: translate(2px, -2px); }
 @media (prefers-reduced-motion: reduce) {
