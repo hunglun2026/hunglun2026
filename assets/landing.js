@@ -155,6 +155,10 @@
       el.style.transform = 'none';
       el.style.opacity = opacity;
       el.style.zIndex = z;
+      // 已經淡出的 panel（off < 0）z-index 是 20，蓋在目前這張上面；雖然看不見，
+      // 它的 <img> 仍然吃得到滑鼠事件，會擋掉目前這張的「前往頁面」按鈕。
+      // 只讓「幾乎完全顯示」的那張接收點擊，其餘一律穿透。
+      el.style.pointerEvents = opacity > 0.85 ? 'auto' : 'none';
 
       const txt = el.querySelector('.tour-zoom-text');
       if (txt) {
