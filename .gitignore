@@ -20,3 +20,4 @@ design-demos/
 # 2026-08 重新生成的服務示意圖，待 Steve 與老闆確認後才替換上線。
 # 不進官網 repo（未被引用、白佔部署空間），但 ClaudeOnly 備份會 git add -f 強制帶走。
 assets/images/_new-2026-08/
+assets/images/_old/
