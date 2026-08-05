@@ -31,3 +31,8 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 /services/digital-learning /software 301
 # 在地嚮導併入服務項目分頁（三個區域頁仍獨立存在）
 /local-food /services#local-food 301
+
+# 舊的特效展示頁：帶 .html 的已轉，無副檔名的路徑原本漏掉，
+# 會以 200 回一個只寫「已搬移」的空殼頁（重複內容），一併轉走
+/effects /services 301
+/effect-home / 301
