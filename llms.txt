@@ -44,12 +44,13 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 成功案例（已上線的 AI 應用工具與客戶委託案例，收在服務項目頁的分頁）：https://www.hunglun.com/services#projects
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://www.hunglun.com/tools
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://www.hunglun.com/software
-- 活動剪影（2017–2020 歷年參與及協辦的教育研習、成果展與 Google 教育活動紀錄，共20場）：https://www.hunglun.com/events
+- 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
 - 常見問題與知識庫（分類導覽）：https://www.hunglun.com/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/services#local-food
 - 教育科技知識庫（16 篇實務文章的索引頁，依主題分四組：Google 與 AI 導入／設備選型與採購／網站與數位工具／法遵與資安）：https://www.hunglun.com/knowledge
 - 標案設備採購・台灣銀行共同供應契約（機關學校可依契約採購，站內收錄 916 筆契約品項）：https://www.hunglun.com/services/procurement
   - 六大類別各有獨立頁面：主機 /services/procurement/desktop、顯示器 /monitor、平板 /tablet、繪圖卡 /gpu、相機 /camera、電腦軟體 /software（電腦軟體另含 15 個子類頁：sw-admin／sw-ai／sw-cad／sw-db／sw-elearning／sw-endpoint／sw-file／sw-iam／sw-message／sw-microsoft／sw-network／sw-oss／sw-virtual／sw-vuln／sw-web）
+- 導入實績與常見情境（六種最常見的學校導入情境與標準做法：Google Workspace 網域治理、Chromebook 行動學習佈建、智慧情境教室與計畫規劃書、教師研習與認證、校園行政自動化、共同供應契約採購支援。服務範圍以台中以南各縣市為主，涵蓋國小、國中、高中職與大專院校。**基於商業機密與客戶保密，不公開個別合作學校名稱**，改以第三方可查證的資格佐證）：https://www.hunglun.com/cases
 - 聯絡我們：https://www.hunglun.com/contact
 
 ## 知識庫分類頁（每頁皆為獨立問答式內容，含 Article 與 FAQPage 結構化資料）
