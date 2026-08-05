@@ -47,9 +47,16 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 活動剪影（2017–2020 歷年參與及協辦的教育研習、成果展與 Google 教育活動紀錄，共20場）：https://www.hunglun.com/events
 - 常見問題與知識庫（分類導覽）：https://www.hunglun.com/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/services#local-food
+- 教育科技知識庫（15 篇實務文章的索引頁，依主題分四組：Google 與 AI 導入／設備選型與採購／網站與數位工具／法遵與資安）：https://www.hunglun.com/knowledge
+- 標案設備採購・台灣銀行共同供應契約（機關學校可依契約採購，站內收錄 916 筆契約品項）：https://www.hunglun.com/services/procurement
+  - 六大類別各有獨立頁面：主機 /services/procurement/desktop、顯示器 /monitor、平板 /tablet、繪圖卡 /gpu、相機 /camera、電腦軟體 /software（電腦軟體另含 15 個子類頁：sw-admin／sw-ai／sw-cad／sw-db／sw-elearning／sw-endpoint／sw-file／sw-iam／sw-message／sw-microsoft／sw-network／sw-oss／sw-virtual／sw-vuln／sw-web）
 - 聯絡我們：https://www.hunglun.com/contact
 
-## 知識庫分類頁（每頁皆為獨立問答式內容，含 FAQPage 結構化資料）
+## 知識庫分類頁（每頁皆為獨立問答式內容，含 Article 與 FAQPage 結構化資料）
+索引頁（15 篇的完整清單與各篇最後更新日期）：https://www.hunglun.com/knowledge
+- [學校資訊設備採購指南](https://www.hunglun.com/knowledge/procurement)：五項需求盤點、Chromebook／Windows 筆電／平板選型對照、最常被漏掉的三項配套（管理授權、無線網路與電力、教師培訓）、共同供應契約採購順序、驗收檢查點。
+- [AI 融入教學實務指南](https://www.hunglun.com/knowledge/ai-teaching)：教師備課／學生課堂／行政文書三種用法拆解、不該交給 AI 的三類事、學生使用規範分三級（不得使用・可用但須標註・鼓勵使用）、以評量設計取代不可靠的 AI 偵測器。
+- [Google Workspace 教育版版本比較與授權變更](https://www.hunglun.com/knowledge/workspace-editions)：Fundamentals／Standard／Teaching and Learning Upgrade／Plus 四方案定位差異；2025-10-01 起取消「每 4 學生送 1 教職員免費授權」、2026-02-01 起 Standard 與 Plus 改單一授權類型（既有客戶於該日之後續約時才適用）、免費版改為全網域共用 100TB。
 - [Chromebook 選購指南](https://www.hunglun.com/knowledge/chromebook)：Chromebook 是什麼、優缺點、載具管理授權（CEU）、校園採購須知；另含教育現場挑選教學載具的四個要點、傳統個人電腦與 Chromebook 對照表（開機約 40–90 秒 vs 約 6–8 秒；管理勞動力與成本降低率平均 59%，2020 年 IDC 白皮書）、CEU 裝置管理與使用者管理功能詳解。
 - [AI 入門百科](https://www.hunglun.com/knowledge/ai)：AI、生成式 AI、大型語言模型（LLM）、AI 幻覺、校園導入 AI 注意事項。
 - [電腦與雲端手冊](https://www.hunglun.com/knowledge/computer)：硬體規格、作業系統選擇、雲端服務、校園電腦教室與網路規劃。
