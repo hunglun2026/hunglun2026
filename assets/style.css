@@ -87,6 +87,56 @@ img { max-width: 100%; height: auto; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* ---------- 無障礙（2026-08-06 稽核後補）---------- */
+
+/* 跳過導覽連結（WCAG 2.4.1）：原本鍵盤使用者每頁都要按 4 次 Tab 才能離開頁首。
+   平常看不見，一按 Tab 就出現在左上角。 */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 8px; text-decoration: none; }
+:root[data-theme="dark"] .skip-link { color: #10243d; }
+/* <main> 要有 tabindex="-1" 才接得住焦點，否則按了跳過連結只會捲動、
+   焦點仍留在 body，下一個 Tab 又跑回頁首（等於沒跳）。
+   但它不是使用者主動聚焦的元素，所以不畫外框。 */
+main:focus { outline: none; }
+
+/* 焦點外框（WCAG 2.4.7）：原本全站只定義過一條 :focus，其餘全靠瀏覽器預設的 1px，
+   在深色卡片與彩色按鈕上幾乎看不見。用 :focus-visible 才不會在滑鼠點擊時也跳出外框。 */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+:root[data-theme="dark"] :focus-visible { outline-color: #9dc2ec; }
+
+/* 只給螢幕閱讀器看的文字（例如比較表左上角那格，畫面上要留白但機器需要知道那欄是什麼） */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 內文連結不能只靠顏色辨識（WCAG 1.4.1）：實測連結色與周圍內文色只差 1.14–1.72:1，
+   遠低於要求的 3:1，所以補底線。導覽列、頁尾清單、按鈕、服務卡片是「整塊可點的區塊」
+   而不是夾在句子裡的連結，不適用這條，維持原樣。 */
+.prose p a, .prose li a, .prose td a, .faq-a a, .section-sub a, .wrap > p a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* 手機端細字重（300）可讀性補償：不改字重，改用字距/行高/邊緣渲染拯救小螢幕強光下的對比度 */
 @media (max-width: 768px) {
   body {
@@ -271,6 +321,10 @@ a:hover { text-decoration: underline; }
   color: #fff;
 }
 .btn-primary:hover { opacity: 0.85; color: #fff; }
+/* 深色模式的 --accent 是淺藍 #7fa8d9，白字壓上去只有 2.46:1（要 4.5:1），
+   實際看是「淺藍底白字」很吃力。改成深色文字，對比拉到約 7:1。 */
+:root[data-theme="dark"] .btn-primary,
+:root[data-theme="dark"] .btn-primary:hover { color: #10243d; }
 .btn-ghost { background: none; border: none; border-bottom: 1px solid var(--muted); color: var(--muted); padding: 15px 0; border-radius: 0; }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 .btn-sm { padding: 9px 20px; font-size: 0.86rem; }
@@ -318,7 +372,9 @@ a:hover { text-decoration: underline; }
   font-size: 0.72rem;
   letter-spacing: 0.05em;
   color: var(--accent);
-  opacity: 0.55;
+  /* 2026-08-06：原為 0.55，實測對比只有 3.12（淺）／3.07（深），
+     這是 0.72rem 的小字需要 4.5:1。改 0.85 後兩個模式都達標。 */
+  opacity: 0.85;
   display: block;
   margin-bottom: 6px;
 }
@@ -621,6 +677,9 @@ a:hover { text-decoration: underline; }
 }
 .footer-grid { display: grid; gap: 32px; grid-template-columns: 1.7fr 1fr 1.35fr; }
 /* 頁尾兩欄清單共用同一套節奏：小標題 → 髮絲線分隔的列，hover 時淡底＋往右挪一點 */
+/* 2026-08-06：頁尾欄位標題原本是 <h4>，但前文只到 h2/h3，標題層級跳級（WCAG 1.3.1）。
+   已改成 <h2>，樣式沿用原本的視覺（小字、寬字距），外觀不變。 */
+.footer-grid h2,
 .footer-grid h4 {
   color: var(--muted-faint);
   font-size: 0.7rem;
