@@ -21,24 +21,70 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "聯絡鴻綸科技",
-  "url": "https://www.hunglun.com/contact",
-  "inLanguage": "zh-Hant-TW",
-  "about": {
-    "@type": "Organization",
-    "name": "鴻綸科技股份有限公司",
-    "telephone": "+886-6-6371192",
-    "faxNumber": "+886-6-6371112",
-    "email": "gfeh@hunglun.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "新營區綠川路10號",
-      "addressLocality": "台南市",
-      "addressCountry": "TW"
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "name": "聯絡鴻綸科技",
+      "url": "https://www.hunglun.com/contact",
+      "inLanguage": "zh-Hant-TW",
+      "about": {
+        "@id": "https://www.hunglun.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.hunglun.com/#localbusiness"
+      }
     },
-    "@id": "https://www.hunglun.com/#organization"
-  }
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.hunglun.com/#localbusiness",
+      "name": "鴻綸科技股份有限公司",
+      "alternateName": [
+        "Hunglun Technology Co., Ltd.",
+        "鴻綸科技"
+      ],
+      "url": "https://www.hunglun.com/",
+      "parentOrganization": {
+        "@id": "https://www.hunglun.com/#organization"
+      },
+      "image": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
+      "logo": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
+      "telephone": "+886-6-6371192",
+      "faxNumber": "+886-6-6371112",
+      "email": "gfeh@hunglun.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "綠川路10號",
+        "addressLocality": "新營區",
+        "addressRegion": "台南市",
+        "postalCode": "730",
+        "addressCountry": "TW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 23.310542,
+        "longitude": 120.323917
+      },
+      "hasMap": "https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "17:30"
+        }
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "台灣"
+      }
+    }
+  ]
 }
 </script>
 </head>
