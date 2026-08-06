@@ -65,6 +65,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [電腦與雲端手冊](https://www.hunglun.com/knowledge/computer)：硬體規格、作業系統選擇、雲端服務、校園電腦教室與網路規劃。
 - [Google for Education 指南](https://www.hunglun.com/knowledge/google)：Google for Education、Workspace 基礎版/進階版、認證夥伴計畫、申請流程。
 - [Gemini 教育版怎麼用](https://www.hunglun.com/knowledge/gemini)：學校導入 Gemini 教育版的實務——學生在 Classroom 能做什麼、老師備課與評量的用法、管理員該確認的四件事（版本授權、OU 架構、逐一應用程式開關、使用規範），以及個人版與教育版的資料訓練政策差異與方案比較。含 2026 年 8 月 10 日起 Classroom 的 Gemini 開放給所有年齡 K-12 與高教學生的變更。
+- [Google Classroom 完全指南](https://www.hunglun.com/knowledge/classroom)：Classroom 在學校怎麼用——三種教育版的功能差異（基本教學功能所有版本都有，Chromebook 課堂管理工具需 Plus 或 Teaching and Learning Upgrade 且裝置要納管）、2026 年 7 月 27 日起依角色顯示不同內容的新首頁、2026 年 8 月 10 日起 Gemini 分頁開放所有年齡（管理員端預設開啟，需主動針對 OU 關閉）、管理員導入前該確認的五件事，以及教師端最常見的三個卡關點。
 - [網站架設攻略](https://www.hunglun.com/knowledge/website)：網域、主機、CMS、SEO/AEO/GEO 差異、建置費用估算、上線後維護。
 - [AI OCR 辨識解析](https://www.hunglun.com/knowledge/ocr)：OCR原理、AI OCR與傳統OCR差異、準確率、校園應用場景、資料安全評估重點。
 - [開放資料應用手冊](https://www.hunglun.com/knowledge/opendata)：開放資料是什麼、查詢下載方式、應用開發類型、可靠性與授權注意事項。

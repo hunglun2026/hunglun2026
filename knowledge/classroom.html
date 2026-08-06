@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>鴻綸科技教育｜Google Classroom 完全指南｜校園導入與教師實務</title>
+<meta name="description" content="Google Classroom 在學校怎麼用：三種版本的差異、2026 年 7 月改版後的新首頁、Gemini 分頁開放所有年齡的影響，以及管理員導入前該確認的設定。給資訊組長與教師的實務指南。">
+<link rel="canonical" href="https://www.hunglun.com/knowledge/classroom">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google Classroom 完全指南｜鴻綸科技">
+<meta property="og:description" content="版本差異、2026 改版新首頁、Gemini 分頁開放所有年齡，以及管理員該確認的設定。">
+<meta property="og:url" content="https://www.hunglun.com/knowledge/classroom">
+<meta property="og:image" content="https://www.hunglun.com/assets/hunglun-logo-dark.png">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=3" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=22">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Google Classroom 完全指南：校園導入與教師實務",
+      "description": "版本差異、2026 年 7 月改版後的新首頁、Gemini 分頁開放所有年齡的影響，以及管理員導入前該確認的設定。",
+      "image": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
+      "datePublished": "2026-08-06",
+      "dateModified": "2026-08-06",
+      "author": {
+        "@type": "Person",
+        "name": "鴻綸科技 Steve",
+        "jobTitle": "Google 認證講師",
+        "worksFor": {
+          "@id": "https://www.hunglun.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://www.hunglun.com/#organization"
+      },
+      "mainEntityOfPage": "https://www.hunglun.com/knowledge/classroom",
+      "inLanguage": "zh-Hant-TW",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Google Classroom 要另外付費嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不用。只要學校有 Google Workspace for Education 帳號就能使用 Classroom，包含免費的 Education Fundamentals。差異在進階功能：Chromebook 課堂管理工具需要 Education Plus 或 Teaching and Learning Upgrade，且學生裝置要納管。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "老師可以用個人 Gmail 開 Classroom 給學生用嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "技術上可以，但不建議。個人帳號建立的課程不受學校網域政策管理，名冊、資料保存與個資保護都在學校的管理範圍之外，學生轉學或老師離職時也無法接手。學校端應統一用學校網域帳號。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2026 年 8 月之後，國中小學生在 Classroom 裡會看到 Gemini 嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "會，前提是管理員已授予存取權。2026 年 8 月 10 日起（網頁版）Classroom 中的 Gemini 擴大到 K-12 與高等教育所有年齡的學生，且管理主控台的「Gemini in Classroom」控制項預設為開啟。學校若不想開放，需要主動針對該組織單位關閉。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Classroom 的成績可以直接當學期成績嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "通常不建議直接採用。Classroom 的加權計算方式與各校成績處理規定常有落差，比較穩妥的作法是把 Classroom 當作學習歷程與平時成績的紀錄工具，最終成績仍以校務系統的規則為準。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "學生畢業後，課程和作業會不會不見？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "取決於學校的帳號處理政策。若畢業後帳號被刪除，該帳號的雲端硬碟內容也會一併移除；若改為封存或停用，資料通常仍保留。這屬於資料保存政策，建議在導入初期就與校內相關單位討論並寫成書面規定。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "想導入 Classroom，該從哪裡開始？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "先確認學校是否已有 Google Workspace for Education 網域。有的話重點在管理主控台的設定與教師研習；沒有的話要先申請網域並完成建置。可以先來電或來信說明學校規模與現況，我們會判斷你需要的是網域建置、設定調整還是教師培訓。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://www.hunglun.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "知識庫",
+          "item": "https://www.hunglun.com/knowledge"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Classroom 完全指南",
+          "item": "https://www.hunglun.com/knowledge/classroom"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/"><span class="brand-logo" role="img" aria-label="鴻綸科技 Hunglun Technology"></span></a>
+    <div class="header-visit-counter" title="累計瀏覽人次">👀 <span id="visitCount">--</span></div>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="主選單">
+      <a href="/about">關於我們</a>
+      <a href="/services">服務項目</a>
+      <a href="/google">Google 解決方案</a>
+      <a href="/software">數位學習軟體導入</a>
+      <a href="/faq">常見問題</a>
+      <a href="/tools" class="mobile-tools-link">資源分享</a>
+      <a href="/contact" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <div class="nav-tools">
+        <a href="/tools" class="nav-tools-trigger">資源分享</a>
+      </div>
+      <a href="/contact" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="section-sub reveal" style="margin:0 0 10px;text-align:center;"><a href="/knowledge">知識庫</a> ／ Google Classroom 完全指南</p>
+    <h1>Google Classroom 完全指南：校園導入與教師實務</h1>
+    <p>版本差異、2026 年改版後的新首頁、Gemini 分頁開放所有年齡的影響，以及管理員導入前該確認的設定。</p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-08-06">2026 年 8 月 6 日</time></p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:24px;">
+  <div class="wrap prose" style="max-width:920px;">
+    <p>Google Classroom 是學校導入 Google 方案之後，老師實際每天會打開的那個介面。它本身不需要另外採購——只要學校有 <a href="/knowledge/workspace-editions">Google Workspace for Education</a> 帳號就能用，包含免費的 Fundamentals。真正會產生差異的是<strong>哪些進階功能要哪個版本</strong>，以及<strong>管理員把哪些開關打開了</strong>。</p>
+
+    <h2 class="section-title reveal">Classroom 能做什麼（基本盤）</h2>
+    <ul class="feature-list">
+      <li><strong>課程與名冊</strong>：建立課程、加入學生、分班分組。</li>
+      <li><strong>作業與評分</strong>：指派作業、設定繳交期限、線上批改與退回、成績匯出。</li>
+      <li><strong>公告與互動</strong>：課堂公告、留言討論、私訊個別學生。</li>
+      <li><strong>與雲端硬碟整合</strong>：作業自動建立副本、繳交後老師端自動取得編輯權。</li>
+      <li><strong>原創性報告</strong>：比對網路來源與校內既有作業，協助判斷抄襲（可用次數依版本而定）。</li>
+    </ul>
+    <p>這些是所有版本都有的基本功能。學校導入初期最常卡住的其實不是功能，而是<strong>名冊怎麼建、老師帳號怎麼派、學生忘記密碼誰處理</strong>——那屬於網域管理的範圍，見 <a href="/services/google-workspace">Google Workspace 導入服務</a>。</p>
+
+    <h2 class="section-title reveal">2026 年 7 月起：首頁改版，三種角色看到不同畫面</h2>
+    <p>依 Google Workspace 官方公告，<strong>2026 年 7 月 27 日起</strong>（Rapid Release 與 Scheduled Release 網域皆同步，1–3 天內完成推出）Classroom 換上新首頁，並依使用者角色顯示不同內容：</p>
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th scope="col">角色</th><th scope="col">新首頁看到什麼</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">教師</th><td>可操作的洞察、學生作業互動狀況、指派完成度追蹤</td></tr>
+          <tr><th scope="row">學生</th><td>已選課檢視，提醒即將截止的作業並協助管理截止日</td></tr>
+          <tr><th scope="row">管理員</th><td>高層級分析、後端管理設定的快速連結、協助教職員的工具</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>對學校的實際意義</strong>：開學時老師打開 Classroom 會發現介面跟上學期不一樣。這種改版不需要任何設定，但<strong>值得在開學前的校內說明會提一句</strong>，否則資訊組會接到一輪「我的 Classroom 怎麼變了」的詢問。</p>
+    <p>出處：<a href="https://workspaceupdates.googleblog.com/2026/07/redesigned-google-classroom-homepage-with-tailored-views-based-on-users-role.html" target="_blank" rel="noopener">Google Workspace Updates 官方公告</a>（2026 年 7 月）。</p>
+
+    <h2 class="section-title reveal">2026 年 8 月起：Gemini 分頁開放所有年齡</h2>
+    <p><strong>2026 年 8 月 10 日起（網頁版，行動版 8 月 17 日起）</strong>，Classroom 中的 Gemini 從原本僅限 18 歲以上高等教育學生，擴大到 <strong>K-12 與高等教育所有年齡的學生</strong>，Education Fundamentals、Standard、Plus 都支援。</p>
+    <p><strong>這件事管理員一定要知道的地方是：預設為「開啟」。</strong>控制項在管理主控台的「Gemini in Classroom」，若學校尚未準備好讓未成年學生使用，需要主動針對該組織單位（OU）關閉，而不是等它預設關著。完整說明與學生端能做什麼，見 <a href="/knowledge/gemini">Gemini 教育版怎麼用</a>。</p>
+
+    <h2 class="section-title reveal">哪些功能要付費版本</h2>
+    <p>Classroom 本身在所有教育版都能用，差異出現在進階管理與教學工具。<strong>各項功能的版本歸屬 Google 會調整</strong>，下面是判斷原則，實際請以管理主控台當下顯示的可用狀態為準：</p>
+    <ul class="feature-list">
+      <li><strong>基本教學功能</strong>（課程、作業、評分、公告）：所有版本，含免費的 Fundamentals。</li>
+      <li><strong>Classroom 中的 Gemini</strong>：Fundamentals、Standard、Plus 都支援。</li>
+      <li><strong>Chromebook 課堂管理工具</strong>（如專注模式、鎖定畫面）：需要 Education Plus 或 Teaching and Learning Upgrade，<strong>且學生要使用受管理的 Chromebook</strong>——這點常被忽略，買了授權但裝置沒納管一樣用不到。</li>
+      <li><strong>進階原創性報告、更完整的稽核與資料匯出</strong>：屬於付費版本範圍。</li>
+    </ul>
+    <p>版本之間的完整差異與 2025–2026 的授權變更（取消教職員免費授權、Standard 與 Plus 改單一授權類型），整理在 <a href="/knowledge/workspace-editions">Google Workspace 教育版版本比較與授權變更</a>。</p>
+
+    <h2 class="section-title reveal">管理員導入前該確認的五件事</h2>
+    <ul class="feature-list">
+      <li><strong>誰可以建立課程</strong>：預設可能允許所有人建立，建議限制在教師組織單位，避免學生自建課程。</li>
+      <li><strong>組織單位（OU）架構</strong>：教師與學生要分開，年級也建議分開——Gemini 與 Chromebook 課堂工具的差異化開放都靠這個。全部擠在同一個 OU 就只能全開或全關。</li>
+      <li><strong>家長監護人摘要</strong>：要不要開放家長收到學生的作業摘要，這是政策決定不是技術決定，開放前先想好回應家長詢問的窗口。</li>
+      <li><strong>與校務系統的名冊同步</strong>：手動建名冊在班級數多時會失控，導入前先確認名冊來源。</li>
+      <li><strong>離校與畢業帳號的處理</strong>：學生畢業後課程與作業如何保存或封存，牽涉資料保存政策，見 <a href="/knowledge/privacy">個資法與校園資安須知</a>。</li>
+    </ul>
+
+    <h2 class="section-title reveal">教師端最常見的三個卡關點</h2>
+    <ul class="feature-list">
+      <li><strong>作業繳交後改不動</strong>：學生繳交後編輯權會轉移，要退回才能再編輯。這不是壞掉，是設計如此。</li>
+      <li><strong>成績算法跟校內規定對不上</strong>：Classroom 的加權方式與各校成績規定常有落差，建議把 Classroom 當作歷程紀錄，最終成績仍以校務系統為準。</li>
+      <li><strong>學生用個人帳號登入</strong>：用個人 Gmail 加入課程會導致名冊混亂、也不受學校政策保護。開學第一堂課先確認全班都用學校帳號，比事後清理省事得多。</li>
+    </ul>
+    <p>這些在教師研習裡佔的時間往往比功能教學還多。我們的<a href="/services/campus-training">校園研習服務</a>會把這類實際會遇到的狀況一併帶過。</p>
+
+    <h2 class="section-title reveal">常見問題</h2>
+    <details class="faq-item reveal" open>
+      <summary>Google Classroom 要另外付費嗎？</summary>
+      <div class="faq-a">不用。只要學校有 Google Workspace for Education 帳號就能使用 Classroom，包含免費的 Education Fundamentals。差異在進階功能：Chromebook 課堂管理工具需要 Education Plus 或 Teaching and Learning Upgrade，且學生裝置要納管。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>老師可以用個人 Gmail 開 Classroom 給學生用嗎？</summary>
+      <div class="faq-a">技術上可以，但不建議。個人帳號建立的課程不受學校網域政策管理，名冊、資料保存與個資保護都在學校的管理範圍之外，學生轉學或老師離職時也無法接手。學校端應統一用學校網域帳號。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>2026 年 8 月之後，國中小學生在 Classroom 裡會看到 Gemini 嗎？</summary>
+      <div class="faq-a">會，前提是管理員已授予存取權。2026 年 8 月 10 日起（網頁版）Classroom 中的 Gemini 擴大到 K-12 與高等教育所有年齡的學生，且管理主控台的「Gemini in Classroom」控制項預設為開啟。學校若不想開放，需要主動針對該組織單位關閉。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>Classroom 的成績可以直接當學期成績嗎？</summary>
+      <div class="faq-a">通常不建議直接採用。Classroom 的加權計算方式與各校成績處理規定常有落差，比較穩妥的作法是把 Classroom 當作學習歷程與平時成績的紀錄工具，最終成績仍以校務系統的規則為準。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>學生畢業後，課程和作業會不會不見？</summary>
+      <div class="faq-a">取決於學校的帳號處理政策。若畢業後帳號被刪除，該帳號的雲端硬碟內容也會一併移除；若改為封存或停用，資料通常仍保留。這屬於資料保存政策，建議在導入初期就與校內相關單位討論並寫成書面規定。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>想導入 Classroom，該從哪裡開始？</summary>
+      <div class="faq-a">先確認學校是否已有 Google Workspace for Education 網域。有的話重點在管理主控台的設定與教師研習；沒有的話要先申請網域並完成建置。可以先來電或來信說明學校規模與現況，我們會判斷你需要的是網域建置、設定調整還是教師培訓。</div>
+    </details>
+
+    <div class="svc-cta">
+      <a class="btn btn-primary" href="/contact">聯絡我們</a>
+      <a class="btn btn-ghost" href="/services/google-workspace">看 Workspace 導入服務</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <span class="footer-logo-img" role="img" aria-label="鴻綸科技"></span>
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul class="footer-nav">
+          <li><a href="/about">關於我們</a></li>
+          <li><a href="/services">服務項目</a></li>
+          <li><a href="/google">Google 解決方案</a></li>
+          <li><a href="/software">數位學習軟體導入</a></li>
+          <li><a href="/services#projects">成功案例</a></li>
+          <li><a href="/cases">導入實績</a></li>
+          <li><a href="/events">活動剪影</a></li>
+          <li><a href="/faq">常見問題</a></li>
+          <li><a href="/knowledge">知識庫</a></li>
+          <li><a href="/services#local-food">在地嚮導</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>聯絡方式</h2>
+        <ul class="footer-contact">
+          <li><a href="tel:+88666371192"><span class="fc-key">電話</span><span class="fc-val">06-6371192<em>週一至週五 08:30–17:30</em></span></a></li>
+          <li class="fc-has-copy"><a href="mailto:gfeh@hunglun.com"><span class="fc-key">信箱</span><span class="fc-val">gfeh@hunglun.com<em>傳真 06-6371112</em></span></a><button type="button" class="fc-copy" data-copy="gfeh@hunglun.com" data-label="複製信箱" aria-label="複製信箱地址 gfeh@hunglun.com">複製信箱</button></li>
+          <li class="fc-has-copy"><a href="https://line.me/R/ti/p/%40gdm6961p" target="_blank" rel="noopener"><span class="fc-key">LINE</span><span class="fc-val">@gdm6961p<em>電腦版請在 LINE 搜尋 ID 加入</em></span><span class="fc-go" aria-hidden="true">↗</span></a><button type="button" class="fc-copy" data-copy="@gdm6961p" data-label="複製 ID" aria-label="複製 LINE 官方帳號 ID @gdm6961p">複製 ID</button></li>
+          <li><a href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener"><span class="fc-key">粉絲頁</span><span class="fc-val">Facebook<em>鴻綸科技</em></span><span class="fc-go" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" target="_blank" rel="noopener"><span class="fc-key">地址</span><span class="fc-val">台南市新營區綠川路10號<em>開啟 Google 地圖</em></span><span class="fc-go" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved.</div>  </div>
+</footer>
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://line.me/R/ti/p/%40gdm6961p" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號 @gdm6961p" title="LINE 官方帳號（電腦版請搜尋 ID：@gdm6961p）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img width="160" height="160" src="/assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shen@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 shen@hunglun.com（開啟 Gmail）" title="寄信給 shen@hunglun.com"><img width="88" height="66" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></a>
+</div>
+
+
+<script src="/assets/main.js?v=16"></script>
+</body>
+</html>
