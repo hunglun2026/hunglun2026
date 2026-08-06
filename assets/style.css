@@ -852,6 +852,17 @@ main:focus { outline: none; }
   .stat { flex: 1 1 calc(50% - 10px); min-width: 0; }
   .stat .num { font-size: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
+  /* 「網站導覽」有 10 項，手機單欄排下來將近 480px，頁尾比內容區還長。
+     改兩欄後高度砍半，連結一項都不少（這些是站內爬取的主要路徑，不能為了版面刪掉）。
+     邊框從「ul 上緣 + 每列下緣」改成「每列上緣」，兩欄才不會出現懸空的線。 */
+  .footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+    border-top: none;
+  }
+  .footer-nav li { border-top: 1px solid var(--line); border-bottom: none; }
+  .footer-nav a { font-size: 0.85rem; gap: 8px; }
   .hero { padding: 56px 0 44px; }
   .page-head { padding: 36px 0 24px; }
 }
