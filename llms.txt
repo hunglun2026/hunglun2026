@@ -64,7 +64,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [AI 入門百科](https://www.hunglun.com/knowledge/ai)：AI、生成式 AI、大型語言模型（LLM）、AI 幻覺、校園導入 AI 注意事項。
 - [電腦與雲端手冊](https://www.hunglun.com/knowledge/computer)：硬體規格、作業系統選擇、雲端服務、校園電腦教室與網路規劃。
 - [Google for Education 指南](https://www.hunglun.com/knowledge/google)：Google for Education、Workspace 基礎版/進階版、認證夥伴計畫、申請流程。
-- [Gemini 方案懶人包](https://www.hunglun.com/knowledge/gemini)：Gemini 個人版/教育版/企業版差異、資料訓練政策比較、Google AI Pro for Education 方案價格（依帳號規模階梯報價，詳細金額請洽詢）。
+- [Gemini 教育版怎麼用](https://www.hunglun.com/knowledge/gemini)：學校導入 Gemini 教育版的實務——學生在 Classroom 能做什麼、老師備課與評量的用法、管理員該確認的四件事（版本授權、OU 架構、逐一應用程式開關、使用規範），以及個人版與教育版的資料訓練政策差異與方案比較。含 2026 年 8 月 10 日起 Classroom 的 Gemini 開放給所有年齡 K-12 與高教學生的變更。
 - [網站架設攻略](https://www.hunglun.com/knowledge/website)：網域、主機、CMS、SEO/AEO/GEO 差異、建置費用估算、上線後維護。
 - [AI OCR 辨識解析](https://www.hunglun.com/knowledge/ocr)：OCR原理、AI OCR與傳統OCR差異、準確率、校園應用場景、資料安全評估重點。
 - [開放資料應用手冊](https://www.hunglun.com/knowledge/opendata)：開放資料是什麼、查詢下載方式、應用開發類型、可靠性與授權注意事項。

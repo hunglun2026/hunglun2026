@@ -3,13 +3,14 @@
 /* ---------- 自架中文字型（2026-08-06 由 Google Fonts 改為自架子集）----------
    原本用 fonts.googleapis.com 載 Noto Sans TC 五個字重，實測每頁首次載入要 993KB－17 個檔，
    佔整頁流量 65–92%。原因：只要一次要超過一個字重，Google 就改送「可變字型」檔（每個 subset 約 58KB）。
-   改成自架：把 Noto Sans TC 可變字型子集成全站實際用到的 1749 個字元（含 1496 個漢字），
-   一支 502KB 涵蓋 100–900 全部字重，整站共用一份快取，且省掉 googleapis→gstatic 兩段跨網域連線。
+   改成自架：把 Noto Sans TC 可變字型子集成全站實際用到的字元（目前約 1700 個，含約 1470 個漢字），
+   一支約 500KB 涵蓋 100–900 全部字重，整站共用一份快取，且省掉 googleapis→gstatic 兩段跨網域連線。
+   （確切字數與檔案大小每次重建都會變，以 sitemap/build-font.py 的輸出為準）
    ⚠️ 新增文章若用到子集裡沒有的字，會退回系統字型（PingFang TC／微軟正黑）而不是缺字，
       但字形會不一致。改完網站請重跑 sitemap/build-font.py 重新產生子集並升版號。 */
 @font-face {
   font-family: "Noto Sans TC";
-  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=1") format("woff2-variations");
+  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=2") format("woff2-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
