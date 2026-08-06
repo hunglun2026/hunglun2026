@@ -1,4 +1,20 @@
 /* 鴻綸科技成果展示 — 極簡日式風（米白＋深藍）＋護眼深色模式，共用樣式 */
+
+/* ---------- 自架中文字型（2026-08-06 由 Google Fonts 改為自架子集）----------
+   原本用 fonts.googleapis.com 載 Noto Sans TC 五個字重，實測每頁首次載入要 993KB－17 個檔，
+   佔整頁流量 65–92%。原因：只要一次要超過一個字重，Google 就改送「可變字型」檔（每個 subset 約 58KB）。
+   改成自架：把 Noto Sans TC 可變字型子集成全站實際用到的 1749 個字元（含 1496 個漢字），
+   一支 502KB 涵蓋 100–900 全部字重，整站共用一份快取，且省掉 googleapis→gstatic 兩段跨網域連線。
+   ⚠️ 新增文章若用到子集裡沒有的字，會退回系統字型（PingFang TC／微軟正黑）而不是缺字，
+      但字形會不一致。改完網站請重跑 sitemap/build-font.py 重新產生子集並升版號。 */
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=1") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* 淺色（預設） */
   --bg: #fdfdfc;
@@ -101,6 +117,17 @@ a:hover { text-decoration: underline; }
 }
 .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 1; min-width: 0; max-width: 55%; margin-right: auto; }
 .brand img { height: auto; width: auto; max-height: 90px; max-width: 100%; display: block; }
+/* logo 改用 background-image 而非 <img>：display:none 的 <img> 瀏覽器照樣會下載，
+   淺／深色兩張每頁都載＝每次瀏覽白費 23–63KB。background-image 只會下載目前主題套用的那張。
+   寬度 = 原本的高度上限 × 原圖長寬比（907/180 ≈ 5.04），視覺尺寸與改版前相同。 */
+.brand-logo {
+  display: block;
+  width: 454px;           /* 90px × 5.04 */
+  max-width: 100%;
+  aspect-ratio: 907 / 180;
+  background: url("/assets/hunglun-logo-company-light.webp?v=4") no-repeat left center;
+  background-size: contain;
+}
 .header-visit-counter {
   flex-shrink: 0;
   display: flex;
@@ -661,6 +688,15 @@ a:hover { text-decoration: underline; }
   .footer-nav a, .footer-nav a::after, .footer-contact a, .fc-go { transition: none; }
 }
 .footer-logo img { height: 56px; width: auto; margin-bottom: 18px; }
+.footer-logo-img {
+  display: block;
+  width: 282px;           /* 56px × 5.04 */
+  max-width: 100%;
+  aspect-ratio: 907 / 180;
+  margin-bottom: 18px;
+  background: url("/assets/hunglun-logo-company-light.webp?v=4") no-repeat left center;
+  background-size: contain;
+}
 .footer-logo p { line-height: 1.8; margin-bottom: 20px; }
 .copyright { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); text-align: center; font-size: 0.8rem; }
 .visit-counter { margin-top: 10px; text-align: center; font-size: 0.78rem; color: var(--muted); font-family: var(--mono); }
@@ -738,6 +774,7 @@ a:hover { text-decoration: underline; }
 /* ---------- RWD ---------- */
 @media (max-width: 860px) {
   .brand img { max-height: 72px; }
+  .brand-logo { width: 363px; }   /* 72px × 5.04 */
   /* 手機版 logo 太小：原本被 .brand 的 max-width:55% 夾住，只剩 39px 高，
      遠低於上面 72px 的上限。390px 手機的一列空間是
      logo 243 + 間距16 + ☰45 + 間距16 + 主題鈕38 = 358，一格不剩，
@@ -764,6 +801,10 @@ a:hover { text-decoration: underline; }
 img.logo-dark { display: none; }
 :root[data-theme="dark"] img.logo-light { display: none; }
 :root[data-theme="dark"] img.logo-dark { display: block; }
+:root[data-theme="dark"] .brand-logo,
+:root[data-theme="dark"] .footer-logo-img {
+  background-image: url("/assets/hunglun-logo-dark-header.webp?v=5");
+}
 
 /* ---------- 服務項目：可點擊卡片（點進去看該服務的獨立說明頁） ---------- */
 a.svc-card { text-decoration: none; color: inherit; }
