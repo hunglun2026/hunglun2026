@@ -704,10 +704,14 @@ main:focus { outline: none; }
 /* 網站導覽：10 項用細線清單排下來太高（手機兩欄仍要 250px、桌機那欄更是一路拉到底），
    改成文字膠囊流動排列。連結一項不少（都是站內爬取路徑），高度砍到約三分之一。 */
 .footer-nav { display: flex; flex-wrap: wrap; gap: 8px; }
-.footer-nav li { margin: 0; }
+/* 讓同一列的膠囊平分該列寬度：標籤長短差很多（「服務項目」對「數位學習軟體導入」），
+   自然寬度會排得參差不齊。撐滿之後每列左右對齊，窄欄（桌機三欄頁尾）看起來才乾淨。 */
+.footer-nav li { margin: 0; flex: 1 1 auto; }
 .footer-nav a {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
   align-items: center;
+  justify-content: center;
   padding: 11px 14px;   /* 高度撐到 ~40px，維持可點區域 */
   border: 1px solid var(--line);
   border-radius: 999px;
