@@ -689,9 +689,9 @@ main:focus { outline: none; }
   margin-bottom: 12px;
 }
 .footer-grid ul { list-style: none; }
-.footer-nav, .footer-contact { border-top: 1px solid var(--line); }
-.footer-nav li, .footer-contact li { margin: 0; border-bottom: 1px solid var(--line); }
-.footer-nav a, .footer-contact a {
+.footer-contact { border-top: 1px solid var(--line); }
+.footer-contact li { margin: 0; border-bottom: 1px solid var(--line); }
+.footer-contact a {
   display: grid;
   align-items: baseline;
   gap: 14px;
@@ -700,10 +700,23 @@ main:focus { outline: none; }
   color: var(--muted) !important;
   transition: background 0.2s ease, padding-left 0.2s ease;
 }
-.footer-nav a { grid-template-columns: 1fr auto; font-size: 0.9rem; color: var(--text) !important; align-items: center; }
-.footer-nav a::after { content: "›"; color: var(--muted-faint); font-size: 0.95rem; transition: transform 0.2s ease, color 0.2s ease; }
-.footer-nav a:hover::after { color: var(--accent); transform: translateX(3px); }
-.footer-nav a:hover, .footer-contact a:hover { background: var(--bg-soft); padding-left: 8px; text-decoration: none !important; }
+.footer-contact a:hover { background: var(--bg-soft); padding-left: 8px; text-decoration: none !important; }
+/* 網站導覽：10 項用細線清單排下來太高（手機兩欄仍要 250px、桌機那欄更是一路拉到底），
+   改成文字膠囊流動排列。連結一項不少（都是站內爬取路徑），高度砍到約三分之一。 */
+.footer-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.footer-nav li { margin: 0; }
+.footer-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 14px;   /* 高度撐到 ~40px，維持可點區域 */
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  line-height: 1.2;
+  color: var(--text) !important;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.footer-nav a:hover { border-color: var(--accent); color: var(--accent) !important; background: var(--bg-soft); text-decoration: none !important; }
 /* 聯絡方式：名片式細線清單。左欄是固定寬的類別標籤，右欄是可點的內容，
    外部連結補一個右上箭頭。不用圖示，維持頁尾安靜、與全站細線風格一致。 */
 .footer-contact a { grid-template-columns: 46px 1fr auto; }
@@ -745,7 +758,7 @@ main:focus { outline: none; }
 .fc-go { font-size: 0.78rem; color: var(--muted-faint); transition: transform 0.2s ease, color 0.2s ease; }
 .footer-contact a:hover .fc-go { color: var(--accent); transform: translate(2px, -2px); }
 @media (prefers-reduced-motion: reduce) {
-  .footer-nav a, .footer-nav a::after, .footer-contact a, .fc-go { transition: none; }
+  .footer-nav a, .footer-contact a, .fc-go { transition: none; }
 }
 .footer-logo img { height: 56px; width: auto; margin-bottom: 18px; }
 .footer-logo-img {
@@ -853,17 +866,8 @@ main:focus { outline: none; }
   .stat { flex: 1 1 calc(50% - 10px); min-width: 0; }
   .stat .num { font-size: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
-  /* 「網站導覽」有 10 項，手機單欄排下來將近 480px，頁尾比內容區還長。
-     改兩欄後高度砍半，連結一項都不少（這些是站內爬取的主要路徑，不能為了版面刪掉）。
-     邊框從「ul 上緣 + 每列下緣」改成「每列上緣」，兩欄才不會出現懸空的線。 */
-  .footer-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 18px;
-    border-top: none;
-  }
-  .footer-nav li { border-top: 1px solid var(--line); border-bottom: none; }
-  .footer-nav a { font-size: 0.85rem; gap: 8px; }
+  .footer-nav { gap: 7px; }
+  .footer-nav a { font-size: 0.8rem; padding: 11px 12px; }
   .hero { padding: 56px 0 44px; }
   .page-head { padding: 36px 0 24px; }
 }
