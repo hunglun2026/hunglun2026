@@ -82,6 +82,46 @@ setTimeout(() => {
   document.querySelectorAll('.reveal:not(.in)').forEach((el) => el.classList.add('in'));
 }, 3000);
 
+// 數字捲到畫面內時往上跑（例如「200+」）。
+// 只處理「數字開頭」的統計值，像「Google」「台南總部」這種純文字會自動略過。
+// 減少動態偏好開啟時直接顯示最終值，不做動畫。
+(function () {
+  const nums = [...document.querySelectorAll('.stat .num')].filter((el) => /^\d/.test(el.textContent.trim()));
+  if (!nums.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function run(el) {
+    const raw = el.textContent.trim();
+    const m = raw.match(/^(\d+)(.*)$/);
+    if (!m) return;
+    const target = parseInt(m[1], 10);
+    const suffix = m[2];
+    const dur = 1100;
+    const t0 = performance.now();
+    // 先鎖住寬度，避免數字位數變化時整排統計左右跳動
+    el.style.minWidth = el.getBoundingClientRect().width + 'px';
+    el.textContent = '0' + suffix;
+    function step(now) {
+      const p = Math.min((now - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);   // easeOutCubic，最後慢慢收
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.style.minWidth = '';
+    }
+    requestAnimationFrame(step);
+  }
+
+  const numIo = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        run(e.target);
+        numIo.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.6 });
+  nums.forEach((el) => numIo.observe(el));
+})();
+
 /* 點圖放大（.lightbox 圖片點擊後全螢幕檢視，Esc／點背景關閉）
 
    2026-08-06 無障礙修正：原本只綁 click 在 <img> 上，<img> 不可聚焦也沒有鍵盤事件，
