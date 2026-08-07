@@ -354,6 +354,17 @@ main:focus { outline: none; }
 }
 .stat .num { font-size: 1.9rem; font-weight: 200; color: var(--text); font-family: "Noto Sans TC", "PingFang TC", system-ui, sans-serif; }
 .stat .label { color: var(--muted); font-size: 0.88rem; margin-top: 10px; font-weight: 300; }
+/* 四個數字改成可點的連結（各自連到對應服務／實績／聯絡頁）。
+   底線只給 label，數字保持乾淨；整塊往上浮一點提示可點。 */
+a.stat { display: block; text-decoration: none !important; transition: transform 0.2s ease; }
+a.stat .num, a.stat .label { transition: color 0.2s ease; }
+a.stat:hover { transform: translateY(-2px); }
+a.stat:hover .num { color: var(--accent); }
+a.stat:hover .label { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  a.stat, a.stat .num, a.stat .label { transition: none; }
+  a.stat:hover { transform: none; }
+}
 
 /* ---------- Cards ---------- */
 .grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
