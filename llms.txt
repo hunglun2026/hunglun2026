@@ -40,6 +40,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 首頁（連續捲動巡覽全站）：https://www.hunglun.com/
 - 關於我們：https://www.hunglun.com/about
 - Google 解決方案（Google AI Pro for Education 授權導入、Google Workspace for Education 導入與認證培訓、Google AI 校園研習、Chromebook 與智慧教室建置、Google AI 企業級授權導入，含導入流程說明）：https://www.hunglun.com/google
+- 智慧校園：Google AI Pro for Education 導入說明（到校簡報的網頁版：教育版資安與合規承諾；基礎版與進階版額度比較——Token 32,000 對 1,000,000、Deep Research 每月 5 份對每天 20 份、Nano Banana 2 生圖、Gemini Omni 影片每天 10 部；Gemini Notebook 筆記本／來源／查詢與每日生成額度比較；Gem、Google Vids、Help me write／organize；授權級距與贈送服務；Teaching and Learning 對 Education Plus 的會議人數與儲存空間差異。單價不公開，請洽詢報價）：https://www.hunglun.com/google/ai-pro-campus
 - 服務項目（含網站效果 Live Demo 分頁）：https://www.hunglun.com/services
 - 成功案例（已上線的 AI 應用工具與客戶委託案例，收在服務項目頁的分頁）：https://www.hunglun.com/services#projects
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://www.hunglun.com/tools
