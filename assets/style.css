@@ -701,26 +701,22 @@ main:focus { outline: none; }
   transition: background 0.2s ease, padding-left 0.2s ease;
 }
 .footer-contact a:hover { background: var(--bg-soft); padding-left: 8px; text-decoration: none !important; }
-/* 網站導覽：10 項用細線清單排下來太高（手機兩欄仍要 250px、桌機那欄更是一路拉到底），
-   改成文字膠囊流動排列。連結一項不少（都是站內爬取路徑），高度砍到約三分之一。 */
-.footer-nav { display: flex; flex-wrap: wrap; gap: 8px; }
-/* 讓同一列的膠囊平分該列寬度：標籤長短差很多（「服務項目」對「數位學習軟體導入」），
-   自然寬度會排得參差不齊。撐滿之後每列左右對齊，窄欄（桌機三欄頁尾）看起來才乾淨。 */
-.footer-nav li { margin: 0; flex: 1 1 auto; }
+/* 網站導覽：5 項純文字清單，一行一個、左對齊。
+   不用框線也不用分隔線——項目少的時候線反而吵，讓頁尾保持安靜。
+   `min-height` 撐 40px 是為了維持可點區域，別為了更緊改小。 */
+.footer-nav { display: block; }
+.footer-nav li { margin: 0; }
 .footer-nav a {
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: center;
-  padding: 11px 14px;   /* 高度撐到 ~40px，維持可點區域 */
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.84rem;
-  line-height: 1.2;
+  min-height: 40px;
+  padding: 2px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
   color: var(--text) !important;
-  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease, padding-left 0.2s ease;
 }
-.footer-nav a:hover { border-color: var(--accent); color: var(--accent) !important; background: var(--bg-soft); text-decoration: none !important; }
+.footer-nav a:hover { color: var(--accent) !important; padding-left: 6px; text-decoration: none !important; }
 /* 聯絡方式：名片式細線清單。左欄是固定寬的類別標籤，右欄是可點的內容，
    外部連結補一個右上箭頭。不用圖示，維持頁尾安靜、與全站細線風格一致。 */
 .footer-contact a { grid-template-columns: 46px 1fr auto; }
@@ -870,8 +866,7 @@ main:focus { outline: none; }
   .stat { flex: 1 1 calc(50% - 10px); min-width: 0; }
   .stat .num { font-size: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
-  .footer-nav { gap: 7px; }
-  .footer-nav a { font-size: 0.8rem; padding: 11px 12px; }
+  .footer-nav a { font-size: 0.86rem; }
   .hero { padding: 56px 0 44px; }
   .page-head { padding: 36px 0 24px; }
 }
