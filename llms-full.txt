@@ -170,7 +170,7 @@ Google 認證培訓：認證教育家 Level 1／2、網域管理與訓練講師�
 學校要先從哪一項開始？
 多數學校的順序是：先把 Google Workspace for Education 網域與管理主控台整理好，再視需求加購 AI 或載具。若網域本身還沒整理（組織架構混亂、權限沒分層），先加購授權通常用不起來。
 Gemini 現在不是免費就有了嗎？還需要買 AI Pro 嗎？
-2026 年初 Google 已把部分 Gemini 功能下放到免費的教育版，所以「有沒有 Gemini」不再是重點。付費的 Google AI Pro for Education 差在模型等級、深入研究與 Gemini Notebook（原 NotebookLM）的使用額度，以及 Workspace 各應用的整合深度。用量不大的話免費版可能就夠。
+2026 年初 Google 已把部分 Gemini 功能下放到免費的教育版，所以「有沒有 Gemini」不再是重點。付費的 Google AI Pro for Education 差在模型等級、深入研究與 Gemini Notebook的使用額度，以及 Workspace 各應用的整合深度。用量不大的話免費版可能就夠。
 授權要買幾套？學生也要一起算嗎？
 依實際要使用的人數計算。要特別注意 2025 年 10 月起已取消「每 4 個學生授權送 1 個教職員授權」，教職員人數要一併編列；2026 年 2 月起 Standard 與 Plus 也改為單一授權類型，既有客戶在續約時才適用。
 可以只找你們做研習，不買授權嗎？
@@ -1879,10 +1879,10 @@ Google AI Pro for Education 授權導入
 Gemini Pro 教育版帳號開通、導入規劃與教師研習，由 Google 官方授權夥伴交付。
 鴻綸科技是 Google for Education Professional Development Partner，可為學校與機構開通 Google AI Pro for Education（即 Gemini Pro 教育版）授權，並協助完成導入規劃與教師培訓。
 Google AI Pro for Education 包含哪些功能
-它不是另一個獨立的 AI 產品，而是把學校既有的 Google Workspace for Education 帳號升級：同一組校園帳號登入，在 Gemini、Gemini Notebook（原 NotebookLM）與 Workspace 各應用裡拿到更強的模型與更高的使用額度。
+它不是另一個獨立的 AI 產品，而是把學校既有的 Google Workspace for Education 帳號升級：同一組校園帳號登入，在 Gemini、Gemini Notebook與 Workspace 各應用裡拿到更強的模型與更高的使用額度。
 Gemini 應用程式
 使用 Google 目前最新的進階模型，並開放深入研究（Deep Research）自動彙整多來源資料成研究報告、進階圖像生成，以及較長的內容處理長度。教師常用在課程資料蒐集、教案初稿、試題與評量規準草擬。
-Gemini Notebook（原 NotebookLM）
+Gemini Notebook
 把講義、法規、會議紀錄、論文丟進去當作知識來源，問答一律以這些來源作答並標註出處，適合處理「答案必須有依據」的校務與教學情境。付費方案的使用額度明顯高於免費版，並可用進階功能整理成音訊摘要、學習指南。
 Google 已於 2026 年 7 月 16 日把 NotebookLM 正式更名為 Gemini Notebook，並與 Gemini 應用程式互通、加入可直接執行程式碼的分析能力。功能與原本相同，只是名稱與圖示改版，學校端不需重新開通。
 Workspace 側邊面板
@@ -2118,7 +2118,7 @@ K-12 學生：AI 素養、專題製作、資料查證，依年段調整深度。
 Gemini 入門：問對問題：提示語的結構、給角色與限制、追問與修正，用老師自己的科目當範例。
 AI 備課工作坊：教案、學習單、差異化教材與分組任務，一堂課的份量現場產出。
 AI 出題與評量：題庫生成、難度調整、雙向細目表對照，批改與回饋語的輔助寫法。
-Gemini Notebook 應用（原 NotebookLM，2026 年 7 月更名）：把課本、講義、研究論文餵進去做重點整理與問答，適合大學端與高中專題。
+Gemini Notebook 應用（2026 年 7 月由 NotebookLM 更名）：把課本、講義、研究論文餵進去做重點整理與問答，適合大學端與高中專題。
 行政減負：Google 表單＋試算表＋Gemini 的組合技，通知單回收統計、成果報告排版、名單比對。
 AI 素養與學術倫理：幻覺與查證、引用規範、哪些內容不能丟進 AI、作業與報告的使用界線。
 Chromebook 課堂經營：載具管理、課堂分享與螢幕監看，讓一人一機真的用得起來。
