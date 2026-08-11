@@ -75,6 +75,10 @@
 
 html { scroll-behavior: smooth; }
 
+/* 內文是 300，瀏覽器對 <strong> 的預設 `bolder` 只會相對跳一階變成 400，
+   強調幾乎看不出來。明確指定 500，讓粗體真的讀得出是重點。 */
+b, strong { font-weight: 500; }
+
 body {
   font-family: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
   font-weight: 300;
