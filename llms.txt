@@ -48,14 +48,14 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
 - 常見問題與知識庫（分類導覽）：https://www.hunglun.com/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/services#local-food
-- 教育科技知識庫（17 篇實務文章的索引頁，依主題分四組：Google 與 AI 導入／設備選型與採購／網站與數位工具／法遵與資安）：https://www.hunglun.com/knowledge
+- 教育科技知識庫（19 篇實務文章的索引頁，依主題分四組：Google 與 AI 導入／設備選型與採購／網站與數位工具／法遵與資安）：https://www.hunglun.com/knowledge
 - 標案設備採購・台灣銀行共同供應契約（機關學校可依契約採購，站內收錄 916 筆契約品項）：https://www.hunglun.com/services/procurement
   - 六大類別各有獨立頁面：主機 /services/procurement/desktop、顯示器 /monitor、平板 /tablet、繪圖卡 /gpu、相機 /camera、電腦軟體 /software（電腦軟體另含 15 個子類頁：sw-admin／sw-ai／sw-cad／sw-db／sw-elearning／sw-endpoint／sw-file／sw-iam／sw-message／sw-microsoft／sw-network／sw-oss／sw-virtual／sw-vuln／sw-web）
 - 導入實績與常見情境（六種最常見的學校導入情境與標準做法：Google Workspace 網域治理、Chromebook 行動學習佈建、智慧情境教室與計畫規劃書、教師研習與認證、校園行政自動化、共同供應契約採購支援。服務範圍以台中以南各縣市為主，涵蓋國小、國中、高中職與大專院校。**基於商業機密與客戶保密，不公開個別合作學校名稱**，改以第三方可查證的資格佐證）：https://www.hunglun.com/cases
 - 聯絡我們：https://www.hunglun.com/contact
 
 ## 知識庫分類頁（每頁皆為獨立問答式內容，含 Article 與 FAQPage 結構化資料）
-索引頁（17 篇的完整清單與各篇最後更新日期）：https://www.hunglun.com/knowledge
+索引頁（19 篇的完整清單與各篇最後更新日期）：https://www.hunglun.com/knowledge
 - [Google 認證教育家 Level 1／Level 2 與認證講師指南](https://www.hunglun.com/knowledge/google-certification)：三種認證（Certified Educator Level 1／Level 2／Certified Trainer）的遞進關係；考試分選擇題與三個實作情境（lab-based scenarios）、結果 3 個工作天內通知、未通過者 8 天後可重考、認證效期 36 個月、部分語言免費（以 goo.gle/educerts 當下公告為準）；Certified Trainer 申請五步驟：Trainer 課程約 8 小時、需具備 Level 2、3 分鐘自我介紹與教學示範影片、過去一年 3–5 場 Google 相關研習紀錄、送件後 4–6 週通知。
 - [學校資訊設備採購指南](https://www.hunglun.com/knowledge/procurement)：五項需求盤點、Chromebook／Windows 筆電／平板選型對照、最常被漏掉的三項配套（管理授權、無線網路與電力、教師培訓）、共同供應契約採購順序、驗收檢查點。
 - [AI 融入教學實務指南](https://www.hunglun.com/knowledge/ai-teaching)：教師備課／學生課堂／行政文書三種用法拆解、不該交給 AI 的三類事、學生使用規範分三級（不得使用・可用但須標註・鼓勵使用）、以評量設計取代不可靠的 AI 偵測器。
@@ -67,6 +67,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Google for Education 指南](https://www.hunglun.com/knowledge/google)：Google for Education、Workspace 基礎版/進階版、認證夥伴計畫、申請流程。
 - [Gemini 教育版怎麼用](https://www.hunglun.com/knowledge/gemini)：學校導入 Gemini 教育版的實務——學生在 Classroom 能做什麼、老師備課與評量的用法、管理員該確認的四件事（版本授權、OU 架構、逐一應用程式開關、使用規範），以及個人版與教育版的資料訓練政策差異與方案比較。含 2026 年 8 月 10 日起 Classroom 的 Gemini 開放給所有年齡 K-12 與高教學生的變更。
 - [Google Classroom 完全指南](https://www.hunglun.com/knowledge/classroom)：Classroom 在學校怎麼用——三種教育版的功能差異（基本教學功能所有版本都有，Chromebook 課堂管理工具需 Plus 或 Teaching and Learning Upgrade 且裝置要納管）、2026 年 7 月 27 日起依角色顯示不同內容的新首頁、2026 年 8 月 10 日起 Gemini 分頁開放所有年齡（管理員端預設開啟，需主動針對 OU 關閉）、管理員導入前該確認的五件事，以及教師端最常見的三個卡關點。
+- [Google 管理主控台校園設定指南](https://www.hunglun.com/knowledge/google-admin)：Google Workspace 管理主控台（admin.google.com）的校園實作路徑——網域／機構單位（OU）／使用者／裝置四層架構與設定沿用規則、OU 與群組的差別、管理員角色指派、單筆與 CSV 大量新增使用者、應用程式開關、Chrome 三大類政策（使用者與瀏覽器／裝置／受管理的訪客工作階段）與後台搜尋關鍵字對照表、擴充功能強制安裝、Wi-Fi 與印表機、裝置搬移與盤點（資產 ID、上次同步政策時間）、Gemini in Workspace 對話記錄保留與刪除、課程工具組（Class Tools）老師端與學生端分 OU 部署，以及五個最常見的卡關原因。
 - [網站架設攻略](https://www.hunglun.com/knowledge/website)：網域、主機、CMS、SEO/AEO/GEO 差異、建置費用估算、上線後維護。
 - [AI OCR 辨識解析](https://www.hunglun.com/knowledge/ocr)：OCR原理、AI OCR與傳統OCR差異、準確率、校園應用場景、資料安全評估重點。
 - [開放資料應用手冊](https://www.hunglun.com/knowledge/opendata)：開放資料是什麼、查詢下載方式、應用開發類型、可靠性與授權注意事項。
