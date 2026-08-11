@@ -11,13 +11,19 @@
 <meta property="og:title" content="Google 管理主控台校園設定指南｜鴻綸科技">
 <meta property="og:description" content="OU 與群組怎麼規劃、政策設定去哪找、裝置怎麼盤點——校園管理員實際會用到的後台操作路徑一次整理。">
 <meta property="og:url" content="https://www.hunglun.com/knowledge/google-admin">
-<meta property="og:image" content="https://www.hunglun.com/assets/hunglun-logo-dark.png">
+<meta property="og:image" content="https://www.hunglun.com/assets/images/google-admin-policy-tabs.webp">
 <meta property="og:locale" content="zh_TW">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=5" crossorigin>
 <link rel="stylesheet" href="/assets/style.css?v=26">
+<style>
+/* 後台截圖：讓圖片突破正文欄寬，介面文字才看得清楚；點圖可全螢幕放大 */
+.prose-figure.fig-wide { width: min(1080px, calc(100vw - 48px)); margin-left: 50%; transform: translateX(-50%); }
+.prose-figure img.lightbox { cursor: zoom-in; }
+@media (max-width: 900px) { .prose-figure.fig-wide { width: 100%; margin-left: 0; transform: none; } }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +56,12 @@
   "@type": "Article",
   "headline": "Google 管理主控台校園設定指南",
   "description": "Google Workspace 管理主控台（Admin Console）的校園實作指南：OU 與群組規劃、使用者建立與大量匯入、管理員角色、Chrome 三大類政策與搜尋關鍵字、擴充功能與網路印表機、裝置搬移與盤點、Gemini 對話記錄保留、課程工具組部署。",
-  "image": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
+  "image": [
+    "https://www.hunglun.com/assets/images/google-admin-policy-tabs.webp",
+    "https://www.hunglun.com/assets/images/google-admin-create-ou.webp",
+    "https://www.hunglun.com/assets/images/google-admin-devices.webp",
+    "https://www.hunglun.com/assets/images/google-admin-gemini-logs.webp"
+  ],
   "datePublished": "2026-08-11",
   "dateModified": "2026-08-11",
   "author": {
@@ -163,11 +174,19 @@
       <li><strong>不要全部給超級管理員</strong>：只需要幫學生重設密碼的人，給「使用者管理」管理員或服務中心管理員就夠了。權限給到剛好，是校園資安稽核最容易被抓的一項。</li>
       <li>管理員角色現在也可以指派給安全性群組，人員異動時改群組成員即可，不必逐一調整。</li>
     </ul>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-roles.webp" width="1200" height="542" alt="Google 管理主控台「帳戶 › 管理員角色」頁面，列出超級管理員、網路論壇管理員、「使用者管理」管理員、服務中心管理員等系統角色" fetchpriority="high" decoding="async">
+      <figcaption>帳戶 › 管理員角色。內建的系統角色可直接指派，也能自行建立權限更小的角色。（本文截圖點擊可全螢幕放大；示範網域與裝置序號已遮蔽）</figcaption>
+    </figure>
 
     <h2 id="users">四、新增使用者（少量與大量）</h2>
     <p>路徑：<strong>目錄 › 使用者</strong>。</p>
     <h3>少量：直接新增</h3>
     <p>填入使用者的「姓」與「名」、電子郵件地址，需要時展開進階選項調整所屬機構單位與密碼。已建立的帳號之後也可以隨時修改 OU 或重設密碼。</p>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-add-user.webp" width="1200" height="540" alt="Google 管理主控台新增使用者的表單，欄位包含名字、姓氏、主要電子郵件地址與網域下拉選單，下方是管理密碼與機構單位的展開連結" loading="lazy" decoding="async">
+      <figcaption>新增單一使用者的表單。最下方的「Manage user's password, organizational unit, and profile photo」展開後才能指定 OU 與密碼。</figcaption>
+    </figure>
     <h3>大量：CSV 匯入</h3>
     <ol class="feature-list">
       <li>在使用者頁面選擇大量更新使用者，先<strong>下載 Google 提供的 CSV 範本</strong></li>
@@ -175,6 +194,10 @@
       <li>填完後<strong>另存下載成 CSV 檔</strong>（不要上傳試算表原檔）</li>
       <li>回到後台上傳該 CSV，確認後執行上傳</li>
     </ol>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-csv-template.webp" width="1200" height="542" alt="Google 試算表開啟的 Google Workspace 大量匯入使用者 CSV 範本，第一列欄位標題依序為 First Name、Last Name、Email Address、Password、Password Hash Function、Org Unit Path 等" loading="lazy" decoding="async">
+      <figcaption>CSV 範本用 Google 試算表開啟後的樣子。實務上只需填 A～D 欄與 Org Unit Path（F 欄），標題列一個字都不要改。</figcaption>
+    </figure>
     <ul class="feature-list">
       <li><strong>標題列一個字都不能改</strong>：欄位名稱是後台辨識欄位的依據，改成中文或調整順序就會失敗。</li>
       <li><strong>機構單位要填完整路徑</strong>：例如 <code>/學生/一年級</code>，只填 OU 名稱通常會找不到。</li>
@@ -183,6 +206,10 @@
 
     <h2 id="ou">五、建立機構單位（OU）</h2>
     <p>路徑：<strong>目錄 › 機構單位 › 建立機構單位</strong>。填入機構名稱，並選擇它要掛在哪一層底下；沒有特定歸屬就選網域本身（最上層），要當成某個 OU 的子單位就選該 OU。</p>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-create-ou.webp" width="1200" height="540" alt="Google 管理主控台的建立機構單位對話框，包含機構單位名稱、說明與上層機構單位三個欄位" loading="lazy" decoding="async">
+      <figcaption>建立機構單位的對話框。「Parent organizational unit」決定它掛在哪一層，也決定它會沿用誰的設定。</figcaption>
+    </figure>
     <p>命名建議用自己看得懂、且排序後仍然合理的名稱。學校 OU 動輒二三十個，取名混亂時，日後套用政策很容易選錯目標。</p>
 
     <h2 id="groups">六、建立群組</h2>
@@ -200,6 +227,10 @@
         </tbody>
       </table>
     </div>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-group-labels.webp" width="1200" height="542" alt="Google 管理主控台建立群組流程的群組標籤設定，可勾選 Mailing 郵件群組、Security 安全性群組與 Locked 鎖定群組三種標籤" loading="lazy" decoding="async">
+      <figcaption>建立群組時的三個標籤。Security（安全性）勾了就無法取消，只有要拿來控管權限時才勾。</figcaption>
+    </figure>
     <p>群組成員除了實際的人，也可以放<strong>另一個群組</strong>（把群組 A 加進群組 B 當成員），例如把各年級群組併進「全體學生」。這比逐一維護大群組省事得多，但層數不要疊太深，否則出問題時很難追。</p>
 
     <h2 id="apps">七、Google 應用程式的開關</h2>
@@ -209,6 +240,10 @@
       <li><strong>應用程式 › 其他 Google 服務</strong>：非核心服務（AI Studio、Blogger、Chrome Canvas 等）的開關，可依 OU 或群組個別開啟。</li>
       <li><strong>生成式 AI › Gemini 應用程式</strong>：Gemini 的服務狀態與使用者存取權限。</li>
     </ul>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-services.webp" width="1200" height="544" alt="Google 管理主控台「應用程式 › 其他 Google 服務」頁面，左側可依機構單位或群組篩選，右側列出各服務的開啟狀態" loading="lazy" decoding="async">
+      <figcaption>應用程式 › 其他 Google 服務。左側選 OU 或群組，右側的服務狀態就會顯示「部分開啟」或「全部開啟」。</figcaption>
+    </figure>
     <p>開關可以套用到「全帳戶」「特定群組」或「特定機構單位」。同一個服務對老師開、對學生關，就是在這裡依 OU 分別設定；狀態欄會顯示為「部分開啟」而非「全部開啟」。</p>
 
     <h2 id="policies">八、政策設定：三大類與搜尋關鍵字對照</h2>
@@ -218,6 +253,10 @@
       <li><strong>裝置設定</strong>：跟著<em>那台機器</em>走，不論誰登入都一樣</li>
       <li><strong>受管理的訪客工作階段設定</strong>：不需登入帳號就能使用的公用模式，適合圖書館、資訊站與臨時考場</li>
     </ul>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-policy-tabs.webp" width="1200" height="544" alt="Google 管理主控台「裝置 › Chrome › 設定」頁面，上方有使用者與瀏覽器設定、裝置設定、受管理的訪客工作階段設定三個分頁，左側是機構單位樹狀清單" loading="lazy" decoding="async">
+      <figcaption>裝置 › Chrome › 設定。上方三個分頁就是三大類政策，左側先選好 OU 再用搜尋欄找設定。</figcaption>
+    </figure>
     <p>設定項目有數百條，<strong>不要用捲的找</strong>。左側先選好要套用的 OU，再用頁面上的搜尋欄輸入關鍵字。以下是校園最常設定的項目與對應關鍵字：</p>
 
     <h3>使用者與瀏覽器設定</h3>
@@ -271,11 +310,19 @@
 
     <h2 id="extensions">九、擴充功能與應用程式強制安裝</h2>
     <p>路徑：<strong>裝置 › Chrome › 應用程式和擴充功能</strong>，選擇要套用的 OU 與分頁（使用者和瀏覽器／資訊站／受管理的訪客工作階段），再用右下角的加號新增。</p>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-extensions.webp" width="1200" height="544" alt="Google 管理主控台「裝置 › Chrome › 應用程式和擴充功能」頁面，列出 Read Along、Kami、Adobe Acrobat 等應用程式與各自的強制安裝或允許安裝政策" loading="lazy" decoding="async">
+      <figcaption>應用程式和擴充功能。每一項都可以指定強制安裝、允許安裝或封鎖，右欄還能固定版本。</figcaption>
+    </figure>
     <p>每個項目可以設定安裝政策：<strong>強制安裝</strong>（自動裝好、使用者不能移除）、<strong>允許安裝</strong>（可自行安裝）、封鎖，也可以固定版本避免自動更新破壞課堂流程。校園常見的強制安裝清單像是 Kami、Read Along、Adobe Acrobat 這類教學工具。</p>
     <p><strong>強制安裝要克制</strong>：每一個擴充功能都會吃記憶體，低階機種裝了七八個之後，課堂上的卡頓多半就是這裡來的。</p>
 
     <h2 id="network">十、Wi-Fi 網路設定</h2>
     <p>路徑：<strong>裝置 › 網路</strong>。可以建立 Wi-Fi、乙太網路、VPN 設定與 SCEP 憑證設定檔，選擇要套用的 OU 後，Chromebook 就會自動帶入，學生不必手動輸入密碼。頁面最底下另有「一般設定（僅限 Chromebook）」，控制自動連線、封鎖特定 Wi-Fi、是否允許使用者自行新增網路等。</p>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-wifi.webp" width="1200" height="544" alt="Google 管理主控台「裝置 › 網路」頁面，顯示目前管理的 Wi-Fi 網路數量，以及乙太網路與 VPN 的建立入口" loading="lazy" decoding="async">
+      <figcaption>裝置 › 網路。設定好的 Wi-Fi 會依 OU 自動派送到 Chromebook，學生不必手動輸入密碼。</figcaption>
+    </figure>
     <p>教網環境常見的作法是把校內 SSID 與教育網路各建一組，一起套用到學生 OU，讓載具在校內任何角落都能自動接上。</p>
 
     <h2 id="printer">十一、印表機設定</h2>
@@ -292,6 +339,10 @@
     <h2 id="inventory">十三、查看全網域的裝置指派狀況</h2>
     <p>同樣在<strong>裝置 › Chrome › 裝置</strong>。清單會列出每台機器的序號、狀態（已佈建／已停權）、資產 ID、註冊時間與<strong>上次同步處理政策時間</strong>，可以用篩選器依狀態、OU 過濾，也能整批匯出。</p>
     <p>這一頁其實是最好用的盤點工具：</p>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-devices.webp" width="1200" height="545" alt="Google 管理主控台「裝置 › Chrome › 裝置」的裝置清單，欄位包含序號、狀態、資產 ID、註冊時間與上次同步處理政策時間" loading="lazy" decoding="async">
+      <figcaption>裝置清單可依 OU 與狀態篩選並整批匯出。序號與資產 ID 已遮蔽。</figcaption>
+    </figure>
     <ul class="feature-list">
       <li><strong>資產 ID 欄位</strong>填學校的財產編號，日後對帳直接匯出，不必再另外維護一份 Excel。</li>
       <li><strong>上次同步時間</strong>若停在幾個月前，代表那台機器很久沒開機或沒連上網——通常就是被鎖在櫃子裡、借出未還，或已經故障沒人報修的那幾台。</li>
@@ -303,10 +354,18 @@
       <li><strong>手動刪除</strong>：是否允許使用者自行刪除自己與 Gemini 的對話。</li>
       <li><strong>自動刪除</strong>：已儲存的閒置對話保留多久，也可以設定為不自動刪除。</li>
     </ul>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-gemini-logs.webp" width="1200" height="543" alt="Google 管理主控台「生成式 AI › Gemini in Workspace › 對話記錄與刪除」頁面，顯示手動刪除與自動刪除兩項設定及其套用的機構單位" loading="lazy" decoding="async">
+      <figcaption>對話記錄與刪除。「手動刪除」決定使用者能不能自己刪，「自動刪除」決定閒置對話保留多久。</figcaption>
+    </figure>
     <p>使用者自己這端，在 Gemini 或 <a href="/knowledge/gemini">Gemini Notebook</a> 的介面中也能逐筆刪除對話與筆記本。學校若對學生端有留存或清除規範，<strong>建議在開放給學生使用之前就先決定保留期</strong>，而不是等到有狀況才回頭調——已經被自動刪除的內容是救不回來的。相關的個資考量可參考<a href="/knowledge/privacy">個資法與校安須知</a>。</p>
 
     <h2 id="class-tools">十五、部署課程工具組（Class Tools）</h2>
     <p>課程工具組是 ChromeOS 內建的課堂管理功能，老師可以在課堂上檢視學生畫面、鎖定分頁、推送網址。它需要在<strong>裝置 › Chrome › 設定 › 使用者與瀏覽器設定</strong>中，選好 OU 後搜尋「課程工具組」來開啟。</p>
+    <figure class="prose-figure fig-wide">
+      <img class="lightbox" src="/assets/images/google-admin-class-tools.webp" width="1200" height="542" alt="Google 管理主控台裡課程工具組（Class Tools）的設定畫面，包含即時字幕和語音轉錄、查看螢幕畫面、Google Classroom 整合功能等子設定" loading="lazy" decoding="async">
+      <figcaption>課程工具組的子設定。「查看螢幕畫面」在 ChromeOS M137 之後還需要一併啟用 Chrome 遠端桌面存取權。</figcaption>
+    </figure>
     <p>關鍵是<strong>老師端與學生端要分開套用在不同 OU</strong>：老師 OU 開啟教師端功能，學生 OU 開啟受管理端。兩邊都設定好之後，沿用狀況才會顯示為「已在機構內採行」。若課堂上老師看不到學生畫面，九成是其中一端的 OU 沒設到、或是學生登入的帳號不在預期的 OU 底下。</p>
 
     <h2 id="pitfalls">最常見的五個卡關</h2>
