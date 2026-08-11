@@ -1168,7 +1168,7 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   border: 1px solid var(--line);
   border-radius: 3px;
   /* 白底卡片只留一點點邊，logo 本身盡量大 */
-  padding: 6px 10px;
+  padding: 8px 14px;
   /* 上方留白要大於與自身標題的距離，否則 logo 會看起來像屬於前一段 */
   margin: 52px 0 12px;
   min-height: 108px;
@@ -1185,9 +1185,13 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   width: auto;
   height: auto;
 }
+/* 向量 logo：SVG 檔自帶 width／height（thinglink 143x32、padlet 72x20），
+   max-* 只設上限不會把它放大，所以要明確指定高度，用 object-fit 保住比例。 */
+.sw-logo img[src$=".svg"] { height: 96px; width: auto; max-width: 318px; object-fit: contain; }
 @media (max-width: 640px) {
   .sw-logo { padding: 6px 8px; min-height: 84px; }
   .sw-logo img { max-height: 72px; max-width: 232px; }
+  .sw-logo img[src$=".svg"] { height: 72px; max-width: 232px; }
 }
 
 /* ---------- 並排小圖（原圖解析度不高時，縮小並排比拉滿一欄清楚） ---------- */
