@@ -1117,6 +1117,16 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
 @media (max-width: 640px) {
   .event-item { grid-template-columns: 1fr; gap: 14px; }
 }
+/* 桌機：活動列表改三欄卡片。原本「260px 圖＋1fr 文字」的橫向列，文字只有一兩行，
+   右半邊幾乎都是空的，整頁看起來很空。改成網格後同樣的內容少掉一半以上的高度。 */
+@media (min-width: 900px) {
+  .events-wrap { max-width: 1080px; }
+  /* .prose > ul 的 43em 行寬限制是給文字段落用的，套在卡片網格上會讓三欄擠在左半邊 */
+  .events-wrap > .event-list { max-width: none; }
+  .event-list { grid-template-columns: repeat(3, 1fr); gap: 30px 24px; }
+  .event-item { grid-template-columns: 1fr; gap: 12px; padding-bottom: 20px; }
+  .event-item:last-child { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+}
 
 /* ---------- 規格／方案比較表 ---------- */
 .spec-table-wrap { overflow-x: auto; margin: 22px 0; }

@@ -57,7 +57,7 @@ SEO／AEO／GEO
 
 ---
 
-## 鴻綸科技教育｜關於我們｜Google for Education 台灣授權夥伴
+## 關於我們｜Google for Education 台灣授權夥伴｜鴻綸科技
 
 https://www.hunglun.com/about
 
@@ -124,7 +124,7 @@ EVENTS
 
 ---
 
-## 鴻綸科技教育｜Google 解決方案｜AI Pro・Workspace・Chromebook
+## Google 解決方案｜AI Pro・Workspace・Chromebook｜鴻綸科技
 
 https://www.hunglun.com/google
 
@@ -289,7 +289,7 @@ Google 解決方案總覽 →
 
 ---
 
-## 鴻綸科技教育｜服務項目｜Google AI Pro for Education 授權
+## 服務項目｜Google AI Pro for Education 授權｜鴻綸科技
 
 https://www.hunglun.com/services
 
@@ -457,7 +457,7 @@ AI 智慧出題・支援多種題型
 
 ---
 
-## 鴻綸科技教育｜數位學習軟體導入｜Thinglink、Edpuzzle、Kami
+## 數位學習軟體導入｜Thinglink、Edpuzzle、Kami｜鴻綸科技
 
 https://www.hunglun.com/software
 
@@ -667,7 +667,7 @@ Google 認證教育家與認證講師指南 →
 
 ---
 
-## 鴻綸科技教育｜常見問題與知識庫｜Chromebook・Google・Gemini
+## 常見問題與知識庫｜Chromebook・Google・Gemini｜鴻綸科技
 
 https://www.hunglun.com/faq
 
@@ -1478,7 +1478,7 @@ Google AI Pro for Education 授權導入
 
 ---
 
-## 鴻綸科技教育｜Google Classroom 完全指南｜校園導入與教師實務
+## Google Classroom 完全指南｜校園導入與教師實務｜鴻綸科技
 
 https://www.hunglun.com/knowledge/classroom
 
@@ -1579,7 +1579,7 @@ Google 管理主控台（Admin Console，admin.google.com）是 Google Workspace
 超級管理員至少要有兩位：唯一一位管理員離職、帳號被鎖或忘記密碼時，沒有人救得回來。
 不要全部給超級管理員：只需要幫學生重設密碼的人，給「使用者管理」管理員或服務中心管理員就夠了。權限給到剛好，是校園資安稽核最容易被抓的一項。
 管理員角色現在也可以指派給安全性群組，人員異動時改群組成員即可，不必逐一調整。
-帳戶 › 管理員角色。內建的系統角色可直接指派，也能自行建立權限更小的角色。（本文截圖點擊可全螢幕放大；示範網域與裝置序號已遮蔽）
+帳戶 › 管理員角色。內建的系統角色可直接指派，也能自行建立權限更小的角色。（本文截圖點擊可全螢幕放大；手機版顯示的是畫面重點區域，示範網域與裝置序號已遮蔽）
 四、新增使用者（少量與大量）
 路徑：目錄 › 使用者。
 少量：直接新增
@@ -1739,7 +1739,7 @@ SEO／AEO／GEO 搜尋引擎最佳化服務
 
 ---
 
-## 鴻綸科技教育｜數位學習軟體怎麼選｜Edpuzzle・Thinglink・Kami
+## 數位學習軟體怎麼選｜Edpuzzle・Thinglink・Kami｜鴻綸科技
 
 https://www.hunglun.com/knowledge/edtech-software
 
@@ -1982,7 +1982,7 @@ Gemini 方案懶人包
 
 ---
 
-## 鴻綸科技教育｜網站速度最佳化攻略｜Core Web Vitals 與 SEO
+## 網站速度最佳化攻略｜Core Web Vitals 與 SEO｜鴻綸科技
 
 https://www.hunglun.com/knowledge/webperf
 
@@ -2262,7 +2262,7 @@ Google Workspace for Education 導入與認證培訓 →
 
 ---
 
-## 鴻綸科技教育｜Google Workspace for Education 導入與認證培訓
+## Google Workspace for Education 導入與認證培訓｜鴻綸科技
 
 https://www.hunglun.com/services/google-workspace
 

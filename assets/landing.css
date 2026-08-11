@@ -261,7 +261,7 @@ body.landing { overflow-x: hidden; }
 /* 照片內縮成圓角卡片，不滿版貼邊，整體較有質感 */
 .tour-zoom-panel {
   position: absolute;
-  inset: 9vh 7vw;
+  inset: 6vh 5vw;
   opacity: 0;
   border-radius: 22px;
   overflow: hidden;
@@ -318,12 +318,21 @@ body.landing { overflow-x: hidden; }
 .tour-zoom-dots .l-dot { background: var(--line); }
 .tour-zoom-dots .l-dot.active { background: var(--accent); }
 
+/* 手機：服務卡改兩欄，14 張卡原本單欄要滑 7 個螢幕，密度太低 */
+@media (max-width: 600px) {
+  .l-services { padding: 48px 4vw 24px; }
+  .l-services-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+  .l-service-card { padding: 14px 12px; border-radius: 14px; }
+  .l-service-card h3 { font-size: 0.95rem; line-height: 1.35; margin-top: 10px !important; }
+  .l-service-card p { font-size: 0.82rem; line-height: 1.55; }
+}
+
 @media (max-width: 860px) {
-  .tour-zoom-panel { inset: 12vh 4vw 8vh; }
+  .tour-zoom-panel { inset: 9vh 3vw 6vh; }
   .tour-zoom-text { left: 20px; right: 20px; bottom: 24px; max-width: none; }
   .tour-zoom-dots { right: 6px; }
   /* 手機端壓縮巡覽總捲動距離（桌面600vh／6段=100vh/段 → 手機約65vh/段），拇指少滑幾次就能看完一段 */
-  #tourZoom.tour-zoom { height: 395vh !important; }
+  #tourZoom.tour-zoom { height: 300vh !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
