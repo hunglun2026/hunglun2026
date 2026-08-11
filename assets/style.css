@@ -10,8 +10,8 @@
       但字形會不一致。改完網站請重跑 sitemap/build-font.py 重新產生子集並升版號。 */
 @font-face {
   font-family: "Noto Sans TC";
-  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=6") format("woff2-variations");
-  font-weight: 100 900;
+  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=7") format("woff2-variations");
+  font-weight: 200 700;
   font-style: normal;
   font-display: swap;
 }
