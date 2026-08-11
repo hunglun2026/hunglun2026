@@ -175,19 +175,6 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "在地嚮導：新營・鹽水・東山",
-  "url": "https://www.hunglun.com/services#local-food",
-  "hasPart": [
-    { "@type": "WebPage", "name": "新營推薦美食 Top 5", "url": "https://www.hunglun.com/local-food-xinying" },
-    { "@type": "WebPage", "name": "鹽水推薦美食 Top 5", "url": "https://www.hunglun.com/local-food-yanshui" },
-    { "@type": "WebPage", "name": "東山推薦美食 Top 5", "url": "https://www.hunglun.com/local-food-dongshan" }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
   "@type": "FAQPage",
   "dateModified": "2026-07-27",
   "mainEntity": [
@@ -205,12 +192,12 @@
     <a class="brand" href="/"><span class="brand-logo" role="img" aria-label="鴻綸科技 Hunglun Technology"></span></a>
     <div class="header-visit-counter" title="累計瀏覽人次">👀 <span id="visitCount">--</span></div>
     <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
-    <nav class="main-nav" aria-label="主選單">
-      <a href="/about">關於我們</a>
-      <a href="/services" class="active">服務項目</a>
+        <nav class="main-nav" aria-label="主選單">
       <a href="/google">Google 解決方案</a>
-      <a href="/software">數位學習軟體導入</a>
-      <a href="/faq">常見問題</a>
+      <a href="/services" class="active">服務項目</a>
+      <a href="/cases">導入實績</a>
+      <a href="/knowledge">知識庫</a>
+      <a href="/about">關於我們</a>
       <a href="/tools" class="mobile-tools-link">資源分享</a>
       <a href="/contact" class="mobile-contact-link">聯絡我們</a>
     </nav>
@@ -230,92 +217,158 @@
     <p>從 Google AI Pro for Education 授權導入到教育方案整合，一次規劃到位。</p>
     <div class="svc-tabs" role="tablist">
       <button type="button" class="svc-tab active" data-tab="services" role="tab" aria-selected="true">解決方案</button>
-      <button type="button" class="svc-tab" data-tab="effects" role="tab" aria-selected="false">網站效果</button>
       <button type="button" class="svc-tab" data-tab="projects" role="tab" aria-selected="false">成功案例</button>
-      <button type="button" class="svc-tab" data-tab="local-food" role="tab" aria-selected="false">在地嚮導</button>
+      <button type="button" class="svc-tab" data-tab="effects" role="tab" aria-selected="false">網站效果</button>
     </div>
   </div>
 </div>
 
 <section class="section svc-tab-panel" id="tab-services">
   <div class="wrap">
-    <h2 class="visually-hidden">系統整合、開發與行銷服務</h2>
-    <p class="section-sub reveal" style="margin-bottom:24px;">Google 教育與企業方案（AI Pro、Workspace、Chromebook、Google AI 校園研習）已獨立整理在 <a href="/google">Google 解決方案</a>頁；這裡是其餘的系統整合、開發與行銷服務。</p>
+    <h2 class="visually-hidden">服務項目分類</h2>
+    <p class="section-sub reveal" style="margin-bottom:8px;">依重要性分成四類，共 14 項服務。Google 教育與企業方案另有<a href="/google">完整的方案比較與導入流程</a>。</p>
+  </div>
+
+  <div class="wrap svc-group">
+    <h2 class="section-title reveal">Google 授權與導入</h2>
+    <p class="section-sub reveal">公司的主力業務。從授權方案評估、帳號開通、網域與載具管理，到教師培訓一次到位。</p>
     <div class="grid">
-      <a class="card svc-card reveal" href="/services/procurement">
+      <a class="card svc-card reveal" href="/services/google-ai-pro">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-certificate.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Google AI Pro for Education 授權導入</h3>
+          <p>Gemini Pro 教育版帳號開通、導入規劃與教師研習，由 Google 官方授權夥伴交付。</p>
+          <span class="card-more">了解更多 →</span>
+        </div>
+      </a>
+      <a class="card svc-card reveal" href="/services/enterprise-ai">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-ai-knowledge.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Google AI 企業級授權導入</h3>
+          <p>Gemini Enterprise 與 Google Workspace 企業版授權導入，協助企業把 AI 用在實際業務流程上。</p>
+          <span class="card-more">了解更多 →</span>
+        </div>
+      </a>
+      <a class="card svc-card reveal" href="/services/google-workspace">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-computer-knowledge.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <span class="card-num">01 / 08</span>
-          <h3>標案設備採購（台灣銀行共同供應契約）</h3>
-          <p>以台銀共同供應契約供應電腦主機、顯示器、平板電腦、專業繪圖卡、數位相機與電腦軟體，站上可直接查詢契約品項、廠牌型號與決標單價。</p>
-          <span class="svc-more">了解更多 →</span>
+          <h3>Google Workspace for Education 導入與認證培訓</h3>
+          <p>網域導入、管理主控台設定，以及 Google 認證教育家 Level 1／2、網域管理、認證訓練講師培訓。</p>
+          <span class="card-more">了解更多 →</span>
+        </div>
+      </a>
+      <a class="card svc-card reveal" href="/services/campus-training">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-education.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Google AI 校園研習</h3>
+          <p>K-12 與大學端的 Google AI 研習課程，教師、行政與學生分場設計，由認證講師到校授課。</p>
+          <span class="card-more">了解更多 →</span>
+        </div>
+      </a>
+      <a class="card svc-card reveal" href="/services/chromebook">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-laptop.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Chromebook 與智慧教室建置</h3>
+          <p>ASUS Chromebook 採購、載具管理授權（CEU）、智慧教室與校園網路規劃建置。</p>
+          <span class="card-more">了解更多 →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap svc-group">
+    <h2 class="section-title reveal">數位教學內容</h2>
+    <p class="section-sub reveal">課堂上真的會用到的教學軟體，含校園授權與教師培訓。</p>
+    <div class="grid">
+      <a class="card svc-card reveal" href="/software">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-education.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>數位學習軟體導入</h3>
+          <p>Thinglink、Edpuzzle、Kami、Padlet、Wordwall、Kahoot! 等教學軟體的校園授權與教師培訓。</p>
+          <span class="card-more">了解更多 →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap svc-group">
+    <h2 class="section-title reveal">系統開發與自動化</h2>
+    <p class="section-sub reveal">把學校與企業重複、耗時的工作，做成能長期使用的工具。</p>
+    <div class="grid">
+      <a class="card svc-card reveal" href="/services/campus-admin">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-admin.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>校園行政自動化</h3>
+          <p>回條辨識統計、成果報告照片排版、名單比對等校園日常行政的自動化工具。</p>
+          <span class="card-more">了解更多 →</span>
         </div>
       </a>
       <a class="card svc-card reveal" href="/services/ai-development">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-ai.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <span class="card-num">02 / 08</span>
           <h3>AI 應用與客製工具開發</h3>
           <p>依實際工作流程開發專屬 AI 工具：文件辨識、資料自動化、查詢系統、報表產出。</p>
-          <span class="svc-more">了解更多 →</span>
+          <span class="card-more">了解更多 →</span>
         </div>
       </a>
       <a class="card svc-card reveal" href="/services/open-data">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-data.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <span class="card-num">03 / 08</span>
           <h3>資料查詢系統開發</h3>
           <p>把政府開放資料變成好查、好用、自動更新的網頁查詢系統。</p>
-          <span class="svc-more">了解更多 →</span>
-        </div>
-      </a>
-      <a class="card svc-card reveal" href="/services/campus-admin">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-admin.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <span class="card-num">04 / 08</span>
-          <h3>校園行政自動化</h3>
-          <p>回條辨識統計、成果報告照片排版、名單比對等校園日常行政的自動化工具。</p>
-          <span class="svc-more">了解更多 →</span>
+          <span class="card-more">了解更多 →</span>
         </div>
       </a>
       <a class="card svc-card reveal" href="/services/member-system">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-member.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <span class="card-num">05 / 08</span>
           <h3>客製會員與管理系統</h3>
           <p>會員集點、QR Code、後台管理系統，雲端部署免維護伺服器。</p>
-          <span class="svc-more">了解更多 →</span>
+          <span class="card-more">了解更多 →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap svc-group">
+    <h2 class="section-title reveal">採購與行銷</h2>
+    <p class="section-sub reveal">設備怎麼買、網站與品牌怎麼被看見。</p>
+    <div class="grid">
+      <a class="card svc-card reveal" href="/services/procurement">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-computer-knowledge.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>標案設備採購（台灣銀行共同供應契約）</h3>
+          <p>以台銀共同供應契約供應電腦主機、顯示器、平板電腦、專業繪圖卡、數位相機與電腦軟體，站上可直接查詢契約品項、廠牌型號與決標單價。</p>
+          <span class="card-more">了解更多 →</span>
         </div>
       </a>
       <a class="card svc-card reveal" href="/services/brand-website">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-website.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <span class="card-num">06 / 08</span>
           <h3>品牌形象官網建置</h3>
           <p>從品牌識別、視覺設計到網站架設一手包辦，手機電腦都好用的高效能官網。</p>
-          <span class="svc-more">了解更多 →</span>
+          <span class="card-more">了解更多 →</span>
         </div>
       </a>
       <a class="card svc-card reveal" href="/services/seo-aeo-geo">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-seo.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <span class="card-num">07 / 08</span>
           <h3>SEO／AEO／GEO 搜尋引擎最佳化</h3>
           <p>不只做傳統 SEO，也最佳化 AI 助理引用與生成式搜尋推薦。</p>
-          <span class="svc-more">了解更多 →</span>
+          <span class="card-more">了解更多 →</span>
         </div>
       </a>
       <a class="card svc-card reveal" href="/services/line-oa">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-line.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
-          <span class="card-num">08 / 08</span>
           <h3>官方 LINE 帳號設計</h3>
           <p>圖文選單設計、歡迎訊息與自動回覆規劃，讓客戶打開對話就找得到功能。</p>
-          <span class="svc-more">了解更多 →</span>
+          <span class="card-more">了解更多 →</span>
         </div>
       </a>
     </div>
   </div>
+
 </section>
 
 <section class="section svc-tab-panel" id="tab-projects" hidden>
@@ -403,54 +456,6 @@
   </div>
 </section>
 
-<section class="section svc-tab-panel" id="tab-local-food" hidden>
-  <div class="wrap">
-    <h2 class="section-title reveal">在地嚮導：新營・鹽水・東山</h2>
-    <p class="section-sub reveal">總部在新營，這是我們整理的在地美食地圖。選一個區域看 Top 5 必吃推薦，每家都附 Google Maps 連結。</p>
-
-    <div class="grid">
-      <a class="card reveal" href="/local-food-xinying">
-        <div class="card-visual food-visual" style="--bg-img:url('/assets/images/food-xinying-01.webp')"><img width="640" height="349" class="photo food-photo" src="/assets/images/food-xinying-01.webp" alt="新營必吃美食" loading="lazy"></div>
-        <div class="card-body"><h3>新營推薦美食 Top 5</h3><p>鴻綸科技總部所在地，宇航牛肉湯、郭家紅燒土魠魚羹、陳記鱔魚麵等在地老字號小吃。</p></div>
-      </a>
-      <a class="card reveal" href="/local-food-yanshui">
-        <div class="card-visual food-visual" style="--bg-img:url('/assets/images/food-yanshui-01.webp')"><img width="640" height="349" class="photo food-photo" src="/assets/images/food-yanshui-01.webp" alt="鹽水必吃美食" loading="lazy"></div>
-        <div class="card-body"><h3>鹽水推薦美食 Top 5</h3><p>加鴨蛋提香的意麵、70年老字號銀鋒冰果室，順遊月津港前後吃透透。</p></div>
-      </a>
-      <a class="card reveal" href="/local-food-dongshan">
-        <div class="card-visual food-visual" style="--bg-img:url('/assets/images/food-dongshan-01.webp')"><img width="640" height="349" class="photo food-photo" src="/assets/images/food-dongshan-01.webp" alt="東山必吃美食" loading="lazy"></div>
-        <div class="card-body"><h3>東山推薦美食 Top 5</h3><p>中興路商圈東山鴨頭創始店籃記、東山肉圓、排骨酥等在地老店。</p></div>
-      </a>
-    </div>
-  </div>
-  <div class="wrap" style="max-width:780px;margin-top:56px;">
-    <h2 class="section-title reveal">常見問題</h2>
-    <details class="faq-item reveal" open>
-      <summary>新營、鹽水、東山彼此距離多遠？可以安排一日遊嗎？</summary>
-      <div class="faq-a">新營、鹽水、東山都在台南市東北角，彼此車程約15~25分鐘，是常見的一日遊組合：新營是交通樞紐（有台鐵新營站），鹽水以月津港燈節與老街聞名，東山則以咖啡、東山鴨頭與中興路老街小吃著稱，三地美食加起來安排一日遊剛剛好。</div>
-    </details>
-    <details class="faq-item reveal">
-      <summary>鴻綸科技為什麼會整理在地嚮導這個單元？</summary>
-      <div class="faq-a">鴻綸科技總部位於台南新營，長期深耕在地教育與社區服務，這個單元是回饋在地鄉親與外地朋友的在地生活資訊分享，目前先整理美食地圖，資料整理自各家在地美食部落格與媒體報導，未來會陸續加入景點、交通等其他在地生活內容，非商業合作或業配內容。</div>
-    </details>
-  </div>
-  <div class="wrap" style="max-width:780px;margin-top:56px;">
-    <h2 class="section-title reveal">參考來源</h2>
-    <p class="section-sub reveal">美食地圖資訊整理自以下報導與在地部落格：</p>
-    <ul style="color:var(--muted);line-height:2;">
-      <li><a href="https://supertaste.tvbs.com.tw/pack/349428" target="_blank" rel="noopener">台南新營美食推薦９家｜食尚玩家</a></li>
-      <li><a href="https://mytainan.com/tainan-food-drink/xinying-foods-sstainan/" target="_blank" rel="noopener">新營美食9間一次推薦｜MyTainan</a></li>
-      <li><a href="https://www.gomaji.com/blog/%E6%96%B0%E7%87%9F%E7%81%AB%E8%BB%8A%E7%AB%99%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%96%A6%EF%BD%9C%E5%9C%A8%E5%9C%B0%E4%BA%BA%E7%A7%81%E8%97%8F%EF%BC%81%E9%81%93%E5%9C%B0%E5%B0%8F%E5%90%83%E3%80%81%E7%BE%8E/" target="_blank" rel="noopener">新營火車站美食推薦｜GOMAJI</a></li>
-      <li><a href="https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E6%96%B0%E7%87%9F%E7%BE%8E%E9%A3%9F%E5%B0%8F%E5%90%83" target="_blank" rel="noopener">台南新營美食小吃 TOP15｜愛食記</a></li>
-      <li><a href="https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E9%B9%BD%E6%B0%B4%E7%BE%8E%E9%A3%9F%E5%B0%8F%E5%90%83" target="_blank" rel="noopener">台南鹽水美食小吃 TOP15｜愛食記</a></li>
-      <li><a href="https://journey.tw/yanshuei-food/" target="_blank" rel="noopener">5家鹽水美食推薦｜美食漫旅</a></li>
-      <li><a href="https://ajtravel.tw/yanshui/" target="_blank" rel="noopener">2026台南鹽水美食｜AJ的旅行地圖</a></li>
-      <li><a href="https://udn.com/news/story/7208/7746677" target="_blank" rel="noopener">分享11間東山美食小吃｜聯合新聞網</a></li>
-      <li><a href="https://www.gomaji.com/blog/%E5%8F%B0%E5%8D%97%E6%9D%B1%E5%B1%B1%E7%BE%8E%E9%A3%9F/" target="_blank" rel="noopener">台南東山美食地圖｜GOMAJI</a></li>
-      <li><a href="https://kenantravel.tw/dongshan-food-0707/" target="_blank" rel="noopener">東山美食懶人包｜跟著凱南瘋旅遊</a></li>
-    </ul>
-  </div>
-</section>
 
 <section class="section svc-tab-panel" id="tab-effects" hidden>
   <div class="wrap">
@@ -571,10 +576,12 @@
       <div>
         <h2>網站導覽</h2>
         <ul class="footer-nav">
-          <li><a href="/about">關於我們</a></li>
-          <li><a href="/services">服務項目</a></li>
           <li><a href="/google">Google 解決方案</a></li>
+          <li><a href="/services">服務項目</a></li>
+          <li><a href="/cases">導入實績</a></li>
+          <li><a href="/knowledge">知識庫</a></li>
           <li><a href="/software">數位學習軟體導入</a></li>
+          <li><a href="/about">關於我們</a></li>
           <li><a href="/faq">常見問題</a></li>
         </ul>
       </div>
@@ -605,7 +612,7 @@
 <script>
 (function(){
   var tabs = document.querySelectorAll('.svc-tab');
-  var panels = { services: document.getElementById('tab-services'), projects: document.getElementById('tab-projects'), 'local-food': document.getElementById('tab-local-food'), effects: document.getElementById('tab-effects') };
+  var panels = { services: document.getElementById('tab-services'), projects: document.getElementById('tab-projects'), effects: document.getElementById('tab-effects') };
   function activate(name){
     tabs.forEach(function(t){
       var on = t.dataset.tab === name;
@@ -623,7 +630,6 @@
   });
   if (location.hash === '#effects') activate('effects');
   if (location.hash === '#projects' || location.hash === '#tab-projects') activate('projects');
-  if (location.hash === '#local-food' || location.hash === '#tab-local-food') activate('local-food');
 })();
 </script>
 </body>
