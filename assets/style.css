@@ -391,7 +391,9 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
   margin-bottom: 6px;
 }
 .card-visual {
-  height: 130px;
+  /* 2026-08-11：圖示原圖 160px 卻只顯示 76px，在 130px 高的視覺區裡看起來很空。
+     容器與圖示一起放大。 */
+  height: 152px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -399,8 +401,8 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
   background: var(--bg-soft);
   transition: background 0.3s ease;
 }
-.card-visual svg { width: 34px; height: 34px; color: var(--accent); stroke-width: 1.4; }
-.card-visual img { width: 76px; height: 76px; object-fit: contain; }
+.card-visual svg { width: 44px; height: 44px; color: var(--accent); stroke-width: 1.4; }
+.card-visual img { width: 108px; height: 108px; object-fit: contain; }
 /* 情境照片（非圖示）淡淡灰階融入米白背景，hover/靠近卡片時恢復原色 */
 .card-visual img.photo,
 .svc-photo,
@@ -1165,10 +1167,11 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 3px;
-  padding: 10px 16px;
+  /* 白底卡片只留一點點邊，logo 本身盡量大 */
+  padding: 6px 10px;
   /* 上方留白要大於與自身標題的距離，否則 logo 會看起來像屬於前一段 */
   margin: 52px 0 12px;
-  min-height: 96px;
+  min-height: 108px;
   min-width: 120px;
 }
 .prose .sw-logo:first-child { margin-top: 0; }
@@ -1177,14 +1180,14 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   display: block;
   /* 2026-08-11：原本 42px／168px 太小，方形 logo 只用到原圖 120px 的三分之一，
      橫長型（Wordwall、Kahoot!）則是被 max-width 卡住。兩邊一起放大。 */
-  max-height: 72px;
-  max-width: 260px;
+  max-height: 96px;
+  max-width: 330px;
   width: auto;
   height: auto;
 }
 @media (max-width: 640px) {
-  .sw-logo { padding: 10px 14px; min-height: 76px; }
-  .sw-logo img { max-height: 56px; max-width: 200px; }
+  .sw-logo { padding: 6px 8px; min-height: 84px; }
+  .sw-logo img { max-height: 72px; max-width: 232px; }
 }
 
 /* ---------- 並排小圖（原圖解析度不高時，縮小並排比拉滿一欄清楚） ---------- */
