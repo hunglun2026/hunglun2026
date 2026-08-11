@@ -1141,6 +1141,43 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   .event-item:last-child { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
 }
 
+
+/* ---------- 知識庫索引：分類篩選 + 緊湊清單 ----------
+   19 篇用卡片排要滑 5 個螢幕，改成清單後一屏半看完；分類用 chips 篩選，
+   預設全部展開（索引頁的價值就是能一次掃視所有標題）。 */
+.kn-filter-wrap { padding-bottom: 0 !important; }
+.kn-filter { display: flex; flex-wrap: wrap; gap: 8px; }
+.kn-chip {
+  font: inherit; font-size: 0.86rem; color: var(--muted);
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 15px; cursor: pointer; transition: color .2s, border-color .2s, background .2s;
+}
+.kn-chip span { color: var(--muted-faint); font-size: 0.78rem; margin-left: 3px; }
+.kn-chip:hover { color: var(--text); border-color: var(--accent); }
+.kn-chip.active { color: var(--accent); border-color: var(--accent); background: var(--card-hover); }
+.kn-chip.active span { color: var(--accent); }
+.kn-group[hidden] { display: none; }
+.kn-list { list-style: none; margin-top: 4px; border-top: 1px solid var(--line); }
+.kn-list li { margin: 0; border-bottom: 1px solid var(--line); }
+.kn-item {
+  display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 16px;
+  padding: 14px 4px; min-height: 64px; color: inherit; text-decoration: none;
+  transition: background .2s ease, padding-left .2s ease;
+}
+.kn-item:hover { background: var(--bg-soft); padding-left: 10px; text-decoration: none !important; }
+.kn-icon { width: 44px; height: 44px; object-fit: contain; }
+.kn-text { display: block; min-width: 0; }
+.kn-t { display: block; color: var(--text); font-size: 1rem; line-height: 1.45; }
+.kn-item:hover .kn-t { color: var(--accent); }
+.kn-d { display: block; color: var(--muted); font-size: 0.85rem; line-height: 1.6; margin-top: 2px; }
+.kn-date { font-family: var(--mono); font-size: 0.74rem; color: var(--muted-faint); white-space: nowrap; }
+@media (max-width: 560px) {
+  .kn-item { grid-template-columns: 36px 1fr; gap: 12px; padding: 12px 2px; }
+  .kn-icon { width: 36px; height: 36px; }
+  .kn-date { grid-column: 2; margin-top: 2px; }
+  .kn-chip { font-size: 0.8rem; padding: 6px 12px; }
+}
+
 /* ---------- 規格／方案比較表 ---------- */
 .spec-table-wrap { overflow-x: auto; margin: 22px 0; }
 .spec-table {
