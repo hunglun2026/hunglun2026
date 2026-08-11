@@ -44,8 +44,8 @@
   /* 版面留白：全站垂直節奏集中在這裡，要整體放鬆/收緊改這幾個值即可 */
   --sp-hero-top: 96px;
   --sp-hero-bottom: 104px;
-  --sp-section: 56px;
-  --sp-head-top: 52px;
+  --sp-section: 48px;
+  --sp-head-top: 40px;
   --sp-head-bottom: 32px;
 }
 
@@ -332,6 +332,14 @@ main:focus { outline: none; }
 
 /* ---------- Sections ---------- */
 .section { padding: var(--sp-section) 0; }
+/* 2026-08-11：page-head 與後面第一個 section、以及連續兩個 section 之間，上下內距
+   會疊加（32+56、56+56=112px），中文排版看起來過空。只收斂「疊加處」的上內距，
+   單一區塊本身的內距不動。.section.alt 沒有背景色，收窄不會讓色塊變形。 */
+.page-head + .section { padding-top: 14px; }
+.section + .section { padding-top: 28px; }
+/* 前一個區塊的下內距也要收，否則疊加還是 48+28。:has 現代瀏覽器都支援，
+   不支援的瀏覽器只會維持原本較寬的留白，不會壞版。 */
+.section:has(+ .section) { padding-bottom: 28px; }
 .section.alt { background: transparent; border: none; }
 .section-title { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 400; text-align: left; }
 .section-sub { text-align: left; color: var(--muted); font-weight: 300; margin: 12px 0 36px; max-width: 620px; }
@@ -882,6 +890,9 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
   .footer-nav a { font-size: 0.86rem; }
   .hero { padding: 56px 0 44px; }
   .page-head { padding: 36px 0 24px; }
+  .page-head + .section { padding-top: 10px; }
+  .section + .section { padding-top: 20px; }
+  .section:has(+ .section) { padding-bottom: 20px; }
 }
 
 /* ---------- Logo 深/淺色切換（放在最後確保覆蓋 .brand img／.footer-logo img） ---------- */
