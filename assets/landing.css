@@ -340,3 +340,50 @@ body.landing { overflow-x: hidden; }
   .tour-zoom-sticky { position: static; height: auto; }
   .tour-zoom-panel { position: relative; opacity: 1 !important; transform: none !important; height: 70vh; pointer-events: auto !important; }
 }
+
+/* ---------- 服務分類（先看四類，點開才展開該類的服務卡） ---------- */
+.l-svc-hint { color: var(--muted); font-size: 0.95rem; margin-top: 12px; }
+.l-svc-cats { margin-top: 28px; display: grid; gap: 14px; text-align: left; }
+.l-svc-cat {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.l-svc-cat[open] { border-color: var(--accent); box-shadow: 0 20px 40px -28px var(--glow); }
+.l-svc-cat > summary {
+  cursor: pointer; padding: 20px 24px; list-style: none;
+  display: grid; grid-template-columns: 1fr auto auto; gap: 4px 16px; align-items: center;
+}
+/* Safari 仍會畫預設的三角形 marker，要另外關掉 */
+.l-svc-cat > summary::-webkit-details-marker { display: none; }
+.l-svc-cat > summary:hover .l-cat-t,
+.l-svc-cat[open] > summary .l-cat-t { color: var(--accent); }
+/* 鍵盤 Tab 到分類時要看得出焦點在哪（summary 預設外框被 list-style 清掉後會很不明顯） */
+.l-svc-cat > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 18px; }
+.l-cat-t { grid-column: 1; grid-row: 1; font-size: 1.15rem; font-weight: 500; transition: color 0.3s ease; }
+.l-cat-d { grid-column: 1; grid-row: 2; color: var(--muted); font-size: 0.88rem; }
+.l-cat-n {
+  grid-column: 2; grid-row: 1 / span 2; justify-self: end;
+  font-family: var(--mono); font-size: 0.75rem; color: var(--accent);
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; white-space: nowrap;
+}
+.l-svc-cat > summary::after {
+  content: "▾"; grid-column: 3; grid-row: 1 / span 2;
+  display: inline-block; color: var(--muted); font-size: 0.9rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.l-svc-cat[open] > summary::after { transform: rotate(180deg); color: var(--accent); }
+.l-svc-cat .l-services-grid { margin: 4px 24px 24px; }
+
+@media (max-width: 860px) {
+  .l-svc-cats { gap: 10px; margin-top: 22px; }
+  .l-svc-cat > summary { padding: 15px 16px; gap: 3px 10px; }
+  .l-cat-t { font-size: 1rem; }
+  .l-cat-d { font-size: 0.8rem; }
+  .l-cat-n { font-size: 0.7rem; padding: 3px 8px; }
+  .l-svc-cat .l-services-grid { margin: 2px 14px 16px; }
+}
+
+/* 展開動畫關掉時，內容一律直接顯示，不要卡在 opacity:0 */
+@media (prefers-reduced-motion: reduce) {
+  .l-svc-cat > summary::after { transition: none; }
+}

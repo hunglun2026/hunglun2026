@@ -191,3 +191,19 @@
   }, { threshold: 0.2 });
   revealEls.forEach((el) => io.observe(el));
 })();
+
+/* 服務分類：一次只開一類，而且展開時把裡面的卡片直接標成已顯示。
+   兩件事都是必要的——
+   ① 四類同時攤開就跟改版前一樣長，等於白做，所以開新的就關掉舊的；
+   ② IntersectionObserver 不會回報 display:none 的元素，等展開後才觸發會慢半拍，
+      使用者點開會先看到一片空白再淡入。 */
+(function () {
+  var cats = [].slice.call(document.querySelectorAll('.l-svc-cat'));
+  cats.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open) return;
+      cats.forEach(function (o) { if (o !== d) o.open = false; });
+      d.querySelectorAll('.l-reveal').forEach(function (el) { el.classList.add('in-view'); });
+    });
+  });
+})();
