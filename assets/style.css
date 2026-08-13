@@ -28,6 +28,10 @@
   /* 2026-08-03：原為 #9a9a96，對比僅 2.77:1 不符 WCAG AA（需 ≥4.5:1）。
      改為 #70706c 後約 4.9:1，與 --muted 仍有層次差。 */
   --muted-faint: #70706c;
+  /* 2026-08-13 長文內文專用色。原本知識庫內文直接用 --muted(#5c5c5c)，
+     配上 300 字重「又細又淡」，是實測六個中文長文站裡最弱的組合。
+     內文要接近 --text，--muted 留給卡片說明、頁尾等次要文字。 */
+  --text-body: #252525;
   --accent: #1e3a5f;
   --accent-deep: #15293f;
   --accent-gold: #1e3a5f;
@@ -61,6 +65,8 @@
   /* 2026-08-03：原為 #6b7280，深色背景上對比僅 3.81:1，是品牌套件明列不可用的寫死灰色。
      改為 #8a8a86 後約 5.3:1。 */
   --muted-faint: #8a8a86;
+  /* 深色底不用純白，#e4e2de 讀起來不刺眼但仍明顯高於 --muted */
+  --text-body: #e4e2de;
   --accent: #7fa8d9;
   --accent-deep: #5f87b8;
   --accent-gold: #7fa8d9;
@@ -75,13 +81,14 @@
 
 html { scroll-behavior: smooth; }
 
-/* 內文是 300，瀏覽器對 <strong> 的預設 `bolder` 只會相對跳一階變成 400，
-   強調幾乎看不出來。明確指定 500，讓粗體真的讀得出是重點。 */
-b, strong { font-weight: 500; }
+/* 內文 2026-08-13 由 300 改為 400（實測六個中文長文站有五個是 400），
+   strong 原本的 500 只差一階、強調就看不出來了，跟著提到 600。
+   ⚠️ 字型 wght 軸裁切範圍是 200–700，600 在範圍內；不要再往上超過 700。 */
+b, strong { font-weight: 600; }
 
 body {
   font-family: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   background: var(--bg);
   color: var(--text);
   line-height: 1.75;
@@ -142,14 +149,15 @@ main:focus { outline: none; }
   text-underline-offset: 2px;
 }
 
-/* 手機端細字重（300）可讀性補償：不改字重，改用字距/行高/邊緣渲染拯救小螢幕強光下的對比度 */
+/* 手機端可讀性：字距與行高稍微放寬。
+   ⚠️ 這裡原本還有 `-webkit-text-stroke: 0.15px currentColor`，那是字重 300 時代
+   為了救小螢幕對比的治標手段。2026-08-13 內文改成 400 之後不需要了，
+   繼續留著會讓字看起來糊糊的，已移除。 */
 @media (max-width: 768px) {
   body {
     letter-spacing: 0.02em;
     line-height: 1.8;
-    -webkit-text-stroke: 0.15px currentColor;
   }
-  .btn, .card-body h3, h1, h2 { font-weight: 400; }
 }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
@@ -512,7 +520,9 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
   font-weight: 300;
 }
 .faq-item[open] summary::after { content: "−"; }
-.faq-item .faq-a { padding: 0 4px 22px; color: var(--muted); }
+/* FAQ 答案是實際要讀的內容（全站 42 頁有 FAQ），不是次要標籤，
+   跟著內文用 --text-body，不再用 --muted。 */
+.faq-item .faq-a { padding: 0 4px 22px; color: var(--text-body); }
 
 /* ---------- Content pages ---------- */
 .page-head { padding: var(--sp-head-top) 0 var(--sp-head-bottom); text-align: center; background: var(--bg); }
@@ -538,10 +548,15 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 /* 2026-08-03 可讀性：中文每行以 38–43 字最好讀，原本 740px 實測約 46 字偏寬。
    只收窄「段落與清單」，表格／圖片維持容器全寬（表格有 3–4 欄，跟著變窄會擠）。 */
 .prose > p, .prose > ul, .prose > ol { max-width: 43em; }
-.prose h2 { margin: 38px 0 14px; font-size: 1.45rem; font-weight: 400; color: var(--text); }
+/* 2026-08-13 長文閱讀舒適度（先量六個中文長文站再訂，不是憑感覺）：
+   段距原本只有 8px，比行高（28px）還小，段落等於黏在一起；對照組是 16–20px。
+   字級 16px 在對照組（16–18px）的下限，長文提到 17px。 */
+.prose > p, .prose > ul, .prose > ol { font-size: 1.0625rem; margin-bottom: 22px; }
+.prose > p:last-child, .prose > ul:last-child, .prose > ol:last-child { margin-bottom: 0; }
+.prose h2 { margin: 46px 0 16px; font-size: 1.45rem; font-weight: 500; color: var(--text); }
 .prose h3 { margin: 28px 0 12px; font-size: 1.08rem; font-weight: 500; color: var(--text); }
-.prose p, .prose li { color: var(--muted); }
-.prose li { margin-bottom: 8px; }
+.prose p, .prose li { color: var(--text-body); }
+.prose li { margin-bottom: 10px; }
 .prose ul { padding-left: 24px; }
 .breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; }
 .breadcrumb a { color: var(--muted); }
@@ -1196,7 +1211,14 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   border: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
-  color: var(--muted);
+  color: var(--text-body);
+}
+/* 2026-08-13：內文字重 300→400 後中文變寬，短詞的第一欄（「整棟飯店」「房內設備」）
+   開始被擠成兩行。桌機讓第一欄不換行，欄寬自然撐開就好。
+   ⚠️ 手機不能套 nowrap——長詞會把表格撐寬造成橫向溢出，
+   那裡本來就有 .spec-table-wrap 的 overflow-x 可以橫捲。 */
+@media (min-width: 769px) {
+  .spec-table td:first-child { white-space: nowrap; }
 }
 .spec-table thead th {
   background: var(--bg-soft);
