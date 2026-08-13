@@ -48,7 +48,7 @@ LINE 官方帳號：@007bbtpd（電腦版請在 LINE 搜尋此 ID 加入）
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://www.hunglun.com/tools
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://www.hunglun.com/software
 - 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
-- 常見問題與知識庫（分類導覽）：https://www.hunglun.com/faq
+- 常見問題（公司背景與 Google 官方授權身分、學校導入從哪一步開始、可否委託客製開發、服務範圍、系統是否留存學生個資、SEO／GEO／AEO 的差別。**教學與選型類文章不在這裡，在 /knowledge**）：https://www.hunglun.com/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/tools#local-food
 - 教育科技觀察（Google 教育方案、AI 導入與校園數位政策的變動判讀。**不轉述新聞，寫的是對台灣學校的實際意義與下一步**）：https://www.hunglun.com/insights
   - [Classroom 的 Gemini 已對所有年齡學生開啟](https://www.hunglun.com/insights/gemini-classroom-all-ages)：Google 自 2026-08-10 起把 Classroom 的 Gemini 開放給所有年齡的 K-12 與高教學生（行動版 08-17 跟進），**管理主控台對所有年齡預設為開啟**；但有前提——只有原本就已開啟 Gemini in Classroom、Gemini 與 Gemini Notebook 三項的網域才會生效，先前針對未滿 18 歲關閉過的維持關閉。站方立場：**先檢查現況，不要直接關閉**（關閉不會讓學生停止使用 AI、可能誤動其他機構單位、且不同年段本來就該有不同答案）；這週該做的三件事：確認三個開關、整理 OU 年段結構、記下行動版 08-17。
