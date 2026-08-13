@@ -863,8 +863,12 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 }
 
 /* ---------- Header／導覽列在裝不下前先收成漢堡選單，避免 main-nav 換行造成排版跑掉 ----------
-   斷點需 ≥ 單行容納 nav 所需的最小寬度（實測 1502px），加入代理軟體後由 1400px 上調至 1520px */
-@media (max-width: 1520px) {
+   斷點需 ≥ 單行容納 nav 所需的最小寬度。
+   實測歷程：1400px → 1520px（加入代理軟體，需 1502px）
+           → 2026-08-13 加入「教育科技觀察」第 7 項後，二分法實測需 1572px，上調至 1580px
+   ⚠️ 量法：用二分法逐一寬度測 .main-nav 的項目是否落在同一行（tops.size>1 即換行）。
+      加總子元素寬度會低估（漏掉 nav-tools 等元素的外距），不要用那個估。 */
+@media (max-width: 1580px) {
   .nav-toggle { display: block; }
   .main-nav {
     display: none;
