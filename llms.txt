@@ -10,10 +10,11 @@
 - 地址：台南市新營區綠川路10號
 - 電話：06-6371192　傳真：06-6371112
 - 信箱：gfeh@hunglun.com
-LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
+LINE 官方帳號：@007bbtpd（電腦版請在 LINE 搜尋此 ID 加入）
 - 正式官網：https://www.hunglun.com/
 
 ## 服務項目分頁（每項服務的完整說明）
+- Google for Education 合作夥伴資格（自 2017 年起為 Google 官方授權在台教育合作發展夥伴，2019 年取得專業化夥伴、2026 年取得高等教育專業發展夥伴，名列 Google 官方全球夥伴名冊；設有官方認證國際講師培訓中心，五位 Google 認證講師、兩位 Google 認證網域管理員）：https://www.hunglun.com/services/google-partner
 - Google AI Pro for Education 授權導入：https://www.hunglun.com/services/google-ai-pro
 - Google AI 企業級授權導入（Gemini Enterprise、Google Workspace 企業版）：https://www.hunglun.com/services/enterprise-ai
 - Google Workspace for Education 導入與認證培訓（含 Education Fundamentals／Standard／Teaching and Learning Upgrade／Education Plus 四版本比較表：Fundamentals 為符合資格教育機構免費、整個網域共享 100 TB 儲存空間；T&L Upgrade 每授權另附 100 GB；Education Plus 每授權另附 20 GB 且 Google Meet 會議上限 500 人）：https://www.hunglun.com/services/google-workspace
@@ -24,6 +25,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 公開資料查詢系統開發：https://www.hunglun.com/services/open-data
 - 校園行政自動化：https://www.hunglun.com/services/campus-admin
 - 客製會員與管理系統：https://www.hunglun.com/services/member-system
+- 品牌形象官網建置（品牌識別、網站視覺設計到架設上線一手包辦；靜態網站＋全球 CDN，載入快、維運成本低，每頁具備結構化資料與 SEO 基礎）：https://www.hunglun.com/services/brand-website
 - SEO／AEO／GEO 搜尋引擎優化：https://www.hunglun.com/services/seo-aeo-geo
 - 官方 LINE 帳號設計：https://www.hunglun.com/services/line-oa
 
