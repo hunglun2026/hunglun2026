@@ -24,6 +24,14 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 因為 _redirects 不支援 query string 比對。
 /index.php / 301
 /contact.php /contact 301
+# 2026-08-13：GSC「找不到網頁 (404)」只有兩筆，都是舊站漏網的。
+# ⚠️ 同一個坑第二次踩了（第一次是 effects：帶副檔名的有轉、無副檔名的漏掉）——
+# 之後補舊網址轉址，記得「有 .php 的和沒有 .php 的都要寫」。
+/submain / 301
+/submainDetail / 301
+# 更早期的入口網站路徑（ezportal）
+/ezportal/homeweb/index.php / 301
+/ezportal/* / 301
 # brand（原 nav「首頁」）已併入關於我們
 /brand /about 301
 # 精選專案已併入服務項目分頁；數位學習軟體導入改由 /software 承接
