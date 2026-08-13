@@ -44,7 +44,7 @@ LINE 官方帳號：@007bbtpd（電腦版請在 LINE 搜尋此 ID 加入）
 - Google 解決方案（Google AI Pro for Education 授權導入、Google Workspace for Education 導入與認證培訓、Google AI 校園研習、Chromebook 與智慧教室建置、Google AI 企業級授權導入，含導入流程說明）：https://www.hunglun.com/google
 - 智慧校園：Google AI Pro for Education 導入說明（到校簡報的網頁版：教育版資安與合規承諾；基礎版與進階版額度比較——Token 32,000 對 1,000,000、Deep Research 每月 5 份對每天 20 份、Nano Banana 2 生圖、Gemini Omni 影片每天 10 部；Gemini Notebook 筆記本／來源／查詢與每日生成額度比較；Gem、Google Vids、Help me write／organize；授權級距與贈送服務；Teaching and Learning 對 Education Plus 的會議人數與儲存空間差異。單價不公開，請洽詢報價）：https://www.hunglun.com/google/ai-pro-campus
 - 服務項目（含網站效果 Live Demo 分頁）：https://www.hunglun.com/services
-- 成功案例（已上線的 AI 應用工具與客戶委託案例，收在服務項目頁的分頁）：https://www.hunglun.com/services#projects
+- 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例，2026-08-13 由服務項目頁的分頁併入導入實績頁）：https://www.hunglun.com/cases#projects
 - 資源分享（依用途分類：校園小程式／資料查詢網站）：https://www.hunglun.com/tools
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://www.hunglun.com/software
 - 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
