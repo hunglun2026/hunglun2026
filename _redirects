@@ -45,3 +45,7 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 會以 200 回一個只寫「已搬移」的空殼頁（重複內容），一併轉走
 /effects /services 301
 /effect-home / 301
+
+# 導入實績（/cases）已併入服務項目頁的「成功案例」分頁（2026-08-16）
+# 內容原封不動搬過去，錨點 #projects、#credentials 都還在，由該頁 JS 切分頁後捲過去
+/cases /services#cases 301
