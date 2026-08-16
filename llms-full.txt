@@ -138,7 +138,7 @@ EVENTS
 
 ---
 
-## 鴻綸科技教育｜Google 解決方案｜AI Pro・Workspace・Chromebook
+## Google 解決方案｜AI Pro・Workspace・Chromebook｜鴻綸科技
 
 https://www.hunglun.com/google
 
@@ -304,7 +304,7 @@ Google 解決方案總覽 →
 
 ---
 
-## 鴻綸科技教育｜服務項目｜Google AI Pro for Education 授權
+## 服務項目｜Google AI Pro for Education 授權｜鴻綸科技
 
 https://www.hunglun.com/services
 
@@ -442,6 +442,7 @@ Google 官方認證國際講師培訓中心：五位認證講師、兩位認證�
 Google Workspace 教育版版本比較與授權變更 →
 Google AI 校園研習服務 →
 Google 認證教育家與認證講師指南 →
+數位學習軟體怎麼選：Edpuzzle、Thinglink、Kami 等六套工具的定位 →
 常見問題
 你們服務哪些地區與學制？
 服務範圍以台中以南各縣市為主，客戶涵蓋國小、國中、高中職與大專院校，另有政府機關與企業客戶。公司自 2013 年創立、2017 年起為 Google 官方授權在台教育合作發展夥伴，中南部各縣市都有長期合作的學校。
@@ -486,7 +487,7 @@ Google 認證教育家與認證講師指南 →
 
 ---
 
-## 鴻綸科技教育｜資源分享｜免費AI工具分類導覽
+## 資源分享｜免費AI工具分類導覽｜鴻綸科技
 
 https://www.hunglun.com/tools
 
@@ -647,6 +648,7 @@ Mobile Guardian 是行動裝置管理（MDM）方案，可做上網過濾、課�
 數位學習軟體怎麼選：六套工具的定位與適用情境 →
 Chromebook 與智慧情境教室建置 →
 Google Workspace for Education 導入與認證培訓 →
+Google Classroom 完全指南（Edpuzzle、Kami 等工具的作業派送都走這裡） →
 想了解方案內容或報價？
 跟我們說教的科目、年段跟班級數，我們幫您挑真的用得到的，不推整包。
 聯絡我們
@@ -654,7 +656,7 @@ Google Workspace for Education 導入與認證培訓 →
 
 ---
 
-## 鴻綸科技教育｜活動剪影｜歷年研習、成果展與 Google 教育活動
+## 活動剪影｜歷年研習、成果展與 Google 教育活動｜鴻綸科技
 
 https://www.hunglun.com/events
 
@@ -692,7 +694,7 @@ https://www.hunglun.com/events
 
 ---
 
-## 鴻綸科技教育｜常見問題｜服務範圍、委託開發與學校導入怎麼開始
+## 常見問題｜服務範圍、委託開發與學校導入怎麼開始｜鴻綸科技
 
 https://www.hunglun.com/faq
 
@@ -738,7 +740,7 @@ AEO（Answer Engine Optimization）是讓網站內容能直接被搜尋引擎或
 
 ---
 
-## 鴻綸科技教育｜教育科技知識庫｜Google 授權・AI 教學・設備採購
+## 教育科技知識庫｜Google 授權・AI 教學・設備採購｜鴻綸科技
 
 https://www.hunglun.com/knowledge
 
@@ -808,7 +810,7 @@ Chromebook 選購指南什麼是 Chromebook、優缺點、載具管理、校園�
 
 ---
 
-## 鴻綸科技教育｜教育科技觀察：Google 教育方案與 AI 導入的變動判讀
+## 教育科技觀察：Google 教育方案與 AI 導入的變動判讀｜鴻綸科技
 
 https://www.hunglun.com/insights
 
@@ -825,7 +827,7 @@ Google 教育方案、AI 導入與校園數位政策的變動，以及這些變�
 
 ---
 
-## 鴻綸科技教育｜Classroom 的 Gemini 已對所有年齡學生開啟：學校這週該檢查什麼
+## Classroom 的 Gemini 已對所有年齡學生開啟：學校這週該檢查什麼｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-classroom-all-ages
 
@@ -903,7 +905,7 @@ https://www.hunglun.com/knowledge/chromebook
 知識庫 ／ Chromebook 選購指南
 Chromebook 選購與校園導入指南
 什麼是 Chromebook、跟一般筆電差在哪、CEU 是什麼，以及 ASUS 教育機型五個家族（CX 筆電式、CM／CZ 可拆卸、C2 耐用款、BR 教育專用、CT 平板式）怎麼分辨、AUE 怎麼查。
-作者：鴻綸科技 Steve｜最後更新：2026 年 8 月 5 日
+作者：鴻綸科技 Steve｜最後更新：2026 年 8 月 17 日
 Chromebook 是什麼？跟一般筆電有什麼不同？
 Chromebook 是搭載 Google ChromeOS 作業系統的筆記型電腦，主要透過瀏覽器與雲端應用程式運作，不像 Windows／macOS 筆電需要安裝完整的本機軟體。開機速度快（通常 10 秒內）、檔案預設存在 Google 雲端硬碟、內建防毒防駭機制，設計初衷就是給學校與企業做集中管理的裝置。
 Chromebook 的優點有哪些？
@@ -939,6 +941,12 @@ Chromebook 內建多層防護：每次開機驗證系統完整性（Verified Boo
 隨時更新課堂需求程式，安裝費時、容量變大、運行效率低落
 登入自己帳號即可使用個人化資料，程式與資料雲端帶著走，不擔心誤用他人遺留資料
 上表數據引自 Google for Education 官方教育推廣資料，其中管理成本比較為 2020 年 IDC 白皮書數字，僅供評估參考。
+Chromebook 的缺點與限制
+上面那張表是 Chromebook 的強項，但不是每種情境都適合。Chromebook 的缺點主要有四個：不能安裝傳統 Windows 應用程式、離線時功能受限、硬體規格偏輕量、以及每台機器都有 AUE 更新到期日。學校評估時這四點要先看過：
+不能安裝傳統 Windows 應用程式：例如某些排課軟體、會計系統，多數工作要靠網頁版或 Android App 替代。
+離線時功能較受限：部分應用需要網路才能完整使用，校園網路品質會直接影響使用體驗。
+硬體規格偏向輕量使用：不適合跑大型繪圖、影音剪輯或工程模擬軟體。有專業科系需求的學校，建議搭配部分 Windows 電腦教室，不用整批換成 Chromebook。
+有 AUE 自動更新到期日：每個機型都有到期日，到期後不再收到 ChromeOS 系統與安全性更新，等於採購時就決定了這批機器還能用幾年。查法見下一節。
 ASUS 機型代號怎麼看，AUE 怎麼查
 學校詢價時常常拿到一串型號代號（CX1405、CM3206、C214、BR1102FGA…），看不出差別在哪。ASUS 的教育機型大致可分成五個家族：
 家族常見型號形式與定位
@@ -987,7 +995,7 @@ Chromebook 與智慧教室建置服務
 
 ---
 
-## 鴻綸科技教育｜學校資訊設備採購指南｜選型與共同供應契約
+## 學校資訊設備採購指南｜選型與共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/knowledge/procurement
 
@@ -1073,7 +1081,7 @@ Chromebook 選購與導入
 
 ---
 
-## 鴻綸科技教育｜AI 融入教學實務指南｜備課、評量與課堂規範
+## AI 融入教學實務指南｜備課、評量與課堂規範｜鴻綸科技
 
 https://www.hunglun.com/knowledge/ai-teaching
 
@@ -1161,7 +1169,7 @@ Gemini 方案比較
 
 ---
 
-## 鴻綸科技教育｜Google Workspace 教育版版本比較與授權變更
+## Google Workspace 教育版版本比較與授權變更｜鴻綸科技
 
 https://www.hunglun.com/knowledge/workspace-editions
 
@@ -1259,6 +1267,7 @@ Google 認證教育家 Level 1／Level 2 與認證講師完整指南
 三種認證的差別、考試實際怎麼考、效期與重考規則，以及要成為認證講師需要準備什麼。內容依 Google 官方說明整理，制度細節請以官方最新公告為準。
 老師在準備 Google 認證時，最常卡住的不是題目難，而是網路上的資訊多半過期——Google 這幾年改過考試形式、收費方式與報名管道，搜尋到的心得文常常還停在舊制度。這頁整理的是目前官方說明的內容，並標出哪些是會變動、要自己去確認的部分。
 三種認證的關係
+Google 認證教育家（Google Certified Educator）Level 1 是 Google 官方針對教師的第一階認證，證明能把 Google for Education 工具用在日常教學，沒有前置條件；Level 2 是進階，考的是更廣的工具組合與教學整合策略；Certified Trainer（認證講師）則是證明能設計並帶領他人的專業學習課程，需要先有 Level 2。三者的差別整理如下：
 認證對應能力前置條件
 Certified Educator Level 1把 Google for Education 工具用在日常教學的基本能力無
 Certified Educator Level 2更廣的工具組合與教學整合策略一般先取得 Level 1
@@ -1309,7 +1318,7 @@ Google 官方目前說明為「部分語言的考試免費」。認證的收費�
 可以。依官方規則，未通過者可在首次應考的 8 天後重考。考試結果會在 3 個工作天內以電子郵件通知。
 要成為 Google 認證講師（Certified Trainer）需要什麼條件？
 依 Google 官方說明，流程包含五個部分：完成 Trainer 課程（約 8 小時）、取得 Google Certified Educator Level 2、錄製一段 3 分鐘影片（前 1 分鐘說明你為什麼想成為講師與你的特色，後 2 分鐘示範如何把 Google 工具、Chromebook 或 Chrome 的某一項功能創新地用在課堂或校園）、提出過去一年帶過的 3 至 5 場 Google 相關專業學習場次紀錄，最後送出申請並回答一系列簡答題。送件後約 4 至 6 週會收到通知。
-作者：鴻綸科技 Steve｜最後更新：2026 年 8 月 5 日（認證制度細節以 Google 官方最新公告為準）
+作者：鴻綸科技 Steve｜最後更新：2026 年 8 月 17 日（認證制度細節以 Google 官方最新公告為準）
 想在校內辦認證衝刺或種子教師培育？
 告訴我們老師目前的使用狀況與想達成的目標，我們規劃梯次與課程內容。
 聯絡我們
@@ -1317,7 +1326,7 @@ Google 官方目前說明為「部分語言的考試免費」。認證的收費�
 
 ---
 
-## 鴻綸科技教育｜AI 是什麼？人工智慧新手入門
+## AI 是什麼？人工智慧新手入門｜鴻綸科技
 
 https://www.hunglun.com/knowledge/ai
 
@@ -1355,7 +1364,7 @@ AI 應用與客製工具開發
 
 ---
 
-## 鴻綸科技教育｜電腦與雲端服務入門手冊｜硬體規格與教室規劃
+## 電腦與雲端服務入門手冊｜硬體規格與教室規劃｜鴻綸科技
 
 https://www.hunglun.com/knowledge/computer
 
@@ -1417,6 +1426,8 @@ Gemini 方案懶人包
 Gemini AI 是什麼、教育版與企業版差異、方案價格。
 Chromebook 選購指南
 什麼是 Chromebook、優缺點與校園導入知識。
+Google Classroom 完全指南
+版本差異、2026 年改版後的新首頁、管理員導入前該確認的設定。
 Google 管理主控台設定指南
 OU 與群組、政策設定、裝置盤點的後台實作路徑。
 Google Workspace for Education 導入服務
@@ -1427,7 +1438,7 @@ Google Workspace for Education 導入服務
 
 ---
 
-## 鴻綸科技教育｜Gemini 教育版怎麼用｜學校導入與學生使用
+## Gemini 教育版怎麼用？學校導入、學生使用與管理設定｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini
 
@@ -1439,7 +1450,7 @@ Gemini 教育版怎麼用？學校導入、學生使用與管理設定
 ② Google 於 2026 年 1 月宣布，部分 Gemini 功能已下放給多個 Workspace for Education 版本——免費的 Education Fundamentals 也能使用 Gmail 中的 Gemini。
 學校端的完整對照見 Google Workspace 教育版版本比較與授權變更。
 Gemini 教育版是什麼
-「Gemini 教育版」不是一個單獨的產品，而是學校用的 Google Workspace for Education 帳號裡所包含的 Gemini 功能。它跟老師自己用個人 Gmail 登入的 Gemini 最大的差別有兩個：資料受機構條款保護、不會被拿去訓練模型；以及管理員可以決定哪些人、哪些應用程式能用。
+「Gemini 教育版」不是一個單獨的產品，而是學校用的 Google Workspace for Education 帳號裡所包含的 Gemini 功能。教育版跟老師自己用個人 Gmail 登入的 Gemini 最大的差別有兩個：資料受機構條款保護、不會被拿去訓練模型；以及管理員可以決定哪些人、哪些應用程式能用。
 學校端會遇到的名詞大致是三層：Workspace for Education（帳號與協作工具的底層）、內建的 Gemini 功能（Gmail、文件、簡報、Classroom 裡的 AI）、以及需要另外加購的 Google AI Pro for Education（進階模型與更高用量）。
 2026 年 8 月的重大變更：Classroom 的 Gemini 開放所有年齡
 依 Google Workspace 官方公告，2026 年 8 月 10 日起（網頁版，行動版 8 月 17 日起），Classroom 中的 Gemini 從原本僅限「18 歲以上的高等教育學生」，擴大到 K-12 與高等教育所有年齡的學生。
@@ -1535,7 +1546,7 @@ Google AI Pro for Education 授權導入
 
 ---
 
-## 鴻綸科技教育｜Google Classroom 完全指南｜校園導入與教師實務
+## Google Classroom 是什麼？學校怎麼用、版本差異與導入設定｜鴻綸科技
 
 https://www.hunglun.com/knowledge/classroom
 
@@ -1751,6 +1762,8 @@ Chromebook 政策完全沒作用：確認該裝置有 CEU 授權且已註冊進�
 更多校園數位轉型相關知識。
 Classroom 的 Gemini 已對所有年齡開啟
 8/10 生效、預設開啟，學校這週該檢查什麼。
+Google Classroom 完全指南
+課程工具組開下去之後，老師端實際會看到什麼、卡在哪裡。
 Chromebook 選購指南
 機型怎麼挑、AUE 怎麼查、CEU 載具管理授權是什麼。
 Workspace 教育版版本比較
@@ -1830,7 +1843,7 @@ Google Workspace Updates：在 Gemini 應用程式中生成簡報
 
 ---
 
-## 鴻綸科技教育｜Gemini 認證教育家完整指南：考試範圍、語言與授權門檻
+## Gemini 認證教育家完整指南：考試範圍、語言與授權門檻｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-certification
 
@@ -1974,27 +1987,33 @@ Padlet全班同時把想法貼到同一面牆上課堂共筆、腦力激盪、�
 Wordwall把練習題變成遊戲，而且一鍵換版型字彙與公式的反覆練習、課堂暖身與複習、需要同一份內容多種呈現方式的科目。
 Kahoot!全班即時搶答的課堂評量隨堂形成性評量、複習競賽、大場次的課堂互動。
 六套工具分別在做什麼
-Edpuzzle：把影片變成有互動的課程
+Edpuzzle 是什麼？把影片變成有互動的課程
+Edpuzzle 是一套把影片變成互動課程的工具：在影片中插入問題與說明，學生作答之後，老師能看到誰看了、看到哪裡、有沒有看懂。
 解決什麼問題：老師常遇到的狀況是：指派了教學影片，但無法確認學生到底看了沒、看懂沒。Edpuzzle 解決的就是這一段——把影片加上問題與說明，變成可以追蹤學習成果的課程。
 怎麼運作：三個步驟：上傳自己的教學影片或選用其他老師建立的影片、在影片中插入學習內容與問題、發佈給學生並追蹤學習成果。教育授權提供每位老師無限制建立課程影片，並支援與 Google Classroom、Canvas 等學習平台串接。
 什麼情境適合：翻轉教室、課前預習、需要確認學生是否真的看完影片的任何情境。
-Thinglink：把一張照片變成可點擊的互動教材
+Thinglink 是什麼？把一張照片變成可點擊的互動教材
+Thinglink 是互動式 360 度環景與圖像編輯平台：在照片或環景上標記熱點，點開會顯示文字、圖片或影音，做出來就是一張可以點擊探索的教材。
 解決什麼問題：校外教學去不了、實驗室設備不夠、想讓學生看見教室裡看不到的場景——這類需求用平面簡報講很難，用 360 度環景就直觀得多。
 怎麼運作：互動式 360 度環景與圖像編輯平台：在照片上標記熱點，點開能顯示文字、圖片或影音。校園授權分六種，皆為一年期：國小、國中、高中職（單一科系）、高中職全校、大專院校（單一系所）、大專院校全校。教育方案限校園授權製作教材使用。
 什麼情境適合：虛擬導覽、情境式教材、360 度實境觀察、故事場景、地圖導覽、各科主題教材。
-Kami：在 PDF 與各種文件上直接批改標註
+Kami 是什麼？在 PDF 與各種文件上直接批改標註
+Kami 是在文件上直接標註與批改的工具：支援 Word、PowerPoint、PDF 與 Google 文件等格式，可以手寫畫記、套用教學範本，並連結 Google Classroom 指派與評分。
 解決什麼問題：紙本作業要收要發要帶回家改；改成數位又常卡在「格式不支援」。Kami 處理的是文件格式與批改流程這一段。
 怎麼運作：支援 Word、PowerPoint、PDF、Google 文件／簡報／試算表等格式，可直接在 PDF 或圖片上手寫畫記、套用教學範本。建立教材、指派作業、分組討論、修改評分都能連結 Google Classroom 一條龍完成。離線狀態也能閱讀、編輯、註解，連網後同步。
 什麼情境適合：作業批改與回饋、學習單數位化、需要在既有文件上標註的任何科目。
-Padlet：全班同時把想法貼到同一面牆上
+Padlet 是什麼？全班同時把想法貼到同一面牆上
+Padlet 是線上協作牆：全班同時把文字、圖片或影音貼到同一個看板上，老師一眼就看得到所有人的想法，不必一個一個點名發言。
 解決什麼問題：課堂討論時只有少數人會舉手發言。線上協作牆讓每個人都能同時貼出想法，也讓老師一眼看到全班的思考。
 怎麼運作：線上協作牆，適合課堂共筆與作品展示。校園版包含無限制看板數量與無限制學生使用人數、1 GB 檔案上傳、30 分鐘影片錄製、60 分鐘音訊錄製、API 存取、使用者管理、內容安全功能與分析控制面板，並支援 LMS 整合與 SSO 單一登入。校園版最低購買數量為 10U。
 什麼情境適合：課堂共筆、腦力激盪、作品展示、跨班交流、需要全體同時參與的討論。
-Wordwall：把練習題變成遊戲，而且一鍵換版型
+Wordwall 是什麼？把練習題變成遊戲，而且一鍵換版型
+Wordwall 是把同一份練習內容一鍵換成多種遊戲版型的出題工具：選範本、填內容，就能產生匹配遊戲、測驗、隨機輪盤、開箱遊戲等活動。
 解決什麼問題：自製互動遊戲最花時間的不是想內容，是做版型。Wordwall 的核心價值是「內容填一次，版型隨便換」。
 怎麼運作：選範本、填內容、一鍵換成其他遊戲版型。分三種版本：基本版可建立 3 個活動、使用 12 款標準範本；標準版解鎖無限活動、AI 內容產生、列印功能與無限制社群資源搜尋；專業版另有 22 款專業範本。標準範本包含匹配遊戲、測驗、隨機輪盤、開箱遊戲等；專業範本包含迷宮追逐、填字遊戲、打地鼠、數學題生成器等。
 什麼情境適合：字彙與公式的反覆練習、課堂暖身與複習、需要同一份內容多種呈現方式的科目。
-Kahoot!：全班即時搶答的課堂評量
+Kahoot! 是什麼？全班即時搶答的課堂評量
+Kahoot! 是課堂即時搶答的評量工具：全班用手機或載具同時作答，畫面立刻顯示答題統計，老師當場就知道這一段全班懂了沒。
 解決什麼問題：想知道全班此刻懂了沒，最快的方式是即時作答統計，而不是點名問。
 怎麼運作：即時搶答與課堂評量互動。EDU Standard 版可用 AI Kahoot! Generator 一鍵生成講義、匯入並同步 Microsoft 與 Google Slides、內建文字雲與投票，支援多達 100 位學生同時參與。
 什麼情境適合：隨堂形成性評量、複習競賽、大場次的課堂互動。
@@ -2009,6 +2028,7 @@ Kahoot!：全班即時搶答的課堂評量
 學校資訊設備採購指南 →
 Google AI 校園研習服務 →
 Chromebook 選購與校園導入指南 →
+Google Classroom 完全指南（本頁多套工具都靠 Classroom 派送與收回） →
 常見問題
 Edpuzzle 是什麼？跟直接把影片丟給學生看有什麼不同？
 Edpuzzle 是把影片變成可追蹤課程的工具。直接把影片連結丟出去，老師無法知道學生看了沒、看到哪裡、有沒有看懂；Edpuzzle 可以在影片中插入問題與說明，學生作答後老師能看到學習成果。流程是三個步驟：上傳自己的影片或選用其他老師建立的影片、插入學習內容與問題、發佈給學生並追蹤成果。教育授權提供每位老師無限制建立課程影片，也支援與 Google Classroom、Canvas 等平台串接。
@@ -2022,7 +2042,7 @@ Thinglink 是互動式 360 度環景與圖像編輯平台。做出來的教材�
 這是校園軟體導入最常見的結果，所以採購導入與教師應用培訓要一起規劃，讓老師在研習當下就用學校自己的環境操作過一次。部分工具（例如 Thinglink）採購前可以先申請測試帳號，讓老師試做一份教材再決定要不要買——先確認這套工具在貴校真的會被用起來，比談價格重要。
 可以先試用再決定嗎？
 可以，而且建議這樣做。除了申請測試帳號之外，也可以先讓一個學年或一個科目試辦，確認老師的實際使用頻率之後再擴大授權範圍。
-作者：鴻綸科技 Steve｜最後更新：2026 年 8 月 5 日（各軟體方案內容可能異動，請以原廠當期公告為準）
+作者：鴻綸科技 Steve｜最後更新：2026 年 8 月 17 日（各軟體方案內容可能異動，請以原廠當期公告為準）
 不確定該挑哪幾套？
 告訴我們老師想在課堂上做到什麼，我們依教學情境協助挑選組合並規劃授權。
 聯絡我們
@@ -2030,7 +2050,7 @@ Thinglink 是互動式 360 度環景與圖像編輯平台。做出來的教材�
 
 ---
 
-## 鴻綸科技教育｜AI OCR 文件辨識全解析
+## AI OCR 文件辨識全解析｜鴻綸科技
 
 https://www.hunglun.com/knowledge/ocr
 
@@ -2064,7 +2084,7 @@ AI 入門百科
 
 ---
 
-## 鴻綸科技教育｜政府開放資料應用手冊｜資料集查詢與系統應用
+## 政府開放資料應用手冊｜資料集查詢與系統應用｜鴻綸科技
 
 https://www.hunglun.com/knowledge/opendata
 
@@ -2133,7 +2153,7 @@ LINE 官方帳號適合哪些行業或機構經營？
 
 ---
 
-## 鴻綸科技教育｜會員集點系統設計筆記｜QR Code 集點與導入評估
+## 會員集點系統設計筆記｜QR Code 集點與導入評估｜鴻綸科技
 
 https://www.hunglun.com/knowledge/membership
 
@@ -2167,7 +2187,7 @@ LINE 官方帳號心法
 
 ---
 
-## 鴻綸科技教育｜個資法與校園資安須知｜學生個資保護實務
+## 個資法與校園資安須知｜學生個資保護實務｜鴻綸科技
 
 https://www.hunglun.com/knowledge/privacy
 
@@ -2201,7 +2221,7 @@ Gemini 方案懶人包
 
 ---
 
-## 鴻綸科技教育｜網站速度最佳化攻略｜Core Web Vitals 與 SEO
+## 網站速度最佳化攻略｜Core Web Vitals 與 SEO｜鴻綸科技
 
 https://www.hunglun.com/knowledge/webperf
 
@@ -2235,7 +2255,7 @@ SEO／AEO／GEO 搜尋引擎最佳化服務
 
 ---
 
-## 鴻綸科技教育｜新營推薦美食 Top 5｜在地嚮導
+## 新營推薦美食 Top 5｜在地嚮導｜鴻綸科技
 
 https://www.hunglun.com/local-food-xinying
 
@@ -2278,7 +2298,7 @@ https://www.hunglun.com/local-food-xinying
 
 ---
 
-## 鴻綸科技教育｜鹽水推薦美食 Top 5｜在地嚮導
+## 鹽水推薦美食 Top 5｜在地嚮導｜鴻綸科技
 
 https://www.hunglun.com/local-food-yanshui
 
@@ -2323,7 +2343,7 @@ https://www.hunglun.com/local-food-yanshui
 
 ---
 
-## 鴻綸科技教育｜東山推薦美食 Top 5｜在地嚮導
+## 東山推薦美食 Top 5｜在地嚮導｜鴻綸科技
 
 https://www.hunglun.com/local-food-dongshan
 
@@ -2440,7 +2460,7 @@ Google AI 企業級授權導入 →
 
 ---
 
-## 鴻綸科技教育｜Google AI 企業級授權導入｜服務項目
+## Google AI 企業級授權導入｜服務項目｜鴻綸科技
 
 https://www.hunglun.com/services/enterprise-ai
 
@@ -2485,7 +2505,7 @@ Google Workspace for Education 導入與認證培訓 →
 
 ---
 
-## 鴻綸科技教育｜Google Workspace for Education 導入與認證培訓
+## Google Workspace for Education 導入與認證培訓｜鴻綸科技
 
 https://www.hunglun.com/services/google-workspace
 
@@ -2542,6 +2562,7 @@ Level 1 是基礎，確認教師能用 Google 工具處理日常教學與行政�
 可以。導入與培訓是分開的，很多學校是網域早就建好，但老師只用到信箱與雲端硬碟。這種情況我們會直接從實際教學與行政情境設計研習，不必重做導入。
 延伸閱讀
 Google for Education 申請流程與版本差異 →
+Google 認證教育家 Level 1／2 與認證講師指南 →
 智慧校園：Google AI Pro for Education 導入說明（額度與版本差異對照）→
 想導入網域，或幫老師考認證？
 告訴我們學校規模與想達成的目標，導入跟培訓都可以一起規劃。
@@ -2605,7 +2626,7 @@ Google for Education 指南：認證夥伴計畫與申請流程 →
 
 ---
 
-## 鴻綸科技教育｜Google AI 校園研習｜K-12 與大學端研習課程
+## Google AI 校園研習｜K-12 與大學端研習課程｜鴻綸科技
 
 https://www.hunglun.com/services/campus-training
 
@@ -2755,13 +2776,13 @@ Chromebook 優缺點與採購前必看知識 →
 
 ---
 
-## 鴻綸科技教育｜標案設備採購（台灣銀行共同供應契約）｜服務項目
+## 台銀標設備採購｜台灣銀行共同供應契約品項與決標單價查詢｜鴻綸科技
 
 https://www.hunglun.com/services/procurement
 
 服務項目 ／ 標案設備採購（台灣銀行共同供應契約）
 標案設備採購（台灣銀行共同供應契約）
-以台銀共同供應契約供應電腦主機、顯示器、平板電腦、專業繪圖卡、數位相機與電腦軟體，站上可直接查詢契約品項、廠牌型號與決標單價。
+學校與機關口中的「台銀標」，指的就是台灣銀行共同供應契約。我們以此契約供應電腦主機、顯示器、平板電腦、專業繪圖卡、數位相機與電腦軟體，站上可直接查詢契約品項、廠牌型號與決標單價。
 鴻綸科技為台灣銀行共同供應契約供應商，協助機關與學校依契約完成設備請購，簡化採購作業流程。以下為契約項下常見的設備類別，實際型號與規格依當期公告為準。
 還在評估要買什麼、怎麼寫規格？可先參考學校資訊設備採購指南，內容涵蓋需求盤點、Chromebook 與 Windows 筆電及平板的選型對照、最容易被漏掉的配套項目，以及驗收時該實際檢查什麼。
 契約項下設備類別
@@ -2794,13 +2815,13 @@ AI 應用與客製工具開發 →
 
 ---
 
-## 鴻綸科技教育｜個人電腦之主機｜台銀共同供應契約
+## 台銀標個人電腦主機｜共同供應契約品項、廠牌型號與決標單價｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/desktop
 
 服務項目 ／ 標案設備採購 ／ 個人電腦之主機
 個人電腦之主機
-台銀共同供應契約項下的商用桌上型主機，依文書、教學或繪圖需求配置不同等級。
+台銀標（台灣銀行共同供應契約）項下的商用桌上型主機，依文書、教學或繪圖需求配置不同等級。
 以 ASUS 商用桌機為主，依文書、教學或繪圖需求配不同等級的 CPU 與記憶體，可加購三年到府保固。是行政辦公室與電腦教室最常整批汰換的品項。
 適合這樣用
 行政辦公室汰換：文書、報表與校務系統操作為主，重點在穩定與保固年限，不需要高階顯示效能。
@@ -2884,7 +2905,7 @@ Chromebook 與智慧教室建置 →
 
 ---
 
-## 鴻綸科技教育｜個人電腦之顯示器｜台銀共同供應契約
+## 個人電腦之顯示器｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/monitor
 
@@ -3008,7 +3029,7 @@ https://www.hunglun.com/services/procurement/monitor
 
 ---
 
-## 鴻綸科技教育｜平板電腦｜台銀共同供應契約
+## 平板電腦｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/tablet
 
@@ -3050,7 +3071,7 @@ Chromebook 選購指南與載具管理授權 →
 
 ---
 
-## 鴻綸科技教育｜顯示卡｜台銀共同供應契約・專業繪圖與 AI 運算
+## 顯示卡｜台銀共同供應契約・專業繪圖與 AI 運算｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/gpu
 
@@ -3100,7 +3121,7 @@ AI 應用與客製工具開發 →
 
 ---
 
-## 鴻綸科技教育｜彩色數位相機及攝影機｜台銀共同供應契約
+## 彩色數位相機及攝影機｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/camera
 
@@ -3160,7 +3181,7 @@ https://www.hunglun.com/services/procurement/camera
 
 ---
 
-## 鴻綸科技教育｜電腦軟體｜台銀共同供應契約
+## 電腦軟體｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software
 
@@ -3251,7 +3272,7 @@ PDF、文書處理與行政流程相關的軟體授權。
 
 ---
 
-## 鴻綸科技教育｜繪圖軟體｜台銀共同供應契約
+## 繪圖軟體｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-cad
 
@@ -3332,7 +3353,7 @@ Adobe、Autodesk 等設計與工程繪圖軟體授權，含教育版與電腦教
 
 ---
 
-## 鴻綸科技教育｜虛擬軟體｜台銀共同供應契約
+## 虛擬軟體｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-virtual
 
@@ -3407,7 +3428,7 @@ Chromebook 與智慧教室建置 →
 
 ---
 
-## 鴻綸科技教育｜資安：身分識別與存取管理｜台銀共同供應契約
+## 資安：身分識別與存取管理｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-iam
 
@@ -3481,7 +3502,7 @@ Google 管理主控台：機構單位與帳號管理 →
 
 ---
 
-## 鴻綸科技教育｜資安：網路安全｜台銀共同供應契約
+## 資安：網路安全｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-network
 
@@ -3693,7 +3714,7 @@ https://www.hunglun.com/services/procurement/software/sw-network
 
 ---
 
-## 鴻綸科技教育｜資安：端點安全｜台銀共同供應契約
+## 資安：端點安全｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-endpoint
 
@@ -3803,7 +3824,7 @@ Google 管理主控台校園設定指南 →
 
 ---
 
-## 鴻綸科技教育｜資安：訊息安全｜台銀共同供應契約
+## 資安：訊息安全｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-message
 
@@ -3852,7 +3873,7 @@ https://www.hunglun.com/services/procurement/software/sw-message
 
 ---
 
-## 鴻綸科技教育｜資安：主機或網站安全｜台銀共同供應契約
+## 資安：主機或網站安全｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-web
 
@@ -3906,7 +3927,7 @@ https://www.hunglun.com/services/procurement/software/sw-web
 
 ---
 
-## 鴻綸科技教育｜資安：安全管理與弱點評估｜台銀共同供應契約
+## 資安：安全管理與弱點評估｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-vuln
 
@@ -3989,7 +4010,7 @@ https://www.hunglun.com/services/procurement/software/sw-vuln
 
 ---
 
-## 鴻綸科技教育｜資安：檔案安全管理｜台銀共同供應契約
+## 資安：檔案安全管理｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-file
 
@@ -4034,7 +4055,7 @@ https://www.hunglun.com/services/procurement/software/sw-file
 
 ---
 
-## 鴻綸科技教育｜人工智慧與數據應用｜台銀共同供應契約
+## 人工智慧與數據應用｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-ai
 
@@ -4100,7 +4121,7 @@ AI 入門百科：生成式 AI 與大型語言模型 →
 
 ---
 
-## 鴻綸科技教育｜微軟軟體｜台銀共同供應契約
+## 微軟軟體｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-microsoft
 
@@ -4200,7 +4221,7 @@ Google Workspace for Education 導入 →
 
 ---
 
-## 鴻綸科技教育｜自由軟體暨開發工具｜台銀共同供應契約
+## 自由軟體暨開發工具｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-oss
 
@@ -4292,7 +4313,7 @@ AI 應用與客製工具開發 →
 
 ---
 
-## 鴻綸科技教育｜資料庫暨備份工具｜台銀共同供應契約
+## 資料庫暨備份工具｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-db
 
@@ -4412,7 +4433,7 @@ https://www.hunglun.com/services/procurement/software/sw-db
 
 ---
 
-## 鴻綸科技教育｜行政管理軟體工具｜台銀共同供應契約
+## 行政管理軟體工具｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-admin
 
@@ -4485,7 +4506,7 @@ PDF、文書處理與行政流程相關的軟體授權。
 
 ---
 
-## 鴻綸科技教育｜數位學習及知識管理｜台銀共同供應契約
+## 數位學習及知識管理｜台銀共同供應契約｜鴻綸科技
 
 https://www.hunglun.com/services/procurement/software/sw-elearning
 
@@ -4566,7 +4587,7 @@ Google AI 校園研習 →
 
 ---
 
-## 鴻綸科技教育｜AI 應用與客製工具開發｜服務項目
+## AI 應用與客製工具開發｜服務項目｜鴻綸科技
 
 https://www.hunglun.com/services/ai-development
 
@@ -4608,7 +4629,7 @@ AI 基礎知識與校園導入須知 →
 
 ---
 
-## 鴻綸科技教育｜公開資料查詢系統開發｜服務項目
+## 公開資料查詢系統開發｜服務項目｜鴻綸科技
 
 https://www.hunglun.com/services/open-data
 
@@ -4648,7 +4669,7 @@ https://www.hunglun.com/services/open-data
 
 ---
 
-## 鴻綸科技教育｜校園行政自動化｜回條辨識與成果報告排版工具
+## 校園行政自動化｜回條辨識與成果報告排版工具｜鴻綸科技
 
 https://www.hunglun.com/services/campus-admin
 
@@ -4687,7 +4708,7 @@ Google 管理主控台校園設定指南 →
 
 ---
 
-## 鴻綸科技教育｜客製會員與管理系統｜服務項目
+## 客製會員與管理系統｜服務項目｜鴻綸科技
 
 https://www.hunglun.com/services/member-system
 
