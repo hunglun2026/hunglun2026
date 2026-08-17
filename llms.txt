@@ -53,6 +53,7 @@ LINE 官方帳號：@007bbtpd（電腦版請在 LINE 搜尋此 ID 加入）
 - 常見問題（公司背景與 Google 官方授權身分、學校導入從哪一步開始、可否委託客製開發、服務範圍、系統是否留存學生個資、SEO／GEO／AEO 的差別。**教學與選型類文章不在這裡，在 /knowledge**）：https://www.hunglun.com/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/tools#local-food
 - 教育科技觀察（Google 教育方案、AI 導入與校園數位政策的變動判讀。**不轉述新聞，寫的是對台灣學校的實際意義與下一步**）：https://www.hunglun.com/insights
+  - [Gemini 圖片的浮水印可以關了](https://www.hunglun.com/insights/gemini-image-watermark)：**2026-08-14 起 Gemini 設定新增「媒體浮水印（Media watermark）」開關，使用者可自行關閉圖片、影片、音樂的可見浮水印**（適用 Nano Banana／Omni／Lyria，Gemini 與 Flow 陸續推出），不必再用第三方去浮水印工具。**SynthID 隱形浮水印與 C2PA 詮釋資料無論如何一律保留、關不掉**；法規要求可見標示的地區不適用。可把圖片丟進 Gemini 問「這是不是 AI 生成」查驗 SynthID（僅認得 Google 系工具生成的內容）。站方判讀：可見印關掉後，「標註 AI 生成」從浮水印問題變成學校規範問題；AI 識讀教學重心從肉眼找標記改為用工具查證。
   - [Classroom 的 Gemini 已對所有年齡學生開啟](https://www.hunglun.com/insights/gemini-classroom-all-ages)：Google 自 2026-08-10 起把 Classroom 的 Gemini 開放給所有年齡的 K-12 與高教學生（行動版 08-17 跟進），**管理主控台對所有年齡預設為開啟**；但有前提——只有原本就已開啟 Gemini in Classroom、Gemini 與 Gemini Notebook 三項的網域才會生效，先前針對未滿 18 歲關閉過的維持關閉。站方立場：**先檢查現況，不要直接關閉**（關閉不會讓學生停止使用 AI、可能誤動其他機構單位、且不同年段本來就該有不同答案）；這週該做的三件事：確認三個開關、整理 OU 年段結構、記下行動版 08-17。
 - 教育科技知識庫（21 篇實務文章的索引頁，依主題分四組：Google 與 AI 導入／設備選型與採購／網站與數位工具／法遵與資安）：https://www.hunglun.com/knowledge
 - 標案設備採購・台灣銀行共同供應契約（機關學校可依契約採購，站內收錄 916 筆契約品項）：https://www.hunglun.com/services/procurement
