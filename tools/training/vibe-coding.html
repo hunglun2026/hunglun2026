@@ -24,8 +24,8 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=9" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=40">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=10" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=41">
 <style>
 /* 研習講義專用：指令卡與課程資訊列。只有研習專區兩頁用得到，
    放在頁內避免為了兩頁去升全站 CSS 版號。 */
@@ -45,6 +45,28 @@
 .toc { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; background: var(--bg-soft); margin: 24px 0; }
 .toc ol { margin: 8px 0 0; padding-left: 20px; }
 .toc li { margin: 4px 0; }
+/* 圖解都用 HTML 畫，跟著全站深淺色變數走，不用另做兩套圖 */
+.vc-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 18px 0 22px; }
+.vc-step { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 12px 12px 10px; }
+.vc-step b { display: block; font-size: .78rem; color: var(--accent); letter-spacing: .05em; margin-bottom: 4px; }
+.vc-step strong { display: block; font-size: .95rem; font-weight: 500; margin-bottom: 2px; }
+.vc-step span { font-size: .82rem; color: var(--muted); }
+@media (max-width: 700px) { .vc-flow { grid-template-columns: 1fr 1fr; } }
+.vc-wins { display: grid; grid-template-columns: 2fr 3fr; gap: 14px; margin: 18px 0 22px; }
+.vc-win { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); padding: 12px; }
+.vc-win h4 { font-size: .9rem; font-weight: 600; margin: 0 0 8px; }
+.vc-bubble { border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 7px 10px; font-size: .82rem; color: var(--text-body); margin-bottom: 6px; }
+.vc-bubble.me { border-left: 3px solid var(--accent); }
+.vc-split { display: grid; grid-template-columns: 1fr 1.4fr; gap: 8px; }
+.vc-pane { border: 1px dashed var(--line); border-radius: 8px; padding: 8px; font-size: .8rem; color: var(--muted); min-height: 104px; }
+.vc-pane.hot { border: 2px solid var(--accent); color: var(--text-body); }
+@media (max-width: 700px) { .vc-wins { grid-template-columns: 1fr; } }
+.vc-clean { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 18px 0 22px; }
+.vc-list { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); padding: 10px 14px; font-size: .85rem; line-height: 1.9; color: var(--text-body); }
+.vc-list em { font-style: normal; color: var(--muted-faint); font-size: .78rem; }
+.vc-list b { display: block; font-size: .78rem; font-weight: 500; color: var(--accent); margin-bottom: 4px; letter-spacing: .05em; }
+.vc-arrow { color: var(--accent); font-size: 1.4rem; }
+@media (max-width: 700px) { .vc-clean { grid-template-columns: 1fr; } .vc-arrow { transform: rotate(90deg); justify-self: center; } }
 </style>
 <script type="application/ld+json">
 {
@@ -331,6 +353,11 @@
     <p><strong>Vibe Coding 是用說的把工具做出來：您負責把想做的事講清楚，程式碼交給 AI，自己一行程式都不用寫。</strong>這一堂課從頭到尾只做一件事——把一句模糊的「我想要一個抽籤轉盤」，變成一顆真的能用、貼上名單就會分格、還會自己清掉重複與空白的轉盤。</p>
     <p>做完之後，您手上會有三樣東西：一個離線點兩下就打得開的檔案、一整套跟 AI 講話的說法（換個題目照樣用）、以及一份自己講得出來的做法——講得出來，才算真的會了。</p>
 
+    <figure class="prose-figure" style="margin:26px 0;">
+      <img src="/assets/images/vibe-wheel-demo.webp" width="1200" height="784" alt="課堂抽籤大轉盤成品畫面：左邊名單設定區有八人名單與載入名單、產生測試名單、產生亂名單三顆按鈕並顯示原始 12 行有效 8 人，右邊轉盤分成八格，王心怡那一格亮起，下方大字顯示抽中的是王心怡" loading="eager" decoding="async" srcset="/assets/images/vibe-wheel-demo-480.webp 480w, /assets/images/vibe-wheel-demo-768.webp 768w, /assets/images/vibe-wheel-demo.webp 1200w" sizes="(max-width: 700px) 92vw, 856px" style="width:100%;height:auto;border-radius:6px;">
+      <figcaption style="font-size:.85rem;color:var(--muted);margin-top:10px;text-align:center;">做完的成品長這樣：左邊貼名單，右邊的轉盤跟著名單長格子，按一下抽出一位。</figcaption>
+    </figure>
+
     <div class="toc">
       <strong>這份講義的五段</strong>
       <ol>
@@ -381,7 +408,13 @@
     </ul>
 
     <h2 class="section-title reveal" id="concept">先把觀念弄懂</h2>
-    <p>把「為什麼這樣講」弄懂，等一下的十二道指令才會是您自己的。今天的路只有四段：<strong>談需求</strong>（AI 一題一題問您）→ <strong>選開發環境</strong>（另開視窗，選 Canvas）→ <strong>長出畫面</strong>（貼上提示詞，轉盤出現）→ <strong>接上名單</strong>（貼幾個人就有幾格）。</p>
+    <p>把「為什麼這樣講」弄懂，等一下的十二道指令才會是您自己的。今天的路只有四段：</p>
+    <div class="vc-flow" role="img" aria-label="四段流程：談需求、選開發環境、長出畫面、接上名單">
+      <div class="vc-step"><b>01 談需求</b><strong>AI 一題一題問您</strong><span>在視窗 1，完全不寫程式</span></div>
+      <div class="vc-step"><b>02 選開發環境</b><strong>另開視窗，選 Canvas</strong><span>做東西的地方在這裡</span></div>
+      <div class="vc-step"><b>03 長出畫面</b><strong>貼上提示詞，轉盤出現</strong><span>不對就用講的請 AI 改</span></div>
+      <div class="vc-step"><b>04 接上名單</b><strong>貼幾個人就有幾格</strong><span>換一班只要重貼名單</span></div>
+    </div>
 
     <h3>一顆簡單的轉盤裡，藏著一整套軟體</h3>
     <ul class="feature-list">
@@ -457,6 +490,21 @@
           <tr><th scope="row">注意</th><td>談完不要關，提示詞要回來複製</td><td><strong>指令一律貼左邊</strong>，右邊是看的</td></tr>
         </tbody>
       </table>
+    </div>
+    <div class="vc-wins" role="img" aria-label="兩個視窗的分工示意：視窗一談需求，視窗二做畫面，指令一律貼在視窗二的左半邊">
+      <div class="vc-win">
+        <h4>視窗 1：談需求（一般對話）</h4>
+        <div class="vc-bubble">AI：名單從哪來？大概幾個人？<br>1. 手動輸入　2. 從 Excel 貼　3. 請你建議</div>
+        <div class="vc-bubble me">您：2，從 Excel 貼進來，大約 30 人</div>
+        <div class="vc-bubble">AI：抽過的人還要再抽嗎？…</div>
+      </div>
+      <div class="vc-win">
+        <h4>視窗 2：做畫面（選了 Canvas）</h4>
+        <div class="vc-split">
+          <div class="vc-pane hot"><strong>左半：對話區</strong><br>所有指令一律貼這裡，貼完按送出</div>
+          <div class="vc-pane"><strong>右半：成果區</strong><br>轉盤長在這裡。這一塊是看的，不是打字的——貼錯邊畫面不會有反應</div>
+        </div>
+      </div>
     </div>
     <p>開視窗之前先做三件事：左上角點「開始新的對話」，不要接在舊對話後面；確認輸入框是空的，乾淨的視窗 AI 才只看今天講的話；第一句話就把語言講定——<strong>「以下全部用繁體中文（台灣）回答我，按鈕上的字也請用繁體中文」</strong>。</p>
 
@@ -654,6 +702,11 @@
 
     <h3>什麼是「名單清洗」？</h3>
     <p><strong>名單清洗是把貼進來的名單自動整理乾淨。</strong>下面這三種東西您在畫面上看不到，卻會讓轉盤抽錯人：名單中間多按了幾次 Enter，會多出看不見的空格子；同一個人被報名兩次，他被抽中的機會就加倍；名字後面多一個空格，電腦會當成兩個人。<strong>一個看不見的空格，就多出一個人</strong>——從 Excel 貼過來的名單幾乎都有這種東西。</p>
+    <div class="vc-clean" role="img" aria-label="名單清洗前後對照：貼進來的名單夾著空白行、重複姓名與尾端空格，清完只留八個有效名字">
+      <div class="vc-list"><b>貼進來的（12 行）</b>陳小明<br><em>（多按出來的空白行）</em><br>林雅婷<br>林雅婷 <em>← 同一人報了兩次</em><br>黃俊傑 <em>← 名字尾端多一個空格</em><br>張淑芬…</div>
+      <div class="vc-arrow" aria-hidden="true">→</div>
+      <div class="vc-list"><b>清完的（8 人）</b>陳小明<br>林雅婷<br>黃俊傑<br>張淑芬…<br><em>原始 12 行，有效 8 人</em></div>
+    </div>
 
     <div class="pi" id="p11">
       <div class="pi-head"><span class="pi-no">實作 11 ／ 12</span><span class="pi-where">貼在視窗 2・做畫面</span></div>
