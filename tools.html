@@ -29,8 +29,26 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "資源分享",
+  "description": "鴻綸科技的免費研習講義與線上工具，依用途分四類：研習專區、校園小工具、資料查詢網站、在地嚮導。",
+  "url": "https://www.hunglun.com/tools",
+  "inLanguage": "zh-Hant-TW",
+  "isPartOf": { "@id": "https://www.hunglun.com/#website" },
+  "publisher": { "@id": "https://www.hunglun.com/#organization" },
+  "hasPart": [
+    { "@type": "WebPage", "name": "研習專區：AI 研習完整講義", "url": "https://www.hunglun.com/tools/training" },
+    { "@type": "WebPage", "name": "校園小工具", "url": "https://www.hunglun.com/tools#campus-tools" },
+    { "@type": "WebPage", "name": "資料查詢網站", "url": "https://www.hunglun.com/tools#data-search" },
+    { "@type": "WebPage", "name": "在地嚮導：新營・鹽水・東山", "url": "https://www.hunglun.com/tools#local-food" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "鴻綸科技 資源分享分類",
+  "name": "鴻綸科技 免費線上工具",
   "numberOfItems": 5,
   "itemListElement": [
     {
@@ -217,7 +235,13 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> ／ 資源分享</nav>
     <h1>資源分享</h1>
-    <p>依用途分類，快速找到需要的工具，全部免費開放使用。</p>
+    <p>研習講義與線上工具依用途分成四類，全部免費開放使用。</p>
+    <nav class="section-sub reveal" style="margin-top:14px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;" aria-label="分類目錄">
+      <a href="#training">研習專區</a>
+      <a href="#campus-tools">校園小工具</a>
+      <a href="#data-search">資料查詢網站</a>
+      <a href="#local-food">在地嚮導</a>
+    </nav>
   </div>
 </div>
 
@@ -241,7 +265,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="campus-tools">
   <div class="wrap">
     <h2 class="section-title reveal">校園小工具</h2>
     <p class="section-sub reveal">為校園行政工作寫的自動化小工具。</p>
@@ -286,7 +310,7 @@
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt" id="data-search">
   <div class="wrap">
     <h2 class="section-title reveal">資料查詢網站</h2>
     <p class="section-sub reveal">整合政府開放資料，比官方系統更快更好用。</p>
@@ -395,6 +419,7 @@
           <li><a href="/software">數位學習軟體導入</a></li>
           <li><a href="/knowledge">知識庫</a></li>
           <li><a href="/insights">教育科技觀察</a></li>
+          <li><a href="/tools">資源分享</a></li>
           <li><a href="/faq">常見問題</a></li>
         </ul>
       </div>
