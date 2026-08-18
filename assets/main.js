@@ -64,6 +64,15 @@ if (toggle && nav) {
   }
   sync();
   window.addEventListener('resize', sync);
+  /* 只在 load 與 resize 跑不夠：自架字型是 font-display:swap，換字型那一刻表格寬度會變，
+     載入當下量到「沒溢出」的表格，字型換上來之後就溢出了，卻不會再被檢查一次
+     （2026-08-18 用 axe 掃線上站抓到，只有部分頁面、部分時機會中）。
+     補上字型就緒與尺寸變化兩個時機。 */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(sync);
+    document.querySelectorAll(sel).forEach(function (el) { ro.observe(el); });
+  }
 })();
 
 // 捲動淡入

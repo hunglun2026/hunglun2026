@@ -10,7 +10,7 @@
       但字形會不一致。改完網站請重跑 sitemap/build-font.py 重新產生子集並升版號。 */
 @font-face {
   font-family: "Noto Sans TC";
-  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=10") format("woff2-variations");
+  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=11") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -98,6 +98,9 @@ body {
 img { max-width: 100%; height: auto; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* 夾在句子中間的內文連結：只靠顏色和內文區分時對比不足 3:1（WCAG 1.4.1），
+   一律加底線。卡片、按鈕、導覽這類本身有外框或背景的連結不套用。 */
+.text-link { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- 無障礙（2026-08-06 稽核後補）---------- */
 
@@ -559,7 +562,7 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 .prose li { margin-bottom: 10px; }
 .prose ul { padding-left: 24px; }
 .breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; }
-.breadcrumb a { color: var(--muted); }
+.breadcrumb a { color: var(--muted); display: inline-block; padding: 5px 4px; margin: -5px -4px; }
 .breadcrumb a:hover { color: var(--accent); }
 
 /* ---------- Tags ---------- */
@@ -960,6 +963,13 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
 }
 .crumbs a { color: var(--muted); }
 .crumbs a:hover { color: var(--accent); }
+/* 點擊區至少 24×24（WCAG 2.5.8）：原本只有 26×19px，手機上難按。
+   用等量的負邊界抵銷內距，畫面上的間距完全不變。 */
+.crumbs a {
+  display: inline-block;
+  padding: 5px 4px;
+  margin: -5px -4px;
+}
 .svc-cta {
   margin-top: 48px;
   padding: 32px;
