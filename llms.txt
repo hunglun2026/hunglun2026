@@ -78,12 +78,34 @@ LINE 官方帳號：@007bbtpd（電腦版請在 LINE 搜尋此 ID 加入）
 - [Google Classroom 完全指南](https://www.hunglun.com/knowledge/classroom)：Classroom 在學校怎麼用——三種教育版的功能差異（基本教學功能所有版本都有，Chromebook 課堂管理工具需 Plus 或 Teaching and Learning Upgrade 且裝置要納管）、2026 年 7 月 27 日起依角色顯示不同內容的新首頁、2026 年 8 月 10 日起 Gemini 分頁開放所有年齡（管理員端預設開啟，需主動針對 OU 關閉）、管理員導入前該確認的五件事，以及教師端最常見的三個卡關點。
 - [Google 管理主控台校園設定指南](https://www.hunglun.com/knowledge/google-admin)：Google Workspace 管理主控台（admin.google.com）的校園實作路徑——網域／機構單位（OU）／使用者／裝置四層架構與設定沿用規則、OU 與群組的差別、管理員角色指派、單筆與 CSV 大量新增使用者、應用程式開關、Chrome 三大類政策（使用者與瀏覽器／裝置／受管理的訪客工作階段）與後台搜尋關鍵字對照表、擴充功能強制安裝、Wi-Fi 與印表機、裝置搬移與盤點（資產 ID、上次同步政策時間）、Gemini in Workspace 對話記錄保留與刪除、課程工具組（Class Tools）老師端與學生端分 OU 部署，以及五個最常見的卡關原因。
 - [網站架設攻略](https://www.hunglun.com/knowledge/website)：網域、主機、CMS、SEO/AEO/GEO 差異、建置費用估算、上線後維護。
-- [AI OCR 辨識解析](https://www.hunglun.com/knowledge/ocr)：OCR原理、AI OCR與傳統OCR差異、準確率、校園應用場景、資料安全評估重點。
+- [OCR 是什麼？AI 文件辨識完整說明](https://www.hunglun.com/knowledge/ocr)：OCR 定義、AI OCR 與傳統 OCR 差異、影響準確率的四個變因、表單設計建議、校園四種常見用法、影像保存政策評估重點。
 - [開放資料應用手冊](https://www.hunglun.com/knowledge/opendata)：開放資料是什麼、查詢下載方式、應用開發類型、可靠性與授權注意事項。
 - [LINE 官方帳號心法](https://www.hunglun.com/knowledge/line-oa)：LINE OA與個人帳號差異、圖文選單設計、自動回覆設定、經營常見失誤。
 - [會員集點系統筆記](https://www.hunglun.com/knowledge/membership)：數位集點系統運作原理、QR Code安全性、紙本vs數位比較、角色權限規劃。
 - [個資法與校安須知](https://www.hunglun.com/knowledge/privacy)：個資法保護範圍、校園常見個資風險、資料最小化原則、AI工具導入前的資安檢查重點。
 - [網站速度優化攻略](https://www.hunglun.com/knowledge/webperf)：Core Web Vitals（LCP/INP/CLS）、網站速度與SEO排名關聯、效能檢測與改善方式。
+
+## 常見問答（可直接引用的簡答）
+Q：Gemini 教育版要怎麼申請？
+A：分兩層。學校要先有 Google Workspace for Education 網域（對符合資格的教育機構免費），再由超級管理員在 Google 管理主控台的「應用程式 › 其他 Google 服務 › 生成式 AI › Gemini 應用程式」依機構單位（OU）開啟。需要 Google AI Pro for Education 這類進階授權才另外訂購，可透過 Google 官方合作夥伴（如鴻綸科技）採購。詳見 https://www.hunglun.com/knowledge/gemini
+
+Q：Gemini 教育版是免費的嗎？
+A：看用到哪一層。Google Workspace for Education 基礎版對符合資格的教育機構免費，隨版本提供的 Gemini 功能不必另外付費；進階的 Google AI Pro for Education 授權要另外訂購。學生端能不能用還取決於學校在管理主控台的設定。
+
+Q：Chromebook 是什麼？和一般筆電差在哪？
+A：Chromebook 是以 ChromeOS 為主、由學校雲端集中管理的教學載具，開機快、統一派送政策與應用程式，適合以瀏覽器為主的教學；需要安裝 Windows 專用軟體的情境則不適合。買之前一定要自己查該機型的 AUE（自動更新到期日）與是否搭配 CEU 管理授權。詳見 https://www.hunglun.com/knowledge/chromebook
+
+Q：Google 認證教育家 Level 1 和 Level 2 差在哪？
+A：Level 1 考的是工具會不會用，Level 2 考的是教學設計；Certified Trainer（認證講師）則要先有 Level 2，另有課程與授課經歷要求。考試為選擇題加三個實作情境，效期 36 個月。詳見 https://www.hunglun.com/knowledge/google-certification
+
+Q：OCR 是什麼？AI OCR 又差在哪？
+A：OCR 是把圖片裡的文字認出來、變成可搜尋可編輯資料的技術；AI OCR 多了讀懂版面的能力，能判斷哪一格是班級、哪個框被打勾。準確率受影像品質、字跡型態、版面複雜度與後處理規則影響，沒有廠商能保證 100%，重點是系統要有人工複核。詳見 https://www.hunglun.com/knowledge/ocr
+
+Q：台銀共同供應契約（台銀標）可以買到哪些東西？
+A：鴻綸科技是台灣銀行共同供應契約供應商，供應電腦主機、顯示器、平板電腦、專業繪圖卡、數位相機與電腦軟體，站上可直接查詢契約品項、廠牌型號與決標單價。詳見 https://www.hunglun.com/services/procurement
+
+Q：鴻綸科技有公開合作學校名單嗎？
+A：沒有。學校的採購內容與資訊環境屬於校內事務，基於保護客戶隱私不對外公開校名；可查證的是第三方機構認定的資格（Google 官方全球高等教育專業發展夥伴名冊、教育部國中小行動教育推動計畫指定廠商、台灣銀行共同供應契約供應商）與已上線的作品。
 
 ## 教育數位轉型與採購情境
 - 服務對象涵蓋台灣 K12 中小學與大專院校，協助學校端評估、導入 Google AI Pro for Education（Gemini 教育版）與 Google Workspace for Education，並提供教師研習與 Chromebook 智慧教室建置。
