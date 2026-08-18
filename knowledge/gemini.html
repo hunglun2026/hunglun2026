@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
-<title>Gemini 教育版怎麼用？學校導入、學生使用與管理設定｜鴻綸科技</title>
-<meta name="description" content="Gemini 教育版在學校怎麼用：學生與老師實際能做什麼、管理員要設定什麼、和個人版差在哪。2026 年 8 月 10 日起 Classroom 的 Gemini 開放給所有年齡的 K-12 與高教學生，Fundamentals／Standard／Plus 皆支援。含方案比較與資料訓練政策。">
+<title>Gemini 教育版怎麼用？申請開通、學生使用與管理設定｜鴻綸科技</title>
+<meta name="description" content="Gemini 教育版在學校怎麼用、怎麼申請開通：學生與老師實際能做什麼、管理員要設定什麼、和個人版差在哪。2026 年 8 月 10 日起 Classroom 的 Gemini 開放給所有年齡的 K-12 與高教學生，Fundamentals／Standard／Plus 皆支援。含方案比較與資料訓練政策。">
 <link rel="canonical" href="https://www.hunglun.com/knowledge/gemini">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gemini 教育版怎麼用｜鴻綸科技">
@@ -100,6 +100,22 @@
     },
     {
       "@type": "Question",
+      "name": "Gemini 教育版要怎麼申請？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分兩層：學校要先有 Google Workspace for Education 網域（對符合資格的教育機構免費），再由超級管理員在管理主控台的「應用程式 › 其他 Google 服務 › 生成式 AI › Gemini 應用程式」依機構單位開啟。要用到 Google AI Pro for Education 這類進階授權才需要另外訂購，可透過 Google 官方合作夥伴採購。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gemini 教育版是免費的嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "要看用到哪一層。Google Workspace for Education 的基礎版對符合資格的教育機構免費，隨版本提供的 Gemini 功能就不必另外付費；進階的 Google AI Pro for Education 授權則要另外訂購。學生端能不能用、能用到什麼程度，還要看學校在管理主控台怎麼設定。"
+      }
+    },
+    {
+      "@type": "Question",
       "name": "學校/公司要導入 Gemini，該怎麼開始？",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -114,10 +130,10 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Gemini 教育版怎麼用？學校導入、學生使用與管理設定",
-  "description": "Gemini 教育版在學校怎麼用：學生與老師實際能做什麼、管理員要設定什麼、和個人版差在哪。含 2026 年 8 月 10 日起 Classroom 的 Gemini 開放所有年齡的變更說明。",
+  "description": "Gemini 教育版在學校怎麼用、怎麼申請開通：學生與老師實際能做什麼、管理員要設定什麼、和個人版差在哪。含 2026 年 8 月 10 日起 Classroom 的 Gemini 開放所有年齡的變更說明。",
   "image": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
   "datePublished": "2026-07-27",
-  "dateModified": "2026-08-06",
+  "dateModified": "2026-08-18",
   "author": {
     "@type": "Person",
     "name": "鴻綸科技 Steve",
@@ -241,6 +257,20 @@
 
 <section class="section">
   <div class="wrap" style="max-width:920px;">
+    <h2 class="section-title reveal">Gemini 教育版怎麼申請與開通</h2>
+    <p>學校端最常問的第一句是「要去哪裡申請」。實際上分成兩層，先確認自己卡在哪一層：</p>
+    <ul class="feature-list" style="margin-top:16px;">
+      <li><strong>第一層：學校要先有 Google Workspace for Education 網域</strong>。沒有網域就沒有教育版可談，要先向 Google 申請機構帳號並完成網域驗證，這一步是免費的（Education Fundamentals 對符合資格的教育機構免費）。</li>
+      <li><strong>第二層：在管理主控台開啟 Gemini 服務</strong>。有網域之後，超級管理員到 <a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a> 的「應用程式 › 其他 Google 服務」找到<strong>生成式 AI › Gemini 應用程式</strong>，依機構單位（OU）決定哪些人可以用。設定方式與 OU 規劃見 <a href="/knowledge/google-admin">Google 管理主控台校園設定指南</a>。</li>
+      <li><strong>要用到付費功能才需要買授權</strong>：Gemini 的基本使用隨 Workspace 版本提供，Google AI Pro for Education 這類進階授權才需要另外訂購，可透過 Google 官方合作夥伴採購。</li>
+    </ul>
+    <p>開放給學生之前建議先決定兩件事：<strong>哪些年段開放</strong>，以及<strong>對話記錄保留多久</strong>（在「生成式 AI › Gemini in Workspace › 對話記錄與刪除」設定）。這兩項一旦學生已經開始使用再回頭改，說明成本會高很多。</p>
+    <p>各功能實際在貴校網域何時出現，以 Google 推送到該網域的通知為準；版本與授權內容依 Google 官方公告為準。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:920px;">
     <h2 class="section-title reveal">方案比較：個人版 vs 教育版／企業版</h2>
     <p class="section-sub reveal">機構導入前最該確認的差異：資料會不會被拿去訓練模型。</p>
     <div class="spec-table-wrap">
@@ -344,6 +374,14 @@
       <div class="faq-a">不建議。判斷標準是：只要對話內容會出現學生姓名、成績、作業內容或任何可識別個資，就應該用學校帳號登入的教育版，因為個人帳號適用消費者條款，資料處理方式與機構版不同。純粹查資料或練習下指令則沒有這個顧慮。</div>
     </details>
     <details class="faq-item reveal">
+      <summary>Gemini 教育版要怎麼申請？</summary>
+      <div class="faq-a">分兩層：學校要先有 Google Workspace for Education 網域（對符合資格的教育機構免費），再由超級管理員在管理主控台的「應用程式 › 其他 Google 服務 › 生成式 AI › Gemini 應用程式」依機構單位開啟。要用到 Google AI Pro for Education 這類進階授權才需要另外訂購，可透過 Google 官方合作夥伴採購。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>Gemini 教育版是免費的嗎？</summary>
+      <div class="faq-a">要看用到哪一層。Google Workspace for Education 的基礎版對符合資格的教育機構免費，隨版本提供的 Gemini 功能就不必另外付費；進階的 Google AI Pro for Education 授權則要另外訂購。學生端能不能用、能用到什麼程度，還要看學校在管理主控台怎麼設定。</div>
+    </details>
+    <details class="faq-item reveal">
       <summary>學校/公司要導入 Gemini，該怎麼開始？</summary>
       <div class="faq-a">建議流程：1）先確認貴單位是否已有 Google Workspace（for Education 或企業版）帳號體系；2）評估需要的使用人數與功能需求；3）向認證代理夥伴（如鴻綸科技）洽詢方案與報價；4）規劃帳號開通、教師/員工使用培訓與導入時程。鴻綸科技是 Google for Education Professional Development Partner，可協助教育端從評估到教師培訓的完整流程。</div>
     </details>
@@ -379,8 +417,8 @@
 
 <section class="section">
   <div class="wrap" style="text-align:center;">
-    <h2 class="section-title reveal">想了解正式報價？</h2>
-    <p class="section-sub reveal">告訴我們貴單位的規模與需求，我們提供最合適的方案。</p>
+    <h2 class="section-title reveal">想知道實際要多少錢？</h2>
+    <p class="section-sub reveal">告訴我們單位規模與預計使用人數，我們算給你看。</p>
     <a class="btn btn-primary reveal" href="/contact">聯絡我們</a>
   </div>
 </section>
