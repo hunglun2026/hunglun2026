@@ -28,6 +28,8 @@
   Cache-Control: public, max-age=31536000, immutable
 /assets/landing.css
   Cache-Control: public, max-age=31536000, immutable
+/assets/tour.css
+  Cache-Control: public, max-age=31536000, immutable
 /assets/effects.css
   Cache-Control: public, max-age=31536000, immutable
 /assets/main.js
