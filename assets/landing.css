@@ -57,7 +57,6 @@ body.landing { overflow-x: hidden; }
   max-width: 640px;
   line-height: 1.8;
 }
-.l-freshness { margin-top: 18px; font-size: 12px; color: var(--muted); letter-spacing: 0.05em; font-family: var(--mono); }
 .l-hero-cta {
   display: inline-block;
   margin-top: 28px;
@@ -126,14 +125,6 @@ body.landing { overflow-x: hidden; }
 .l-role-num { font-size: clamp(3.6rem, 9vw, 5.5rem); font-weight: 800; margin-bottom: 20px; }
 .l-role-num svg { color: var(--accent); stroke-width: 1.4; }
 .l-role-sub { font-size: 13px; color: var(--muted); line-height: 1.8; max-width: 320px; }
-
-/* 頁面巡覽變體：較寬畫面比例＋大圖示，用於「效果首頁」7 段巡覽 */
-.l-device-frame--wide { aspect-ratio: 16/10; }
-.l-role-panel--tour .l-role-num { margin-bottom: 24px; }
-.l-role-panel--tour .l-role-num svg { width: clamp(72px, 11vw, 116px); height: clamp(72px, 11vw, 116px); }
-.l-role-panel--tour { padding: 0; }
-.l-tour-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.svc-icon svg { width: 44px; height: 44px; color: var(--accent); stroke-width: 1.4; }
 .svc-photo { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 14px; margin-bottom: 6px; }
 .l-service-card { padding: 16px 16px 20px; }
 .l-service-card h3 { margin-bottom: 0; }
@@ -148,7 +139,6 @@ body.landing { overflow-x: hidden; }
 @media (max-width: 860px) {
   .l-device-sticky { grid-template-columns: 1fr; padding-top: 90px; gap: 24px; }
   .l-device-frame { aspect-ratio: 1/1; }
-  .l-device-frame--wide { aspect-ratio: 4/3; }
   .l-device-section { height: 220vh; }
 }
 
@@ -190,7 +180,6 @@ body.landing { overflow-x: hidden; }
 .l-service-card:hover h3 { color: var(--accent); }
 .l-service-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 20px 40px -18px var(--glow); }
 .l-service-card.primary { background: linear-gradient(160deg, var(--card-hover), var(--card)); }
-.l-service-tag { display: inline-block; font-size: 11px; letter-spacing: 0.1em; color: var(--accent); font-family: var(--mono); margin-bottom: 12px; }
 .l-service-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
 .l-service-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
 
@@ -202,16 +191,6 @@ body.landing { overflow-x: hidden; }
 .l-tool-chip:hover { border-color: var(--accent); text-decoration: none; }
 .l-tool-chip .l-tool-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; display: block; }
 .l-tool-chip .l-tool-desc { font-size: 0.8rem; color: var(--muted); }
-
-/* ---------- COMPARE TABLE ---------- */
-.l-compare-section { padding: 64px 6vw 32px; max-width: 960px; margin: 0 auto; text-align: center; }
-.l-compare-table-wrap { margin-top: 28px; overflow-x: auto; border-radius: 16px; border: 1px solid var(--line); }
-.l-compare-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
-.l-compare-table th, .l-compare-table td { padding: 14px 18px; border-bottom: 1px solid var(--line); white-space: nowrap; }
-.l-compare-table th { background: var(--bg-soft); color: var(--accent); font-weight: 700; }
-.l-compare-table tr:last-child td { border-bottom: none; }
-.l-compare-table td:first-child { color: var(--muted); }
-.l-disclaimer { margin-top: 18px; font-size: 12px; color: var(--muted); }
 
 /* ---------- STAT BANNER ---------- */
 .l-stat-banner { position: relative; height: 70vh; min-height: 480px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -355,8 +334,7 @@ body.landing { overflow-x: hidden; }
 }
 /* Safari 仍會畫預設的三角形 marker，要另外關掉 */
 .l-svc-cat > summary::-webkit-details-marker { display: none; }
-.l-svc-cat > summary:hover .l-cat-t,
-.l-svc-cat[open] > summary .l-cat-t { color: var(--accent); }
+.l-svc-cat > summary:hover .l-cat-t, .l-svc-cat[open] > summary .l-cat-t { color: var(--accent); }
 /* 鍵盤 Tab 到分類時要看得出焦點在哪（summary 預設外框被 list-style 清掉後會很不明顯） */
 .l-svc-cat > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 18px; }
 .l-cat-t { grid-column: 1; grid-row: 1; font-size: 1.15rem; font-weight: 500; transition: color 0.3s ease; }

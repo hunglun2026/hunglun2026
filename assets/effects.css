@@ -11,7 +11,6 @@
 }
 
 .effect-card .card-body { gap: 10px; display: flex; flex-direction: column; }
-.effect-replay { align-self: flex-start; margin-top: 4px; }
 
 /* 1. 捲動淡入（用 CSS animation 而非 transition：transition 在短時間內重複觸發時，
    淡出還沒播完就被下一次淡入蓋過，等於看不到效果；animation 一移除 class 就會瞬間

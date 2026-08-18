@@ -310,15 +310,6 @@ main:focus { outline: none; }
   line-height: 1.85;
   font-weight: 300;
 }
-.hero-badge {
-  display: inline-block;
-  margin-bottom: 28px;
-  color: var(--accent);
-  font-size: 0.78rem;
-  letter-spacing: 0.35em;
-  font-weight: 500;
-  word-break: keep-all;
-}
 .hero-cta { margin-top: 36px; display: flex; gap: 24px; justify-content: flex-start; flex-wrap: wrap; align-items: center; }
 
 /* ---------- Buttons ---------- */
@@ -339,8 +330,7 @@ main:focus { outline: none; }
 .btn-primary:hover { opacity: 0.85; color: #fff; }
 /* 深色模式的 --accent 是淺藍 #7fa8d9，白字壓上去只有 2.46:1（要 4.5:1），
    實際看是「淺藍底白字」很吃力。改成深色文字，對比拉到約 7:1。 */
-:root[data-theme="dark"] .btn-primary,
-:root[data-theme="dark"] .btn-primary:hover { color: #10243d; }
+:root[data-theme="dark"] .btn-primary, :root[data-theme="dark"] .btn-primary:hover { color: #10243d; }
 .btn-ghost { background: none; border: none; border-bottom: 1px solid var(--muted); color: var(--muted); padding: 15px 0; border-radius: 0; }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 .btn-sm { padding: 9px 20px; font-size: 0.86rem; }
@@ -427,15 +417,11 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 .card-visual svg { width: 44px; height: 44px; color: var(--accent); stroke-width: 1.4; }
 .card-visual img { width: 108px; height: 108px; object-fit: contain; }
 /* 情境照片（非圖示）淡淡灰階融入米白背景，hover/靠近卡片時恢復原色 */
-.card-visual img.photo,
-.svc-photo,
-.l-tour-photo {
+.card-visual img.photo, .svc-photo {
   filter: grayscale(15%) contrast(97%);
   transition: filter 0.5s ease;
 }
-.card:hover .card-visual img.photo,
-.card:hover .svc-photo,
-.tour-zoom-panel:hover .l-tour-photo { filter: grayscale(0%) contrast(100%); }
+.card:hover .card-visual img.photo, .card:hover .svc-photo { filter: grayscale(0%) contrast(100%); }
 .card-visual img.food-photo { width: 100%; height: 100%; object-fit: cover; }
 /* 情境照片型卡片（活動剪影等）：照片填滿視覺區，不用圖示的 76px 尺寸 */
 .card-visual.photo-visual { height: 190px; padding: 0; overflow: hidden; }
@@ -472,7 +458,6 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 .v-blue, .v-indigo, .v-cyan, .v-teal, .v-navy { background: var(--bg-soft); }
 .card-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
 .card-body h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 8px; }
-.h3-icon { width: 18px; height: 18px; vertical-align: -3px; color: var(--accent); stroke-width: 1.6; margin-right: 2px; }
 .card-body h3 a { color: var(--text); }
 .card-body .tagline { color: var(--accent); font-size: 0.85rem; margin-bottom: 10px; }
 .card-body p { color: var(--muted); font-size: 0.92rem; flex: 1; }
@@ -561,9 +546,6 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 .prose p, .prose li { color: var(--text-body); }
 .prose li { margin-bottom: 10px; }
 .prose ul { padding-left: 24px; }
-.breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; }
-.breadcrumb a { color: var(--muted); display: inline-block; padding: 5px 4px; margin: -5px -4px; }
-.breadcrumb a:hover { color: var(--accent); }
 
 /* ---------- Tags ---------- */
 .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
@@ -593,20 +575,8 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 .contact-card p { color: var(--muted); font-size: 0.95rem; }
 .contact-card a:hover h3 { color: var(--accent); }
 .contact-card a:hover p { text-decoration: underline; }
-
-/* ---------- Partner badge ---------- */
-.badge-chip {
-  display: inline-block;
-  background: #fff;
-  padding: 14px 22px;
-  line-height: 0;
-  border: 1px solid var(--line);
-}
-.badge-chip img { height: 52px; width: auto; }
-@media (max-width: 480px) { .badge-chip img { height: 42px; } }
-.badge-chip-lg { padding: 20px 28px; }
-.badge-chip-lg img { height: 150px; }
-@media (max-width: 480px) { .badge-chip-lg img { height: 110px; } }
+@media (max-width: 480px) { }
+@media (max-width: 480px) { }
 /* ---------- Lightbox（點圖放大，見 main.js） ---------- */
 .lightbox-overlay {
   position: fixed;
@@ -723,8 +693,7 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 /* 頁尾兩欄清單共用同一套節奏：小標題 → 髮絲線分隔的列，hover 時淡底＋往右挪一點 */
 /* 2026-08-06：頁尾欄位標題原本是 <h4>，但前文只到 h2/h3，標題層級跳級（WCAG 1.3.1）。
    已改成 <h2>，樣式沿用原本的視覺（小字、寬字距），外觀不變。 */
-.footer-grid h2,
-.footer-grid h4 {
+.footer-grid h2, .footer-grid h4 {
   color: var(--muted-faint);
   font-size: 0.7rem;
   font-weight: 400;
@@ -848,7 +817,6 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 .contact-fab a.fab-mail img { width: 24px; height: 18px; }
 @media (max-width: 480px) {
   .header-visit-counter { display: none; }
-  .hero-badge { letter-spacing: 0.12em; }
   .contact-fab { right: 12px; bottom: 16px; padding: 6px 8px; gap: 8px; }
   .fab-label { display: none; }
   .contact-fab a { width: 36px; height: 36px; }
@@ -875,7 +843,7 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
       加總子元素寬度會低估——brand 的 margin-right:auto 會把剩餘空間吃掉，量不出真正餘裕。
    2. **必須模擬線上的瀏覽計數器**：本機沒連到 Worker 時顯示「--」只有 59px，
       線上是六位數 98px，差 39px。只用本機測會低估而在線上換行。
-      測法：pg.evaluate 把 #visitCount 的內容換成 '414,003' 再量。
+      測法：pg.evaluate 把 #visitCount 的內容換成 '414, 003' 再量。
    3. .header-inner 有 max-width:1600px 硬上限，**視窗再寬可用寬度也只有 1600px**。
       所以斷點必須 <1600 且需求值要明顯小於 1600，否則寬螢幕照樣換行。
    ⚠️ 計數器數字還會長：破百萬變七位數時會再寬約 10px，目前餘裕 19px 夠用，
@@ -934,8 +902,7 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 img.logo-dark { display: none; }
 :root[data-theme="dark"] img.logo-light { display: none; }
 :root[data-theme="dark"] img.logo-dark { display: block; }
-:root[data-theme="dark"] .brand-logo,
-:root[data-theme="dark"] .footer-logo-img {
+:root[data-theme="dark"] .brand-logo, :root[data-theme="dark"] .footer-logo-img {
   background-image: url("/assets/hunglun-logo-dark-header.webp?v=5");
 }
 
@@ -992,30 +959,6 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   .svc-pager { flex-direction: column; gap: 10px; }
   .svc-cta { padding: 22px; }
 }
-
-/* ---------- 台銀標設備類別卡 ---------- */
-.bot-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-  margin: 22px 0 8px;
-}
-.bot-cat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
-  border: 1px solid var(--line);
-  background: var(--card);
-  color: var(--text);
-  transition: border-color 0.2s, transform 0.2s;
-}
-.bot-cat:hover { border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
-.bot-cat img { width: 100%; height: 96px; object-fit: contain; }
-.bot-cat span { font-size: 0.86rem; text-align: center; line-height: 1.5; }
-.bot-cat--text { justify-content: center; min-height: 130px; background: var(--bg-soft); }
-.prose .bot-grid a { color: var(--text); }
 /* 台銀標類別卡：產品圖多為白底，固定白色底才不會在深色模式浮一塊 */
 .card-visual.bot-visual { height: 170px; padding: 16px; background: #fff; }
 .card-visual.bot-visual img { width: 100%; height: 100%; object-fit: contain; }
@@ -1067,8 +1010,7 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
 .bot-table-scroll { overflow-x: auto; border: 1px solid var(--line); }
 /* min-width 讓窄螢幕改成整張表橫向捲動，而不是把欄位壓成一行兩個字 */
 .bot-table-scroll table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 0.88rem; }
-.bot-table-scroll th,
-.bot-table-scroll td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.bot-table-scroll th, .bot-table-scroll td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
 .bot-table-scroll thead th {
   position: sticky;
   top: 0;
@@ -1091,30 +1033,6 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   .bot-count::after { content: "（表格可左右滑動）"; }
 }
 :target { scroll-margin-top: 120px; }
-
-/* ---------- 台銀標設備圖示 ---------- */
-.bot-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-  margin: 20px 0 8px;
-}
-.bot-figure { margin: 0; }
-.bot-figure img {
-  display: block;
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
-  padding: 10px;
-}
-.bot-figure figcaption {
-  margin-top: 8px;
-  text-align: center;
-  font-size: 0.84rem;
-  color: var(--muted);
-}
 
 /* ---------- Google for Education 產品家族卡 ---------- */
 .gfe-card {
@@ -1183,7 +1101,6 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   .event-item:last-child { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
 }
 
-
 /* ---------- 知識庫索引：分類篩選 + 緊湊清單 ----------
    19 篇用卡片排要滑 5 個螢幕，改成清單後一屏半看完；分類用 chips 篩選，
    預設全部展開（索引頁的價值就是能一次掃視所有標題）。 */
@@ -1228,8 +1145,7 @@ a.svc-card:hover .svc-more { transform: translateX(3px); }
   border-collapse: collapse;
   font-size: 0.9rem;
 }
-.spec-table th,
-.spec-table td {
+.spec-table th, .spec-table td {
   padding: 12px 14px;
   border: 1px solid var(--line);
   text-align: left;
