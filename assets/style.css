@@ -191,7 +191,7 @@ main:focus { outline: none; }
   width: 454px;           /* 90px × 5.04 */
   max-width: 100%;
   aspect-ratio: 907 / 180;
-  background: url("/assets/hunglun-logo-company-light.webp?v=4") no-repeat left center;
+  background: url("/assets/hunglun-logo-company-light.webp?v=5") no-repeat left center;
   background-size: contain;
 }
 .header-visit-counter {
@@ -779,7 +779,7 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
   max-width: 100%;
   aspect-ratio: 907 / 180;
   margin-bottom: 18px;
-  background: url("/assets/hunglun-logo-company-light.webp?v=4") no-repeat left center;
+  background: url("/assets/hunglun-logo-company-light.webp?v=5") no-repeat left center;
   background-size: contain;
 }
 .footer-logo p { line-height: 1.8; margin-bottom: 20px; }
@@ -923,7 +923,7 @@ img.logo-dark { display: none; }
 :root[data-theme="dark"] img.logo-light { display: none; }
 :root[data-theme="dark"] img.logo-dark { display: block; }
 :root[data-theme="dark"] .brand-logo, :root[data-theme="dark"] .footer-logo-img {
-  background-image: url("/assets/hunglun-logo-dark-header.webp?v=5");
+  background-image: url("/assets/hunglun-logo-dark-header.webp?v=6");
 }
 
 /* ---------- 服務項目：可點擊卡片（點進去看該服務的獨立說明頁） ---------- */
