@@ -24,8 +24,8 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=12" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=44">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=14" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=48">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,6 +120,43 @@
   ]
 }
 </script>
+<style>
+/* /contact 詢問表單專用樣式。全站 style.css 沒有任何表單樣式，為一頁去升全站版號
+   不划算，比照 knowledge/google-admin 與 tools/training 的先例放頁內。 */
+.ct-form { max-width: 720px; margin: 36px auto 0; display: flex; flex-direction: column; gap: 18px; }
+.ct-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.ct-field { display: flex; flex-direction: column; gap: 7px; }
+.ct-label { font-size: 0.92rem; color: var(--text); font-weight: 500; }
+.ct-req { font-style: normal; font-size: 0.76rem; color: var(--muted-faint); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; margin-left: 4px; vertical-align: 1px; }
+.ct-form input, .ct-form select, .ct-form textarea {
+  width: 100%; box-sizing: border-box;
+  font-family: inherit; font-size: 1rem; line-height: 1.6; color: var(--text);
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  padding: 11px 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.ct-form textarea { resize: vertical; min-height: 130px; }
+.ct-form input::placeholder, .ct-form textarea::placeholder { color: var(--muted-faint); }
+.ct-form input:focus, .ct-form select:focus, .ct-form textarea:focus {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow);
+}
+.ct-form input:user-invalid, .ct-form textarea:user-invalid { border-color: #c0392b; }
+/* 蜜罐：不能用 display:none，有些機器人會跳過看不見的欄位；移出畫面外但仍在 DOM 裡 */
+.ct-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.ct-actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.ct-actions .btn { min-width: 160px; }
+.ct-actions .btn[disabled] { opacity: 0.55; cursor: not-allowed; }
+.ct-note { margin: 0; font-size: 0.82rem; color: var(--muted-faint); line-height: 1.7; }
+.ct-note a { text-decoration: underline; text-underline-offset: 2px; }
+.ct-status { margin: 0; font-size: 0.95rem; line-height: 1.7; min-height: 1.7em; }
+.ct-status.ok { color: var(--accent); font-weight: 500; }
+.ct-status.err { color: #c0392b; }
+.cf-turnstile { min-height: 65px; }
+@media (max-width: 640px) {
+  .ct-row { grid-template-columns: 1fr; }
+  .ct-actions .btn { width: 100%; text-align: center; }
+}
+</style>
 </head>
 <body>
 
@@ -203,11 +240,78 @@
   </div>
 </section>
 
-<section class="section alt">
-  <div class="wrap" style="text-align:center;">
-    <h2 class="section-title reveal" style="text-align:center;">或用線上表單留言</h2>
-    <p class="section-sub reveal" style="text-align:center;margin-left:auto;margin-right:auto;">不方便打電話的話，填表單留下需求，我們會在上班時間回覆。</p>
-    <a class="btn btn-primary" href="https://forms.gle/gMtoNUCioecYyQ1N7" target="_blank" rel="noopener">前往線上諮詢表單 →</a>
+<section class="section alt" id="form">
+  <div class="wrap">
+    <h2 class="section-title reveal" style="text-align:center;">線上詢問表單</h2>
+    <p class="section-sub reveal" style="text-align:center;margin-left:auto;margin-right:auto;">不方便打電話的話，填在這裡就好。我們會在上班時間以電子郵件回覆，通常一個工作天內。</p>
+
+    <form class="ct-form reveal" id="contactForm" novalidate>
+      <div class="ct-row">
+        <label class="ct-field">
+          <span class="ct-label">詢問主題</span>
+          <select name="topic" id="ctTopic">
+            <option value="Google 授權與訂閱">Google 授權與訂閱（Workspace／AI Pro／Gemini）</option>
+            <option value="校園研習與認證培訓">校園研習與認證培訓</option>
+            <option value="Chromebook 與設備建置">Chromebook 與設備建置</option>
+            <option value="台銀標採購">台銀標採購</option>
+            <option value="數位學習軟體">數位學習軟體（Edpuzzle／Kami／Padlet 等）</option>
+            <option value="網站與 AI 工具開發">網站與 AI 工具開發</option>
+            <option value="其他">其他</option>
+          </select>
+        </label>
+        <label class="ct-field">
+          <span class="ct-label">單位／學校</span>
+          <input type="text" name="org" id="ctOrg" autocomplete="organization" placeholder="例：台南市新營國小">
+        </label>
+      </div>
+
+      <div class="ct-row">
+        <label class="ct-field">
+          <span class="ct-label">姓名 <em class="ct-req">必填</em></span>
+          <input type="text" name="name" id="ctName" required autocomplete="name" maxlength="100">
+        </label>
+        <label class="ct-field">
+          <span class="ct-label">電子信箱 <em class="ct-req">必填</em></span>
+          <input type="email" name="email" id="ctEmail" required autocomplete="email" maxlength="200" placeholder="回覆會寄到這個信箱">
+        </label>
+      </div>
+
+      <label class="ct-field">
+        <span class="ct-label">聯絡電話</span>
+        <input type="tel" name="phone" id="ctPhone" autocomplete="tel" maxlength="60" placeholder="方便的話留一組，急件我們直接回電">
+      </label>
+
+      <label class="ct-field">
+        <span class="ct-label">詢問內容 <em class="ct-req">必填</em></span>
+        <textarea name="message" id="ctMessage" rows="6" required maxlength="5000" placeholder="說明目前的狀況與想達到的目標，例如：全校 24 班想導入 Chromebook，想先了解授權與經費怎麼估。"></textarea>
+      </label>
+
+      <!-- 蜜罐：給機器人填的，真人看不到也不會對到焦 -->
+      <div class="ct-hp" aria-hidden="true">
+        <label>請不要填寫這個欄位
+          <input type="text" name="website" id="ctWebsite" tabindex="-1" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="cf-turnstile" id="ctTurnstile" data-sitekey="0x4AAAAAAEYiCw-osrNotelv" data-language="zh-tw" data-theme="auto"></div>
+      <script>
+        /* Turnstile 的 auto 看的是系統偏好，不是本站的深淺色開關，兩者不一致時
+           元件會在深色頁面上出現一塊白的。這裡在 api.js 載入前先改成跟本站一致。 */
+        (function () {
+          var el = document.getElementById('ctTurnstile');
+          if (!el) return;
+          var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+          el.setAttribute('data-theme', dark ? 'dark' : 'light');
+        })();
+      </script>
+
+      <div class="ct-actions">
+        <button type="submit" class="btn btn-primary" id="ctSubmit">送出詢問</button>
+        <p class="ct-note">送出即表示同意我們以您留下的聯絡方式回覆此次詢問。內容僅用於回覆本次需求，不會另作他用，詳見<a href="/knowledge/privacy">隱私權政策</a>。</p>
+      </div>
+
+      <p class="ct-status" id="ctStatus" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -257,5 +361,86 @@
 
 
 <script src="/assets/main.js?v=18"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+/* /contact 表單送出。走同網域的 /api/contact，所以沒有 CORS 問題；
+   Turnstile 的 secret 與 Apps Script 網址都只在伺服器端，前端只有 site key。 */
+(function () {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+  var btn = document.getElementById('ctSubmit');
+  var status = document.getElementById('ctStatus');
+  var sending = false;
+
+  function say(msg, kind) {
+    status.textContent = msg;
+    status.className = 'ct-status' + (kind ? ' ' + kind : '');
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (sending) return;
+
+    var data = {
+      topic: form.topic.value,
+      org: form.org.value,
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value,
+      website: form.website.value,
+      page: location.pathname + location.search
+    };
+
+    if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
+      say('姓名、電子信箱與詢問內容是必填的。', 'err');
+      return;
+    }
+
+    // Turnstile 的 token 放在它自己插進來的隱藏欄位裡
+    var tokenEl = form.querySelector('[name="cf-turnstile-response"]');
+    data.token = tokenEl ? tokenEl.value : '';
+    if (!data.token) {
+      say('人機驗證還在載入，請等一下再送出。', 'err');
+      return;
+    }
+
+    sending = true;
+    btn.disabled = true;
+    say('送出中…');
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      return r.json().catch(function () { return { ok: false, error: 'bad_response' }; });
+    }).then(function (out) {
+      if (out && out.ok) {
+        form.reset();
+        say('收到了，謝謝您。我們會在上班時間以電子郵件回覆，通常一個工作天內。', 'ok');
+        btn.textContent = '已送出';
+        return;
+      }
+      var map = {
+        missing_required: '姓名、電子信箱與詢問內容是必填的。',
+        bad_email: '電子信箱的格式看起來不對，請再確認一次。',
+        message_too_short: '詢問內容再多寫幾個字，我們才知道怎麼幫您。',
+        verify_failed: '人機驗證沒通過，請重新整理頁面再試一次。',
+        no_token: '人機驗證還在載入，請等一下再送出。'
+      };
+      say(map[out && out.error] || '送出失敗了。可以改打 06-6371192，或直接來信 gfeh@hunglun.com。', 'err');
+      sending = false;
+      btn.disabled = false;
+      if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
+    }).catch(function () {
+      say('連線出了問題。可以改打 06-6371192，或直接來信 gfeh@hunglun.com。', 'err');
+      sending = false;
+      btn.disabled = false;
+      if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
+    });
+  });
+})();
+</script>
 </body>
 </html>
