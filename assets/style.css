@@ -10,7 +10,7 @@
       但字形會不一致。改完網站請重跑 sitemap/build-font.py 重新產生子集並升版號。 */
 @font-face {
   font-family: "Noto Sans TC";
-  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=12") format("woff2-variations");
+  src: url("/assets/fonts/hunglun-notosanstc-vf.woff2?v=14") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -191,7 +191,7 @@ main:focus { outline: none; }
   width: 454px;           /* 90px × 5.04 */
   max-width: 100%;
   aspect-ratio: 907 / 180;
-  background: url("/assets/hunglun-logo-company-light.webp?v=4") no-repeat left center;
+  background: url("/assets/hunglun-logo-company-light.webp?v=5") no-repeat left center;
   background-size: contain;
 }
 .header-visit-counter {
@@ -779,7 +779,7 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
   max-width: 100%;
   aspect-ratio: 907 / 180;
   margin-bottom: 18px;
-  background: url("/assets/hunglun-logo-company-light.webp?v=4") no-repeat left center;
+  background: url("/assets/hunglun-logo-company-light.webp?v=5") no-repeat left center;
   background-size: contain;
 }
 .footer-logo p { line-height: 1.8; margin-bottom: 20px; }
@@ -848,7 +848,27 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
       所以斷點必須 <1600 且需求值要明顯小於 1600，否則寬螢幕照樣換行。
    ⚠️ 計數器數字還會長：破百萬變七位數時會再寬約 10px，目前餘裕 19px 夠用，
       但若之後再加主選單項目，務必重新照上面三點量一次。 */
-@media (max-width: 1600px) {
+/* 2026-08-23：原本斷點 1600 等於「1366／1440／1512 這些常見筆電全部吃到漢堡選單」，
+   桌機實質上沒有主選單（Steve 回報「最上面的 bar 都不見」）。改成兩段式：
+   1281–1600 先進「精簡模式」（logo 454→302px、間距與字級收緊）把需求壓下來，
+   真的排不下（≤1280）才收成漢堡。
+   二分法實測（scratchpad/hdr_bisect.py，含六位數計數器）：
+   精簡模式下不換行的最小寬度是 **1211px**，斷點取 1280 留 69px 餘裕。
+   ⚠️ 量的時候三個坑照舊：① 只認 .main-nav 項目的 top 值集合，**不要**看 .header-inner
+      子元素的 top（它們 align-items:center，高度不同 top 本來就不一樣，會誤判成換行）
+      ② 一定要把 #visitCount 換成線上的六位數 ③ .header-inner 有 max-width:1600px */
+@media (max-width: 1600px) and (min-width: 1281px) {
+  .header-inner { gap: 10px; padding: 12px 20px; }
+  .brand-logo { width: 302px; }          /* 60px × 5.04，夥伴徽章仍完整不裁切 */
+  .brand img { max-height: 60px; }
+  .header-visit-counter { font-size: 0.74rem; padding: 4px 10px; margin-right: 6px; }
+  .main-nav { gap: 0; }
+  .main-nav a { padding: 8px 7px; font-size: 0.88rem; }
+  .nav-tools-trigger { padding: 7px 11px; font-size: 0.88rem; }
+  .nav-contact-cta { padding: 7px 12px; font-size: 0.88rem; }
+}
+
+@media (max-width: 1280px) {
   .nav-toggle { display: block; }
   .main-nav {
     display: none;
@@ -903,7 +923,7 @@ img.logo-dark { display: none; }
 :root[data-theme="dark"] img.logo-light { display: none; }
 :root[data-theme="dark"] img.logo-dark { display: block; }
 :root[data-theme="dark"] .brand-logo, :root[data-theme="dark"] .footer-logo-img {
-  background-image: url("/assets/hunglun-logo-dark-header.webp?v=5");
+  background-image: url("/assets/hunglun-logo-dark-header.webp?v=6");
 }
 
 /* ---------- 服務項目：可點擊卡片（點進去看該服務的獨立說明頁） ---------- */
