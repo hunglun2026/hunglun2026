@@ -423,6 +423,36 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap prose">
+    <h2 class="section-title reveal">常見問題</h2>
+      <details class="faq-item reveal">
+        <summary>Google 管理主控台是什麼？學校一定要用嗎？</summary>
+        <div class="faq-a">Google 管理主控台（Admin Console，網址 admin.google.com）是 Google Workspace 網域的後台，用來管理全校的帳號、機構單位、群組、應用程式開關、Chromebook 裝置與各項政策。只要學校申請了 Google Workspace for Education 網域，就一定有這個後台；帳號的建立與刪除、學生能用哪些服務、Chromebook 能不能開無痕模式，全部都在這裡決定。</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>機構單位（OU）和群組有什麼不同？</summary>
+        <div class="faq-a">機構單位（OU）是「政策的容器」，一個使用者或一台裝置同一時間只能屬於一個 OU，設定會由上層 OU 往下沿用；群組是「人的集合」，一個人可以同時屬於多個群組，主要用於群發信件、共用權限與身分驗證。決定「這批人能不能用某個功能、Chromebook 有什麼限制」用 OU；決定「這批人一起收信、一起被授權某份文件」用群組。多數學校的正確作法是先把 OU 樹（老師／各年級學生／公用機）規劃好，群組再依處室與班級另外建。</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>要一次匯入全校幾百個帳號怎麼做？</summary>
+        <div class="faq-a">在管理主控台的「目錄 › 使用者」選擇大量更新使用者，先下載 Google 提供的 CSV 範本，用 Google 試算表開啟後填入姓、名、電子郵件地址、密碼與機構單位路徑等必要欄位，再下載成 CSV 上傳回後台。重點是欄位標題列不要改、機構單位要填完整路徑，以及先用少量幾筆試上傳確認格式無誤，再匯入整批。</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Chrome 的政策設定太多找不到，有沒有比較快的方法？</summary>
+        <div class="faq-a">有。Chrome 政策分成「使用者和瀏覽器設定」「裝置設定」「受管理的訪客工作階段設定」三大類，每一類都有數百個項目，用捲動的找非常慢。正確做法是先確認要設定的是哪一類、左側選好要套用的機構單位，再用該頁面的搜尋欄輸入關鍵字，例如「無痕模式」「網址封鎖」「閒置設定」「自訂桌布」「自動更新設定」，就會直接篩出對應設定。</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>管理 Chromebook 一定要有 CEU 授權嗎？</summary>
+        <div class="faq-a">是。帳號層級的設定（使用者、群組、應用程式開關）有 Google Workspace for Education 網域就能做，但要把 Chromebook 註冊進網域、集中推送政策與強制安裝擴充功能，每一台裝置都必須有 Chrome Education Upgrade（CEU）載具管理授權。CEU 綁在裝置上，效期最遠到該機型的 AUE 自動更新到期日。</div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Gemini 的對話記錄可以由學校統一管理嗎？</summary>
+        <div class="faq-a">可以。在管理主控台的「生成式 AI › Gemini in Workspace › 對話記錄與刪除」，可以依機構單位設定是否允許使用者自行刪除自己的對話，以及已儲存的閒置對話要保留多久（含不自動刪除）。學校若對學生端有留存或清除的規範，這裡是唯一的設定位置，建議在開放 Gemini 給學生使用前就先決定。</div>
+      </details>
+  </div>
+</section>
+
 <section class="section alt">
   <div class="wrap">
     <h2 class="section-title reveal">延伸閱讀</h2>
