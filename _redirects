@@ -40,11 +40,6 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 在地嚮導後來從 /services 移到 /tools（三個區域頁仍獨立存在）
 # ⚠️ 這條原本還指向 /services#local-food，但那個錨點已隨搬移消失，會落到 services 頁頂
 /local-food /tools#local-food 301
-# 2026-08-27：在地美食三個子頁下架（484 曝光、0 點擊，且稀釋站台主題）。
-# 內容併回 /tools 的在地嚮導單元，子頁網址 301 到該單元。
-/local-food-xinying /tools#local-food 301
-/local-food-yanshui /tools#local-food 301
-/local-food-dongshan /tools#local-food 301
 
 # 舊的特效展示頁：帶 .html 的已轉，無副檔名的路徑原本漏掉，
 # 會以 200 回一個只寫「已搬移」的空殼頁（重複內容），一併轉走
