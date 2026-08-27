@@ -37,6 +37,7 @@
   <h1>✉ 寄信工具</h1>
   <span class="tag">歡迎試用．寄送需授權</span>
   <span class="spacer"></span>
+  <a class="newtab" id="switch" href="#" target="_blank" rel="noopener">用其他帳號開啟</a>
   <a class="newtab" id="newtab" href="#" target="_blank" rel="noopener">在新視窗開啟 ↗</a>
 </header>
 
@@ -61,6 +62,9 @@
   var APP_URL = 'https://script.google.com/macros/s/AKfycbwnsah1Djhf9UL0HQT41Vp9eef2TteMk5mo6pFMF0rNm9PBKmyej-ISKCkJv7PBp1OWoA/exec';
   document.getElementById('app').src = APP_URL;
   document.getElementById('newtab').href = APP_URL;
+  // 瀏覽器已經登入某個帳號時會直接沿用，這顆讓人先挑要用哪一個帳號
+  document.getElementById('switch').href =
+    'https://accounts.google.com/AccountChooser?continue=' + encodeURIComponent(APP_URL);
 </script>
 </body>
 </html>
