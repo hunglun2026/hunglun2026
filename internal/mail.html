@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>寄信工具｜鴻綸科技內部使用</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=14" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=48">
+<style>
+  .tool-head{max-width:1100px;margin:0 auto;padding:18px 20px 10px;display:flex;
+             align-items:center;gap:12px;flex-wrap:wrap}
+  .tool-head h1{font-size:20px;margin:0}
+  .tool-head .tag{font-size:12px;background:#e8f0fe;color:#1a3a6b;border-radius:999px;
+                  padding:3px 10px;white-space:nowrap}
+  .tool-head .spacer{flex:1}
+  .tool-head a.newtab{font-size:14px;white-space:nowrap}
+  .tool-note{max-width:1100px;margin:0 auto;padding:0 20px 12px;font-size:14px;
+             line-height:1.7;color:#5a6472}
+  .tool-frame{max-width:1100px;margin:0 auto 40px;padding:0 20px}
+  .tool-frame iframe{width:100%;height:78vh;min-height:620px;border:1px solid #dfe3e8;
+                     border-radius:12px;background:#fff}
+  .fallback{border:1px solid #f0c88a;background:#fff4e5;border-radius:10px;
+            padding:14px 16px;font-size:14px;line-height:1.8;margin-top:12px}
+  [data-theme="dark"] .tool-frame iframe{border-color:#33383f}
+  [data-theme="dark"] .tool-note{color:#a7b0bd}
+  [data-theme="dark"] .tool-head .tag{background:#1f2f4a;color:#cfe0ff}
+  [data-theme="dark"] .fallback{background:#3a2f1c;border-color:#6b5320;color:#f0e0c0}
+</style>
+</head>
+<body>
+
+<header class="tool-head">
+  <h1>✉ 寄信工具</h1>
+  <span class="tag">歡迎試用．寄送需授權</span>
+  <span class="spacer"></span>
+  <a class="newtab" id="switch" href="#" target="_blank" rel="noopener">用其他帳號開啟</a>
+  <a class="newtab" id="newtab" href="#" target="_blank" rel="noopener">在新視窗開啟 ↗</a>
+</header>
+
+<p class="tool-note">
+  貼上一整段名單就會自動挑出信箱、去掉重複，可以先建草稿檢查再送出。
+  信從<strong>使用者自己的 Gmail</strong> 寄出，簽名檔沿用他 Gmail 設定裡那一份。
+  介面開放試用；<strong>實際寄送</strong>需要鴻綸科技同仁的公司帳號，或向我們索取使用密碼。
+</p>
+
+<div class="tool-frame">
+  <iframe id="app" title="寄信工具" src=""></iframe>
+  <div class="fallback">
+    畫面空白或顯示需要登入？多半是瀏覽器封鎖了第三方 Cookie。
+    請按右上角的<strong>「在新視窗開啟」</strong>，功能完全一樣。
+  </div>
+</div>
+
+<script>
+  // Apps Script 網頁版位置。換版本重新部署時網址不變，這裡不必動。
+  // ⚠ 一定要用這個「通用」網址，不要用 /a/macros/hunglun.com/ 那個網域專屬版——
+  //    後者只有 hunglun.com 帳號打得開，外部訪客會被擋在 Google 登入頁，看不到介面。
+  var APP_URL = 'https://script.google.com/macros/s/AKfycbwnsah1Djhf9UL0HQT41Vp9eef2TteMk5mo6pFMF0rNm9PBKmyej-ISKCkJv7PBp1OWoA/exec';
+  document.getElementById('app').src = APP_URL;
+  document.getElementById('newtab').href = APP_URL;
+  // 瀏覽器已經登入某個帳號時會直接沿用，這顆讓人先挑要用哪一個帳號
+  document.getElementById('switch').href =
+    'https://accounts.google.com/AccountChooser?continue=' + encodeURIComponent(APP_URL);
+</script>
+</body>
+</html>

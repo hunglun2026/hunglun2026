@@ -50,3 +50,8 @@
   Cache-Control: public, max-age=3600
 /robots.txt
   Cache-Control: public, max-age=3600
+
+# ── 內部工具頁：不要被搜尋引擎收錄 ──
+/internal/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
