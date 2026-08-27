@@ -35,14 +35,15 @@
 
 <header class="tool-head">
   <h1>✉ 寄信工具</h1>
-  <span class="tag">內部使用．需公司帳號登入</span>
+  <span class="tag">歡迎試用．寄送需授權</span>
   <span class="spacer"></span>
   <a class="newtab" id="newtab" href="#" target="_blank" rel="noopener">在新視窗開啟 ↗</a>
 </header>
 
 <p class="tool-note">
-  用來寄研習提案信給學校承辦。信會從<strong>你自己的公司信箱</strong>寄出，簽名檔也是你 Gmail 設定裡那份。
-  只有 hunglun.com 的帳號打得開，第一次使用需要授權一次。
+  貼上一整段名單就會自動挑出信箱、去掉重複，可以先建草稿檢查再送出。
+  信從<strong>使用者自己的 Gmail</strong> 寄出，簽名檔沿用他 Gmail 設定裡那一份。
+  介面開放試用；<strong>實際寄送</strong>需要鴻綸科技同仁的公司帳號，或向我們索取使用密碼。
 </p>
 
 <div class="tool-frame">
@@ -55,7 +56,9 @@
 
 <script>
   // Apps Script 網頁版位置。換版本重新部署時網址不變，這裡不必動。
-  var APP_URL = 'https://script.google.com/a/macros/hunglun.com/s/AKfycbwnsah1Djhf9UL0HQT41Vp9eef2TteMk5mo6pFMF0rNm9PBKmyej-ISKCkJv7PBp1OWoA/exec';
+  // ⚠ 一定要用這個「通用」網址，不要用 /a/macros/hunglun.com/ 那個網域專屬版——
+  //    後者只有 hunglun.com 帳號打得開，外部訪客會被擋在 Google 登入頁，看不到介面。
+  var APP_URL = 'https://script.google.com/macros/s/AKfycbwnsah1Djhf9UL0HQT41Vp9eef2TteMk5mo6pFMF0rNm9PBKmyej-ISKCkJv7PBp1OWoA/exec';
   document.getElementById('app').src = APP_URL;
   document.getElementById('newtab').href = APP_URL;
 </script>
