@@ -49,3 +49,9 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 導入實績（/cases）已併入服務項目頁的「成功案例」分頁（2026-08-16）
 # 內容原封不動搬過去，錨點 #projects、#credentials 都還在，由該頁 JS 切分頁後捲過去
 /cases /services#cases 301
+
+# 寄信工具 2026-08-28 從「公司專屬」改為對合作學校公開，搬到 /tools/mail。
+# ⚠ Pages 的 _redirects 只在「找不到檔案」時才套用，所以 internal/mail.html 一定要刪掉，
+#   留著的話這條永遠不會生效。
+/internal/mail /tools/mail 301
+/internal/mail.html /tools/mail 301

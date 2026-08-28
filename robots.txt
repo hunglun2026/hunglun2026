@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /internal/
+# 2026-08-28：/internal/ 已清空（寄信工具改為公開的 /tools/mail），
+# 這裡不再擋，讓 /internal/mail 的 301 轉址被爬得到。
+# _headers 裡 /internal/* 的 noindex 保留著，以後若又放內部頁會自動生效。
 
 User-agent: GPTBot
 Allow: /
