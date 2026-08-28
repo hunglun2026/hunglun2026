@@ -72,7 +72,7 @@
     "@id": "https://www.hunglun.com/#organization"
   },
   "datePublished": "2026-08-17",
-  "dateModified": "2026-08-17",
+  "dateModified": "2026-08-29",
   "about": [
     {
       "@type": "Thing",
@@ -86,6 +86,20 @@
       "@type": "Thing",
       "name": "AI 內容標註"
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "dateModified": "2026-08-29",
+  "mainEntity": [
+    { "@type": "Question", "name": "Gemini 圖片浮水印開關什麼時候上線？", "acceptedAnswer": { "@type": "Answer", "text": "美國時間 2026 年 8 月 14 日（週五），Google 的 Gemini 團隊宣布可以自行決定 Gemini 生成的圖片、影片與音樂要不要有可見浮水印，功能在 Gemini 與影片編輯器 Flow 陸續推出，分批上線需要幾天。" } },
+    { "@type": "Question", "name": "關掉浮水印之後，圖片就完全查不出是 AI 生成的了嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不是。可以關的只是圖片角落看得到的那個標記，SynthID 隱形浮水印與 C2PA 詮釋資料無論開關怎麼設，一律保留在檔案裡，使用者關不掉。" } },
+    { "@type": "Question", "name": "這個開關適用哪些生成模型？", "acceptedAnswer": { "@type": "Answer", "text": "適用範圍涵蓋三種生成模型：Nano Banana（圖片）、Omni（影片）、Lyria（音樂）。文字內容不在此列，法規要求 AI 內容必須有可見標示的地區也不適用這個開關。" } },
+    { "@type": "Question", "name": "怎麼查一張圖是不是 Gemini 生成的？", "acceptedAnswer": { "@type": "Answer", "text": "把圖片丟進 Gemini，直接問「這張是不是 AI 生成的？」，它會去讀 SynthID 給你答案。但目前只認得 Google 自家工具生成的內容，其他 AI 做的圖查不出來。" } },
+    { "@type": "Question", "name": "學校這週應該先做哪三件事？", "acceptedAnswer": { "@type": "Answer", "text": "告訴負責文宣的同仁改用官方設定，不必再靠第三方去浮水印工具；把「AI 生成內容的標註原則」補進使用規範；自己試一次驗證流程，了解 Gemini 查得出什麼、查不出什麼。" } }
   ]
 }
 </script>
@@ -128,7 +142,7 @@
 
 <section class="section">
   <div class="wrap prose">
-    <p style="color:var(--muted-faint);font-size:0.85rem;"><time datetime="2026-08-17">2026 年 8 月 17 日</time>｜鴻綸科技 Steve</p>
+    <p style="color:var(--muted-faint);font-size:0.85rem;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-08-29">2026 年 8 月 29 日</time></p>
 
     <h2>發生了什麼事</h2>
     <p>美國時間 2026 年 8 月 14 日（週五），Google 的 Gemini 團隊宣布：<strong>使用者可以自己決定 Gemini 生成的圖片、影片與音樂要不要有可見浮水印</strong>。做法很簡單——進 Gemini 的設定，找到「Media watermark／媒體浮水印」，選開或關（介面名稱以帳號當下顯示為準）。</p>
@@ -179,6 +193,32 @@
       <a class="btn btn-primary" href="/contact">聯絡我們</a>
       <a class="btn" href="/services/campus-training">看校園研習服務</a>
     </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap" style="max-width:780px;">
+    <h2 class="section-title reveal">常見問題</h2>
+    <details class="faq-item reveal" open>
+      <summary>Gemini 圖片浮水印開關什麼時候上線？</summary>
+      <div class="faq-a">美國時間 2026 年 8 月 14 日（週五），Google 的 Gemini 團隊宣布可以自行決定 Gemini 生成的圖片、影片與音樂要不要有可見浮水印，功能在 Gemini 與影片編輯器 Flow 陸續推出，分批上線需要幾天。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>關掉浮水印之後，圖片就完全查不出是 AI 生成的了嗎？</summary>
+      <div class="faq-a">不是。可以關的只是圖片角落看得到的那個標記，SynthID 隱形浮水印與 C2PA 詮釋資料無論開關怎麼設，一律保留在檔案裡，使用者關不掉。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>這個開關適用哪些生成模型？</summary>
+      <div class="faq-a">適用範圍涵蓋三種生成模型：Nano Banana（圖片）、Omni（影片）、Lyria（音樂）。文字內容不在此列，法規要求 AI 內容必須有可見標示的地區也不適用這個開關。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>怎麼查一張圖是不是 Gemini 生成的？</summary>
+      <div class="faq-a">把圖片丟進 Gemini，直接問「這張是不是 AI 生成的？」，它會去讀 SynthID 給你答案。但目前只認得 Google 自家工具生成的內容，其他 AI 做的圖查不出來。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>學校這週應該先做哪三件事？</summary>
+      <div class="faq-a">告訴負責文宣的同仁改用官方設定，不必再靠第三方去浮水印工具；把「AI 生成內容的標註原則」補進使用規範；自己試一次驗證流程，了解 Gemini 查得出什麼、查不出什麼。</div>
+    </details>
   </div>
 </section>
 
