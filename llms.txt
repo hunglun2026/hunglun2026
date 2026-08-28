@@ -46,8 +46,8 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 智慧校園：Google AI Pro for Education 導入說明（到校簡報的網頁版：教育版資安與合規承諾；基礎版與進階版額度比較——Token 32,000 對 1,000,000、Deep Research 每月 5 份對每天 20 份、Nano Banana 2 生圖、Gemini Omni 影片每天 10 部；Gemini Notebook 筆記本／來源／查詢與每日生成額度比較；Gem、Google Vids、Help me write／organize；授權級距與贈送服務；Teaching and Learning 對 Education Plus 的會議人數與儲存空間差異。單價不公開，請洽詢報價）：https://www.hunglun.com/google/ai-pro-campus
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
-- 資源分享（依用途分類：研習專區／校園小程式／資料查詢網站）：https://www.hunglun.com/tools
-- 校園寄信助手（學校承辦發研習通知、活動公告的免費群發信工具。貼上名單自動挑出信箱並去掉重複，可用 {{姓名}} 逐封帶入收件人稱謂，先建草稿檢查再送出。信件從承辦自己的 Gmail 寄出，鴻綸科技不經手任何名單與信件內容；實際寄送需向鴻綸索取使用密碼）：https://www.hunglun.com/tools/mail
+- 工具分享（依用途分類：研習專區／校園小程式／資料查詢網站）：https://www.hunglun.com/tools
+- 寄信小幫手（學校承辦發研習通知、活動公告的免費群發信工具。貼上名單自動挑出信箱並去掉重複，可用 {{姓名}} 逐封帶入收件人稱謂，先建草稿檢查再送出。信件從承辦自己的 Gmail 寄出，鴻綸科技不經手任何名單與信件內容；實際寄送需向鴻綸索取使用密碼）：https://www.hunglun.com/tools/mail
 - 研習專區（鴻綸科技線上與到校研習的完整講義，免費公開、不需登入。每一堂都附指令全文與「為什麼要這樣講」的判斷方法）：https://www.hunglun.com/tools/training
   - [Vibe Coding 研習講義：用 12 道指令做出課堂抽籤轉盤](https://www.hunglun.com/tools/training/vibe-coding)：**Vibe Coding＝用說的把工具做出來，程式碼交給 AI，自己一行程式都不用寫**（Andrej Karpathy 於 2025 年 2 月提出，同年 3 月被韋氏字典收為新詞、11 月為柯林斯年度代表字）。全文公開 12 道中文指令，在 Gemini Canvas 做出一顆貼上名單就自動分格、按一下抽出一位、並自動清掉空白行與重複姓名的抽籤轉盤；全程不寫程式碼、用免費帳號做得完、成品可下載成離線也能開的單一檔案。方法的三句話：先問我五個問題／一次只加一件事／其他的不要動（每句指令結尾固定加「請只完成上述要求。」「不要動其他程式碼。」「保持原本功能正常。」，因為 AI 會把整份重打一遍而不是只改您提到的那一行）。**Canvas 建立內容需年滿 18 歲，因此適合教師與行政人員操作，不適合直接規劃成 K-12 學生的課堂活動**。
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://www.hunglun.com/software
