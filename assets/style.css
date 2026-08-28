@@ -923,7 +923,7 @@ img.logo-dark { display: none; }
 :root[data-theme="dark"] img.logo-light { display: none; }
 :root[data-theme="dark"] img.logo-dark { display: block; }
 :root[data-theme="dark"] .brand-logo, :root[data-theme="dark"] .footer-logo-img {
-  background-image: url("/assets/hunglun-logo-dark-header.webp?v=6");
+  background-image: url("/assets/hunglun-logo-dark-header.webp?v=7");
 }
 
 /* ---------- 服務項目：可點擊卡片（點進去看該服務的獨立說明頁） ---------- */
