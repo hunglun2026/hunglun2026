@@ -250,7 +250,9 @@
   <div class="wrap">
     <h2 class="section-title reveal">研習專區</h2>
     <p class="section-sub reveal">研習講義全部免費公開，沒參加到也能自己跟著做完。</p>
-    <div class="grid">
+    <!-- 這一區目前只有一張卡。.grid 是 auto-fit，不限寬的話單卡會被拉成整列寬，
+         照片型視覺區跟著撐到 1000px 以上。加了第二張卡就可以把 max-width 拿掉。 -->
+    <div class="grid" style="max-width:400px;">
       <article class="card reveal">
         <div class="card-visual photo-visual"><img width="1200" height="784" src="/assets/images/vibe-wheel-demo.webp" alt="課堂抽籤大轉盤成品畫面：左邊名單設定區、右邊八格轉盤與抽中結果" loading="lazy" decoding="async" srcset="/assets/images/vibe-wheel-demo-480.webp 480w, /assets/images/vibe-wheel-demo-768.webp 768w, /assets/images/vibe-wheel-demo.webp 1200w" sizes="(max-width: 700px) 92vw, 380px"></div>
         <div class="card-body">
@@ -273,7 +275,7 @@
     <p class="section-sub reveal">為校園行政工作寫的自動化小工具。</p>
     <div class="grid">
       <article class="card reveal">
-        <div class="card-visual" style="display:flex;align-items:center;justify-content:center;font-size:64px;line-height:1;">✉</div>
+        <div class="card-visual"><img width="88" height="66" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3><a href="/tools/mail">校園寄信助手</a></h3>
           <div class="tagline">貼上名單・逐封帶入姓名・先建草稿再送出</div>
