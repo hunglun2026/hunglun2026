@@ -239,6 +239,7 @@
     <p>研習講義與線上工具依用途分類，全部免費開放使用。</p>
     <nav class="section-sub reveal" style="margin-top:14px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;" aria-label="分類目錄">
       <a href="#training">研習專區</a>
+      <a href="#admin-tools">行政效率工具</a>
       <a href="#campus-tools">校園小工具</a>
       <a href="#data-search">資料查詢網站</a>
       <a href="#local-food">在地嚮導</a>
@@ -269,11 +270,13 @@
   </div>
 </section>
 
-<section class="section" id="campus-tools">
+<section class="section" id="admin-tools">
   <div class="wrap">
-    <h2 class="section-title reveal">校園小工具</h2>
-    <p class="section-sub reveal">為校園行政工作寫的自動化小工具。</p>
-    <div class="grid">
+    <h2 class="section-title reveal">行政效率工具</h2>
+    <p class="section-sub reveal">處理行政庶務、對外聯繫用的工具，省下重複的人工作業。</p>
+    <!-- 這一區目前只有一張卡。.grid 是 auto-fit，不限寬的話單卡會被拉成整列寬。
+         加了第二張卡就可以把 max-width 拿掉。 -->
+    <div class="grid" style="max-width:400px;">
       <article class="card reveal">
         <div class="card-visual"><img width="88" height="66" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
@@ -286,6 +289,15 @@
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<section class="section" id="campus-tools">
+  <div class="wrap">
+    <h2 class="section-title reveal">校園小工具</h2>
+    <p class="section-sub reveal">老師與班導日常會用到的自動化小工具。</p>
+    <div class="grid">
       <article class="card reveal">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-slip.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="card-body">
