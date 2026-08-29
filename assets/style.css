@@ -772,6 +772,19 @@ a.stat:hover .label { color: var(--text); text-decoration: underline; text-under
 @media (prefers-reduced-motion: reduce) {
   .footer-nav a, .footer-contact a, .fc-go { transition: none; }
 }
+/* 分享區塊：工具／文章頁底部，讓看的人一鍵複製推薦文字轉貼到校內群組，
+   不是連結分享按鈕（會跳第三方 App 授權），純文字複製最少摩擦。 */
+.share-box {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  padding: 16px 20px;
+  margin: 0 0 28px;
+}
+.share-box-lead { font-weight: 700; margin: 0 0 4px; font-size: 0.96rem; }
+.share-box-text { margin: 0 0 12px; font-size: 0.86rem; color: var(--muted-faint); line-height: 1.7; }
+.share-box .fc-copy { font-size: 0.82rem; padding: 8px 14px; min-height: 36px; }
 .footer-logo img { height: 56px; width: auto; margin-bottom: 18px; }
 .footer-logo-img {
   display: block;
