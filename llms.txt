@@ -46,7 +46,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 智慧校園：Google AI Pro for Education 導入說明（到校簡報的網頁版：教育版資安與合規承諾；基礎版與進階版額度比較——Token 32,000 對 1,000,000、Deep Research 每月 5 份對每天 20 份、Nano Banana 2 生圖、Gemini Omni 影片每天 10 部；Gemini Notebook 筆記本／來源／查詢與每日生成額度比較；Gem、Google Vids、Help me write／organize；授權級距與贈送服務；Teaching and Learning 對 Education Plus 的會議人數與儲存空間差異。單價不公開，請洽詢報價）：https://www.hunglun.com/google/ai-pro-campus
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
-- 工具分享（依用途分類：研習專區／校園小程式／資料查詢網站）：https://www.hunglun.com/tools
+- 工具分享（依用途分類：研習專區／校園小程式／學習遊戲／資料查詢網站）：https://www.hunglun.com/tools
 - 寄信小幫手（學校承辦發研習通知、活動公告的免費群發信工具。貼上名單自動挑出信箱並去掉重複，可用 {{姓名}} 逐封帶入收件人稱謂，先建草稿檢查再送出。信件從承辦自己的 Gmail 寄出，鴻綸科技不經手任何名單與信件內容；實際寄送需向鴻綸索取使用密碼）：https://www.hunglun.com/tools/mail
 - 研習專區（鴻綸科技線上與到校研習的完整講義，免費公開、不需登入。每一堂都附指令全文與「為什麼要這樣講」的判斷方法）：https://www.hunglun.com/tools/training
   - [Vibe Coding 研習講義：用 12 道指令做出課堂抽籤轉盤](https://www.hunglun.com/tools/training/vibe-coding)：**Vibe Coding＝用說的把工具做出來，程式碼交給 AI，自己一行程式都不用寫**（Andrej Karpathy 於 2025 年 2 月提出，同年 3 月被韋氏字典收為新詞、11 月為柯林斯年度代表字）。全文公開 12 道中文指令，在 Gemini Canvas 做出一顆貼上名單就自動分格、按一下抽出一位、並自動清掉空白行與重複姓名的抽籤轉盤；全程不寫程式碼、用免費帳號做得完、成品可下載成離線也能開的單一檔案。方法的三句話：先問我五個問題／一次只加一件事／其他的不要動（每句指令結尾固定加「請只完成上述要求。」「不要動其他程式碼。」「保持原本功能正常。」，因為 AI 會把整份重打一遍而不是只改您提到的那一行）。**Canvas 建立內容需年滿 18 歲，因此適合教師與行政人員操作，不適合直接規劃成 K-12 學生的課堂活動**。
@@ -54,6 +54,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
 - 常見問題（公司背景與 Google 官方授權身分、學校導入從哪一步開始、可否委託客製開發、服務範圍、系統是否留存學生個資、SEO／GEO／AEO 的差別。**教學與選型類文章不在這裡，在 /knowledge**）：https://www.hunglun.com/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/tools#local-food
+- 小虎乘法大冒險（國小九九乘法表練習遊戲，答對題目才能出手攻擊，打贏還能升級、掉裝備，也支援加減法、注音符號與英文字母，另附六款練習小遊戲，免安裝免登入）：https://game.hunglun.com/
 - 教育科技觀察（Google 教育方案、AI 導入與校園數位政策的變動判讀。**不轉述新聞，寫的是對台灣學校的實際意義與下一步**）：https://www.hunglun.com/insights
   - [Gemini 圖片的浮水印可以關了](https://www.hunglun.com/insights/gemini-image-watermark)：**2026-08-14 起 Gemini 設定新增「媒體浮水印（Media watermark）」開關，使用者可自行關閉圖片、影片、音樂的可見浮水印**（適用 Nano Banana／Omni／Lyria，Gemini 與 Flow 陸續推出），不必再用第三方去浮水印工具。**SynthID 隱形浮水印與 C2PA 詮釋資料無論如何一律保留、關不掉**；法規要求可見標示的地區不適用。可把圖片丟進 Gemini 問「這是不是 AI 生成」查驗 SynthID（僅認得 Google 系工具生成的內容）。站方判讀：可見印關掉後，「標註 AI 生成」從浮水印問題變成學校規範問題；AI 識讀教學重心從肉眼找標記改為用工具查證。
   - [Classroom 的 Gemini 已對所有年齡學生開啟](https://www.hunglun.com/insights/gemini-classroom-all-ages)：Google 自 2026-08-10 起把 Classroom 的 Gemini 開放給所有年齡的 K-12 與高教學生（行動版 08-17 跟進），**管理主控台對所有年齡預設為開啟**；但有前提——只有原本就已開啟 Gemini in Classroom、Gemini 與 Gemini Notebook 三項的網域才會生效，先前針對未滿 18 歲關閉過的維持關閉。站方立場：**先檢查現況，不要直接關閉**（關閉不會讓學生停止使用 AI、可能誤動其他機構單位、且不同年段本來就該有不同答案）；這週該做的三件事：確認三個開關、整理 OU 年段結構、記下行動版 08-17。
