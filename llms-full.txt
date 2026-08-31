@@ -120,7 +120,7 @@ Google 官方授權導入：從帳號開通、網域管理到教師培訓，依 
 創立時間：2013 年 3 月
 地址：台南市新營區綠川路10號
 電話：06-6371192 傳真：06-6371112
-信箱：gfeh@hunglun.com
+信箱：sales@hunglun.com
 營業時間：週一至週五 08:30–17:30
 EVENTS
 活動剪影
@@ -624,7 +624,7 @@ Gmail 每日上限：一般 Gmail 帳號一天約 500 位收件人，學校的 G
 出現「這個應用程式未經 Google 驗證」
 這是自製工具的正常提示。展開「進階」再按「前往」即可，接著在授權畫面按「允許」。
 按了寄出，說要輸入使用密碼
-實際寄送需要一組使用密碼。合作學校請向鴻綸科技索取（06-6371192 或 shen@hunglun.com）；
+實際寄送需要一組使用密碼。合作學校請向鴻綸科技索取（06-6371192 或 sales@hunglun.com）；
 鴻綸同仁用公司帳號登入會自動開通。
 信到底從誰的信箱寄出？
 從您自己登入的那個 Gmail。已寄郵件會留在您的 Gmail 裡，收件人回信也是回到您的信箱。
@@ -1173,17 +1173,17 @@ Google 與 AI 導入、
 鴻綸科技是什麼公司？
 鴻綸科技股份有限公司總部位於台南新營，是服務全台的教育科技公司，為 Google for Education Professional Development Partner（名列 Google 官方全球高等教育專業發展夥伴名冊），提供 Google AI Pro for Education 授權導入、Google Workspace、Chromebook、智慧教室建置，並自主開發多項教育行政工具，包括藥品查詢系統、學生回條 AI 辨識系統等。
 鴻綸科技有代理 Google AI Pro for Education 嗎？
-有。鴻綸科技是 Google for Education Professional Development Partner，可協助學校辦理 Google AI Pro for Education 帳號開通、授權導入與使用規劃，並提供教師培訓，讓學校在合規授權下導入 Gemini 教育應用。歡迎來信 gfeh@hunglun.com 或致電 06-6371192 洽詢。
+有。鴻綸科技是 Google for Education Professional Development Partner，可協助學校辦理 Google AI Pro for Education 帳號開通、授權導入與使用規劃，並提供教師培訓，讓學校在合規授權下導入 Gemini 教育應用。歡迎來信 sales@hunglun.com 或致電 06-6371192 洽詢。
 成功案例中的工具可以免費使用嗎？
 藥品許可證外觀查詢系統與動物用藥許可證查詢為公開免費服務，任何人都可以直接使用。學生回條辨識與校園照片工具主要供合作學校使用，也開放線上體驗。會員集點系統為客戶專屬系統，需帳號登入。
 查詢系統的藥品資料來自哪裡？會更新嗎？
 藥品資料來自衛福部食藥署開放資料平台，動物用藥資料來自農業部政府資料開放平臺，皆為官方公開授權資料。系統設有自動同步排程，藥品資料每日更新、動物用藥每週更新，不需人工維護。
 可以委託鴻綸科技開發客製 AI 工具嗎？
-可以。我們接受學校、機構與企業的客製開發委託，範圍包括 AI 文件辨識、資料查詢系統、行政流程自動化、會員管理系統等。歡迎來信 gfeh@hunglun.com 或致電 06-6371192 討論需求，我們會先了解您的工作流程再提出務實的方案與報價。
+可以。我們接受學校、機構與企業的客製開發委託，範圍包括 AI 文件辨識、資料查詢系統、行政流程自動化、會員管理系統等。歡迎來信 sales@hunglun.com 或致電 06-6371192 討論需求，我們會先了解您的工作流程再提出務實的方案與報價。
 鴻綸科技的服務範圍只在台南嗎？
 不是。公司總部位於台南新營，服務範圍遍及全台。網頁工具類產品透過雲端交付，全台皆可使用；Google 教育方案導入、設備建置與教育訓練也可到校服務。
 學校想導入 Google for Education 或 Google AI Pro for Education，怎麼開始？
-鴻綸科技是 Google for Education Professional Development Partner，可協助學校從 Google Workspace for Education 申請、網域管理設定、Chromebook 載具管理到 Google AI Pro for Education 授權導入與教師認證培訓。請透過電話 06-6371192 或信箱 gfeh@hunglun.com 聯繫，我們會依學校現況規劃導入步驟。
+鴻綸科技是 Google for Education Professional Development Partner，可協助學校從 Google Workspace for Education 申請、網域管理設定、Chromebook 載具管理到 Google AI Pro for Education 授權導入與教師認證培訓。請透過電話 06-6371192 或信箱 sales@hunglun.com 聯繫，我們會依學校現況規劃導入步驟。
 回條辨識系統會留下學生個資嗎？
 系統以瀏覽器前端處理為主，名單與辨識結果留在使用者自己的裝置與匯出的 Excel 檔案中，網站本身不建立學生資料庫。
 什麼是 SEO？
@@ -1448,7 +1448,7 @@ Google AI Pro for Education 授權、Google 教育方案、設備建置、AI 工
 06-6371192
 傳真 06-6371112
 電子信箱
-gfeh@hunglun.com
+sales@hunglun.com
 LINE 官方帳號
 @gdm6961p
 電腦版請在 LINE 搜尋這個 ID 加入
@@ -4351,7 +4351,7 @@ Google AI Pro for Education（即 Gemini Pro 教育版）沒有一個對所有�
 備註
 請不要填寫這個欄位
 送出報價需求
-送出即表示同意我們以您留下的聯絡方式回覆此次報價需求。內容僅用於回覆本次需求，不會另作他用，詳見隱私權政策。不方便填表的話，也可以直接撥 06-6371192 或來信 gfeh@hunglun.com。
+送出即表示同意我們以您留下的聯絡方式回覆此次報價需求。內容僅用於回覆本次需求，不會另作他用，詳見隱私權政策。不方便填表的話，也可以直接撥 06-6371192 或來信 sales@hunglun.com。
 常見問題
 索取報價要多久才會收到回覆？
 上班時間內通常一個工作天回覆，以電子郵件寄出。回覆內容包含依貴校人數的授權試算、建議的導入節奏，以及採購方式上的注意事項。若資料不足以試算，我們會先來信確認缺的幾項。
