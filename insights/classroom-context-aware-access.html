@@ -136,7 +136,7 @@
   <div class="wrap">
     <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/insights">教育科技觀察</a> ／ Classroom 情境感知存取</nav>
     <h1>Classroom 也能設定情境感知存取了，但多數學校不用急著鎖</h1>
-    <p>8 月 26 日公告，僅 Standard／Plus 版本可用。這是一項資安存取控制功能，不是教學功能——重點不是「有沒有開」，而是「用哪種邏輯開」。</p>
+    <p>8 月 26 日公告，僅 Standard／Plus 版本可用。這是一項資安存取控制功能，不是教學功能，重點不是「有沒有開」，而是「用哪種邏輯開」。</p>
   </div>
 </div>
 
@@ -146,11 +146,11 @@
 
     <h2>發生了什麼事</h2>
     <p>Google 在 Workspace Updates <strong>2026 年 8 月 26 日公告</strong>，Classroom 新增支援情境感知存取（Context-Aware Access，簡稱 CAA）政策。管理員現在可以直接在管理主控台為 Classroom 設定存取條件，依<strong>使用者身分、地理位置、裝置安全狀態、IP 位址</strong>限制誰能登入使用。</p>
-    <p>公告明確寫著<strong>目前僅限 Education Standard 與 Education Plus 版本</strong>，免費的 Education Fundamentals 版沒有這個選項——如果貴校用的是 Fundamentals，這篇文章可以先收藏，等升級再回來看。</p>
+    <p>公告明確寫著<strong>目前僅限 Education Standard 與 Education Plus 版本</strong>，免費的 Education Fundamentals 版沒有這個選項。如果貴校用的是 Fundamentals，這篇文章先收藏起來，等升級再回來看就好。</p>
 
     <h2>先分清楚：這是資安功能，不是教學功能</h2>
     <p>CAA 本身不是新概念，Google 早就用在 Gmail、Drive 這類 Workspace 核心服務上，這次只是把 Classroom 也納進同一套機制。它解決的問題是「哪些人在什麼條件下能進來」，跟 Classroom 裡的作業、成績、AI 功能完全是兩件事。</p>
-    <p>看到「新增存取控制」幾個字，資訊組長第一個直覺常常是比照公文系統的做法——直接鎖校園 IP。<strong>這一步在 Classroom 上很危險</strong>，往下看原因。</p>
+    <p>看到「新增存取控制」幾個字，資訊組長第一個直覺常常是比照公文系統的做法，直接鎖校園 IP。但這一步在 Classroom 上很危險。</p>
 
     <h2>為什麼不建議直接鎖校園 IP</h2>
     <p>Classroom 的日常使用情境跟公文系統完全不同：</p>
@@ -159,7 +159,7 @@
       <li><strong>停課或遠距教學時，校園 IP 反而是最不該鎖的條件。</strong>颱風假、流感停課這類情境，師生全部都在校外，這時候如果 CAA 設成只認校園網段，等於把 Classroom 整個鎖死在最需要它的時候。</li>
       <li><strong>設定錯誤的代價是資訊組長自己要處理申訴。</strong>一鎖下去，接下來幾天處理不了的登入問題會全部回到資訊組。</li>
     </ul>
-    <p>換句話說，套用 CAA 之前，要先想清楚「這個條件在學生正常使用的情境下會不會誤擋」，而不是先想「怎麼鎖得越緊越好」。</p>
+    <p>套用 CAA 之前，要先想清楚「這個條件在學生正常使用的情境下會不會誤擋」，而不是先想「怎麼鎖得越緊越好」。</p>
 
     <h2>比較合理的邏輯：依組織單位分層，不要全校一條規則</h2>
     <p>CAA 的政策可以套用在組織單位（OU）或群組層級，這代表<strong>不需要用同一條規則處理全校</strong>。可以考慮的分層方向：</p>
@@ -173,13 +173,13 @@
         </tbody>
       </table>
     </div>
-    <p>實際要不要做、做到多嚴，取決於貴校既有的資安規範與資訊組的人力，這裡給的是判斷的方向，不是「照抄就對」的設定值——每間學校的網路環境跟使用習慣不一樣，同一條規則套到別校可能完全不適用。</p>
+    <p>實際要不要做、做到多嚴，取決於貴校既有的資安規範與資訊組的人力，這裡給的是判斷的方向，不是「照抄就對」的設定值。每間學校的網路環境跟使用習慣不一樣，同一條規則套到別校可能完全不適用。</p>
 
     <h2>這週資訊組長可以先做的三件事</h2>
     <ul class="feature-list" style="margin-top:16px;">
       <li><strong>確認貴校的 Workspace for Education 版本。</strong>不是 Standard 或 Plus 的話，這功能目前用不到，不用花時間找。</li>
       <li><strong>確認是否已經對其他服務設定過情境感知存取政策。</strong>如果 Gmail、Drive 早就有一套邏輯，Classroom 這次可以直接沿用，不用重新想一遍。</li>
-      <li><strong>真的要設定，先在小範圍的測試 OU 試跑。</strong>找一個非核心的組織單位先套用條件、觀察幾天，確認不會誤擋正常登入，再考慮擴大範圍——不要一次套用到全校才發現條件設太嚴。</li>
+      <li><strong>真的要設定，先在小範圍的測試 OU 試跑。</strong>找一個非核心的組織單位先套用條件、觀察幾天，確認不會誤擋正常登入，再考慮擴大範圍，不要一次套用到全校才發現條件設太嚴。</li>
     </ul>
     <p>管理主控台裡 OU 與群組的結構怎麼規劃，整理在<a href="/knowledge/google-admin">Google 管理主控台校園設定指南</a>；Classroom 各版本的功能差異見<a href="/knowledge/classroom">Google Classroom 完全指南</a>。</p>
 
