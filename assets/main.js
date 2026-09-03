@@ -179,13 +179,33 @@ document.querySelectorAll('img.lightbox').forEach((img) => {
   });
 });
 
-// 瀏覽人數計數器（Cloudflare Worker + KV，每次進頁+1，接續舊官網從 409260 起算）
+// 瀏覽人數計數器（Cloudflare Worker + KV，接續舊官網從 409260 起算）
+// 2026-09-03：改成同一訪客一天只計一次。原本每次進頁就打一次 Worker（等於每個 pageview
+// 都寫一次 KV），免費方案 KV 一天只有 1,000 次寫入，很容易在流量稍高時當天就用完額度。
+// 改用 localStorage 記「今天有沒有算過」：算過就直接顯示上次拿到的數字，不再打 Worker，
+// 這樣既不會膨脹得不合理，也大幅減少 KV 寫入次數。
 const visitCountEl = document.getElementById('visitCount');
 if (visitCountEl) {
-  fetch('https://huglun2026-visits.hunglun2026.workers.dev')
-    .then((r) => r.json())
-    .then((data) => { visitCountEl.textContent = data.count.toLocaleString(); })
-    .catch(() => { visitCountEl.textContent = '409,260'; });
+  var today = new Date().toDateString();
+  var cachedDate = null, cachedCount = null;
+  try {
+    cachedDate = localStorage.getItem('hunglun-visit-date');
+    cachedCount = localStorage.getItem('hunglun-visit-count');
+  } catch (e) { /* 無痕視窗等環境可能擋 localStorage，當作沒有快取處理 */ }
+  if (cachedDate === today && cachedCount) {
+    visitCountEl.textContent = Number(cachedCount).toLocaleString();
+  } else {
+    fetch('https://huglun2026-visits.hunglun2026.workers.dev')
+      .then((r) => r.json())
+      .then((data) => {
+        visitCountEl.textContent = data.count.toLocaleString();
+        try {
+          localStorage.setItem('hunglun-visit-date', today);
+          localStorage.setItem('hunglun-visit-count', String(data.count));
+        } catch (e) {}
+      })
+      .catch(() => { visitCountEl.textContent = cachedCount ? Number(cachedCount).toLocaleString() : '409,260'; });
+  }
 }
 
 // 標題裡的「Google」以官方 wordmark 配色呈現（G藍 o紅 o黃 g藍 l綠 e紅）。
