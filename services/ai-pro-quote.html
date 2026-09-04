@@ -463,7 +463,7 @@
 </div>
 
 
-<script src="/assets/main.js?v=20"></script>
+<script src="/assets/main.js?v=21"></script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 /* 報價表單送出。共用 /contact 那支 /api/contact，所以後端與 Apps Script 都不必改：
@@ -508,6 +508,12 @@
 
     if (!data.org.trim() || !data.name.trim() || !data.email.trim()) {
       say('學校／單位名稱、聯絡人姓名與電子信箱是必填的。', 'err');
+      return;
+    }
+    // 跟 functions/api/contact.js 同一條規則：格式明顯不對就先擋，不用等一輪
+    // 人機驗證＋網路來回才知道打錯字（後端仍會再驗一次，這裡純粹省等待時間）
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email.trim())) {
+      say('電子信箱的格式看起來不對，請再確認一次。', 'err');
       return;
     }
 

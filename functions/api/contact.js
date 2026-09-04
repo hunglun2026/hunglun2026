@@ -19,6 +19,15 @@
 
 const MAX = { name: 100, email: 200, org: 200, phone: 60, topic: 100, message: 5000 };
 
+// 2026-09-04：原本直接 .slice(0, max)，如果剛好切在一組 UTF-16 代理對中間
+// （例如某些 emoji 佔 2 個 code unit），會留下半個字元變成亂碼。
+// 切完發現最後一個是「高位代理」就再退一格，不切半個字元出去。
+function sliceSafe(str, max) {
+  const s = str.slice(0, max);
+  const last = s.charCodeAt(s.length - 1);
+  return last >= 0xd800 && last <= 0xdbff ? s.slice(0, -1) : s;
+}
+
 // 只導出 onRequest 一個進入點：同時導出 onRequest 與 onRequestPost 時，
 // 哪一個優先在 Pages 的行為不夠明確，直接在裡面判斷方法最保險。
 export async function onRequest({ request, env }) {
@@ -46,7 +55,7 @@ export async function onRequest({ request, env }) {
 
   const f = {};
   for (const k of Object.keys(MAX)) {
-    f[k] = typeof body[k] === 'string' ? body[k].trim().slice(0, MAX[k]) : '';
+    f[k] = typeof body[k] === 'string' ? sliceSafe(body[k].trim(), MAX[k]) : '';
   }
 
   if (!f.name || !f.email || !f.message) {
@@ -80,7 +89,9 @@ export async function onRequest({ request, env }) {
     console.error('turnstile_unreachable: ' + err);
     return json({ ok: false, error: 'verify_failed' }, 502);
   }
-  if (!verify.success) {
+  // verify 理論上一定是物件，但 siteverify 回傳格式不是我方控制的第三方 API，
+  // 保險起見先確認是物件再讀 .success，異常格式也走設計好的錯誤流程而不是裸 500
+  if (!verify || typeof verify !== 'object' || !verify.success) {
     console.warn('turnstile_rejected: ' + JSON.stringify(verify['error-codes'] || []));
     return json({ ok: false, error: 'verify_failed' }, 403);
   }
