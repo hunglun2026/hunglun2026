@@ -55,3 +55,8 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 #   留著的話這條永遠不會生效。
 /internal/mail /tools/mail 301
 /internal/mail.html /tools/mail 301
+
+# Mobile Guardian 2026-09-06 停止代理，知識庫頁與 /software 區塊已移除。
+# 舊網址（已被索引）轉到 Chromebook 知識庫頁，避免 404
+/knowledge/mobile-guardian /knowledge/chromebook 301
+/software/mobile-guardian /software 301

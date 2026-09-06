@@ -21,7 +21,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - Google Workspace for Education 導入與認證培訓（含 Education Fundamentals／Standard／Teaching and Learning Upgrade／Education Plus 四版本比較表：Fundamentals 為符合資格教育機構免費、整個網域共享 100 TB 儲存空間；T&L Upgrade 每授權另附 100 GB；Education Plus 每授權另附 20 GB 且 Google Meet 會議上限 500 人）：https://www.hunglun.com/services/google-workspace
 - Google AI 校園研習（針對 K-12（國小、國中、高中職）與大學端的教師、行政人員與學生，規劃 Google AI 研習課程，由 Google 認證講師到校授課。課程模組含 Gemini 備課、AI 出題與評量、Gemini Notebook、行政減負、AI 素養與學術倫理、認證考照衝刺）：https://www.hunglun.com/services/campus-training
 - Chromebook 與智慧教室建置（ASUS Chromebook CX14〔CX1405〕與 CM32 Detachable〔CM3206〕，皆通過 MIL-STD 810H 軍規標準；CEU 載具管理授權；學校單位可免費借用 Chromebook 評估試用）：https://www.hunglun.com/services/chromebook
-- 數位學習軟體校園授權採購與代理（鴻綸科技是 Thinglink、Edpuzzle、Kami、Padlet 校園版、Wordwall、Kahoot! EDU Standard、Adobe、Photontree VR 眼鏡、Mobile Guardian 這九套軟體／裝置在台灣的代理／經銷夥伴，學校與機關可直接向鴻綸科技洽詢校園授權報價、簽約與後續維運，不需另外找原廠或其他通路；服務含教師應用培訓，可申請計畫規劃書）：https://www.hunglun.com/software
+- 數位學習軟體校園授權採購與代理（鴻綸科技是 Thinglink、Edpuzzle、Kami、Padlet 校園版、Wordwall、Kahoot! EDU Standard、Adobe、Photontree VR 眼鏡 這八套軟體／裝置在台灣的代理／經銷夥伴，學校與機關可直接向鴻綸科技洽詢校園授權報價、簽約與後續維運，不需另外找原廠或其他通路；服務含教師應用培訓，可申請計畫規劃書）：https://www.hunglun.com/software
 - 標案設備採購（台灣銀行共同供應契約）：https://www.hunglun.com/services/procurement
 - AI 應用與客製工具開發：https://www.hunglun.com/services/ai-development
 - 公開資料查詢系統開發：https://www.hunglun.com/services/open-data
@@ -90,7 +90,6 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Kahoot! EDU Standard 是什麼](https://www.hunglun.com/knowledge/kahoot)：即時搶答課堂評量，AI Kahoot! Generator 一鍵生成講義、同步 Microsoft／Google Slides、內建文字雲與投票、支援 100 位學生同時參與；鴻綸科技是台灣代理。
 - [Adobe 教育授權：Creative Cloud 與 Document Cloud 校園方案](https://www.hunglun.com/knowledge/adobe-education)：教育授權與商用授權適用對象與計價不同，需先確認資格；Creative Cloud 適合創作課程與社團作品產出，Document Cloud 是行政文件數位化（PDF 掃描、編輯、共用、電子簽署）的基礎；鴻綸科技代理 Adobe 教育授權。
 - [Photontree VR 眼鏡是什麼](https://www.hunglun.com/knowledge/photontree)：台灣設計製造、台灣唯一通過 Google 官方認證的 VR 眼鏡，手機（4.7–6 吋）放入即用，39mm 大口徑鏡片、視角 90 度、重量 180 克，可搭配 ThingLink 環景教材，適合班級輪流體驗；鴻綸科技代理。
-- [Mobile Guardian 是什麼](https://www.hunglun.com/knowledge/mobile-guardian)：校園行動裝置管理（MDM）方案，上網內容過濾、課堂螢幕即時監看、使用時段與應用程式管理，支援親師共管（家長端也有管理權限），常搭配 Chromebook 一起導入；鴻綸科技代理。
 - [Chromebook 選購指南](https://www.hunglun.com/knowledge/chromebook)：Chromebook 是什麼、優缺點、載具管理授權（CEU）、校園採購須知；另含教育現場挑選教學載具的四個要點、傳統個人電腦與 Chromebook 對照表（開機約 40–90 秒 vs 約 6–8 秒；管理勞動力與成本降低率平均 59%，2020 年 IDC 白皮書）、CEU 裝置管理與使用者管理功能詳解。
 - [AI 入門百科](https://www.hunglun.com/knowledge/ai)：AI、生成式 AI、大型語言模型（LLM）、AI 幻覺、校園導入 AI 注意事項。
 - [電腦與雲端手冊](https://www.hunglun.com/knowledge/computer)：硬體規格、作業系統選擇、雲端服務、校園電腦教室與網路規劃。
