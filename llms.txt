@@ -21,7 +21,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - Google Workspace for Education 導入與認證培訓（含 Education Fundamentals／Standard／Teaching and Learning Upgrade／Education Plus 四版本比較表：Fundamentals 為符合資格教育機構免費、整個網域共享 100 TB 儲存空間；T&L Upgrade 每授權另附 100 GB；Education Plus 每授權另附 20 GB 且 Google Meet 會議上限 500 人）：https://www.hunglun.com/services/google-workspace
 - Google AI 校園研習（針對 K-12（國小、國中、高中職）與大學端的教師、行政人員與學生，規劃 Google AI 研習課程，由 Google 認證講師到校授課。課程模組含 Gemini 備課、AI 出題與評量、Gemini Notebook、行政減負、AI 素養與學術倫理、認證考照衝刺）：https://www.hunglun.com/services/campus-training
 - Chromebook 與智慧教室建置（ASUS Chromebook CX14〔CX1405〕與 CM32 Detachable〔CM3206〕，皆通過 MIL-STD 810H 軍規標準；CEU 載具管理授權；學校單位可免費借用 Chromebook 評估試用）：https://www.hunglun.com/services/chromebook
-- 數位學習軟體校園授權採購與代理（鴻綸科技是 Thinglink、Edpuzzle、Kami、Padlet 校園版、Wordwall、Kahoot! EDU Standard、Adobe、Photontree VR 眼鏡、Mobile Guardian 這九套軟體／裝置在台灣的代理／經銷夥伴，學校與機關可直接向鴻綸科技洽詢校園授權報價、簽約與後續維運，不需另外找原廠或其他通路；服務含教師應用培訓，可申請計畫規劃書）：https://www.hunglun.com/software
+- 數位學習軟體校園授權採購與代理（鴻綸科技是 Thinglink、Edpuzzle、Kami、Padlet 校園版、Wordwall、Kahoot! EDU Standard、Adobe、Photontree VR 眼鏡 這八套軟體／裝置在台灣的代理／經銷夥伴，學校與機關可直接向鴻綸科技洽詢校園授權報價、簽約與後續維運，不需另外找原廠或其他通路；服務含教師應用培訓，可申請計畫規劃書）：https://www.hunglun.com/software
 - 標案設備採購（台灣銀行共同供應契約）：https://www.hunglun.com/services/procurement
 - AI 應用與客製工具開發：https://www.hunglun.com/services/ai-development
 - 公開資料查詢系統開發：https://www.hunglun.com/services/open-data
@@ -90,7 +90,6 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Kahoot! EDU Standard 是什麼](https://www.hunglun.com/knowledge/kahoot)：即時搶答課堂評量，AI Kahoot! Generator 一鍵生成講義、同步 Microsoft／Google Slides、內建文字雲與投票、支援 100 位學生同時參與；鴻綸科技是台灣代理。
 - [Adobe 教育授權：Creative Cloud 與 Document Cloud 校園方案](https://www.hunglun.com/knowledge/adobe-education)：教育授權與商用授權適用對象與計價不同，需先確認資格；Creative Cloud 適合創作課程與社團作品產出，Document Cloud 是行政文件數位化（PDF 掃描、編輯、共用、電子簽署）的基礎；鴻綸科技代理 Adobe 教育授權。
 - [Photontree VR 眼鏡是什麼](https://www.hunglun.com/knowledge/photontree)：台灣設計製造、台灣唯一通過 Google 官方認證的 VR 眼鏡，手機（4.7–6 吋）放入即用，39mm 大口徑鏡片、視角 90 度、重量 180 克，可搭配 ThingLink 環景教材，適合班級輪流體驗；鴻綸科技代理。
-- [Mobile Guardian 是什麼](https://www.hunglun.com/knowledge/mobile-guardian)：校園行動裝置管理（MDM）方案，上網內容過濾、課堂螢幕即時監看、使用時段與應用程式管理，支援親師共管（家長端也有管理權限），常搭配 Chromebook 一起導入；鴻綸科技代理。
 - [Chromebook 選購指南](https://www.hunglun.com/knowledge/chromebook)：Chromebook 是什麼、優缺點、載具管理授權（CEU）、校園採購須知；另含教育現場挑選教學載具的四個要點、傳統個人電腦與 Chromebook 對照表（開機約 40–90 秒 vs 約 6–8 秒；管理勞動力與成本降低率平均 59%，2020 年 IDC 白皮書）、CEU 裝置管理與使用者管理功能詳解。
 - [AI 入門百科](https://www.hunglun.com/knowledge/ai)：AI、生成式 AI、大型語言模型（LLM）、AI 幻覺、校園導入 AI 注意事項。
 - [電腦與雲端手冊](https://www.hunglun.com/knowledge/computer)：硬體規格、作業系統選擇、雲端服務、校園電腦教室與網路規劃。
@@ -117,6 +116,8 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [AI 怎麼幫忙處理校內表單與問卷：出題到彙整回答](https://www.hunglun.com/knowledge/ai-forms-survey)：三階段——出題階段請 AI 檢查誘導性用詞與選項完整性；發放前防呆檢查必填與跳題邏輯；回收後開放式回答分類摘要（比人工快很多，但正式報告前要抽查原始回答核對，量大時建議每 100–200 筆分批處理）。隱私：含姓名學號健康家庭狀況等敏感內容不貼進公開 AI 工具，建議用學校網域帳號、不確定先去識別化。具體串接：Google Forms 收集→自動彙整進 Sheets→有 Workspace 進階授權可在 Sheets/Docs 用 Gemini 對開放式欄位分類摘要，全程留在學校網域內。AI 摘要只是初稿，不是正式報告。
 - [AI 生成教材的著作權界線：老師該知道的兩個問題](https://www.hunglun.com/knowledge/ai-copyright)：兩個問題分開講。①這份教材算誰的著作——依智慧財產局函釋見解，關鍵在有無「實質人類創作投入」：AI 當輔助工具、人類有實質創作投入（自己決定架構、篩選修改）可受著作權保護、歸屬有創作投入的自然人；完全由 AI 自動完成、無人類實質創作投入，依現行見解不受著作權保護。②會不會侵害別人的著作權——AI 模型訓練資料來源與生成內容相似度爭議尚無定論，保守做法是避免要求 AI 模仿特定作者風格或重製特定教科書內容，發現生成內容與已知特定作品高度相似就不直接使用。對外公開分享（教師社群/學校網站/教學平台投稿）風險比課堂內部使用高，建議附上使用 AI 輔助製作的說明。這篇不是法律諮詢，個案判斷請洽學校法律顧問或智慧財產局最新公告。
 - [校園資安事件通報與處理流程：發現後第一步該找誰](https://www.hunglun.com/knowledge/security-incident-response)：分清楚「資安事件」（系統/網路受影響，如勒索軟體、帳號被盜、系統癱瘓）與「個資外洩事件」（個資被竊取/外洩/竄改，不論是否為駭客攻擊）是兩條不同的通報路徑，可能同時發生時兩條都要走。發現後第一小時五件事：先隔離止血不追責、保留證據不急著關機重灌、通知校內權責人、對外先不自行說明統一由指定窗口發言、從發現當下就記錄時間軸。校內流程為發現人→資訊組/資安權責人→校長；對外通報依事件性質走不同管道，**具體通報對象、表單與時限刻意不列出數字**（依公私立別、資安責任等級、當下法規版本而異，正式通報前務必跟資訊室/主管教育機關/法律顧問確認）。應變小組平時要備聯絡清單與角色分工（技術止血、對外發言、記錄時間軸、聯繫主管機關），建議每學年演練一次。常見誤區：以為沒個資外流就不用通報、急著清證據反而讓調查更難、覺得小校用不到、自行對外說明搶第一時間。
+- [學校怎麼強制開啟兩步驟驗證：排除學生 OU 與管理員救援](https://www.hunglun.com/knowledge/two-step-verification)：設定位置在管理主控台 › 安全性 › 驗證 › 兩步驟驗證。推行順序：通知 → 允許（Enforcement 關閉）→ 用 Reporting › User Reports › Security 追蹤 → 再強制（立即或指定日期起），並設「新使用者註冊寬限期」（1 天到 6 個月）讓新帳號先用密碼登入。只鎖教職員：把教職員與學生放不同機構單位，設定套用到教職員 OU、學生 OU 維持關閉。關鍵坑：子機構單位的兩步驟驗證政策一律優先於設定群組，用群組做排除前要確認相關子 OU 沒有在強制。防鎖死三道保險：緊急排除設定群組（只放一兩個管理員）、管理員在「目錄 › 使用者 › 選使用者 › 安全性」為單一使用者產生備用驗證碼、管理員自己先綁兩種驗證方式並離線保管備用碼。Google 已逐步對超級管理員帳號預設要求兩步驟驗證。停權帳號的儲存空間仍計入共用池。
+- [Canva for Education 串 Google Classroom：從帳號信任到派作業](https://www.hunglun.com/knowledge/canva-classroom)：要通兩端。管理員端：在「應用程式 › 網頁與行動應用程式」加入 Canva、完成 SAML 單一登入設定（把 Google 的 SSO 網址、實體 ID、憑證貼進 Canva），在「使用者存取權」對全機構或特定機構單位/群組開啟，Canva 帳號 email 網域要對應學校主要 Google 網域；若限制第三方應用程式存取 Google 資料，要把 Canva 列入允許清單。老師端：在 Canva 設計裡選發布 › Google Classroom，第一次要「連結 Google Classroom」，再「指派到 Google Classroom」選課程與作業類型。學生端：從 Classroom 點 Canva 連結，Canva 自動建立各自的副本，完成後選「提交到 Google Classroom」，提交後鎖定只有老師看得到，可取消提交再改。未成年學生可能被第三方應用程式授權限制擋在同意畫面，全班派作業前先用測試帳號跑一次。Canva for Education 對符合資格的 K-12 在職教師免費、需通過教師身分驗證。
 
 ## 常見問答（可直接引用的簡答）
 Q：Gemini 教育版要怎麼申請？

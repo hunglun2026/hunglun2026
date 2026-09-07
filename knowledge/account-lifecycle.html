@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=22" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=51">
+<link rel="stylesheet" href="/assets/style.css?v=52">
 <title>學校 Google 帳號生命週期管理：新生建檔、畢業生轉出與停權 SOP｜鴻綸科技</title>
 <meta name="description" content="每年開學前批次建立新生帳號、畢業前處理離校學生帳號，是資訊組長最容易手忙腳亂的兩個時間點。命名規則怎麼一次訂對、畢業生帳號該停權還是刪除、資料要不要轉出，整理成一份可以重複照做的年度時程表。">
 <link rel="canonical" href="https://www.hunglun.com/knowledge/account-lifecycle">
@@ -45,7 +45,8 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "畢業生的 Google 帳號應該停權還是直接刪除？", "acceptedAnswer": { "@type": "Answer", "text": "建議先停權（Suspend），不要直接刪除。停權後帳號登不進去、也不能收發信，但資料還在，之後要復原或轉出都來得及；一旦刪除，雲端硬碟裡沒有轉移或備份的檔案會直接消失，而且過了保留期就救不回來。等確認該屆學生的資料都已妥善轉出或依學校政策保存期限過了，再排定時間刪除。" } },
-    { "@type": "Question", "name": "學生畢業後，雲端硬碟裡的檔案怎麼處理？", "acceptedAnswer": { "@type": "Answer", "text": "3 個選項：一是用管理主控台的資料移轉工具，把畢業生帳號裡的雲端硬碟內容轉移到另一個帳號（例如導師或指定的保管帳號），適合需要留存班級共同作業成果的情況；二是讓學生自己在畢業前用 Google Takeout 把個人資料匯出到自己的個人帳號；三是依學校的資料保存政策，直接隨帳號一併封存或刪除。三種做法要在停權前就決定，不要等刪除前一天才想。" } },
+    { "@type": "Question", "name": "學生畢業後，雲端硬碟裡的檔案怎麼處理？", "acceptedAnswer": { "@type": "Answer", "text": "3 個選項：一是管理員在「目錄 › 使用者 › 選使用者 › 將雲端硬碟檔案轉移給新擁有者」，把畢業生的雲端硬碟內容轉給導師或指定的保管帳號，適合需要留存班級共同作業成果的情況；二是讓學生自己在畢業前用 Takeout 下載封存，或用「轉移內容」（takeout.google.com/transfer）把個人擁有的檔案、Gmail 與相簿複製到個人帳號；三是依學校的資料保存政策，直接隨帳號一併封存或刪除。共用雲端硬碟裡的檔案屬學校所有、不會被轉走。三種做法要在停權前就決定，不要等刪除前一天才想。" } },
+    { "@type": "Question", "name": "帳號停權後，為什麼全校儲存空間沒有變少？", "acceptedAnswer": { "@type": "Answer", "text": "因為停權（Suspend）的帳號，其占用的儲存空間仍然計入全校共用的儲存空間池。停權只是讓帳號登不進去，資料還在、還占空間。要真正把空間釋放出來，必須在資料轉出或保存期滿後刪除帳號。所以如果目的是回收儲存空間，停權只是中繼站，不能停在停權階段。" } },
     { "@type": "Question", "name": "新生帳號的命名規則，學號跟姓名拼音哪個好？", "acceptedAnswer": { "@type": "Answer", "text": "沒有標準答案，但要在第一屆建檔前就定案，因為改規則等於要求所有人重新記帳號、也牽動已分享的檔案權限。學號的優點是唯一、不會跟其他學生撞名，缺點是老師記不住學生是誰；姓名拼音的優點是好認、好記，缺點是撞名（尤其菜市場姓名）要另外處理後綴規則，且姓名有異動（例如法定改名）時比學號複雜。多數學校會用「學號」或「入學年度＋班級＋座號」這類不隨學生更動的識別碼，把姓名放在使用者個人資料的顯示名稱裡即可。" } },
     { "@type": "Question", "name": "新生帳號應該提早多久建立？", "acceptedAnswer": { "@type": "Answer", "text": "建議在開學前至少 2 週完成建檔，並實際登入測試至少幾個帳號。原因是 CSV 批次上傳常見的欄位格式錯誤、機構單位路徑打錯，第一次上傳很少一次全對，抓格式問題與重新上傳都需要時間；另外新帳號要能收到 Classroom 邀請、能用 Gemini 等服務，也需要等 OU 的服務開關生效。留 2 週緩衝，開學第一天帳號才不會來不及用。" } },
     { "@type": "Question", "name": "在校生的機構單位（OU）要不要每年重新調整？", "acceptedAnswer": { "@type": "Answer", "text": "要。多數學校用「年級」規劃 OU（例如 /學生/一年級、/學生/二年級），代表每年升級時，全校在校生的帳號都要整批搬移到下一個年級的 OU，這一步常被忽略，結果新學年度用的還是舊年級的服務開關與政策。建議把「開學前搬移在校生 OU」跟「新生建檔」排在同一份檢查清單裡，兩件事一起做，不要分開處理。" } },
@@ -61,7 +62,7 @@
   "description": "開學前的新生批次建檔、畢業前的離校學生帳號處理，整理成可重複照做的年度時程表：命名規則、OU 搬移、停權與資料轉出的順序。",
   "image": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
   "datePublished": "2026-08-29",
-  "dateModified": "2026-08-29",
+  "dateModified": "2026-09-06",
   "author": {
     "@type": "Person",
     "name": "鴻綸科技 Steve",
@@ -156,12 +157,21 @@
         <thead><tr><th>階段</th><th>做什麼</th><th>為什麼分開</th></tr></thead>
         <tbody>
           <tr><td><strong>一、停權（Suspend）</strong></td><td>畢業典禮後或學期結束時，把該屆學生帳號整批停權。停權後帳號登不進去、不能收發信，但資料還在。</td><td>停權可以隨時復原，刪除不行。萬一有學生的成績單、作品集還沒下載完，停權階段還來得及補救。</td></tr>
-          <tr><td><strong>二、資料轉出</strong></td><td>依需求選：用管理主控台的資料移轉工具把雲端硬碟內容轉給導師或保管帳號；或讓學生自己在畢業前用 Google Takeout 匯出到個人帳號。</td><td>刪除帳號後，沒有轉移或備份的檔案不會留下副本。這一步一定要在刪除前完成，且最好在畢業前就提醒學生自己備份。</td></tr>
-          <tr><td><strong>三、刪除</strong></td><td>確認資料轉出完成、且過了學校規定的保存期限後，才排定時間刪除帳號，釋放網域的儲存空間額度。</td><td>刪除不可逆，晚一點做沒有壞處；資料保存期限請依貴校個資保存政策，並可參考<a href="/knowledge/privacy">個資法與校園資安須知</a>。</td></tr>
+          <tr><td><strong>二、資料轉出</strong></td><td>依需求選：管理員在「目錄 › 使用者 › 選使用者 › 將雲端硬碟檔案轉移給新擁有者」把雲端硬碟內容轉給導師或保管帳號；或讓學生自己在畢業前把資料帶走（見下方說明）。</td><td>刪除帳號後，沒有轉移或備份的檔案不會留下副本。這一步一定要在刪除前完成，且最好在畢業前就提醒學生自己備份。</td></tr>
+          <tr><td><strong>三、刪除</strong></td><td>確認資料轉出完成、且過了學校規定的保存期限後，才排定時間刪除帳號，釋放網域的儲存空間額度。刪除後有一段還原期（依 Google 當期政策，約 20 天），逾期資料就救不回來。</td><td>刪除不可逆，晚一點做沒有壞處；資料保存期限請依貴校個資保存政策，並可參考<a href="/knowledge/privacy">個資法與校園資安須知</a>。</td></tr>
         </tbody>
       </table>
     </div>
     <p>轉學生（轉入、轉出）比照同一套邏輯：<strong>轉入視同新生</strong>，差別只在建檔時間點不固定，需要一套隨到隨辦的簡化流程；<strong>轉出視同畢業</strong>，先停權再處理資料。轉出學生的帳號處理很容易被行政流程漏掉，建議在轉學公文核准的同時，就把「停權該生 Google 帳號」列進承辦人的標準作業檢查項目，不要等到有人發現帳號還能用才處理。</p>
+
+    <h3>讓畢業生自己把資料帶走：Takeout 與「轉移內容」</h3>
+    <p>要開放這個功能，管理員先到<strong>管理主控台 › 選單 › 資料 › 資料匯入及匯出 › Google Takeout</strong>（需要具備服務設定權限的管理員），對畢業生所在的機構單位勾選「允許使用者存取『轉移內容』」，並開啟雲端硬碟、Gmail、Google 相簿的存取。另外，「轉移內容」要能複製雲端硬碟檔案，<strong>學校的對外雲端硬碟分享必須是開啟的</strong>。</p>
+    <p>學生端有兩條路，用途不同：</p>
+    <ul class="feature-list" style="margin-top:12px;">
+      <li><strong>下載封存（takeout.google.com）</strong>：把資料打包成 zip 檔下載，適合要留一份離線備份。</li>
+      <li><strong>轉移內容（takeout.google.com/transfer）</strong>：把「我的雲端硬碟」裡自己擁有的檔案、Gmail 信件、Google 相簿，<strong>複製</strong>到一個個人 Google 帳號，原本學校帳號裡的檔案不會被刪。適合直接搬到私人帳號繼續用。</li>
+    </ul>
+    <p><strong>兩種方式都只處理「個人擁有」的內容</strong>：放在共用雲端硬碟裡的檔案不會被轉走，因為那是學校（機構）擁有，不是學生。這些操作要在帳號還沒停權、還能登入時完成，所以「提醒學生自己備份」的公告要早於停權日發出。</p>
 
     <h2>把 4 個時間點整理成一份年度檢查清單</h2>
     <ul class="feature-list">
@@ -175,6 +185,7 @@
     <h2>延伸閱讀</h2>
     <ul>
       <li><a href="/knowledge/google-admin">Google 管理主控台校園設定指南（OU、群組、Chrome 政策） →</a></li>
+      <li><a href="/knowledge/two-step-verification">學校怎麼強制開啟兩步驟驗證：排除學生 OU 與管理員救援 →</a></li>
       <li><a href="/knowledge/education-apply">學校 Google 帳號怎麼申請？資格、流程與 Gemini 開通 →</a></li>
       <li><a href="/knowledge/privacy">個資法與校園資安須知 →</a></li>
       <li><a href="/knowledge/google-storage">學校雲端硬碟空間不足怎麼辦 →</a></li>
@@ -188,7 +199,11 @@
     </details>
     <details class="faq-item">
       <summary>學生畢業後，雲端硬碟裡的檔案怎麼處理？</summary>
-      <div class="faq-a">3 個選項：一是用管理主控台的資料移轉工具，把畢業生帳號裡的雲端硬碟內容轉移到另一個帳號（例如導師或指定的保管帳號），適合需要留存班級共同作業成果的情況；二是讓學生自己在畢業前用 Google Takeout 把個人資料匯出到自己的個人帳號；三是依學校的資料保存政策，直接隨帳號一併封存或刪除。三種做法要在停權前就決定，不要等刪除前一天才想。</div>
+      <div class="faq-a">3 個選項：一是管理員在「目錄 › 使用者 › 選使用者 › 將雲端硬碟檔案轉移給新擁有者」，把畢業生的雲端硬碟內容轉給導師或指定的保管帳號，適合需要留存班級共同作業成果的情況；二是讓學生自己在畢業前用 Takeout 下載封存，或用「轉移內容」（takeout.google.com/transfer）把個人擁有的檔案、Gmail 與相簿複製到個人帳號；三是依學校的資料保存政策，直接隨帳號一併封存或刪除。共用雲端硬碟裡的檔案屬學校所有、不會被轉走。三種做法要在停權前就決定，不要等刪除前一天才想。</div>
+    </details>
+    <details class="faq-item">
+      <summary>帳號停權後，為什麼全校儲存空間沒有變少？</summary>
+      <div class="faq-a">因為停權（Suspend）的帳號，其占用的儲存空間仍然計入全校共用的儲存空間池。停權只是讓帳號登不進去，資料還在、還占空間。要真正把空間釋放出來，必須在資料轉出或保存期滿後刪除帳號。所以如果目的是回收儲存空間，停權只是中繼站，不能停在停權階段。</div>
     </details>
     <details class="faq-item">
       <summary>新生帳號的命名規則，學號跟姓名拼音哪個好？</summary>
@@ -207,7 +222,7 @@
       <div class="faq-a">轉入學生視同新生建檔，差別只在建檔時間點不固定，需要有一套隨到隨辦的簡化流程（例如單筆新增而非等下一批 CSV）。轉出學生比照畢業生處理：先停權、確認資料轉出或保存需求後再決定刪除時間，差別是轉出通常沒有固定的學年度時間點，行政上更容易漏掉，建議在轉學公文核准後，把「停權該生 Google 帳號」列進承辦人的標準作業檢查項目。</div>
     </details>
 
-    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-08-29">2026 年 8 月 29 日</time></p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-09-06">2026 年 9 月 6 日</time></p>
   </div>
 </section>
 
@@ -256,6 +271,6 @@
 </div>
 
 
-<script src="/assets/main.js?v=21"></script>
+<script src="/assets/main.js?v=22"></script>
 </body>
 </html>

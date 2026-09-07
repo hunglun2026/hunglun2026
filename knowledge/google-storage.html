@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=22" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=51">
+<link rel="stylesheet" href="/assets/style.css?v=52">
 <title>學校雲端硬碟空間不足怎麼辦：100TB共用池監控與清理策略｜鴻綸科技</title>
 <meta name="description" content="Google for Education 的儲存空間是全網域共用的一個池子，不是每人一份。這篇說明 100TB 共用池怎麼運作、快撞到配額時管理員在管理主控台能看到什麼、常見的空間佔用大戶，以及升級方案與清理兩條解法怎麼選。">
 <link rel="canonical" href="https://www.hunglun.com/knowledge/google-storage">
@@ -43,7 +43,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-06",
   "mainEntity": [
     { "@type": "Question", "name": "Google for Education 的雲端硬碟空間是每個帳號一份，還是大家共用？", "acceptedAnswer": { "@type": "Answer", "text": "是全網域共用的一個池子，不是每人各自一份配額。Education Fundamentals、Education Standard、Teaching and Learning Upgrade 這三個版本，基準都是整個網域共用 100TB，全校師生的 Drive、Gmail 附件、共用雲端硬碟、相簿檔案全部算在同一個池子裡，任何一個帳號囤了大量檔案，吃掉的是全校的額度。" } },
     { "@type": "Question", "name": "哪些東西會計入這 100TB？哪些不會？", "acceptedAnswer": { "@type": "Answer", "text": "會計入的：Google 雲端硬碟裡的檔案（含共用雲端硬碟）、Gmail 信件與附件、Google 相簿裡的相片影片。要注意的是，2022年5月起，新建立或編輯過的 Google 文件、試算表、簡報、表單、繪圖檔案也開始計入容量，不再是「Google 原生格式不佔空間」的舊規則，這點很多學校還沒更新認知。" } },
@@ -62,7 +62,7 @@
   "description": "Google for Education 儲存空間知識：全網域共用池怎麼運作、快滿的時候會發生什麼、常見佔用大戶、以及管理員監控用量與升級方案的判斷原則。",
   "image": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
   "datePublished": "2026-08-31",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-06",
   "author": {
     "@type": "Person",
     "name": "鴻綸科技 Steve",
@@ -115,7 +115,7 @@
     <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/knowledge">知識庫</a> ／ 學校雲端硬碟空間不足怎麼辦</nav>
     <h1>學校雲端硬碟空間不足怎麼辦</h1>
     <p>100TB 共用池怎麼運作、快撞到配額時該先查什麼、清理與升級怎麼選。</p>
-    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-08-31">2026 年 8 月 31 日</time></p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-09-06">2026 年 9 月 6 日</time></p>
   </div>
 </div>
 
@@ -131,6 +131,7 @@
       <li><strong>Gmail 信件與附件</strong>：長年累積的信箱附件是容易被忽略的一塊。</li>
       <li><strong>Google 相簿</strong>：手機自動備份相片影片，教師個人帳號常常在不知情下佔用大量空間。</li>
       <li><strong>Google 文件／試算表／簡報／表單／繪圖檔案</strong>：注意，這點在 2022 年 5 月後改變過。只要是新建立或編輯過的原生格式檔案，同樣計入容量，不是舊觀念裡「Google 原生格式不佔空間」。</li>
+      <li><strong>已停權（Suspend）帳號的資料</strong>：停權不等於清空。停權帳號占用的空間仍計入共用池，要刪除帳號才會釋放。</li>
     </ul>
 
     <h2 class="section-title reveal">額度快用完時會發生什麼事</h2>
@@ -157,7 +158,7 @@
     <h2 class="section-title reveal">清理，還是升級？</h2>
     <p>兩條路不衝突，但建議<strong>先清理再評估升級</strong>，因為多數學校撞到配額的原因是「該清的沒清」，不是真的需要的容量已經超過 100TB：</p>
     <ul class="feature-list" style="margin-top:16px;">
-      <li><strong>清理優先做</strong>：停用畢業校友帳號前先確認資料轉移或封存規則（可對照<a class="text-link" href="/knowledge/account-lifecycle">帳號生命週期管理</a>）、清掉共用雲端硬碟裡的重複檔案、關閉不需要的相簿自動備份。</li>
+      <li><strong>清理優先做</strong>：處理畢業校友帳號前先確認資料轉移或封存規則（可對照<a class="text-link" href="/knowledge/account-lifecycle">帳號生命週期管理</a>）、清掉共用雲端硬碟裡的重複檔案、關閉不需要的相簿自動備份。<strong>要注意「停權」不會釋放空間</strong>：停權（Suspend）的帳號其資料仍計入共用池，必須在資料轉出或保存期滿後<strong>刪除</strong>帳號，空間才會回收。畢業季常見的錯誤是整批停權就以為清完了，配額卻沒動。</li>
       <li><strong>清完仍不夠，再看升級</strong>：Teaching and Learning Upgrade 與 Education Plus 這兩個版本，每個授權會額外附加固定容量，等於用授權數換算擴大共用池上限。實際附加容量、費用與是否符合貴校現況，屬於採購與授權規劃的一部分，建議直接洽詢<a class="text-link" href="/services/google-workspace">Google Workspace for Education 授權導入</a>服務確認最新方案，不要照網路上的舊數字直接編列預算，官方政策調整過不只一次。</li>
     </ul>
     <p>需要協助盤點用量、規劃升級方案，或評估貴校現有授權版本是否符合需求，歡迎<a href="/contact">聯絡我們</a>。</p>
@@ -272,6 +273,6 @@
 </div>
 
 
-<script src="/assets/main.js?v=21"></script>
+<script src="/assets/main.js?v=22"></script>
 </body>
 </html>
