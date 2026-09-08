@@ -60,3 +60,6 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 舊網址（已被索引）轉到 Chromebook 知識庫頁，避免 404
 /knowledge/mobile-guardian /knowledge/chromebook 301
 /software/mobile-guardian /software 301
+
+# Intune 文章 2026-09-08 從知識庫改放進 Google 解決方案底下（Steve：這篇應該放 google 解決方案）
+/knowledge/intune /google/intune 301
