@@ -4,7 +4,7 @@
  * 為什麼需要這個檔案：
  * Cloudflare Pages 的 `_redirects` 不支援問號參數比對（官方文件明列 Query Parameters ❌），
  * 而舊站 24 筆網址裡有 22 筆都靠 nav／tId 參數區分頁面。若只用 _redirects，
- * 這 22 筆會全部塌成同一條規則，等於把所有舊頁面都導到同一頁——Google 會判定
+ * 這 22 筆會全部塌成同一條規則，等於把所有舊頁面都導到同一頁，Google 會判定
  * 「轉址目標與原內容不相關」，舊頁面累積的排名權重轉移會大打折扣，甚至被當成軟性 404。
  * 因此改用 Pages Function 讀取 query string 做逐頁對應。
  *

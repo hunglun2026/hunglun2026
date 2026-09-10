@@ -1,5 +1,5 @@
 /**
- * /api/contact —— 官網詢問表單的收件端（Cloudflare Pages Function）
+ * /api/contact：官網詢問表單的收件端（Cloudflare Pages Function）
  *
  * 為什麼要有這一層，而不是讓瀏覽器直接打 Apps Script：
  * 1. 同網域，所以沒有 CORS 問題（Apps Script 的 /exec 會 302 到 googleusercontent，
