@@ -94,6 +94,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Photontree VR 眼鏡是什麼](https://www.hunglun.com/knowledge/photontree)：台灣設計製造、台灣唯一通過 Google 官方認證的 VR 眼鏡，手機（4.7–6 吋）放入即用，39mm 大口徑鏡片、視角 90 度、重量 180 克，可搭配 ThingLink 環景教材，適合班級輪流體驗；鴻綸科技代理。
 - [Chromebook 選購指南](https://www.hunglun.com/knowledge/chromebook)：Chromebook 是什麼、優缺點、載具管理授權（CEU）、校園採購須知；另含教育現場挑選教學載具的四個要點、傳統個人電腦與 Chromebook 對照表（開機約 40–90 秒 vs 約 6–8 秒；管理勞動力與成本降低率平均 59%，2020 年 IDC 白皮書）、CEU 裝置管理與使用者管理功能詳解。
 - [AI 入門百科](https://www.hunglun.com/knowledge/ai)：AI、生成式 AI、大型語言模型（LLM）、AI 幻覺、校園導入 AI 注意事項。
+- [學校 AI 助手怎麼選？Claude、ChatGPT、Gemini 比較](https://www.hunglun.com/knowledge/ai-comparison)：三個 AI 助手在校園情境的定位比較（核心強項、行政整合、資料訓練政策、帳號管理、研究工具），以及 Google AI Pro for Education 加贈 Gemini Notebook（原 NotebookLM）在校本題庫、論文文獻整理、會議紀錄收斂三種情境的實際用法。作者立場為 Google AI Pro for Education 授權經銷夥伴。
 - [電腦與雲端手冊](https://www.hunglun.com/knowledge/computer)：硬體規格、作業系統選擇、雲端服務、校園電腦教室與網路規劃。
 - [Google for Education 指南](https://www.hunglun.com/knowledge/google)：Google for Education、Workspace 基礎版/進階版、認證夥伴計畫、申請流程。
 - [Gemini 教育版怎麼用](https://www.hunglun.com/knowledge/gemini)：學校導入 Gemini 教育版的實務：學生在 Classroom 能做什麼、老師備課與評量的用法、管理員該確認的四件事（版本授權、OU 架構、逐一應用程式開關、使用規範），以及個人版與教育版的資料訓練政策差異與方案比較。含 2026 年 8 月 10 日起 Classroom 的 Gemini 開放給所有年齡 K-12 與高教學生的變更。
