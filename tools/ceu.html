@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<!-- 這份是 20260512ceu99v2.shen-7b2.workers.dev 的複本，2026-09-10 搬進 hunglun2026 官網商用工具區。
+     另有一層 functions/tools/_middleware.js 的伺服器端密碼閘擋在前面。原版 shen-7b2 未動。 -->
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鴻綸科技 CEU 綁定與解除系統 (大量批次版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body { 
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f8fafc; /* slate-50 */
+        }
+        
+        /* 滾動條美化 */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .log-container::-webkit-scrollbar-track { background: #0f172a; }
+        .log-container::-webkit-scrollbar-thumb { background: #334155; }
+        
+        /* 密碼錯誤震動動畫 */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        .animate-shake { animation: shake 0.4s; }
+
+        /* Google 標誌性四色銳利色帶 */
+        .google-stripe {
+            background: linear-gradient(90deg, 
+                #4285F4 0%, #4285F4 25%, 
+                #EA4335 25%, #EA4335 50%, 
+                #FBBC05 50%, #FBBC05 75%, 
+                #34A853 75%, #34A853 100%
+            );
+        }
+
+        /* Excel-like table styles */
+        .excel-table { border-collapse: separate; border-spacing: 0; width: 100%; table-layout: auto; }
+        .excel-table th { 
+            background-color: #f1f5f9; 
+            border-bottom: 2px solid #e2e8f0; 
+            border-right: 1px solid #e2e8f0;
+            padding: 12px 10px; 
+            text-align: left; 
+            font-weight: 600; 
+            color: #475569; 
+            position: sticky; 
+            top: 0; 
+            z-index: 10;
+            font-size: 0.875rem;
+        }
+        .excel-table td { 
+            border-bottom: 1px solid #e2e8f0; 
+            border-right: 1px solid #e2e8f0;
+            padding: 0; 
+            position: relative;
+            background-color: #ffffff;
+            transition: background-color 0.2s;
+        }
+        .excel-table tr:hover td {
+            background-color: #f8fafc;
+        }
+        .excel-table input {
+            width: 100%;
+            height: 100%;
+            padding: 12px 10px;
+            border: 2px solid transparent;
+            outline: none;
+            background: transparent;
+            box-sizing: border-box;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.875rem;
+            color: #1e293b;
+            transition: all 0.2s;
+        }
+        .excel-table input:hover {
+            background-color: #f1f5f9;
+        }
+        .excel-table input:focus {
+            background-color: #eff6ff;
+            border: 2px solid #3b82f6; /* Blue-500 */
+            border-radius: 4px;
+            z-index: 5;
+            position: relative;
+        }
+        /* 特別標示 Device ID 欄位 */
+        .device-id-input {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .device-id-input.auto-filled {
+            background-color: #ecfdf5 !important; /* emerald-50 */
+            color: #047857 !important; /* emerald-700 */
+            font-weight: 600;
+        }
+        
+        .row-number {
+            background-color: #f8fafc !important;
+            color: #94a3b8;
+            text-align: center !important;
+            width: 48px;
+            font-size: 0.8125rem;
+            user-select: none;
+            border-left: 1px solid #e2e8f0;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <div id="passwordModal" class="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center backdrop-blur-md transition-all duration-500">
+        <div class="bg-white/95 rounded-3xl shadow-2xl w-full max-w-sm p-8 mx-4 text-center transform transition-all duration-300 scale-100 border border-white/20 relative overflow-hidden" id="passwordBox">
+            
+            <div class="absolute top-0 left-0 w-full h-2 google-stripe"></div>
+            
+            <div class="bg-white p-4 rounded-2xl shadow-sm inline-block mb-6 mt-2 border border-slate-100">
+                <img src="https://i.ibb.co/5XPgTdsY/image-1.png" alt="鴻綸科技 LOGO" class="h-28 mx-auto object-contain" 
+                     onerror="this.src='https://via.placeholder.com/150x200/ffffff/4285F4?text=HongLun'; this.onerror=null;">
+            </div>
+            
+            <h2 class="text-2xl font-bold text-slate-800 mb-2 tracking-tight">系統驗證</h2>
+            <p class="text-slate-500 text-sm mb-8">請輸入授權密碼以進入 CEU 綁定系統</p>
+            
+            <div class="relative mb-2 group">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-blue-500">
+                    <i class="fa-solid fa-shield-halved text-slate-400 group-focus-within:text-blue-500 transition-colors"></i>
+                </div>
+                <input type="password" id="systemPassword" placeholder="••••••••" 
+                       class="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all font-mono tracking-widest text-center text-lg shadow-inner"
+                       onkeypress="if(event.key === 'Enter') checkPassword()">
+            </div>
+            
+            <div id="passwordError" class="text-rose-500 text-sm mb-4 mt-2 hidden font-medium flex items-center justify-center gap-1.5 animate-pulse">
+                <i class="fa-solid fa-circle-exclamation"></i> 密碼錯誤，請重新輸入
+            </div>
+            
+            <button onclick="checkPassword()" class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2 mt-6 group">
+                <span>登入系統</span>
+                <i class="fa-solid fa-arrow-right-to-bracket group-hover:translate-x-1 transition-transform"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="max-w-[1600px] mx-auto p-4 md:p-6 lg:p-8">
+        
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 mb-6 overflow-hidden relative">
+            <div class="absolute top-0 left-0 w-full h-2.5 google-stripe shadow-sm"></div>
+            
+            <div class="p-6 pt-9 md:p-8 md:pt-10 flex flex-col xl:flex-row xl:items-center justify-between gap-8">
+                
+                <div class="flex items-center gap-6">
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 shadow-sm hidden sm:block">
+                        <img src="https://i.ibb.co/5XPgTdsY/image-1.png" alt="鴻綸科技 LOGO" class="h-16 w-auto object-contain rounded" 
+                             onerror="this.src='https://via.placeholder.com/100x150/ffffff/4285F4?text=HongLun'; this.onerror=null;">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-1 flex-wrap">
+                            <h1 class="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight">鴻綸科技 CEU 綁定與解除系統</h1>
+                            <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-blue-200">大量批次版</span>
+                            <span class="font-bold text-lg ml-2 flex items-center gap-2">
+                                <span class="text-blue-400 font-normal">|</span> 
+                                <span class="text-blue-600">Created by Steve (Mar 2026)</span> 
+                                <span class="text-slate-300 font-normal">|</span>
+                            </span>
+                        </div>
+                        <p class="text-slate-500 text-sm flex items-center gap-2 mt-2">
+                            <i class="fa-solid fa-bolt text-amber-400"></i>
+                            自動捕捉並備份 Google Device ID，支援批次 99 台綁定、解綁。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex-1 max-w-xl w-full xl:ml-auto bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-inner">
+                    <label for="apiKeyInput" class="flex items-center justify-between text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+                        <span><i class="fa-brands fa-google text-slate-400 mr-1"></i> Google Cloud API Key</span>
+                        <span class="text-rose-500">*必填</span>
+                    </label>
+                    <div class="relative group">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                            <i class="fa-solid fa-key text-slate-400 group-focus-within:text-blue-500 transition-colors"></i>
+                        </div>
+                        <input type="text" id="apiKeyInput" placeholder="請貼上您的 API Key 或點擊右側解鎖內建金鑰" 
+                               class="w-full pl-10 pr-12 py-2.5 bg-white border border-slate-300 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 transition-all font-mono text-sm shadow-sm">
+                        <div class="absolute inset-y-0 right-1.5 flex items-center">
+                            <button onclick="unlockApiKey()" class="bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 h-7 w-8 rounded flex items-center justify-center transition-colors border border-slate-200" title="解鎖內建金鑰">
+                                <i class="fa-solid fa-lock text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+            
+            <div class="bg-slate-50 border-b border-slate-200 p-4 flex flex-wrap items-center justify-between gap-4">
+                
+                <div class="flex items-center gap-3 flex-wrap">
+                    <div class="flex rounded-lg shadow-sm border border-slate-300 bg-white overflow-hidden p-0.5">
+                        <span class="px-3 py-1.5 text-xs font-semibold text-slate-500 flex items-center bg-slate-50 border-r border-slate-200">
+                            新增列數
+                        </span>
+                        <button onclick="addRow(1)" class="px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-blue-600 transition-colors">1</button>
+                        <div class="w-px bg-slate-200"></div>
+                        <button onclick="addRow(10)" class="px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-blue-600 transition-colors">10</button>
+                        <div class="w-px bg-slate-200"></div>
+                        <button onclick="addRow(99)" class="px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-blue-600 transition-colors">99</button>
+                        <div class="w-px bg-slate-200"></div>
+                        <button onclick="addRow(500)" class="px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-blue-600 transition-colors">500</button>
+                    </div>
+                    
+                    <button onclick="clearTable()" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-rose-600 hover:bg-rose-50 hover:text-rose-700 transition-colors">
+                        <i class="fa-solid fa-trash-can"></i> 清空
+                    </button>
+
+                    <div class="h-6 w-px bg-slate-300 mx-1 hidden md:block"></div>
+                    
+                    <a href="https://chromecommercial.googleapis.com/v1/hardwareModelAndBrandCodes?key=AIzaSyAZN2K7O2-2Llyzu5nLXx3bjdTVdkn40-k" target="_blank" 
+                       class="text-blue-600 hover:text-blue-800 underline underline-offset-2 text-sm font-medium transition-colors ml-2">
+                        裝置型號 Model 查詢
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-3 flex-wrap">
+                    
+                    <button onclick="exportCSV()" class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-4 py-2 rounded-lg text-sm font-semibold transition-all border border-indigo-200 flex items-center gap-2">
+                        <i class="fa-solid fa-file-excel"></i> 匯出 Excel 備份
+                    </button>
+
+                    <div class="relative inline-block text-left group">
+                        <button class="bg-slate-800 hover:bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm flex items-center gap-2 border border-slate-700">
+                            <i class="fa-solid fa-download"></i> 匯出腳本 <i class="fa-solid fa-chevron-down text-xs ml-1 opacity-70"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl shadow-slate-200/50 hidden group-hover:block z-20 border border-slate-200 overflow-hidden transform opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="p-1">
+                                <div class="px-3 py-1.5 text-xs font-bold text-slate-400">匯出綁定腳本</div>
+                                <a href="#" onclick="exportCurl('windows', 'bind')" class="flex items-center px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-windows text-blue-500 w-5"></i> Windows (.bat)
+                                </a>
+                                <a href="#" onclick="exportCurl('chromeos', 'bind')" class="flex items-center px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-colors mt-1">
+                                    <i class="fa-brands fa-chrome text-emerald-500 w-5"></i> ChromeOS / Mac (.sh)
+                                </a>
+                                <div class="border-t border-slate-100 my-1"></div>
+                                <div class="px-3 py-1.5 text-xs font-bold text-rose-400">匯出解除腳本</div>
+                                <a href="#" onclick="exportCurl('windows', 'unbind')" class="flex items-center px-4 py-2 text-sm text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-lg transition-colors">
+                                    <i class="fa-brands fa-windows text-rose-500 w-5"></i> Windows (.bat)
+                                </a>
+                                <a href="#" onclick="exportCurl('chromeos', 'unbind')" class="flex items-center px-4 py-2 text-sm text-slate-700 hover:bg-rose-50 hover:text-rose-700 rounded-lg transition-colors mt-1">
+                                    <i class="fa-brands fa-chrome text-rose-500 w-5"></i> ChromeOS / Mac (.sh)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="stopApi()" id="btnStopApi" class="hidden bg-rose-500 hover:bg-rose-600 active:bg-rose-700 text-white px-5 py-2 rounded-lg font-semibold shadow-md shadow-rose-500/20 transition-all items-center gap-2">
+                        <i class="fa-solid fa-stop"></i> 緊急停止
+                    </button>
+
+                    <button onclick="sendToApi('unbind')" id="btnUnbindApi" class="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white px-5 py-2 rounded-lg font-semibold shadow-md shadow-rose-500/20 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-link-slash"></i> 解除綁定
+                    </button>
+
+                    <button onclick="sendToApi('bind')" id="btnSendApi" class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rounded-lg font-semibold shadow-md shadow-blue-500/20 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> 執行綁定
+                    </button>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto bg-white relative" style="max-height: 55vh;">
+                <table class="excel-table" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th class="w-[48px] text-center shadow-sm">#</th>
+                            <th class="min-w-[180px] shadow-sm">
+                                <div class="text-slate-800">序號 (SN) <span class="text-rose-500 ml-0.5">*</span></div>
+                                <div class="text-xs text-slate-500 font-normal mt-0.5 tracking-wide">(向廠商拿)</div>
+                            </th>
+                            <th class="min-w-[260px] shadow-sm">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <div class="text-slate-800">硬體型號 (Model) <span class="text-rose-500 ml-0.5">*</span></div>
+                                        <div class="text-xs text-slate-500 font-normal mt-0.5 tracking-wide">(向廠商拿)</div>
+                                    </div>
+                                    <button onclick="fillDown(1)" class="group text-xs bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-2.5 py-1.5 rounded-md shadow-sm border border-blue-200 transition-all flex items-center gap-1">
+                                        <i class="fa-solid fa-arrow-down-long group-hover:-translate-y-0.5 transition-transform"></i> 填滿
+                                    </button>
+                                </div>
+                            </th>
+                            <th class="min-w-[200px] shadow-sm">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <div class="text-slate-800">預先配置代碼 (Token) <span class="text-rose-500 ml-0.5">*</span></div>
+                                        <div class="text-xs text-slate-500 font-normal mt-0.5 tracking-wide">(向學校拿)</div>
+                                    </div>
+                                    <button onclick="fillDown(2)" class="group text-xs bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-2.5 py-1.5 rounded-md shadow-sm border border-blue-200 transition-all flex items-center gap-1">
+                                        <i class="fa-solid fa-arrow-down-long group-hover:-translate-y-0.5 transition-transform"></i> 填滿
+                                    </button>
+                                </div>
+                            </th>
+                            <th class="min-w-[160px] shadow-sm">
+                                <div class="text-slate-800">認證裝置 ID (ADID) <span class="text-rose-500 ml-0.5">*</span></div>
+                                <div class="text-xs text-slate-500 font-normal mt-0.5 tracking-wide">(向廠商拿)</div>
+                            </th>
+                            <th class="min-w-[180px] shadow-sm">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <div class="text-slate-800">客戶 ID / 網域 <span class="text-rose-500 ml-0.5">*</span></div>
+                                        <div class="text-xs text-slate-500 font-normal mt-0.5 tracking-wide">(向學校拿)</div>
+                                    </div>
+                                    <button onclick="fillDown(4)" class="group text-xs bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-2.5 py-1.5 rounded-md shadow-sm border border-blue-200 transition-all flex items-center gap-1">
+                                        <i class="fa-solid fa-arrow-down-long group-hover:-translate-y-0.5 transition-transform"></i> 填滿
+                                    </button>
+                                </div>
+                            </th>
+                            <th class="min-w-[240px] shadow-sm bg-blue-50/50">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <div class="text-blue-800">Google Device ID <span class="text-rose-500 ml-0.5">*解除用</span></div>
+                                        <div class="text-xs text-blue-600/80 font-normal mt-0.5 tracking-wide flex items-center gap-1">
+                                            <i class="fa-solid fa-wand-magic-sparkles"></i> 綁定成功後自動填寫
+                                        </div>
+                                    </div>
+                                    <button onclick="fillDown(5)" class="group text-xs bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 px-2.5 py-1.5 rounded-md shadow-sm border border-blue-200 transition-all flex items-center gap-1">
+                                        <i class="fa-solid fa-arrow-down-long group-hover:-translate-y-0.5 transition-transform"></i> 填滿
+                                    </button>
+                                </div>
+                            </th>
+                            <th class="w-[60px] text-center shadow-sm">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+            
+            <div class="lg:col-span-1 flex flex-col gap-4">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 relative overflow-hidden h-full flex flex-col justify-center">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-blue-50 rounded-full opacity-50 pointer-events-none"></div>
+                    
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie"></i> 執行狀態儀表板
+                    </h3>
+                    
+                    <div id="statusSummary" class="text-xl font-bold text-slate-800 mb-6">
+                        等待執行...
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-emerald-50/50 border border-emerald-100 rounded-xl">
+                            <span class="text-sm font-medium text-emerald-800 flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-emerald-500"></i> 成功數量
+                            </span>
+                            <span id="countSuccess" class="font-bold text-emerald-600 text-lg">0</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-rose-50/50 border border-rose-100 rounded-xl">
+                            <span class="text-sm font-medium text-rose-800 flex items-center gap-2">
+                                <i class="fa-solid fa-circle-xmark text-rose-500"></i> 失敗數量
+                            </span>
+                            <span id="countFail" class="font-bold text-rose-600 text-lg">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-3">
+                <div class="bg-slate-900 rounded-2xl shadow-lg border border-slate-800 overflow-hidden flex flex-col h-full min-h-[220px]">
+                    <div class="bg-slate-800 px-4 py-2.5 flex items-center justify-between border-b border-slate-700/50">
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                            </div>
+                            <span class="text-xs font-medium text-slate-400 font-mono tracking-wider">ceu-system-terminal ~ /logs</span>
+                        </div>
+                        <button onclick="clearLog()" class="text-xs text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 bg-slate-700/50 hover:bg-slate-700 px-2.5 py-1 rounded-md">
+                            <i class="fa-solid fa-eraser"></i> 清除
+                        </button>
+                    </div>
+                    <div id="logConsole" class="log-container p-4 font-mono text-sm overflow-y-auto whitespace-pre-wrap leading-relaxed flex-1 text-slate-300">
+                        <div class="text-emerald-400">[System] 系統準備就緒。</div>
+                        <div class="text-blue-400">[Info] 支援萬台設備處理。綁定與解除已切換為「每次 99 台高併發模式」。</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // 全域變數與系統狀態
+        // ==========================================
+        const SYSTEM_PASSWORD = "hung5407"; 
+        let isProcessing = false;
+        let forceStopFlag = false;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem('ceu_auth_passed') === 'true') {
+                document.getElementById('passwordModal').classList.add('hidden');
+            } else {
+                document.getElementById('systemPassword').focus();
+            }
+        });
+
+        function checkPassword() {
+            const inputVal = document.getElementById('systemPassword').value;
+            const errorMsg = document.getElementById('passwordError');
+            const box = document.getElementById('passwordBox');
+            const modal = document.getElementById('passwordModal');
+
+            if (inputVal === SYSTEM_PASSWORD) {
+                sessionStorage.setItem('ceu_auth_passed', 'true');
+                errorMsg.classList.add('hidden');
+                modal.style.opacity = '0';
+                box.style.transform = 'scale(0.95) translateY(10px)';
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 400);
+            } else {
+                errorMsg.classList.remove('hidden');
+                box.classList.add('animate-shake');
+                document.getElementById('systemPassword').value = ''; 
+                setTimeout(() => {
+                    box.classList.remove('animate-shake');
+                }, 400);
+            }
+        }
+
+        // 解鎖隱藏版 API 金鑰
+        function unlockApiKey() {
+            const pwd = prompt("請輸入金鑰解鎖密碼：");
+            if (pwd === "5407") {
+                const hiddenKey = "AIzaSyCuqflzs-fRTadFsAjHp7kKREU_xT7BqxQ";
+                document.getElementById('apiKeyInput').value = hiddenKey;
+                log('🔓 內建 API Key 已成功解鎖並載入至欄位。', 'success');
+            } else if (pwd !== null) {
+                alert("解鎖密碼錯誤！");
+            }
+        }
+
+        // ==========================================
+        // 系統主邏輯
+        // ==========================================
+        const tableBody = document.getElementById('tableBody');
+        const logConsole = document.getElementById('logConsole');
+        const apiKeyInput = document.getElementById('apiKeyInput');
+        const countSuccessEl = document.getElementById('countSuccess');
+        const countFailEl = document.getElementById('countFail');
+        const statusSummaryEl = document.getElementById('statusSummary');
+        
+        // 修改這裡：批次數量改為 99 台
+        const BATCH_SIZE = 99;   
+        const DELAY_MS = 2000;   // 緩衝等待時間 (毫秒)
+
+        const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+        window.onload = () => {
+            addRow(10); 
+            setupPasteHandler();
+        };
+
+        function addRow(count = 1) {
+            const fragment = document.createDocumentFragment();
+            const currentRows = tableBody.children.length;
+            for (let i = 0; i < count; i++) {
+                const rowCount = currentRows + i + 1;
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="row-number">${rowCount}</td>
+                    <td><input type="text" data-col="0"></td>
+                    <td><input type="text" data-col="1"></td>
+                    <td><input type="text" data-col="2"></td>
+                    <td><input type="text" data-col="3"></td>
+                    <td><input type="text" data-col="4"></td>
+                    <td><input type="text" data-col="5" class="device-id-input" placeholder="綁定成功自動產生"></td>
+                    <td class="text-center bg-white border-b border-slate-200">
+                        <button onclick="this.closest('tr').remove(); updateRowNumbers();" class="text-slate-400 hover:text-rose-500 hover:bg-rose-50 p-2 rounded-lg transition-colors" title="刪除此列">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                `;
+                fragment.appendChild(tr);
+            }
+            tableBody.appendChild(fragment);
+            updateRowNumbers();
+        }
+
+        function updateRowNumbers() {
+            const rows = tableBody.querySelectorAll('tr');
+            rows.forEach((row, index) => {
+                row.querySelector('.row-number').textContent = index + 1;
+            });
+        }
+
+        function clearTable() {
+            if(confirm('確定要清空表格內的所有資料嗎？')) {
+                tableBody.innerHTML = '';
+                addRow(10);
+                log('表格已清空。', 'info');
+            }
+        }
+
+        function fillDown(colIndex) {
+            const rows = tableBody.querySelectorAll('tr');
+            if (rows.length === 0) return;
+
+            const firstRowInput = rows[0].querySelector(`input[data-col="${colIndex}"]`);
+            const valueToCopy = firstRowInput ? firstRowInput.value.trim() : '';
+
+            if (!valueToCopy) {
+                alert('第一列該欄位為空，請先在第一列輸入資料後再執行向下填滿！');
+                return;
+            }
+
+            let fillCount = 0;
+            rows.forEach((row, index) => {
+                if (index === 0) return; 
+
+                const snInput = row.querySelector(`input[data-col="0"]`);
+                const targetInput = row.querySelector(`input[data-col="${colIndex}"]`);
+
+                if (targetInput && snInput && snInput.value.trim() !== '') {
+                    targetInput.value = valueToCopy;
+                    fillCount++;
+                }
+            });
+            
+            let colName = '';
+            if (colIndex === 1) colName = '硬體型號';
+            else if (colIndex === 2) colName = 'Token';
+            else if (colIndex === 4) colName = '客戶 ID / 網域';
+            else if (colIndex === 5) colName = 'Google Device ID';
+
+            log(`已將第一列的 [${colName}] 向下填滿至 ${fillCount} 個有效裝置中。`, 'success');
+        }
+
+        function setupPasteHandler() {
+            tableBody.addEventListener('paste', (e) => {
+                if (e.target.tagName !== 'INPUT') return;
+                e.preventDefault();
+                const pastedText = (e.clipboardData || window.clipboardData).getData('text/plain');
+                if (!pastedText) return;
+
+                // 處理從 Excel 貼上的資料
+                const rows = pastedText.split(/\r?\n/).filter(row => row.length > 0).map(row => row.split('\t'));
+                const startRowIndex = Array.from(tableBody.children).indexOf(e.target.closest('tr'));
+                const startColIndex = parseInt(e.target.getAttribute('data-col'));
+
+                let neededRows = (startRowIndex + rows.length) - tableBody.children.length;
+                if(neededRows > 0) addRow(neededRows);
+
+                const tableRows = tableBody.querySelectorAll('tr');
+                rows.forEach((rowData, rIdx) => {
+                    const targetRow = tableRows[startRowIndex + rIdx];
+                    if (!targetRow) return;
+                    const inputs = targetRow.querySelectorAll('input');
+                    rowData.forEach((cellData, cIdx) => {
+                        const targetInput = inputs[startColIndex + cIdx];
+                        if (targetInput) targetInput.value = cellData.trim();
+                    });
+                });
+                log(`已成功貼上 ${rows.length} 筆資料。`, 'success');
+            });
+        }
+
+        // ==========================================
+        // 匯出功能 (修正 CSV/Excel 亂碼問題)
+        // ==========================================
+        function exportCSV() {
+            const rows = tableBody.querySelectorAll('tr');
+            
+            let htmlTable = `
+            <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+            <head><meta charset="utf-8"></head>
+            <body><table border="1">
+                <tr>
+                    <th>序號 (SN)</th>
+                    <th>硬體型號 (Model)</th>
+                    <th>預先配置代碼 (Token)</th>
+                    <th>認證裝置 ID (ADID)</th>
+                    <th>客戶 ID/網域</th>
+                    <th>Google Device ID (解除綁定用)</th>
+                </tr>
+            `;
+            
+            let hasData = false;
+            rows.forEach(row => {
+                const inputs = row.querySelectorAll('input');
+                const rowData = Array.from(inputs).map(i => i.value.trim());
+                if (rowData[0] && rowData[1]) {
+                    hasData = true;
+                    // 使用 \t 確保在 Excel 裡面當作文字處理，不被轉成科學記號
+                    htmlTable += `<tr>
+                        <td style='mso-number-format:"\\@";'>${rowData[0]}</td>
+                        <td style='mso-number-format:"\\@";'>${rowData[1]}</td>
+                        <td style='mso-number-format:"\\@";'>${rowData[2]}</td>
+                        <td style='mso-number-format:"\\@";'>${rowData[3]}</td>
+                        <td style='mso-number-format:"\\@";'>${rowData[4]}</td>
+                        <td style='mso-number-format:"\\@";'>${rowData[5]}</td>
+                    </tr>`;
+                }
+            });
+
+            htmlTable += `</table></body></html>`;
+
+            if (!hasData) return alert('表格中沒有可匯出的有效資料！');
+
+            const blob = new Blob([htmlTable], { type: 'application/vnd.ms-excel;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `CEU_裝置資料備份_${new Date().toISOString().split('T')[0]}.xls`;
+            a.click();
+            log(`📥 已成功匯出 Excel 備份檔！建議您妥善保存。`, 'success');
+        }
+
+        function exportCurl(os, action = 'bind') {
+            const apiKey = apiKeyInput.value.trim() || 'YOUR_API_KEY';
+            const data = getTableData();
+            if (!data.length) return alert('無有效資料可匯出');
+
+            const isBind = action === 'bind';
+            // 加入 chcp 65001 修正 Windows bat 檔執行時中文亂碼的問題
+            let content = os === 'windows' ? '@echo off\nchcp 65001 >nul\n' : '#!/bin/bash\n';
+            
+            if (isBind) {
+                for (let i = 0; i < data.length; i += BATCH_SIZE) {
+                    const chunk = data.slice(i, i + BATCH_SIZE);
+                    const payload = JSON.stringify({ requests: chunk.map(row => {
+                        return { 
+                            preProvisionedDevice: {
+                                serialNumber: row.sn, 
+                                hardwareModel: row.model, 
+                                devicePreProvisioningToken: row.token, 
+                                attestedDeviceId: row.adid,
+                                customerId: row.customer 
+                            }
+                        };
+                    })});
+                    
+                    if (os === 'windows') {
+                        content += `curl -X POST -H "Content-Type: application/json" -d "${payload.replace(/"/g, '\\"')}" "https://chromecommercial.googleapis.com/v1/preProvisionedDevices:batchCreate?key=${apiKey}"\n`;
+                    } else {
+                        content += `curl -X POST -H "Content-Type: application/json" -d '${payload}' "https://chromecommercial.googleapis.com/v1/preProvisionedDevices:batchCreate?key=${apiKey}"\n`;
+                    }
+                }
+            } else {
+                // 修復：改為匯出個別 DELETE 的 curl 指令，確保完全相容
+                const validData = data.filter(row => row.deviceId && row.deviceId.includes('-') && row.deviceId.length >= 20);
+                if (validData.length === 0) return alert('無有效的 Google Device ID 可供匯出解除腳本，請確認表格中的欄位是否正確填寫。');
+                
+                validData.forEach(row => {
+                    const cleanId = row.deviceId.trim().replace('preProvisionedDevices/', '');
+                    content += `curl -X DELETE "https://chromecommercial.googleapis.com/v1/preProvisionedDevices/${cleanId}?key=${apiKey}"\n`;
+                });
+            }
+
+            if (os === 'windows') content += 'pause';
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = os === 'windows' ? `CEU_${isBind ? 'Bind' : 'Unbind'}.bat` : `CEU_${isBind ? 'Bind' : 'Unbind'}.sh`;
+            a.click();
+            log(`📥 已匯出 ${os === 'windows' ? 'Windows' : 'ChromeOS/Mac'} ${isBind ? '綁定' : '解除'}腳本。`, 'success');
+        }
+
+        // ==========================================
+        // 執行綁定與解除 API 核心邏輯
+        // ==========================================
+        function log(msg, type = 'info') {
+            const time = new Date().toLocaleTimeString('zh-TW', { hour12: false });
+            let content = '';
+            
+            if (type === 'error') {
+                content = `<div class="text-rose-400 mb-1.5"><span class="text-slate-500 mr-2">[${time}]</span><i class="fa-solid fa-xmark mr-1"></i> ${msg}</div>`;
+            } else if (type === 'success') {
+                content = `<div class="text-emerald-400 mb-1.5"><span class="text-slate-500 mr-2">[${time}]</span><i class="fa-solid fa-check mr-1"></i> ${msg}</div>`;
+            } else if (type === 'warning') {
+                content = `<div class="text-amber-400 mb-1.5"><span class="text-slate-500 mr-2">[${time}]</span><i class="fa-solid fa-triangle-exclamation mr-1"></i> ${msg}</div>`;
+            } else {
+                const icon = (msg.includes('🚀') || msg.includes('👉') || msg.includes('🎉') || msg.includes('📝') || msg.includes('🪄') || msg.includes('🔓') || msg.includes('🛑')) ? '' : '<i class="fa-solid fa-angle-right mr-1 opacity-50"></i>';
+                content = `<div class="text-slate-300 mb-1.5 break-all"><span class="text-slate-500 mr-2">[${time}]</span>${icon} ${msg}</div>`;
+            }
+
+            logConsole.innerHTML += content;
+            logConsole.scrollTop = logConsole.scrollHeight;
+        }
+
+        function clearLog() {
+            logConsole.innerHTML = '';
+            log('日誌已清除。', 'info');
+        }
+
+        function stopApi() {
+            if (!isProcessing) return;
+            document.getElementById('btnStopApi').innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 停止中...';
+            forceStopFlag = true;
+            log('🛑 正在準備緊急終止任務，請稍候...', 'warning');
+        }
+
+        function getTableData() {
+            const data = [];
+            tableBody.querySelectorAll('tr').forEach(row => {
+                const inputs = row.querySelectorAll('input');
+                const rowData = Array.from(inputs).map(i => i.value.trim());
+                if (rowData[0] && rowData[1]) {
+                    data.push({ sn: rowData[0], model: rowData[1], token: rowData[2], adid: rowData[3], customer: rowData[4], deviceId: rowData[5] });
+                }
+            });
+            return data;
+        }
+
+        async function sendToApi(action = 'bind') {
+            const apiKey = apiKeyInput.value.trim();
+            if (!apiKey) {
+                alert('請在畫面上方輸入您的 Google Cloud API Key');
+                apiKeyInput.focus();
+                return;
+            }
+            
+            const data = getTableData();
+            if (!data.length) return alert('表格中找不到有效的裝置資料 (序號與型號不可為空)');
+
+            const isBind = action === 'bind';
+            const actionName = isBind ? '綁定' : '解除綁定';
+
+            if (!isBind) {
+                const unbindPwd = prompt(`⚠️ 警告：確定要執行「解除綁定」嗎？\n系統將會進行批量刪除，請確保【Google Device ID】欄位有值。\n\n請輸入解除授權密碼：`);
+                if (unbindPwd !== "5407") {
+                    if (unbindPwd !== null) {
+                        alert("密碼錯誤！解除綁定已被取消。");
+                    }
+                    return;
+                }
+            }
+
+            // 初始化與 UI 鎖定
+            isProcessing = true;
+            forceStopFlag = false;
+
+            const btn = document.getElementById(isBind ? 'btnSendApi' : 'btnUnbindApi');
+            const originalHTML = btn.innerHTML;
+            const originalClasses = btn.className;
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> 處理中...';
+            btn.className = "bg-slate-400 text-white px-5 py-2 rounded-lg font-semibold shadow-md transition-all flex items-center gap-2 cursor-not-allowed";
+            
+            const otherBtn = document.getElementById(isBind ? 'btnUnbindApi' : 'btnSendApi');
+            otherBtn.disabled = true;
+            otherBtn.classList.add('hidden'); // 隱藏另一個按鈕
+            
+            const stopBtn = document.getElementById('btnStopApi');
+            stopBtn.classList.remove('hidden');
+            stopBtn.classList.add('flex');
+            stopBtn.innerHTML = '<i class="fa-solid fa-stop"></i> 緊急停止';
+            
+            let totalSuccess = 0;
+            let totalFail = 0;
+            statusSummaryEl.innerHTML = `<span class="text-${isBind ? 'blue' : 'rose'}-500 animate-pulse flex items-center gap-2"><i class="fa-solid fa-network-wired"></i> 發送${actionName}請求中...</span>`;
+            countSuccessEl.textContent = '0';
+            countFailEl.textContent = '0';
+
+            if (isBind) {
+                // ==========================================
+                // 執行綁定
+                // ==========================================
+                log(`🚀 開始執行批次綁定 (高併發模式，每次發送 ${BATCH_SIZE} 台)`);
+
+                for (let i = 0; i < data.length; i += BATCH_SIZE) {
+                    if (forceStopFlag) {
+                        log('🛑 任務已被緊急終止！', 'error');
+                        break;
+                    }
+
+                    const chunk = data.slice(i, i + BATCH_SIZE);
+                    const requests = chunk.map(row => {
+                        return { 
+                            preProvisionedDevice: {
+                                serialNumber: row.sn, 
+                                hardwareModel: row.model, 
+                                devicePreProvisioningToken: row.token, 
+                                attestedDeviceId: row.adid,
+                                customerId: row.customer
+                            }
+                        };
+                    });
+
+                    try {
+                        const res = await fetch(`https://chromecommercial.googleapis.com/v1/preProvisionedDevices:batchCreate?key=${apiKey}`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ requests })
+                        });
+                        const result = await res.json();
+                        
+                        if (res.ok) {
+                            totalSuccess += chunk.length;
+                            log(`第 ${Math.floor(i/BATCH_SIZE)+1} 批次發送完成！`, 'success');
+                            
+                            const jsonStr = JSON.stringify(result);
+                            const uuidMatches = [...jsonStr.matchAll(/([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})/g)];
+                            const extractedIds = [...new Set(uuidMatches.map(m => m[1]))];
+
+                            if (extractedIds.length > 0) {
+                                let idIndex = 0;
+                                chunk.forEach((row, idx) => {
+                                    const targetSn = row.sn;
+                                    const deviceToken = row.token;
+                                    
+                                    let exactDeviceId = null;
+                                    while(idIndex < extractedIds.length) {
+                                        if (extractedIds[idIndex] !== deviceToken) {
+                                            exactDeviceId = extractedIds[idIndex];
+                                            idIndex++;
+                                            break;
+                                        }
+                                        idIndex++;
+                                    }
+
+                                    if (targetSn && exactDeviceId) {
+                                        const rows = tableBody.querySelectorAll('tr');
+                                        rows.forEach(tr => {
+                                            const snInput = tr.querySelector('input[data-col="0"]');
+                                            if (snInput && snInput.value.trim() === targetSn) {
+                                                const idInput = tr.querySelector('input[data-col="5"]');
+                                                if (idInput && !idInput.value.trim().includes('-')) {
+                                                    idInput.value = exactDeviceId;
+                                                    idInput.classList.add('auto-filled'); 
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                                log(`🪄 成功擷取並填入 Google Device ID，請記得「匯出 Excel 備份」。`, 'info');
+                            }
+                            
+                        } else {
+                            totalFail += chunk.length;
+                            log(`第 ${Math.floor(i/BATCH_SIZE)+1} 批次失敗: ${result.error?.message || '未知錯誤'}`, 'error');
+                        }
+                    } catch (e) { 
+                        totalFail += chunk.length;
+                        log(`第 ${Math.floor(i/BATCH_SIZE)+1} 批次發生異常: ${e.message}`, 'error'); 
+                    }
+                    
+                    countSuccessEl.textContent = totalSuccess;
+                    countFailEl.textContent = totalFail;
+
+                    if (i + BATCH_SIZE < data.length && !forceStopFlag) await sleep(DELAY_MS); 
+                }
+
+            } else {
+                // ==========================================
+                // 執行解除綁定 (個別 DELETE 併發處理)
+                // ==========================================
+                log(`🚀 開始執行解除綁定 (每次併發處理 ${BATCH_SIZE} 台)...`);
+                
+                for (let i = 0; i < data.length; i += BATCH_SIZE) {
+                    if (forceStopFlag) {
+                        log('🛑 任務已被緊急終止！', 'error');
+                        break;
+                    }
+
+                    const chunk = data.slice(i, i + BATCH_SIZE);
+                    let validChunk = [];
+                    
+                    chunk.forEach(row => {
+                        const deviceId = row.deviceId; 
+                        if (!deviceId || !deviceId.includes('-') || deviceId.length < 20) {
+                            totalFail++;
+                            log(`❌ 序號 ${row.sn} 跳過: 「Google Device ID」格式無效。`, 'warning');
+                        } else {
+                            // 過濾掉不必要的 prefix 獲取乾淨的 UUID 
+                            const cleanId = deviceId.trim().replace('preProvisionedDevices/', '');
+                            validChunk.push({
+                                id: cleanId,
+                                _originalSn: row.sn
+                            });
+                        }
+                    });
+
+                    if (validChunk.length === 0) continue;
+
+                    try {
+                        // 以 Promise.all 同時發送此批次的個別 DELETE 請求
+                        const deletePromises = validChunk.map(item => {
+                            return fetch(`https://chromecommercial.googleapis.com/v1/preProvisionedDevices/${item.id}?key=${apiKey}`, {
+                                method: 'DELETE'
+                            }).then(async res => {
+                                if (!res.ok) {
+                                    let errorMsg = 'HTTP ' + res.status;
+                                    try { 
+                                        const errData = await res.json(); 
+                                        if(errData.error) errorMsg = errData.error.message;
+                                    } catch(e) {}
+                                    throw new Error(`序號 ${item._originalSn} 解除失敗: ${errorMsg}`);
+                                }
+                                return item;
+                            });
+                        });
+
+                        const results = await Promise.allSettled(deletePromises);
+                        
+                        let batchSuccessCount = 0;
+                        results.forEach(result => {
+                            if (result.status === 'fulfilled') {
+                                batchSuccessCount++;
+                                totalSuccess++;
+                                const item = result.value;
+                                const rows = tableBody.querySelectorAll('tr');
+                                rows.forEach(tr => {
+                                    const snInput = tr.querySelector('input[data-col="0"]');
+                                    if (snInput && snInput.value.trim() === item._originalSn) {
+                                        const idInput = tr.querySelector('input[data-col="5"]');
+                                        if (idInput) {
+                                            idInput.value = '已解除';
+                                            idInput.classList.remove('auto-filled');
+                                        }
+                                    }
+                                });
+                            } else {
+                                totalFail++;
+                                log(`❌ ${result.reason.message}`, 'error');
+                            }
+                        });
+
+                        if (batchSuccessCount > 0) {
+                            log(`✅ 第 ${Math.floor(i/BATCH_SIZE)+1} 批次處理完成！成功解除 ${batchSuccessCount} 台`, 'success');
+                        }
+
+                    } catch (e) { 
+                        log(`❌ 第 ${Math.floor(i/BATCH_SIZE)+1} 批次發送異常: ${e.message}`, 'error'); 
+                    }
+                    
+                    countSuccessEl.textContent = totalSuccess;
+                    countFailEl.textContent = totalFail;
+
+                    if (i + BATCH_SIZE < data.length && !forceStopFlag) await sleep(DELAY_MS);
+                }
+            }
+            
+            // 結束狀態與還原 UI
+            isProcessing = false;
+            forceStopFlag = false;
+
+            btn.disabled = false;
+            btn.innerHTML = originalHTML;
+            btn.className = originalClasses;
+            
+            otherBtn.disabled = false;
+            otherBtn.classList.remove('hidden');
+            
+            stopBtn.classList.add('hidden');
+            stopBtn.classList.remove('flex');
+            
+            if (totalFail === 0) {
+                statusSummaryEl.innerHTML = `<span class="text-emerald-500 flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> 執行完畢</span>`;
+                log(`🎉 執行完畢！共計成功處理 ${totalSuccess} 台裝置。`, 'success');
+            } else {
+                statusSummaryEl.innerHTML = `<span class="text-rose-500 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation"></i> 任務結束</span>`;
+                log(`⚠️ 任務結束。成功處理：${totalSuccess} 台，失敗：${totalFail} 台。`, 'warning');
+            }
+        }
+    </script>
+</body>
+</html>
