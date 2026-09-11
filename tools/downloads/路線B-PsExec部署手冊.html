@@ -482,6 +482,7 @@
             <tr><td><strong>「公司鏡像」按不下去</strong></td><td>鏡像還沒建立。用「Google 官方」就好，功能完全一樣</td></tr>
             <tr><td><strong>模擬測試出現 GetSupportedSize 錯誤</strong></td><td>Windows 的磁碟重組服務設成自動啟動造成的。設定檔裡有一行 <code>disable_defragsvc</code>，取消註解改成 <code>true</code> 即可</td></tr>
             <tr><td><strong>畫面說已經有工作在跑</strong></td><td>正常的保護機制，同一時間只允許一項工作。等它跑完再按</td></tr>
+            <tr><td><strong>下載時 Chrome 跳出「這個檔案不是常見的下載項目」</strong></td><td>正常現象，不是抓錯或中毒。zip 裡包了沒有數位簽章的 flex-deploy.exe，又是新建檔案沒有下載記錄，Chrome 才會示警。點「下載可疑的檔案」繼續即可</td></tr>
             <tr><td><strong>雙擊沒反應／被防毒攔截</strong></td><td>flex-deploy.exe 已內建 Python，不用另外安裝。防毒軟體對沒簽章的執行檔偶爾會誤判，選「仍要執行」或加入白名單即可</td></tr>
           </tbody>
         </table>
