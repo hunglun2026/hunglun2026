@@ -431,12 +431,12 @@
   <nav class="toc" aria-label="目錄">
     <h2>目錄</h2>
     <ol>
-      <li><a href="#pickroute"><strong>先選你的裝置</strong></a></li>
+      <li><a href="#pickroute"><strong>先選你的部署方式</strong></a></li>
       <li><a href="#what">這個工具在做什麼</a></li>
       <li><a href="#before">開始之前要準備</a></li>
       <li><a href="#start">三分鐘上手</a></li>
-      <li><a href="#route-general">路線 A：一般微軟電腦</a></li>
-      <li><a href="#route-surfacego">路線 B：Surface Go 系列</a></li>
+      <li><a href="#route-intune">路線 A：必須用 Intune</a></li>
+      <li><a href="#route-psexec">路線 B：可以用 PsExec</a></li>
       <li><a href="#route">兩條路線怎麼判斷的（原理）</a></li>
       <li><a href="#safety">模擬測試與正式部署</a></li>
       <li><a href="#onsite">現場完整流程</a></li>
@@ -452,23 +452,23 @@
   <main>
 
     <section id="pickroute">
-      <h2>先選你的裝置</h2>
-      <p class="sec-note">兩種硬體從第一步就不一樣，選錯會卡在半路。不確定屬於哪種，看每張卡片下面那句「怎麼分辨」。</p>
+      <h2>先選你的部署方式</h2>
+      <p class="sec-note">不是喜好題，是裝置的狀況決定你只能走哪條。不確定的話看每張卡片列的判斷條件。</p>
       <div class="route-picker">
-        <a class="route-card" href="#route-general">
+        <a class="route-card" href="#route-intune">
           <span class="route-card-eyebrow">路線 A</span>
-          <h3>一般微軟電腦</h3>
-          <p>Dell／HP／Lenovo／華碩等品牌桌機或筆電，出廠跑一般 Windows，不是 S 模式。<strong>怎麼分辨：</strong>開機能自由安裝任何軟體，不會被限制只能從 Microsoft Store 裝。</p>
+          <h3>必須用 Intune</h3>
+          <p>符合任一項就算：裝置是 <strong>S 模式</strong>（Surface Go 系列出廠預設就是）、被 <strong>Intune／Entra ID</strong> 管理、你<strong>人到不了現場</strong>、或對方<strong>防火牆擋掉檔案分享</strong>。</p>
           <span class="route-card-cta">看完整步驟 →</span>
         </a>
-        <a class="route-card" href="#route-surfacego">
+        <a class="route-card" href="#route-psexec">
           <span class="route-card-eyebrow">路線 B</span>
-          <h3>Surface Go 系列</h3>
-          <p>微軟自家的平板機型（Surface Go 2／Surface Go 3），出廠預設鎖在 S 模式，流程從第一步就要多繞一段。<strong>怎麼分辨：</strong>機身背面有「Surface」字樣的平板，或設定裡的機型名稱看到「Surface Go」。</p>
+          <h3>可以用 PsExec</h3>
+          <p>要<strong>同時符合</strong>：不是 S 模式、傳統網域環境、你人在現場同網段、手上有網域管理員帳密。速度最快，填一填就跑完。</p>
           <span class="route-card-cta">看完整步驟 →</span>
         </a>
       </div>
-      <p class="sec-note" style="border:0;padding:0;margin:0;">不確定是哪一種、或想先弄懂兩條路線背後的判斷邏輯，看<a href="#route">「兩條路線怎麼判斷的」</a>那節，四個問題一路問下去就能自己判斷任何機型。</p>
+      <p class="sec-note" style="border:0;padding:0;margin:0;">不確定符合哪一條、或想先弄懂背後的判斷邏輯，看<a href="#route">「兩條路線怎麼判斷的」</a>那節，四個問題一路問下去就能自己判斷任何機型。</p>
     </section>
 
     <section id="what">
@@ -624,34 +624,47 @@
       </ol>
     </section>
 
-    <section id="route-general">
-      <h2>路線 A：一般微軟電腦</h2>
-      <p class="sec-note">Dell／HP／Lenovo／華碩等品牌機型的完整流程，從確認到驗收。</p>
+    <section id="route-intune">
+      <h2>路線 A：必須用 Intune</h2>
+      <p class="sec-note">符合任一條件就算，不是選喜好，是裝置的狀況逼你只能走這條。</p>
+
+      <div class="mode mode-warn">
+        <p class="mode-title"><span class="dot"></span>符合任一項，就是這條路線</p>
+        <p>① 裝置是 <strong>S 模式</strong>（Surface Go 系列出廠預設就是）　② 被 <strong>Intune／Entra ID</strong> 管理（員工用公司 Microsoft 帳號登入，不是傳統網域帳號）　③ 裝置分散各地，你<strong>人到不了、也連不進內網</strong>　④ 對方資安政策擋掉 <strong>445 埠</strong>檔案分享</p>
+      </div>
 
       <ol class="steps">
         <li>
           <h3>確認機型通過 Google 認證</h3>
-          <p>對照<a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">Google 官方認證型號清單</a>，精確比對機型名稱與型號。狀態不是「Certified」的機型不要接這個案子，客戶會失去 Chrome Education 的支援資格，出問題 Google 不保。</p>
+          <p>對照<a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">Google 官方認證型號清單</a>，精確比對機型名稱與型號。狀態不是「Certified」不要接，客戶會失去 Chrome Education 支援資格。<strong>Surface Go 系列注意：</strong>查證過只有 <strong>Surface Go 2</strong>、<strong>Surface Go 3</strong> 是 Certified（支援到 2028 年），第一代 Surface Go 不在清單上，務必請客戶開「設定 → 系統 → 關於」核對完整機型名稱。</p>
         </li>
         <li>
-          <h3>判斷這批電腦怎麼連</h3>
-          <p>問自己兩件事：<strong>這些電腦有沒有被 Intune／Entra ID 管著？</strong>（員工登入用的是公司 Microsoft 帳號，不是傳統網域帳號）、<strong>你人在不在現場、連不連得到內網？</strong>兩題都會決定接下來走哪條技術路線，判斷邏輯見<a href="#route">「兩條路線怎麼判斷的」</a>那節的四個問題。</p>
+          <h3>檢查是不是 S 模式</h3>
+          <p>在裝置上開「設定 → 系統 → 啟用」，版本名稱寫著「S 模式」就是（<strong>Surface Go 出廠預設就是</strong>）。S 模式的 Windows 不允許安裝執行 Win32 應用程式，而這個工具的核心程式 <code>agent.exe</code> 正是 Win32 程式，檔案送得過去也跑不動，換 PsExec 也沒用，因為問題不在傳輸方式。</p>
+        </li>
+        <li>
+          <h3>是 S 模式的話，用 Intune 政策整批退出</h3>
+          <p>有 Intune 授權可以整批遠端退出，不用一台一台跑；沒有的話每台自己到 Microsoft Store 手動退出。<strong>這一步是單向的，退出後回不去 S 模式</strong>，但反正接下來整台都要變成 ChromeOS Flex，這點不構成問題。</p>
+        </li>
+        <li>
+          <h3>確認是 Entra ID 環境（PsExec 用不了的原因）</h3>
+          <p>Entra ID 環境的裝置在網路驗證上被當成「工作群組」電腦，沒有傳統網域管理員帳號可用，而 PsExec 正是靠那組帳號連進去的。所以只要是 Entra ID 管理，不管是不是 S 模式，都只能走 Intune。</p>
         </li>
         <li>
           <h3>備妥權杖、Wi-Fi、官方套件</h3>
           <p>到對方的 Google Admin Console 產生 ChromeOS Flex 註冊權杖，跟現場網管要 Wi-Fi 名稱密碼，出發前先在公司網路用介面「準備套件」按鈕把約 1GB 的官方套件下載好。完整清單見<a href="#before">「開始之前要準備」</a>。</p>
         </li>
         <li>
-          <h3>選 Intune 或 PsExec，照該路線細節執行</h3>
-          <p>電腦被 Intune 管、或分散在不同地點連不到內網，走<a href="#intune">「Intune 路線細節」</a>；人在現場同網段、手上有網域管理員帳密，走<a href="#psexec">「PsExec 路線細節」</a>，速度最快，填一填就跑完。</p>
+          <h3>照 Intune 路線細節執行</h3>
+          <p>照<a href="#intune">「Intune 路線細節」</a>把 <code>agent.exe</code> 打包成 Win32 App、指派給目標裝置群組，裝置自己向雲端報到拉下來安裝，不用人在現場。</p>
         </li>
         <li>
           <h3>先跑 1～2 台模擬測試</h3>
-          <p>介面上的 dry_run 模式只檢查不動硬碟，跑起來是綠色橫幅就代表過了。整批下去之前這一步<strong>絕對不能跳過</strong>，詳見<a href="#safety">「模擬測試與正式部署」</a>。</p>
+          <p>介面上的 dry_run 模式只檢查不動硬碟，綠色橫幅代表過了。整批下去之前這一步<strong>絕對不能跳過</strong>，詳見<a href="#safety">「模擬測試與正式部署」</a>。</p>
         </li>
         <li>
           <h3>正式部署與現場流程</h3>
-          <p>模擬測試通過後才關掉 dry_run 跑正式的。完整的現場動線（到場前、到場後、交件前）見<a href="#onsite">「現場完整流程」</a>。</p>
+          <p>模擬測試通過後才關掉 dry_run 跑正式的。完整現場動線（到場前、到場後、交件前）見<a href="#onsite">「現場完整流程」</a>。</p>
         </li>
         <li>
           <h3>驗收</h3>
@@ -660,34 +673,36 @@
       </ol>
     </section>
 
-    <section id="route-surfacego">
-      <h2>路線 B：Surface Go 系列</h2>
-      <p class="sec-note">跟一般 PC 最大的差異在第一步：Surface Go 出廠預設鎖在 S 模式，流程要多繞一段。</p>
+    <section id="route-psexec">
+      <h2>路線 B：可以用 PsExec</h2>
+      <p class="sec-note">要同時符合下面四個條件才走這條，速度最快，填一填就跑完。</p>
+
+      <div class="mode mode-safe">
+        <p class="mode-title"><span class="dot"></span>四個條件要全部符合</p>
+        <p>① 裝置<strong>不是 S 模式</strong>　② 是<strong>傳統網域環境</strong>，不是 Entra ID Only　③ 你<strong>人在現場</strong>、跟裝置同一個網段連得到　④ 手上有<strong>網域管理員帳密</strong></p>
+        <p style="margin:10px 0 0;">缺一項就要改走<a href="#route-intune">「路線 A：必須用 Intune」</a>，不是機型決定，是裝置的管理狀態跟你能不能連到它決定的。</p>
+      </div>
 
       <ol class="steps">
         <li>
-          <h3>核對精確機型：只有 Go 2、Go 3 通過認證</h3>
-          <p>查證過 Google 官方認證清單：<strong>Microsoft Surface Go 2</strong>、<strong>Microsoft Surface Go 3</strong> 都是 Certified 狀態，支援到 2028 年。<strong>第一代 Surface Go 沒有在清單上</strong>，接案前務必請客戶在裝置上開「設定 → 系統 → 關於」，把完整機型名稱抄下來核對，不要只憑外觀猜是第幾代。</p>
+          <h3>確認機型通過 Google 認證</h3>
+          <p>對照<a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">Google 官方認證型號清單</a>，精確比對機型名稱與型號。狀態不是「Certified」不要接，客戶會失去 Chrome Education 支援資格。</p>
         </li>
         <li>
-          <h3>檢查是不是 S 模式（幾乎一定是）</h3>
-          <p>在裝置上開「設定 → 系統 → 啟用」，版本名稱寫著「S 模式」就是。<strong>Surface Go 出廠預設就是 S 模式</strong>，這是這條路線跟一般 PC 最大的不同：S 模式的 Windows 不允許安裝執行 Win32 應用程式，而這個工具的核心程式 <code>agent.exe</code> 正是 Win32 程式，檔案送得過去也跑不動，PsExec 換不了這個問題。</p>
+          <h3>確認不是 S 模式</h3>
+          <p>在裝置上開「設定 → 系統 → 啟用」，確認版本名稱<strong>沒有</strong>寫「S 模式」。是 S 模式的話 PsExec 用不了，要改走<a href="#route-intune">路線 A</a>先退出 S 模式。</p>
         </li>
         <li>
-          <h3>用 Intune 政策整批退出 S 模式</h3>
-          <p>有 Intune 授權的話，用 Intune 政策可以整批遠端退出 S 模式，不用一台一台跑；沒有 Intune 才需要每台自己到 Microsoft Store 手動退出。<strong>這一步是單向的，退出後回不去 S 模式</strong>，但反正接下來整台都要變成 ChromeOS Flex，這點不構成問題。詳細比較見<a href="#route">「兩條路線怎麼判斷的」</a>裡「問題二」那段的表格。</p>
-        </li>
-        <li>
-          <h3>確認是 Entra ID 環境，只能走 Intune</h3>
-          <p>Surface Go 這類機型幾乎都搭 Entra ID（員工用公司 Microsoft 帳號登入），微軟文件說這種環境的裝置在網路驗證上被當成「工作群組」電腦，沒有傳統網域管理員帳號可用，PsExec 靠的正是那組帳號。結論：<strong>Surface Go 這條路線一律走 Intune</strong>，不用另外判斷。</p>
+          <h3>確認是傳統網域、連得到、有帳密</h3>
+          <p>員工登入用的是傳統公司網域帳號（不是 Microsoft 帳號登入的 Entra ID）；你人在現場、跟這批電腦同一個網段；手上有網域管理員帳密。三項缺一都代表 PsExec 這條路走不下去。</p>
         </li>
         <li>
           <h3>備妥權杖、Wi-Fi、官方套件</h3>
-          <p>到對方的 Google Admin Console 產生 ChromeOS Flex 註冊權杖，跟現場網管要 Wi-Fi 名稱密碼，出發前先在公司網路把約 1GB 的官方套件下載好。完整清單見<a href="#before">「開始之前要準備」</a>。</p>
+          <p>到對方的 Google Admin Console 產生 ChromeOS Flex 註冊權杖，跟現場網管要 Wi-Fi 名稱密碼，出發前先在公司網路用介面「準備套件」按鈕把約 1GB 的官方套件下載好。完整清單見<a href="#before">「開始之前要準備」</a>。</p>
         </li>
         <li>
-          <h3>照 Intune 路線細節執行</h3>
-          <p>接下來跟一般 PC 的 Intune 路線完全一樣，照<a href="#intune">「Intune 路線細節」</a>操作即可，不用再另外找 Surface 專屬的步驟。</p>
+          <h3>照 PsExec 路線細節執行</h3>
+          <p>照<a href="#psexec">「PsExec 路線細節」</a>填裝置清單，介面用網域管理員帳密透過 PsExec 直接連進每一台電腦、推送並執行 <code>agent.exe</code>，按下去立刻跑，不用等 Intune 排程同步。</p>
         </li>
         <li>
           <h3>先跑 1～2 台模擬測試</h3>
