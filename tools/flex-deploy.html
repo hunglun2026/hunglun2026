@@ -347,15 +347,6 @@
     gap: 12px;
     align-items: center;
   }
-  .dl-form { display: inline-flex; align-items: center; gap: 8px; }
-  .dl-pass {
-    width: 126px;
-    padding: 10px 12px;
-    border: 1px solid var(--line-strong);
-    border-radius: 8px;
-    font-size: 14px;
-    font-family: var(--sans);
-  }
   .dl-btn {
     display: inline-flex;
     align-items: center;
@@ -364,12 +355,9 @@
     background: var(--accent);
     color: #fff;
     text-decoration: none;
-    border: 0;
     border-radius: 9px;
     font-weight: 700;
     font-size: 15px;
-    font-family: var(--sans);
-    cursor: pointer;
     transition: filter .16s ease, transform .16s ease;
   }
   .dl-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
@@ -388,11 +376,10 @@
       <p>把一整批 Windows 電腦遠端轉成 ChromeOS Flex 並自動註冊，不用一台一台插隨身碟。這份文件是操作人員的完整說明，從第一次開啟到現場交件都在裡面。</p>
     
       <div class="dl-bar">
-        <form class="dl-form" method="POST" action="/tools/downloads/flex-deploy-tool.zip">
-          <input class="dl-pass" type="password" name="password" placeholder="密碼" required autocomplete="off">
-          <button class="dl-btn" type="submit">&#x2B07; 下載工具包（.zip）</button>
-        </form>
-        <span class="dl-note">再輸入一次密碼下載，解壓後雙擊「啟動介面.bat」，需先裝好 Python</span>
+        <a class="dl-btn" href="/tools/downloads/flex-deploy-tool.zip" download>
+          &#x2B07; 下載工具包（.zip）
+        </a>
+        <span class="dl-note">解壓後雙擊「啟動介面.bat」，需先裝好 Python</span>
       </div>
     </div>
     <a class="logo-link" href="https://www.hunglun.com/" target="_blank" rel="noopener" aria-label="前往鴻綸科技官網">

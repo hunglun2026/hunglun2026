@@ -8,12 +8,10 @@
  *
  * 只保護下面 PROTECTED_PATHS 列出的路徑，tools/mail 等既有免費工具不受影響。
  *
- * 刻意不用 cookie（Steve 2026-09-11 要求）：每一次請求都要重新輸入密碼，
- * 瀏覽器不記住任何登入狀態。代價是 flex-deploy.html 裡的下載按鈕也要再輸入
- * 一次密碼（它是獨立的受保護路徑，跟看手冊頁面是兩次驗證，見該檔案 .dl-form）。
- * 做法：POST 密碼答對後不發 cookie、不用 302 轉址，直接在這次回應裡把原本
- * 該回傳的靜態內容（html 頁面或 zip 檔）組成一個 GET 請求丟給 next()，
- * 由它去讀真正的檔案內容當作這次 POST 的回應本體。
+ * Cookie 策略（Steve 2026-09-11 定案）：15 分鐘短效期。密碼答對後發一個
+ * Max-Age=900 的 cookie，同一瀏覽器 15 分鐘內不用重打密碼（手冊看完按下載
+ * 不用再輸入一次），但不是長期記住登入狀態，過了 15 分鐘就要重新輸入。
+ * flex-deploy.html 的下載按鈕因此改回單純連結，靠這個 cookie 過。
  *
  * 需要的環境變數（Cloudflare Pages 專案 → 設定 → 環境變數設定，Production 與
  * Preview 都要）：
@@ -22,9 +20,17 @@
  */
 
 const PROTECTED_PATHS = ['/tools/ceu', '/tools/flex-deploy', '/tools/downloads/flex-deploy-tool.zip'];
+const COOKIE_NAME = 'hlt_tools_auth';
+const MAX_AGE = 60 * 15; // 15 分鐘
 
 function isProtected(pathname) {
   return PROTECTED_PATHS.some((p) => pathname === p || pathname.startsWith(p + '/'));
+}
+
+async function sha256Hex(text) {
+  const data = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest('SHA-256', data);
+  return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
 // 固定長度比對，避免逐字元比較洩漏時間差資訊（內部小工具不算高風險目標，
@@ -34,6 +40,12 @@ function timingSafeEqual(a, b) {
   let diff = 0;
   for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
   return diff === 0;
+}
+
+function getCookie(request, name) {
+  const header = request.headers.get('Cookie') || '';
+  const match = header.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]+)'));
+  return match ? match[1] : null;
 }
 
 function loginPage(pathname, error) {
@@ -85,15 +97,25 @@ export async function onRequest({ request, env, next }) {
     return new Response('伺服器尚未設定密碼，請聯絡管理員。', { status: 503 });
   }
 
+  const expectedHash = await sha256Hex(env.INTERNAL_TOOLS_PASSWORD);
+  const cookieValue = getCookie(request, COOKIE_NAME);
+  if (cookieValue && timingSafeEqual(cookieValue, expectedHash)) {
+    return next();
+  }
+
   if (request.method === 'POST') {
     const form = await request.formData();
     const input = String(form.get('password') || '');
     if (timingSafeEqual(input, env.INTERNAL_TOOLS_PASSWORD)) {
-      // 密碼對了，不發 cookie，直接把這次 POST 換成一個乾淨的 GET 丟給下一棒去拿
-      // 真正的檔案內容（html 頁面或 zip）當回應體，這樣使用者不用被轉址、也不會
-      // 留下任何登入紀錄。不沿用原本 POST 的 headers，避免帶著沒有意義的
-      // Content-Type／Content-Length 混進一個沒有 body 的 GET 請求。
-      return next(new Request(url.toString(), { method: 'GET' }));
+      // 密碼對了：把這次 POST 換成一個乾淨的 GET 丟給下一棒去拿真正的檔案內容
+      // （html 頁面或 zip）當回應體，再把 15 分鐘效期的 cookie 掛上去。
+      const response = await next(new Request(url.toString(), { method: 'GET' }));
+      const headers = new Headers(response.headers);
+      headers.append(
+        'Set-Cookie',
+        `${COOKIE_NAME}=${expectedHash}; Path=/tools; Max-Age=${MAX_AGE}; HttpOnly; Secure; SameSite=Strict`
+      );
+      return new Response(response.body, { status: response.status, headers });
     }
     return new Response(loginPage(url.pathname, true), {
       status: 401,
