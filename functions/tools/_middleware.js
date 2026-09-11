@@ -21,7 +21,9 @@
 
 // 下載檔用繁體中文檔名，瀏覽器網址列會把它編碼成 %E9%83%A8... 這種形式，
 // 所以比對前一律要 decodeURIComponent 還原成這裡寫的原文才比得對。
-const PROTECTED_PATHS = ['/tools/ceu', '/tools/flex-deploy', '/tools/downloads/Flex部署工具包.zip'];
+// /tools/downloads 整個資料夾都保護，不逐一列檔名——四份部署手冊＋zip
+// 都放在這底下，之後再加新檔案不用記得回來改這裡。
+const PROTECTED_PATHS = ['/tools/ceu', '/tools/flex-deploy', '/tools/downloads'];
 const COOKIE_NAME = 'hlt_tools_auth';
 const MAX_AGE = 60 * 15; // 15 分鐘
 

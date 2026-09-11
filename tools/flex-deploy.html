@@ -225,11 +225,10 @@
     border-radius: 14px;
     padding: 26px 26px 22px;
     box-shadow: var(--shadow);
-    text-decoration: none;
     color: var(--ink);
     transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
   }
-  .route-card:hover, .route-card:focus-visible {
+  .route-card:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,.06), 0 16px 32px rgba(0,0,0,.08);
@@ -248,8 +247,9 @@
   }
   .route-card h3 { margin: 0 0 8px; font-size: 21px; }
   .route-card p { margin: 0 0 18px; color: var(--ink-soft); font-size: 14.5px; }
-  .route-card-cta { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14.5px; color: var(--accent); }
-  .route-card:hover .route-card-cta { text-decoration: underline; }
+  .route-card-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+  .route-card-doc { font-size: 13.5px; color: var(--ink-faint); text-decoration: none; }
+  .route-card-doc:hover { color: var(--accent); text-decoration: underline; }
 
   /* 安全狀態條：全篇貫穿的視覺語言，綠＝安全、紅＝不可逆 */
   .mode {
@@ -455,20 +455,26 @@
       <h2>先選你的部署方式</h2>
       <p class="sec-note">不是喜好題，是裝置的狀況決定你只能走哪條。不確定的話看每張卡片列的判斷條件。</p>
       <div class="route-picker">
-        <a class="route-card" href="#route-intune">
+        <div class="route-card">
           <span class="route-card-eyebrow">路線 A</span>
           <h3>必須用 Intune</h3>
           <p>符合任一項就算：裝置是 <strong>S 模式</strong>（Surface Go 系列出廠預設就是）、被 <strong>Intune／Entra ID</strong> 管理、你<strong>人到不了現場</strong>、或對方<strong>防火牆擋掉檔案分享</strong>。</p>
-          <span class="route-card-cta">看完整步驟 →</span>
-        </a>
-        <a class="route-card" href="#route-psexec">
+          <div class="route-card-links">
+            <a class="dl-btn" href="/tools/downloads/路線A-Intune部署手冊.html">看完整教學 →</a>
+            <a class="route-card-doc" href="/tools/downloads/路線A-Intune部署手冊.docx" download>下載 Word 版</a>
+          </div>
+        </div>
+        <div class="route-card">
           <span class="route-card-eyebrow">路線 B</span>
           <h3>可以用 PsExec</h3>
           <p>要<strong>同時符合</strong>：不是 S 模式、傳統網域環境、你人在現場同網段、手上有網域管理員帳密。速度最快，填一填就跑完。</p>
-          <span class="route-card-cta">看完整步驟 →</span>
-        </a>
+          <div class="route-card-links">
+            <a class="dl-btn" href="/tools/downloads/路線B-PsExec部署手冊.html">看完整教學 →</a>
+            <a class="route-card-doc" href="/tools/downloads/路線B-PsExec部署手冊.docx" download>下載 Word 版</a>
+          </div>
+        </div>
       </div>
-      <p class="sec-note" style="border:0;padding:0;margin:0;">不確定符合哪一條、或想先弄懂背後的判斷邏輯，看<a href="#route">「兩條路線怎麼判斷的」</a>那節，四個問題一路問下去就能自己判斷任何機型。</p>
+      <p class="sec-note" style="border:0;padding:0;margin:0;">不確定符合哪一條、或想先弄懂背後的判斷邏輯，看<a href="#route">「兩條路線怎麼判斷的」</a>那節，四個問題一路問下去就能自己判斷任何機型。這頁下面也留著兩條路線的完整內容可以直接讀，跟上面兩份文件內容一致，差別只在獨立檔案方便單獨分享給現場人員。</p>
     </section>
 
     <section id="what">
