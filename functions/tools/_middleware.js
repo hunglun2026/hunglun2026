@@ -16,7 +16,8 @@
 
 const PROTECTED_PATHS = ['/tools/ceu', '/tools/flex-deploy', '/tools/downloads/flex-deploy-tool.zip'];
 const COOKIE_NAME = 'hlt_tools_auth';
-const MAX_AGE = 60 * 60 * 24 * 30; // 30 天
+// 刻意不設 Max-Age：這是 session cookie，瀏覽器關掉就失效，不長期記住登入狀態。
+// 同一次瀏覽（手冊看完按下載）不用重打密碼，但沒有「30 天內都不用再輸入」這種殘留。
 
 function isProtected(pathname) {
   return PROTECTED_PATHS.some((p) => pathname === p || pathname.startsWith(p + '/'));
@@ -64,6 +65,8 @@ function loginPage(pathname, error) {
   button{width:100%;padding:11px;border:0;border-radius:8px;background:#1a73e8;
     color:#fff;font-size:15px;font-weight:600;cursor:pointer;}
   button:hover{background:#1558b0;}
+  .contact-link{display:block;margin-top:18px;font-size:13px;color:#6b7280;text-decoration:none;}
+  .contact-link:hover{color:#1a73e8;text-decoration:underline;}
 </style></head>
 <body>
   <div class="box">
@@ -74,6 +77,7 @@ function loginPage(pathname, error) {
       <input type="password" name="password" autofocus required>
       <button type="submit">進入</button>
     </form>
+    <a class="contact-link" href="https://www.hunglun.com/contact" target="_blank" rel="noopener">需要使用權限？請洽鴻綸科技</a>
   </div>
 </body></html>`;
 }
@@ -102,7 +106,7 @@ export async function onRequest({ request, env, next }) {
       const headers = new Headers({ Location: url.pathname });
       headers.append(
         'Set-Cookie',
-        `${COOKIE_NAME}=${expectedHash}; Path=/tools; Max-Age=${MAX_AGE}; HttpOnly; Secure; SameSite=Strict`
+        `${COOKIE_NAME}=${expectedHash}; Path=/tools; HttpOnly; Secure; SameSite=Strict`
       );
       return new Response(null, { status: 302, headers });
     }
