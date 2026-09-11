@@ -19,7 +19,9 @@
  * 沒設的話這支會直接回 503，不會讓任何人繞過去。
  */
 
-const PROTECTED_PATHS = ['/tools/ceu', '/tools/flex-deploy', '/tools/downloads/flex-deploy-tool.zip'];
+// 下載檔用繁體中文檔名，瀏覽器網址列會把它編碼成 %E9%83%A8... 這種形式，
+// 所以比對前一律要 decodeURIComponent 還原成這裡寫的原文才比得對。
+const PROTECTED_PATHS = ['/tools/ceu', '/tools/flex-deploy', '/tools/downloads/Flex部署工具包.zip'];
 const COOKIE_NAME = 'hlt_tools_auth';
 const MAX_AGE = 60 * 15; // 15 分鐘
 
@@ -88,7 +90,8 @@ function loginPage(pathname, error) {
 
 export async function onRequest({ request, env, next }) {
   const url = new URL(request.url);
-  if (!isProtected(url.pathname)) {
+  const pathname = decodeURIComponent(url.pathname);
+  if (!isProtected(pathname)) {
     return next();
   }
 
@@ -117,13 +120,13 @@ export async function onRequest({ request, env, next }) {
       );
       return new Response(response.body, { status: response.status, headers });
     }
-    return new Response(loginPage(url.pathname, true), {
+    return new Response(loginPage(pathname, true), {
       status: 401,
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
   }
 
-  return new Response(loginPage(url.pathname, false), {
+  return new Response(loginPage(pathname, false), {
     status: 401,
     headers: { 'Content-Type': 'text/html; charset=utf-8' },
   });
