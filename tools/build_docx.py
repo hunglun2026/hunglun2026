@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """把兩條路線的部署手冊轉成 Word 文件，內容跟 html 版一致，格式簡化成適合列印/離線閱讀。
 
 用法：在 tools/downloads/ 資料夾底下跑
@@ -12,12 +11,12 @@
 不是只留文字。
 """
 import sys
+
 from docx import Document
-from docx.shared import Pt, Cm, RGBColor
-from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
-from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+from docx.shared import Cm, Pt, RGBColor
 
 CERT_LIST_URL = "https://support.google.com/chromeosflex/answer/11513094"
 

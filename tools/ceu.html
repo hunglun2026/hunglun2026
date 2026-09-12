@@ -224,7 +224,7 @@
 
                     <div class="h-6 w-px bg-slate-300 mx-1 hidden md:block"></div>
                     
-                    <a href="https://chromecommercial.googleapis.com/v1/hardwareModelAndBrandCodes?key=AIzaSyAZN2K7O2-2Llyzu5nLXx3bjdTVdkn40-k" target="_blank" 
+                    <a href="/tools/ceu/api/hardware-models" target="_blank"
                        class="text-blue-600 hover:text-blue-800 underline underline-offset-2 text-sm font-medium transition-colors ml-2">
                         裝置型號 Model 查詢
                     </a>
@@ -439,13 +439,24 @@
             }
         }
 
-        // 解鎖隱藏版 API 金鑰
+        // 內建金鑰改由後端代管（/tools/ceu/api/*），前端不再持有真正的 key，
+        // 這裡只是切換一個旗標，實際呼叫走 sendToApi()／exportCurl() 裡的分流判斷。
+        let usingBuiltinKey = false;
         function unlockApiKey() {
+            if (usingBuiltinKey) {
+                usingBuiltinKey = false;
+                apiKeyInput.readOnly = false;
+                apiKeyInput.value = '';
+                apiKeyInput.placeholder = '請貼上您的 API Key 或點擊右側解鎖內建金鑰';
+                log('已切回手動輸入 API Key。', 'info');
+                return;
+            }
             const pwd = prompt("請輸入金鑰解鎖密碼：");
             if (pwd === "5407") {
-                const hiddenKey = "AIzaSyCuqflzs-fRTadFsAjHp7kKREU_xT7BqxQ";
-                document.getElementById('apiKeyInput').value = hiddenKey;
-                log('🔓 內建 API Key 已成功解鎖並載入至欄位。', 'success');
+                usingBuiltinKey = true;
+                apiKeyInput.value = '（使用內建金鑰，由伺服器代管，不會外流）';
+                apiKeyInput.readOnly = true;
+                log('🔓 已切換為內建金鑰，API 呼叫將透過伺服器代理執行。', 'success');
             } else if (pwd !== null) {
                 alert("解鎖密碼錯誤！");
             }
@@ -628,6 +639,10 @@
         }
 
         function exportCurl(os, action = 'bind') {
+            if (usingBuiltinKey) {
+                alert('內建金鑰僅供本頁面直接執行，不會外流到匯出的指令碼。\n要匯出可離線執行的 curl 腳本，請改貼上您自己的 Google Cloud API Key。');
+                return;
+            }
             const apiKey = apiKeyInput.value.trim() || 'YOUR_API_KEY';
             const data = getTableData();
             if (!data.length) return alert('無有效資料可匯出');
@@ -727,7 +742,7 @@
 
         async function sendToApi(action = 'bind') {
             const apiKey = apiKeyInput.value.trim();
-            if (!apiKey) {
+            if (!usingBuiltinKey && !apiKey) {
                 alert('請在畫面上方輸入您的 Google Cloud API Key');
                 apiKeyInput.focus();
                 return;
@@ -802,7 +817,10 @@
                     });
 
                     try {
-                        const res = await fetch(`https://chromecommercial.googleapis.com/v1/preProvisionedDevices:batchCreate?key=${apiKey}`, {
+                        const bindUrl = usingBuiltinKey
+                            ? '/tools/ceu/api/devices/batch-create'
+                            : `https://chromecommercial.googleapis.com/v1/preProvisionedDevices:batchCreate?key=${apiKey}`;
+                        const res = await fetch(bindUrl, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ requests })
@@ -900,7 +918,10 @@
                     try {
                         // 以 Promise.all 同時發送此批次的個別 DELETE 請求
                         const deletePromises = validChunk.map(item => {
-                            return fetch(`https://chromecommercial.googleapis.com/v1/preProvisionedDevices/${item.id}?key=${apiKey}`, {
+                            const deleteUrl = usingBuiltinKey
+                                ? `/tools/ceu/api/devices/${item.id}`
+                                : `https://chromecommercial.googleapis.com/v1/preProvisionedDevices/${item.id}?key=${apiKey}`;
+                            return fetch(deleteUrl, {
                                 method: 'DELETE'
                             }).then(async res => {
                                 if (!res.ok) {

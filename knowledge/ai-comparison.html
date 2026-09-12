@@ -43,7 +43,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-09-12",
   "mainEntity": [
     { "@type": "Question", "name": "學校已經有免費的 Google Workspace for Education，Gemini 是不是就能直接用？", "acceptedAnswer": { "@type": "Answer", "text": "免費的 Education Fundamentals 帳號已內含基本版 Gemini，日常問答夠用。但要用到最新進階模型、在 Docs／Gmail 等應用裡直接叫出 AI 寫作、更高的每日額度，以及 Gemini Notebook 的完整配額，就需要升級 Google AI Pro for Education 授權。" } },
     { "@type": "Question", "name": "老師和學生在 Gemini 輸入的教案、段考題目會不會被拿去訓練 AI？", "acceptedAnswer": { "@type": "Answer", "text": "使用學校配發的教育網域帳號時不會。這受 Google Workspace for Education 服務條款保障，教育版等級提交的內容明確不會用於訓練 Google 的底層模型；換成個人 Gmail 或消費者版帳號則不受此保障，需另外確認資料使用政策。" } },
@@ -61,7 +61,7 @@
   "description": "Claude、ChatGPT、Gemini 三個 AI 助手在校園情境該怎麼選：各自的強項、跟 Google Workspace 整合深淺、資安條款差異，以及 Google AI Pro for Education 加贈 Gemini Notebook 的實際教學用途。",
   "image": "https://www.hunglun.com/assets/hunglun-logo-dark.png",
   "datePublished": "2026-09-10",
-  "dateModified": "2026-09-10",
+  "dateModified": "2026-09-12",
   "author": {
     "@type": "Person",
     "name": "鴻綸科技 Steve",
@@ -122,7 +122,7 @@
     <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/knowledge">知識庫</a> ／ AI 助手怎麼選</nav>
     <h1>學校 AI 助手怎麼選？Claude、ChatGPT、Gemini 比較</h1>
     <p>不比誰的模型跑分高，比誰真的能省下學校的行政與備課時間。</p>
-    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-09-12">2026 年 9 月 12 日</time></p>
   </div>
 </div>
 
@@ -151,6 +151,7 @@
           <tr><th scope="row">資料訓練政策（教育網域）</th><td>需另外確認方案條款</td><td>需另外確認方案條款</td><td>教育版明確不用於模型訓練</td></tr>
           <tr><th scope="row">帳號與權限管理</th><td>需個別採購企業方案</td><td>需個別採購 Team／企業方案</td><td>學校既有管理主控台統一派發</td></tr>
           <tr><th scope="row">研究與知識庫工具</th><td>需自行上傳長文本</td><td>依賴外部工具或 Custom GPTs</td><td>內含 Gemini Notebook，可指定文件回答並標出處</td></tr>
+          <tr><th scope="row">答案依據與查證</th><td>不會主動附連結查證</td><td>可開啟即時瀏覽查證，但預設關閉</td><td>可搭配 Google 搜尋即時查證，Notebook 模式只依上傳文件回答並標出處</td></tr>
           <tr><th scope="row">較適合的情境</th><td>致詞稿、論文潤飾、深度論述</td><td>個人靈感發想、程式教學、多媒體生成</td><td>全校行政自動化、課堂備課、自主學習</td></tr>
         </tbody>
       </table>
@@ -165,6 +166,14 @@
       <li><strong>會議與研習紀錄收斂</strong>：上傳會議錄音檔、簡報與簽到表，整理出待辦事項與負責處室，省下行政人員手動彙整的時間。</li>
     </ul>
     <p>教育版方案的來源數量、每日問答與語音摘要次數，都比免費版高出好幾倍，實際上限請以管理主控台當下顯示為準，Google 會隨模型更新調整。</p>
+
+    <h2 class="section-title reveal" style="margin-top:48px;">另一個容易被忽略的優勢：答案有依據，不會憑空編</h2>
+    <p>校園場合最怕的不是 AI 答錯，而是<strong>答錯了還講得很有把握</strong>，這在教學現場叫「幻覺」：AI 編出一個聽起來合理、實際不存在的答案。三個工具都會發生這個問題，差別在有沒有機制讓答案「有出處可查」。</p>
+    <ul class="feature-list">
+      <li><strong>一般問答時</strong>：Gemini 可以直接搭配 Google 搜尋做即時查證，回答會附上參考連結，讓老師能自己點進去核對，不是全靠模型自己記得的內容硬答。</li>
+      <li><strong>指定文件回答時</strong>：上面提到的 Gemini Notebook 更進一步，直接把回答範圍鎖在你上傳的文件內，不會拿文件以外的內容湊答案，每句話也標出處於原文哪一段，這對段考題庫、課綱依據這類「答案一定要有根據」的用途特別重要。</li>
+    </ul>
+    <p>這不代表 Gemini 完全不會出錯，而是它比較容易被「抓包」，老師與學生都能自己查證，而不是要全盤信任 AI 給的答案。</p>
 
     <h2 class="section-title reveal" style="margin-top:48px;">給資訊組長的判斷原則</h2>
     <ul class="feature-list">
