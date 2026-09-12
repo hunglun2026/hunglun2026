@@ -282,6 +282,15 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 @media (max-width: 640px){.svc-pager{flex-direction: column;gap: 10px}
 .svc-cta{padding: 22px}
 }
+.series-pager{display: flex;flex-wrap: wrap;align-items: center;gap: 12px;margin: 32px 0;padding-top: 20px;border-top: 1px solid var(--line)}
+.series-pager .series-index{color: var(--muted-faint);font-size: 0.82rem;order: 2;flex: 1;text-align: center}
+.series-pager .btn{padding: 11px 20px;font-size: 0.86rem}
+.series-pager .series-prev{order: 1}
+.series-pager .series-next{order: 3;margin-left: auto}
+@media (max-width: 640px){.series-pager{flex-direction: column;align-items: stretch}
+.series-pager .series-prev,.series-pager .series-next{order: initial;margin-left: 0;text-align: center}
+.series-pager .series-index{order: initial}
+}
 .card-visual.bot-visual{height: 170px;padding: 16px;background: #fff}
 .card-visual.bot-visual img{width: 100%;height: 100%;object-fit: contain}
 .card:hover .card-visual.bot-visual{background: #fff}
