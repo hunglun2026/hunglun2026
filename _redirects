@@ -19,12 +19,6 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 /effect-home.html / 301
 /effects.html /services 301
 
-# 2026-09-13：Gemini 系列文章從 /knowledge/ 底下搬到獨立頂層分頁 /gemini/
-# （新增了 Gemini 主選單項目，跟 /google 平級，不再掛在知識庫底下）
-/knowledge/gemini-series /gemini 301
-/knowledge/gemini-basics /gemini/basics 301
-/knowledge/gemini-teaching-prompts /gemini/teaching-prompts 301
-
 # ── 舊 PHP 官網（www.hunglun.com）純路徑網址的 301 對應 ──
 # 帶 nav／tId 問號參數的 22 筆在 functions/submain.php.js 處理，
 # 因為 _redirects 不支援 query string 比對。
