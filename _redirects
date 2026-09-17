@@ -65,8 +65,7 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 /knowledge/intune /google/intune 301
 
 # ── 研習現場短連結（2026-09-17 起）──
-# 現場講課時 Google Slides/Docs 網址太長講不出口，改用 hunglun.com/go/<日期碼> 讓學員直接打。
-# 302（不是 301）：目的地是活動當天的教材，日後要換內容時可以直接改這裡的網址不留快取。
-# 新增下一場：複製一行改日期碼與網址即可，不必開新頁面。同步在
-# /tools/training.html 的「歷次研習講義」時間軸清單補一筆，短連結才有地方被看到。
-/go/0916 https://docs.google.com/document/d/1c9gPS51ePnZgBLQ4DSu40zmttUFnJP6F0SxR08IHf9I/edit?usp=drive_link 302
+# hunglun.com/go/<日期碼> 現在是 Cloudflare Pages Function 處理（functions/go/[code].js），
+# 因為每場都要各自的口令保護（見下方對話紀錄），不能只用這裡的靜態轉址。
+# 新增下一場：改 functions/go/_sessions.js，不要在這裡加 /go/ 開頭的規則，
+# 會蓋掉 Function、讓口令保護失效。
