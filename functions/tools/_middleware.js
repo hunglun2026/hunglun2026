@@ -1,23 +1,26 @@
 /**
- * /tools 底下商用工具的密碼保護（Cloudflare Pages Functions middleware）
+ * /tools 底下商用工具＋研習專區的密碼保護（Cloudflare Pages Functions middleware）
  *
  * 為什麼要做成伺服器端驗證，而不是像 tools/ceu.html 內部那樣把密碼寫成前端 JS
  * 常數：常數寫法只要看網頁原始碼（View Source）就能直接讀到密碼，等於沒鎖。
  * 這支中介層攔在靜態檔案被送出去之前檢查身分，密碼本身完全不會出現在送到
  * 瀏覽器的 HTML／JS 裡。
  *
- * 只保護下面 PROTECTED_PATHS 列出的路徑，tools/mail 等既有免費工具不受影響。
- *
- * Cookie 策略（Steve 2026-09-11 定案）：15 分鐘短效期。密碼答對後發一個
- * Max-Age=900 的 cookie，同一瀏覽器 15 分鐘內不用重打密碼（手冊看完按下載
- * 不用再輸入一次），但不是長期記住登入狀態，過了 15 分鐘就要重新輸入。
- * flex-deploy.html 的下載按鈕因此改回單純連結，靠這個 cookie 過。
+ * 兩套獨立的保護邏輯，互不相干：
+ * 1. PROTECTED_PATHS 列出的商用工具（ceu/flex-deploy/downloads）：全部共用同一組
+ *    INTERNAL_TOOLS_PASSWORD，15 分鐘 cookie。tools/mail 等既有免費工具不受影響。
+ * 2. /tools/training（研習專區，Steve 2026-09-17 改成不再對外公開）：
+ *    每篇講義各自一組密碼＋共用講師萬用密碼，密碼清單在 ./training/_topics.js
+ *    跟 ../go/_sessions.js，30 天 cookie（跟 ceu 那組 15 分鐘刻意不同，
+ *    研習教材是自己找時間看，不是看完馬上關掉）。
  *
  * 需要的環境變數（Cloudflare Pages 專案 → 設定 → 環境變數設定，Production 與
- * Preview 都要）：
+ * Preview 都要，只影響第 1 套邏輯）：
  *   INTERNAL_TOOLS_PASSWORD   同事登入這幾個商用工具頁面要輸入的密碼
- * 沒設的話這支會直接回 503，不會讓任何人繞過去。
+ * 沒設的話第 1 套會直接回 503，不會讓任何人繞過去；第 2 套（研習專區）不受影響。
  */
+import { MASTER_PASSWORD } from '../go/_sessions.js';
+import { TOPIC_PASSWORDS } from './training/_topics.js';
 
 // 下載檔用繁體中文檔名，瀏覽器網址列會把它編碼成 %E9%83%A8... 這種形式，
 // 所以比對前一律要 decodeURIComponent 還原成這裡寫的原文才比得對。
@@ -27,8 +30,20 @@ const PROTECTED_PATHS = ['/tools/ceu', '/tools/flex-deploy', '/tools/downloads']
 const COOKIE_NAME = 'hlt_tools_auth';
 const MAX_AGE = 60 * 15; // 15 分鐘
 
+const TRAINING_BASE = '/tools/training';
+const TRAINING_MAX_AGE = 60 * 60 * 24 * 30; // 30 天
+
 function isProtected(pathname) {
   return PROTECTED_PATHS.some((p) => pathname === p || pathname.startsWith(p + '/'));
+}
+
+// null＝不是研習專區的路徑；''＝首頁本身；其他＝講義的 slug（例如 'vibe-coding'）
+function trainingSlug(pathname) {
+  if (pathname === TRAINING_BASE || pathname === TRAINING_BASE + '/') return '';
+  if (pathname.startsWith(TRAINING_BASE + '/')) {
+    return pathname.slice(TRAINING_BASE.length + 1).split('/')[0];
+  }
+  return null;
 }
 
 async function sha256Hex(text) {
@@ -90,9 +105,87 @@ function loginPage(pathname, error) {
 </body></html>`;
 }
 
+function trainingLoginPage(pathname, error) {
+  const errorHtml = error
+    ? '<p style="color:#c0392b;font-size:14px;margin:0 0 14px;">密碼不對，再試一次。</p>'
+    : '';
+  return `<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>研習專區：需要密碼</title>
+<style>
+  body{font-family:-apple-system,"Microsoft JhengHei",sans-serif;background:#f4f6f9;
+    display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:20px;box-sizing:border-box;}
+  .box{background:#fff;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.08);
+    padding:36px 32px;max-width:360px;width:100%;text-align:center;box-sizing:border-box;}
+  h1{font-size:18px;margin:0 0 6px;color:#1a1a1a;}
+  p.hint{color:#6b7280;font-size:13px;margin:0 0 20px;}
+  input{width:100%;box-sizing:border-box;padding:11px 14px;border:1px solid #d1d5db;
+    border-radius:8px;font-size:16px;margin-bottom:14px;text-align:center;letter-spacing:2px;}
+  button{width:100%;padding:11px;border:0;border-radius:8px;background:#1a73e8;
+    color:#fff;font-size:15px;font-weight:600;cursor:pointer;}
+  button:hover{background:#1558b0;}
+</style></head>
+<body>
+  <div class="box">
+    <h1>研習專區</h1>
+    <p class="hint">請輸入研習現場公佈的密碼</p>
+    ${errorHtml}
+    <form method="POST" action="${pathname}">
+      <input type="text" name="password" autofocus required inputmode="text">
+      <button type="submit">進入</button>
+    </form>
+  </div>
+</body></html>`;
+}
+
+async function handleTraining({ request, next }, pathname, slug) {
+  const validPasswords = [MASTER_PASSWORD, ...(TOPIC_PASSWORDS[slug] ? [TOPIC_PASSWORDS[slug]] : [])];
+  const expectedHashes = await Promise.all(validPasswords.map(sha256Hex));
+  const cookieName = `hlt_training_${slug || 'index'}`;
+
+  const cookieValue = getCookie(request, cookieName);
+  if (cookieValue && expectedHashes.some((h) => timingSafeEqual(cookieValue, h))) {
+    return next();
+  }
+
+  const url = new URL(request.url);
+  if (request.method === 'POST') {
+    const form = await request.formData();
+    const input = String(form.get('password') || '');
+    const matchedHash = validPasswords.find((p) => timingSafeEqual(input, p));
+    if (matchedHash !== undefined) {
+      const setHash = await sha256Hex(matchedHash);
+      const response = await next(new Request(url.toString(), { method: 'GET' }));
+      const headers = new Headers(response.headers);
+      headers.append(
+        'Set-Cookie',
+        `${cookieName}=${setHash}; Path=${TRAINING_BASE}; Max-Age=${TRAINING_MAX_AGE}; HttpOnly; Secure; SameSite=Strict`
+      );
+      return new Response(response.body, { status: response.status, headers });
+    }
+    return new Response(trainingLoginPage(pathname, true), {
+      status: 401,
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
+    });
+  }
+
+  return new Response(trainingLoginPage(pathname, false), {
+    status: 401,
+    headers: { 'Content-Type': 'text/html; charset=utf-8' },
+  });
+}
+
 export async function onRequest({ request, env, next }) {
   const url = new URL(request.url);
   const pathname = decodeURIComponent(url.pathname);
+
+  const slug = trainingSlug(pathname);
+  if (slug !== null) {
+    return handleTraining({ request, next }, pathname, slug);
+  }
+
   if (!isProtected(pathname)) {
     return next();
   }

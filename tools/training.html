@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
-<title>教師 AI 研習講義免費看｜研習專區｜鴻綸科技</title>
-<meta name="description" content="鴻綸科技線上與到校研習的完整講義，全部免費公開：課程怎麼走、每一道指令怎麼下、為什麼要這樣講，一次寫清楚。沒參加到的人可以自己跟著做，參加過的人回去照著複習。由 Google for Education 認證講師編寫。">
+<title>研習專區（需密碼）｜鴻綸科技</title>
+<meta name="description" content="鴻綸科技線上與到校研習的完整講義，僅供參加過研習的老師使用，需輸入研習現場公佈的密碼才能進入。">
+<meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://www.hunglun.com/tools/training">
 <meta property="og:type" content="website">
-<meta property="og:title" content="教師 AI 研習講義免費看｜研習專區｜鴻綸科技">
-<meta property="og:description" content="線上與到校研習的完整講義，全部免費公開。沒參加到也能自己跟著做完。">
+<meta property="og:title" content="研習專區（需密碼）｜鴻綸科技">
+<meta property="og:description" content="鴻綸科技研習講義，需輸入研習現場公佈的密碼才能進入。">
 <meta property="og:url" content="https://www.hunglun.com/tools/training">
 <meta property="og:image" content="https://www.hunglun.com/assets/og/tools-training.png">
 <meta property="og:image:width" content="1200">
@@ -17,8 +18,8 @@
 <meta property="og:image:alt" content="研習專區｜鴻綸科技">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="教師 AI 研習講義免費看｜研習專區｜鴻綸科技">
-<meta name="twitter:description" content="線上與到校研習的完整講義，全部免費公開。沒參加到也能自己跟著做完。">
+<meta name="twitter:title" content="研習專區（需密碼）｜鴻綸科技">
+<meta name="twitter:description" content="鴻綸科技研習講義，需輸入研習現場公佈的密碼才能進入。">
 <meta name="twitter:image" content="https://www.hunglun.com/assets/og/tools-training.png">
 <meta name="twitter:image:alt" content="研習專區｜鴻綸科技">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -29,10 +30,11 @@
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-vf.woff2?v=25" crossorigin>
 <link rel="stylesheet" href="/assets/style.css?v=53">
 <style>
-/* 研習專區索引：課程卡的標籤列。只有這一頁用得到，不動全站 CSS 版號。 */
-.tr-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 0; margin: 0 0 10px; font-size: .82rem; color: var(--muted-faint); }
-.tr-tags li { margin: 0; }
-.tr-soon { border: 1px dashed var(--line); border-radius: var(--radius); padding: 18px; color: var(--muted); }
+/* 研習專區索引：主題清單，只列標題不放預覽（Steve 2026-09-17：整區改成要密碼，
+   列表不再放圖片/簡介，避免看起來還是公開的）。只有這一頁用得到，不動全站 CSS 版號。 */
+.tr-topics { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.tr-topics li { padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); }
+.tr-topics a { font-weight: 600; }
 /* 歷次研習講義：時間軸清單，新到舊。之後每辦一場就在 .tr-log 最上面加一個 .tr-log-item。 */
 .tr-log { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .tr-log-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); }
@@ -46,9 +48,9 @@
   "@graph": [
     {
       "@type": "CollectionPage",
-      "dateModified": "2026-08-18",
+      "dateModified": "2026-09-17",
       "name": "研習專區｜鴻綸科技研習講義",
-      "description": "鴻綸科技線上與到校研習的完整講義，免費公開，含每一堂課的指令全文與判斷方法。",
+      "description": "鴻綸科技線上與到校研習的完整講義，僅供參加過研習的老師使用，需輸入密碼才能進入。",
       "url": "https://www.hunglun.com/tools/training",
       "inLanguage": "zh-Hant-TW",
       "isPartOf": { "@id": "https://www.hunglun.com/#website" },
@@ -94,7 +96,7 @@
           "name": "沒有參加研習，也可以看這些講義嗎？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以。研習專區的講義全部免費公開，不必登入、不必留資料。每一堂的指令全文與操作步驟都寫在頁面上，自己照著做也走得完。"
+            "text": "研習專區已改為僅供參加過研習的老師使用，需輸入研習現場公佈的密碼才能進入。沒參加到的老師歡迎聯絡我們，了解下一場研習的時間或安排到校研習。"
           }
         },
         {
@@ -167,42 +169,17 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> ／ <a href="/tools">工具分享</a> ／ 研習專區</nav>
     <h1>研習專區</h1>
-    <p>鴻綸科技線上與到校研習的完整講義，免費公開。沒參加到的人可以自己跟著做完，參加過的人回去照著複習。</p>
+    <p>鴻綸科技線上與到校研習的完整講義，僅供參加過研習的老師使用，需輸入研習現場公佈的密碼才能進入。</p>
   </div>
 </div>
 
 <section class="section">
   <div class="wrap">
     <h2 class="section-title reveal">課程講義</h2>
-    <p class="section-sub reveal">每一堂都附完整指令與判斷方法，整段複製就能用。</p>
-    <div class="grid">
-      <article class="card reveal">
-        <div class="card-visual photo-visual"><img width="1200" height="784" src="/assets/images/vibe-wheel-demo.webp" alt="課堂抽籤大轉盤成品畫面：左邊名單設定區、右邊八格轉盤與抽中結果" loading="lazy" decoding="async" srcset="/assets/images/vibe-wheel-demo-480.webp 480w, /assets/images/vibe-wheel-demo-768.webp 768w, /assets/images/vibe-wheel-demo.webp 1200w" sizes="(max-width: 700px) 92vw, 380px"></div>
-        <div class="card-body">
-          <h3><a href="/tools/training/vibe-coding">用最簡單的應用程式，了解 Vibe Coding 的邏輯</a></h3>
-          <div class="tagline">把想法講清楚，讓畫面自己長出來</div>
-          <ul class="tr-tags">
-            <li>約 3 小時</li>
-            <li>不需程式基礎</li>
-            <li>免費帳號做得完</li>
-            <li>Gemini Canvas</li>
-          </ul>
-          <p>用 12 道可直接複製的中文指令，做出一顆課堂抽籤轉盤：貼上名單就自動分格、按一下抽出一位，還會自己清掉空白行、重複姓名與多餘的空格。全程不寫程式碼，成品可下載成一個離線點兩下就打得開的檔案。</p>
-          <p style="margin-top:10px;"><a href="/tools/training/vibe-coding">看完整講義與 12 道指令 →</a></p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="/tools/training/vibe-coding">開始上課</a>
-          </div>
-        </div>
-      </article>
-      <article class="card reveal">
-        <div class="card-body">
-          <h3>新課程籌備中</h3>
-          <div class="tagline">同一套方法，換一個題目</div>
-          <p>之後的課程會把「一次只加一件事」的做法帶到另一種校園實際情境。課程排定後會直接放在這一頁，不必另外訂閱。</p>
-          <p class="tr-soon" style="margin-top:12px;">想指定題目嗎？貴校最想解決的行政或教學雜事，歡迎在<a class="text-link" href="/contact">聯絡我們</a>告訴我們，我們會把常被提到的題目排進課程。</p>
-        </div>
-      </article>
-    </div>
+    <p class="section-sub reveal">點主題進去要輸入密碼。</p>
+    <ul class="tr-topics">
+      <li><a href="/tools/training/vibe-coding">用最簡單的應用程式，了解 Vibe Coding 的邏輯</a></li>
+    </ul>
   </div>
 </section>
 
@@ -232,11 +209,6 @@
         <li><strong>頁面上寫的「為什麼」比指令重要</strong>：指令會過期，判斷的方法不會。換一個題目時，靠的是那些為什麼。</li>
         <li><strong>練習不要用真實名單</strong>：講義都設計成由 AI 生假資料，等工具做好再換成自己的名單。</li>
       </ul>
-      <div class="share-box">
-        <p class="share-box-lead">💡 這份講義對其他老師也有幫助嗎？</p>
-        <p class="share-box-text">歡迎複製下面這段文字，分享到貴校的教師研習群組：</p>
-        <button type="button" class="fc-copy" data-copy="夥伴們！鴻綸科技整理了一份免登入的 Vibe Coding 課堂小工具講義，跟著指令複製貼上就能自己做出課堂用的小工具，分享給大家：https://www.hunglun.com/tools/training" data-label="複製分享文字">複製分享文字</button>
-      </div>
     </div>
   </div>
 </section>
@@ -247,7 +219,7 @@
     <div class="wrap prose" style="max-width:920px;padding:0;">
       <details class="faq-item reveal" open>
         <summary>沒有參加研習，也可以看這些講義嗎？</summary>
-        <div class="faq-a">可以。研習專區的講義全部免費公開，不必登入、不必留資料。每一堂的指令全文與操作步驟都寫在頁面上，自己照著做也走得完。</div>
+        <div class="faq-a">研習專區已改為僅供參加過研習的老師使用，需輸入研習現場公佈的密碼才能進入。沒參加到的老師歡迎<a href="/contact">聯絡我們</a>，了解下一場研習的時間或安排到校研習。</div>
       </details>
       <details class="faq-item reveal">
         <summary>這些講義可以帶回學校自己開課嗎？</summary>
