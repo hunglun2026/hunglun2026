@@ -33,6 +33,12 @@
 .tr-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 0; margin: 0 0 10px; font-size: .82rem; color: var(--muted-faint); }
 .tr-tags li { margin: 0; }
 .tr-soon { border: 1px dashed var(--line); border-radius: var(--radius); padding: 18px; color: var(--muted); }
+/* 歷次研習講義：時間軸清單，新到舊。之後每辦一場就在 .tr-log 最上面加一個 .tr-log-item。 */
+.tr-log { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.tr-log-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); }
+.tr-log-date { font-weight: 600; color: var(--accent); min-width: 92px; }
+.tr-log-unit { color: var(--muted); font-size: .88rem; }
+.tr-log-item a { margin-left: auto; white-space: nowrap; }
 </style>
 <script type="application/ld+json">
 {
@@ -196,6 +202,22 @@
           <p class="tr-soon" style="margin-top:12px;">想指定題目嗎？貴校最想解決的行政或教學雜事，歡迎在<a class="text-link" href="/contact">聯絡我們</a>告訴我們，我們會把常被提到的題目排進課程。</p>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="log">
+  <div class="wrap">
+    <h2 class="section-title reveal">歷次研習講義</h2>
+    <p class="section-sub reveal">現場講課用的是短連結，方便直接唸給學員：新的在最上面。</p>
+    <div class="wrap prose" style="max-width:920px;padding:0;">
+      <ul class="tr-log">
+        <li class="tr-log-item">
+          <span class="tr-log-date">2026/09/16</span>
+          <span class="tr-log-unit">吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）</span>
+          <a href="https://www.hunglun.com/go/0916" target="_blank" rel="noopener">hunglun.com/go/0916 ↗</a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
