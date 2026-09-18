@@ -35,13 +35,13 @@ function getCookie(request, name) {
 
 function loginPage(code, label, error) {
   const errorHtml = error
-    ? '<p style="color:#c0392b;font-size:14px;margin:0 0 14px;">口令不對，再試一次。</p>'
+    ? '<p style="color:#c0392b;font-size:14px;margin:0 0 14px;">密碼不對，再試一次。</p>'
     : '';
   return `<!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>研習教材：需要口令</title>
+<title>研習教材：需要密碼</title>
 <style>
   body{font-family:-apple-system,"Microsoft JhengHei",sans-serif;background:#f4f6f9;
     display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:20px;box-sizing:border-box;}
@@ -58,7 +58,7 @@ function loginPage(code, label, error) {
 <body>
   <div class="box">
     <h1>${label}</h1>
-    <p class="hint">請輸入講師現場公佈的口令</p>
+    <p class="hint">請輸入講師現場公佈的密碼</p>
     ${errorHtml}
     <form method="POST" action="/go/${code}">
       <input type="text" name="password" autofocus required inputmode="text">
