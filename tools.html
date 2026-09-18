@@ -31,14 +31,16 @@
 <style>
 /* 研習專區清單：跟全站 kn-item 共用骨架，只在這裡加圖示底色徽章、需密碼小標籤、
    懸停時的輕微上浮陰影。只有這一頁的 #training 用得到，不動全站 kn-item 樣式。 */
-#training .kn-item{transition: background .2s ease,padding-left .2s ease,box-shadow .25s ease,transform .25s ease}
+#training .kn-item{grid-template-columns: 44px 1fr;transition: background .2s ease,padding-left .2s ease,box-shadow .25s ease,transform .25s ease}
 #training .kn-item:hover{box-shadow: 0 10px 28px -14px rgba(0,0,0,0.28);transform: translateY(-2px)}
 #training .kn-icon-wrap{display: flex;align-items: center;justify-content: center;width: 44px;height: 44px;border-radius: 999px;background: var(--glow);transition: background .25s ease,transform .25s ease}
 #training .kn-item:hover .kn-icon-wrap{background: var(--accent);transform: scale(1.06)}
 #training .kn-icon-wrap .kn-icon{width: 26px;height: 26px}
 #training .kn-item:hover .kn-icon-wrap img{filter: brightness(0) invert(1)}
-#training .kn-lock{display: inline-flex;align-items: center;gap: 4px;font-size: 0.72rem;font-weight: 600;letter-spacing: .03em;color: var(--accent);background: var(--glow);border-radius: 999px;padding: 2px 9px;margin-right: 8px;vertical-align: middle}
-@media (max-width: 560px){#training .kn-icon-wrap{width: 36px;height: 36px}#training .kn-icon-wrap .kn-icon{width: 21px;height: 21px}}
+#training .kn-meta{display: flex;align-items: center;gap: 8px;margin-bottom: 4px}
+#training .kn-meta time{font-family: var(--mono);font-size: 0.74rem;color: var(--muted-faint)}
+#training .kn-lock{display: inline-flex;align-items: center;gap: 4px;font-size: 0.72rem;font-weight: 600;letter-spacing: .03em;color: var(--accent);background: var(--glow);border-radius: 999px;padding: 2px 9px}
+@media (max-width: 560px){#training .kn-item{grid-template-columns: 36px 1fr}#training .kn-icon-wrap{width: 36px;height: 36px}#training .kn-icon-wrap .kn-icon{width: 21px;height: 21px}}
 </style>
 <script type="application/ld+json">
 {
@@ -319,8 +321,11 @@
       <ul class="kn-list">
         <li><a class="kn-item" href="/tools/training">
           <span class="kn-icon-wrap"><img class="kn-icon" width="160" height="160" src="/assets/icon-svc-education.webp" alt="" loading="lazy" decoding="async"></span>
-          <span class="kn-text"><span class="kn-t"><span class="kn-lock">🔒 需密碼</span>研習專區：AI 研習完整講義</span><span class="kn-d">僅供研習參加者使用。最新場次：2026/09/16 吳鳳科技大學 AI 研習，現場教材連結 hunglun.com/go/0916（需輸入現場密碼）</span></span>
-          <time class="kn-date" datetime="2026-09-17">2026/09/17</time>
+          <span class="kn-text">
+            <span class="kn-meta"><time datetime="2026-09-17">2026/09/17</time><span class="kn-lock">🔒 需密碼</span></span>
+            <span class="kn-t">研習專區：AI 研習完整講義</span>
+            <span class="kn-d">僅供研習參加者使用。最新場次：2026/09/16 吳鳳科技大學 AI 研習，現場教材連結 hunglun.com/go/0916（需輸入現場密碼）</span>
+          </span>
         </a></li>
       </ul>
     </div>
