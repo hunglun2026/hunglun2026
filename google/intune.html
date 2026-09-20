@@ -43,7 +43,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-20",
   "@id": "https://www.hunglun.com/google/intune#webpage",
   "url": "https://www.hunglun.com/google/intune",
   "name": "Intune 是什麼？跟 Google CEU 有何不同",
@@ -59,6 +59,29 @@
   ],
   "significantLink": [
     "https://www.hunglun.com/services/chromeos-flex"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Intune 跟 Google 的 CEU（Chrome 教育升級授權）有什麼不一樣？",
+      "acceptedAnswer": { "@type": "Answer", "text": "最大差別是管的裝置種類跟出身。CEU 只管 ChromeOS 裝置（Chromebook，以及改裝 ChromeOS Flex 的電腦），是 Google 自己的系統；Intune 則 Windows、Mac、iPhone、Android 都能管，是微軟的系統。裝置品牌很多元、或本來就已經用 Microsoft 365 的單位，通常會考慮 Intune；主力就是 Chromebook 的單位，用 CEU 比較單純。" }
+    },
+    {
+      "@type": "Question",
+      "name": "鴻綸科技在 Intune 這塊能幫忙的範圍是什麼？",
+      "acceptedAnswer": { "@type": "Answer", "text": "如果貴單位本來就已經有 Intune 在管理 Windows 電腦，可以借用這套既有系統，把一批舊電腦遠端改裝成 ChromeOS Flex，不用工友一台一台拿隨身碟去裝。但完整的 Intune 導入設定與長期維運（建置管理主控台、寫資安政策、教 IT 人員操作），不在鴻綸科技目前的服務範圍內，這塊建議另外找 Microsoft 認證夥伴，鴻綸科技的核心專長仍在 Google 這一側。" }
+    },
+    {
+      "@type": "Question",
+      "name": "借用 Intune 遠端改裝 ChromeOS Flex，實際怎麼運作？",
+      "acceptedAnswer": { "@type": "Answer", "text": "先在 Google 後台產生一組登記憑證，包成一個檔案，透過學校或公司原本就在用的 Intune（或 SCCM 之類的工具）直接推送到每一台目標電腦，排在下班後自動執行安裝，電腦重開機就已經變成 ChromeOS Flex，還會自動登記進正確的帳號網域。整個過程不用 IT 人員實際碰到那台電腦，一次改裝幾十台、幾百台是同樣的工；如果還沒有 Intune 環境，也可以用隨身碟一台一台開機安裝，適合十幾二十台以內的規模。" }
+    }
   ]
 }
 </script>
