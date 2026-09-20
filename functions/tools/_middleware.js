@@ -9,10 +9,11 @@
  * 兩套獨立的保護邏輯，互不相干：
  * 1. PROTECTED_PATHS 列出的商用工具（ceu/flex-deploy/downloads）：全部共用同一組
  *    INTERNAL_TOOLS_PASSWORD，15 分鐘 cookie。tools/mail 等既有免費工具不受影響。
- * 2. /tools/training（研習專區，Steve 2026-09-17 改成不再對外公開）：
- *    每篇講義各自一組密碼＋共用講師萬用密碼，密碼清單在 ./training/_topics.js
- *    跟 ../go/_sessions.js，30 天 cookie（跟 ceu 那組 15 分鐘刻意不同，
- *    研習教材是自己找時間看，不是看完馬上關掉）。
+ * 2. /tools/training（研習專區）：每篇講義各自一組密碼＋共用講師萬用密碼，密碼清單
+ *    在 ./training/_topics.js 跟 ../go/_sessions.js，30 天 cookie（跟 ceu 那組 15 分鐘
+ *    刻意不同，研習教材是自己找時間看，不是看完馬上關掉）。
+ *    2026-09-20 起專區「首頁」改成公開：辦過哪些場次是對外的實績證明，鎖起來等於
+ *    讓搜尋引擎與 AI 問答引擎查不到，實際要保護的是講義內容本身。
  *
  * 需要的環境變數（Cloudflare Pages 專案 → 設定 → 環境變數設定，Production 與
  * Preview 都要，只影響第 1 套邏輯）：
@@ -181,8 +182,10 @@ export async function onRequest({ request, env, next }) {
   const url = new URL(request.url);
   const pathname = decodeURIComponent(url.pathname);
 
+  // slug 為 '' 代表研習專區首頁：2026-09-20 起改成公開，讓辦過哪些場次這項實績
+  // 能被搜尋引擎與 AI 問答引擎查得到。各篇講義（slug 非空）維持密碼保護不變。
   const slug = trainingSlug(pathname);
-  if (slug !== null) {
+  if (slug) {
     return handleTraining({ request, next }, pathname, slug);
   }
 

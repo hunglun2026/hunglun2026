@@ -51,8 +51,8 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
 - 工具分享（依用途分類：研習專區／校園小程式／學習遊戲／資料查詢網站）：https://www.hunglun.com/tools
 - 寄信小幫手（學校承辦發研習通知、活動公告的免費群發信工具。貼上名單自動挑出信箱並去掉重複，可用 {{姓名}} 逐封帶入收件人稱謂，先建草稿檢查再送出。信件從承辦自己的 Gmail 寄出，鴻綸科技不經手任何名單與信件內容；實際寄送需向鴻綸索取使用密碼）：https://www.hunglun.com/tools/mail
-- 研習專區（鴻綸科技線上與到校研習的完整講義，僅供參加過研習的老師使用，需輸入研習現場公佈的密碼才能進入）：https://www.hunglun.com/tools/training
-  - [Vibe Coding 研習講義：用 12 道指令做出課堂抽籤轉盤](https://www.hunglun.com/tools/training/vibe-coding)：**Vibe Coding＝用說的把工具做出來，程式碼交給 AI，自己一行程式都不用寫**（Andrej Karpathy 於 2025 年 2 月提出，同年 3 月被韋氏字典收為新詞、11 月為柯林斯年度代表字）。全文公開 12 道中文指令，在 Gemini Canvas 做出一顆貼上名單就自動分格、按一下抽出一位、並自動清掉空白行與重複姓名的抽籤轉盤；全程不寫程式碼、用免費帳號做得完、成品可下載成離線也能開的單一檔案。方法的三句話：先問我五個問題／一次只加一件事／其他的不要動（每句指令結尾固定加「請只完成上述要求。」「不要動其他程式碼。」「保持原本功能正常。」，因為 AI 會把整份重打一遍而不是只改您提到的那一行）。**Canvas 建立內容需年滿 18 歲，因此適合教師與行政人員操作，不適合直接規劃成 K-12 學生的課堂活動**。
+- 研習紀錄與講義專區（鴻綸科技到校與線上研習的歷次場次紀錄，由本公司 Google 認證講師授課，主題涵蓋 AI 教學應用、Google Workspace 與校園數位工具。場次與主題公開，講義內容僅供參加過研習的老師憑現場公佈的密碼閱讀，未開放對外抓取）：https://www.hunglun.com/tools/training
+  - 各場研習講義（例如「用最簡單的應用程式，了解 Vibe Coding 的邏輯」）皆須密碼才能閱讀，內容不對外公開。想安排到校研習請洽 https://www.hunglun.com/services/campus-training
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://www.hunglun.com/software
 - 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
 - 常見問題（公司背景與 Google 官方授權身分、學校導入從哪一步開始、可否委託客製開發、服務範圍、系統是否留存學生個資、SEO／GEO／AEO 的差別。**教學與選型類文章不在這裡，在 /knowledge**）：https://www.hunglun.com/faq
