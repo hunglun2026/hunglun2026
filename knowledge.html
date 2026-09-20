@@ -650,6 +650,16 @@
   }
 }
 </script>
+<style>
+/* 知識庫主題分頁列：一般連結，沒有 JS 也能用 */
+.kn-tabs{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:6px;margin:0 -4px;padding-left:4px;padding-right:4px}
+.kn-tabs a{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;min-height:44px;padding:10px 18px;font-size:1rem;line-height:1.2;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
+.kn-tabs a:hover{color:var(--text);border-color:var(--accent)}
+.kn-tabs a[aria-current="page"]{color:var(--accent);border-color:var(--accent);background:var(--card-hover);font-weight:600}
+.kn-tabs a span{font-size:.82rem;color:var(--muted-faint)}
+.kn-tabs a[aria-current="page"] span{color:var(--accent)}
+@media (max-width:640px){.kn-tabs{margin:0 -16px;padding-left:16px;padding-right:16px}}
+</style>
 </head>
 <body>
 
@@ -683,7 +693,7 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> ／ 知識庫</nav>
     <h1>教育科技知識庫</h1>
-    <p>42 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。內容由 Google for Education 認證夥伴整理，每篇都是獨立網址，方便查找與分享。</p>
+    <p>76 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。內容由 Google for Education 認證夥伴整理，每篇都是獨立網址，方便查找與分享。</p>
   </div>
 </div>
 
@@ -702,16 +712,15 @@
 
 <div class="section kn-filter-wrap">
   <div class="wrap">
-    <div class="kn-filter" role="group" aria-label="依主題篩選">
-      <button type="button" class="kn-chip active" data-cat="all" aria-pressed="true">全部 <span>76</span></button>
-      <button type="button" class="kn-chip" data-cat="google-ai" aria-pressed="false">Google 與 AI 導入 <span>23</span></button>
-      <button type="button" class="kn-chip" data-cat="classroom" aria-pressed="false">Google Classroom <span>10</span></button>
-      <button type="button" class="kn-chip" data-cat="gemini" aria-pressed="false">Google AI Pro for Education（Gemini 教育版） <span>10</span></button>
-      <button type="button" class="kn-chip" data-cat="gemini-notebook" aria-pressed="false">Gemini Notebook 系列 <span>10</span></button>
-      <button type="button" class="kn-chip" data-cat="web" aria-pressed="false">網站與數位工具 <span>15</span></button>
-      <button type="button" class="kn-chip" data-cat="hardware" aria-pressed="false">設備選型與採購 <span>4</span></button>
-      <button type="button" class="kn-chip" data-cat="compliance" aria-pressed="false">法遵與資安 <span>4</span></button>
-    </div>
+<nav class="kn-tabs" aria-label="知識庫主題">
+  <a href="/knowledge" aria-current="page">全部 <span>76</span></a>
+  <a href="/knowledge/topic/google-ai">Google 與 AI 導入 <span>23</span></a>
+  <a href="/knowledge/topic/gemini">Gemini 教育版與 Notebook <span>20</span></a>
+  <a href="/knowledge/topic/web">數位學習軟體與網站 <span>15</span></a>
+  <a href="/knowledge/topic/classroom">Google Classroom <span>10</span></a>
+  <a href="/knowledge/topic/hardware">設備選型與採購 <span>4</span></a>
+  <a href="/knowledge/topic/compliance">資安與個資法遵 <span>4</span></a>
+</nav>
   </div>
 </div>
 
@@ -1696,25 +1705,6 @@
   </div>
 </section>
 
-<script>
-(function(){
-  var chips=[].slice.call(document.querySelectorAll('.kn-chip'));
-  var groups=[].slice.call(document.querySelectorAll('.kn-group'));
-  if(!chips.length) return;
-  function apply(cat){
-    groups.forEach(function(g){ g.hidden = (cat!=='all' && g.dataset.cat!==cat); });
-    chips.forEach(function(c){
-      var on=c.dataset.cat===cat;
-      c.classList.toggle('active',on); c.setAttribute('aria-pressed',on?'true':'false');
-    });
-    if(cat==='all'){ history.replaceState(null,'',location.pathname); }
-    else { history.replaceState(null,'','#'+cat); }
-  }
-  chips.forEach(function(c){ c.addEventListener('click',function(){ apply(c.dataset.cat); }); });
-  var h=location.hash.replace('#','');
-  if(h && groups.some(function(g){return g.dataset.cat===h;})) apply(h);
-})();
-</script>
 </main>
 
 <footer class="site-footer">
@@ -1749,7 +1739,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved.</div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.1.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
