@@ -248,7 +248,21 @@ export async function onRequest({ request, env, next }) {
     });
   }
 
-  if (request.method === 'POST') {
+  // 登入表單一定是 multipart/form-data 或 x-www-form-urlencoded（loginPage 的
+  // <form method="POST">）。子路徑自己的 API 呼叫（例如 /tools/ceu/api/verify-password
+  // 送 JSON）cookie 沒過也會走到這裡，但那不是登入表單送出——直接當未登入擋掉，
+  // 不要嘗試 request.formData()，否則對 JSON body 解析會丟例外炸成 500
+  // （2026-09-24 上線後 curl 實測踩到）。
+  const contentType = request.headers.get('Content-Type') || '';
+  const isFormPost =
+    request.method === 'POST' &&
+    (contentType.includes('multipart/form-data') || contentType.includes('application/x-www-form-urlencoded'));
+
+  if (request.method === 'POST' && !isFormPost) {
+    return new Response('需要先登入。', { status: 401 });
+  }
+
+  if (isFormPost) {
     const form = await request.formData();
     const input = String(form.get('password') || '');
     if (timingSafeEqual(input, password)) {
