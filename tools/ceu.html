@@ -124,6 +124,28 @@
          裡（view-source 就看得到，而且那組密碼剛好跟研習專區的講師萬用密碼
          共用同一個值，等於連帶洩漏另一邊）。 -->
 
+    <!-- 「解鎖內建金鑰」「解除綁定」這兩處的密碼輸入框：不用瀏覽器原生的
+         window.prompt()（灰色系統對話框，樣式跟這個頁面不搭，也容易讓人誤以為
+         是瀏覽器在跟你要密碼），改用自己畫的彈窗，見下面 customPrompt()。 -->
+    <div id="customPromptModal" class="fixed inset-0 bg-slate-900/60 z-[100] hidden items-center justify-center backdrop-blur-md transition-all duration-300">
+        <div class="bg-white/95 rounded-3xl shadow-2xl w-full max-w-sm p-8 mx-4 text-center border border-white/20 relative overflow-hidden" id="customPromptBox">
+            <div class="absolute top-0 left-0 w-full h-2 google-stripe"></div>
+            <h2 id="customPromptTitle" class="text-lg font-bold text-slate-800 mb-2 tracking-tight mt-2">請輸入密碼</h2>
+            <p id="customPromptMessage" class="text-slate-500 text-sm mb-6 whitespace-pre-line"></p>
+            <div class="relative mb-2 group">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <i class="fa-solid fa-shield-halved text-slate-400"></i>
+                </div>
+                <input type="password" id="customPromptInput" placeholder="••••••••" autocomplete="off"
+                       class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all font-mono tracking-widest text-center text-lg shadow-inner">
+            </div>
+            <div class="flex gap-2 mt-6">
+                <button type="button" onclick="cancelCustomPrompt()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-600 py-3 rounded-xl font-semibold transition-all">取消</button>
+                <button type="button" onclick="confirmCustomPrompt()" class="flex-1 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white py-3 rounded-xl font-semibold shadow-lg shadow-blue-500/30 transition-all">確定</button>
+            </div>
+        </div>
+    </div>
+
     <div class="max-w-[1600px] mx-auto p-4 md:p-6 lg:p-8">
         
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 mb-6 overflow-hidden relative">
@@ -380,6 +402,44 @@
         let isProcessing = false;
         let forceStopFlag = false;
 
+        // 自己畫的密碼輸入彈窗，取代瀏覽器原生的 window.prompt()。
+        // 用法跟 prompt() 一樣是「問一句話、等使用者輸入」，但回傳 Promise：
+        // await customPrompt('請輸入...') → 使用者按確定的字串，取消則是 null。
+        let _customPromptResolve = null;
+        function customPrompt(message) {
+            return new Promise((resolve) => {
+                _customPromptResolve = resolve;
+                document.getElementById('customPromptMessage').textContent = message;
+                const input = document.getElementById('customPromptInput');
+                input.value = '';
+                const modal = document.getElementById('customPromptModal');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => input.focus(), 50);
+            });
+        }
+        function closeCustomPromptModal() {
+            const modal = document.getElementById('customPromptModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+        function confirmCustomPrompt() {
+            const val = document.getElementById('customPromptInput').value;
+            closeCustomPromptModal();
+            if (_customPromptResolve) { _customPromptResolve(val); _customPromptResolve = null; }
+        }
+        function cancelCustomPrompt() {
+            closeCustomPromptModal();
+            if (_customPromptResolve) { _customPromptResolve(null); _customPromptResolve = null; }
+        }
+        document.getElementById('customPromptModal').addEventListener('click', (e) => {
+            if (e.target.id === 'customPromptModal') cancelCustomPrompt();
+        });
+        document.getElementById('customPromptInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') confirmCustomPrompt();
+            if (e.key === 'Escape') cancelCustomPrompt();
+        });
+
         // 密碼比對一律打後端 /tools/ceu/api/verify-password（比對
         // CEU_TOOLS_PASSWORD，跟進這個頁面用的是同一組），不在前端寫死。
         // 回傳 { ok, locked }：locked 是同一來源短時間內錯太多次被暫時鎖定。
@@ -412,7 +472,7 @@
                 log('已切回手動輸入 API Key。', 'info');
                 return;
             }
-            const pwd = prompt("請輸入金鑰解鎖密碼：");
+            const pwd = await customPrompt("請輸入金鑰解鎖密碼：");
             if (pwd === null) return;
             const result = await verifyPassword(pwd);
             if (result.ok) {
@@ -720,7 +780,7 @@
             const actionName = isBind ? '綁定' : '解除綁定';
 
             if (!isBind) {
-                const unbindPwd = prompt(`⚠️ 警告：確定要執行「解除綁定」嗎？\n系統將會進行批量刪除，請確保【Google Device ID】欄位有值。\n\n請輸入解除授權密碼：`);
+                const unbindPwd = await customPrompt(`⚠️ 警告：確定要執行「解除綁定」嗎？\n系統將會進行批量刪除，請確保【Google Device ID】欄位有值。\n\n請輸入解除授權密碼：`);
                 if (unbindPwd === null) return;
                 const result = await verifyPassword(unbindPwd);
                 if (!result.ok) {
