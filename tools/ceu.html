@@ -118,38 +118,11 @@
 </head>
 <body class="text-slate-800 antialiased">
 
-    <div id="passwordModal" class="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center backdrop-blur-md transition-all duration-500">
-        <div class="bg-white/95 rounded-3xl shadow-2xl w-full max-w-sm p-8 mx-4 text-center transform transition-all duration-300 scale-100 border border-white/20 relative overflow-hidden" id="passwordBox">
-            
-            <div class="absolute top-0 left-0 w-full h-2 google-stripe"></div>
-            
-            <div class="bg-white p-4 rounded-2xl shadow-sm inline-block mb-6 mt-2 border border-slate-100">
-                <img src="https://i.ibb.co/5XPgTdsY/image-1.png" alt="鴻綸科技 LOGO" class="h-28 mx-auto object-contain" 
-                     onerror="this.src='https://via.placeholder.com/150x200/ffffff/4285F4?text=HongLun'; this.onerror=null;">
-            </div>
-            
-            <h2 class="text-2xl font-bold text-slate-800 mb-2 tracking-tight">系統驗證</h2>
-            <p class="text-slate-500 text-sm mb-8">請輸入授權密碼以進入 CEU 綁定系統</p>
-            
-            <div class="relative mb-2 group">
-                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-blue-500">
-                    <i class="fa-solid fa-shield-halved text-slate-400 group-focus-within:text-blue-500 transition-colors"></i>
-                </div>
-                <input type="password" id="systemPassword" placeholder="••••••••" 
-                       class="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all font-mono tracking-widest text-center text-lg shadow-inner"
-                       onkeypress="if(event.key === 'Enter') checkPassword()">
-            </div>
-            
-            <div id="passwordError" class="text-rose-500 text-sm mb-4 mt-2 hidden font-medium flex items-center justify-center gap-1.5 animate-pulse">
-                <i class="fa-solid fa-circle-exclamation"></i> 密碼錯誤，請重新輸入
-            </div>
-            
-            <button onclick="checkPassword()" class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2 mt-6 group">
-                <span>登入系統</span>
-                <i class="fa-solid fa-arrow-right-to-bracket group-hover:translate-x-1 transition-transform"></i>
-            </button>
-        </div>
-    </div>
+    <!-- Steve 2026-09-24：拿掉了這裡原本的前端密碼彈窗。這個頁面已經被
+         functions/tools/_middleware.js 的伺服器端密碼閘擋在前面，進得來就是
+         驗證過的；原本的彈窗只是同性質再問一次，卻把密碼常數寫死在前端 JS
+         裡（view-source 就看得到，而且那組密碼剛好跟研習專區的講師萬用密碼
+         共用同一個值，等於連帶洩漏另一邊）。 -->
 
     <div class="max-w-[1600px] mx-auto p-4 md:p-6 lg:p-8">
         
@@ -404,46 +377,33 @@
         // ==========================================
         // 全域變數與系統狀態
         // ==========================================
-        const SYSTEM_PASSWORD = "hung5407"; 
         let isProcessing = false;
         let forceStopFlag = false;
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            if (sessionStorage.getItem('ceu_auth_passed') === 'true') {
-                document.getElementById('passwordModal').classList.add('hidden');
-            } else {
-                document.getElementById('systemPassword').focus();
-            }
-        });
 
-        function checkPassword() {
-            const inputVal = document.getElementById('systemPassword').value;
-            const errorMsg = document.getElementById('passwordError');
-            const box = document.getElementById('passwordBox');
-            const modal = document.getElementById('passwordModal');
-
-            if (inputVal === SYSTEM_PASSWORD) {
-                sessionStorage.setItem('ceu_auth_passed', 'true');
-                errorMsg.classList.add('hidden');
-                modal.style.opacity = '0';
-                box.style.transform = 'scale(0.95) translateY(10px)';
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                }, 400);
-            } else {
-                errorMsg.classList.remove('hidden');
-                box.classList.add('animate-shake');
-                document.getElementById('systemPassword').value = ''; 
-                setTimeout(() => {
-                    box.classList.remove('animate-shake');
-                }, 400);
+        // 密碼比對一律打後端 /tools/ceu/api/verify-password（比對
+        // CEU_TOOLS_PASSWORD，跟進這個頁面用的是同一組），不在前端寫死。
+        // 回傳 { ok, locked }：locked 是同一來源短時間內錯太多次被暫時鎖定。
+        async function verifyPassword(pwd) {
+            try {
+                const res = await fetch('/tools/ceu/api/verify-password', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: pwd })
+                });
+                if (res.status === 429) return { ok: false, locked: true };
+                if (!res.ok && res.status !== 401) return { ok: false, locked: false };
+                const data = await res.json();
+                return { ok: data.ok === true, locked: false };
+            } catch (err) {
+                console.error('verify-password 失敗', err);
+                return { ok: false, locked: false };
             }
         }
 
         // 內建金鑰改由後端代管（/tools/ceu/api/*），前端不再持有真正的 key，
         // 這裡只是切換一個旗標，實際呼叫走 sendToApi()／exportCurl() 裡的分流判斷。
         let usingBuiltinKey = false;
-        function unlockApiKey() {
+        async function unlockApiKey() {
             if (usingBuiltinKey) {
                 usingBuiltinKey = false;
                 apiKeyInput.readOnly = false;
@@ -453,12 +413,16 @@
                 return;
             }
             const pwd = prompt("請輸入金鑰解鎖密碼：");
-            if (pwd === "5407") {
+            if (pwd === null) return;
+            const result = await verifyPassword(pwd);
+            if (result.ok) {
                 usingBuiltinKey = true;
                 apiKeyInput.value = '（使用內建金鑰，由伺服器代管，不會外流）';
                 apiKeyInput.readOnly = true;
                 log('🔓 已切換為內建金鑰，API 呼叫將透過伺服器代理執行。', 'success');
-            } else if (pwd !== null) {
+            } else if (result.locked) {
+                alert("密碼錯誤次數過多，已暫時鎖定，請稍後再試。");
+            } else {
                 alert("解鎖密碼錯誤！");
             }
         }
@@ -757,10 +721,10 @@
 
             if (!isBind) {
                 const unbindPwd = prompt(`⚠️ 警告：確定要執行「解除綁定」嗎？\n系統將會進行批量刪除，請確保【Google Device ID】欄位有值。\n\n請輸入解除授權密碼：`);
-                if (unbindPwd !== "5407") {
-                    if (unbindPwd !== null) {
-                        alert("密碼錯誤！解除綁定已被取消。");
-                    }
+                if (unbindPwd === null) return;
+                const result = await verifyPassword(unbindPwd);
+                if (!result.ok) {
+                    alert(result.locked ? "密碼錯誤次數過多，已暫時鎖定，請稍後再試。解除綁定已被取消。" : "密碼錯誤！解除綁定已被取消。");
                     return;
                 }
             }
