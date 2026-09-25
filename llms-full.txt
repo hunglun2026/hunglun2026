@@ -1431,7 +1431,7 @@ Rapid Release 網域從 2026 年 9 月 1 日起漸進推出，功能完全可見
 
 https://www.hunglun.com/knowledge/ai-assessment-design
 
-知識庫 ／ AI 時代的評量設計
+知識庫 ／ Google 與 AI 導入 ／ AI 時代的評量設計
 評量設計怎麼因應 AI：不靠偵測器，靠題目本身
 AI 偵測器誤判率高，不適合當處分依據。與其抓學生用了 AI，不如讓題目本身問出只有真正做過的人才答得出來的東西。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -1527,7 +1527,7 @@ Classroom 教學：建課程到成績單
 
 https://www.hunglun.com/knowledge/security-incident-response
 
-知識庫 ／ 校園資安事件通報與處理流程
+知識庫 ／ 資安與個資法遵 ／ 校園資安事件通報與處理流程
 校園資安事件通報與處理流程：發現後第一步該找誰
 資安事件跟個資外洩事件是兩條不同的通報路徑，很多學校搞混。這篇整理發現後第一小時該做的事、誰要通報給誰，以及常見誤區。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -1610,7 +1610,7 @@ https://www.hunglun.com/knowledge/security-incident-response
 
 https://www.hunglun.com/knowledge/admin-automation
 
-知識庫 ／ 學校行政可以自動化的10 件事
+知識庫 ／ Google 與 AI 導入 ／ 學校行政可以自動化的10 件事
 學校行政可以自動化的10 件事：AI 幫得上忙的地方
 不是每件行政工作都適合交給 AI，但有些真的能省下大量時間。10 件可以先讓 AI 幫忙草擬或整理的工作，附注意事項與個資紅線。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -1682,7 +1682,7 @@ AI 怎麼幫忙處理校內表單與問卷
 
 https://www.hunglun.com/knowledge/ai-forms-survey
 
-知識庫 ／ AI 怎麼幫忙處理校內表單與問卷
+知識庫 ／ Google 與 AI 導入 ／ AI 怎麼幫忙處理校內表單與問卷
 AI 怎麼幫忙處理校內表單與問卷：出題到彙整回答
 問卷最花時間的不是發放，是回收後的開放式回答彙整。三個階段 AI 能幫上忙的地方，以及最重要的隱私注意事項。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -1750,7 +1750,7 @@ Gemini 教育版怎麼用
 
 https://www.hunglun.com/knowledge/ai-copyright
 
-知識庫 ／ AI 生成教材的著作權界線
+知識庫 ／ Google 與 AI 導入 ／ AI 生成教材的著作權界線
 AI 生成教材的著作權界線：老師該知道的2 個問題
 用 AI 生成的教材算誰的著作？對外散布有沒有侵權風險？2 個問題答案不一樣，這篇分開講。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -1822,7 +1822,7 @@ AI 時代的評量設計
 
 https://www.hunglun.com/knowledge/south-taiwan-digital-transformation
 
-知識庫 ／ 台南、嘉義、高雄學校推數位轉型
+知識庫 ／ 設備選型與採購 ／ 台南、嘉義、高雄學校推數位轉型
 台南、嘉義、高雄學校推數位轉型：現況與導入 Google 方案常見問題
 3 個縣市的背景相似、卡點也相似。整理資訊教育推動單位、學校常遇到的3 個卡關點，以及導入 Google for Education 方案的常見問題。
 這篇適合：規劃校內教師研習的教學組長、資訊組長與研習承辦人。
@@ -2111,7 +2111,7 @@ Classroom 的 Gemini 對所有年齡開放，什麼時候生效？
 
 ---
 
-## Gemini Notebook 能讀買過的電子書了：Expert Intelligence 對師生的意義｜鴻綸科技
+## Gemini Notebook 能讀買過的電子書了：Expert Intelligence 解析｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-notebook-expert-intelligence
 
@@ -2259,11 +2259,11 @@ LINE 官方帳號／LINE 自動化
 
 ---
 
-## 學校 Google 帳號怎麼申請？Workspace for Education 資格、流程與 Gemini 開通｜鴻綸科技
+## 學校 Google 帳號怎麼申請？Workspace for Education 資格與流程｜鴻綸科技
 
 https://www.hunglun.com/knowledge/education-apply
 
-知識庫 ／ 學校 Google 帳號怎麼申請
+知識庫 ／ Google 與 AI 導入 ／ 學校 Google 帳號怎麼申請
 學校 Google 帳號怎麼申請？Workspace for Education 資格、流程與 Gemini 開通
 從「學校符不符合資格」到「Gemini 教育版要在哪裡打開」，把整條路徑走一次。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -2352,7 +2352,7 @@ Google 官方說明是通常 14 個工作天內完成。沒有官方的加速管
 
 https://www.hunglun.com/knowledge/account-lifecycle
 
-知識庫 ／ 帳號生命週期管理
+知識庫 ／ Google 與 AI 導入 ／ 帳號生命週期管理
 學校 Google 帳號生命週期管理：新生建檔、畢業生轉出與停權 SOP
 開學前手忙腳亂建新生帳號、畢業前才想起要處理離校學生，這兩件事其實可以變成一份每年照做的檢查清單。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -2436,7 +2436,7 @@ Google Workspace 導入與教育訓練服務 →
 
 https://www.hunglun.com/knowledge/training-planning
 
-知識庫 ／ 校內研習怎麼規劃
+知識庫 ／ Google 與 AI 導入 ／ 校內研習怎麼規劃
 校內教師研習怎麼規劃才有效？時數、分場與研習後追蹤
 研習辦完老師說「沒什麼用」、兩週後幾乎全忘光，多半不是講師的問題，是排課前漏掉幾個關鍵決定。
 這篇適合：規劃校內教師研習的教學組長、資訊組長與研習承辦人。
@@ -2511,7 +2511,7 @@ Google Meet 在校園怎麼用：線上研習的出席報告怎麼開 →
 
 https://www.hunglun.com/knowledge/edpuzzle
 
-知識庫 ／ Edpuzzle 是什麼
+知識庫 ／ 數位學習軟體與網站 ／ Edpuzzle 是什麼
 Edpuzzle 是什麼？把影片變成看得到學生進度的課程
 影片丟出去卻不知道學生看了沒，Edpuzzle 處理的就是這一段。含 Classroom 串接、AI 出題與免費版限制。
 這篇適合：評估數位學習軟體採購的資訊組長、教學組長與領域召集人。
@@ -2590,7 +2590,7 @@ Edpuzzle 的 AI 功能可以做什麼？
 
 https://www.hunglun.com/knowledge/thinglink
 
-知識庫 ／ ThingLink 是什麼
+知識庫 ／ 數位學習軟體與網站 ／ ThingLink 是什麼
 ThingLink 是什麼？把看不到的場景變成學生能探索的教材
 帶不去的古蹟、進不去的工廠、危險到不能操作的流程，ThingLink 處理的就是這一類內容。
 這篇適合：評估數位學習軟體採購的資訊組長、教學組長與領域召集人。
@@ -2668,7 +2668,7 @@ ThingLink 跟 Edpuzzle 有什麼不同？要買哪一套？
 
 https://www.hunglun.com/knowledge/google-certification-prep
 
-知識庫 ／ Level 1 怎麼準備
+知識庫 ／ Google 與 AI 導入 ／ Level 1 怎麼準備
 Google 認證教育家 Level 1 怎麼準備？四週計畫與實作情境練法
 Level 1 有三個實作情境，只讀教學文通常過不了。這是一份可以直接照做的準備計畫。
 這篇適合：想考 Google 或 Gemini 教育家認證的老師，以及規劃校內認證培訓的教學組長。
@@ -2891,7 +2891,7 @@ https://www.hunglun.com/local-food-dongshan
 
 https://www.hunglun.com/knowledge/chromebook
 
-知識庫 ／ Chromebook 選購指南
+知識庫 ／ 設備選型與採購 ／ Chromebook 選購指南
 Chromebook 選購與校園導入指南
 什麼是 Chromebook、跟一般筆電差在哪、CEU 是什麼，以及 ASUS 教育機型五個家族（CX 筆電式、CM／CZ 可拆卸、C2 耐用款、BR 教育專用、CT 平板式）怎麼分辨、AUE 怎麼查。
 這篇適合：負責學習載具、電腦教室與校園設備規劃的資訊組長與設備組長。
@@ -3010,7 +3010,7 @@ Chromebook 與智慧教室建置服務
 
 https://www.hunglun.com/knowledge/procurement
 
-知識庫 ／ 學校資訊設備採購指南
+知識庫 ／ 設備選型與採購 ／ 學校資訊設備採購指南
 學校資訊設備採購指南
 從需求盤點、載具選型到驗收，教育現場實際會遇到的判斷點。
 這篇適合：負責請購與採購的資訊組長、設備組長與事務組承辦人。
@@ -3109,7 +3109,7 @@ Chromebook 選購與導入
 
 https://www.hunglun.com/knowledge/ai-teaching
 
-知識庫 ／ AI 融入教學實務指南
+知識庫 ／ Google 與 AI 導入 ／ AI 融入教學實務指南
 AI 融入教學實務指南
 備課、評量、行政，以及學生使用規範該怎麼訂。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -3224,7 +3224,7 @@ Gemini 方案比較
 
 https://www.hunglun.com/knowledge/workspace-editions
 
-知識庫 ／ Google Workspace 教育版版本比較
+知識庫 ／ Google 與 AI 導入 ／ Google Workspace 教育版版本比較
 Google Workspace 教育版版本比較與授權變更
 各方案怎麼選，以及 2025–2026 授權模式變更對續約的實際影響。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -3338,7 +3338,7 @@ Workspace 導入與認證培訓
 
 https://www.hunglun.com/knowledge/google-certification
 
-知識庫 ／ Google 認證教育家與認證講師指南
+知識庫 ／ Google 與 AI 導入 ／ Google 認證教育家與認證講師指南
 Google 認證教育家 Level 1／Level 2 與認證講師完整指南
 三種認證的差別、考試實際怎麼考、效期與重考規則，以及要成為認證講師需要準備什麼。內容依 Google 官方說明整理，制度細節請以官方最新公告為準。
 這篇適合：想考 Google 或 Gemini 教育家認證的老師，以及規劃校內認證培訓的教學組長。
@@ -3470,7 +3470,7 @@ Level 2 比 Level 1 難在哪裡？
 
 https://www.hunglun.com/knowledge/google-certified-innovator-coach
 
-知識庫 ／ Certified Innovator 與 Certified Coach 完整指南
+知識庫 ／ Google 與 AI 導入 ／ Certified Innovator 與 Certified Coach 完整指南
 Certified Innovator 與 Certified Coach 完整指南
 Google 教育認證不是只有 Level 1、Level 2 跟認證講師。這篇說明兩種容易被忽略的進階認證：Certified Innovator 與 Certified Coach，分別是什麼、申請條件，以及跟 Certified Trainer 怎麼選。
 這篇適合：想考 Google 或 Gemini 教育家認證的老師，以及規劃校內認證培訓的教學組長。
@@ -3556,7 +3556,7 @@ Google AI 校園研習服務 →
 
 https://www.hunglun.com/knowledge/meet
 
-知識庫 ／ Google Meet 在校園怎麼用
+知識庫 ／ Google 與 AI 導入 ／ Google Meet 在校園怎麼用
 Google Meet 在校園怎麼用：遠距、親師會與研習的管理設定
 學校用 Meet 最常見的三種場合：遠距教學、線上親師座談、線上研習，各自要注意的安全設定不一樣。這篇整理管理主控台跟會議當下實際會用到的控制項，不談操作介面截圖，談的是「該開哪些設定」。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -3640,7 +3640,7 @@ Google AI 校園研習服務 →
 
 https://www.hunglun.com/knowledge/ai
 
-知識庫 ／ AI 入門百科
+知識庫 ／ Google 與 AI 導入 ／ AI 入門百科
 AI 是什麼？人工智慧新手入門
 AI、生成式 AI、大型語言模型，三個詞常常混著講，其實指的不是同一層次的東西。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -3693,7 +3693,7 @@ AI 應用與客製工具開發
 
 https://www.hunglun.com/knowledge/ai-comparison
 
-知識庫 ／ AI 助手怎麼選
+知識庫 ／ Google 與 AI 導入 ／ AI 助手怎麼選
 學校 AI 助手怎麼選？Claude、ChatGPT、Gemini 比較
 不比誰的模型跑分高，比誰真的能省下學校的行政與備課時間。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -3774,7 +3774,7 @@ Google AI Pro for Education 授權導入
 
 https://www.hunglun.com/knowledge/computer
 
-知識庫 ／ 電腦與雲端手冊
+知識庫 ／ 設備選型與採購 ／ 電腦與雲端手冊
 電腦與雲端服務入門手冊
 規格表上一長串數字，校園採購真正該在意的其實只有幾項。
 這篇適合：負責學習載具、電腦教室與校園設備規劃的資訊組長與設備組長。
@@ -3823,7 +3823,7 @@ Chromebook 與智慧教室建置服務
 
 https://www.hunglun.com/knowledge/google
 
-知識庫 ／ Google for Education 指南
+知識庫 ／ Google 與 AI 導入 ／ Google for Education 指南
 Google for Education 完全指南
 它跟一般 Google 帳號差在哪、基礎版免費到什麼程度、學校申請要走哪五步。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -3878,7 +3878,7 @@ Google Workspace for Education 導入服務
 
 https://www.hunglun.com/knowledge/gemini
 
-知識庫 ／ Gemini 教育版怎麼用
+知識庫 ／ Google 與 AI 導入 ／ Gemini 教育版怎麼用
 Gemini 教育版怎麼用？學校導入、學生使用與管理設定
 老師和學生在課堂上實際能做什麼、管理員該開哪些設定，以及個人版與教育版的關鍵差異。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4021,7 +4021,7 @@ Google AI Pro for Education 授權導入
 
 https://www.hunglun.com/knowledge/gemini-series
 
-知識庫 ／ Gemini 生態系教學
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini 生態系教學
 Gemini 生態系教學：10 篇系列文章總覽
 從打開網頁第一次提問，到用 Vids、Flow 生出一支影片，依序看完就能自己動手用。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4070,7 +4070,7 @@ Gemini 教育版怎麼申請、方案怎麼選，我們在 Gemini 方案懶人�
 
 https://www.hunglun.com/knowledge/gemini-basics
 
-知識庫 ／ Gemini 怎麼用：第一次提問
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini 怎麼用：第一次提問
 Gemini 怎麼用？從打開到第一次提問
 沒用過生成式 AI 也沒關係，從打開網頁到看懂第一個回答，五分鐘走完。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4125,7 +4125,7 @@ Gemini 系列第 1／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-teaching-prompts
 
-知識庫 ／ 老師怎麼用 Gemini 備課
+知識庫 ／ Gemini 教育版與 Notebook ／ 老師怎麼用 Gemini 備課
 老師怎麼用 Gemini 備課？提示詞怎麼下
 打「教案」兩個字跟打一整句需求，Gemini 給你的東西差很多。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4186,7 +4186,7 @@ Gemini 系列第 2／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-workspace-integration
 
-知識庫 ／ Gemini 在 Workspace 裡怎麼叫出來
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini 在 Workspace 裡怎麼叫出來
 Gemini 在 Gmail、文件、簡報裡怎麼叫出來
 不用切到另一個分頁複製貼上，Gemini 就在你正在編輯的文件旁邊。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4239,7 +4239,7 @@ Gemini 系列第 3／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-howto
 
-知識庫 ／ Gemini Notebook 怎麼用
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini Notebook 怎麼用
 Gemini Notebook 怎麼用？上傳教材做成有出處的問答
 一般 AI 聊天憑訓練資料回答，Gemini Notebook 只根據你上傳的文件回答，答錯了也查得到是哪裡錯。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4298,7 +4298,7 @@ Gemini 系列第 4／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-series
 
-知識庫 ／ Gemini Notebook 系列
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini Notebook 系列
 Gemini Notebook 系列：10 篇系列文章總覽
 從是什麼、怎麼生成語音摘要與心智圖，到教學情境、方案比較與管理員設定，依序看完就能自己動手用。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4347,7 +4347,7 @@ Gemini 生態系教學系列涵蓋 Gemini 在 Gmail、文件、Classroom 等應�
 
 https://www.hunglun.com/knowledge/gemini-notebook-intro
 
-知識庫 ／ Gemini Notebook 是什麼
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini Notebook 是什麼
 Gemini Notebook 是什麼？教育版開箱與建立第一個筆記本
 同樣打著 Gemini 招牌，這個工具的回答方式跟一般聊天完全不同：只根據你餵給它的文件講話。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4400,11 +4400,11 @@ Gemini Notebook 系列第 1／10 篇・看全部系列
 
 ---
 
-## 講義變 Podcast：Gemini Notebook 的 Audio Overview 與 Video Overview 怎麼用｜鴻綸科技
+## Gemini Notebook 講義變 Podcast：Audio／Video Overview 怎麼用｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-audio-video
 
-知識庫 ／ Audio Overview 與 Video Overview 怎麼用
+知識庫 ／ Gemini 教育版與 Notebook ／ Audio Overview 與 Video Overview 怎麼用
 講義一鍵變 Podcast：Audio Overview 與 Video Overview 怎麼用
 把一份枯燥的講義丟進去，出來的是兩個人邊聊邊講重點的對話，而不是機械朗讀。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4460,7 +4460,7 @@ Gemini Notebook 系列第 2／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-mindmap
 
-知識庫 ／ 心智圖與資訊圖表怎麼用
+知識庫 ／ Gemini 教育版與 Notebook ／ 心智圖與資訊圖表怎麼用
 心智圖與資訊圖表：把複雜教材拆成一張圖
 好幾份文件講的是同一個主題，文字摘要看不出彼此的關聯，這時候該換成圖。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4512,11 +4512,11 @@ Gemini Notebook 系列第 3／10 篇・看全部系列
 
 ---
 
-## 測驗卡、練習卡與學習指南：自動出題怎麼用在課堂評量｜Gemini Notebook｜鴻綸科技
+## Gemini Notebook 自動出題：測驗卡與練習卡怎麼用在評量｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-quiz-cards
 
-知識庫 ／ 測驗卡、練習卡與學習指南怎麼用
+知識庫 ／ Gemini 教育版與 Notebook ／ 測驗卡、練習卡與學習指南怎麼用
 測驗卡、練習卡與學習指南：自動出題怎麼用在課堂評量
 叫一般 AI 出題，題目憑印象生成；叫 Gemini Notebook 出題，題目根據你真正教過的內容。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4572,7 +4572,7 @@ Gemini Notebook 系列第 4／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-teacher-prep
 
-知識庫 ／ 教師備課實戰：跨班級同步教材
+知識庫 ／ Gemini 教育版與 Notebook ／ 教師備課實戰：跨班級同步教材
 教師備課實戰：跨班級同步教材與課堂資料庫
 前四篇講的是單篇文件怎麼用，這篇要講整學期教材怎麼變成一個持續累積的知識庫。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4625,7 +4625,7 @@ Gemini Notebook 系列第 5／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-student-study
 
-知識庫 ／ 學生自主學習：Gemini Notebook 課業助手
+知識庫 ／ Gemini 教育版與 Notebook ／ 學生自主學習：Gemini Notebook 課業助手
 學生自主學習：打造專屬 AI 課業助手
 前五篇都是老師跟管理員的角度，這篇換成學生自己怎麼用。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4677,7 +4677,7 @@ Gemini Notebook 系列第 6／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-plans
 
-知識庫 ／ Gemini Notebook 方案額度比較
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini Notebook 方案額度比較
 免費版、Education Plus、Teaching and Learning 額度差在哪
 付費方案主要買的是額度上限，不是全新的功能。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4731,7 +4731,7 @@ Gemini Notebook 系列第 7／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-admin
 
-知識庫 ／ Gemini Notebook 管理員權限與隱私
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini Notebook 管理員權限與隱私
 管理員視角：Admin Console 權限設定與資料隱私
 班級教材同步不是老師自己打開就生效，這一步要由管理員先授權。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4785,7 +4785,7 @@ Gemini Notebook 系列第 8／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-faq
 
-知識庫 ／ Gemini Notebook 疑難排解
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini Notebook 疑難排解
 常見疑難排解：檔案讀不到、生成卡住、同步失敗
 把校園場景最常撞到的幾種狀況，跟該怎麼查整理成一篇。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4839,7 +4839,7 @@ Gemini Notebook 系列第 9／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-notebook-updates
 
-知識庫 ／ 從 NotebookLM 到 Gemini Notebook
+知識庫 ／ Gemini 教育版與 Notebook ／ 從 NotebookLM 到 Gemini Notebook
 2026 最新異動：從 NotebookLM 到 Gemini Notebook
 系列最後一篇，講清楚改名這件事，實際上換了招牌，沒換裡面的機制。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4892,7 +4892,7 @@ Gemini Notebook 系列第 10／10 篇（完結）・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-classroom-howto
 
-知識庫 ／ Classroom 裡的 Gemini 怎麼用
+知識庫 ／ Gemini 教育版與 Notebook ／ Classroom 裡的 Gemini 怎麼用
 Classroom 裡的 Gemini 怎麼用？
 學生跟老師看到的是兩個完全不同的入口，這篇分開講。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -4943,7 +4943,7 @@ Gemini 系列第 5／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-admin-setup
 
-知識庫 ／ Admin Console 怎麼管控 Gemini
+知識庫 ／ Gemini 教育版與 Notebook ／ Admin Console 怎麼管控 Gemini
 管理員視角：Admin Console 怎麼開通與管控 Gemini
 方案裡有包含 Gemini，不代表使用者畫面上就看得到，開關要一個一個找。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -5001,7 +5001,7 @@ Gemini 系列第 6／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-flow-howto
 
-知識庫 ／ Google Flow 怎麼用
+知識庫 ／ Gemini 教育版與 Notebook ／ Google Flow 怎麼用
 Google Flow（Veo）怎麼用？AI 生成影片片段
 打一段文字描述，或丟一張照片進去，出來的是一段有畫面的動態影片。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -5054,7 +5054,7 @@ Gemini 系列第 8／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-vids-howto
 
-知識庫 ／ Google Vids 怎麼用
+知識庫 ／ Gemini 教育版與 Notebook ／ Google Vids 怎麼用
 Google Vids 怎麼用？AI 生成教學影片入門
 把手邊的簡報丟進去，出來的是一支有旁白、有轉場的教學影片。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -5106,7 +5106,7 @@ Gemini 系列第 7／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-faq-limits
 
-知識庫 ／ Gemini 常見問題與額度整理
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini 常見問題與額度整理
 Gemini 常見問題與額度限制整理
 前八篇陸續提到的額度數字很分散，這篇整理成一份總表跟疑難排解。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -5165,7 +5165,7 @@ Gemini 系列第 9／10 篇・看全部系列
 
 https://www.hunglun.com/knowledge/gemini-student-safety
 
-知識庫 ／ Gemini 資安與學生使用規範
+知識庫 ／ Gemini 教育版與 Notebook ／ Gemini 資安與學生使用規範
 Gemini 資安與學生使用規範怎麼訂？
 系列最後一篇，把前九篇散落提過的帳號界線跟資安注意事項收攏一次。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -5216,7 +5216,7 @@ Gemini 系列第 10／10 篇（完結）・看全部系列
 
 https://www.hunglun.com/knowledge/classroom
 
-知識庫 ／ Google Classroom 完全指南
+知識庫 ／ Google Classroom ／ Google Classroom 完全指南
 Google Classroom 怎麼用？登入、建班、批改教學總覽
 從登入、建立班級到批改作業，依序看完 10 篇就能從新手變成能處理管理設定的人。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5269,7 +5269,7 @@ Google Classroom 要另外付費嗎？
 
 https://www.hunglun.com/knowledge/classroom-basics
 
-知識庫 ／ Google Classroom 是什麼
+知識庫 ／ Google Classroom ／ Google Classroom 是什麼
 Google Classroom 是什麼？新手入門
 Classroom 系列文章第 1／10 篇：先搞懂它是什麼、能做什麼。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5312,7 +5312,7 @@ Google Classroom 要另外付費嗎？
 
 https://www.hunglun.com/knowledge/classroom-guide
 
-知識庫 ／ Classroom 操作教學
+知識庫 ／ Google Classroom ／ Classroom 操作教學
 Google Classroom 教學：建課程到成績單，八個步驟走完一學期
 每一步都附最新介面的實際截圖：建立課程、學生加入、出作業、批改發還、成績單、學期末封存。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5457,7 +5457,7 @@ Canva 串 Google Classroom
 
 https://www.hunglun.com/knowledge/classroom-features
 
-知識庫 ／ Classroom 進階功能
+知識庫 ／ Google Classroom ／ Classroom 進階功能
 Classroom 進階功能：老師實際會用到的五個功能
 Classroom 系列文章第 3／10 篇：熟悉基本操作後，帶班一學期會用到、卻常被忽略的功能。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5515,7 +5515,7 @@ Classroom 系列文章第 3／10 篇：熟悉基本操作後，帶班一學期�
 
 https://www.hunglun.com/knowledge/classroom-troubleshooting
 
-知識庫 ／ Classroom 常見卡關與版本比較
+知識庫 ／ Google Classroom ／ Classroom 常見卡關與版本比較
 Classroom 常見卡關與版本功能比較
 Classroom 系列文章第 4／10 篇：每天會遇到的兩件事，常見卡關，以及哪些功能其實要付費版本才有。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5564,7 +5564,7 @@ Classroom 的成績可以直接當學期成績嗎？
 
 https://www.hunglun.com/knowledge/classroom-admin-setup
 
-知識庫 ／ Classroom 管理員導入前該確認的五件事
+知識庫 ／ Google Classroom ／ Classroom 管理員導入前該確認的五件事
 Classroom 管理員導入前該確認的五件事
 Classroom 系列文章第 5／10 篇：屬於管理員與資訊組長要處理的層級，建議先熟悉前面幾篇的操作再看。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5615,7 +5615,7 @@ Classroom 應該開放給誰建立課程？
 
 https://www.hunglun.com/knowledge/classroom-updates
 
-知識庫 ／ Classroom 最新產品異動判讀
+知識庫 ／ Google Classroom ／ Classroom 最新產品異動判讀
 Classroom 最新產品異動判讀（2026）
 Classroom 系列文章第 6／10 篇：全系列難度最高的一篇，近期幾項產品異動的判讀。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5668,7 +5668,7 @@ Gemini 分頁改版與行動版存取：Classroom 裡的 Gemini 分頁介面預�
 
 https://www.hunglun.com/knowledge/classroom-homepage
 
-知識庫 ／ Classroom 首頁改版說明
+知識庫 ／ Google Classroom ／ Classroom 首頁改版說明
 Google Classroom 首頁改版了：課程去哪了？
 一張圖看懂新版首頁，以及老師、學生、管理員各自看到什麼。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -5795,7 +5795,7 @@ Google 管理主控台設定指南
 
 https://www.hunglun.com/knowledge/gemini-lesson-planning
 
-知識庫 ／ 用 Gemini 備課
+知識庫 ／ Google 與 AI 導入 ／ 用 Gemini 備課
 用 Gemini 備課：教案、簡報實際生成教學
 不是介紹功能清單，是我們自己登入帳號、實際打字生成過一輪的紀錄，包含卡住的地方跟破解法。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -5849,7 +5849,7 @@ Google 簡報生成一份投影片要等多久？
 
 https://www.hunglun.com/knowledge/google-admin
 
-知識庫 ／ Google 管理主控台校園設定指南
+知識庫 ／ Google 與 AI 導入 ／ Google 管理主控台校園設定指南
 Google 管理主控台校園設定指南
 機構單位（OU）與群組怎麼分、帳號怎麼大量匯入、Chrome 的政策藏在哪一頁、裝置怎麼盤點，這是我們到校教育訓練時，管理員最常問的十五件事，依照後台實際的操作路徑整理成一篇。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -6049,7 +6049,7 @@ OU 規劃、政策盤點到管理員教育訓練，可以一起走過一輪。
 
 https://www.hunglun.com/knowledge/ai-slides
 
-知識庫 ／ 用 AI 做簡報
+知識庫 ／ Google 與 AI 導入 ／ 用 AI 做簡報
 用 AI 做簡報：Gemini Canvas 與 Google 簡報 AI 功能在學校怎麼用
 三步驟生成一份簡報並匯出 Google 簡報，加上六項簡報 AI 功能。以及媒體報導通常不會提到的三道門檻：年齡、授權、語言。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -6133,7 +6133,7 @@ Google Workspace Updates：在 Gemini 應用程式中生成簡報
 
 https://www.hunglun.com/knowledge/gemini-certification
 
-知識庫 ／ Gemini 認證教育家完整指南
+知識庫 ／ Google 與 AI 導入 ／ Gemini 認證教育家完整指南
 Gemini 認證教育家（Gemini Certified Educator）完整指南
 2026 年 Google 教育認證從兩種擴大到六種，多出來的四種全是 Gemini 系列。這篇說明考什麼、怎麼準備，以及台灣老師報名前一定要先知道的兩件事。
 這篇適合：想考 Google 或 Gemini 教育家認證的老師，以及規劃校內認證培訓的教學組長。
@@ -6239,7 +6239,7 @@ Google AI 校園研習：由官方認證講師到校授課 →
 
 https://www.hunglun.com/knowledge/website
 
-知識庫 ／ 網站架設攻略
+知識庫 ／ 數位學習軟體與網站 ／ 網站架設攻略
 網站架設新手攻略
 第一次架網站會遇到的名詞與決策：網域與主機差在哪、靜態還是動態、CMS 要不要用、費用怎麼估、上線後維護什麼。
 這篇適合：負責學校或單位網站、官方 LINE 帳號與資料系統的承辦人員。
@@ -6287,7 +6287,7 @@ SEO／AEO／GEO 搜尋引擎最佳化服務
 
 https://www.hunglun.com/knowledge/edtech-software
 
-知識庫 ／ 數位學習軟體怎麼選
+知識庫 ／ 數位學習軟體與網站 ／ 數位學習軟體怎麼選
 數位學習軟體怎麼選：六套常見工具的定位與適用情境
 Edpuzzle、Thinglink、Kami、Padlet、Wordwall、Kahoot! 各解決哪一種教學問題，以及校園授權採購前要先確認的事。
 這篇適合：負責請購與採購的資訊組長、設備組長與事務組承辦人。
@@ -6393,7 +6393,7 @@ Thinglink 是互動式 360 度環景與圖像編輯平台。做出來的教材�
 
 https://www.hunglun.com/knowledge/kami
 
-知識庫 ／ Kami 是什麼
+知識庫 ／ 數位學習軟體與網站 ／ Kami 是什麼
 Kami 是什麼？PDF 線上批改標註平台怎麼用
 老師要在數位教材上圈點批改，最常卡在「格式不支援」跟「沒網路就沒辦法」。這篇說明 Kami 怎麼解決這 2 件事，以及跟 Google Classroom 怎麼串。
 這篇適合：評估數位學習軟體採購的資訊組長、教學組長與領域召集人。
@@ -6452,7 +6452,7 @@ Google Classroom 完全指南 →
 
 https://www.hunglun.com/knowledge/padlet
 
-知識庫 ／ Padlet 校園版是什麼
+知識庫 ／ 數位學習軟體與網站 ／ Padlet 校園版是什麼
 Padlet 校園版是什麼？跟免費版差在哪
 很多老師先用免費版試過 Padlet，導入全校前最想知道的是「校園版多花的錢換到什麼」。這篇把差異一次列清楚。
 這篇適合：評估數位學習軟體採購的資訊組長、教學組長與領域召集人。
@@ -6511,7 +6511,7 @@ Google Classroom 完全指南 →
 
 https://www.hunglun.com/knowledge/wordwall
 
-知識庫 ／ Wordwall 是什麼
+知識庫 ／ 數位學習軟體與網站 ／ Wordwall 是什麼
 Wordwall 是什麼？三種版本怎麼選
 Wordwall 讓老師三步驟把教材變成課堂互動遊戲，但基本版、標準版、專業版差在哪，很多老師試用後不知道該升哪一版。這篇一次說清楚。
 這篇適合：評估數位學習軟體採購的資訊組長、教學組長與領域召集人。
@@ -6573,7 +6573,7 @@ Google Classroom 完全指南 →
 
 https://www.hunglun.com/knowledge/google-storage
 
-知識庫 ／ 學校雲端硬碟空間不足怎麼辦
+知識庫 ／ Google 與 AI 導入 ／ 學校雲端硬碟空間不足怎麼辦
 學校雲端硬碟空間不足怎麼辦
 100TB 共用池怎麼運作、快撞到配額時該先查什麼、清理與升級怎麼選。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -6655,7 +6655,7 @@ OU、群組、裝置盤點怎麼做。
 
 https://www.hunglun.com/knowledge/two-step-verification
 
-知識庫 ／ 兩步驟驗證設定
+知識庫 ／ Google 與 AI 導入 ／ 兩步驟驗證設定
 學校怎麼強制開啟兩步驟驗證：排除學生 OU 與管理員救援
 先允許再強制的推行順序、只對教職員套用的做法，以及不把自己鎖在門外的準備。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -6723,11 +6723,11 @@ https://www.hunglun.com/knowledge/two-step-verification
 
 ---
 
-## Canva for Education 怎麼串 Google Classroom？管理員設定與派作業流程｜鴻綸科技
+## Canva for Education 怎麼串 Google Classroom？設定與派作業｜鴻綸科技
 
 https://www.hunglun.com/knowledge/canva-classroom
 
-知識庫 ／ Canva 與 Classroom 串接
+知識庫 ／ Google Classroom ／ Canva 與 Classroom 串接
 Canva for Education 串 Google Classroom：從帳號信任到派作業
 管理員要開的兩個設定、老師指派作業的步驟、學生自動建立副本並提交回 Classroom。
 這篇適合：使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。
@@ -6802,7 +6802,7 @@ Gemini Canvas 與 Google 簡報的 AI 功能。
 
 https://www.hunglun.com/knowledge/data-inventory
 
-知識庫 ／ 學校導入雲端服務的個資盤點清單
+知識庫 ／ 資安與個資法遵 ／ 學校導入雲端服務的個資盤點清單
 學校導入雲端服務的個資盤點清單
 每導入一套新工具，就多一個資料出口，先盤點，再簽約。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -6887,7 +6887,7 @@ OU、群組、裝置盤點怎麼做。
 
 https://www.hunglun.com/knowledge/student-ai-policy
 
-知識庫 ／ 學生使用 AI 的校內規範怎麼訂
+知識庫 ／ 資安與個資法遵 ／ 學生使用 AI 的校內規範怎麼訂
 學生使用 AI 的校內規範怎麼訂
 與其等出事再處理，不如先訂一份全校一致的規範，範本框架直接套用。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -6971,7 +6971,7 @@ AI 時代的評量設計
 
 https://www.hunglun.com/knowledge/kahoot
 
-知識庫 ／ Kahoot! EDU Standard 是什麼
+知識庫 ／ 數位學習軟體與網站 ／ Kahoot! EDU Standard 是什麼
 Kahoot! EDU Standard 是什麼？校園版怎麼用
 Kahoot! 大家都聽過，但教育版 EDU Standard 實際多了什麼、值不值得升級，這篇說明給評估中的學校參考。
 這篇適合：評估數位學習軟體採購的資訊組長、教學組長與領域召集人。
@@ -7030,7 +7030,7 @@ Google Classroom 完全指南 →
 
 https://www.hunglun.com/knowledge/adobe-education
 
-知識庫 ／ Adobe 教育授權
+知識庫 ／ 數位學習軟體與網站 ／ Adobe 教育授權
 Adobe 教育授權：Creative Cloud 與 Document Cloud 校園方案
 Adobe 大家都熟，但學校該申請教育授權還是商用授權、兩套方案分別用在哪，很多承辦人第一次辦不清楚。這篇說明給要導入的學校參考。
 這篇適合：評估數位學習軟體採購的資訊組長、教學組長與領域召集人。
@@ -7085,7 +7085,7 @@ Document Cloud 提供 PDF 的掃描、編輯、共用與電子簽署功能，是
 
 https://www.hunglun.com/knowledge/photontree
 
-知識庫 ／ Photontree VR 眼鏡是什麼
+知識庫 ／ 數位學習軟體與網站 ／ Photontree VR 眼鏡是什麼
 Photontree VR 眼鏡是什麼？跟一般 VR 裝置差在哪
 學校想導入 VR 教材，常在「一人一台獨立頭戴裝置」跟「手機式 VR 眼鏡」之間猶豫。這篇說明 Photontree 這款台灣製造的手機式 VR 眼鏡規格與適用情境。
 這篇適合：負責學習載具、電腦教室與校園設備規劃的資訊組長與設備組長。
@@ -7144,7 +7144,7 @@ XR 實境互動系統 →
 
 https://www.hunglun.com/knowledge/ocr
 
-知識庫 ／ AI OCR 辨識解析
+知識庫 ／ 數位學習軟體與網站 ／ AI OCR 辨識解析
 OCR 是什麼？AI 文件辨識完整說明
 原理、準確率、資料安全與校園導入評估重點。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
@@ -7218,7 +7218,7 @@ AI 入門百科
 
 https://www.hunglun.com/knowledge/opendata
 
-知識庫 ／ 開放資料應用手冊
+知識庫 ／ 數位學習軟體與網站 ／ 開放資料應用手冊
 政府開放資料應用手冊
 政府的資料庫查得到，但介面難用又慢，第三方應用要解決的正是這個落差。
 這篇適合：負責學校或單位網站、官方 LINE 帳號與資料系統的承辦人員。
@@ -7266,7 +7266,7 @@ https://www.hunglun.com/knowledge/opendata
 
 https://www.hunglun.com/knowledge/line-oa
 
-知識庫 ／ LINE 官方帳號心法
+知識庫 ／ 數位學習軟體與網站 ／ LINE 官方帳號心法
 LINE 官方帳號經營心法
 LINE 官方帳號跟個人 LINE 差在哪、圖文選單怎麼排才好按、自動回覆什麼時候該轉真人，以及最常見的經營失誤。
 這篇適合：負責學校或單位網站、官方 LINE 帳號與資料系統的承辦人員。
@@ -7314,7 +7314,7 @@ LINE 官方帳號適合哪些行業或機構經營？
 
 https://www.hunglun.com/knowledge/membership
 
-知識庫 ／ 會員集點系統筆記
+知識庫 ／ 數位學習軟體與網站 ／ 會員集點系統筆記
 會員集點系統設計筆記
 集點卡一遺失，之前累積的消費紀錄也跟著不見，這是很多店家想換數位系統的起點。
 這篇適合：負責學校或單位網站、官方 LINE 帳號與資料系統的承辦人員。
@@ -7362,7 +7362,7 @@ LINE 官方帳號心法
 
 https://www.hunglun.com/knowledge/privacy
 
-知識庫 ／ 個資法與校園資安須知
+知識庫 ／ 資安與個資法遵 ／ 個資法與校園資安須知
 個資法與校園資安須知
 回條照片傳給不知名的表單工具、共用電腦忘記登出，日常這些小動作最容易踩到個資法。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
@@ -7418,7 +7418,7 @@ Gemini 方案懶人包
 
 https://www.hunglun.com/knowledge/webperf
 
-知識庫 ／ 網站速度最佳化攻略
+知識庫 ／ 數位學習軟體與網站 ／ 網站速度最佳化攻略
 網站速度最佳化攻略
 載入時間每多一秒，跳出率就跟著明顯上升，速度不是錦上添花的細節。
 這篇適合：負責學校或單位網站、官方 LINE 帳號與資料系統的承辦人員。

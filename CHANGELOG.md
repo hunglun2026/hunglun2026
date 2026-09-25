@@ -3,6 +3,22 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.1.2（2026-09-25）
+- 全站頁尾與內文的信箱加上 `<!--email_off-->`：Cloudflare 的信箱混淆會在邊緣把
+  `mailto:` 與信箱文字改成 `/cdn-cgi/l/email-protection#…` 亂碼，不執行 JS 的爬蟲與
+  AI 讀不到聯絡方式。9/20 只修了知識庫的寄信按鈕，這次補齊頁尾、聯絡頁、常見問題等
+  149 頁共 158 處。新增 `sitemap/wrap-email-off.py`（冪等，`--check` 可接進交付前檢查）
+- 知識庫 77 篇文章的麵包屑補上主題層（首頁 › 知識庫 › 主題 › 文章），畫面與
+  BreadcrumbList 結構化資料同步；`knowledge/classroom` 原本沒有 BreadcrumbList，一併補上。
+  新增 `sitemap/add-topic-breadcrumb.py`（主題對應直接讀 `gen-knowledge-topics.py`）
+- `llms.txt` 補齊 sitemap 有但沒收錄的網址（6 個主題頁、3 個在地美食頁、21 個採購子頁），
+  現在 145 個網址全數收錄；修正兩處過期敘述（知識庫「41 篇、四組」「25 篇」改為 76 篇、6 個主題）
+- 5 個過長的標題縮短到約 35 個中文字以內，避免在搜尋結果被截斷
+- 3 個主題頁的 description 補到 80 字以上；修正「資安與個資法遵」主題描述寫了
+  不在該主題裡的「兩步驟驗證」
+- `seo-audit.py` 修正誤報：noindex 頁（密碼保護的內部工具與講義）不列入體檢、
+  `/api/` 路徑不算壞連結、主題頁改檢查 CollectionPage 而不是 Article
+
 ## v1.1.1（2026-09-20）
 - 修正一處簡體字：科技觀察文章裡的「校園场景」改為「校園場景」
 - 新增 `sitemap/check-simplified.py`：用簡繁逐字比對掃描全站有沒有混到簡體字，
