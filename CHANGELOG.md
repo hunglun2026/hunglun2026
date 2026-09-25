@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.2.0（2026-09-25）
+- 新增科技觀察文章「教育部 115 年數位與 AI 指引出爐：學校這學期先做這三件事」
+  （`/insights/moe-ai-guidelines-115`）：整理教育部 115 年 9 月 10 日函公布的三份指引與
+  三份學生手冊、跟 2024 年版的差別、與《中小學使用生成式人工智慧注意事項》2.1 版的分工，
+  以及學校這學期可以先做的三件事。含 NewsArticle、FAQPage、BreadcrumbList 結構化資料與專屬分享圖
+- 科技觀察列表、sitemap、llms.txt、llms-full.txt、搜尋索引同步收錄
+- 字型子集補 7 個新字（詐、騙、霸、凌、孩、爐、舟），字型 v26 → v27、CSS v55 → v56
+
 ## v1.1.2（2026-09-25）
 - 全站頁尾與內文的信箱加上 `<!--email_off-->`：Cloudflare 的信箱混淆會在邊緣把
   `mailto:` 與信箱文字改成 `/cdn-cgi/l/email-protection#…` 亂碼，不執行 JS 的爬蟲與
