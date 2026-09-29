@@ -41,6 +41,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [小綸出題小幫手](https://lunquiz.pages.dev/)：AI 依課程知識或上傳教材命題，支援單選/複選/填充/簡答，可調整難度與語言。
 - [會員集點系統（客戶委託案例）](https://antia-members.pages.dev/)：店家客製會員集點與後台管理系統，四種角色權限，雲端部署。
 - [伊登森活 Idun Beauty SPA（客戶委託案例）](https://idun10.pages.dev/)：台南東區美容 SPA 官方網站，8 個獨立頁面各自具備完整 SEO/AEO 結構化資料。
+- [喜翻親子感統遊戲空間（客戶委託案例）](https://xifun.tonpair.com/)：台南新營親子遊戲空間官方網站，課程介紹、課堂花絮與近 30 篇家長學堂文章，全站約 40 頁各自具備完整 SEO/AEO 結構化資料。
 
 ## 網站頁面
 - 首頁（連續捲動巡覽全站）：https://www.hunglun.com/
