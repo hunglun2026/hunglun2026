@@ -3,6 +3,30 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.3.0（2026-09-29）
+
+效能最佳化：首屏關鍵路徑從 543.9 KB 降到 309.0 KB（省 43%）。
+
+- **自架字型拆成兩片**，這是全站唯一的效能瓶頸：原本單一 538 KB 的檔掛著 `preload`，
+  佔首屏傳輸量的 96%，還會跟 CSS／JS 搶頻寬（首頁 HTML 壓縮後只有 7.8 KB、CSS 8.2 KB）。
+  改成依「出現在多少頁」拆分：出現在 5% 以上頁面的 1126 個字進 core 片（293 KB，維持 preload），
+  其餘 850 個罕見字進 rest 片（252 KB，只靠 `unicode-range` 宣告，不 preload、不阻擋算繪）。
+  單頁落在核心外的字中位數只有 9 個，所以絕大多數頁面首屏只需要 core 片
+- 新增 `assets/fonts.css`：只含兩條 `@font-face`，給 `tools/` 底下自成一套版型的
+  獨立工具頁引用，它們不能套主站 `style.css` 但一樣該吃自架字型。由 `build-font.py`
+  與 `style.css` 一起產生，`unicode-range` 不會兩邊分岔
+- 4 個內部工具頁（ceu、flex-deploy、兩份部署手冊）移除 Google Fonts 外連，改用自架字型；
+  JetBrains Mono 一併移除，退回系統等寬字（Cascadia Mono／Consolas）
+- 修正 `font-weight: 800/900`（7 處）：字重軸只裁到 200–700，瀏覽器本來就把它們夾成 700，
+  改成 700 只是讓程式碼說實話，畫面沒有任何變化
+- `check-structure.py` 新增 `STANDALONE` 豁免：獨立版型的工具頁不再被要求套主站
+  header／footer／skip-link（那 24 條是永遠不會修的假警報），但字型檢查照常適用。
+  必修項目從 36 條降到 0
+- `build-font.py --check` 加驗「`style.css` 的 `unicode-range` 與 rest 字型檔一致」：
+  字型重建了但 CSS 沒跟著改的話，罕見字會被送去抓一個沒有那個字的檔，
+  畫面上靜靜退回系統字型，肉眼幾乎看不出來
+- `bump-asset-version.py` 補上 landing／tour／effects 三支 CSS 的版號目標
+
 ## v1.2.0（2026-09-25）
 - 新增科技觀察文章「教育部 115 年數位與 AI 指引出爐：學校這學期先做這三件事」
   （`/insights/moe-ai-guidelines-115`）：整理教育部 115 年 9 月 10 日函公布的三份指引與

@@ -26,6 +26,8 @@
 # 換版號等於換網址，因此可以安全地開一年 immutable
 /assets/style.css
   Cache-Control: public, max-age=31536000, immutable
+/assets/fonts.css
+  Cache-Control: public, max-age=31536000, immutable
 /assets/landing.css
   Cache-Control: public, max-age=31536000, immutable
 /assets/tour.css

@@ -20,7 +20,7 @@ to{filter: hue-rotate(35deg)}
 .demo-tilt-wrap:hover .demo-tilt-card::before{opacity: 1}
 .demo-particles canvas{position: absolute;inset: 0;width: 100%;height: 100%}
 .demo-particles span{position: relative;z-index: 1;font-family: var(--mono);font-size: 0.85rem;letter-spacing: 0.15em;color: var(--muted)}
-.demo-gradient-text{font-size: 2rem;font-weight: 900;background: linear-gradient(90deg,#4285f4,#ea4335,#fbbc05,#34a853,#4285f4);background-size: 300% auto;-webkit-background-clip: text;background-clip: text;color: transparent;animation: gradient-shift 2.4s linear infinite}
+.demo-gradient-text{font-size: 2rem;font-weight: 700;background: linear-gradient(90deg,#4285f4,#ea4335,#fbbc05,#34a853,#4285f4);background-size: 300% auto;-webkit-background-clip: text;background-clip: text;color: transparent;animation: gradient-shift 2.4s linear infinite}
 .demo-scan{background: linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size: 24px 24px}
 .demo-scan-icon{font-size: 2.4rem}
 .demo-scan-icon svg{width: 40px;height: 40px;color: var(--accent);stroke-width: 1.5;animation: scan-icon-pulse 1.6s ease-in-out infinite}
