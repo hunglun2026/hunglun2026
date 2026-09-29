@@ -15,6 +15,11 @@
 export const MASTER_PASSWORD = 'hung5407';
 
 export const GO_SESSIONS = {
+  '0930': {
+    label: '吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）',
+    password: '726742',
+    url: 'https://docs.google.com/document/d/1RekJUwwgn6E5vblz7RE22JdU2Zq_LMmXDug2Y9d5p2I/edit?usp=drive_link',
+  },
   '0916': {
     label: '吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）',
     password: '268655',
