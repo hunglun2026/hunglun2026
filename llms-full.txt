@@ -669,7 +669,7 @@ https://www.hunglun.com/tools/training
 歷次研習講義
 現場講課用的是短連結，方便直接唸給學員：新的在最上面。
 2026/09/30
-吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）
+吳鳳科技大學 AI 研習
 hunglun.com/go/0930
 2026/09/16
 吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）
