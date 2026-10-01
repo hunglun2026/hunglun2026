@@ -102,3 +102,7 @@ body.landing{overflow-x: hidden}
 @media (prefers-reduced-motion: reduce){.l-svc-cat > summary::after{transition: none}
 }
 .l-cat-n{font-size:.75rem}
+html.lenis,html.lenis body{height: auto}
+html.lenis{scroll-behavior: auto}
+.lenis.lenis-stopped{overflow: clip}
+.lenis.lenis-smooth iframe{pointer-events: none}
