@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.4.0（2026-10-01）
+
+- 新增科技觀察文章「Gemini 4 Argon 發表：先給網路防禦者，學校現在先看看就好」
+  （`/insights/gemini-4-argon`）：整理 Google 9 月 30 日公告的規格、評測、價格與開放順序，
+  判讀重點是目前只開給 Fairwind 計畫的網路防禦者，教育版完全沒有時程。含 NewsArticle／FAQPage／BreadcrumbList
+- 科技觀察列表、sitemap、llms.txt、llms-full.txt、搜尋索引同步，新增專屬 og 圖
+- 字型子集補「稅」，字型 v32、CSS v59
+
 ## v1.3.0（2026-09-29）
 
 效能最佳化：首屏關鍵路徑從 543.9 KB 降到 309.0 KB（省 43%）。
