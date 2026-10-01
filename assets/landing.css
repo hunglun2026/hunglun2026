@@ -106,3 +106,7 @@ html.lenis,html.lenis body{height: auto}
 html.lenis{scroll-behavior: auto}
 .lenis.lenis-stopped{overflow: clip}
 .lenis.lenis-smooth iframe{pointer-events: none}
+.tour-zoom-panel .ai-note{position: absolute;left: 50%;bottom: 10px;transform: translateX(-50%);z-index: 2;font-size: 12px;line-height: 1.4;color: rgba(255,255,255,0.85);text-shadow: 0 1px 4px rgba(0,0,0,0.6);white-space: nowrap;pointer-events: none}
+@media (max-width: 860px){.tour-zoom-panel .ai-note{left: 20px;transform: none;bottom: 6px}
+.tour-zoom-text{bottom: 30px}
+}
