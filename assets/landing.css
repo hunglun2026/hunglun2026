@@ -101,3 +101,4 @@ body.landing{overflow-x: hidden}
 }
 @media (prefers-reduced-motion: reduce){.l-svc-cat > summary::after{transition: none}
 }
+.l-cat-n{font-size:.75rem}
