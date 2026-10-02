@@ -3,6 +3,19 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.7.2（2026-10-02）
+
+內部工具「ChromeOS Flex 遠端部署」新增 Intune 大量部署手冊與 Intune 安裝腳本，並修正查核出的錯誤。
+
+- **新頁 `/tools/flex-deploy-intune`**（noindex，與 flex-deploy 共用密碼，`functions/tools/_middleware.js` 加入路徑、
+  `check-structure.py` 列為獨立版型）：以 4000 台 Surface Go 為例，盤點、退出 S 模式、Google 端準備、ONC 先測、
+  Intune 每個欄位怎麼填、結束代碼對照、試點與分批、用序號對帳、失敗機處理與已知風險
+- **工具包**：加入 `intune-install.ps1`（檢查、先模擬再正式、用結束代碼讓 Intune 後台看得出每台結果，記錄留在 ProgramData）
+- **查核修正**（Google／Microsoft 官方原文逐字核對，另經 Gemini 與 ChatGPT 交叉審稿）：清 TPM 改成在 Windows 用 tpm.msc，
+  BitLocker 開著時不可從韌體清（官方警告會讓 Windows 開不了機）；Intune 管理延伸模組不支援 S 模式；
+  Intune 最慢每 8 小時檢查；安裝命令改用 Sysnative 路徑（直接寫 powershell.exe 會跑 32 位元）
+- 字型子集補「叭喇喚眠睡闔」，字型 v48、CSS v67、fonts.css v31
+
 ## v1.7.1（2026-10-02）
 
 內部工具「ChromeOS Flex 遠端部署」：一鍵轉換檔加入「只測試」模式，說明同步更新。
