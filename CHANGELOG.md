@@ -3,6 +3,18 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.6.2（2026-10-02）
+
+依 Search Console 近三個月數據改善點閱率，並讓全站日期訊號一致。
+
+- **Classroom 指南**：標題與描述開頭直接給登入網址 classroom.google.com，頁首加登入網址說明，
+  常見問題補「登入網址是什麼、登不進去怎麼辦」。起因：classroom 相關查詢近三個月約 30 萬次曝光、排第 8 到 9 名，點閱率幾乎 0
+- **AI 著作權**：新增「學生使用 AI 時，哪個行為沒有著作權」四個情境的考題解析（表格＋常見問題）。
+  這題原文被搜尋 766 次、排第 2 到 6 名，但頁面原本沒回答
+- **Google Flow、Vids、Gemini Notebook、Wordwall、Padlet**：描述開頭補官方網址（多為想找入口的導航型搜尋）
+- **日期一致**：139 處 JSON-LD `dateModified` 與 sitemap `lastmod` 對齊（有畫面「最後更新」日期的以它為準，
+  其餘取兩者較新），首頁改 2026-10-01。新工具 `sitemap/sync-dates.py`（`--check` 不一致離場碼 1）
+
 ## v1.6.1（2026-10-01）
 
 首頁巡覽人物照改用 AI 示意圖。
