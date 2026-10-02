@@ -11,13 +11,13 @@
   <url><loc>https://www.hunglun.com/software</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.hunglun.com/events</loc><lastmod>2026-09-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/faq</loc><lastmod>2026-08-31</lastmod><priority>0.7</priority></url>
-<url><loc>https://www.hunglun.com/knowledge</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/google-ai</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/gemini</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/web</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/classroom</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/hardware</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/compliance</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.hunglun.com/knowledge</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/google-ai</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/gemini</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/web</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/classroom</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/hardware</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/compliance</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/insights</loc><lastmod>2026-10-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/insights/google-pics</loc><lastmod>2026-09-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/knowledge/ai-assessment-design</loc><lastmod>2026-09-03</lastmod><priority>0.7</priority></url>
@@ -25,6 +25,11 @@
   <url><loc>https://www.hunglun.com/knowledge/admin-automation</loc><lastmod>2026-09-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/knowledge/ai-forms-survey</loc><lastmod>2026-09-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/knowledge/ai-copyright</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/google-ai-pro-for-education</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/google-ai-pro-for-education-cost</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/google-ai-pro-vs-workspace</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/school-ai-procurement</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/school-ai-training-plan</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/knowledge/south-taiwan-digital-transformation</loc><lastmod>2026-09-03</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.hunglun.com/insights/classroom-rubric-generation</loc><lastmod>2026-09-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/insights/classroom-context-aware-access</loc><lastmod>2026-09-01</lastmod><priority>0.7</priority></url>
@@ -109,7 +114,7 @@
   <url><loc>https://www.hunglun.com/knowledge/membership</loc><lastmod>2026-09-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.hunglun.com/knowledge/privacy</loc><lastmod>2026-09-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.hunglun.com/knowledge/webperf</loc><lastmod>2026-09-12</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.hunglun.com/services/google-ai-pro</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/services/google-ai-pro</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/services/ai-pro-quote</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.hunglun.com/services/enterprise-ai</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/services/google-workspace</loc><lastmod>2026-09-14</lastmod><priority>0.7</priority></url>

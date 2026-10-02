@@ -3,6 +3,18 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.7.0（2026-10-02）
+
+新增 5 篇「學校導入 Google AI Pro for Education」決策路徑文章（與 ChatGPT 討論 5 輪定題、審稿）。
+
+- **新文章**：`/knowledge/google-ai-pro-for-education`（是什麼）、`google-ai-pro-vs-workspace`（與 Workspace 版本差在哪，含 Standard）、
+  `google-ai-pro-for-education-cost`（年約、月繳與折扣條件，不列單價）、`school-ai-procurement`（共同供應契約、詢價 10 問、資安與驗收）、
+  `school-ai-training-plan`（內容、分場、追蹤，附 2026 實際場次）。每篇有問句小標、比較表、FAQPage、資料來源與查證日期框（Article 帶 citation）
+- 事實只用 Google 官方頁面（2026-10-02 查證：AI Pro 須先有 Fundamentals／Standard／Plus、只能指派給 18 歲以上使用者、Plus 年約 50 到 999 授權 25% 折扣）與站上已公開的導入經驗
+- **既有頁連進新文章**：AI Pro 服務頁、報價頁、Gemini 教育版、Workspace 版本比較、設備採購指南、研習規劃、校園研習服務。服務頁「學生可以用嗎」改成明確寫出 18 歲以上規則
+- **知識庫列表**：ItemList 依列表實際 81 項重建（原本只列 48 項），篇數敘述全部統一為 81
+- **修 `sync-dates.py`**：第一版會連 ItemList 裡各篇文章的 dateModified 一起改寫，v1.6.2 因此把科技觀察列表 8 篇日期改成同一天，已還原並排除 itemListElement
+
 ## v1.6.4（2026-10-02）
 
 內部工具「ChromeOS Flex 遠端部署」說明改成圖解版，工具包加入一鍵轉換檔。
