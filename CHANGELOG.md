@@ -3,6 +3,22 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.6.3（2026-10-02）
+
+內部工具「ChromeOS Flex 遠端部署」說明改版，順手修好字型建置的兩個舊問題。
+
+- **`/tools/flex-deploy` 換成新版完整使用說明**（22 章）：新增「沒有 Intune、沒有 CEU」的四種組合、
+  部署前預檢、UEFI 轉換、S 模式、五條送貨路線（PsExec／Tailscale／Action1／自助／Intune）、
+  轉完才要註冊 CEU 的三種補救做法。頁面改由 intune-flex-deploy 專案的 `build_site_page.py`
+  從 `完整使用說明.html` 產生，不再手改
+- **下架舊的路線 A／B 部署手冊**（html＋docx）與 `tools/build_docx.py`，內容已併入新說明
+- **工具包 zip 更新**：含預檢腳本 `precheck.ps1`、「不註冊（沒買 CEU）」模式、正式部署確認改用自製對話框
+- 字型子集補 4 個新字（抹、趕、韌、顛），字型 v36 → v44、CSS v64 → v65、fonts.css v28 → v29
+- 修 `build-font.py`：unicode-range 改照產出檔實際字元寫。子集工具會順帶多留字元
+  （這次是第 29 片多了全形 ］），照要求寫的話 `--check` 永遠對不上
+- 修 `bump-asset-version.py`：納入 `assets/fonts.css`（內部的 woff2 版號）與工具頁的 `fonts.css?v=N`。
+  之前漏掉，工具頁 preload 的字型版號跟 fonts.css 裡的分岔（v36 對 v35），同一個字型會抓兩次
+
 ## v1.6.2（2026-10-02）
 
 依 Search Console 近三個月數據改善點閱率，並讓全站日期訊號一致。

@@ -2,1169 +2,863 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flex 遠端部署說明</title>
 <meta name="robots" content="noindex, nofollow">
-<title>ChromeOS Flex 部署手冊</title>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=36" crossorigin>
-<link rel="stylesheet" href="/assets/fonts.css?v=28">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=44" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=29">
 <style>
-  /* 色票／字體直接對齊 hunglun.com 主站（assets/style.css 的 :root），
-     這是內部工具頁但同一家公司要同一套識別，不能自己另外長一套風格。
-     固定亮色，不跟系統深色模式走——主站本身也只靠使用者手動切換 data-theme，不看系統設定。 */
   :root {
-    --ground: #FDFDFC;
-    --surface: #FFFFFF;
-    --surface-sunk: #F7F7F5;
-    --ink: #1A1A1A;
-    --ink-soft: #5C5C5C;
-    --ink-faint: #70706C;
-    --line: rgba(0, 0, 0, .09);
-    --line-strong: rgba(0, 0, 0, .18);
-    --accent: #1E3A5F;
-    --accent-soft: #E8EDF3;
-    --safe: #0F6B45;
-    --safe-soft: #E3F2EA;
-    --danger: #A32017;
-    --danger-soft: #FBE9E7;
-    --warn: #8A5A00;
-    --warn-soft: #FDF2DC;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 8px 24px rgba(0, 0, 0, .04);
-
-    --serif: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, "Segoe UI", sans-serif;
+    /* 主站 hunglun.com 色票（assets/style.css 的 :root），固定亮色 */
+    --ground: #FDFDFC; --surface: #FFFFFF; --sunk: #F7F7F5;
+    --ink: #1A1A1A; --ink-soft: #5C5C5C; --ink-faint: #70706C;
+    --line: rgba(0, 0, 0, .09); --accent: #1E3A5F; --accent-soft: #E8EDF3;
+    --safe: #0F6B45; --safe-soft: #E3F2EA;
+    --danger: #A32017; --danger-soft: #FBE9E7;
+    --warn: #8A5A00; --warn-soft: #FDF2DC;
+    --code-bg: #1B2430; --code-ink: #E6EDF5;
     --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, "Segoe UI", sans-serif;
     --mono: "Cascadia Mono", Consolas, ui-monospace, monospace;
   }
-
   * { box-sizing: border-box; }
-
-  body {
-    background: var(--ground);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* Google 四色帶：這個工具與公司身分都在 Google 生態裡，用一次當識別，不重複出現 */
-  .brandbar {
-    height: 5px;
-    background: linear-gradient(90deg,
-      #4285F4 0%, #4285F4 25%,
-      #EA4335 25%, #EA4335 50%,
-      #FBBC05 50%, #FBBC05 75%,
-      #34A853 75%, #34A853 100%);
-  }
-
-  .shell {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 24px 96px;
-    display: grid;
-    grid-template-columns: 232px minmax(0, 1fr);
-    gap: 56px;
-    align-items: start;
-  }
-
-  /* ── 頁首 ── */
-  .masthead {
-    grid-column: 1 / -1;
-    padding: 56px 0 36px;
-    border-bottom: 1px solid var(--line);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  .masthead .lede { max-width: 60ch; }
-  .eyebrow {
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 14px;
-  }
-  h1 {
-    font-family: var(--serif);
-    font-weight: 700;
-    font-size: clamp(30px, 4.4vw, 46px);
-    line-height: 1.2;
-    letter-spacing: -.01em;
-    margin: 0 0 14px;
-    text-wrap: balance;
-  }
-  .masthead p {
-    margin: 0;
-    color: var(--ink-soft);
-    font-size: 17px;
-    max-width: 52ch;
-  }
-  .logo-link {
-    display: inline-block;
-    padding: 12px 16px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    transition: border-color .18s ease, transform .18s ease;
-  }
-  .logo-link:hover, .logo-link:focus-visible { border-color: var(--accent); transform: translateY(-1px); }
-  .logo-link img { display: block; width: 220px; max-width: 46vw; height: auto; aspect-ratio: 907 / 180; object-fit: contain; }
-
-  /* ── 側欄目錄 ── */
-  nav.toc {
-    position: sticky;
-    top: 28px;
-    font-size: 14.5px;
-    padding-top: 44px;
-  }
-  nav.toc h2 {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin: 0 0 14px;
-    font-weight: 600;
-  }
-  nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
-  nav.toc a {
-    display: block;
-    padding: 6px 12px;
-    color: var(--ink-soft);
-    text-decoration: none;
-    border-left: 2px solid var(--line);
-    line-height: 1.45;
-  }
-  nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); }
-
-  main { padding-top: 44px; min-width: 0; }
-
-  section { margin: 0 0 68px; scroll-margin-top: 24px; }
-  section > p, section > ul, section > ol { max-width: 68ch; }
-
-  h2 {
-    font-family: var(--serif);
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 0 0 8px;
-    text-wrap: balance;
-  }
-  .sec-note {
-    color: var(--ink-faint);
-    font-size: 15px;
-    margin: 0 0 26px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--line);
-    max-width: 68ch;
-  }
-  h3 {
-    font-family: var(--serif);
-    font-size: 19px;
-    font-weight: 700;
-    margin: 34px 0 10px;
-  }
-
-  p { margin: 0 0 16px; }
-  ul, ol { margin: 0 0 16px; padding-left: 22px; }
-  li { margin-bottom: 7px; }
-  li::marker { color: var(--ink-faint); }
-
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans);
+         font-size: 16px; line-height: 1.8; }
+  .layout { display: grid; grid-template-columns: 270px minmax(0, 1fr); max-width: 1200px; margin: 0 auto; }
+  nav.toc { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 28px 18px 40px;
+            border-right: 1px solid var(--line); font-size: 14px; }
+  nav.toc .brand { font-weight: 700; font-size: 15px; margin-bottom: 14px; }
+  nav.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: c; }
+  nav.toc li { margin: 2px 0; }
+  nav.toc a { color: var(--ink-soft); text-decoration: none; display: block; padding: 3px 8px; border-radius: 6px; }
+  nav.toc a:hover { background: var(--sunk); color: var(--ink); }
+  nav.toc .part { margin-top: 14px; font-size: 12px; color: var(--ink-faint); letter-spacing: .08em; padding-left: 8px; }
+  main { padding: 36px 44px 120px; min-width: 0; }
+  header.hero { margin-bottom: 36px; }
+  header.hero h1 { font-size: 30px; line-height: 1.35; margin: 0 0 10px; }
+  header.hero p { color: var(--ink-soft); margin: 0; }
+  .meta { font-size: 13px; color: var(--ink-faint); margin-top: 10px; }
+  section { background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+            padding: 28px 32px; margin-bottom: 22px; scroll-margin-top: 16px; }
+  h2 { font-size: 22px; margin: 0 0 6px; line-height: 1.4; }
+  h2 .no { color: var(--accent); margin-right: 8px; font-family: var(--mono); font-size: 18px; }
+  .lead { color: var(--ink-soft); margin: 0 0 18px; }
+  h3 { font-size: 17px; margin: 26px 0 8px; }
+  h4 { font-size: 15px; margin: 18px 0 6px; color: var(--ink-soft); }
+  p { margin: 8px 0; }
   a { color: var(--accent); }
-  strong { font-weight: 700; }
-
-  code {
-    font-family: var(--mono);
-    font-size: .875em;
-    background: var(--surface-sunk);
-    border: 1px solid var(--line);
-    border-radius: 5px;
-    padding: .12em .42em;
-    word-break: break-word;
+  ul, ol { padding-left: 1.4em; margin: 8px 0; }
+  li { margin: 3px 0; }
+  code { font-family: var(--mono); font-size: .88em; background: var(--sunk); padding: 1px 6px; border-radius: 5px;
+         overflow-wrap: anywhere; }
+  .code { position: relative; margin: 10px 0 14px; }
+  .code pre { background: var(--code-bg); color: var(--code-ink); padding: 14px 16px; border-radius: 10px;
+              overflow-x: auto; font-family: var(--mono); font-size: 13.5px; line-height: 1.65; margin: 0; }
+  .code .lbl { font-size: 12px; color: var(--ink-faint); margin-bottom: 4px; }
+  .code button { position: absolute; right: 8px; bottom: 8px; font: 12px var(--sans); background: #2C3A4D; color: #E6EDF5;
+                 border: 0; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+  .code button:hover { background: #3B4D66; }
+  .tbl { overflow-x: auto; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 520px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--sunk); font-weight: 700; }
+  .box { border-radius: 10px; padding: 12px 16px; margin: 14px 0; border: 1px solid; }
+  .box .t { font-weight: 700; margin-bottom: 2px; }
+  .box.info { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 25%, transparent); }
+  .box.safe { background: var(--safe-soft); border-color: color-mix(in srgb, var(--safe) 30%, transparent); }
+  .box.safe .t { color: var(--safe); }
+  .box.danger { background: var(--danger-soft); border-color: color-mix(in srgb, var(--danger) 30%, transparent); }
+  .box.danger .t { color: var(--danger); }
+  .box.warn { background: var(--warn-soft); border-color: color-mix(in srgb, var(--warn) 30%, transparent); }
+  .box.warn .t { color: var(--warn); }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps > li { counter-increment: s; position: relative; padding: 2px 0 10px 44px; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 28px; height: 28px;
+                        border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px;
+                        display: flex; align-items: center; justify-content: center; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0; }
+  .flow div { background: var(--sunk); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+  .flow div b { display: block; color: var(--accent); font-size: 13px; }
+  .tag { display: inline-block; font-size: 12px; padding: 0 8px; border-radius: 99px; font-weight: 700; vertical-align: 2px; }
+  .tag.ok { background: var(--safe-soft); color: var(--safe); }
+  .tag.no { background: var(--danger-soft); color: var(--danger); }
+  .tag.mid { background: var(--warn-soft); color: var(--warn); }
+  .tag.untested { background: var(--sunk); color: var(--ink-soft); border: 1px dashed var(--ink-faint); }
+  dl.terms dt { font-weight: 700; margin-top: 12px; }
+  dl.terms dd { margin: 2px 0 0 0; color: var(--ink-soft); }
+  .check li { list-style: none; position: relative; padding-left: 4px; }
+  .check { padding-left: 1.4em; }
+  .check li::before { content: ""; position: absolute; left: -1.3em; top: .5em; width: .8em; height: .8em;
+                       border: 1.5px solid var(--ink-faint); border-radius: 3px; }
+  .themebtn { position: fixed; right: 16px; bottom: 16px; z-index: 5; background: var(--surface); color: var(--ink);
+              border: 1px solid var(--line); border-radius: 99px; padding: 6px 14px; font: 13px var(--sans); cursor: pointer; }
+  .tocbtn { display: none; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.toc { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 16px;
+              display: none; }
+    nav.toc.open { display: block; }
+    .tocbtn { display: block; margin: 12px 16px 0; background: var(--surface); color: var(--ink); border: 1px solid var(--line);
+              border-radius: 8px; padding: 8px 12px; font: 14px var(--sans); width: calc(100% - 32px); text-align: left; }
+    main { padding: 18px 16px 100px; }
+    section { padding: 20px 16px; }
+    header.hero h1 { font-size: 24px; }
   }
-
-  pre {
-    font-family: var(--mono);
-    font-size: 13.5px;
-    line-height: 1.65;
-    background: var(--surface-sunk);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 16px 18px;
-    overflow-x: auto;
-    margin: 0 0 18px;
-  }
-  pre code { background: none; border: 0; padding: 0; font-size: inherit; }
-
-  /* ── 卡片 ── */
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 22px 24px;
-    box-shadow: var(--shadow);
-    margin: 0 0 18px;
-  }
-  .card > :last-child { margin-bottom: 0; }
-  .card h3 { margin-top: 0; }
-
-  /* ── 選裝置卡片：整篇的入口，兩條路線各一張，商業提案式的排版 ── */
-  .route-picker {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    margin: 0 0 18px;
-  }
-  @media (max-width: 640px) { .route-picker { grid-template-columns: minmax(0, 1fr); } }
-  .route-card {
-    display: block;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 26px 26px 22px;
-    box-shadow: var(--shadow);
-    color: var(--ink);
-    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
-  }
-  .route-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,.06), 0 16px 32px rgba(0,0,0,.08);
-  }
-  .route-card-eyebrow {
-    display: inline-block;
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 999px;
-    padding: 4px 11px;
-    margin: 0 0 14px;
-  }
-  .route-card h3 { margin: 0 0 8px; font-size: 21px; }
-  .route-card p { margin: 0 0 18px; color: var(--ink-soft); font-size: 14.5px; }
-  .route-card-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
-  .route-card-doc { font-size: 13.5px; color: var(--ink-faint); text-decoration: none; }
-  .route-card-doc:hover { color: var(--accent); text-decoration: underline; }
-
-  /* 安全狀態條：全篇貫穿的視覺語言，綠＝安全、紅＝不可逆 */
-  .mode {
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 0 0 18px;
-    border: 1px solid;
-    border-left-width: 5px;
-  }
-  .mode > :last-child { margin-bottom: 0; }
-  .mode-title {
-    font-family: var(--serif);
-    font-weight: 700;
-    font-size: 18px;
-    margin: 0 0 6px;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-  }
-  .mode-safe { background: var(--safe-soft); border-color: var(--safe); color: var(--ink); }
-  .mode-safe .mode-title { color: var(--safe); }
-  .mode-danger { background: var(--danger-soft); border-color: var(--danger); color: var(--ink); }
-  .mode-danger .mode-title { color: var(--danger); }
-  .mode-warn { background: var(--warn-soft); border-color: var(--warn); color: var(--ink); }
-  .mode-warn .mode-title { color: var(--warn); }
-  .mode-info { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
-  .mode-info .mode-title { color: var(--accent); }
-
-  .dot { width: 10px; height: 10px; border-radius: 50%; background: currentColor; flex: none; }
-
-  /* ── 編號步驟：只用在真正有順序的地方 ── */
-  ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; max-width: none; }
-  ol.steps > li {
-    counter-increment: s;
-    position: relative;
-    padding: 0 0 26px 52px;
-    margin: 0;
-    border-left: 1px solid var(--line);
-  }
-  ol.steps > li:last-child { border-left-color: transparent; padding-bottom: 0; }
-  ol.steps > li::before {
-    content: counter(s);
-    position: absolute;
-    left: -16px;
-    top: -2px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--surface);
-    border: 1px solid var(--line-strong);
-    color: var(--accent);
-    font-family: var(--mono);
-    font-size: 13px;
-    font-weight: 600;
-    display: grid;
-    place-items: center;
-  }
-  ol.steps h3 { margin: 0 0 6px; font-size: 17.5px; }
-  ol.steps p, ol.steps ul { max-width: 64ch; }
-  ol.steps > li > :last-child { margin-bottom: 0; }
-
-  /* ── 表格 ── */
-  .table-wrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
-  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 520px; }
-  th, td { text-align: left; padding: 13px 18px; border-bottom: 1px solid var(--line); vertical-align: top; }
-  th {
-    font-family: var(--mono);
-    font-size: 11.5px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    font-weight: 600;
-    background: var(--surface-sunk);
-    white-space: nowrap;
-  }
-  tr:last-child td { border-bottom: 0; }
-  td strong { color: var(--ink); }
-
-  /* ── 名詞解釋 ── */
-  dl.glossary { margin: 0; display: grid; gap: 0; }
-  dl.glossary div {
-    display: grid;
-    grid-template-columns: 168px minmax(0, 1fr);
-    gap: 24px;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  dl.glossary div:last-child { border-bottom: 0; }
-  dt { font-family: var(--mono); font-weight: 600; font-size: 14.5px; color: var(--accent); }
-  dd { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
-
-  /* ── 頁尾 ── */
-  footer {
-    grid-column: 1 / -1;
-    margin-top: 20px;
-    padding-top: 30px;
-    border-top: 1px solid var(--line);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px 40px;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--ink-faint);
-    font-size: 14px;
-  }
-  footer a { color: var(--ink-soft); }
-  .byline {
-    font-family: var(--mono);
-    font-size: 12.5px;
-    letter-spacing: .06em;
-    color: var(--ink-faint);
-  }
-
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
-
-  @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; animation: none !important; }
-  }
-
-  @media (max-width: 940px) {
-    .shell { grid-template-columns: minmax(0, 1fr); gap: 0; }
-    nav.toc { position: static; padding: 32px 0 0; }
-    nav.toc ol { flex-direction: row; flex-wrap: wrap; gap: 6px; }
-    nav.toc a { border-left: 0; border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px; }
-    main { padding-top: 36px; }
-    .masthead { padding: 40px 0 28px; }
-    dl.glossary div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
-  }
-
-
-  /* 下載工具包按鈕（官網頁面才有，Artifact 版沒有） */
-  .dl-bar {
-    margin: 18px 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-  }
-  .dl-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    padding: 11px 20px;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 9px;
-    font-weight: 700;
-    font-size: 15px;
-    transition: filter .16s ease, transform .16s ease;
-  }
-  .dl-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .site-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+  .logo-link { display: inline-block; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+  .logo-link img { display: block; width: 200px; max-width: 46vw; height: auto; aspect-ratio: 907 / 180; object-fit: contain; }
+  .dl-bar { margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .dl-btn { display: inline-flex; align-items: center; gap: 9px; padding: 11px 20px; background: var(--accent); color: #fff;
+            text-decoration: none; border-radius: 9px; font-weight: 700; font-size: 15px; }
+  .dl-btn:hover { filter: brightness(1.08); }
   .dl-note { color: var(--ink-faint); font-size: 13.5px; }
+  footer.site { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); }
+  footer.site a { color: var(--ink-soft); }
+  @media print {
+    nav.toc, .themebtn, .tocbtn, .code button { display: none !important; }
+    .layout { display: block; } section { break-inside: avoid-page; border: 0; }
+  }
 </style>
 </head>
 <body>
-<div class="brandbar"></div>
-
-<div class="shell">
-
-  <header class="masthead">
-    <div class="lede">
-      <p class="eyebrow">Hunglun Technology · Deployment Guide</p>
-      <h1>ChromeOS Flex 遠端部署手冊</h1>
-      <p>把一整批 Windows 電腦遠端轉成 ChromeOS Flex 並自動註冊，不用一台一台插隨身碟。這份文件是操作人員的完整說明，從第一次開啟到現場交件都在裡面。</p>
-    
-      <div class="dl-bar">
-        <a class="dl-btn" href="/tools/downloads/Flex部署工具包.zip">
-          &#x2B07; 下載工具包（.zip）
-        </a>
-        <span class="dl-note">解壓後雙擊「開始操作.bat」即可，不用另外裝任何東西</span>
-      </div>
-    </div>
-    <a class="logo-link" href="https://www.hunglun.com/" target="_blank" rel="noopener" aria-label="前往鴻綸科技官網">
-      <img src="/assets/hunglun-logo-company-light.webp?v=5" alt="鴻綸科技 Hunglun Technology">
-    </a>
-  </header>
-
-  <nav class="toc" aria-label="目錄">
-    <h2>目錄</h2>
-    <ol>
-      <li><a href="#pickroute"><strong>先選你的部署方式</strong></a></li>
-      <li><a href="#what">這個工具在做什麼</a></li>
-      <li><a href="#before">開始之前要準備</a></li>
-      <li><a href="#start">三分鐘上手</a></li>
-      <li><a href="#route-intune">路線 A：必須用 Intune</a></li>
-      <li><a href="#route-psexec">路線 B：可以用 PsExec</a></li>
-      <li><a href="#route">兩條路線怎麼判斷的（原理）</a></li>
-      <li><a href="#safety">模擬測試與正式部署</a></li>
-      <li><a href="#onsite">現場完整流程</a></li>
-      <li><a href="#intune">Intune 路線細節</a></li>
-      <li><a href="#psexec">PsExec 路線細節</a></li>
-      <li><a href="#verify">怎麼確認成功</a></li>
-      <li><a href="#trouble">出問題怎麼辦</a></li>
-      <li><a href="#cli">給技術人員：指令列</a></li>
-      <li><a href="#glossary">名詞解釋</a></li>
-    </ol>
-  </nav>
-
-  <main>
-
-    <section id="pickroute">
-      <h2>先選你的部署方式</h2>
-      <p class="sec-note">不是喜好題，是裝置的狀況決定你只能走哪條。不確定的話看每張卡片列的判斷條件。</p>
-      <div class="route-picker">
-        <div class="route-card">
-          <span class="route-card-eyebrow">路線 A</span>
-          <h3>必須用 Intune</h3>
-          <p>符合任一項就算：裝置是 <strong>S 模式</strong>（Surface Go 系列出廠預設就是）、被 <strong>Intune／Entra ID</strong> 管理、你<strong>人到不了現場</strong>、或對方<strong>防火牆擋掉檔案分享</strong>。</p>
-          <div class="route-card-links">
-            <a class="dl-btn" href="/tools/downloads/路線A-Intune部署手冊.html">看完整教學 →</a>
-            <a class="route-card-doc" href="/tools/downloads/路線A-Intune部署手冊.docx">下載 Word 版</a>
-          </div>
-        </div>
-        <div class="route-card">
-          <span class="route-card-eyebrow">路線 B</span>
-          <h3>可以用 PsExec</h3>
-          <p>要<strong>同時符合</strong>：不是 S 模式、傳統網域環境、你人在現場同網段、手上有網域管理員帳密。速度最快，填一填就跑完。</p>
-          <div class="route-card-links">
-            <a class="dl-btn" href="/tools/downloads/路線B-PsExec部署手冊.html">看完整教學 →</a>
-            <a class="route-card-doc" href="/tools/downloads/路線B-PsExec部署手冊.docx">下載 Word 版</a>
-          </div>
-        </div>
-      </div>
-      <p class="sec-note" style="border:0;padding:0;margin:0;">不確定符合哪一條、或想先弄懂背後的判斷邏輯，看<a href="#route">「兩條路線怎麼判斷的」</a>那節，四個問題一路問下去就能自己判斷任何機型。這頁下面也留著兩條路線的完整內容可以直接讀，跟上面兩份文件內容一致，差別只在獨立檔案方便單獨分享給現場人員。</p>
-    </section>
-
-    <section id="what">
-      <h2>這個工具在做什麼</h2>
-      <p class="sec-note">先弄懂原理，後面每個步驟才知道自己在幹嘛。</p>
-
-      <p>Google 官方有一套叫 <strong>FRD</strong>（ChromeOS Flex Remote Deployment）的工具，是一支 Windows 執行檔 <code>agent.exe</code> 加上一個設定檔。把它推送到還在跑 Windows 的電腦上執行，它會自動完成四件事：</p>
-      <ol>
-        <li>清除 TPM、重新分割整顆硬碟</li>
-        <li>安裝 ChromeOS Flex</li>
-        <li>連上你指定的 Wi-Fi</li>
-        <li>用註冊權杖自動加入 Google Admin Console</li>
-      </ol>
-
-      <p>我們這套系統做的事，是把「怎麼把這支程式送到幾十台電腦上跑」自動化，並包成一個不用打指令的操作畫面。</p>
-
-      <div class="mode mode-danger">
-        <p class="mode-title"><span class="dot"></span>這是不可逆的操作</p>
-        <p>執行之後，那台電腦原本的 Windows 與裡面所有資料會被清空，變成 ChromeOS Flex，救不回來。所以整套流程都圍繞著一件事設計：<strong>先用模擬測試確認，再動真的</strong>。</p>
-      </div>
-
-      <h3>適用機型：只做官方認證的型號</h3>
-
-      <div class="mode mode-danger">
-        <p class="mode-title"><span class="dot"></span>未認證的機器不要碰</p>
-        <p>Google 官方明文寫著：「裝置如果未列在認證裝置清單中，就<strong>不適用 Chrome Education 或 Chrome Enterprise 支援服務</strong>。」對學校客戶來說這是大事，他們付錢買了 Chrome Education Upgrade，裝在未認證機器上等於自己放棄支援資格。</p>
-      </div>
-
-      <p>接案前<strong>第一件事</strong>就是拿對方的機型去對 Google 的<a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">通過認證的型號清單</a>。清單上的每個型號有四種狀態，只有第一種可以做：</p>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>狀態</th><th>官方定義</th><th>我們的做法</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>通過認證</strong></td>
-              <td>裝置型號預期可與 ChromeOS Flex 搭配運作</td>
-              <td>可以接。這是唯一建議部署的狀態</td>
-            </tr>
-            <tr>
-              <td><strong>預期會出現輕微問題</strong></td>
-              <td>可能至少可以支援基本功能，但團隊仍在改善相容性</td>
-              <td>先跟客戶說清楚有風險，並實測過再決定</td>
-            </tr>
-            <tr>
-              <td><strong>預期會出現重大問題</strong></td>
-              <td>已知會出現啟動問題等重大問題，目前不建議搭配使用</td>
-              <td>不要做</td>
-            </tr>
-            <tr>
-              <td><strong>取消認證</strong></td>
-              <td>已達支援終止日期，支援服務於指定年度 12 月 31 日結束</td>
-              <td>不要做</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p>未列在清單上的機型，Google 的說法是「如果您可以接受可能發生問題的情況，可以嘗試安裝」，但同時警告「即便未經認證的裝置功能完全正常，還是可能<strong>隨時出現重大問題</strong>」，而且「無法保證 OS 定期更新的穩定性、功能或效能」。</p>
-
-      <p>換句話說，技術上裝得起來，但那是個人自己玩的層級，<strong>不是商用交付該做的事</strong>。我們對外承接一律只做通過認證的型號。</p>
-
-      <p style="font-size:15px;color:var(--ink-faint)">清單更新得很頻繁（官方頁面會標最後更新日期），每次接案都要重新查一次，不要靠記憶或舊資料。</p>
-    </section>
-
-    <section id="before">
-      <h2>開始之前要準備</h2>
-      <p class="sec-note">缺任何一項都做不下去，出發前先對一次。</p>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>要準備的</th><th>哪裡拿</th><th>備註</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>確認機型通過認證</strong></td>
-              <td><a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">Google 官方認證型號清單</a></td>
-              <td>接案第一件事。狀態不是「通過認證」的機型不要做，客戶會失去 Chrome Education 支援資格</td>
-            </tr>
-            <tr>
-              <td><strong>確認是不是 S 模式</strong></td>
-              <td>裝置上：設定 → 系統 → 啟用</td>
-              <td>Surface Go 出廠預設就是 S 模式。是 S 模式的話整條路要換走法，見<a href="#route">「該走哪條路線」</a></td>
-            </tr>
-            <tr>
-              <td><strong>ChromeOS Flex 註冊權杖</strong></td>
-              <td>對方單位的 Google Admin Console</td>
-              <td>路徑：裝置 → Chrome → 註冊權杖 → 註冊 → 選「非 ChromeOS 裝置（採用 ChromeOS Flex）」→ 自動註冊。需要 Chrome 管理員權限，權杖沒有到期日</td>
-            </tr>
-            <tr>
-              <td><strong>Wi-Fi 名稱與密碼</strong></td>
-              <td>現場網管</td>
-              <td>裝置轉完 ChromeOS Flex 之後要靠這組連網才註冊得上</td>
-            </tr>
-            <tr>
-              <td><strong>官方套件（約 1 GB）</strong></td>
-              <td>介面上按「準備套件」自動下載</td>
-              <td>出發前先在公司網路下載好，現場才不用等</td>
-            </tr>
-            <tr>
-              <td><strong>一到兩台測試機</strong></td>
-              <td>現場挑</td>
-              <td>絕對不能跳過。整批下去之前一定要有機器先跑過</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="mode mode-info">
-        <p class="mode-title"><span class="dot"></span>權杖不用等裝置存在，先產生就對了</p>
-        <p>很容易誤會成「裝置要先裝上 CEU 才會有權杖」，順序其實是<strong>反過來</strong>：權杖是綁在「組織單位」上的通用碼，不是綁在某一台裝置上。管理員可以在<strong>任何裝置都還沒出現的情況下</strong>，直接在 Admin Console 對著要用的組織單位按「產生」，馬上拿到一組。</p>
-        <p>真正的前提是<strong>那個帳號的授權池裡要有剩餘的 CEU 名額</strong>（也就是學校真的買夠了），這是採購問題不是裝置問題。裝置實際拿權杖去註冊的那一刻，才會從授權池扣掉一個名額綁給它。</p>
-      </div>
-
-      <div class="mode mode-warn">
-        <p class="mode-title"><span class="dot"></span>帶哪台電腦去很重要</p>
-        <p>那 1 GB 的官方套件放在工具資料夾底下的 <code>tools\</code>，這個資料夾刻意不進版本控制、也不進備份（不然會把公司的程式碼倉庫撐爆）。意思是<strong>它不會自動同步到別台電腦</strong>。請帶已經按過「準備套件」的那台去現場；帶別台的話，現場得用當地網路重抓 1 GB。</p>
-      </div>
-    </section>
-
-    <section id="start">
-      <h2>三分鐘上手</h2>
-      <p class="sec-note">第一次用照這裡做就好，細節在後面章節。</p>
-
-      <ol class="steps">
-        <li>
-          <h3>雙擊「開始操作.bat」</h3>
-          <p>瀏覽器會自動打開操作畫面。這支服務只跑在你自己的電腦上，別人連不進來，關掉黑色視窗就結束。</p>
-        </li>
-        <li>
-          <h3>輸入系統密碼</h3>
-          <p>跟進入這個工具區前輸入的同一組密碼（跟 CEU 綁定系統已分開，不是同一組）。</p>
-        </li>
-        <li>
-          <h3>按右上角「準備套件」</h3>
-          <p>第一次要下載約 1 GB 的官方檔案，記錄區會顯示進度。下載過一次之後就不用再按。</p>
-        </li>
-        <li>
-          <h3>填三個欄位並儲存</h3>
-          <p>註冊權杖、Wi-Fi 名稱、Wi-Fi 密碼。三個沒填完，下面的執行按鈕會是灰的按不下去。</p>
-        </li>
-        <li>
-          <h3>確認是綠色的模擬測試模式</h3>
-          <p>畫面中間那條大橫幅是綠色就對了。這個模式只做檢查，不會動任何硬碟。</p>
-        </li>
-        <li>
-          <h3>選路線並執行</h3>
-          <p>要走 Intune 就按「開始產生安裝包」；要直接遠端部署就切到 PsExec 分頁，填裝置清單後按「開始部署」。</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="route-intune">
-      <h2>路線 A：必須用 Intune</h2>
-      <p class="sec-note">符合任一條件就算，不是選喜好，是裝置的狀況逼你只能走這條。</p>
-
-      <div class="mode mode-warn">
-        <p class="mode-title"><span class="dot"></span>符合任一項，就是這條路線</p>
-        <p>① 裝置是 <strong>S 模式</strong>（Surface Go 系列出廠預設就是）　② 被 <strong>Intune／Entra ID</strong> 管理（員工用公司 Microsoft 帳號登入，不是傳統網域帳號）　③ 裝置分散各地，你<strong>人到不了、也連不進內網</strong>　④ 對方資安政策擋掉 <strong>445 埠</strong>檔案分享</p>
-      </div>
-
-      <ol class="steps">
-        <li>
-          <h3>確認機型通過 Google 認證</h3>
-          <p>對照<a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">Google 官方認證型號清單</a>，精確比對機型名稱與型號。狀態不是「Certified」不要接，客戶會失去 Chrome Education 支援資格。<strong>Surface Go 系列注意：</strong>查證過只有 <strong>Surface Go 2</strong>、<strong>Surface Go 3</strong> 是 Certified（支援到 2028 年），第一代 Surface Go 不在清單上，務必請客戶開「設定 → 系統 → 關於」核對完整機型名稱。</p>
-        </li>
-        <li>
-          <h3>檢查是不是 S 模式</h3>
-          <p>在裝置上開「設定 → 系統 → 啟用」，版本名稱寫著「S 模式」就是（<strong>Surface Go 出廠預設就是</strong>）。S 模式的 Windows 不允許安裝執行 Win32 應用程式，而這個工具的核心程式 <code>agent.exe</code> 正是 Win32 程式，檔案送得過去也跑不動，換 PsExec 也沒用，因為問題不在傳輸方式。</p>
-        </li>
-        <li>
-          <h3>是 S 模式的話，用 Intune 政策整批退出</h3>
-          <p>有 Intune 授權可以整批遠端退出，不用一台一台跑；沒有的話每台自己到 Microsoft Store 手動退出。<strong>這一步是單向的，退出後回不去 S 模式</strong>，但反正接下來整台都要變成 ChromeOS Flex，這點不構成問題。</p>
-        </li>
-        <li>
-          <h3>確認是 Entra ID 環境（PsExec 用不了的原因）</h3>
-          <p>Entra ID 環境的裝置在網路驗證上被當成「工作群組」電腦，沒有傳統網域管理員帳號可用，而 PsExec 正是靠那組帳號連進去的。所以只要是 Entra ID 管理，不管是不是 S 模式，都只能走 Intune。</p>
-        </li>
-        <li>
-          <h3>備妥權杖、Wi-Fi、官方套件</h3>
-          <p>到對方的 Google Admin Console 產生 ChromeOS Flex 註冊權杖，跟現場網管要 Wi-Fi 名稱密碼，出發前先在公司網路用介面「準備套件」按鈕把約 1GB 的官方套件下載好。完整清單見<a href="#before">「開始之前要準備」</a>。</p>
-        </li>
-        <li>
-          <h3>照 Intune 路線細節執行</h3>
-          <p>照<a href="#intune">「Intune 路線細節」</a>把 <code>agent.exe</code> 打包成 Win32 App、指派給目標裝置群組，裝置自己向雲端報到拉下來安裝，不用人在現場。</p>
-        </li>
-        <li>
-          <h3>先跑 1～2 台模擬測試</h3>
-          <p>介面上的 dry_run 模式只檢查不動硬碟，綠色橫幅代表過了。整批下去之前這一步<strong>絕對不能跳過</strong>，詳見<a href="#safety">「模擬測試與正式部署」</a>。</p>
-        </li>
-        <li>
-          <h3>正式部署與現場流程</h3>
-          <p>模擬測試通過後才關掉 dry_run 跑正式的。完整現場動線（到場前、到場後、交件前）見<a href="#onsite">「現場完整流程」</a>。</p>
-        </li>
-        <li>
-          <h3>驗收</h3>
-          <p>照<a href="#verify">「怎麼確認成功」</a>的檢查清單逐台過一遍，都通過才算完工交件。</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="route-psexec">
-      <h2>路線 B：可以用 PsExec</h2>
-      <p class="sec-note">要同時符合下面四個條件才走這條，速度最快，填一填就跑完。</p>
-
-      <div class="mode mode-safe">
-        <p class="mode-title"><span class="dot"></span>四個條件要全部符合</p>
-        <p>① 裝置<strong>不是 S 模式</strong>　② 是<strong>傳統網域環境</strong>，不是 Entra ID Only　③ 你<strong>人在現場</strong>、跟裝置同一個網段連得到　④ 手上有<strong>網域管理員帳密</strong></p>
-        <p style="margin:10px 0 0;">缺一項就要改走<a href="#route-intune">「路線 A：必須用 Intune」</a>，不是機型決定，是裝置的管理狀態跟你能不能連到它決定的。</p>
-      </div>
-
-      <ol class="steps">
-        <li>
-          <h3>確認機型通過 Google 認證</h3>
-          <p>對照<a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">Google 官方認證型號清單</a>，精確比對機型名稱與型號。狀態不是「Certified」不要接，客戶會失去 Chrome Education 支援資格。</p>
-        </li>
-        <li>
-          <h3>確認不是 S 模式</h3>
-          <p>在裝置上開「設定 → 系統 → 啟用」，確認版本名稱<strong>沒有</strong>寫「S 模式」。是 S 模式的話 PsExec 用不了，要改走<a href="#route-intune">路線 A</a>先退出 S 模式。</p>
-        </li>
-        <li>
-          <h3>確認是傳統網域、連得到、有帳密</h3>
-          <p>員工登入用的是傳統公司網域帳號（不是 Microsoft 帳號登入的 Entra ID）；你人在現場、跟這批電腦同一個網段；手上有網域管理員帳密。三項缺一都代表 PsExec 這條路走不下去。</p>
-        </li>
-        <li>
-          <h3>備妥權杖、Wi-Fi、官方套件</h3>
-          <p>到對方的 Google Admin Console 產生 ChromeOS Flex 註冊權杖，跟現場網管要 Wi-Fi 名稱密碼，出發前先在公司網路用介面「準備套件」按鈕把約 1GB 的官方套件下載好。完整清單見<a href="#before">「開始之前要準備」</a>。</p>
-        </li>
-        <li>
-          <h3>照 PsExec 路線細節執行</h3>
-          <p>照<a href="#psexec">「PsExec 路線細節」</a>填裝置清單，介面用網域管理員帳密透過 PsExec 直接連進每一台電腦、推送並執行 <code>agent.exe</code>，按下去立刻跑，不用等 Intune 排程同步。</p>
-        </li>
-        <li>
-          <h3>先跑 1～2 台模擬測試</h3>
-          <p>介面上的 dry_run 模式只檢查不動硬碟，綠色橫幅代表過了。整批下去之前不能跳過，詳見<a href="#safety">「模擬測試與正式部署」</a>。</p>
-        </li>
-        <li>
-          <h3>正式部署與驗收</h3>
-          <p>完整現場動線見<a href="#onsite">「現場完整流程」</a>，跑完照<a href="#verify">「怎麼確認成功」</a>逐台驗收。</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="route">
-      <h2>兩條路線怎麼判斷的（原理）</h2>
-      <p class="sec-note">什麼時候一定要用 Intune、什麼時候不用，照這裡判斷。</p>
-
-      <p>很多人以為這是二選一的偏好題，其實不是。<strong>多數情況根本沒得選</strong>，是裝置的狀況決定了你只能走哪條。照下面四個問題依序問下去就知道了。</p>
-
-      <h3>問題一：機型有沒有通過 Google 認證？</h3>
-      <p>沒有就不做，這案子不該接。詳見<a href="#what">第 1 章</a>。</p>
-
-      <h3>問題二：電腦是不是「S 模式」？</h3>
-      <p>這題最容易被忽略，但它會直接決定成敗。</p>
-
-      <div class="mode mode-danger">
-        <p class="mode-title"><span class="dot"></span>S 模式的電腦，兩條路線都會失敗</p>
-        <p>微軟官方寫得很清楚：「根據預設，Windows S 模式裝置<strong>不允許安裝和執行 Win32 應用程式</strong>。」我們要跑的 <code>agent.exe</code> 就是 Win32 程式。</p>
-        <p>意思是<strong>檔案送得過去，但送過去也跑不動</strong>。這時候換成 PsExec 也沒用，因為問題不在傳輸方式，在那台電腦根本不准執行這種程式。</p>
-      </div>
-
-      <p><strong>Surface Go 出廠預設就是 S 模式</strong>，所以這批機器特別要注意。</p>
-
-      <p><strong>怎麼看：</strong>在那台電腦上開「設定 → 系統 → 啟用」，版本名稱如果寫著「S 模式」就是。</p>
-
-      <p><strong>是 S 模式的話，兩個做法：</strong></p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>做法</th><th>怎麼做</th><th>評價</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>退出 S 模式</strong><br>（建議）</td>
-              <td>用 Intune 政策可以整批遠端退出；沒有 Intune 的話每台自己去 Microsoft Store 退出</td>
-              <td>簡單直接。<strong>但是單向的，退出之後回不去 S 模式</strong>。反正接下來整台都要變成 ChromeOS Flex 了，這點不構成問題</td>
-            </tr>
-            <tr>
-              <td>留在 S 模式，<br>用 Intune 開例外</td>
-              <td>在 Intune 建立「S 模式補充原則」，要用 WDAC 工具做原則、拿去簽章、每個程式還要做目錄檔簽章</td>
-              <td>非常麻煩，為了一次性的轉換工作不值得。除非客戶資安政策硬性要求留在 S 模式</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>問題三：這些電腦是被 Intune（Entra ID）管的嗎？</h3>
-      <!--email_off--><p>白話講就是：員工登入電腦時，用的是公司的 Microsoft 帳號（像 <code>someone@school.edu.tw</code>），而不是傳統的公司網域帳號。</p><!--/email_off-->
-
-      <div class="mode mode-warn">
-        <p class="mode-title"><span class="dot"></span>這種電腦，PsExec 實務上用不了</p>
-        <p>微軟文件說，只加入 Entra ID 的機器在網路驗證上<strong>會被當成「工作群組」電腦</strong>，沒有傳統的網域管理員帳號可以用。而 PsExec 正是靠網域管理員帳號連進去的。</p>
-        <p>所以這種環境只剩 Intune 一條路。這也是 Surface Go 這批機器要用 Intune 的第二個原因。</p>
-      </div>
-
-      <h3>問題四：你的電腦連得到那些機器嗎？</h3>
-      <p>前面三題都過了，才輪到這題。連得到就可以用 PsExec，連不到就走 Intune。</p>
-
-      <h3>結論：一張表看完</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>你的情況</th><th>走哪條</th><th>為什麼</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Surface Go，S 模式，被 Intune 管</strong><br>（這次的案子）</td>
-              <td><strong>Intune</strong></td>
-              <td>S 模式不准跑 exe，要先用 Intune 政策整批退出 S 模式；而且是 Entra ID 環境，PsExec 沒有帳號可用</td>
-            </tr>
-            <tr>
-              <td>電腦已經被 Intune 管著</td>
-              <td><strong>Intune</strong></td>
-              <td>現成的管道，不用另外要帳密。而且多半也是 Entra ID 環境</td>
-            </tr>
-            <tr>
-              <td>電腦分散在不同校區、你人到不了也連不進內網</td>
-              <td><strong>Intune</strong></td>
-              <td>Intune 靠裝置自己向雲端報到，裝置在哪都收得到</td>
-            </tr>
-            <tr>
-              <td>對方資安政策擋掉檔案分享（445 埠）</td>
-              <td><strong>Intune</strong></td>
-              <td>PsExec 那條路直接斷了</td>
-            </tr>
-            <tr>
-              <td>傳統網域環境，你在現場同網段，手上有網域管理員帳密</td>
-              <td><strong>PsExec</strong></td>
-              <td>按下去立刻執行，不用等 Intune 排程</td>
-            </tr>
-            <tr>
-              <td>就幾台，都在你面前</td>
-              <td><strong>PsExec</strong></td>
-              <td>最快。設定填一填就跑完了</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="mode mode-info">
-        <p class="mode-title"><span class="dot"></span>接案時最先該問的一句話</p>
-        <p>「<strong>你們有沒有 Intune 授權？</strong>」Intune 要另外付費，不是每個客戶都有。學校的 Microsoft 365 Education 依方案不同，有的含有的不含。如果對方沒有，而機器又是 S 模式或 Entra ID 環境，那就要先討論怎麼處理，不要到現場才發現卡住。</p>
-      </div>
-
-      <h3>另一組選擇：下載來源</h3>
-      <p>畫面右上角還有一組「Google 官方／公司鏡像」，那組<strong>跟部署方式無關</strong>，只是決定那 1 GB 的官方套件去哪裡抓。</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>選項</th><th>什麼時候用</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Google 官方</strong></td>
-              <td>預設值，平常都用這個。速度最快，永遠是最新版</td>
-            </tr>
-            <tr>
-              <td><strong>公司鏡像</strong></td>
-              <td>要固定用某個特定版本時用。Google 的檔案會滾動更新，萬一新版有問題，公司鏡像留著已知能正常運作的那份。鏡像還沒建立時這個選項是灰的</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>選了公司鏡像但連不上時，系統會直接停下來報錯，<strong>不會偷偷改用官方版本</strong>。因為選鏡像的理由通常就是要那個特定版本，悄悄換成別的版本比直接報錯更糟。</p>
-    </section>
-
-    <section id="safety">
-      <h2>模擬測試與正式部署</h2>
-      <p class="sec-note">這一節是整份文件最重要的部分。</p>
-
-      <div class="mode mode-safe">
-        <p class="mode-title"><span class="dot"></span>綠色：模擬測試模式</p>
-        <p>系統只會做檢查（硬碟夠不夠、TPM 狀態、設定檔對不對），<strong>不會動硬碟、不會安裝任何東西</strong>。可以放心重複跑，這是預設模式。</p>
-      </div>
-
-      <div class="mode mode-danger">
-        <p class="mode-title"><span class="dot"></span>紅色：正式部署模式</p>
-        <p>真的執行轉換。裝置的 Windows 與所有資料會被清空，變成 ChromeOS Flex，<strong>沒有還原的方法</strong>。</p>
-      </div>
-
-      <h3>怎麼切換</h3>
-      <p>按橫幅右邊的「切換到正式部署」，會跳出確認框，必須<strong>手動輸入「確認部署」四個字</strong>才切得過去。這是故意設計的麻煩，防止有人手滑點到。</p>
-
-      <p>走 PsExec 路線時還有第二道：按下「開始部署」會再問一次「確定要對 N 台裝置執行嗎」，N 是你清單上的實際台數。看清楚那個數字再按。</p>
-
-      <h3>正確的順序</h3>
-      <ol class="steps">
-        <li>
-          <h3>綠色模式，一到兩台測試機</h3>
-          <p>確認連得上、設定檔正確、檢查都通過。</p>
-        </li>
-        <li>
-          <h3>紅色模式，同樣那一兩台</h3>
-          <p>真的轉一次，然後去 Admin Console 確認裝置有出現、政策有套用。這步驗的是「整條路走得通」。</p>
-        </li>
-        <li>
-          <h3>紅色模式，全部裝置</h3>
-          <p>前面兩步都乾淨才做這步。</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="onsite">
-      <h2>現場完整流程</h2>
-      <p class="sec-note">到客戶端那天，照這個順序做。</p>
-
-      <div class="mode mode-info">
-        <p class="mode-title"><span class="dot"></span>為什麼不能事先做好安裝包</p>
-        <p>註冊權杖是<strong>包在安裝包裡面</strong>的。權杖要現場跟對方拿，所以最終的安裝包一定得現場拿到權杖之後再產生一次。好消息是這步只要幾秒鐘，前提是套件已經先下載好。</p>
-      </div>
-
-      <ol class="steps">
-        <li>
-          <h3>接案時：先查機型有沒有通過認證</h3>
-          <p>拿對方的機型去對<a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">官方認證清單</a>。狀態不是「通過認證」就不要接，這步沒過後面都不用談。</p>
-        </li>
-        <li>
-          <h3>接案時：確認是不是 S 模式、有沒有 Intune 授權</h3>
-          <p>請對方隨便找一台開「設定 → 系統 → 啟用」看是不是 S 模式，同時問清楚有沒有 Intune 授權。這兩件事決定整條路怎麼走，見<a href="#route">「該走哪條路線」</a>。到現場才發現會很難處理。</p>
-        </li>
-        <li>
-          <h3>出發前：在公司先按一次「準備套件」</h3>
-          <p>把 1 GB 的官方檔案抓下來。設定還沒填完會被擋住是正常的，這步的目的只是下載。</p>
-        </li>
-        <li>
-          <h3>到現場：跟對方索取註冊權杖</h3>
-          <p>請對方的 Google 管理員到 Admin Console 產生，路徑在<a href="#before">「開始之前要準備」</a>那張表裡。</p>
-        </li>
-        <li>
-          <h3>填三個欄位並儲存</h3>
-          <p>註冊權杖、Wi-Fi 名稱、Wi-Fi 密碼。保持綠色的模擬測試模式。</p>
-        </li>
-        <li>
-          <h3>對一兩台測試機跑模擬測試</h3>
-          <p>看記錄區有沒有錯誤訊息。有錯先解決，不要往下走。</p>
-        </li>
-        <li>
-          <h3>切成紅色，同樣那一兩台跑真的</h3>
-          <p>裝置會在兩分鐘內顯示安裝通知並重新開機。等它跑完進入 ChromeOS Flex 設定畫面。</p>
-        </li>
-        <li>
-          <h3>去 Admin Console 確認註冊成功</h3>
-          <p>裝置 → ChromeOS，看新機器有沒有出現在正確的組織單位裡、政策有沒有套用。</p>
-        </li>
-        <li>
-          <h3>全部沒問題，才擴大到所有裝置</h3>
-          <p>Intune 路線就把指派對象改成全部；PsExec 路線就把裝置清單填完整。</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="intune">
-      <h2>Intune 路線細節</h2>
-      <p class="sec-note">產生安裝包之後，要在 Intune 後台做的設定。</p>
-
-      <p>介面按下「開始產生安裝包」後，會在 <code>output\</code> 產出一個約 1 GB 的 <code>.intunewin</code> 檔案，畫面上會出現下載連結。接著到 Intune 後台：</p>
-
-      <ol class="steps">
-        <li>
-          <h3>新增 Win32 應用程式</h3>
-          <p>應用程式 → Windows → 新增 → Win32 應用程式，上傳那個 <code>.intunewin</code>。</p>
-        </li>
-        <li>
-          <h3>安裝命令填 agent.exe</h3>
-          <p>要用系統管理員權限執行。</p>
-        </li>
-        <li>
-          <h3>偵測規則填「agent.log 檔案存在」</h3>
-          <p>這條規則只是為了滿足 Intune 介面的必填要求。裝置轉完 ChromeOS 之後就不再是可偵測的 Windows 軟體狀態了，所以本機偵測沒有實質意義，<strong>真正的成功判斷是回 Admin Console 看</strong>，這也是 Google 官方文件的建議。</p>
-        </li>
-        <li>
-          <h3>指派對象先選測試群組</h3>
-          <p>先指派給那一兩台測試機。確認整條路走得通，再回來改成全部裝置。</p>
-        </li>
-      </ol>
-
-      <div class="mode mode-warn">
-        <p class="mode-title"><span class="dot"></span>Intune 不會立刻執行</p>
-        <p>派送時間由 Intune 的同步排程決定，可能要等一段時間裝置才收到。這是正常的，不是失敗。急著要立刻執行請改走 PsExec 路線。</p>
-      </div>
-    </section>
-
-    <section id="psexec">
-      <h2>PsExec 路線細節</h2>
-      <p class="sec-note">不靠任何管理系統，直接對一份清單動手。</p>
-
-      <h3>裝置清單怎麼填</h3>
-      <p>表格一行一台，填電腦名稱或 IP。<strong>可以直接從 Excel 整欄複製後貼上</strong>，系統會自動展開成多列，跟 CEU 綁定系統的操作方式一樣。</p>
-
-      <h3>帳號密碼</h3>
-      <p>兩個欄位留空的話，會用你目前登入這台電腦的帳號權限去連。前提是那個帳號在所有目標裝置上都有系統管理員權限。不是的話就填一組有權限的網域管理員帳密。</p>
-
-      <h3>同時處理幾台</h3>
-      <p>預設 5 台。數字調大速度快但網路負擔重，一般不用超過 10。</p>
-
-      <h3>系統實際做的事</h3>
-      <p>對清單上每一台裝置，依序做四個動作：連上對方的管理共用資料夾、把整包 FRD 套件複製過去、用 PsExec 遠端執行 <code>agent.exe</code>、斷開連線。任何一步失敗都會記在該台的結果裡，<strong>不會影響其他台繼續跑</strong>。</p>
-
-      <h3>跑完的報告</h3>
-      <p>畫面上會即時顯示成功與失敗台數，全部跑完可以下載 CSV 報告，裡面有每一台的詳細結果，用 Excel 打開就能看。</p>
-
-      <div class="mode mode-warn">
-        <p class="mode-title"><span class="dot"></span>連不上通常是防火牆</p>
-        <p>PsExec 需要對方裝置開放檔案分享（445 埠）與管理共用資料夾。企業防火牆或裝置本機防火牆擋掉的話就會連不上。先拿一台測試確認通得過，再排整批。</p>
-      </div>
-    </section>
-
-    <section id="verify">
-      <h2>怎麼確認成功</h2>
-      <p class="sec-note">「程式跑完沒報錯」不等於「部署成功」。</p>
-
-      <p>Google 官方明確建議：<strong>用 Admin Console 或 Directory API 確認裝置有沒有註冊進來</strong>，不要只看本機記錄。因為裝置轉完之後已經不是 Windows 了，本機那邊能給的資訊很有限。</p>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>要看的地方</th><th>看什麼</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>裝置畫面</strong></td>
-              <td>兩分鐘內出現安裝通知並重開機，重開後進入 ChromeOS Flex 的安裝流程</td>
-            </tr>
-            <tr>
-              <td><strong>Google Admin Console</strong></td>
-              <td>裝置 → ChromeOS，新機器有出現、在正確的組織單位、政策有套用。<strong>這是最終判準</strong></td>
-            </tr>
-            <tr>
-              <td><strong>agent.log</strong></td>
-              <td>失敗時查原因用。模擬測試會留下 <code>InstallSkipped</code> 記錄，代表檢查通過但依設定沒有真的安裝</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="mode mode-info">
-        <p class="mode-title"><span class="dot"></span>關於 agent.log</p>
-        <p>這個記錄檔不是 <code>agent.exe</code> 自己寫的，是系統一併帶上去的記錄器產生的。遠端部署沒有螢幕可看，沒有這個檔案就等於瞎子，所以預設一定會帶。</p>
-      </div>
-    </section>
-
-    <section id="trouble">
-      <h2>出問題怎麼辦</h2>
-      <p class="sec-note">照實際會遇到的狀況排的。</p>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>狀況</th><th>原因與處理</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>執行按鈕是灰的</strong></td>
-              <td>三個設定欄位沒填完。填好按「儲存設定」就會解鎖</td>
-            </tr>
-            <tr>
-              <td><strong>System error 67<br>The network name cannot be found</strong></td>
-              <td>PsExec 找不到那台電腦。確認電腦名稱或 IP 打對、機器開著、跟你在同一個網路</td>
-            </tr>
-            <tr>
-              <td><strong>檔案送過去了，但裝置上什麼都沒發生</strong></td>
-              <td>先確認那台是不是 S 模式（設定 → 系統 → 啟用）。S 模式不准跑 .exe，檔案送到也不會執行，而且不一定會有明顯的錯誤訊息。處理方式見<a href="#route">「該走哪條路線」</a>問題二</td>
-            </tr>
-            <tr>
-              <td><strong>連得到但複製檔案失敗</strong></td>
-              <td>多半是權限或防火牆。確認帳號在對方機器上是系統管理員，以及 445 埠沒被擋</td>
-            </tr>
-            <tr>
-              <td><strong>裝置轉完了但 Admin Console 沒出現</strong></td>
-              <td>兩個可能：註冊權杖填錯，或裝置連不上你設定的 Wi-Fi。先確認 Wi-Fi 名稱與密碼正確</td>
-            </tr>
-            <tr>
-              <td><strong>「公司鏡像」按不下去</strong></td>
-              <td>鏡像還沒建立。用「Google 官方」就好，功能完全一樣</td>
-            </tr>
-            <tr>
-              <td><strong>模擬測試出現 GetSupportedSize 錯誤</strong></td>
-              <td>Windows 的磁碟重組服務設成自動啟動造成的。設定檔裡有一行 <code>disable_defragsvc</code>，取消註解改成 <code>true</code> 即可</td>
-            </tr>
-            <tr>
-              <td><strong>畫面說已經有工作在跑</strong></td>
-              <td>正常的保護機制，同一時間只允許一項工作。等它跑完再按</td>
-            </tr>
-            <tr>
-              <td><strong>下載時 Chrome 跳出「這個檔案不是常見的下載項目」</strong></td>
-              <td>正常現象，不是抓錯或中毒。zip 裡包了沒有數位簽章的 flex-deploy.exe，又是新建檔案沒有下載記錄，Chrome 才會示警。點「下載可疑的檔案」繼續即可</td>
-            </tr>
-            <tr>
-              <td><strong>雙擊沒反應／被防毒攔截</strong></td>
-              <td>flex-deploy.exe 已內建 Python，不用另外安裝。防毒軟體對沒簽章的執行檔偶爾會誤判，選「仍要執行」或加入白名單即可</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="cli">
-      <h2>給技術人員：指令列</h2>
-      <p class="sec-note">網頁介面能做的事，指令列都能做，兩者共用同一套邏輯。</p>
-
-      <p>設定檔在 <code>secrets\config.json</code>，欄位跟介面上的一樣。</p>
-
-      <h3>產生 Intune 安裝包</h3>
-      <pre><code>python intune_flex_packager.py</code></pre>
-
-      <h3>PsExec 大量部署</h3>
-      <pre><code>python psexec_mass_deploy.py --parallel 5</code></pre>
-      <p>裝置清單讀 <code>secrets\devices.txt</code>，一行一台，<code>#</code> 開頭是註解。設定檔裡 <code>dry_run</code> 是 <code>false</code> 時，必須額外加 <code>--yes</code> 才會真的執行，防止手滑。</p>
-
-      <h3>建立公司鏡像</h3>
-      <pre><code>python mirror_to_r2.py --check   # 先驗憑證
-python mirror_to_r2.py           # 實際上傳</code></pre>
-      <p>需要 Cloudflare R2 的憑證，設定方式寫在那支程式開頭。</p>
-    </section>
-
-    <section id="glossary">
-      <h2>名詞解釋</h2>
-      <p class="sec-note">文件裡出現過的技術名詞，一句話版本。</p>
-
-      <dl class="glossary">
-        <div>
-          <dt>FRD</dt>
-          <dd>ChromeOS Flex Remote Deployment，Google 官方的遠端部署套件，核心是 <code>agent.exe</code> 這支程式。</dd>
-        </div>
-        <div>
-          <dt>授權池</dt>
-          <dd>組織帳號裡購買好、還沒指派給裝置的授權額度。買授權是先囤在池子裡，裝置註冊時才從池子扣一個名額，這兩件事分開發生。</dd>
-        </div>
-        <div>
-          <dt>註冊權杖</dt>
-          <dd>Enrollment Token。一串代碼，讓裝置轉完之後知道要自動加入哪個單位的 Google Admin Console。等同密碼等級的機密。</dd>
-        </div>
-        <div>
-          <dt>Intune</dt>
-          <dd>微軟的裝置管理雲端服務。企業用來遠端管理員工電腦、派送軟體。要另外付費，不是每個客戶都有。</dd>
-        </div>
-        <div>
-          <dt>S 模式</dt>
-          <dd>Windows 的一種鎖定狀態，只准跑 Microsoft Store 的程式，不准跑一般的 .exe。Surface Go 出廠預設就是。退出是單向的，退了回不去。</dd>
-        </div>
-        <div>
-          <dt>Win32 應用程式</dt>
-          <dd>就是一般的 Windows 程式（.exe 那種）。<code>agent.exe</code> 屬於這一類，所以在 S 模式下跑不動。</dd>
-        </div>
-        <div>
-          <dt>Entra ID</dt>
-          <dd>微軟的雲端帳號系統，舊名 Azure AD。電腦「加入 Entra ID」之後，員工用公司的 Microsoft 帳號登入，跟傳統的公司網域不同。這種電腦沒有網域管理員帳號，所以 PsExec 用不了。</dd>
-        </div>
-        <div>
-          <dt>PsExec</dt>
-          <dd>微軟 Sysinternals 出的工具，可以在遠端的 Windows 電腦上執行程式，IT 界的常見工具。</dd>
-        </div>
-        <div>
-          <dt>SMB / 445 埠</dt>
-          <dd>Windows 的檔案分享機制與它使用的網路埠。PsExec 靠它把檔案送過去，被防火牆擋住就會連不上。</dd>
-        </div>
-        <div>
-          <dt>模擬測試</dt>
-          <dd>Dry run。只跑檢查不做實際變更的模式，用來確認流程正確。</dd>
-        </div>
-        <div>
-          <dt>TPM</dt>
-          <dd>電腦主機板上的安全晶片，存放加密金鑰。轉換系統時要清除它，原本 Windows 的加密資料也就跟著失效。</dd>
-        </div>
-        <div>
-          <dt>ONC</dt>
-          <dd>Open Network Configuration，ChromeOS 用的網路設定格式。Wi-Fi 的名稱與密碼就是寫在這種檔案裡。</dd>
-        </div>
-        <div>
-          <dt>.intunewin</dt>
-          <dd>Intune 專用的軟體封裝格式。把要派送的檔案打包成這種格式才能上傳到 Intune 後台。</dd>
-        </div>
-      </dl>
-    </section>
-
-  </main>
-
-  <footer>
-    <div>
-      <a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 Hunglun Technology</a>
-      ・Google for Education Professional Development Partner
-    </div>
-    <div class="byline">Steve · September 2026</div>
-  </footer>
-
+<button class="tocbtn" onclick="document.querySelector('nav.toc').classList.toggle('open')">☰ 目錄</button>
+<div class="layout">
+<nav class="toc">
+  <div class="brand">ChromeOS Flex 遠端部署</div>
+  <ol>
+    <li class="part">開始之前</li>
+    <li><a href="#read">0. 這份說明怎麼讀</a></li>
+    <li><a href="#concept">1. 先搞懂：做事的程式 vs 送貨方式</a></li>
+    <li><a href="#combo">2. Intune、CEU 有或沒有的四種組合</a></li>
+    <li><a href="#ask">3. 接案時要問客戶的問題</a></li>
+    <li class="part">檢查機器</li>
+    <li><a href="#req">4. 機器要符合的條件</a></li>
+    <li><a href="#precheck">5. 部署前預檢（單台／大量）</a></li>
+    <li><a href="#uefi">6. 不是 UEFI 怎麼辦</a></li>
+    <li><a href="#smode">7. S 模式怎麼辦</a></li>
+    <li class="part">準備與設定</li>
+    <li><a href="#tools">8. 要準備的工具與帳號</a></li>
+    <li><a href="#token">9. 註冊權杖（或選擇不註冊）</a></li>
+    <li><a href="#settings">10. 填設定：介面與設定檔</a></li>
+    <li class="part">部署</li>
+    <li><a href="#route">11. 選送貨路線</a></li>
+    <li><a href="#psexec">12. 路線 A：PsExec（同網段）</a></li>
+    <li><a href="#tailscale">13. 路線 B：Tailscale ＋ PsExec</a></li>
+    <li><a href="#action1">14. 路線 C：Action1（分散各地）</a></li>
+    <li><a href="#self">15. 路線 D：自助執行</a></li>
+    <li><a href="#intune">16. 路線 E：Intune</a></li>
+    <li><a href="#order">17. 模擬測試到正式部署的順序</a></li>
+    <li class="part">之後</li>
+    <li><a href="#verify">18. 驗收</a></li>
+    <li><a href="#later">19. 轉完才要註冊 CEU</a></li>
+    <li><a href="#trouble">20. 出問題怎麼辦</a></li>
+    <li><a href="#cli">21. 指令速查</a></li>
+    <li><a href="#terms">22. 名詞解釋</a></li>
+  </ol>
+</nav>
+
+<main>
+<div class="site-top">
+  <a class="logo-link" href="https://www.hunglun.com/" target="_blank" rel="noopener" aria-label="前往鴻綸科技官網">
+    <img src="/assets/hunglun-logo-company-light.webp?v=5" alt="鴻綸科技 Hunglun Technology">
+  </a>
 </div>
+<header class="hero">
+  <h1>ChromeOS Flex 遠端部署：完整使用說明</h1>
+  <p>從接案、檢查機器、設定、選路線、部署到驗收，一份看完。涵蓋「沒有 Intune」「沒有 CEU」這些情況。</p>
+  <div class="meta">2026-10-02 版｜搭配 intune-flex-deploy 工具｜官方依據：ChromeOS Flex Remote Deployment（FRD）說明頁</div>
+  <div class="dl-bar">
+    <a class="dl-btn" href="/tools/downloads/Flex部署工具包.zip">&#x2B07; 下載工具包（.zip）</a>
+    <span class="dl-note">解壓後雙擊「開始操作.bat」即可，不用另外裝任何東西</span>
+  </div>
+</header>
 
+<!-- 0 -->
+<section id="read">
+  <h2><span class="no">0</span>這份說明怎麼讀</h2>
+  <p class="lead">第一次接觸的人照順序讀完；已經熟的人直接跳到要的章節。</p>
+  <div class="flow">
+    <div><b>第 1～3 章</b>弄懂原理、判斷客戶狀況</div>
+    <div><b>第 4～7 章</b>檢查機器能不能轉</div>
+    <div><b>第 8～10 章</b>準備工具、填設定</div>
+    <div><b>第 11～17 章</b>選路線、照步驟部署</div>
+    <div><b>第 18～22 章</b>驗收、排錯、速查</div>
+  </div>
+  <p>標記說明：</p>
+  <ul>
+    <li><span class="tag ok">已實測</span> 我們自己跑過、確認可行</li>
+    <li><span class="tag untested">未實測</span> 照官方文件或工具文件寫的，還沒在真實機器上跑過，第一次用請先拿一台測</li>
+  </ul>
+  <div class="box danger">
+    <div class="t">整份說明最重要的一句話</div>
+    正式部署會<strong>清空整台電腦的 Windows 與所有資料</strong>，救不回來。任何情況都先用「模擬測試」跑一兩台，沒問題才動真的。
+  </div>
+</section>
+
+<!-- 1 -->
+<section id="concept">
+  <h2><span class="no">1</span>先搞懂：做事的程式 vs 送貨方式</h2>
+  <p class="lead">很多混亂都來自把這兩層當成同一件事。</p>
+  <div class="tbl"><table>
+    <tr><th>層</th><th>是什麼</th><th>會不會換</th></tr>
+    <tr><td><b>做事的程式</b></td><td>Google 官方的 FRD 套件：<code>agent.exe</code> ＋ <code>agent.toml</code>（設定）＋ <code>wifi.onc</code>（Wi-Fi）。在 Windows 上執行後，它會清除 TPM、重新分割硬碟、安裝 ChromeOS Flex、連上 Wi-Fi，有權杖的話再自動註冊</td><td>永遠是同一支，不會換</td></tr>
+    <tr><td><b>送貨方式</b></td><td>把上面那包東西送到每台電腦並按下執行：Intune、PsExec、Tailscale＋PsExec、Action1、自己雙擊</td><td>有很多種，哪條走不通就換一條</td></tr>
+  </table></div>
+  <p>所以「沒有 Intune」只代表少了一條送貨路線，FRD 照樣能用。這份說明第 11 章會帶你挑一條走得通的路線。</p>
+  <div class="box info">
+    <div class="t">FRD 套件不用等 Google 回信</div>
+    官方套件可以直接下載：<code>https://dl.google.com/cros-frd/frd-latest.zip</code>（約 1GB）。填表單只會收到部署指南的入口信，跟能不能下載無關。工具介面右上角的「準備套件」按鈕就是在下載這個檔案。
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="combo">
+  <h2><span class="no">2</span>Intune、CEU 有或沒有的四種組合</h2>
+  <p class="lead">Intune 屬於 Windows 這一端，CEU 屬於 ChromeOS 這一端，兩件事互不相干。</p>
+  <div class="tbl"><table>
+    <tr><th></th><th>管哪一端</th><th>缺了會怎樣</th><th>有沒有免費替代</th></tr>
+    <tr><td><b>Intune</b></td><td>Windows：把 agent.exe 送過去執行</td><td>換別條路線送</td><td><span class="tag ok">有</span> PsExec、Action1（前 200 台免費）、自助執行</td></tr>
+    <tr><td><b>CEU</b><br><small>Chrome Education Upgrade</small></td><td>ChromeOS：轉完後註冊進 Google Admin Console 被集中管理</td><td>轉完是「未受管」的 Flex</td><td><span class="tag no">沒有</span> 只能購買。企業版 Chrome Enterprise Upgrade 有 30 天 50 台試用，教育版沒有試用</td></tr>
+  </table></div>
+
+  <h3>四種組合怎麼做</h3>
+  <div class="tbl"><table>
+    <tr><th>Intune</th><th>CEU</th><th>做法</th><th>結果</th></tr>
+    <tr><td>有</td><td>有</td><td>路線 E（Intune），填權杖</td><td>自動註冊、集中管理，最完整</td></tr>
+    <tr><td>沒有</td><td>有</td><td>路線 A～D 擇一，填權杖</td><td>跟上面一樣自動註冊，只是送貨方式不同</td></tr>
+    <tr><td>有</td><td>沒有</td><td>路線 E，勾「不註冊」</td><td>未受管 Flex</td></tr>
+    <tr><td>沒有</td><td>沒有</td><td>路線 A～D 擇一，勾「不註冊」</td><td>未受管 Flex</td></tr>
+  </table></div>
+
+  <h3>「未受管」的 Flex 代表什麼</h3>
+  <p>官方說明 <code>enrollment_token</code> 是選填：「權杖未定義或空白時，會安裝 ChromeOS Flex，但裝置不會自動註冊。」所以沒有 CEU 也能轉，但要讓客戶知道：</p>
+  <ul>
+    <li>不會出現在 Google Admin Console，沒辦法統一派送政策、App、設定</li>
+    <li>任何人都能用個人 Google 帳號登入，沒辦法限定只用學校或公司帳號</li>
+    <li>遺失或被偷時沒辦法遠端停用</li>
+    <li>之後買了 CEU，沒辦法遠端補註冊，只能到現場一台一台註冊或重灌（第 19 章）</li>
+  </ul>
+  <div class="box warn">
+    <div class="t">交件前一定要講</div>
+    客戶以為「轉成 Chromebook 就能像學校其他 Chromebook 一樣管」，結果拿到的是未受管的機器，這是最常見的糾紛來源。要不要買 CEU，在報價階段就說清楚。
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="ask">
+  <h2><span class="no">3</span>接案時要問客戶的問題</h2>
+  <p class="lead">照順序問，每一題的答案都會影響後面怎麼做。</p>
+  <ol>
+    <li><b>電腦的廠牌和型號是什麼？有幾台？</b> → 拿去比對 Google 認證清單（第 4 章）。沒通過認證就不接</li>
+    <li><b>轉完要不要集中管理？有沒有買 CEU，還剩幾個名額？</b> → 決定要填權杖還是勾「不註冊」（第 9 章）</li>
+    <li><b>有沒有 Intune 授權？這些電腦有被 Intune 管嗎？</b> → 有就可以走路線 E</li>
+    <li><b>電腦是 Windows 10 還是 11？是不是 S 模式？</b>（Surface Go 出廠預設是 S 模式）→ 第 7 章</li>
+    <li><b>電腦都在同一個地方嗎？我們能到現場嗎？</b> → 決定路線 A 或 C、D</li>
+    <li><b>電腦登入用的是網域帳號、Microsoft 帳號，還是本機帳號？有沒有每台都能用的系統管理員帳號和密碼？</b> → PsExec 需要</li>
+    <li><b>轉完要連哪個 Wi-Fi？是一般密碼型（WPA2 個人），還是要帳號密碼的企業型（802.1X）？</b> → 本工具目前只支援一般密碼型</li>
+    <li><b>電腦裡的資料備份了嗎？</b> → 轉了就全部清空，請客戶書面確認已備份</li>
+  </ol>
+</section>
+
+<!-- 4 -->
+<section id="req">
+  <h2><span class="no">4</span>機器要符合的條件</h2>
+  <p class="lead">前五項是 Google 官方的硬性門檻，第六項是我們的商用紅線。</p>
+  <div class="tbl"><table>
+    <tr><th>#</th><th>條件</th><th>怎麼看</th></tr>
+    <tr><td>1</td><td>開機模式是 <b>UEFI</b>（不能是 Legacy BIOS）</td><td>預檢的「開機模式」欄，或 <code>msinfo32</code> 的「BIOS 模式」</td></tr>
+    <tr><td>2</td><td>系統磁碟是 <b>GPT</b> 格式</td><td>預檢的「磁碟格式」欄</td></tr>
+    <tr><td>3</td><td>磁碟 <b>32GB 以上</b>，至少 <b>5GB 可用空間</b></td><td>預檢的「磁碟GB」「可用GB」欄</td></tr>
+    <tr><td>4</td><td>作業系統是 <b>Windows 10 或 11</b></td><td>預檢的「作業系統」欄</td></tr>
+    <tr><td>5</td><td>有網路（有線或 Wi-Fi）</td><td>轉完要靠網路下載更新、註冊</td></tr>
+    <tr><td>6</td><td>型號在 <a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank" rel="noopener">Google 認證清單</a>上，狀態是「<b>通過認證</b>」</td><td>預檢的「廠牌型號」欄拿去人工比對</td></tr>
+  </table></div>
+  <h3>認證清單四種狀態</h3>
+  <div class="tbl"><table>
+    <tr><th>狀態</th><th>我們的做法</th></tr>
+    <tr><td><span class="tag ok">通過認證</span></td><td>可以接，唯一建議的狀態</td></tr>
+    <tr><td><span class="tag mid">預期會出現輕微問題</span></td><td>先跟客戶講清楚風險、實測過再決定</td></tr>
+    <tr><td><span class="tag no">預期會出現重大問題</span></td><td>不做</td></tr>
+    <tr><td><span class="tag no">取消認證</span></td><td>不做</td></tr>
+  </table></div>
+  <p>沒列在清單上的機型，Google 官方說「裝置如果未列在認證裝置清單中，就不適用 Chrome Education 或 Chrome Enterprise 支援服務」。客戶付錢買了 CEU，裝在未認證機器上等於放棄支援資格，所以<strong>不接</strong>。清單更新頻繁，每次接案都重新查。</p>
+  <div class="box info">
+    <div class="t">TPM 不用自己處理</div>
+    官方提到部分機型要先清除 TPM，FRD 會自己處理。預檢表的 TPM 欄只是參考。
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="precheck">
+  <h2><span class="no">5</span>部署前預檢（單台／大量）</h2>
+  <p class="lead">只讀取資訊，不改任何設定，可以放心跑。接案第一步就先跑，不合格的機器提早挑出來。</p>
+
+  <h3>方法一：單台，在那台電腦上直接跑 <span class="tag ok">已實測</span></h3>
+  <ol class="steps">
+    <li><b>把 <code>precheck.ps1</code> 複製到那台電腦</b>，例如放在桌面</li>
+    <li><b>用系統管理員身分開 PowerShell</b>：開始按鈕按右鍵 →「終端機（系統管理員）」或「Windows PowerShell（系統管理員）」</li>
+    <li><b>執行</b>（路徑換成你放的位置）：
+      <div class="code"><pre>powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\Desktop\precheck.ps1"</pre></div>
+    </li>
+    <li><b>看結果</b>：最後一行會寫「結果：硬體條件合格」（綠字）或「結果：不合格」（紅字）並列出原因</li>
+  </ol>
+  <p>輸出範例：</p>
+  <div class="code"><pre>電腦名稱   : HUNGLUN-STEVE
+廠牌型號   : ASUSTeK COMPUTER INC. E500A_WS770T
+作業系統   : Microsoft Windows 11 專業版
+開機模式   : UEFI
+磁碟格式   : GPT
+磁碟大小GB : 477
+可用空間GB : 268.7
+TPM        : 有
+
+結果：硬體條件合格
+最後一步要人工做：拿「廠牌型號」去 Google 認證清單比對</pre></div>
+  <div class="box warn">
+    <div class="t">不要用記事本另存 precheck.ps1</div>
+    這個檔案存成「UTF-8 含 BOM」格式，Windows 內建的 PowerShell 才讀得懂裡面的中文。用記事本改過再存成別的編碼，會出現一堆紅字語法錯誤。壞了就重新從工具資料夾複製一份。
+  </div>
+
+  <h3>方法二：不用檔案，看系統資訊 <span class="tag ok">已實測</span></h3>
+  <ul>
+    <li><b>開機模式</b>：<code>Win+R</code> → 輸入 <code>msinfo32</code> → 看「BIOS 模式」：UEFI 才可以，「舊版」就是 Legacy</li>
+    <li><b>磁碟格式</b>：開始按鈕按右鍵 →「磁碟管理」→ 在「磁碟 0」按右鍵 →「內容」→「磁碟區」分頁 → 看「磁碟分割樣式」要是 GPT</li>
+  </ul>
+
+  <h3>方法三：大量，從你的電腦一次查全部 <span class="tag ok">已實測（本機）</span></h3>
+  <p>需要跟 PsExec 路線一樣的前置條件（第 12 章的「目標電腦要先做的事」）。目前只有指令列版本，要裝 Python 與 openpyxl 套件。</p>
+  <ol class="steps">
+    <li><b>填裝置清單</b> <code>secrets\devices.txt</code>：一行一台，填電腦名稱或 IP，<code>#</code> 開頭是註解</li>
+    <li><b>填帳號密碼</b>：<code>secrets\config.json</code> 的 <code>remote_admin_user</code>、<code>remote_admin_password</code>。預檢不需要權杖和 Wi-Fi</li>
+    <li><b>在工具資料夾執行</b>：
+      <div class="code"><pre>python psexec_mass_deploy.py --precheck</pre></div>
+    </li>
+    <li><b>打開報表</b>：<code>output\precheck-時間.xlsx</code></li>
+  </ol>
+  <h4>報表怎麼看</h4>
+  <div class="tbl"><table>
+    <tr><th>結果欄</th><th>意思</th><th>下一步</th></tr>
+    <tr><td><span class="tag ok">合格</span>（綠）</td><td>五項硬體條件都過了</td><td>拿「廠牌型號」比對認證清單，把狀態填在「認證清單狀態（人工填）」欄</td></tr>
+    <tr><td><span class="tag no">不合格</span>（紅）</td><td>「不合格原因」欄寫了哪幾項沒過</td><td>UEFI／GPT 看第 6 章；空間不足請客戶清理；不是 Win10/11 就不做</td></tr>
+    <tr><td><span class="tag mid">連不上</span>（黃）</td><td>連線或執行失敗，「不合格原因」欄有錯誤訊息</td><td>看第 20 章對照錯誤訊息</td></tr>
+  </table></div>
+  <p>報表含客戶的電腦名稱與型號清單，已設定不會進公開版本庫，交給客戶以外的人前先確認。</p>
+</section>
+
+<!-- 6 -->
+<section id="uefi">
+  <h2><span class="no">6</span>不是 UEFI 怎麼辦</h2>
+  <p class="lead">先知道一件事：Windows 11 的機器一定是 UEFI（這是安裝 Windows 11 的門檻），只有 Windows 10 舊機可能需要處理。</p>
+  <p><b>UEFI</b> 是電腦開機後、Windows 啟動之前先跑的那層韌體，負責檢查硬體再把作業系統叫起來，取代舊的 Legacy BIOS。UEFI 搭配 GPT 磁碟，Legacy 搭配 MBR 磁碟，兩組要配對。FRD 要在磁碟上另外切出 Flex 的開機區，只支援 UEFI＋GPT。</p>
+  <div class="box info">
+    <div class="t">先想想值不值得</div>
+    還是 Legacy 的機器通常很舊，很少在 Google 認證清單上。先比對認證清單，沒通過就直接排除，不用花時間轉換。
+  </div>
+  <h3>轉換步驟（順序不能顛倒，不然 Windows 開不了機）</h3>
+  <ol class="steps">
+    <li><b>先備份</b>：轉換磁碟格式一般不會清資料，但萬一失敗會開不了機</li>
+    <li><b>在 Windows 裡把磁碟轉成 GPT</b>（系統管理員身分開命令提示字元，可以遠端做）：
+      <div class="code"><pre>mbr2gpt /validate /allowFullOS
+mbr2gpt /convert /allowFullOS</pre></div>
+      第一行只檢查，顯示 <code>Validation completed successfully</code> 才跑第二行。<br>
+      若有開 BitLocker，轉換前先暫停：<code>manage-bde -protectors -disable C:</code>
+    </li>
+    <li><b>重開機，進韌體設定畫面</b>：開機時連按下表的按鍵（各機型可能不同，以廠商說明為準）
+      <div class="tbl"><table>
+        <tr><th>廠牌</th><th>常見按鍵</th></tr>
+        <tr><td>Dell</td><td>F2</td></tr>
+        <tr><td>HP</td><td>F10（或 Esc 再選）</td></tr>
+        <tr><td>Lenovo</td><td>F1 或 F2（筆電有時要按 Fn）</td></tr>
+        <tr><td>ASUS、Acer</td><td>F2 或 Del</td></tr>
+        <tr><td>Surface</td><td>按住音量＋再按電源</td></tr>
+      </table></div>
+    </li>
+    <li><b>改開機模式</b>：找 Boot Mode、Boot List Option 這類選項，改成「UEFI」；有「CSM」或「Legacy Support」就關掉</li>
+    <li><b>存檔重開機</b>，進 Windows 後再跑一次預檢確認</li>
+  </ol>
+  <p><b>想遠端切開機模式</b>：只有部分商用機種的廠商工具做得到，例如 Dell Command | Configure、HP BIOS Configuration Utility、Lenovo 的 WMI BIOS 設定。家用機種多半只能到現場一台一台切。</p>
+</section>
+
+<!-- 7 -->
+<section id="smode">
+  <h2><span class="no">7</span>S 模式怎麼辦</h2>
+  <p class="lead">S 模式的 Windows 不准執行一般的 Windows 程式（Win32），agent.exe 就是這種程式，連 PowerShell 也不能用。</p>
+  <ul>
+    <li><b>怎麼看</b>：設定 → 系統 → 啟用，版本名稱寫著「S 模式」就是。Surface Go 出廠預設是 S 模式</li>
+    <li><b>預檢會怎樣</b>：S 模式的機器跑不了預檢腳本，大量預檢會顯示「連不上：腳本沒產生結果」</li>
+    <li><b>處理</b>：退出 S 模式。有 Intune 可以用政策整批退出；沒有的話，每台到 Microsoft Store 搜尋「退出 S 模式」手動退出（要登入 Microsoft 帳號，免費）</li>
+    <li><b>注意</b>：退出是單向的，退了回不去。反正接下來整台都要變成 Flex，這點不構成問題</li>
+  </ul>
+</section>
+
+<!-- 8 -->
+<section id="tools">
+  <h2><span class="no">8</span>要準備的工具與帳號</h2>
+  <h3>你這邊（操作端電腦）</h3>
+  <div class="tbl"><table>
+    <tr><th>東西</th><th>用途</th><th>怎麼拿</th></tr>
+    <tr><td>本工具（flex-deploy-tool）</td><td>網頁操作介面、產生設定、大量部署</td><td>雙擊 <code>開始操作.bat</code> 開介面</td></tr>
+    <tr><td>FRD 官方套件（約 1GB）</td><td>真正做事的 agent.exe 與 Flex 映像檔</td><td>介面右上角「準備套件」，或直接下載 frd-latest.zip</td></tr>
+    <tr><td>PsExec</td><td>路線 A、B 用來遠端執行</td><td>微軟官方工具，第一次執行時自動下載</td></tr>
+    <tr><td>Python ＋ openpyxl</td><td>只有指令列（大量預檢）需要</td><td><code>pip install openpyxl</code></td></tr>
+    <tr><td>Tailscale</td><td>只有路線 B 需要</td><td>tailscale.com，免費方案有台數上限，以官網為準</td></tr>
+    <tr><td>Action1 帳號</td><td>只有路線 C 需要</td><td>action1.com，前 200 台永久免費</td></tr>
+  </table></div>
+  <h3>向客戶拿</h3>
+  <ul class="check">
+    <li>機型清單、電腦名稱或 IP 清單</li>
+    <li>每台都能用的系統管理員帳號密碼（路線 A、B 需要）</li>
+    <li>轉完要連的 Wi-Fi 名稱與密碼（一般密碼型）</li>
+    <li>註冊權杖（有 CEU 才需要，第 9 章），或書面確認「不註冊」</li>
+    <li>資料已備份的書面確認</li>
+  </ul>
+</section>
+
+<!-- 9 -->
+<section id="token">
+  <h2><span class="no">9</span>註冊權杖（或選擇不註冊）</h2>
+  <h3>有 CEU：拿權杖</h3>
+  <ol class="steps">
+    <li><b>請客戶的 Google 管理員登入</b> <a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a></li>
+    <li><b>路徑</b>：裝置 → Chrome → 註冊權杖 → 註冊 → 選「非 ChromeOS 裝置（採用 ChromeOS Flex）」→ 自動註冊</li>
+    <li><b>選好組織單位</b>：權杖綁的是組織單位，轉完的機器會進到這個單位</li>
+    <li><b>複製權杖</b>，貼到工具介面的「註冊權杖」欄</li>
+  </ol>
+  <div class="box info">
+    <div class="t">權杖不用等裝置存在</div>
+    權杖是綁在組織單位上的通用碼，任何裝置都還沒出現就可以先產生。真正的前提是授權池裡還有足夠的 CEU 名額，裝置註冊那一刻才會扣一個。
+  </div>
+  <div class="box warn">
+    <div class="t">權杖是機密</div>
+    拿到權杖的人可以把任何機器註冊進客戶的組織，不要貼到聊天群組或 email。
+  </div>
+  <h3>沒有 CEU：勾「不註冊」</h3>
+  <p>工具介面「註冊權杖」欄下方有一個勾選框「<b>客戶沒買 CEU，不註冊（轉成未受管 Flex）</b>」。勾了以後：</p>
+  <ul>
+    <li>權杖欄會變灰，不用填</li>
+    <li>畫面出現紅色警告框，提醒轉完是未受管的機器</li>
+    <li>產生的 agent.toml 不會寫入權杖，FRD 照樣安裝 Flex，只是不註冊</li>
+    <li>執行時記錄區會再印一次警告</li>
+  </ul>
+  <div class="box info">
+    <div class="t">為什麼要打勾，不是留空就好</div>
+    如果「權杖留空」就自動放行，現場趕時間忘了貼權杖，幾十台機器轉完才發現都沒註冊，只能一台一台補。所以設計成必須明確勾選，沒勾又沒填，執行按鈕會鎖住。
+  </div>
+</section>
+
+<!-- 10 -->
+<section id="settings">
+  <h2><span class="no">10</span>填設定：介面與設定檔</h2>
+  <h3>用網頁介面（建議）</h3>
+  <ol class="steps">
+    <li><b>雙擊 <code>開始操作.bat</code></b>，瀏覽器會自動打開操作畫面（只有這台電腦連得到）</li>
+    <li><b>輸入系統密碼</b>（跟 Steve 拿，不寫在文件裡）</li>
+    <li><b>右上角按「準備套件」</b>，等進度條跑完，顯示「套件已就緒」。出發前在公司網路先做，現場網路可能很慢</li>
+    <li><b>填「部署設定」</b>：註冊權杖（或勾不註冊）、Wi-Fi 名稱、Wi-Fi 密碼，按「儲存設定」</li>
+    <li><b>確認上方橫幅是綠色「模擬測試模式」</b></li>
+  </ol>
+  <p>密碼類欄位存過之後會顯示「已設定（要改才需重打）」，不會把明碼顯示回來。要改就整個重打。</p>
+  <div class="box info">
+    <div class="t">右上角的「Google 官方／公司鏡像」跟部署方式無關</div>
+    只是決定那 1GB 套件去哪裡下載。平常用「Google 官方」（預設，永遠是最新版）。「公司鏡像」是要固定用某個已知可用的版本時才選，鏡像還沒建立時按不下去；選了鏡像但連不上，系統會直接報錯停下來，不會偷偷改用官方版本。
+  </div>
+  <div class="box warn">
+    <div class="t">為什麼最終的安裝包要在現場產生</div>
+    註冊權杖是包在安裝包裡的，權杖通常到現場才跟客戶拿，所以最終版一定是拿到權杖之後再產生一次。只要套件已經先下載好，這步只要幾秒鐘。
+  </div>
+
+  <h3>用設定檔（指令列）</h3>
+  <p>檔案位置 <code>secrets\config.json</code>，第一次從 <code>secrets\config.example.json</code> 複製。</p>
+  <div class="tbl"><table>
+    <tr><th>欄位</th><th>必填</th><th>說明</th></tr>
+    <tr><td><code>enrollment_token</code></td><td>有 CEU 時必填</td><td>註冊權杖</td></tr>
+    <tr><td><code>no_enrollment</code></td><td></td><td><code>true</code>＝不註冊，權杖可以不填。預設 <code>false</code></td></tr>
+    <tr><td><code>wifi_ssid</code></td><td>必填</td><td>Wi-Fi 名稱</td></tr>
+    <tr><td><code>wifi_password</code></td><td>必填</td><td>Wi-Fi 密碼（目前只支援 WPA／WPA2 個人型）</td></tr>
+    <tr><td><code>dry_run</code></td><td></td><td><code>true</code>＝模擬測試（預設），<code>false</code>＝正式部署，不可逆</td></tr>
+    <tr><td><code>remote_admin_user</code></td><td>PsExec 用</td><td>目標電腦的系統管理員帳號。留空就用你目前登入的帳號</td></tr>
+    <tr><td><code>remote_admin_password</code></td><td>PsExec 用</td><td>上面帳號的密碼</td></tr>
+    <tr><td><code>enable_logging</code></td><td></td><td>是否用 Vector 把執行記錄存成 <code>agent.log</code>，建議 <code>true</code></td></tr>
+    <tr><td><code>download_source</code></td><td></td><td><code>official</code>（Google 官方，預設）或 <code>r2</code>（公司鏡像）</td></tr>
+  </table></div>
+  <p>欄位值如果還是「【待填】」「貼 ...」「TEST-」開頭，工具會當成沒填，擋下來不讓執行。</p>
+</section>
+
+<!-- 11 -->
+<section id="route">
+  <h2><span class="no">11</span>選送貨路線</h2>
+  <p class="lead">照順序問自己，第一個「是」就是你的路線。</p>
+  <ol>
+    <li><b>電腦有被 Intune 管，而且授權有效？</b> → 路線 E：Intune</li>
+    <li><b>電腦跟你在同一個網路（同一個 Wi-Fi 或路由器），而且有每台的系統管理員帳密？</b> → 路線 A：PsExec</li>
+    <li><b>電腦分散各地，但能請對方幫忙裝一個小程式？</b> → 路線 C：Action1（推薦），或路線 B：Tailscale＋PsExec</li>
+    <li><b>台數少、你連不到、對方願意自己操作？</b> → 路線 D：自助執行</li>
+  </ol>
+  <div class="tbl"><table>
+    <tr><th>路線</th><th>需要同網路</th><th>要先在每台裝東西</th><th>要帳密</th><th>適合</th><th>狀態</th></tr>
+    <tr><td>A PsExec</td><td>要</td><td>不用裝軟體，改設定＋開防火牆</td><td>要</td><td>電腦集中在一間教室或辦公室</td><td><span class="tag ok">本機已實測</span></td></tr>
+    <tr><td>B Tailscale＋PsExec</td><td>不用</td><td>Tailscale</td><td>要</td><td>分散各地、不想用管理平台</td><td><span class="tag untested">未實測</span></td></tr>
+    <tr><td>C Action1</td><td>不用</td><td>Action1 代理程式</td><td>不用</td><td>分散各地、台數多</td><td><span class="tag untested">未實測</span></td></tr>
+    <tr><td>D 自助執行</td><td>不用</td><td>不用</td><td>對方自己有</td><td>幾台、對方願意自己動手</td><td><span class="tag untested">未實測</span></td></tr>
+    <tr><td>E Intune</td><td>不用</td><td>不用（已被管）</td><td>不用</td><td>已經有 Intune</td><td>第 16 章</td></tr>
+  </table></div>
+</section>
+
+<!-- 12 -->
+<section id="psexec">
+  <h2><span class="no">12</span>路線 A：PsExec（同網段）</h2>
+  <p class="lead">從你的電腦直接連進每一台目標電腦，複製套件過去並執行。按下去就跑，不用等任何排程。</p>
+
+  <h3>目標電腦要先做的事（每台一次）</h3>
+  <ol class="steps">
+    <li><b>確認有系統管理員帳號</b>，而且每台的帳號密碼一樣最方便（不一樣也可以，要分批跑）</li>
+    <li><b>非網域電腦（個人電腦、工作群組、只加入 Entra ID）要解除遠端限制</b>：用系統管理員身分開命令提示字元，執行
+      <div class="code"><pre>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f</pre></div>
+      不做這步，非內建 Administrator 的管理員帳號從遠端連進來一律「拒絕存取」。傳統網域電腦用網域管理員帳號就不需要
+    </li>
+    <li><b>開防火牆的「檔案及印表機共用」</b>：控制台 → Windows Defender 防火牆 → 允許應用程式通過防火牆 → 勾「檔案及印表機共用」的「私人」。網路設定檔也要設成「私人網路」</li>
+  </ol>
+
+  <h3>網路條件</h3>
+  <ul>
+    <li>你的電腦跟目標電腦在同一個網段（同一個 Wi-Fi 或接同一台路由器）</li>
+    <li>Wi-Fi 不能開「AP 隔離」（訪客網路常常有開），開了電腦之間互相看不到</li>
+    <li>中間不能有防火牆擋 445 埠（檔案分享用的）</li>
+  </ul>
+
+  <h3>操作步驟（網頁介面）</h3>
+  <ol class="steps">
+    <li><b>先跑預檢</b>（第 5 章方法三），確認每台都「合格」，型號也比對過</li>
+    <li><b>填設定、確認綠色模擬模式</b>（第 10 章）</li>
+    <li><b>切到「直接遠端部署（PsExec）」分頁</b></li>
+    <li><b>貼裝置清單</b>：可以從 Excel 整欄複製貼上，一行一台</li>
+    <li><b>填系統管理員帳號密碼</b>，同時處理台數先用預設 5</li>
+    <li><b>按執行</b>，看記錄區每台的結果；跑完可以下載報告</li>
+  </ol>
+
+  <h3>操作步驟（指令列）</h3>
+  <div class="code"><pre>python psexec_mass_deploy.py                    # 模擬測試（dry_run=true）
+python psexec_mass_deploy.py --parallel 10      # 同時處理 10 台
+python psexec_mass_deploy.py --yes              # dry_run=false 時必須加，才會真的轉</pre></div>
+
+  <h3>系統實際做的事（每台）</h3>
+  <ol>
+    <li>用帳密連到那台電腦的 <code>C$</code> 管理共用</li>
+    <li>把整個 FRD 套件（含 agent.toml、wifi.onc）複製到那台電腦的 <code>C:\ProgramData\frd-deploy</code></li>
+    <li>用 PsExec 遠端執行 <code>agent.exe</code>（不等它跑完，因為正式部署會重開機）</li>
+    <li>中斷連線</li>
+  </ol>
+  <p>套件約 1GB，同時處理 5 台就是同時傳 5GB，現場網路慢的話把同時台數調低。</p>
+</section>
+
+<!-- 13 -->
+<section id="tailscale">
+  <h2><span class="no">13</span>路線 B：Tailscale ＋ PsExec <span class="tag untested">未實測</span></h2>
+  <p class="lead">用 Tailscale 把分散各地的電腦接成同一個虛擬網路，之後就跟路線 A 一模一樣。</p>
+  <ol class="steps">
+    <li><b>建一個 Tailscale 帳號</b>（tailscale.com），你的電腦先裝好並登入</li>
+    <li><b>每台目標電腦裝 Tailscale</b>，登入同一個帳號（或用邀請、授權金鑰加入）</li>
+    <li><b>在 Tailscale 後台看到每台電腦的 100.x.x.x 位址</b></li>
+    <li><b>每台目標電腦做路線 A 的「目標電腦要先做的事」</b>。防火牆的「檔案及印表機共用」要允許 Tailscale 那張網卡</li>
+    <li><b>裝置清單填 100.x.x.x 位址</b>，照路線 A 執行</li>
+  </ol>
+  <div class="box warn">
+    <div class="t">要注意</div>
+    透過網際網路傳 1GB 套件會很慢，而且轉完 Flex 之後 Tailscale 就不見了。先拿一台測通再整批做。
+  </div>
+</section>
+
+<!-- 14 -->
+<section id="action1">
+  <h2><span class="no">14</span>路線 C：Action1（分散各地） <span class="tag untested">未實測</span></h2>
+  <p class="lead">Action1 是雲端遠端管理平台，前 200 台永久免費、功能不設限。每台裝一次代理程式之後，就能從網頁後台派送指令碼，用法跟 Intune 很像。</p>
+  <h3>準備</h3>
+  <ol class="steps">
+    <li><b>註冊 Action1</b>（action1.com 的 Free Edition）</li>
+    <li><b>在後台下載代理程式安裝檔</b>，請客戶在每台目標電腦安裝（一次性），或用現場隨身碟裝</li>
+    <li><b>確認每台電腦都出現在 Action1 後台</b></li>
+    <li><b>先用 Action1 的「執行指令碼」功能，把 <code>precheck.ps1</code> 的內容派送給全部電腦</b>，從結果看哪些合格</li>
+  </ol>
+  <h3>派送 FRD 的指令碼範本</h3>
+  <p>讓每台電腦自己從 Google 下載套件、寫入設定、執行。用 Action1 的「執行指令碼」，以系統權限執行。把三個 <code>【】</code> 換成實際值（不註冊就把權杖那行整行刪掉）：</p>
+  <div class="code"><div class="lbl">PowerShell（先 dry_run = true 測一台）</div><pre>$dir = "C:\ProgramData\frd-deploy"
+New-Item -ItemType Directory -Force -Path $dir | Out-Null
+$zip = "$dir\frd.zip"
+Invoke-WebRequest "https://dl.google.com/cros-frd/frd-latest.zip" -OutFile $zip -UseBasicParsing
+Expand-Archive $zip -DestinationPath $dir -Force
+Remove-Item $zip
+
+@"
+data_dir = 'install'
+dry_run = true
+enrollment_token = '【註冊權杖】'
+onc_file = 'wifi.onc'
+verbose_boot = false
+"@ | Set-Content "$dir\agent.toml" -Encoding ASCII
+
+@"
+{"Type":"UnencryptedConfiguration","NetworkConfigurations":[{"GUID":"{$([guid]::NewGuid())}","Name":"【Wi-Fi 名稱】","Type":"WiFi","WiFi":{"Passphrase":"【Wi-Fi 密碼】","SSID":"【Wi-Fi 名稱】","Security":"WPA-PSK","AutoConnect":true}}]}
+"@ | ForEach-Object { [IO.File]::WriteAllText("$dir\wifi.onc", $_) }   # UTF-8 不帶 BOM
+
+Set-Location $dir
+.\agent.exe</pre></div>
+  <div class="box warn">
+    <div class="t">這段範本還沒實測，第一次一定先這樣做</div>
+    <ul>
+      <li>保持 <code>dry_run = true</code>，只派給一台，從 Action1 的執行結果確認 agent.exe 有跑起來、沒有錯誤</li>
+      <li>Wi-Fi 名稱或密碼含 <code>"</code> 或 <code>\</code> 這類符號時，JSON 會壞掉，改用本工具產生的 wifi.onc 內容貼上</li>
+      <li>每台都會各自下載 1GB，同一地點很多台時注意頻寬</li>
+      <li>權杖與 Wi-Fi 密碼會留在 Action1 後台的指令碼紀錄裡，用完記得刪</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 15 -->
+<section id="self">
+  <h2><span class="no">15</span>路線 D：自助執行 <span class="tag untested">未實測</span></h2>
+  <p class="lead">把設定好的套件交給對方，對方在自己的電腦上執行。適合台數少、你連不到的情況。</p>
+  <ol class="steps">
+    <li><b>在你的電腦用工具介面填好設定並跑過一次模擬測試</b>，讓 <code>tools\frd-package\</code> 裡的 <code>agent.toml</code>、<code>wifi.onc</code> 產生好</li>
+    <li><b>把整個 <code>tools\frd-package</code> 資料夾</b>（約 1GB）用隨身碟或雲端硬碟交給對方。裡面含權杖與 Wi-Fi 密碼，不要放公開連結</li>
+    <li><b>對方把資料夾放到 <code>C:\frd-deploy</code></b></li>
+    <li><b>對方用系統管理員身分開命令提示字元</b>，執行：
+      <div class="code"><pre>cd /d C:\frd-deploy
+agent.exe</pre></div>
+    </li>
+    <li><b>模擬測試沒問題後</b>，把 <code>agent.toml</code> 裡的 <code>dry_run = true</code> 改成 <code>false</code> 再執行一次，電腦會重開機開始轉換</li>
+  </ol>
+  <p>如果對方電腦也能跑本工具，也可以讓對方直接雙擊 <code>開始操作.bat</code>，在 PsExec 分頁的裝置清單填自己的電腦名稱。</p>
+</section>
+
+<!-- 16 -->
+<section id="intune">
+  <h2><span class="no">16</span>路線 E：Intune</h2>
+  <p class="lead">電腦已經被 Intune 管、授權有效時用。裝置自己向雲端報到，把套件拉下來安裝，不用人在現場，也不用帳密。</p>
+  <ol class="steps">
+    <li><b>產生安裝包</b>：工具介面切到「產生 Intune 安裝包」分頁，按「開始產生安裝包」。會在 <code>output\</code> 產出約 1GB 的 <code>.intunewin</code>，畫面上有下載連結。指令列是 <code>python intune_flex_packager.py</code></li>
+    <li><b>新增 Win32 應用程式</b>：Intune 後台 → 應用程式 → Windows → 新增 → Win32 應用程式，上傳那個 <code>.intunewin</code></li>
+    <li><b>安裝命令填 <code>agent.exe</code></b>，用系統權限執行</li>
+    <li><b>偵測規則填「agent.log 檔案存在」</b>：這條只是滿足 Intune 介面的必填要求。裝置轉完 Flex 就不再是 Windows，本機偵測沒有實質意義，真正的成功判斷是回 Admin Console 看，這也是 Google 官方的建議</li>
+    <li><b>指派對象先選測試群組</b>（一兩台），整條路走通了再改成全部裝置</li>
+  </ol>
+  <div class="box info">
+    <div class="t">Intune 不會立刻執行</div>
+    派送時間由 Intune 的同步排程決定，可能要等一段時間裝置才收到，這是正常的。急著要立刻執行就改走路線 A。
+  </div>
+  <div class="box warn">
+    <div class="t">S 模式的電腦</div>
+    Intune 可以用政策整批讓電腦退出 S 模式，這是沒有 Intune 時做不到的。先退出 S 模式，再派送 FRD（第 7 章）。
+  </div>
+  <div class="box info">
+    <div class="t">只加入 Entra ID 的電腦也不一定要走 Intune</div>
+    這種電腦在網路驗證上被當成工作群組電腦，沒有網域管理員帳號可用。但如果每台有本機系統管理員帳號，做完第 12 章的 <code>LocalAccountTokenFilterPolicy</code> 設定，PsExec 照樣能用；沒有本機管理員帳號，就走 Action1 或自助執行。
+  </div>
+</section>
+
+<!-- 17 -->
+<section id="order">
+  <h2><span class="no">17</span>模擬測試到正式部署的順序</h2>
+  <p class="lead">不管走哪條路線都一樣，這個順序不能跳。</p>
+  <div class="tbl"><table>
+    <tr><th>模式</th><th>做什麼</th></tr>
+    <tr><td><span class="tag ok">綠色：模擬測試</span></td><td>只檢查（硬碟夠不夠、TPM 狀態、設定檔對不對），不動硬碟、不安裝任何東西，可以放心重複跑。這是預設模式</td></tr>
+    <tr><td><span class="tag no">紅色：正式部署</span></td><td>真的轉換。Windows 與所有資料清空，沒有還原的方法</td></tr>
+  </table></div>
+  <p><b>介面上的兩道關卡</b>：按橫幅右邊「切換到正式部署」後，必須手動輸入「確認部署」四個字才切得過去；走 PsExec 時按下開始部署，還會再問一次「確定要對 N 台裝置執行嗎」，看清楚那個台數再按。指令列則是 <code>dry_run</code> 改 <code>false</code> 之後，沒加 <code>--yes</code> 會被擋下來。</p>
+  <ol class="steps">
+    <li><b>綠色模擬模式，一到兩台測試機</b>：看記錄區有沒有錯誤；目標電腦的 <code>C:\ProgramData\frd-deploy\agent.log</code> 出現 <code>InstallSkipped</code>，代表檢查都過了，只是因為模擬模式沒安裝</li>
+    <li><b>紅色正式模式，同樣那一兩台</b>：電腦會重開機開始轉換，花多久依機器與網路而定，過程中不要關機</li>
+    <li><b>驗收那一兩台</b>（第 18 章）。這步驗的是「整條路走得通」</li>
+    <li><b>都沒問題，才擴大到全部電腦</b>：Intune 把指派對象改成全部；PsExec 把裝置清單填完整</li>
+  </ol>
+  <div class="box danger">
+    <div class="t">正式模式之前再確認一次</div>
+    裝置清單只有你要轉的電腦？客戶的資料備份了？權杖是正確組織的，或確定不註冊？Wi-Fi 名稱密碼對嗎？
+  </div>
+</section>
+
+<!-- 18 -->
+<section id="verify">
+  <h2><span class="no">18</span>驗收</h2>
+  <p class="lead">「程式跑完沒報錯」不等於部署成功。Google 官方建議用 Admin Console 或 Directory API 確認裝置有沒有註冊進來，不要只看本機記錄，因為轉完之後已經不是 Windows，本機能給的資訊很有限。</p>
+  <h3>每台都要看</h3>
+  <ul class="check">
+    <li>開機進得了 ChromeOS Flex 畫面</li>
+    <li>自動連上指定的 Wi-Fi</li>
+    <li>設定 → 關於 ChromeOS 看得到版本號，可以檢查更新</li>
+  </ul>
+  <h3>有註冊的再多看（最終判準）</h3>
+  <ul class="check">
+    <li>登入畫面下方顯示「這部裝置由 某某組織 管理」</li>
+    <li>Google Admin Console → 裝置 → Chrome → 裝置，看得到這台，而且在正確的組織單位、政策有套用</li>
+    <li>CEU 授權使用數有增加</li>
+  </ul>
+  <h3>沒註冊的</h3>
+  <ul class="check">
+    <li>開機到歡迎畫面，可以用任何 Google 帳號登入</li>
+    <li>交件時把「未受管代表什麼」（第 2 章）再跟客戶講一次，最好書面確認</li>
+  </ul>
+  <p><b>agent.log</b> 是失敗時查原因用的。它不是 agent.exe 自己寫的，是工具一併帶上去的記錄器（Vector）產生的，所以 <code>enable_logging</code> 建議保持開啟。</p>
+</section>
+
+<!-- 19 -->
+<section id="later">
+  <h2><span class="no">19</span>已經是未受管 Flex，之後才要註冊 CEU</h2>
+  <p class="lead">先講結論：<strong>已經裝好的未受管 Flex，沒有任何辦法從遠端大量註冊</strong>。CEU 的遠端大量註冊，只能在「還是 Windows 的時候」用 FRD 帶權杖一次做完。</p>
+  <h3>為什麼遠端做不到（官方依據）</h3>
+  <ul>
+    <li>ChromeOS Flex 不支援零接觸註冊，也不支援強制重新註冊（官方「ChromeOS Flex 與 ChromeOS 的差異」頁）</li>
+    <li>未受管的 Flex 上沒有任何可以遠端派送指令的管道：沒有 Intune、沒有 PsExec，也裝不了 Action1 這類代理程式</li>
+    <li>官方註冊頁：「您必須在任何人登入裝置前先註冊這些裝置。如果有人在您註冊前就先行登入，您就必須先抹除裝置資料再重新註冊」</li>
+  </ul>
+
+  <h3>所以真正的「遠端大量部署 CEU」是這樣做</h3>
+  <div class="box safe">
+    <div class="t">在 FRD 那一步就填權杖</div>
+    客戶買好 CEU、拿到註冊權杖，在第 9 章填進去（不要勾「不註冊」）。FRD 轉 Flex 的同時就自動註冊、自動從授權池扣名額，全程遠端。這是唯一的遠端大量做法，所以 CEU 要在轉機之前就買好。
+  </div>
+
+  <h3>已經轉好的機器，三種補救做法</h3>
+  <div class="tbl"><table>
+    <tr><th>做法</th><th>要不要到現場</th><th>會不會清資料</th><th>適合</th></tr>
+    <tr><td>A. 一台一台手動註冊（Ctrl+Alt+E）</td><td>要，每台幾分鐘</td><td>沒人登入過的不會；有人登入過要先 Powerwash，會清</td><td>台數少</td></tr>
+    <tr><td>B. 用帶權杖的 USB 安裝碟重灌</td><td>要，每台插一次隨身碟</td><td>會（等於重灌）</td><td>台數多、想讓開機後自動註冊、不用每台輸入帳密</td></tr>
+    <tr><td>C. 用帶權杖的映像檔走網路開機（PXE）重灌</td><td>每台要設定從網路開機</td><td>會（等於重灌）</td><td>有 IT 人員、有 PXE 環境的大型場域</td></tr>
+  </table></div>
+
+  <h4>做法 A：一台一台手動註冊 <span class="tag untested">未實測</span></h4>
+  <ol class="steps">
+    <li><b>確認授權池有足夠名額</b></li>
+    <li><b>如果已經有人登入過這台</b>：先 Powerwash（恢復原廠設定）。登入畫面按 <code>Ctrl+Alt+Shift+R</code>，照畫面重新啟動並確認。會清掉本機資料</li>
+    <li><b>在登入畫面（還沒有人登入之前）按 <code>Ctrl+Alt+E</code></b>，進入企業註冊畫面</li>
+    <li><b>用客戶的管理員帳號，或被允許註冊裝置的帳號登入</b>，完成註冊。不想把管理員密碼交給現場人員的話，請客戶在 Admin Console 的註冊權限設定裡，開放一個專用帳號可以註冊裝置</li>
+    <li><b>到 Admin Console 確認這台出現</b>，移到正確的組織單位</li>
+  </ol>
+
+  <h4>做法 B、C：把權杖封進 Flex 映像檔再重灌 <span class="tag untested">未實測</span></h4>
+  <p>官方「自動註冊 ChromeOS Flex 裝置」說明頁的做法：用 Google 的 <code>cros-flex-tools</code> 套件裡的 <code>package_flex_image</code> 指令，把註冊權杖封進 ChromeOS Flex 映像檔。用這個映像檔安裝的機器，第一次開機就會自動註冊，不需要輸入帳密。</p>
+  <ul>
+    <li><b>需要</b>：Chrome 管理員權限；Debian 或 Ubuntu 的 Linux 環境（可以用 Windows 的 WSL）；至少 35GB 空間；USB 做法要 8GB 以上隨身碟</li>
+    <li><b>權杖格式</b>：小寫 UUID，例如 <code>12345678-90ab-cdef-1234-567890abcdef</code></li>
+    <li><b>網路</b>：官方提醒設定網路時「可能仍需與使用者互動」，例如現場選 Wi-Fi</li>
+    <li>詳細指令照官方頁面做：<a href="https://support.google.com/chromeosflex/answer/15681456" target="_blank" rel="noopener">Automatically enroll ChromeOS Flex devices</a>。PXE 環境可參考官方 <a href="https://support.google.com/chromeosflex/answer/12348637" target="_blank" rel="noopener">Mass deploy ChromeOS Flex（WDS）</a></li>
+  </ul>
+  <div class="box warn">
+    <div class="t">重灌一定會清空資料</div>
+    官方頁面沒有明講，但重新安裝作業系統會清空整顆硬碟。用過一段時間的機器，先請使用者把資料備份到雲端。
+  </div>
+</section>
+
+<!-- 20 -->
+<section id="trouble">
+  <h2><span class="no">20</span>出問題怎麼辦</h2>
+  <div class="tbl"><table>
+    <tr><th>看到的訊息或狀況</th><th>可能原因</th><th>怎麼處理</th></tr>
+    <tr><td>連線 C$：拒絕存取（Access is denied、錯誤 5）</td><td>非網域電腦的遠端限制；或帳密錯誤；或帳號不是系統管理員</td><td>在目標電腦執行第 12 章的 <code>reg add</code>；確認帳號在系統管理員群組；帳號格式可以試 <code>電腦名稱\帳號</code></td></tr>
+    <tr><td>System error 67／找不到網路名稱</td><td>電腦名稱打錯、不在同網段、電腦沒開機</td><td>改用 IP；先 <code>ping</code> 看看通不通；確認同一個網路、沒有 AP 隔離</td></tr>
+    <tr><td>System error 53／找不到網路路徑；或逾時</td><td>防火牆擋了檔案分享、網路設定檔是「公用」</td><td>開「檔案及印表機共用」，網路改成「私人」</td></tr>
+    <tr><td>預檢：腳本沒產生結果</td><td>S 模式不能執行 PowerShell；或防毒軟體擋了</td><td>看第 7 章；暫時在防毒軟體加例外，或改用單台方法</td></tr>
+    <tr><td>precheck.ps1 出現一堆紅字語法錯誤、中文變亂碼</td><td>檔案被另存成沒有 BOM 的編碼</td><td>從工具資料夾重新複製一份，不要用記事本另存</td></tr>
+    <tr><td>預檢不合格：開機模式不是 UEFI／磁碟不是 GPT</td><td>舊機用 Legacy 開機</td><td>第 6 章；或直接排除這台</td></tr>
+    <tr><td>模擬測試出現 GetSupportedSize 相關錯誤</td><td>defragsvc（磁碟重組服務）設成自動啟動</td><td>agent.toml 取消註解 <code>disable_defragsvc = true</code></td></tr>
+    <tr><td>轉完開機了，但沒註冊進 Admin Console</td><td>權杖錯誤或過期；Wi-Fi 連不上；授權名額不夠</td><td>先確認 Wi-Fi 名稱密碼；重產權杖；查授權池；必要時照第 19 章手動註冊</td></tr>
+    <tr><td>轉完連不上 Wi-Fi</td><td>密碼錯；Wi-Fi 是企業型（802.1X），本工具只支援一般密碼型</td><td>現場手動連；企業型 Wi-Fi 需要另外做 ONC 設定</td></tr>
+    <tr><td>檔案送過去了，但目標電腦什麼都沒發生</td><td>S 模式不准執行 exe，而且不一定有明顯錯誤訊息</td><td>設定 → 系統 → 啟用，看是不是 S 模式，第 7 章</td></tr>
+    <tr><td>連得到但複製檔案失敗</td><td>帳號不是系統管理員，或 445 埠被擋</td><td>確認帳號權限；確認防火牆的檔案分享有開</td></tr>
+    <tr><td>flex-deploy.exe 雙擊沒反應、被防毒攔截</td><td>沒有數位簽章的執行檔偶爾被誤判</td><td>選「仍要執行」或加入白名單。exe 已內建 Python，不用另外安裝</td></tr>
+    <tr><td>畫面說已經有工作在跑</td><td>保護機制，同一時間只允許一項工作</td><td>等它跑完再按</td></tr>
+    <tr><td>「公司鏡像」按不下去</td><td>鏡像還沒建立</td><td>用「Google 官方」，功能完全一樣</td></tr>
+    <tr><td>Chrome 下載工具包時說「這個檔案不是常見的下載項目」</td><td>工具 exe 沒有數位簽章，正常現象</td><td>點「下載可疑的檔案」繼續</td></tr>
+    <tr><td>執行按鈕是灰的</td><td>設定沒填完，或已經有工作在跑</td><td>填完三個欄位（或勾不註冊）並按「儲存設定」</td></tr>
+    <tr><td>設定檔還沒填完：enrollment_token</td><td>權杖沒填，也沒勾不註冊</td><td>填權杖；或客戶確定沒 CEU，設 <code>"no_enrollment": true</code></td></tr>
+  </table></div>
+  <p>以上都不是：把記錄區的完整錯誤訊息，以及目標電腦 <code>C:\ProgramData\frd-deploy\agent.log</code> 的內容一起交給技術人員。</p>
+</section>
+
+<!-- 21 -->
+<section id="cli">
+  <h2><span class="no">21</span>指令速查</h2>
+  <div class="code"><div class="lbl">在工具資料夾執行</div><pre># 開網頁介面
+開始操作.bat
+
+# 大量預檢（只讀不改，輸出 output\precheck-時間.xlsx）
+python psexec_mass_deploy.py --precheck
+
+# PsExec 模擬測試／正式部署
+python psexec_mass_deploy.py
+python psexec_mass_deploy.py --yes
+python psexec_mass_deploy.py --parallel 10 --devices secrets\devices.txt
+
+# 產生 Intune 安裝包
+python intune_flex_packager.py
+
+# 建立公司鏡像（需要 Cloudflare R2 憑證，設定方式寫在程式開頭）
+python mirror_to_r2.py --check   # 先驗憑證
+python mirror_to_r2.py           # 實際上傳</pre></div>
+  <div class="code"><div class="lbl">在目標電腦（系統管理員身分）</div><pre># 單台預檢
+powershell -ExecutionPolicy Bypass -File precheck.ps1
+
+# 看開機模式、磁碟格式
+$env:firmware_type
+Get-Disk | Select Number, PartitionStyle
+
+# 非網域電腦解除遠端限制（給 PsExec 用）
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
+
+# MBR 轉 GPT（先檢查再轉）
+mbr2gpt /validate /allowFullOS
+mbr2gpt /convert /allowFullOS</pre></div>
+</section>
+
+<!-- 22 -->
+<section id="terms">
+  <h2><span class="no">22</span>名詞解釋</h2>
+  <dl class="terms">
+    <dt>ChromeOS Flex</dt><dd>Google 給一般 PC、Mac 用的免費 ChromeOS 版本，裝上後用起來跟 Chromebook 差不多</dd>
+    <dt>FRD（Flex Remote Deployment）</dt><dd>Google 官方的遠端轉換工具，在 Windows 上執行 agent.exe 就能把整台轉成 Flex</dd>
+    <dt>CEU（Chrome Education Upgrade）</dt><dd>讓 ChromeOS 裝置能註冊進學校 Google Admin Console、被集中管理的授權，一台一個，永久授權。企業版叫 Chrome Enterprise Upgrade</dd>
+    <dt>註冊權杖（enrollment token）</dt><dd>在 Admin Console 產生的一串碼，綁在組織單位上。FRD 拿它讓裝置自動註冊</dd>
+    <dt>授權池</dt><dd>組織買好、還沒指派給裝置的授權額度。買授權是先放進池子，裝置註冊那一刻才扣一個名額</dd>
+    <dt>未受管</dt><dd>沒有註冊進任何組織的 ChromeOS 裝置，等於個人用的機器</dd>
+    <dt>Intune</dt><dd>微軟的雲端裝置管理服務，要另外付費，可以把程式派送到 Windows 電腦</dd>
+    <dt>Entra ID</dt><dd>微軟的雲端帳號系統（舊名 Azure AD）。電腦「加入 Entra ID」代表用公司 Microsoft 帳號登入</dd>
+    <dt>PsExec</dt><dd>微軟 Sysinternals 的免費小工具，從一台電腦遠端在另一台電腦上執行程式，需要對方的系統管理員帳密</dd>
+    <dt>RMM</dt><dd>遠端監控管理平台，在每台電腦裝代理程式後，可以從雲端集中派送軟體與指令。Action1 是其中一種</dd>
+    <dt>UEFI／Legacy BIOS</dt><dd>電腦開機時先跑的韌體，UEFI 是新的、Legacy 是舊的。FRD 只支援 UEFI</dd>
+    <dt>GPT／MBR</dt><dd>磁碟分割表的格式，UEFI 配 GPT、Legacy 配 MBR</dd>
+    <dt>S 模式</dt><dd>Windows 的限制模式，只能裝 Microsoft Store 的 App，不能執行一般 exe</dd>
+    <dt>SMB／445 埠</dt><dd>Windows 的檔案分享機制與它用的網路埠。PsExec 靠它把檔案送過去，被防火牆擋住就連不上</dd>
+    <dt>.intunewin</dt><dd>Intune 專用的軟體封裝格式，要派送的檔案打包成這種格式才能上傳到 Intune 後台</dd>
+    <dt>PXE（網路開機）</dt><dd>電腦開機時不從硬碟、改從網路上的伺服器載入安裝程式，大型場域用來大量重灌</dd>
+    <dt>cros-flex-tools</dt><dd>Google 給 Linux 用的 Flex 工具套件，其中的 package_flex_image 可以把註冊權杖封進 Flex 映像檔</dd>
+    <dt>ONC</dt><dd>Google 定義的網路設定 JSON 格式，用來把 Wi-Fi 名稱密碼預先寫進 ChromeOS</dd>
+    <dt>dry_run（模擬測試）</dt><dd>FRD 只做檢查不動硬碟的模式，記錄會出現 InstallSkipped</dd>
+    <dt>Powerwash</dt><dd>ChromeOS 的恢復原廠設定，清掉本機所有資料與帳號</dd>
+    <dt>LocalAccountTokenFilterPolicy</dt><dd>Windows 的登錄設定，設成 1 才允許非內建 Administrator 的本機管理員帳號從遠端管理這台電腦</dd>
+    <dt>AP 隔離</dt><dd>Wi-Fi 基地台的設定，開了之後連同一個 Wi-Fi 的裝置彼此連不到，訪客網路常見</dd>
+  </dl>
+</section>
+<footer class="site">
+  <div><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 Hunglun Technology</a>・Google for Education Professional Development Partner</div>
+  <div>Steve · October 2026</div>
+</footer>
+</main>
+</div>
+<script>
+  document.querySelectorAll('.code').forEach(function (box) {
+    var btn = document.createElement('button');
+    btn.textContent = '複製';
+    btn.addEventListener('click', function () {
+      var text = box.querySelector('pre').innerText;
+      var done = function () { btn.textContent = '已複製'; setTimeout(function () { btn.textContent = '複製'; }, 1500); };
+      if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done, function () { btn.textContent = '請手動選取'; }); }
+      else { btn.textContent = '請手動選取'; }
+    });
+    box.appendChild(btn);
+  });
+  document.querySelectorAll('nav.toc a').forEach(function (a) {
+    a.addEventListener('click', function () { document.querySelector('nav.toc').classList.remove('open'); });
+  });
+</script>
 </body>
 </html>
