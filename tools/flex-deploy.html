@@ -269,7 +269,8 @@
     <ul>
       <li><b>每一步都有檢查點</b>：「你應該看到」跟畫面對得上才往下，對不上就照「沒看到的話」處理</li>
       <li><b>失敗不會毀掉電腦</b>：Google 的 FRD 在動硬碟之前一定先跑完全部檢查，任何一項沒過就自己中止，Windows 照常能用</li>
-      <li><b>第一台一定用測試機</b>：真正的轉換我們還沒在實機跑過（截至 2026-10-02），所以接案前先拿一台不要的筆電把第二部完整走一遍，確認後再做客戶的機器</li>
+      <li><b>每種新機型的第一台，先只跑模擬測試</b>：一鍵檔預設就是「只測試」，只檢查、不動硬碟，跑完在桌面產生一個結果檔。你看過結果確認沒問題，才把設定改成正式轉換（第 6 章）</li>
+      <li><b>誠實說明</b>：真正的轉換我們還沒在實機跑過（截至 2026-10-02）。上面的「先測試」就是為了在客戶第一台上安全地補上這個驗證</li>
     </ul>
   </div>
   <div class="box danger">
@@ -391,11 +392,36 @@
 <!-- 6 -->
 <section id="file">
   <h2><span class="no">6</span>準備檔案</h2>
-  <p class="lead">檔案在工具資料夾裡：<code>一鍵轉換Flex.bat</code>。有沒有 CEU，決定要不要改它。</p>
+  <p class="lead">檔案在工具資料夾裡：<code>一鍵轉換Flex.bat</code>。要決定兩件事：這次<b>只測試還是正式轉換</b>、客戶<b>有沒有 CEU</b>。</p>
 
-  <h3>情況 A：沒有 CEU → 不用改，直接進第 7 章</h3>
+  <h3>先決定：只測試，還是正式轉換</h3>
+  <div class="flowchart">
+    <div class="fc-step hl"><b>第 1 次</b>只測試<br><code>$ONLY_TEST = $true</code><br>（預設，不用改）</div>
+    <div class="fc-arrow"></div>
+    <div class="fc-step"><b>對方傳回</b>桌面上的<br>結果檔</div>
+    <div class="fc-arrow"></div>
+    <div class="fc-step"><b>你確認</b>結果沒問題<br>（第 9 章最後）</div>
+    <div class="fc-arrow"></div>
+    <div class="fc-step hl"><b>第 2 次</b>正式轉換<br><code>$ONLY_TEST = $false</code></div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>情況</th><th><code>$ONLY_TEST</code></th><th>會發生什麼</th></tr>
+    <tr><td>這個型號第一次做</td><td><code>$true</code>（預設）</td><td>只跑檢查與模擬測試，<b>硬碟完全不動</b>，跑完桌面出現結果檔</td></tr>
+    <tr><td>同型號已經測過、結果沒問題</td><td><code>$false</code></td><td>檢查、模擬，接著正式轉換，Windows 會被清空</td></tr>
+  </table></div>
+  <div class="box safe">
+    <div class="t">建議：準備兩個檔案，用檔名區分</div>
+    複製一份，一份保持 <code>$true</code> 改名叫 <code>Flex-1測試.bat</code>，另一份改成 <code>$false</code> 改名叫 <code>Flex-2正式.bat</code>。檔名可以隨便改，不影響功能。這樣就不會傳錯檔案。
+  </div>
+  <div class="box info">
+    <div class="t">為什麼預設是「只測試」</div>
+    忘了改設定的話，最壞的結果只是多跑一次測試，不會在你還沒確認前就把客戶的電腦清空。
+  </div>
 
-  <h3>情況 B：有 CEU → 先拿權杖，再填三行</h3>
+  <h3>情況 A：沒有 CEU → 權杖、Wi-Fi 都不用填</h3>
+  <p>只要照上面決定 <code>$ONLY_TEST</code> 就好。改法跟下面步驟 3 一樣，用記事本開啟、改最後一行。</p>
+
+  <h3>情況 B：有 CEU → 先拿權杖，再填設定</h3>
   <h4>步驟 1：請客戶的 Google 管理員產生權杖</h4>
   <figure class="mock">
     <svg viewBox="0 0 560 300" role="img" aria-label="Google 管理控制台產生註冊權杖示意圖" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
@@ -436,25 +462,28 @@
     <li><b>網路線</b>：什麼都不用問，Wi-Fi 兩行留空，一鍵檔會自動改寫成官方的有線網路設定</li>
   </ul>
 
-  <h4>步驟 3：用記事本填三行</h4>
+  <h4>步驟 3：用記事本填設定</h4>
   <p>在 <code>一鍵轉換Flex.bat</code> 上按右鍵 →「以記事本開啟」（或「編輯」），往下捲到「設定」那段：</p>
   <figure class="mock">
-    <svg viewBox="0 0 560 250" role="img" aria-label="記事本填寫三行設定示意圖" font-family="Consolas, Noto Sans TC, monospace">
-      <rect x="0" y="0" width="560" height="250" rx="8" fill="#ffffff" stroke="#c8ced8"/>
+    <svg viewBox="0 0 560 300" role="img" aria-label="記事本填寫設定示意圖" font-family="Consolas, Noto Sans TC, monospace">
+      <rect x="0" y="0" width="560" height="300" rx="8" fill="#ffffff" stroke="#c8ced8"/>
       <rect x="0" y="0" width="560" height="30" rx="8" fill="#f3f3f3"/><rect x="0" y="22" width="560" height="8" fill="#f3f3f3"/>
       <text x="14" y="20" font-size="12" fill="#1f1f1f" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">一鍵轉換Flex.bat - 記事本</text>
       <text x="14" y="48" font-size="11" fill="#5f5f5f" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">檔案　　編輯　　檢視</text>
       <line x1="0" y1="56" x2="560" y2="56" stroke="#e5e5e5"/>
-      <text x="14" y="80" font-size="12" fill="#008000"># ----- 設定（通常只要改這三行）-----</text>
+      <text x="14" y="80" font-size="12" fill="#008000"># ----- 設定（通常只要改這四行）-----</text>
       <rect x="10" y="92" width="540" height="24" fill="#fff59d"/>
       <text x="14" y="109" font-size="12.5" fill="#1f1f1f">$ENROLLMENT_TOKEN = '12345678-90ab-cdef-1234-567890abcdef'</text>
       <rect x="10" y="132" width="540" height="24" fill="#fff59d"/>
       <text x="14" y="149" font-size="12.5" fill="#1f1f1f">$WIFI_SSID = 'School-WiFi'</text>
       <rect x="10" y="172" width="540" height="24" fill="#fff59d"/>
       <text x="14" y="189" font-size="12.5" fill="#1f1f1f">$WIFI_PASSWORD = 'password123'</text>
-      <text x="14" y="228" font-size="11.5" fill="#c62828" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">↑ 黃色三行換成實際的值，單引號要保留。插網路線的話，Wi-Fi 兩行改成 ''（兩個單引號）</text>
+      <rect x="10" y="212" width="540" height="24" fill="#c8e6c9"/>
+      <text x="14" y="229" font-size="12.5" fill="#1f1f1f">$ONLY_TEST = $true</text>
+      <text x="14" y="262" font-size="11.5" fill="#c62828" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">↑ 黃色三行換成實際的值，單引號要保留。插網路線的話，Wi-Fi 兩行改成 ''（兩個單引號）</text>
+      <text x="14" y="284" font-size="11.5" fill="#2e7d32" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">↑ 綠色這行：第一次保持 $true（只測試）；測試確認後改成 $false 才會正式轉換</text>
     </svg>
-    <figcaption><span class="tag mockt">示意圖</span> 值一定要包在單引號 <code>'</code> 裡面</figcaption>
+    <figcaption><span class="tag mockt">示意圖</span> 黃色三行的值一定要包在單引號 <code>'</code> 裡面；綠色那行是 <code>$true</code> 或 <code>$false</code>，不加引號</figcaption>
   </figure>
   <div class="code"><div class="lbl">有 CEU、用 Wi-Fi</div><pre>$ENROLLMENT_TOKEN = '貼上權杖'
 $WIFI_SSID = 'Wi-Fi名稱'
@@ -462,6 +491,7 @@ $WIFI_PASSWORD = 'Wi-Fi密碼'</pre></div>
   <div class="code"><div class="lbl">有 CEU、用網路線</div><pre>$ENROLLMENT_TOKEN = '貼上權杖'
 $WIFI_SSID = ''
 $WIFI_PASSWORD = ''</pre></div>
+  <div class="code"><div class="lbl">測試過、要正式轉換時（不管有沒有 CEU）</div><pre>$ONLY_TEST = $false</pre></div>
   <div class="box warn">
     <div class="t">三個容易出錯的地方</div>
     <ul>
@@ -480,7 +510,12 @@ $WIFI_PASSWORD = ''</pre></div>
     <li><b>不要用 Gmail 附件</b>：Gmail 會擋 <code>.bat</code> 檔，壓成 zip 也會被擋</li>
     <li>隨身碟也可以，複製到對方桌面再執行</li>
   </ul>
-  <p>附上一句話給對方就好：「<b>插上電源，雙擊這個檔案，跳出視窗按『是』，看到要輸入的地方打 Y 按 Enter。</b>」</p>
+  <p>附上一句話給對方就好：</p>
+  <ul>
+    <li>只測試的檔案：「<b>插上電源，雙擊這個檔案，跳出視窗按『是』，看到要輸入的地方打 Y 按 Enter。跑完桌面會多一個『Flex結果』開頭的檔案，傳回來給我。</b>」</li>
+    <li>正式轉換的檔案：「<b>資料備份好、插上電源，雙擊這個檔案，跳出視窗按『是』，看到要輸入的地方打 Y 按 Enter，之後電腦會自己重開機，不要關機。</b>」</li>
+  </ul>
+  <p>結果檔裡只有記錄，沒有權杖和 Wi-Fi 密碼，對方用 Gmail 附件或 LINE 傳回來都可以。</p>
 </section>
 
 <!-- 8 -->
@@ -531,7 +566,18 @@ $WIFI_PASSWORD = ''</pre></div>
   <div class="expect">按「是」之後跳出一個黑色視窗，最上面寫著「把這台電腦轉換成 ChromeOS Flex」</div>
   <div class="ifnot">按了「否」或視窗沒出現：重新雙擊一次檔案</div>
 
-  <h3>第 3 個：看完警告，輸入 Y 按 Enter</h3>
+  <h3>第 3 個：看完說明，輸入 Y 按 Enter</h3>
+  <p>只測試和正式轉換，開頭的畫面不一樣，對方一看就知道是哪一種：</p>
+  <div class="term"><span class="c">==============================================
+   把這台電腦轉換成 ChromeOS Flex
+==============================================</span>
+
+<span class="g">這次只做模擬測試：只檢查這台電腦能不能轉，不會改動任何東西，Windows 照常可以用。</span>
+跑完會在桌面產生一個結果檔，請傳給技術人員。
+這次不註冊：轉完是一般的 ChromeOS Flex，開機後在歡迎畫面自己選 Wi-Fi、登入 Google 帳號。
+
+要開始測試，請輸入 Y 再按 Enter: <span class="y">Y</span></div>
+  <div class="term-cap"><span class="tag real">實際畫面</span> 只測試（<code>$ONLY_TEST = $true</code>），綠字開頭</div>
   <div class="term"><span class="c">==============================================
    把這台電腦轉換成 ChromeOS Flex
 ==============================================</span>
@@ -540,7 +586,8 @@ $WIFI_PASSWORD = ''</pre></div>
 這次不註冊：轉完是一般的 ChromeOS Flex，開機後在歡迎畫面自己選 Wi-Fi、登入 Google 帳號。
 
 資料都備份好、確定要繼續，請輸入 Y 再按 Enter: <span class="y">Y</span></div>
-  <div class="term-cap"><span class="tag real">實際畫面</span> 一鍵檔實際印出的文字（沒填權杖的版本）。有填權杖的話，第二句會變成「轉完會自動註冊到貴單位的 Google 管理控制台」</div>
+  <div class="term-cap"><span class="tag real">實際畫面</span> 正式轉換（<code>$ONLY_TEST = $false</code>），紅字警告。兩段都是沒填權杖的版本；有填權杖的話，「這次不註冊」那句會變成「轉完會自動註冊到貴單位的 Google 管理控制台」</div>
+  <div class="ifnot">畫面跟你要的模式不一樣（例如想測試卻出現紅字）：輸入 N 取消，回第 6 章檢查 <code>$ONLY_TEST</code></div>
   <div class="ifnot">輸入 Y 以外的字都會取消，Windows 不會被改動。想重來就再雙擊一次</div>
 </section>
 
@@ -556,7 +603,7 @@ $WIFI_PASSWORD = ''</pre></div>
 <span class="g">  硬體條件合格。型號是否在 Google 認證清單上，請另外確認。</span></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 2026-10-02 在 Windows 11 實際執行</div>
   <div class="expect">綠色的「硬體條件合格」</div>
-  <div class="ifnot">紅色 [停止] 加上原因（例如不是 UEFI、空間不夠、沒插電），照原因處理後重新雙擊。Windows 沒有被改動</div>
+  <div class="ifnot">紅色 [停止] 加上原因（例如不是 UEFI、空間不夠、沒插電），照原因處理後重新雙擊。Windows 沒有被改動，桌面也會產生結果檔</div>
 
   <h3>[2/5] 從 Google 下載</h3>
   <div class="term"><span class="c">[2/5] 從 Google 下載 ChromeOS Flex（約 1GB，依網速需要幾分鐘）...</span>
@@ -575,9 +622,44 @@ $WIFI_PASSWORD = ''</pre></div>
 <span class="g">  模擬測試完成。</span></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 這兩行是一鍵檔實際印出的文字（agent.exe 用模擬的版本跑出）。真的 agent.exe 執行時，中間會捲過很多英文記錄，是正常的</div>
   <div class="expect">「官方檢查項目完成 5/5」與綠色的「模擬測試完成」。五個項目是 Google 官方的檢查：系統、TPM、記憶體、磁碟、檔案</div>
-  <div class="ifnot">紅色 [停止]，例如「沒有跑完全部檢查」：請對方把 <code>C:\deploy</code> 裡的 <code>agent-dryrun.log</code>、<code>convert-log.txt</code> 傳給你。Windows 沒有被改動</div>
+  <div class="ifnot">紅色 [停止]，例如「沒有跑完全部檢查」：Windows 沒有被改動。請對方把桌面上的結果檔傳給你</div>
+  <div class="term"><span class="c">[4/5] 模擬測試（只檢查，不會動硬碟）...</span>
+  官方檢查項目完成 2/5：SystemChecked、DiskChecked
 
-  <h3>[5/5] 正式轉換</h3>
+<span class="r">[停止] 模擬測試沒有跑完全部檢查。</span>
+<span class="y">Windows 沒有被改動，可以照常使用。</span>
+
+<span class="c">結果已經打包好：C:\Users\使用者\Desktop\Flex結果-電腦名稱-1002-1653.zip</span>
+請把這個檔案傳給技術人員。</div>
+  <div class="term-cap"><span class="tag real">實際畫面</span> 檢查沒過時的樣子（agent.exe 用模擬的版本跑出，路徑裡的使用者與電腦名稱依實際電腦而定）</div>
+
+  <h3>只測試：到這裡結束</h3>
+  <div class="term"><span class="g">這次只做模擬測試，到這裡結束。硬碟完全沒有被動到，Windows 照常可以用。</span>
+
+<span class="c">結果已經打包好：C:\Users\使用者\Desktop\Flex結果-電腦名稱-1002-1653.zip</span>
+請把這個檔案傳給技術人員。
+技術人員確認沒問題後，會給你正式轉換用的檔案。</div>
+  <div class="term-cap"><span class="tag real">實際畫面</span> <code>$ONLY_TEST = $true</code> 時，模擬測試完成後直接結束，不會跑第 5 步</div>
+  <div class="expect">桌面多一個 <code>Flex結果-電腦名稱-日期時間.zip</code>，對方傳回給你</div>
+  <div class="ifnot">桌面沒有這個檔案：請對方打開 <code>C:\deploy</code>，把 <code>.log</code> 結尾的檔案和 <code>convert-log.txt</code> 傳給你</div>
+
+  <h3>收到結果檔，你要看什麼</h3>
+  <p>解壓縮後有兩個檔案，用記事本打開：</p>
+  <div class="tbl"><table>
+    <tr><th>檔案</th><th>要找的內容</th><th>代表</th></tr>
+    <tr><td><code>convert-log.txt</code></td><td>「官方檢查項目完成 5/5」和「模擬測試完成」</td><td>一鍵檔判斷這台可以轉</td></tr>
+    <tr><td><code>agent-dryrun.log</code></td><td>SystemChecked、TPMChecked、MemoryChecked、DiskChecked、FilesChecked 五個字都找得到（記事本按 Ctrl+F 搜尋）</td><td>Google 的 FRD 自己也確認五項檢查都做完</td></tr>
+  </table></div>
+  <div class="gate">
+    <div class="t">兩個都對 → 這個型號可以正式轉換</div>
+    把同一份檔案的 <code>$ONLY_TEST</code> 改成 <code>$false</code>（或傳 <code>Flex-2正式.bat</code>）給對方。同型號的其他台不用再測。
+  </div>
+  <div class="box info">
+    <div class="t">第一次收到結果檔，請也交給我們核對</div>
+    因為真機還沒跑過，第一份真實的 <code>agent-dryrun.log</code> 很重要：要確認 Google 實際寫出來的記錄格式，跟一鍵檔的判斷方式對得上。有出入的話我們會更新一鍵檔和這份說明。
+  </div>
+
+  <h3>[5/5] 正式轉換（只有 <code>$ONLY_TEST = $false</code> 才會到這裡）</h3>
   <div class="term"><span class="y">[5/5] 開始正式轉換。過程中不要關機、不要拔電源。</span></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 接著會出現下一章三種結局之一</div>
 </section>
@@ -585,7 +667,7 @@ $WIFI_PASSWORD = ''</pre></div>
 <!-- 10 -->
 <section id="result">
   <h2><span class="no">10</span>三種結局</h2>
-  <p class="lead">判斷依據是 Google 官方的記錄事件：<code>InstallStarted</code>＝「所有檢查都通過，開始改動硬碟」；<code>InstallSkipped</code>＝「模擬結束，或檢查沒過、部署中止」。</p>
+  <p class="lead">只有正式轉換才會走到這裡。判斷依據是 Google 官方的記錄事件：<code>InstallStarted</code>＝「所有檢查都通過，開始改動硬碟」；<code>InstallSkipped</code>＝「模擬結束，或檢查沒過、部署中止」。</p>
 
   <h3>結局 1：成功開始轉換</h3>
   <div class="term"><span class="g">轉換已經開始：電腦會重新開機，進入 ChromeOS Flex 安裝。</span>
@@ -595,16 +677,21 @@ $WIFI_PASSWORD = ''</pre></div>
   <div class="expect">電腦自己重新開機，接著第 11 章</div>
 
   <h3>結局 2：檢查沒過，FRD 自己中止（硬碟沒被動到）</h3>
-  <div class="term"><span class="r">[停止] 正式執行前的檢查沒有通過，FRD 自己中止了，硬碟沒有被動到。請把 C:\deploy 裡的 agent.log、agent-dryrun.log、convert-log.txt 傳給技術人員。</span>
-<span class="y">Windows 沒有被改動，可以照常使用。</span></div>
+  <div class="term"><span class="r">[停止] 正式執行前的檢查沒有通過，FRD 自己中止了，硬碟沒有被動到。</span>
+<span class="y">Windows 沒有被改動，可以照常使用。</span>
+
+<span class="c">結果已經打包好：C:\Users\使用者\Desktop\Flex結果-電腦名稱-1002-1653.zip</span>
+請把這個檔案傳給技術人員。</div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 一鍵檔實際印出的文字（agent.exe 用模擬的版本跑出）</div>
-  <div class="expect">Windows 照常能用。拿到三個記錄檔後，照第 20 章排錯</div>
+  <div class="expect">Windows 照常能用。拿到結果檔（裡面有三個記錄檔）後，照第 20 章排錯</div>
 
   <h3>結局 3：讀不到記錄，無法判斷</h3>
-  <div class="term"><span class="y">沒有讀到執行記錄（代碼 0），無法判斷結果。
-請先不要關機，把 C:\deploy 整個資料夾裡的 .log 和 convert-log.txt 傳給技術人員。</span></div>
+  <div class="term"><span class="y">沒有讀到執行記錄（代碼 0），無法判斷結果。請先不要關機。</span>
+
+<span class="c">結果已經打包好：C:\Users\使用者\Desktop\Flex結果-電腦名稱-1002-1653.zip</span>
+請把這個檔案傳給技術人員。</div>
   <div class="term-cap">這種情況出現在記錄器下載失敗時，畫面在 [2/5] 會先出現「記錄器下載失敗，略過」</div>
-  <div class="expect">先不要關機，把記錄傳給你判斷</div>
+  <div class="expect">先不要關機，把桌面的結果檔傳給你判斷</div>
 </section>
 
 <!-- 11 -->
@@ -704,8 +791,9 @@ $WIFI_PASSWORD = ''</pre></div>
   <ol class="steps">
     <li><b>註冊 Action1</b>（action1.com 的 Free Edition，前 200 台永久免費）</li>
     <li><b>每台電腦安裝一次 Action1 代理程式</b>，請客戶點一下安裝</li>
-    <li><b>在 Action1 後台用「執行指令碼」派送一鍵檔的內容</b>：把 <code>一鍵轉換Flex.bat</code> 裡 <code>#__PS__</code> 以下的 PowerShell 部分貼上，開頭三行照第 6 章填，以系統權限執行。後台執行時沒有人能輸入 Y，所以要把 <code>$AUTO_YES = [bool]$env:FRD_AUTO_YES</code> 這行改成 <code>$AUTO_YES = $true</code></li>
-    <li><b>先只派給一台測試機</b>，從 Action1 的執行結果看到「轉換已經開始」再擴大</li>
+    <li><b>在 Action1 後台用「執行指令碼」派送一鍵檔的內容</b>：把 <code>一鍵轉換Flex.bat</code> 裡 <code>#__PS__</code> 以下的 PowerShell 部分貼上，開頭的設定照第 6 章填，以系統權限執行。後台執行時沒有人能輸入 Y，所以要把 <code>$AUTO_YES = [bool]$env:FRD_AUTO_YES</code> 這行改成 <code>$AUTO_YES = $true</code></li>
+    <li><b>先用 <code>$ONLY_TEST = $true</code> 派給一台</b>，從 Action1 的執行結果看到「模擬測試完成」。以系統權限執行時結果檔不會在使用者桌面，記錄直接看 Action1 的輸出，或請對方開 <code>C:\deploy</code></li>
+    <li><b>改成 <code>$false</code> 再派給同一台</b>，看到「轉換已經開始」並驗收後再擴大</li>
   </ol>
 </section>
 
@@ -801,18 +889,19 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
     <tr><td>一鍵檔 [停止]：不是 UEFI／不是 GPT</td><td>舊機 Legacy 開機</td><td>第 18 章，或排除這台</td></tr>
     <tr><td>一鍵檔 [停止]：可用空間不足</td><td>C 槽不到 12GB</td><td>清理檔案、清空資源回收筒後重跑</td></tr>
     <tr><td>一鍵檔 [停止]：請先插上電源</td><td>筆電用電池</td><td>插電後重跑</td></tr>
-    <tr><td>一鍵檔 [停止]：沒有跑完全部檢查／回報錯誤</td><td>FRD 檢查到問題</td><td>收 <code>C:\deploy</code> 的 <code>agent-dryrun.log</code>、<code>convert-log.txt</code>，看是哪一項 Checked 沒出現</td></tr>
-    <tr><td>結局 2：檢查沒過、FRD 中止</td><td>TPM 需要清除、空間、韌體等</td><td>收三個記錄檔判斷；TPM 類要到現場進 BIOS 清除</td></tr>
+    <tr><td>一鍵檔 [停止]：沒有跑完全部檢查／回報錯誤</td><td>FRD 檢查到問題</td><td>請對方傳桌面的結果檔，看 <code>agent-dryrun.log</code> 裡是哪一項 Checked 沒出現</td></tr>
+    <tr><td>結局 2：檢查沒過、FRD 中止</td><td>TPM 需要清除、空間、韌體等</td><td>收桌面的結果檔判斷；TPM 類要到現場進 BIOS 清除</td></tr>
     <tr><td>模擬測試出現 GetSupportedSize 相關錯誤</td><td>磁碟重組服務設成自動啟動</td><td>agent.toml 加 <code>disable_defragsvc = true</code></td></tr>
     <tr><td>PsExec：拒絕存取（錯誤 5）</td><td>非網域電腦的遠端限制、帳密錯、不是管理員</td><td>第 13 章 reg add；帳號可試 <code>電腦名稱\帳號</code></td></tr>
     <tr><td>PsExec：System error 67／53、逾時</td><td>名稱錯、不同網段、防火牆擋 445</td><td>改用 IP、先 ping；開檔案及印表機共用；網路設私人</td></tr>
     <tr><td>預檢：腳本沒產生結果</td><td>S 模式或防毒擋住</td><td>第 19 章；或改用單台預檢</td></tr>
     <tr><td>有權杖但轉完沒註冊</td><td>權杖錯、不是這個網域的、名額不夠、連不上網</td><td>確認 Wi-Fi／網路線；重產權杖；查授權；必要時照第五部手動註冊</td></tr>
     <tr><td>轉完連不上 Wi-Fi</td><td>密碼錯；企業型 Wi-Fi（802.1X）不支援</td><td>現場手動連；改插網路線</td></tr>
+    <tr><td>想正式轉換，卻停在「這次只做模擬測試，到這裡結束」</td><td><code>$ONLY_TEST</code> 還是 <code>$true</code></td><td>改成 <code>$false</code> 存檔，再雙擊一次</td></tr>
     <tr><td>Gmail 寄不出一鍵檔</td><td>Gmail 擋 .bat</td><td>改用 Google 雲端硬碟連結</td></tr>
     <tr><td>Chrome 下載工具包說「不是常見的下載項目」</td><td>沒有數位簽章，正常現象</td><td>點「下載可疑的檔案」繼續</td></tr>
   </table></div>
-  <p>以上都不是：把畫面截圖和 <code>C:\deploy</code>（一鍵檔）或 <code>C:\ProgramData\frd-deploy</code>（PsExec）裡的記錄檔一起交給技術人員。</p>
+  <p>以上都不是：把畫面截圖和桌面的結果檔、<code>C:\deploy</code>（一鍵檔）或 <code>C:\ProgramData\frd-deploy</code>（PsExec）裡的記錄檔一起交給技術人員。</p>
 </section>
 
 <div class="partbar"><div class="k">PART 5</div><h2>轉完才要 CEU</h2><p>先轉成未受管的 Flex，後來才買 CEU 的情況。</p></div>
@@ -872,7 +961,7 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
   <dl class="terms">
     <dt>ChromeOS Flex</dt><dd>Google 給一般 PC、Mac 用的免費 ChromeOS，裝上後用起來跟 Chromebook 差不多</dd>
     <dt>FRD（Flex Remote Deployment）</dt><dd>Google 官方的遠端轉換工具，在 Windows 上執行 agent.exe 就能把整台轉成 Flex。直接下載，不用申請</dd>
-    <dt>一鍵轉換檔</dt><dd>我們照官方範例腳本做的 <code>一鍵轉換Flex.bat</code>，對方雙擊就自動下載 FRD、檢查、模擬、轉換</dd>
+    <dt>一鍵轉換檔</dt><dd>我們照官方範例腳本做的 <code>一鍵轉換Flex.bat</code>，對方雙擊就自動下載 FRD、檢查、模擬；設定成正式轉換時才會接著轉換</dd>
     <dt>CEU（Chrome Education Upgrade）</dt><dd>買在客戶 Google 網域裡的授權，裝置註冊時扣一個，之後才能集中管理。企業版叫 Chrome Enterprise Upgrade</dd>
     <dt>註冊權杖</dt><dd>客戶管理控制台產生的一串碼，綁在組織單位上，告訴轉好的電腦要註冊到哪裡。不會過期、可重複使用，屬於機密</dd>
     <dt>授權池</dt><dd>客戶買好、還沒用掉的 CEU 名額</dd>
@@ -881,6 +970,8 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
     <dt>InstallStarted</dt><dd>官方記錄事件：所有檢查通過，開始改動硬碟。正式轉換有沒有真的開始，看這個</dd>
     <dt>InstallSkipped</dt><dd>官方記錄事件：模擬結束，<b>或</b>檢查沒過、部署中止。不能單看它判斷成功</dd>
     <dt>dry_run（模擬測試）</dt><dd>FRD 只做檢查、不動硬碟的模式</dd>
+    <dt>$ONLY_TEST（只測試）</dt><dd>一鍵檔的設定。<code>$true</code>（預設）只跑到模擬測試就停並產生結果檔；<code>$false</code> 才會接著正式轉換</dd>
+    <dt>結果檔</dt><dd>一鍵檔結束或停止時放在桌面的 <code>Flex結果-電腦名稱-日期時間.zip</code>，裡面是記錄檔，不含權杖與 Wi-Fi 密碼</dd>
     <dt>UEFI／Legacy BIOS</dt><dd>開機時先跑的韌體，新的叫 UEFI。FRD 只支援 UEFI</dd>
     <dt>GPT／MBR</dt><dd>磁碟分割表格式，UEFI 配 GPT</dd>
     <dt>S 模式</dt><dd>Windows 的限制模式，只能裝 Microsoft Store 的 App</dd>
