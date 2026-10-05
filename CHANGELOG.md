@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.8.2（2026-10-05）
+
+各產品自己的知識庫文章也加上教育部選購名單產品序號，讓只看單篇文章的採購人員也看得到。
+
+- 8 篇加序號標籤（連到 `/software#moe` 完整對照表）：ThingLink、Padlet、Kahoot、Wordwall、Adobe 教育授權、Workspace 版本比較、Google AI Pro for Education 是什麼與費用兩篇
+- 這 8 篇的 dateModified、最後更新與 sitemap lastmod 同步改為 2026-10-05
+
 ## v1.8.1（2026-10-05）
 
 產品加註教育部「校園數位內容與教學軟體」選購名單產品序號（115 年第 1 次 7/29、第 2 次 9/22 公告，編號逐筆對照官方 ODS 名單）。
