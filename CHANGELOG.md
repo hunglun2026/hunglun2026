@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.9.0（2026-10-05）
+
+搜尋與 AI 搜尋（Google、Perplexity、ChatGPT 搜尋等）排名與被引用的基礎工作。
+
+- **結構化資料全部對齊**（`ld.py` 由 29 項紅字到全部一致）：22 頁（採購類 20 頁、`google/intune`、`google/ai-pro-campus`）原本 FAQPage 有題目但頁面看不到，違反 Google 規定，改為在頁面補出可見的「常見問題」區塊，文字與結構化資料逐字相同；`ai-copyright` 題序、`gemini-notebook-expert-intelligence` 引號、`chromeos-flex` 第 3 答連結文字對齊
+- **「重點先看」摘要區塊**（新樣式 `.kb-quick`，`data-quick-answer`）放在三篇主文最前面：`knowledge/gemini`、`knowledge/google-ai-pro-for-education`、`knowledge/google-ai-pro-for-education-cost`，只用文中既有事實，先給答案方便搜尋摘要與 AI 引用
+- `knowledge/gemini` 標題加入「教師」（對應「gemini 教師 免費」「gemini 教師 方案」等實際搜尋字）
+- 確認 PerplexityBot、Perplexity-User、GPTBot、ClaudeBot 以爬蟲身分都能抓到完整頁面（robots.txt 本就放行，Cloudflare 沒有擋）
+- CSS v72
+
 ## v1.8.5（2026-10-05）
 
 教育部選購名單的標示只留產品編號，不再顯示廠商與梯次。

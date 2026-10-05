@@ -477,3 +477,7 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 .pc-item p{margin:0;font-size:.92rem;color:var(--muted)}
 .pc-code{font-variant-numeric:tabular-nums}
 .pc-actions{display:flex;flex-wrap:wrap;gap:8px}
+.kb-quick{margin:22px 0 28px;padding:16px 20px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius);background:var(--bg-soft)}
+.kb-quick h2{margin:0 0 8px;font-size:1.05rem}
+.kb-quick ul{margin:0;padding-left:1.2em}
+.kb-quick li{margin:6px 0;line-height:1.7}
