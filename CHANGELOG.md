@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.9.1（2026-10-05）
+
+分享預覽圖（LINE、Facebook 轉傳連結時顯示的縮圖）由深藍底改成淺色版。
+
+- 全站 154 張 `assets/og/*.png` 重產：白底、上緣 Google 四色條、官方 lockup 標章，標題深色字；舊深色版可用 `gen-og-images.py --dark` 重產
+- 各頁 `og:image`、`twitter:image` 網址加 `?v=2`，讓社群平台抓新圖（換圖時 `OG_VER` 加一）
+
 ## v1.9.0（2026-10-05）
 
 搜尋與 AI 搜尋（Google、Perplexity、ChatGPT 搜尋等）排名與被引用的基礎工作。
