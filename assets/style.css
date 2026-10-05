@@ -466,3 +466,14 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 .moe-code strong{font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .moe-code-vendor{color:var(--muted-faint);font-size:.82rem}
 .moe-code a{margin-left:auto}
+.pc-thumb{margin:16px 0 6px}
+.pc-thumb a{display:inline-block}
+.pc-thumb img{display:block;width:100%;max-width:420px;height:auto;border-radius:12px;border:1px solid var(--line)}
+.pc-thumb figcaption{margin-top:6px;font-size:.82rem;color:var(--muted-faint)}
+.pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:28px;margin-top:28px}
+.pc-item{display:flex;flex-direction:column;gap:12px;padding:14px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-soft)}
+.pc-item img{display:block;width:100%;height:auto;border-radius:10px}
+.pc-item h3{margin:0;font-size:1.1rem}
+.pc-item p{margin:0;font-size:.92rem;color:var(--muted)}
+.pc-code{font-variant-numeric:tabular-nums}
+.pc-actions{display:flex;flex-wrap:wrap;gap:8px}

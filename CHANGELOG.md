@@ -3,6 +3,17 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.8.3（2026-10-05）
+
+產品介紹圖卡：做成鴻綸自己的版本（版面、文案、配色原創），每張附教育部選購名單產品編號，可下載轉傳。
+
+- **新頁 `/software/cards`「產品介紹圖卡」**：Kahoot（1152-0300）、Padlet（1152-0289）、Wordwall（1152-0031）、ThingLink（1152-0097）、Google 教育版全系列、ChromeOS Flex（1152-0286）六張，每張可下載 1080×1080 原圖與複製分享文字；`/software#moe` 表格上方加連結
+- **各產品原位放縮圖**（點圖進總覽頁）：`/software` 的 ThingLink／Padlet／Wordwall／Kahoot 區塊、Google Workspace 與 Google AI Pro 服務頁（Google 套組卡）、ChromeOS Flex 服務頁（Flex 卡）
+- **`/services/chromeos-flex` 新增文字小節「遠端大量部署」**：Intune 推送與遠端指令推送兩條路、整批部署流程（對機型、先模擬、小批試點、分批轉換、序號對帳、集中管理）與不可逆提醒；只寫「提供」與做法，不寫已部署台數
+- 產圖腳本 `sitemap/gen-product-cards.py`（HTML 排版→Playwright→PNG／WebP，改文案重跑即可；`sitemap/` 在 gitignore，只在本機）；新樣式 `.pc-thumb`、`.pc-grid`、`.pc-item`
+- Wordwall 沒有可用的乾淨 logo 檔（現有 webp 無透明通道、黑底有雜訊），圖卡標題改用純文字產品名
+- CSS v71；接進 sitemap、llms.txt、llms-full、搜尋索引與專屬分享圖
+
 ## v1.8.2（2026-10-05）
 
 各產品自己的知識庫文章也加上教育部選購名單產品序號，讓只看單篇文章的採購人員也看得到。

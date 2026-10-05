@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=53" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=70">
+<link rel="stylesheet" href="/assets/style.css?v=71">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -180,6 +180,7 @@ a.gflex-link{font-weight:600;color:#0b5fd9}
   <div class="wrap prose">
     <p>簡單說：您現在用的電腦如果是 Windows 或 Mac，開機越來越慢、常常當機，但硬體其實還堪用，<strong>ChromeOS Flex</strong> 就是幫這台電腦「換腦袋」：洗掉原本的系統，改灌上跟 Chromebook 一模一樣的系統，讓它變年輕。跟<a href="/services/chromebook">直接買全新 Chromebook</a>不同，這個做法不用編列購買新硬體的預算，改成負擔安裝服務與管理授權的費用，比整批換新機便宜，適合手上還有一批堪用舊電腦、想先撐過這一兩年再談汰換的學校或公司。</p>
     <p class="moe-code"><span class="moe-code-label">教育部選購名單產品序號：</span><strong>ChromeOS Flex 系統組合 1152-0286</strong><span class="moe-code-vendor">名單廠商：晶盛科技</span><a href="/software#moe">完整對照表 →</a></p>
+    <figure class="pc-thumb"><a href="/software/cards#flex"><img src="/assets/images/cards/flex-640.webp" width="640" height="640" alt="ChromeOS Flex 系統組合介紹圖卡：舊電腦再利用：遠端大量部署、分批導入與序號對帳、單台 USB 安裝、Education Upgrade 集中管理。教育部選購名單產品編號 1152-0286。鴻綸科技 06-6371192。" loading="lazy" decoding="async"></a><figcaption>點圖看大圖與下載（ChromeOS Flex 系統組合）</figcaption></figure>
 
     <h2>這套系統長什麼樣子</h2>
     <ul class="feature-list" style="margin-top:16px;">
@@ -206,6 +207,28 @@ a.gflex-link{font-weight:600;color:#0b5fd9}
       <p>把電腦的型號、大概數量告訴我們，我們免費幫您確認能不能裝、要準備哪些東西，並抓一份分批換裝的時程與費用估算。</p>
       <a class="btn btn-primary" href="/contact">免費諮詢評估</a>
     </div>
+
+    <h2>遠端大量部署：整批舊電腦不用一台台跑</h2>
+    <p>電腦數量多的時候，一台台插 USB 太慢。除了單台 USB 安裝，我們也提供遠端大量部署的做法，採用 Google 官方的 ChromeOS Flex Remote Deployment（遠端部署）套件，轉換完成後自動註冊進 Google 管理主控台。依學校的網路環境，有兩條路：</p>
+    <div class="spec-table-wrap">
+    <table class="spec-table">
+      <thead><tr><th>做法</th><th>怎麼運作</th><th>適合的情況</th></tr></thead>
+      <tbody>
+        <tr><td>Microsoft Intune 推送</td><td>把部署套件包成安裝程式，由學校既有的 Intune 推送到每台電腦，用結束代碼回報每台的結果</td><td>電腦分散在不同地點或網段、學校已經在用 Intune 管理</td></tr>
+        <tr><td>遠端指令推送</td><td>不經過 MDM，直接對同網段或 VPN 內的一批電腦遠端執行部署，需要各電腦的管理員權限</td><td>電腦集中在同一個教室或機房、想要比較快動手</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h3>整批部署的流程</h3>
+    <ol class="feature-list">
+      <li><strong>先對機型</strong>：只做 Google 通過認證的型號。未列在認證清單的機型，不適用 Chrome Education 的支援服務，我們不建議用在學校。</li>
+      <li><strong>先模擬，不動硬碟</strong>：每種新機型的第一台只跑檢查與模擬測試，確認可以轉換，並產生結果檔回傳。</li>
+      <li><strong>小批試點</strong>：先挑少量電腦實際轉換，確認 Wi-Fi、帳號註冊與管理政策都正常。</li>
+      <li><strong>分批轉換</strong>：依批次逐步擴大，每一批都檢查結果再放下一批。</li>
+      <li><strong>序號對帳</strong>：用電腦序號比對「預計轉換」與「已註冊」的清單，找出沒成功的那幾台。</li>
+      <li><strong>進入集中管理</strong>：轉換完成的電腦出現在管理主控台，搭配 Chrome Education Upgrade 統一設定政策。</li>
+    </ol>
+    <p><strong>注意：</strong>轉換是不可逆的，原本的 Windows 與資料會被清空，請先備份。部署需要 Google 管理主控台的註冊權杖與 Wi-Fi 設定，實際可行性與時程依機型、網路與管理方式評估。想了解整批怎麼規劃，<a href="/contact">告訴我們電腦的型號與大概數量</a>，我們先幫您確認能不能改裝。</p>
 
     <h2>常見問題</h2>
     <details class="faq-item">
@@ -284,7 +307,7 @@ a.gflex-link{font-weight:600;color:#0b5fd9}
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.8.2</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.8.3</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速諮詢">
   <span class="fab-label">線上諮詢</span>

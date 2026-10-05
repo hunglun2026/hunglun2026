@@ -56,6 +56,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 研習紀錄與講義專區（鴻綸科技到校與線上研習的歷次場次紀錄，由本公司 Google 認證講師授課，主題涵蓋 AI 教學應用、Google Workspace 與校園數位工具。場次與主題公開，講義內容僅供參加過研習的老師憑現場公佈的密碼閱讀，未開放對外抓取）：https://www.hunglun.com/tools/training
   - 各場研習講義（例如「用最簡單的應用程式，了解 Vibe Coding 的邏輯」）皆須密碼才能閱讀，內容不對外公開。想安排到校研習請洽 https://www.hunglun.com/services/campus-training
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://www.hunglun.com/software
+- 教育部選購名單產品介紹圖卡（Kahoot、Padlet、Wordwall、ThingLink、Google 教育版、ChromeOS Flex 的產品介紹圖卡與教育部選購名單產品編號，可下載圖片，網址 https://www.hunglun.com/software/cards）
 - 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
 - 常見問題（公司背景與 Google 官方授權身分、學校導入從哪一步開始、可否委託客製開發、服務範圍、系統是否留存學生個資、SEO／GEO／AEO 的差別。**教學與選型類文章不在這裡，在 /knowledge**）：https://www.hunglun.com/faq
 - 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/tools#local-food
