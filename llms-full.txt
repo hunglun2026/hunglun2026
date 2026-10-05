@@ -721,7 +721,7 @@ https://www.hunglun.com/software
 首頁 ／ 數位學習軟體導入
 數位學習軟體導入
 Thinglink、Edpuzzle、Kami、Padlet、Wordwall、Kahoot!、Adobe、Photontree VR 眼鏡等教學工具的採購導入與教師培訓。依教學情境協助挑選合適的組合，並提供教師應用培訓與校園授權規劃。
-最後更新：2026 年 7 月
+最後更新：2026 年 10 月
 導入服務內容
 需求盤點與選型建議：依課程型態、年段與班級規模，評估哪幾套工具真的用得到，避免買了整包卻只用其中一項。
 校園授權採購：協助處理授權方案選擇、報價與請購文件，包含各家不同的計價單位與最低採購數量限制。
@@ -730,6 +730,7 @@ Thinglink、Edpuzzle、Kami、Padlet、Wordwall、Kahoot!、Adobe、Photontree V
 我們代理的軟體
 Thinglink VR360 編輯平台
 ThingLink 是什麼？五種互動教材類型、3D 掃描與校園授權說明 →
+教育部選購名單產品序號：1152-0097名單廠商：鴻綸科技（115 年第 1 次）
 互動式 360 度環景與圖像編輯平台，適合製作虛擬導覽、情境式教材。
 提供六種校園授權方案，皆為一年期校園授權：國小教育授權、國中教育授權、高中職（單一科系）、高中職全校、大專院校（單一系所）、大專院校全校。
 備註：教育方案限校園授權製作教材使用。
@@ -751,6 +752,7 @@ Kami 是什麼？支援格式、跟 Classroom 串接與離線使用 →
 線上批改與標註：可直接在 PDF、圖片上手寫或畫記，並瀏覽套用現成教學範本
 Padlet 校園版
 Padlet 校園版是什麼？跟免費版差在哪 →
+教育部選購名單產品序號：1152-0289名單廠商：晶盛科技（115 年第 2 次）
 線上協作牆，適合課堂共筆與作品展示。校園版方案包含：
 無限制看板數量、無限制學生使用人數
 1 GB 檔案上傳、30 分鐘影片錄製、60 分鐘音訊錄製
@@ -760,6 +762,7 @@ LMS 整合與 SSO 單一登入支援
 共同作業、主題範本、多種展示與分享方式（含 QR Code）
 Wordwall 互動教學遊戲
 Wordwall 是什麼？三種版本怎麼選 →
+教育部選購名單產品序號：1152-0031名單廠商：寶立成（115 年第 1 次）
 互動式教學遊戲與學習單製作，依教學需求分為三種版本：
 版本內容
 基本版 Basic支援建立 3 個活動與使用 12 款標準範本，適合初次試用的老師
@@ -772,6 +775,7 @@ Wordwall 是什麼？三種版本怎麼選 →
 Wordwall 建立教材只要三步：選範本 → 填內容 → 一鍵換成其他遊戲版型
 Kahoot! EDU Standard
 Kahoot! EDU Standard 是什麼？校園版怎麼用 →
+教育部選購名單產品序號：EDU Standard 教師版 1152-0300名單廠商：經典人文教育（115 年第 2 次）
 即時搶答與課堂評量互動，EDU 版核心規格：
 AI 一鍵生成講義：利用 AI Kahoot! Generator 快速產出內容，大幅縮減教師備課時間。
 完美同步主流簡報：支援匯入並同步 Microsoft 與 Google Slides，教學流程不中斷。
@@ -779,6 +783,7 @@ AI 一鍵生成講義：利用 AI Kahoot! Generator 快速產出內容，大幅�
 百人容量：支援多達 100 位學生同時參與，適合各類規模的班級課堂。
 Adobe
 Adobe 教育授權：Creative Cloud 與 Document Cloud 校園方案 →
+教育部選購名單產品序號：K12 教育版 1152-0270名單廠商：展碁國際（115 年第 2 次）
 Creative Cloud：影像、影音、設計與網頁創作工具，校園創作課程與社團作品產出都用得到。
 Document Cloud：PDF 的掃描、編輯、共用與電子簽署，行政文件數位化的基礎。
 教育授權與商用授權的適用對象與計價方式不同，我們會先確認學校適用哪一種再報價。
@@ -790,6 +795,24 @@ Photontree VR 眼鏡是什麼？跟一般 VR 裝置差在哪 →
 180 克、158×88×112mm，戴眼鏡也能直接使用，適合課堂上多位學生輪流體驗。
 出貨內容：VR 眼鏡一組、收納盒一組、說明書一張、PET 包裝盒一組；免費 VR App 上百款可直接下載使用。
 常與 Thinglink VR360 教材、情境教室一起規劃，見 XR 實境互動系統。
+教育部選購名單產品序號對照
+教育部「校園數位內容與教學軟體」選購名單是「115 年度數位學習實施計畫」補助採購的依據。下表是鴻綸科技提供的品項對應的產品序號，請購與驗收文件上可直接填寫。「名單廠商」是該產品在名單上登記的廠商，鴻綸科技為合作廠商。
+產品產品序號名單廠商名單梯次
+Google Workspace for Education Standard1152-0281晶盛科技第 2 次
+Google Workspace for Education Plus1152-0284晶盛科技第 2 次
+Google Workspace for Education Teaching and Learning Upgrade1152-0283晶盛科技第 2 次
+Google Workspace for Education Teaching and Learning Add-on1152-0280碩陽數位科技第 2 次
+Google AI Pro for Education1152-0275碩陽數位科技第 2 次
+Gemini Notebook1152-0282晶盛科技第 2 次
+Google Vids｜AI 影片生成1152-0287晶盛科技第 2 次
+Google 英語練習學習包1152-0288晶盛科技第 2 次
+ChromeOS Flex 系統組合1152-0286晶盛科技第 2 次
+ThingLink VR教學編輯平臺1152-0097鴻綸科技第 1 次
+Padlet1152-0289晶盛科技第 2 次
+Wordwall1152-0031寶立成第 1 次
+Kahoot EDU Standard 教師版1152-0300經典人文教育第 2 次
+Adobe 數位創作與影音設計整合應用軟體 K12 教育版1152-0270展碁國際第 2 次
+依教育部 115 年第 1 次（7 月 29 日公告）與第 2 次（9 月 22 日公告）選購名單整理，最後核對：2026 年 10 月 5 日。名單可能續期或異動，請以 教育部校園數位內容與教學軟體網站 當期公告為準。依該網站常見問題說明，採購單位也可向名單廠商以外的合法登記廠商購買相同產品，驗收時須確認已取得原廠授權證明；需要授權文件請在詢價時告訴我們。
 合作夥伴官方網站
 Google for Education
 ASUS Chromebook
@@ -8270,6 +8293,7 @@ https://www.hunglun.com/services/google-ai-pro
 Google AI Pro for Education 授權導入
 Gemini Pro 教育版帳號開通、導入規劃與教師研習，由 Google 官方授權夥伴交付。
 鴻綸科技是 Google for Education Professional Development Partner，可為學校與機構開通 Google AI Pro for Education（即 Gemini Pro 教育版）授權，並協助完成導入規劃與教師培訓。
+教育部選購名單產品序號：AI Pro 1152-0275、Gemini Notebook 1152-0282、Google Vids 1152-0287名單廠商：碩陽數位科技、晶盛科技完整對照表 →
 Google AI Pro for Education 包含哪些功能
 它不是另一個獨立的 AI 產品，而是把學校既有的 Google Workspace for Education 帳號升級：同一組校園帳號登入，在 Gemini、Gemini Notebook與 Workspace 各應用裡拿到更強的模型與更高的使用額度。
 Gemini 應用程式
@@ -8506,6 +8530,7 @@ Education Plus
 完整方案，包含進階安全與分析選項、各種教學功能
 每個授權另附 20 GB 共用儲存空間；產生數量不限的原創性報告與校內比對；Google Meet 單場會議上限 1,000 人（前 500 人以完整參與者身分加入，其餘以觀看模式加入）
 上表依 Google for Education 官方方案說明整理，實際功能與資格條件以 Google 公告為準。各項升級方案歡迎洽詢 Google 認證授權夥伴鴻綸科技。
+教育部選購名單產品序號：Standard 1152-0281、Plus 1152-0284、T&L Upgrade 1152-0283、T&L Add-on 1152-0280名單廠商：晶盛科技、碩陽數位科技完整對照表 →
 認證培訓三軌
 Google 認證教育家 Level 1／Level 2：提供考前線上練習課程與輔導，協助教師取得個人認證。
 Google 網域管理培訓：對應 Google Workspace Administrator 認證測驗，涵蓋網域重要管理工作實作。考卷購買與報名可洽詢本公司，報名時可指定鴻綸（Hunglun）為培訓單位。
@@ -8755,6 +8780,7 @@ https://www.hunglun.com/services/chromeos-flex
 ChromeOS Flex 舊電腦升級服務：比買新機便宜的延壽方案
 學校或公司裡那些跑得越來越慢、快被淘汰的舊電腦，不用整批換新機，改裝成跟 Chromebook 一樣的「ChromeOS Flex」系統，加上管理授權，就能繼續正常上課、辦公，是採購全新 Chromebook 之外，成本較低的一個選項。這是需要付費的服務（評估、安裝、授權都算在內），不是免費升級。
 簡單說：您現在用的電腦如果是 Windows 或 Mac，開機越來越慢、常常當機，但硬體其實還堪用，ChromeOS Flex 就是幫這台電腦「換腦袋」：洗掉原本的系統，改灌上跟 Chromebook 一模一樣的系統，讓它變年輕。跟直接買全新 Chromebook不同，這個做法不用編列購買新硬體的預算，改成負擔安裝服務與管理授權的費用，比整批換新機便宜，適合手上還有一批堪用舊電腦、想先撐過這一兩年再談汰換的學校或公司。
+教育部選購名單產品序號：ChromeOS Flex 系統組合 1152-0286名單廠商：晶盛科技完整對照表 →
 這套系統長什麼樣子
 作業系統本身是 Google 免費提供的：ChromeOS Flex 這套系統不用另外付軟體授權費，用隨身碟灌到舊電腦裡，取代原本的 Windows 或 macOS；但整套服務仍需要付費，詳見下方「管理授權」說明。
 開機變快、幾乎不用維護：跟 Chromebook 用的是同一套系統，開機通常只要幾秒鐘，系統會自動更新，不太需要 IT 人員三不五時跑去修。

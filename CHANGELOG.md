@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.8.1（2026-10-05）
+
+產品加註教育部「校園數位內容與教學軟體」選購名單產品序號（115 年第 1 次 7/29、第 2 次 9/22 公告，編號逐筆對照官方 ODS 名單）。
+
+- **`/software` 新增「教育部選購名單產品序號對照」**（`#moe`）：14 個品項的產品序號、名單廠商、梯次，並註明名單廠商與鴻綸（合作廠商）的關係、官方 FAQ 對向名單外廠商購買的規定（驗收須有原廠授權證明）
+- **產品旁加序號標籤**（新樣式 `.moe-code`）：ThingLink 1152-0097（名單廠商就是鴻綸科技）、Padlet 1152-0289、Wordwall 1152-0031、Kahoot EDU Standard 教師版 1152-0300、Adobe K12 教育版 1152-0270
+- **服務頁加序號**：Google AI Pro／Gemini Notebook／Vids（google-ai-pro）、Workspace Standard／Plus／T&L Upgrade／T&L Add-on（google-workspace）、ChromeOS Flex（chromeos-flex）
+- 沒登記在兩次名單的 Edpuzzle、Kami、Photontree 不放編號
+- 字型補「寶碁碩陽」，字型 v53、CSS v70、fonts.css v33
+
 ## v1.8.0（2026-10-05）
 
 補強「研習詢問」的承接，針對課程詢問變少做的一輪調整。
