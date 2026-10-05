@@ -816,7 +816,6 @@ Google Workspace for Education Teaching and Learning Add-on1152-0280
 Google AI Pro for Education1152-0275
 Gemini Notebook1152-0282
 Google Vids｜AI 影片生成1152-0287
-Google 英語練習學習包1152-0288
 ChromeOS Flex 系統組合1152-0286
 ThingLink VR教學編輯平臺1152-0097
 Padlet1152-0289

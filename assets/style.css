@@ -465,7 +465,8 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 .moe-code-label{color:var(--muted)}
 .moe-code strong{font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .moe-code-vendor{color:var(--muted-faint);font-size:.82rem}
-.moe-code a{margin-left:auto}
+.moe-code a[href^="/software"]{margin-left:auto}
+.moe-code strong a,.pc-code a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .pc-thumb{margin:16px 0 6px}
 .pc-thumb a{display:inline-block}
 .pc-thumb img{display:block;width:100%;max-width:420px;height:auto;border-radius:12px;border:1px solid var(--line)}
