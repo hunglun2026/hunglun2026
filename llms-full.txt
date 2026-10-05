@@ -913,12 +913,12 @@ https://www.hunglun.com/knowledge
 
 首頁 ／ 知識庫
 教育科技知識庫
-81 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。內容由 Google for Education 認證夥伴整理，每篇都是獨立網址，方便查找與分享。
+82 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。內容由 Google for Education 認證夥伴整理，每篇都是獨立網址，方便查找與分享。
 想看最新的變動與判讀？教育科技觀察寫的是當下發生的事對學校代表什麼；下面這些是系統性的實務指南。
 這裡整理的是我們在學校端實際被問到的問題。與其在每次研習或案場重講一次，不如寫成可以直接引用的文章：授權與方案類回答「該買哪個版本、續約會遇到什麼」，設備採購類回答「載具怎麼選、預算怎麼編」，網站與工具類回答「自己做還是委外、要注意什麼」。
 內容原則是不寫會過期的價格與法規金額門檻，改寫判斷原則與檢查清單；牽涉 Google 產品版本與授權政策的部分，都以官方最新公告為準並附上出處連結。每篇文末標示最後更新日期。
-全部 81
-Google 與 AI 導入 27
+全部 82
+Google 與 AI 導入 28
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 15
 Google Classroom 10
@@ -934,6 +934,8 @@ Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Pl
 2026/10/02
 學校 AI 教師研習怎麼規劃？內容、分場與追蹤研習要教什麼、怎麼分場、半天與全天怎麼排、研習後怎麼追蹤。
 2026/10/02
+學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
+2026/10/05
 學校 AI 助手怎麼選？Claude、ChatGPT、Gemini 比較三者定位比較表，以及 Google AI Pro for Education 加贈 Gemini Notebook 的實際教學用途。
 2026/09/10
 學校行政可以自動化的十件事會議紀錄、活動通知、資料核對，AI 幫得上忙的地方與個資紅線。
@@ -1111,9 +1113,9 @@ https://www.hunglun.com/knowledge/topic/google-ai
 
 首頁 ／ 知識庫 ／ Google 與 AI 導入
 Google 與 AI 導入
-授權方案怎麼選、AI 怎麼真的用在教學與行政上。共 27 篇，每篇都是獨立網址，方便查找與分享。
-全部 81
-Google 與 AI 導入 27
+授權方案怎麼選、AI 怎麼真的用在教學與行政上。共 28 篇，每篇都是獨立網址，方便查找與分享。
+全部 82
+Google 與 AI 導入 28
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 15
 Google Classroom 10
@@ -1127,6 +1129,8 @@ Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Pl
 2026/10/02
 學校 AI 教師研習怎麼規劃？內容、分場與追蹤研習要教什麼、怎麼分場、半天與全天怎麼排、研習後怎麼追蹤。
 2026/10/02
+學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
+2026/10/05
 學校 AI 助手怎麼選？Claude、ChatGPT、Gemini 比較三者定位比較表，以及 Google AI Pro for Education 加贈 Gemini Notebook 的實際教學用途。
 2026/09/10
 學校行政可以自動化的十件事會議紀錄、活動通知、資料核對，AI 幫得上忙的地方與個資紅線。
@@ -1185,8 +1189,8 @@ https://www.hunglun.com/knowledge/topic/gemini
 首頁 ／ 知識庫 ／ Gemini 教育版與 Gemini Notebook
 Gemini 教育版與 Gemini Notebook
 Gemini 教育版怎麼開通與使用，以及 Gemini Notebook 的完整教學系列。共 20 篇，每篇都是獨立網址，方便查找與分享。
-全部 81
-Google 與 AI 導入 27
+全部 82
+Google 與 AI 導入 28
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 15
 Google Classroom 10
@@ -1248,8 +1252,8 @@ https://www.hunglun.com/knowledge/topic/web
 首頁 ／ 知識庫 ／ 數位學習軟體與網站工具
 數位學習軟體與網站工具
 校園常用的數位學習軟體怎麼選，以及網站與系統相關的實務知識。共 15 篇，每篇都是獨立網址，方便查找與分享。
-全部 81
-Google 與 AI 導入 27
+全部 82
+Google 與 AI 導入 28
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 15
 Google Classroom 10
@@ -1297,8 +1301,8 @@ https://www.hunglun.com/knowledge/topic/classroom
 首頁 ／ 知識庫 ／ Google Classroom 教學
 Google Classroom 教學
 從建立課程到成績結算，Classroom 在校園實際會用到的功能與卡關排除。共 10 篇，每篇都是獨立網址，方便查找與分享。
-全部 81
-Google 與 AI 導入 27
+全部 82
+Google 與 AI 導入 28
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 15
 Google Classroom 10
@@ -1336,8 +1340,8 @@ https://www.hunglun.com/knowledge/topic/hardware
 首頁 ／ 知識庫 ／ 校園資訊設備選型與採購
 校園資訊設備選型與採購
 Chromebook、電腦與校園設備怎麼選、怎麼走採購流程。共 5 篇，每篇都是獨立網址，方便查找與分享。
-全部 81
-Google 與 AI 導入 27
+全部 82
+Google 與 AI 導入 28
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 15
 Google Classroom 10
@@ -1365,8 +1369,8 @@ https://www.hunglun.com/knowledge/topic/compliance
 首頁 ／ 知識庫 ／ 校園資安與個資法遵
 校園資安與個資法遵
 個資盤點、資安事件處理與校園法遵要求。共 4 篇，每篇都是獨立網址，方便查找與分享。
-全部 81
-Google 與 AI 導入 27
+全部 82
+Google 與 AI 導入 28
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 15
 Google Classroom 10
@@ -1562,6 +1566,7 @@ Classroom 教學：建課程到成績單
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -1645,6 +1650,7 @@ https://www.hunglun.com/knowledge/security-incident-response
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -1717,6 +1723,7 @@ AI 怎麼幫忙處理校內表單與問卷
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -1785,6 +1792,7 @@ Gemini 教育版怎麼用
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -1867,6 +1875,7 @@ AI 時代的評量設計
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -1956,6 +1965,7 @@ Workspace for Education 資格、申請流程與 Gemini 開通。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -2045,6 +2055,7 @@ AI Pro 包含哪些功能、適合哪些學校。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -2134,6 +2145,7 @@ Gemini 教育版的學生使用與管理設定。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -2241,6 +2253,7 @@ AI Pro 是什麼、適用對象與功能。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -2311,6 +2324,8 @@ Google AI Pro for Education 只能指派給 18 歲以上的使用者，中小學
 方案、費用、採購與研習，學校導入 AI 的完整路徑。
 校內教師研習怎麼規劃才有效
 時數、分場、講師怎麼挑，研習規劃的通用做法。
+學校邀請 AI 研習講師前要準備什麼？
+需求單範本、影響報價的條件與到校流程。
 Gemini 教育版怎麼用？學校導入與管理設定
 Gemini 教育版的學生使用與管理設定。
 管理員視角：Admin Console 怎麼開通與管控 Gemini
@@ -2330,7 +2345,99 @@ AI Pro 包含哪些功能、誰可以用。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
+
+---
+
+## 學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程｜鴻綸科技
+
+https://www.hunglun.com/knowledge/invite-ai-trainer
+
+知識庫 ／ Google 與 AI 導入 ／ 邀請 AI 研習講師前的準備
+學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程
+研習辦得順不順，一半在講師到校前就決定了。這篇整理承辦人要先備齊的資料，讓洽談和排程一次到位。
+這篇適合：負責安排研習的教務處、研發處、資訊組承辦人，以及想先弄清楚流程再詢問的主任與校長。
+作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 5 日
+邀請 AI 研習講師前，承辦人只要先備齊七項資料：對象與人數、想解決的問題、日期與時數、場地與設備、帳號狀態、時數登錄需求，以及經費來源。這些資料不必一次全部確定，但寫得越清楚，講師越能提早抓出適合的內容與場次安排，報價也不會來回確認好幾輪。研習內容與分場怎麼設計，請另見 學校 AI 教師研習怎麼規劃，本文專注在「邀請前要準備什麼」。
+邀請 AI 研習講師前，要先準備哪七項資料？
+七項資料依序是對象、問題、時間、場地、帳號、登錄、經費。沒決定的項目直接寫「待定」即可，講師可以給建議選項。
+研習對象與人數：全校教師、特定領域、行政人員還是主管場。人數會影響要不要分場、需不需要助教。
+想解決的問題：備課太花時間、出題與批改負擔大、公文與通知量多，或是老師對 AI 有疑慮。問題比工具名稱更能決定研習內容。
+日期與時數：半天、全天，還是分次的系列研習；有沒有固定的研習日或共同時段可用。
+場地與設備：電腦教室、一般教室加自備筆電，或是 Chromebook 推車。是否有投影與穩定網路。
+帳號狀態：老師的學校帳號是否已開通、有沒有開啟 Gemini 等 AI 功能、學生帳號是否納入。
+時數登錄需求：是否需要研習證明或登錄文件，依貴校與所屬縣市教育局的規定辦理。
+經費來源：學校自有經費、計畫補助或上級統籌。不同來源的核銷文件與時程不一樣，先講清楚能避免事後補件。
+需求單要怎麼寫？
+需求單用一張表就夠，沒決定的欄位寫「待定」，不要因為資料不全就不敢詢問。下面是我們建議的欄位，複製貼到信件或表單裡填寫即可：
+項目要寫什麼還沒決定時
+學校與窗口學校名稱、承辦人職稱、聯絡電話與信箱必填
+對象與人數教師、行政、學生；大約幾人寫預估範圍，例如 30 到 50 人
+想解決的問題最想先處理的兩三件事寫「想了解 AI 能做什麼」也可以
+日期與時數希望的日期、半天或全天、有無固定時段寫「待定，請建議」
+場地與設備電腦教室、自備筆電或 Chromebook；網路狀況寫現有設備，講師協助評估
+帳號狀態已開通哪些服務、Gemini 是否已開啟寫「不確定」，我們協助檢查
+登錄與經費是否要研習證明、經費來源寫「待定」
+AI 研習的報價會看哪些條件？
+鴻綸科技的研習費用不公開報價，因為同一場研習會因人數、時數、場次、客製程度與到校地點而差異很大。與其給一個不準的數字，我們希望依需求單提供對應的報價。影響報價的條件主要有這幾項：
+總時數與場次數：半天與全天不同，分三場與一場講三次也不同。
+人數與是否需要助教：人數多、實作多時，現場需要有人協助排除操作問題。
+客製程度：用現成模組，或針對貴校的科目、公文流程、校內規範另外設計案例與教材。
+到校地點：交通距離與是否需要安排前一天到場測試。
+是否包含研習後服務：例如課後問答、共備社群或追蹤檢視。
+如果學校已有預算上限，直接寫在需求單上，我們會在預算內調整內容與場次，不會要你先猜價格。
+場地與設備要確認哪些事？
+最常出問題的不是講師，是場地的網路與帳號登入。建議研習前一週至少確認以下幾件事：
+網路：同時連線人數夠不夠、有沒有擋掉 AI 服務或影音網站的過濾設定。
+登入：請兩三位老師先用學校帳號實際登入一次，確認看得到 Gemini 等功能。
+裝置：每位老師是否都有可操作的電腦；Chromebook 要確認有沒有被管理端限制。
+投影與音響：講師的示範畫面要所有人看得清楚。
+座位：實作型研習建議每人看得到螢幕與桌面，避免只剩前排互動。
+從詢問到研習結束，時程怎麼排？
+建議至少預留三到四週：詢問與報價、確認需求與帳號、前置測試、研習當天、課後追蹤。時程越趕，越容易卡在帳號開通與核銷文件。
+詢問與報價：提供需求單，講師回覆建議內容、場次與報價。
+確認與簽核：學校內部簽核，確認日期、時數與經費文件。
+前置檢查：研習前一週，檢查帳號、網路與設備，必要時提前測試。
+研習當天：講師提早到場調整設備，依需求單的內容進行。
+課後追蹤：研習結束後一兩週，收集老師實際用在課堂或行政的例子，決定要不要加開下一場。
+常見的卡關狀況有哪些？
+最常見的有三種：帳號沒開通、網路擋住服務、人數超過原本預估。三種都能在研習前一週的檢查中發現。
+帳號沒開通：實作變成只看示範。先排觀念與規範場，等開通後再排實作。
+網路擋住服務：先請資訊組確認白名單，或準備備用網路。
+人數變多：事先講好可容納的上限，超過就分場，不要硬塞同一場。
+研習時數、分場與追蹤的設計，另見 校內教師研習怎麼規劃才有效；我們目前提供的研習模組與場次紀錄，放在 Google AI 校園研習。
+資料來源與查證（最後查證：2026 年 10 月 5 日）
+本文為鴻綸科技實際到校辦理研習的經驗整理，不涉及特定縣市的行政規定。研習時數登錄、經費核銷與採購方式，請以貴校所屬主管機關最新公告為準。
+常見問題
+邀請 AI 研習講師前，學校最少要先決定什麼？
+最少先決定四件事：研習對象與人數、想解決的問題、希望的日期與時數、場地與設備。其餘像經費來源、時數登錄方式，可以在洽談時一起確認，沒決定也不影響先詢問。
+鴻綸科技的研習費用是多少？
+費用不公開報價。同樣是一場研習，人數、時數、場次、客製程度與到校地點都不同，價格差異很大，所以請提供需求單，我們依內容提供報價。
+研習一定要在電腦教室辦嗎？
+不一定。有電腦教室最方便，每人一台可以邊聽邊做；沒有的話，請老師自備筆電或使用 Chromebook，重點是每個人都能登入學校帳號實際操作，而且場地網路穩定。
+帳號還沒開通可以先辦研習嗎？
+可以辦觀念與規範類的場次，但實作場次建議排在帳號與授權開通之後，否則老師當天登入不了，研習會變成只看示範。
+研習時數要怎麼登錄？
+研習時數的登錄方式依貴校與所屬縣市教育局的規定辦理，細節以主管機關公告為準。邀請講師時，把需要的證明或登錄文件先告知，我們會配合準備。
+💡 這篇對同事也有幫助嗎？
+歡迎複製下面這段文字，分享到貴校的行政或教師群組：
+複製分享文字
+延伸閱讀
+研習怎麼規劃、費用怎麼編、我們提供哪些研習。
+學校 AI 教師研習怎麼規劃？內容、分場與追蹤
+研習要教什麼、怎麼分場、研習後怎麼追蹤。
+校內教師研習怎麼規劃才有效？時數、分場與研習後追蹤
+時數怎麼抓、講師怎麼挑、常見的規劃失誤。
+Google AI 校園研習
+課程模組、對象與近期研習場次。
+Google AI Pro for Education 費用怎麼算？
+授權費用怎麼算、編預算前準備什麼。
+想安排一場到校的 AI 研習？
+把上面的需求單填一填，沒決定的欄位寫「待定」就好，我們會依內容回覆建議的內容、場次與報價。
+填寫研習詢問
+來電 06-6371192
+看校園研習方案 →
 
 ---
 
@@ -2970,6 +3077,7 @@ Google 官方說明是通常 14 個工作天內完成。沒有官方的加速管
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -3054,6 +3162,7 @@ Google Workspace 導入與教育訓練服務 →
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -3095,6 +3204,7 @@ https://www.hunglun.com/knowledge/training-planning
 下一篇：Google AI 校園研習服務 →
 延伸閱讀
 學校 AI 教師研習怎麼規劃：導入 Gemini 後的研習安排 →
+邀請 AI 研習講師前要準備什麼：需求單、報價條件與到校流程 →
 Google AI 校園研習服務 →
 AI 融入教學實務指南 →
 帳號生命週期管理：新生建檔、畢業生轉出與停權 SOP →
@@ -3209,6 +3319,7 @@ Edpuzzle 的 AI 功能可以做什麼？
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：數位學習軟體導入
 來電 06-6371192
+看校園研習方案 →
 看數位學習軟體導入服務 →
 
 ---
@@ -3287,6 +3398,7 @@ ThingLink 跟 Edpuzzle 有什麼不同？要買哪一套？
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：數位學習軟體導入
 來電 06-6371192
+看校園研習方案 →
 看數位學習軟體導入服務 →
 
 ---
@@ -3629,6 +3741,7 @@ Chromebook 與智慧教室建置服務
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園設備與 ChromeOS 方案
 來電 06-6371192
+看校園研習方案 →
 看 Chromebook 與智慧教室建置 →
 
 ---
@@ -3730,6 +3843,7 @@ Chromebook 選購與導入
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：共同供應契約採購
 來電 06-6371192
+看校園研習方案 →
 看標案設備採購服務 →
 
 ---
@@ -3845,6 +3959,7 @@ Gemini 方案比較
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -3961,6 +4076,7 @@ Workspace 導入與認證培訓
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -4316,6 +4432,7 @@ AI 應用與客製工具開發
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4397,6 +4514,7 @@ Google AI Pro for Education 授權導入
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4446,6 +4564,7 @@ Chromebook 與智慧教室建置服務
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園設備與 ChromeOS 方案
 來電 06-6371192
+看校園研習方案 →
 看 Chromebook 與智慧教室建置 →
 
 ---
@@ -4501,6 +4620,7 @@ Google Workspace for Education 導入服務
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -4646,6 +4766,7 @@ Google AI Pro for Education 授權導入
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4695,6 +4816,7 @@ Gemini 教育版怎麼申請、方案怎麼選，我們在 Gemini 方案懶人�
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4750,6 +4872,7 @@ Gemini 系列第 1／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4811,6 +4934,7 @@ Gemini 系列第 2／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4864,6 +4988,7 @@ Gemini 系列第 3／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4923,6 +5048,7 @@ Gemini 系列第 4／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -4972,6 +5098,7 @@ Gemini 生態系教學系列涵蓋 Gemini 在 Gmail、文件、Classroom 等應�
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5029,6 +5156,7 @@ Gemini Notebook 系列第 1／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5085,6 +5213,7 @@ Gemini Notebook 系列第 2／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5141,6 +5270,7 @@ Gemini Notebook 系列第 3／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5197,6 +5327,7 @@ Gemini Notebook 系列第 4／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5250,6 +5381,7 @@ Gemini Notebook 系列第 5／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5302,6 +5434,7 @@ Gemini Notebook 系列第 6／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5356,6 +5489,7 @@ Gemini Notebook 系列第 7／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5410,6 +5544,7 @@ Gemini Notebook 系列第 8／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5464,6 +5599,7 @@ Gemini Notebook 系列第 9／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5517,6 +5653,7 @@ Gemini Notebook 系列第 10／10 篇（完結）・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5568,6 +5705,7 @@ Gemini 系列第 5／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5626,6 +5764,7 @@ Gemini 系列第 6／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5679,6 +5818,7 @@ Gemini 系列第 8／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5731,6 +5871,7 @@ Gemini 系列第 7／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5790,6 +5931,7 @@ Gemini 系列第 9／10 篇・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -5841,6 +5983,7 @@ Gemini 系列第 10／10 篇（完結）・看全部系列
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -6477,6 +6620,7 @@ Google 簡報生成一份投影片要等多久？
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -6677,6 +6821,7 @@ OU 規劃、政策盤點到管理員教育訓練，可以一起走過一輪。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -6761,6 +6906,7 @@ Google Workspace Updates：在 Gemini 應用程式中生成簡報
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -6915,6 +7061,7 @@ SEO／AEO／GEO 搜尋引擎最佳化服務
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：網站與系統開發
 來電 06-6371192
+看校園研習方案 →
 看品牌官網建置服務 →
 
 ---
@@ -7021,6 +7168,7 @@ Thinglink 是互動式 360 度環景與圖像編輯平台。做出來的教材�
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：共同供應契約採購
 來電 06-6371192
+看校園研習方案 →
 看標案設備採購服務 →
 
 ---
@@ -7080,6 +7228,7 @@ Google Classroom 完全指南 →
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：數位學習軟體導入
 來電 06-6371192
+看校園研習方案 →
 看數位學習軟體導入服務 →
 
 ---
@@ -7139,6 +7288,7 @@ Google Classroom 完全指南 →
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：數位學習軟體導入
 來電 06-6371192
+看校園研習方案 →
 看數位學習軟體導入服務 →
 
 ---
@@ -7201,6 +7351,7 @@ Google Classroom 完全指南 →
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：數位學習軟體導入
 來電 06-6371192
+看校園研習方案 →
 看數位學習軟體導入服務 →
 
 ---
@@ -7283,6 +7434,7 @@ OU、群組、裝置盤點怎麼做。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -7355,6 +7507,7 @@ https://www.hunglun.com/knowledge/two-step-verification
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -7515,6 +7668,7 @@ OU、群組、裝置盤點怎麼做。
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -7599,6 +7753,7 @@ AI 時代的評量設計
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -7658,6 +7813,7 @@ Google Classroom 完全指南 →
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：數位學習軟體導入
 來電 06-6371192
+看校園研習方案 →
 看數位學習軟體導入服務 →
 
 ---
@@ -7713,6 +7869,7 @@ Document Cloud 提供 PDF 的掃描、編輯、共用與電子簽署功能，是
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：數位學習軟體導入
 來電 06-6371192
+看校園研習方案 →
 看數位學習軟體導入服務 →
 
 ---
@@ -7772,6 +7929,7 @@ XR 實境互動系統 →
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園設備與 ChromeOS 方案
 來電 06-6371192
+看校園研習方案 →
 看 Chromebook 與智慧教室建置 →
 
 ---
@@ -7846,6 +8004,7 @@ AI 入門百科
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：校園 AI 導入方案
 來電 06-6371192
+看校園研習方案 →
 看 Google AI Pro 授權導入服務 →
 
 ---
@@ -7894,6 +8053,7 @@ https://www.hunglun.com/knowledge/opendata
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：網站與系統開發
 來電 06-6371192
+看校園研習方案 →
 看品牌官網建置服務 →
 
 ---
@@ -7942,6 +8102,7 @@ LINE 官方帳號適合哪些行業或機構經營？
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：網站與系統開發
 來電 06-6371192
+看校園研習方案 →
 看品牌官網建置服務 →
 
 ---
@@ -7990,6 +8151,7 @@ LINE 官方帳號心法
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：網站與系統開發
 來電 06-6371192
+看校園研習方案 →
 看品牌官網建置服務 →
 
 ---
@@ -8046,6 +8208,7 @@ Gemini 方案懶人包
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：Google Workspace 導入與管理
 來電 06-6371192
+看校園研習方案 →
 看 Workspace 導入與培訓服務 →
 
 ---
@@ -8094,6 +8257,7 @@ SEO／AEO／GEO 搜尋引擎最佳化服務
 整理好直接寄給我們，鴻綸科技是 Google for Education Professional Development Partner，會依貴校現況回覆建議方案。
 寄信詢問：網站與系統開發
 來電 06-6371192
+看校園研習方案 →
 看品牌官網建置服務 →
 
 ---
@@ -8430,7 +8594,7 @@ Google for Education 指南：認證夥伴計畫與申請流程 →
 
 ---
 
-## Google AI 校園研習｜K-12 與大學端研習課程｜鴻綸科技
+## 學校 AI 教師研習｜Google 認證講師到校，K-12 與大學端｜鴻綸科技
 
 https://www.hunglun.com/services/campus-training
 
@@ -8487,6 +8651,7 @@ Google 認證考照衝刺：Google 認證教育家 Level 1／Level 2 的題型�
 研習教材與範例檔案會留給學校，另外保留提問管道，事後遇到問題不必重新找人。想要落地率更高的話，建議採系列共備：分次進行、中間留作業，下一次帶著各自的成果回來討論。
 延伸閱讀
 學校 AI 教師研習怎麼規劃：內容、分場與追蹤 →
+邀請 AI 研習講師前要準備什麼：需求單、報價條件與到校流程 →
 Google 認證教育家 Level 1／2 與認證講師指南 →
 Gemini 認證教育家完整指南：考試範圍、語言與授權門檻 →
 Google Workspace for Education 導入與認證培訓 →
