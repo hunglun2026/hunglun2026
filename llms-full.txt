@@ -133,7 +133,7 @@ EVENTS
 2026.09 樹人醫護管理專科學校（高雄）
 到校辦理教師研習，實作 Google 教育工具與 AI 應用於課堂的作法。
 2026.07 吳鳳科技大學（嘉義）
-同日兩個場次、約 60 位教職員，實作 Google AI 於教學與行政。情境示意圖，非現場照片
+同日兩個場次、約 60 位教職員，實作 Google AI 於教學與行政。情境示意圖，非現場照片。
 2026.07 聖功女中（台南）
 到校辦理教師研習，74 位教師參與，實作 Google 教育工具與 AI 課堂應用。
 看更多活動剪影 →
@@ -203,7 +203,7 @@ Google 認證培訓：認證教育家 Level 1／2、網域管理與訓練講師�
 Gemini 現在不是免費就有了嗎？還需要買 AI Pro 嗎？
 2026 年初 Google 已把部分 Gemini 功能下放到免費的教育版，所以「有沒有 Gemini」不再是重點。付費的 Google AI Pro for Education 差在模型等級、深入研究與 Gemini Notebook的使用額度，以及 Workspace 各應用的整合深度。用量不大的話免費版可能就夠。
 授權要買幾套？學生也要一起算嗎？
-依實際要使用的人數計算。要特別注意 2025 年 10 月起已取消「每 4 個學生授權送 1 個教職員授權」，教職員人數要一併編列；2026 年 2 月起 Standard 與 Plus 也改為單一授權類型，既有客戶在續約時才適用。
+依實際要使用的人數計算。要特別注意 2025 年 10 月起已取消「每 4 個學生授權送 1 個教職員授權」，教職員人數要一併編列；2026 年 2 月起 Plus 也改為單一授權類型，既有客戶在續約時才適用。
 可以只找你們做研習，不買授權嗎？
 可以。研習與授權採購是分開的，很多學校是工具早就有，卡在沒人帶著用。研習可以直接用學校既有的帳號與真實情境設計。
 設備採購可以走共同供應契約嗎？
@@ -538,7 +538,7 @@ https://www.hunglun.com/tools
 現場教材連結 hunglun.com/go/0930，需輸入現場公佈的密碼。
 2026/09/17🔒 需密碼
 研習專區：AI 研習完整講義
-僅供研習參加者使用。歷次場次與講義主題見專區首頁，各場教材需輸入現場密碼
+僅供研習參加者使用。歷次場次與講義主題見專區首頁，各場教材需輸入現場密碼。
 2026/09/16🔒 需密碼
 吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）
 現場教材連結 hunglun.com/go/0916，需輸入現場公佈的密碼。
@@ -632,12 +632,9 @@ https://www.hunglun.com/tools/mail
 
 首頁 ／ 資源分享 ／ 寄信小幫手
 寄信小幫手
-研習通知、活動公告、問卷提醒，名單貼上去就能一次寄完，還能逐封帶入收件人的姓名。
-鴻綸科技提供給合作學校與夥伴免費使用。
+研習通知、活動公告、問卷提醒，名單貼上去就能一次寄完，還能逐封帶入收件人的姓名。鴻綸科技提供給合作學校與夥伴免費使用。
 先用「要拿來寄信的那個 Google 帳號」登入
-信是從您自己的 Gmail 寄出去的，寄件者是您、收件人回信也是回到您的信箱，
-所以 Google 需要先確認您是誰。沒有登入的話，下面那一格會是空白，
-或只出現 Google 登入畫面，Google 不允許自家登入畫面被嵌在別的網頁裡，這不是網站故障。
+信是從您自己的 Gmail 寄出去的，寄件者是您、收件人回信也是回到您的信箱，所以 Google 需要先確認您是誰。沒有登入的話，下面那一格會是空白，或只出現 Google 登入畫面，Google 不允許自家登入畫面被嵌在別的網頁裡，這不是網站故障。
 登入並開啟寄信小幫手
 改用其他 Google 帳號
 在新分頁開啟
@@ -653,12 +650,9 @@ https://www.hunglun.com/tools/mail
 寄之前務必檢查
 對外群發請把名單放進密件副本，不要讓所有收件人看到彼此的信箱。
 信箱數量：跟您預期的數字對一下。多一筆少一筆通常是名單貼漏或貼重了。
-Gmail 每日上限：一般 Gmail 帳號一天約 500 位收件人，學校的 Google Workspace 帳號約 2,000 位。
-畫面右上角會顯示今天還能寄幾封，超過會被 Google 暫停一天，大量名單請分兩天寄。
+Gmail 每日上限：一般 Gmail 帳號一天約 500 位收件人，學校的 Google Workspace 帳號約 2,000 位。畫面右上角會顯示今天還能寄幾封，超過會被 Google 暫停一天，大量名單請分兩天寄。
 關於隱私
-信件由您自己的 Gmail 直接寄出，鴻綸科技不經手、也看不到您的名單與信件內容。
-您的寄送紀錄存在您自己雲端硬碟的一份試算表裡。
-鴻綸科技這邊只會留下「哪個帳號、什麼時候、寄了幾封」的用量統計，用來了解工具被使用的情況。
+信件由您自己的 Gmail 直接寄出，鴻綸科技不經手、也看不到您的名單與信件內容。您的寄送紀錄存在您自己雲端硬碟的一份試算表裡。鴻綸科技這邊只會留下「哪個帳號、什麼時候、寄了幾封」的用量統計，用來了解工具被使用的情況。
 💡 這個工具對其他承辦也有幫助嗎？
 歡迎複製下面這段文字，分享到貴校的行政群組或教師群組：
 複製分享文字
@@ -767,7 +761,7 @@ Padlet 校園版是什麼？跟免費版差在哪 →
 1 GB 檔案上傳、30 分鐘影片錄製、60 分鐘音訊錄製
 API 存取權限、使用者管理、內容安全功能、分析控制面板
 LMS 整合與 SSO 單一登入支援
-備註：校園版最低購買數量為 10U。
+備註：校園版最低購買數量為 10U
 共同作業、主題範本、多種展示與分享方式（含 QR Code）
 Wordwall 互動教學遊戲
 Wordwall 是什麼？三種版本怎麼選 →
@@ -809,7 +803,6 @@ Photontree VR 眼鏡是什麼？跟一般 VR 裝置差在哪 →
 教育部選購名單產品序號對照
 教育部「校園數位內容與教學軟體」選購名單是「115 年度數位學習實施計畫」補助採購的依據。下表是鴻綸科技提供的品項對應的產品序號，請購與驗收文件上可直接填寫，各產品的圖卡可在 產品介紹圖卡 下載。
 產品產品序號
-Google Workspace for Education Standard1152-0281
 Google Workspace for Education Plus1152-0284
 Google Workspace for Education Teaching and Learning Upgrade1152-0283
 Google Workspace for Education Teaching and Learning Add-on1152-0280
@@ -893,7 +886,7 @@ ThingLink VR 教學編輯平臺
 看產品介紹 →
 複製分享文字
 Google 教育版全系列
-產品編號：Workspace 1152-0281、1152-0284、1152-0283、1152-0280；Gemini 與 AI 1152-0275、1152-0282、1152-0287
+產品編號：Workspace 1152-0284、1152-0283、1152-0280；Gemini 與 AI 1152-0275、1152-0282、1152-0287
 Google Workspace for Education、Google AI Pro for Education、Gemini Notebook、Google Vids
 AI 與雲端協作整套導入：Gemini 備課出題、文件簡報試算表協作、Classroom 與 Meet 串起教學。
 下載圖片
@@ -922,9 +915,9 @@ https://www.hunglun.com/events
 從 2017 年成為 Google 官方教育合作夥伴至今，我們走進全台各縣市的校園、研習會場與教育展會，累計辦理與參與數十場。以下是留有影像紀錄的部分場次。
 2026
 2026.09.07樹人醫護管理專科學校（高雄）到校辦理教師研習，帶老師在電腦教室實作 Google 教育工具與 AI 應用於課堂的作法。
-2026.07.31吳鳳科技大學（嘉義）同日辦理兩個場次，約 60 位教職員參與，內容為 Google AI 工具在教學與行政的實作應用。情境示意圖，非現場照片
+2026.07.31吳鳳科技大學（嘉義）同日辦理兩個場次，約 60 位教職員參與，內容為 Google AI 工具在教學與行政的實作應用。情境示意圖，非現場照片。
 2026.07聖功女中（台南）到校辦理教師研習，74 位教師參與，帶老師在電腦教室實作 Google 教育工具與 AI 應用於課堂的作法。
-2026.05–06國立高雄師範大學連續辦理 6 場研習，每場 6 小時全天課程，涵蓋 Google AI 工具於課程設計、教材製作與行政應用。情境示意圖，非現場照片
+2026.05–06國立高雄師範大學連續辦理 6 場研習，每場 6 小時全天課程，涵蓋 Google AI 工具於課程設計、教材製作與行政應用。情境示意圖，非現場照片。
 2020
 2020.12台南資訊月於台南資訊月展出 Google for Education 教育解決方案與 Chromebook 行動學習應用。
 2020.03–07OK Google 系列工作坊連續五個月的系列工作坊，帶領教師實作 Google 教育工具於課堂的應用。
@@ -1514,7 +1507,7 @@ Google Pics 上線：AI 生圖修圖進了 Docs 和 Slides，而且預設是開�
 2026/09/03
 Classroom 能自動生成評分量表了：省的是打字，不是判斷8/5 起 3 天全面上線，連免費版都有。省的是打草稿的時間，規準標準還是老師自己訂。
 2026/09/01
-Classroom 也能設定情境感知存取了，但多數學校不用急著鎖8/26 公告，僅 Standard／Plus 版本可用。這是資安控制不是教學功能，直接鎖校園 IP 反而會鎖到自己。
+Classroom 也能設定情境感知存取了，但多數學校不用急著鎖8/26 公告，僅 Education Plus 可用。這是資安控制不是教學功能，直接鎖校園 IP 反而會鎖到自己。
 2026/09/01
 Gemini 圖片的浮水印可以關了：官方設定就能做到，但標註的責任回到人身上8/14 起設定裡新增「媒體浮水印」開關，不必再用第三方工具。SynthID 隱形標記一律保留，學校的標註責任回到規範層。
 2026/08/17
@@ -1748,7 +1741,7 @@ https://www.hunglun.com/knowledge/security-incident-response
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -1999,11 +1992,11 @@ Google AI Pro for Education 是什麼？學校方案與功能一次看懂
 Google AI Pro for Education 是 Google 給教育機構的 AI 加購方案，加在學校既有的 Google Workspace for Education 上，讓同一組學校帳號在 Gemini、Gemini Notebook 與 Gmail、文件、簡報等應用裡，用到更進階的模型與更高的使用額度。它不是另一套 Workspace，也不是個人訂閱的 Google AI Pro。
 重點先看
 它是什麼？加購在 Google Workspace for Education 上的 AI 方案，讓學校帳號用到更進階的模型與更高的使用額度。
-誰可以買、誰可以用？學校需先有 Education Fundamentals、Standard 或 Plus 其中一種；授權只能指派給 18 歲以上的使用者，等於教職員與大專校院學生。
+誰可以買、誰可以用？學校需先有 Education Fundamentals 或 Plus 其中一種；授權只能指派給 18 歲以上的使用者，等於教職員與大專校院學生。
 一定要全校買嗎？不用，授權一人一份，可以只開給部分教職員。
 和學校方案內含的 Gemini 差在哪？差別不在有沒有 Gemini，而在模型等級、使用額度與各應用的整合深度。
 Google AI Pro for Education 是什麼？
-Google AI Pro for Education 是 Google Workspace for Education 的加購方案（add-on），學校必須先具備符合資格的 Workspace for Education 版本，才能購買並指派授權。依 Google 管理說明（2026 年 10 月），目前適用的版本是 Education Fundamentals、Education Standard 與 Education Plus。授權是一人一份，由管理員指派給要使用的帳號，所以可以只開給部分教職員，不必全校一起買。
+Google AI Pro for Education 是 Google Workspace for Education 的加購方案（add-on），學校必須先具備符合資格的 Workspace for Education 版本，才能購買並指派授權。依 Google 管理說明（2026 年 10 月），目前適用的版本是 Education Fundamentals 與 Education Plus。授權是一人一份，由管理員指派給要使用的帳號，所以可以只開給部分教職員，不必全校一起買。
 它的前身叫「Gemini Education」，2025 年 8 月更名為 Google AI Pro for Education。查資料時若看到舊名稱，多半是還沒更新的舊文章。
 Google AI Pro for Education 可以買給哪些人？哪些學生不能用？
 依 Google 官方管理說明，Google AI Pro for Education 只能指派給 18 歲以上的使用者。實務上等於是給教職員與大專校院學生用，國中小與高中職的未成年學生不在這個方案的範圍內。未成年學生能用的 Gemini 功能，來自學校方案本身內含的 Gemini for Education，並依年齡資格與管理員設定開放。
@@ -2028,7 +2021,7 @@ Workspace Studio較高的使用額度把重複的行政流程做成自動化
 反過來說，如果只是少數老師想試試看，方案內含的 Gemini for Education 通常已經夠用，先用一學期再決定也不遲。
 評估前要先確認哪些事？
 先確認學校現有的 Workspace 版本、實際要用的人數、要用在哪幾個情境，以及管理員有沒有時間開設定。這四件事決定了值不值得買、要買多少、買了會不會沒人用：
-現有版本：Fundamentals、Standard 還是 Plus。版本不同，內含的 Gemini 範圍就不同，加購的效益也不同。
+現有版本：Fundamentals 還是 Plus。版本不同，內含的 Gemini 範圍就不同，加購的效益也不同。
 人數：只算 18 歲以上、真的會用的人。授權數就等於實際使用人數。
 情境：先盤點三到五個真實情境（例如公文改寫、家長通知、命題），研習也從這幾個情境開始。沒有先確認情境與第一批使用者，授權容易買了但使用率不高。
 管理設定：授權指派完成後，還要在管理主控台開啟對應的應用程式。老師登入後看不到功能時，除了授權是否已指派，也要檢查應用程式設定與帳號的年齡資格。
@@ -2040,7 +2033,7 @@ Google 官方部落格：BETT 2026 教育版 AI 更新
 方案內容、價格與資格條件以 Google 官方當期公告為準；導入經驗為鴻綸科技實際到校服務的整理。
 常見問題
 Google AI Pro for Education 是什麼？
-Google AI Pro for Education 是加購在 Google Workspace for Education 上的 AI 方案，學校要先訂閱 Education Fundamentals、Standard 或 Plus 其中一種才能加購。它讓學校帳號在 Gemini、Gemini Notebook 與 Gmail、文件、簡報等應用裡，用到更進階的模型與更高的使用額度。
+Google AI Pro for Education 是加購在 Google Workspace for Education 上的 AI 方案，學校要先訂閱 Education Fundamentals 或 Plus 其中一種才能加購。它讓學校帳號在 Gemini、Gemini Notebook 與 Gmail、文件、簡報等應用裡，用到更進階的模型與更高的使用額度。
 學生可以使用 Google AI Pro for Education 嗎？
 依 Google 官方管理說明，Google AI Pro for Education 只能指派給 18 歲以上的使用者，所以國中小與高中職的未成年學生不在範圍內，大專校院學生則可以。未成年學生可用的 Gemini 功能來自學校方案內含的 Gemini for Education，依年齡資格與管理員設定開放。
 Google AI Pro for Education 和個人付費的 Google AI Pro 一樣嗎？
@@ -2111,7 +2104,7 @@ Google 在 Google for Education 方案比較頁公布 AI Pro 的計費方式與�
 以未成年學生為主的中小學：未滿 18 歲的學生不在 AI Pro 的範圍內，授權通常先從要用的教職員算起。學生能用的 Gemini 功能來自學校方案本身內含的部分。
 大專校院：學生多半已滿 18 歲，可以把學生納入，但建議先從教職員或特定系所開始。
 不必全校一起買：授權由管理員逐一指派，可以只開給行政團隊或種子教師。
-順帶一提，Workspace for Education 本身的授權規則也在 2025 到 2026 年改過：2025 年 10 月起取消「每 4 個學生授權搭配 1 個教職員授權」，2026 年 2 月起 Standard 與 Plus 改成不分身分的單一授權。如果學校同時要續約 Workspace，兩筆預算要一起看，細節見 Google Workspace 教育版版本比較與授權變更。
+順帶一提，Workspace for Education 本身的授權規則也在 2025 到 2026 年改過：2025 年 10 月起取消「每 4 個學生授權搭配 1 個教職員授權」，2026 年 2 月起 Plus 改成不分身分的單一授權。如果學校同時要續約 Workspace，兩筆預算要一起看，細節見 Google Workspace 教育版版本比較與授權變更。
 應該全校買，還是先從部分人員開始？
 如果學校仍在試辦階段，可以先從有明確使用情境的行政人員或種子教師開始，再依實際使用情況決定是否擴大。第一批人選可以考慮這三種：
 行政核心：教務、學務、總務的承辦人，公文與通知的量最大，效益最容易看得到。
@@ -2122,7 +2115,7 @@ Google 在 Google for Education 方案比較頁公布 AI Pro 的計費方式與�
 授權費之外，最常被漏掉的是教師研習與 Workspace 本身的續約費用。編預算時可以照這張表逐項確認：
 項目要確認什麼
 AI Pro 授權人數、年約或月繳、是否符合 Education Plus 加購折扣
-Workspace for Education 版本目前是 Fundamentals、Standard 還是 Plus，今年是否也要續約或升級
+Workspace for Education 版本目前是 Fundamentals 還是 Plus，今年是否也要續約或升級
 教師研習場次、時數、對象（行政場、教師場、主管場）
 導入設定管理主控台設定、授權指派、應用程式開關由誰處理
 採購作業走共同供應契約、台銀標或學校自行採購，所需文件與時程
@@ -2186,12 +2179,12 @@ Workspace 版本和 AI Pro 常被混在一起講。這篇把關係理清楚，�
 這篇適合：正在比較方案的資訊組長、Workspace 管理員，以及要決定升級或加購的主任與校長。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 2 日
 下一篇：Google AI Pro for Education 費用怎麼算 →
-Google Workspace for Education 是學校的帳號與協作平台，分 Fundamentals、Standard、Plus 等版本；Google AI Pro for Education 是加購在這些版本上的 AI 方案，不是取代 Workspace 的另一個版本。所以問題不是「選 Workspace 還是選 AI Pro」，而是「現有版本內含的 AI 夠不夠用，要不要再加購」。
+Google Workspace for Education 是學校的帳號與協作平台，分 Fundamentals、Plus 等版本；Google AI Pro for Education 是加購在這些版本上的 AI 方案，不是取代 Workspace 的另一個版本。所以問題不是「選 Workspace 還是選 AI Pro」，而是「現有版本內含的 AI 夠不夠用，要不要再加購」。
 Google AI Pro for Education 和 Workspace for Education 是什麼關係？
-AI Pro 是附加方案，學校必須先有 Education Fundamentals、Education Standard 或 Education Plus，才能加購。Workspace 版本決定的是帳號、儲存空間、管理與資安功能，以及方案內含的 Gemini 範圍；AI Pro 決定的是進階模型、更高額度與 Workspace 各應用的完整 AI 整合。
-另外有一個加購項目叫 Teaching and Learning，可以加在 Fundamentals 或 Standard 上，補的是教學工具，和 AI Pro 不是同一件事。
-Education Fundamentals、Standard、Plus 和 AI Pro 有什麼差別？
-Fundamentals 已經能用 Gemini 應用程式與 Gmail 中的 Gemini，Plus 再加上文件、簡報、表單、試算表、Vids 裡的 Gemini，AI Pro 則補上進階模型、更高額度與 Meet、雲端硬碟、Chat 的完整整合。以下依 Google for Education 方案比較頁與 2026 年 BETT 公告整理。Education Standard 目前不在官方主比較表上，改由授權夥伴銷售，定位是加強管理與資安，表格後另外說明：
+AI Pro 是附加方案，學校必須先有 Education Fundamentals 或 Education Plus，才能加購。Workspace 版本決定的是帳號、儲存空間、管理與資安功能，以及方案內含的 Gemini 範圍；AI Pro 決定的是進階模型、更高額度與 Workspace 各應用的完整 AI 整合。
+另外有一個加購項目叫 Teaching and Learning，可以加在 Fundamentals 上，補的是教學工具，和 AI Pro 不是同一件事。
+Education Fundamentals、Plus 和 AI Pro 有什麼差別？
+Fundamentals 已經能用 Gemini 應用程式與 Gmail 中的 Gemini，Plus 再加上文件、簡報、表單、試算表、Vids 裡的 Gemini，AI Pro 則補上進階模型、更高額度與 Meet、雲端硬碟、Chat 的完整整合。以下依 Google for Education 方案比較頁與 2026 年 BETT 公告整理。
 項目Education FundamentalsEducation Plus加購 Google AI Pro for Education
 類型Workspace 版本（免費）Workspace 版本（付費）AI 附加方案
 Gemini 應用程式可用可用進階模型、深入研究、進階圖像生成，額度較高
@@ -2202,11 +2195,10 @@ Meet、雲端硬碟、Chat 中的 Gemini依官方當期公告依官方當期公�
 進階管理與資安基本完整（資安中心、調查工具等）不改變，沿用原版本
 使用對象全校帳號全校帳號僅限 18 歲以上使用者
 方案內含的 Gemini 功能依年齡資格分階段開放，管理員也可以逐一應用程式開關。表格以 2026 年 10 月 2 日查證的官方資料為準，Google 會持續調整，購買前請以當期公告確認。
-學校已經有 Workspace，Standard、Plus、AI Pro 該怎麼選？
+學校已經有 Workspace，Plus 與 AI Pro 該怎麼選？
 要看學校想用的 AI 功能，現有版本是不是已經內含。可以照學校目前的版本判斷：
 現在是 Fundamentals：先決定缺的是什麼。缺的是資安與管理，加上文件、簡報裡的 Gemini，方向是 Plus；缺的是進階模型、高額度與全面的 AI 整合，方向是加購 AI Pro。兩種都要，就是 Plus 再加 AI Pro。
 現在是 Plus：文件與簡報裡的 Gemini 已經有了，要看老師與行政是否常碰到額度上限，或需要深入研究、Meet 與雲端硬碟的 AI 功能。是的話加購 AI Pro；以一年期承諾購買 50 到 999 個授權時，Plus 學校另有官方折扣。
-現在是 Standard：Standard 重點在資安與管理，內含的 Gemini 範圍較少，想在文件、簡報裡用 AI，要評估加購 Teaching and Learning 或 AI Pro。
 實際是否需要加購，應以學校目前的版本、使用人數、需要的 AI 功能與使用頻率一起判斷。
 選方案時要比較哪些項目？
 至少比較六件事：要用的功能、使用對象與年齡、人數、管理與資安需求、費用與計費方式，以及導入後有沒有人帶研習。我們整理資訊組長在詢價前最常問的問題，可以直接拿來當校內討論的清單：
@@ -2227,7 +2219,7 @@ Google 官方部落格：BETT 2026 教育版 AI 更新
 方案內容、價格與資格條件以 Google 官方當期公告為準；導入經驗為鴻綸科技實際到校服務的整理。
 常見問題
 Google AI Pro for Education 和 Google Workspace for Education 有什麼不同？
-Google Workspace for Education 是學校的帳號與協作平台，分 Fundamentals、Standard、Plus 等版本；Google AI Pro for Education 是加購在這些版本上的 AI 方案，提供進階模型、更高額度與 Workspace 各應用的完整 Gemini 整合，不是取代 Workspace 的版本。
+Google Workspace for Education 是學校的帳號與協作平台，分 Fundamentals、Plus 等版本；Google AI Pro for Education 是加購在這些版本上的 AI 方案，提供進階模型、更高額度與 Workspace 各應用的完整 Gemini 整合，不是取代 Workspace 的版本。
 免費的 Education Fundamentals 有 Gemini 嗎？
 有。依 Google for Education 方案比較頁，Education Fundamentals 可以使用 Gemini 應用程式與 Gmail 中的 Gemini；文件、簡報、表單、試算表、Vids 裡的 Gemini 則要 Education Plus 或 Teaching and Learning，功能依年齡資格與管理員設定開放。
 已經有 Education Plus，還需要買 Google AI Pro for Education 嗎？
@@ -2320,7 +2312,7 @@ AI 軟體能不能透過臺灣銀行共同供應契約採購，必須確認當�
 是否需要搭配教師研習
 預計導入時間與經費來源
 預計走的採購方式
-訂購 Workspace for Education 的 Standard 或 Plus 時，還要提供證明機構符合教育資格的文件，建議連同聯絡窗口一起寫進資訊業務交接資料。
+訂購 Workspace for Education 的 Plus 時，還要提供證明機構符合教育資格的文件，建議連同聯絡窗口一起寫進資訊業務交接資料。
 AI 軟體驗收要確認什麼？
 驗收不只看授權數量對不對，要確認老師登入後真的看得到功能。建議至少做三件事：
 授權指派：到管理主控台確認授權已指派給正確的帳號，數量與合約一致。
@@ -2556,16 +2548,16 @@ https://www.hunglun.com/knowledge/gemini-free-for-teachers-students
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 6 日
 重點先看
 老師有免費的 Gemini 方案嗎？沒有給老師個人的免費訂閱方案。老師最划算的做法是用學校的 Google 教育版帳號登入，Education Fundamentals 是符合資格的學校免費使用。
-學校帳號能用到什麼？官方說明列出：Education Fundamentals、Standard、Plus 都能用 Pro 模型（每 4 小時最多 25 個提示詞）與 Thinking 模型（每天最多 300 個）。
+學校帳號能用到什麼？官方說明列出：Education Fundamentals、Plus 都能用 Pro 模型（每 4 小時最多 25 個提示詞）與 Thinking 模型（每天最多 300 個）。
 學生呢？Google 提供 18 歲以上大學生免費一年的 AI 方案，台灣不在官方排除名單內，兌換期限到 2026 年 12 月 31 日。中小學生則是用學校帳號。
 為什麼不要用個人帳號？2026 年 10 月 9 日起，沒有訂閱的個人帳號只能用 Flash-Lite；學校帳號的對話也不會被人工審查或拿去訓練模型。
 老師有免費的 Gemini 方案嗎？
 Google 沒有給老師個人的免費訂閱方案，但學校的 Google 教育版帳號本來就包含 Gemini，這才是老師的「免費版」。符合資格的學校可以免費使用 Google Workspace for Education Fundamentals，管理員在管理主控台開啟 Gemini 之後，老師用學校帳號登入 gemini.google.com 就能用。
 網路上看到的「免費一年」多半是學生方案，不是教師方案，兩者條件不同，下面分開說明。
 學校帳號能用到哪些模型？額度多少？
-Google 官方說明列出，Education Fundamentals、Standard、Plus 三種版本的 Gemini 額度相同，都能用 Pro 模型。我們 10 月 6 日查詢時，官方說明的內容如下：
+Google 官方說明列出，Education Fundamentals 與 Plus 兩種版本的 Gemini 額度相同，都能用 Pro 模型。我們 10 月 6 日查詢時，官方說明的內容如下：
 學校版本Pro 模型Thinking 模型
-Education Fundamentals／Standard／Plus每 4 小時最多 25 個提示詞每天最多 300 個提示詞
+Education Fundamentals／Plus每 4 小時最多 25 個提示詞每天最多 300 個提示詞
 加購 Google AI Pro for Education同上，另享優先存取同上，另享優先存取
 官方也註明額度可能調整，以帳號當下顯示為準。Gemini App 所有年齡都能使用，部分功能限 18 歲以上。Pro 模型次數不夠用、或需要更長的上下文與優先存取時，才需要評估付費的 Google AI Pro for Education。各方案的完整比較見 Gemini 常見問題與額度限制。
 為什麼老師不要用個人 Gmail 開 Gemini？
@@ -2591,7 +2583,7 @@ Google Gemini 說明中心〈透過工作或學校帳號使用 Gemini 應用程�
 老師可以免費用 Gemini 嗎？
 可以，但不是個人方案，而是用學校的 Google 教育版帳號。符合資格的學校可免費使用 Education Fundamentals，管理員開啟 Gemini 後，老師用學校帳號登入就能用，而且能用到 Pro 模型。
 學校帳號的 Gemini 有使用次數限制嗎？
-有。官方說明列出 Education Fundamentals、Standard、Plus 的 Pro 模型每 4 小時最多 25 個提示詞，Thinking 模型每天最多 300 個提示詞；加購 Google AI Pro for Education 另享優先存取。額度以帳號當下顯示為準。
+有。官方說明列出 Education Fundamentals、Plus 的 Pro 模型每 4 小時最多 25 個提示詞，Thinking 模型每天最多 300 個提示詞；加購 Google AI Pro for Education 另享優先存取。額度以帳號當下顯示為準。
 台灣的大學生可以免費用 Google AI Plus 嗎？
 Google 官方部落格公告，美國以外有提供 Google AI Plus 的 140 多個市場，符合資格的學生可免費使用一年，台灣不在排除名單內。須年滿 18 歲、透過 SheerID 驗證學籍，兌換期限到 2026 年 12 月 31 日，實際以申請時的驗證結果為準。
 為什麼學校帳號的 Gemini 對話刪不掉？
@@ -2873,7 +2865,7 @@ Google 在 Workspace Updates 2026 年 8 月 5 日公告，Classroom 出作業時
 在 Gemini 分頁討論後匯出。邊跟 Gemini 討論規準內容邊調整，確定了再匯出到作業裡。
 出作業畫面按「評分量表」旁的加號，第一個選項就是「生成新評分量表」，標了「新功能」。
 這次比較特別的是：連免費版都有
-公告寫明適用 Education Fundamentals、Standard、Plus 三個版本，這點值得特別提一下。最近幾波 Gemini 相關功能大多限定付費的 Standard／Plus 版（像我們上一篇寫的 Classroom 情境感知存取控制），這次連不用額外付費的 Fundamentals 版都能用，等於大部分學校這週打開 Classroom 就能試看看。
+公告寫明免費的 Education Fundamentals 與付費版都適用，這點值得特別提一下。最近幾波 Gemini 相關功能大多限定付費的 Plus 版（像我們上一篇寫的 Classroom 情境感知存取控制），這次連不用額外付費的 Fundamentals 版都能用，等於大部分學校這週打開 Classroom 就能試看看。
 前提是學校網域要先開啟 Gemini 服務，沒開的話出作業畫面不會出現這個按鈕，方案跟開啟方式的差異見Gemini 教育版怎麼用。
 有一個限制：僅供 18 歲以上使用者
 官方註明這個功能限 18 歲以上使用者使用，不過實務上不太會造成困擾。出作業本來就是老師跟行政人員在操作，學生端從頭到尾看不到這個生成按鈕。這條限制比較像是 Google 對生成式 AI 功能一貫的年齡政策，不是特別針對這個功能加的門檻。
@@ -2896,7 +2888,7 @@ Classroom 出作業畫面完整步驟見Google Classroom 完整操作指南；Ge
 看 AI 融入教學指南
 常見問題
 Classroom 的評分量表自動生成是什麼時候上線的？哪些版本能用？
-Google 於 2026 年 8 月 5 日公告，Rapid Release 與 Scheduled Release 兩種網域都在 3 天內全面上線，涵蓋 Education Fundamentals、Standard、Plus 三個版本，連免費的 Fundamentals 版都可以用，這點跟很多 Gemini 進階功能只給付費版不同。
+Google 於 2026 年 8 月 5 日公告，Rapid Release 與 Scheduled Release 兩種網域都在 3 天內全面上線，涵蓋 Education Fundamentals 與 Plus 兩個版本，連免費的 Fundamentals 版都可以用，這點跟很多 Gemini 進階功能只給付費版不同。
 老師實際上怎麼用這個功能？
 官方公告了三種方式：在出作業的畫面直接請 Gemini 依作業內容生成一份規準草稿；把手邊已經有的規準文件轉換成 Classroom 可用的評分量表格式；或是在 Gemini 分頁跟它一起討論、草擬規準內容再匯出。三種對應的是不同情境：完全沒有規準、已經有舊檔案、還想邊討論邊調整。
 這個功能有年齡限制嗎？學生會不會也看得到這個按鈕？
@@ -2914,13 +2906,13 @@ https://www.hunglun.com/insights/classroom-context-aware-access
 
 教育科技觀察 ／ Classroom 情境感知存取
 Classroom 也能設定情境感知存取了，但多數學校不用急著鎖
-8 月 26 日公告，僅 Standard／Plus 版本可用。這是一項資安存取控制功能，不是教學功能，重點不是「有沒有開」，而是「用哪種邏輯開」。
+8 月 26 日公告，僅 Education Plus 可用。這是一項資安存取控制功能，不是教學功能，重點不是「有沒有開」，而是「用哪種邏輯開」。
 ← 上一篇：評分量表自動生成
 系列第 10／10 篇（完結）・看全部系列
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 1 日
 發生了什麼事
 Google 在 Workspace Updates 2026 年 8 月 26 日公告，Classroom 新增支援情境感知存取（Context-Aware Access，簡稱 CAA）政策。管理員現在可以直接在管理主控台為 Classroom 設定存取條件，依使用者身分、地理位置、裝置安全狀態、IP 位址限制誰能登入使用。
-公告明確寫著目前僅限 Education Standard 與 Education Plus 版本，免費的 Education Fundamentals 版沒有這個選項。如果貴校用的是 Fundamentals，這篇文章先收藏起來，等升級再回來看就好。
+公告明確寫著目前僅限付費版本，免費的 Education Fundamentals 版沒有這個選項。如果貴校用的是 Fundamentals，這篇文章先收藏起來，等升級再回來看就好。
 管理主控台「安全性 → 存取權與資料控管 → 情境感知存取權」，這裡是設定入口，實際規則要另外建立「存取層級」再指派。
 先分清楚：這是資安功能，不是教學功能
 CAA 本身不是新概念，Google 早就用在 Gmail、Drive 這類 Workspace 核心服務上，這次只是把 Classroom 也納進同一套機制。它解決的問題是「哪些人在什麼條件下能進來」，跟 Classroom 裡的作業、成績、AI 功能完全是兩件事。
@@ -2940,7 +2932,7 @@ CAA 的政策可以套用在組織單位（OU）或群組層級，這代表不�
 實際要不要做、做到多嚴，取決於貴校既有的資安規範與資訊組的人力，這裡給的是判斷的方向，不是「照抄就對」的設定值。每間學校的網路環境跟使用習慣不一樣，同一條規則套到別校可能完全不適用。
 建立存取層級時可以新增「情境條件」，之後把層級指派給特定的組織單位或群組，就是「依組織單位分層」實際操作的地方。
 這週資訊組長可以先做的三件事
-確認貴校的 Workspace for Education 版本。不是 Standard 或 Plus 的話，這功能目前用不到，不用花時間找。
+確認貴校的 Workspace for Education 版本。不是 Education Plus 的話，這功能目前用不到，不用花時間找。
 確認是否已經對其他服務設定過情境感知存取政策。如果 Gmail、Drive 早就有一套邏輯，Classroom 這次可以直接沿用，不用重新想一遍。
 真的要設定，先在小範圍的測試 OU 試跑。找一個非核心的組織單位先套用條件、觀察幾天，確認不會誤擋正常登入，再考慮擴大範圍，不要一次套用到全校才發現條件設太嚴。
 管理主控台裡 OU 與群組的結構怎麼規劃，整理在Google 管理主控台校園設定指南；Classroom 各版本的功能差異見Google Classroom 完全指南。
@@ -2953,7 +2945,7 @@ CAA 的政策可以套用在組織單位（OU）或群組層級，這代表不�
 看管理主控台指南
 常見問題
 Classroom 的情境感知存取是什麼時候推出的？哪些版本才能用？
-Google 於 2026 年 8 月 26 日在 Workspace Updates 公告這項功能，目前僅限 Education Standard 與 Education Plus 版本，免費的 Education Fundamentals 版沒有這個選項。
+Google 於 2026 年 8 月 26 日在 Workspace Updates 公告這項功能，目前僅限 Education Plus 版本，免費的 Education Fundamentals 版沒有這個選項。
 這個功能實際上是做什麼的？
 管理員可以在管理主控台為 Classroom 設定情境感知存取政策，依使用者身分、地理位置、裝置安全狀態、IP 位址等條件限制誰能登入使用，本質是資安存取控制，不是新的教學功能。
 學校應該直接把 Classroom 鎖在校園 IP 才能用嗎？
@@ -2961,7 +2953,7 @@ Google 於 2026 年 8 月 26 日在 Workspace Updates 公告這項功能，目�
 資訊組長實際上可以怎麼設定比較合理？
 依組織單位分層考慮，而不是全校套用同一條規則：學生端優先保留彈性，真的要收緊也從最寬鬆的條件開始；教職員與管理員帳號的風險與使用情境不同，可以個別考慮較嚴格的條件。實際要不要做、做到多嚴，取決於學校既有的資安政策與資訊組的量能。
 這週資訊組長可以先做哪些事？
-先確認學校的 Workspace for Education 版本是不是 Standard 或 Plus；確認目前是否已經對其他 Google 服務設定過情境感知存取政策（有的話邏輯可以沿用）；真的要開始設定，先在一個小範圍的測試 OU 試跑，避免一次套用到全校才發現條件設太嚴。
+先確認學校的 Workspace for Education 版本是不是 Education Plus；確認目前是否已經對其他 Google 服務設定過情境感知存取政策（有的話邏輯可以沿用）；真的要開始設定，先在一個小範圍的測試 OU 試跑，避免一次套用到全校才發現條件設太嚴。
 
 ---
 
@@ -3143,7 +3135,7 @@ AI Ultra可用可用可用
 真正該注意的是「用哪個帳號登入」
 官方說明頁開頭就寫明，這次調整是針對「使用個人帳號」的情況。用學校 Workspace 授權登入的帳號，適用的是另一份說明「透過工作或學校帳號使用 Gemini 應用程式」，那份說明也特別提醒：個人帳號的功能與額度跟學校帳號不同。
 我們 10 月 6 日查詢時，學校帳號那份說明列的內容是這樣：
-Education Fundamentals、Standard、Plus：Pro 模型每 4 小時最多 25 次，Thinking 模型每天最多 300 次，Fast 模型一般存取；所有年齡層都可使用（部分功能限 18 歲以上）。
+Education Fundamentals、Plus：Pro 模型每 4 小時最多 25 次，Thinking 模型每天最多 300 次，Fast 模型一般存取；所有年齡層都可使用（部分功能限 18 歲以上）。
 加購 Google AI Pro for Education：次數相同但享有優先存取，上下文長度從 3.2 萬提高到 100 萬，限 18 歲以上使用者。
 資料保護：用學校帳號時，對話與上傳的檔案不會給人工審查，也不會拿去改進生成式 AI 模型。
 換句話說，同一位老師，用個人 Gmail 登入跟用學校帳號登入，10 月 9 日之後拿到的模型會差很多。官方在學校帳號說明頁也註明「額度可能調整」，所以以上數字以帳號當下顯示為準；這次公告沒有提到學校帳號會跟著變。
@@ -3163,7 +3155,7 @@ Pro 模型次數不夠用的老師，可以評估 Google AI Pro for Education；
 10 月 9 日之後，免費的 Gemini 還能用 Pro 模型嗎？
 用個人帳號、沒有訂閱 Google AI 方案的話不行。Google 官方說明頁寫明，從 2026 年 10 月 9 日起，沒有訂閱方案的個人帳號在 Gemini App 只能用 Flash-Lite，Flash 與 Pro 都不能選。
 學校的 Google 教育版帳號會受這次調整影響嗎？
-官方這次公告只針對個人帳號。學校帳號適用另一份說明：Education Fundamentals、Education Standard、Education Plus 的 Gemini App 列有 Pro 模型（每 4 小時最多 25 次）與 Thinking 模型（每天最多 300 次）。官方也註明額度可能調整，以帳號當下顯示為準。
+官方這次公告只針對個人帳號。學校帳號適用另一份說明：Education Fundamentals、Education Plus 的 Gemini App 列有 Pro 模型（每 4 小時最多 25 次）與 Thinking 模型（每天最多 300 次）。官方也註明額度可能調整，以帳號當下顯示為準。
 怎麼確認自己用的是學校帳號還是個人帳號？
 打開 gemini.google.com，點右上角頭像，看登入的電子郵件是不是學校網域。官方也建議看畫面頂端有沒有 Pro 或 Ultra 標章，有的話代表帳號有擴充的功能與模型。
 有訂閱 Google AI Plus 的老師什麼時候會受影響？
@@ -3428,7 +3420,7 @@ Google 官方明確列為不符合資格的機構類型包括：社區中心、�
 有網域之後，超級管理員到 admin.google.com 的「應用程式 › 其他 Google 服務」，找到「生成式 AI › Gemini 應用程式」，依 OU 決定哪些人可以用。Gemini 的基本使用隨 Workspace 版本提供，不必為了「開通 Gemini」另外申請什麼；只有 Google AI Pro for Education 這類進階授權才需要另外訂購。
 開放給學生之前，建議先決定「哪些年段開放」與「對話記錄保留多久」這兩件事。等學生已經開始用再回頭改，說明成本會高很多。細節與實際能做什麼，見 Gemini 教育版怎麼用。
 三個常見誤解
-「申請 Workspace for Education 要錢」：Education Fundamentals 對符合資格的教育機構是免費的。要付費的是 Standard、Teaching and Learning、Plus 這些進階版本，以及額外的授權。
+「申請 Workspace for Education 要錢」：Education Fundamentals 對符合資格的教育機構是免費的。要付費的是 Teaching and Learning、Plus 這些進階版本，以及額外的授權。
 「用學校信箱註冊就是教育版」：不是。用學校信箱去註冊個人 Google 帳號，帳號還是個人的，學校管不到，也不受教育版的資料條款保護。
 「先開帳號給老師用，之後再申請正式的」：老師在個人帳號裡累積的課程、表單與雲端檔案，之後要搬到學校網域是一件麻煩事。順序反過來做，代價會落在老師身上。
 本頁的資格條件、流程與審核時間整理自 Google 官方說明文件，實際規定以 Google 當期公告為準；各校情況不同，需要協助可直接與我們聯繫。
@@ -3447,7 +3439,7 @@ Google Workspace 導入與教育訓練服務 →
 哪些機構不符合 Google Workspace for Education 的申請資格？
 Google 官方列為不符合資格的包括：社區中心、企業內部培訓中心、營利型教育公司、線上課程平台（MOOCs）、軍事學院、博物館、圖書館、醫院、研究機構，以及補習與課後輔導中心。台灣的補習班、才藝班與企業教育訓練部門都在這一類。這類機構仍可使用 Google Workspace 的一般商業版本。
 申請 Google Workspace for Education 要多少錢？
-Education Fundamentals 對符合資格的教育機構是免費的，申請本身也不收費。要付費的是 Standard、Teaching and Learning、Plus 這些進階版本，以及 Google AI Pro for Education 這類額外授權。
+Education Fundamentals 對符合資格的教育機構是免費的，申請本身也不收費。要付費的是 Teaching and Learning、Plus 這些進階版本，以及 Google AI Pro for Education 這類額外授權。
 Gemini 教育版要另外申請嗎？
 不用。Gemini 教育版不是一個獨立申請的產品，而是學校 Workspace for Education 網域裡的一個服務。有網域之後，超級管理員到 admin.google.com 的「應用程式 › 其他 Google 服務 › 生成式 AI › Gemini 應用程式」，依機構單位決定開放給誰即可。只有 Google AI Pro for Education 這類進階授權才需要另外訂購。
 審核要多久？可以加快嗎？
@@ -3462,7 +3454,7 @@ Google 官方說明是通常 14 個工作天內完成。沒有官方的加速管
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -3547,7 +3539,7 @@ Google Workspace 導入與教育訓練服務 →
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -4367,34 +4359,31 @@ Google Workspace 教育版版本比較與授權變更
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 5 日
 下一篇：學校 Google 帳號怎麼申請 →
-教育部選購名單產品序號：Standard 1152-0281、Plus 1152-0284、T&L Upgrade 1152-0283、T&L Add-on 1152-0280完整對照表 →
-如果貴校最近在準備續約，會發現計價方式跟前幾年不一樣了。Google 在 2025 到 2026 年間調整了教育版的授權模式，其中影響最大的是取消了教職員免費授權的搭配配額，以及 Standard 與 Plus 改為單一授權類型。
+教育部選購名單產品序號：Plus 1152-0284、T&L Upgrade 1152-0283、T&L Add-on 1152-0280完整對照表 →
+如果貴校最近在準備續約，會發現計價方式跟前幾年不一樣了。Google 在 2025 到 2026 年間調整了教育版的授權模式，其中影響最大的是取消了教職員免費授權的搭配配額，以及 Plus 改為單一授權類型。
 不過同期也有方向相反的好消息：2026 年起部分 Gemini 功能已下放到含免費版在內的多個方案，不再是付費專屬，詳見下方第五節。
 這篇先說明各方案的定位差異，再整理這次變更的時間點與實際影響。文中不列具體金額，因為各地區與各合作夥伴的方案不同，實際報價請洽詢確認；授權細節請以 Google 官方定價與授權說明為準。
 老師每天實際操作的介面是 Classroom，設定與版本差異見 Google Classroom 完全指南。
 一、各方案的定位
-Google 官網目前主打的是 Fundamentals 與 Plus 兩個方案；Education Standard 已改為僅透過授權夥伴銷售，不再列在官網主比較表，Teaching and Learning 則是加購項目，不是獨立版本，兩者仍實際存在且可購買，只是行銷呈現方式已簡化。
+Google 官網目前主打的是 Fundamentals 與 Plus 兩個方案；Teaching and Learning 則是加購項目，不是獨立版本。
 方案主要定位適合誰
 Education Fundamentals
 免費核心工具：Classroom、Gmail、Meet、文件、表單
 ＋Gmail 中的 Gemini（2026 年起）
 所有符合資格的學校，作為基礎
-Education Standard
-加強管理與資安：資安中心、調查工具、進階裝置管理、記錄檔匯出
-需要稽核、資安管控的學校與大學端
 Teaching and Learning
-加強教學工具，可加購於 Fundamentals 或 Standard 之上
+加強教學工具，可加購於 Fundamentals 之上
 ＋文件／簡報／表單／Vids／試算表中的 Gemini
 重點在課堂應用、暫不需要完整資安模組
 Education Plus
 最完整：涵蓋管理、資安與教學功能
 ＋文件／簡報／表單／Vids／試算表中的 Gemini
 要一次到位、且要用 AI 教學功能的學校
-選擇的第一個分岔點通常不是預算，而是「校內最困擾的是管理還是教學」。如果困擾來自帳號稽核、裝置管控與資安事件追查，方向是 Standard；如果困擾來自課堂工具不足，方向是 Teaching and Learning；兩者都要、又打算導入 AI 教學功能，才是 Plus。
+選擇的第一個分岔點通常不是預算，而是「校內最困擾的是管理還是教學」。如果困擾來自課堂工具不足，方向是 Teaching and Learning；帳號稽核、裝置管控與資安事件追查也要一起顧，或打算導入 AI 教學功能，方向是 Plus。
 二、2025–2026 的三項變更
 這是這次真正影響預算的部分。
-教職員免費授權配額取消：過去 Google 後台是用獨立 SKU 區分身分：買 Education Plus 或 Standard 時，每四個學生授權（Student SKU）可以搭配一個免費的教職員授權（Staff SKU），部分功能（例如 Meet 錄影）也曾預設只開放給 Staff SKU 帳號。這個模式自 2025 年 10 月 1 日起停止銷售給新客戶。之後學生與教職員都需要付費授權，等於原本沒計入預算的教職員人數，現在要一併計算。
-改為單一授權類型：自 2026 年 2 月 1 日起，Education Standard 與 Education Plus 的訂閱不再區分「教職員授權」與「學生授權」，所有授權提供相同功能。管理上變單純，但採購時要以全體使用者總數估算。
+教職員免費授權配額取消：過去 Google 後台是用獨立 SKU 區分身分：買 Education Plus 時，每四個學生授權（Student SKU）可以搭配一個免費的教職員授權（Staff SKU），部分功能（例如 Meet 錄影）也曾預設只開放給 Staff SKU 帳號。這個模式自 2025 年 10 月 1 日起停止銷售給新客戶。之後學生與教職員都需要付費授權，等於原本沒計入預算的教職員人數，現在要一併計算。
+改為單一授權類型：自 2026 年 2 月 1 日起，Education Plus 的訂閱不再區分「教職員授權」與「學生授權」，所有授權提供相同功能。管理上變單純，但採購時要以全體使用者總數估算。
 儲存空間為網域共用：教育版原本的無上限儲存空間已取消，改為每個網域共用一個總量（Fundamentals 為 100 TB），由教師、學生與教職員共同分享，不是每人各自計算。
 三、什麼時候會輪到我們？
 時間點分兩段，這也是很多學校目前「看起來一切照舊」的原因：
@@ -4405,8 +4394,8 @@ Education Plus
 四、續約前該做的四件事
 盤點實際使用人數：包含教師、行政人員與學生。既然不再有身分差異的免費配額，總數就直接等於授權需求。順便清掉已離校但未停用的帳號，那些也會佔用授權。
 查看儲存空間使用量：到管理主控台看目前用量與分布，找出佔用最多的帳號或共用雲端硬碟，決定清理、封存還是加購。
-先釐清困擾來自管理還是教學：這決定往 Standard、Teaching and Learning 還是 Plus 走，比先看價格更能避免買錯方案。
-準備資格認證函：訂購 Standard 與 Plus 需要提供，證明機構符合教育機構資格；續訂時若方案或數量有變動可能需要再次提供。建議連同聯絡窗口一起寫進資訊業務交接資料。
+先釐清困擾來自管理還是教學：這決定往 Teaching and Learning 還是 Plus 走，比先看價格更能避免買錯方案。
+準備資格認證函：訂購 Plus 需要提供，證明機構符合教育機構資格；續訂時若方案或數量有變動可能需要再次提供。建議連同聯絡窗口一起寫進資訊業務交接資料。
 五、2026 年起 Gemini 功能已下放，不再是付費專屬
 這是與授權變更同期、但方向相反的好消息。Google 在 2026 年 1 月的 BETT 教育科技大會宣布，原本需要付費附加方案才有的部分 Gemini 功能，開放給多個 Workspace for Education 版本使用：
 版本可用的 Gemini 功能
@@ -4425,17 +4414,17 @@ Gemini 相關功能包含在哪個方案、以及個人版與教育版在資料�
 Gemini 功能是不是只有付費版才有？
 不是。Google 在 2026 年 1 月的 BETT 教育科技大會宣布，部分原本需要付費附加方案的 Gemini 功能已開放給多個 Workspace for Education 版本：使用免費的 Education Fundamentals 也可以用到 Gmail 中的 Gemini（草擬郵件、建議回覆、摘要長串信件）；Education Plus 與 Teaching and Learning add-on 則涵蓋文件、簡報、表單、Vids 與試算表中的 Gemini。若需要進階模型與更深度的整合，仍可另行加購 Google AI Pro for Education 附加方案。要注意這些功能依年齡資格逐步開放，且管理員可以逐一應用程式開啟或關閉，所以方案有包含不等於使用者立刻看得到，必要時請先檢查管理主控台設定與使用者的年齡類別。
 Google Workspace for Education 有哪幾個方案？
-Google 官網目前主打兩個方案：Education Fundamentals（符合資格的機構可免費使用，包含 Classroom、Gmail、Meet、文件與表單等核心工具）與 Education Plus（最完整的方案，涵蓋管理、資安與教學功能，並包含文件、試算表、簡報等應用程式中的 Gemini 功能）。另外還有 Education Standard（在 Fundamentals 基礎上加入資安中心、資安調查工具、進階裝置管理與記錄檔匯出等管理面功能，目前已改為僅透過授權夥伴銷售）與 Teaching and Learning（以教學工具為主的加購項目，可加購在 Fundamentals 或 Standard 之上）。實際包含項目與銷售通路請以 Google 官方最新公告為準。
+Google 官網目前主打兩個方案：Education Fundamentals（符合資格的機構可免費使用，包含 Classroom、Gmail、Meet、文件與表單等核心工具）與 Education Plus（最完整的方案，涵蓋管理、資安與教學功能，並包含文件、試算表、簡報等應用程式中的 Gemini 功能）。另外還有 Teaching and Learning（以教學工具為主的加購項目，可加購在 Fundamentals 之上）。實際包含項目與銷售通路請以 Google 官方最新公告為準。
 聽說教職員的免費授權取消了，是真的嗎？
-是的。過去 Google 後台其實是用獨立 SKU 區分身分：買 Education Plus 或 Standard 時，每四個學生授權（Student SKU）可以搭配一個免費的教職員授權（Staff SKU），部分功能（例如 Meet 錄影）也曾經預設只開放給拿到 Staff SKU 的帳號。這種「Staff／Student」分開計價的模式自 2025 年 10 月 1 日起停止銷售給新客戶，2026 年 2 月 1 日起既有客戶續約也改成單一授權類型，不再區分身分。對學校最直接的影響是：原本以為只需要為學生數計價的預算，現在要把教職員人數也一併計入，續約時的授權總數與金額會與過去不同。建議在編列下一年度預算前，先確認實際需要的授權數量。
+是的。過去 Google 後台其實是用獨立 SKU 區分身分：買 Education Plus 時，每四個學生授權（Student SKU）可以搭配一個免費的教職員授權（Staff SKU），部分功能（例如 Meet 錄影）也曾經預設只開放給拿到 Staff SKU 的帳號。這種「Staff／Student」分開計價的模式自 2025 年 10 月 1 日起停止銷售給新客戶，2026 年 2 月 1 日起既有客戶續約也改成單一授權類型，不再區分身分。對學校最直接的影響是：原本以為只需要為學生數計價的預算，現在要把教職員人數也一併計入，續約時的授權總數與金額會與過去不同。建議在編列下一年度預算前，先確認實際需要的授權數量。
 「單一授權類型」是什麼意思？對學校有什麼影響？
-自 2026 年 2 月 1 日起，Education Standard 與 Education Plus 的訂閱改為單一授權類型，不再區分「教職員授權」與「學生授權」，所有授權提供相同功能。實務上的好處是指派席次時不必再判斷使用者身分、管理較單純；需要留意的是，既然不再有身分差異，授權數量就等於實際使用人數的總和，採購時要以全體使用者為基礎估算。
+自 2026 年 2 月 1 日起，Education Plus 的訂閱改為單一授權類型，不再區分「教職員授權」與「學生授權」，所有授權提供相同功能。實務上的好處是指派席次時不必再判斷使用者身分、管理較單純；需要留意的是，既然不再有身分差異，授權數量就等於實際使用人數的總和，採購時要以全體使用者為基礎估算。
 這些變更什麼時候會影響到我們學校？
 時間點分兩段：新客戶自 2025 年 10 月 1 日起即適用新的定價與授權模式；既有客戶則是在 2026 年 2 月 1 日之後的續約時才會適用。續約當下 Google 通常會在 3 個工作天內自動把原有的 Staff 授權轉成新的單一授權；沒有自動轉成功的話，續約日起有 30 天的寬限期可以由管理員手動重新指派，寬限期一過，舊的 Staff 授權就會直接下架。也就是說，如果貴校的合約還在期限內，目前看起來一切照舊，但在下一次續約時就會遇到新的計價方式，而且續約完最好進管理主控台確認授權有沒有轉換成功，不要預設它會自己處理好。建議不要等到續約前一個月才處理，提早確認授權數量與預算，比較有調整空間。
 免費版的儲存空間夠用嗎？
 Google 已取消教育版原本的無上限儲存空間，改為每個網域共用一個總量（Fundamentals 為 100 TB），由該網域內的教師、學生與教職員共同分享，而不是每人各自計算。對多數中小學而言這個總量通常足夠，但如果學校長期累積大量影音教材、或有攝影與多媒體課程，就可能較快接近上限。管理上的第一步是先到管理主控台查看目前的使用量與分布，找出佔用最多的帳號或共用雲端硬碟，再決定是清理、封存還是加購空間。
 續訂付費版本需要準備什麼文件？
-訂購 Education Standard 與 Education Plus 需要提供資格認證函，證明機構符合 Google 對教育機構的資格條件；若續訂時方案版本或授權數量有變動，可能需要再次提供。建議把這份文件與相關聯絡窗口一併記錄在學校的資訊業務交接資料中，避免承辦人異動時重新找一輪。實際所需文件與流程請以 Google 官方或合作夥伴的最新說明為準。
+訂購 Education Plus 需要提供資格認證函，證明機構符合 Google 對教育機構的資格條件；若續訂時方案版本或授權數量有變動，可能需要再次提供。建議把這份文件與相關聯絡窗口一併記錄在學校的資訊業務交接資料中，避免承辦人異動時重新找一輪。實際所需文件與流程請以 Google 官方或合作夥伴的最新說明為準。
 💡 這篇對其他資訊組長也有幫助嗎？
 歡迎複製下面這段文字，分享到貴校的資訊組群組：
 複製分享文字
@@ -4463,7 +4452,7 @@ Workspace 導入與認證培訓
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -4726,7 +4715,7 @@ Google 已把自動記錄、錄影與轉錄功能改成需要參與者明確同�
 會議開始前先口頭或用聊天訊息告知「這場會議會錄影／記錄」，讓與會者清楚知情。
 親師座談這類涉及個人資料討論的場合，錄影前更要明確告知，必要時在會議通知裡就先寫清楚。
 錄影檔會存進 Google 雲端硬碟、依會議自動整理到專屬資料夾，方便事後歸檔，但也代表要一併考慮個資保存期限的問題，不是錄完就放著不管。
-另外要注意，能不能錄影本身也跟方案版本有關：Education Fundamentals 與 Education Standard 完全無法錄製會議，不管有沒有取得同意；要能錄影得先有 Education Plus。這項功能過去是跟著「Staff（教職員）」授權走，學生版預設關閉；2026 年單一授權類型上路後，改成由管理員在後台依組織單位（OU）決定開放給誰，不再是看授權身分決定。
+另外要注意，能不能錄影本身也跟方案版本有關：Education Fundamentals 完全無法錄製會議，不管有沒有取得同意；要能錄影得先有 Education Plus。這項功能過去是跟著「Staff（教職員）」授權走，學生版預設關閉；2026 年單一授權類型上路後，改成由管理員在後台依組織單位（OU）決定開放給誰，不再是看授權身分決定。
 五、出席報告：研習核銷最實用的功能
 管理員在後台開啟「出席報告」後，會議主持人（研習主辦人）會在會議結束後自動收到一份出席紀錄，列出誰參加了、參加多久，不用再靠人工點名、截圖或事後比對簽到表。這對線上研習與需要核銷時數的場次特別實用，建議校內固定辦線上研習或會議的單位直接把這項打開。
 六、依年齡或身分開放不同功能
@@ -4734,7 +4723,7 @@ Google 已把自動記錄、錄影與轉錄功能改成需要參與者明確同�
 七、跟 Google Classroom 的整合
 要在 Google Classroom 課程裡直接產生 Meet 連結，該課程的主要授課教師要先確認自己的帳號已開通 Meet，否則課程頁面不會出現視訊連結的選項。多校老師共授一門課時，這點常常被忽略。連結產生不出來，第一個要檢查的不是 Classroom 設定，而是主要授課教師的 Meet 是否已開通。
 八、免費版跟付費版差在哪，要不要升級
-Google Workspace for Education 免費版（Fundamentals）本來就含 Meet，單場會議上限 100 人，多數學校日常遠距課、小型會議都夠用；付費版（Education Standard／Education Plus）單場會議上限提高到 1,000 人（前 500 人以完整參與者身分加入，其餘以觀看模式加入），單場時長與部分安全／分析功能上也更寬裕，適合全校型研習、大型線上活動或需要進階出席分析的單位。這類上限 Google 調整過幾次，規劃大型場次前仍建議直接確認當下的授權版本上限，不要照網路上查到的舊資料抓，方案比較可參考Google Workspace 教育版版本比較。
+Google Workspace for Education 免費版（Fundamentals）本來就含 Meet，單場會議上限 100 人，多數學校日常遠距課、小型會議都夠用；付費版（Education Plus）單場會議上限提高到 1,000 人（前 500 人以完整參與者身分加入，其餘以觀看模式加入），單場時長與部分安全／分析功能上也更寬裕，適合全校型研習、大型線上活動或需要進階出席分析的單位。這類上限 Google 調整過幾次，規劃大型場次前仍建議直接確認當下的授權版本上限，不要照網路上查到的舊資料抓，方案比較可參考Google Workspace 教育版版本比較。
 常見問題
 怎麼避免不相干的人闖進學校的線上會議？
 兩層防護一起用：一是管理主控台的「網域」與「存取權」設定，限制誰能加入貴校建立的會議；二是會議當下開啟「等候室」，讓主持人先確認身分再放行，而不是連結一發出去誰都能直接進來。系統也會在參與者名單裡標示「外部人員」警示，方便主持人一眼看出誰不是校內帳號。
@@ -4747,7 +4736,7 @@ Google Workspace for Education 免費版（Fundamentals）本來就含 Meet，�
 可以只開放老師用某些功能、學生帳號看不到嗎？
 可以。管理主控台支援依年齡（或依組織單位）分開設定 Meet 的功能開關，例如把某些進階功能只開給教職員 OU，學生 OU 維持基本功能，不用整個網域一起開或一起關。實務上會搭配既有的 OU／群組架構一起規劃。
 免費版跟付費版的 Google Meet，校園使用上差在哪？
-主要差在會議人數上限與單場時長的上限：免費版（Fundamentals）單場上限 100 人，付費版（Education Standard／Education Plus）提高到 1,000 人（前 500 人以完整參與者身分加入，其餘以觀看模式加入），也多了進階的安全與分析功能。這類上限 Google 調整過幾次，規劃全校型研習或大型線上活動前，建議直接跟目前的授權版本或我們確認當下的上限，不要照網路上查到的舊數字抓。
+主要差在會議人數上限與單場時長的上限：免費版（Fundamentals）單場上限 100 人，付費版（Education Plus）提高到 1,000 人（前 500 人以完整參與者身分加入，其餘以觀看模式加入），也多了進階的安全與分析功能。這類上限 Google 調整過幾次，規劃全校型研習或大型線上活動前，建議直接跟目前的授權版本或我們確認當下的上限，不要照網路上查到的舊數字抓。
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 2 日（內容依 Google 官方說明整理，功能與方案差異以官方最新公告為準）
 💡 這篇對其他老師或行政同仁也有幫助嗎？
 歡迎複製下面這段文字，分享到貴校的教師或行政群組：
@@ -4933,7 +4922,7 @@ Windows 相容性最廣，多數行政軟體、特定產業軟體都是先出 Wi
 校園電腦教室要怎麼規劃比較合理？
 建議先分清楚用途：一般課堂文書、簡報、線上測驗用途，Chromebook 或入門文書電腦即可；若有特定科系需要跑製圖、程式開發、影音剪輯等專業軟體，才需要規劃較高規格的 Windows 電腦教室。同時要考慮網路頻寬（多台裝置同時上網影音教學會吃頻寬）、電源與空調（電腦教室散熱）、以及集中管理方式（帳號網域、軟體授權管理），避免採購後才發現配套沒跟上。鴻綸科技協助校園規劃電腦教室時，會先實地會勘現有網路與電力配置，再依實際課程需求分階段建議機型，避免規格與預算脫節。
 學校網路常見的問題有哪些？該怎麼改善？
-常見問題包括：Wi-Fi 訊號死角（老舊建築牆體厚、AP 覆蓋不足）、尖峰時段（全校同時上課）頻寬不夠、外部網路(對外連線)頻寬不足導致雲端服務卡頓。改善方向包括：盤點死角補強 AP 布建、依樓層/教室分段管理網路流量、視預算升級對外頻寬、以及區隔行政網與教學網避免互相干擾。校園網路規劃建議請專業廠商實地會勘後規劃，避免憑經驗猜測造成重複施工。
+常見問題包括：Wi-Fi 訊號死角（老舊建築牆體厚、AP 覆蓋不足）、尖峰時段（全校同時上課）頻寬不夠、外部網路（對外連線）頻寬不足導致雲端服務卡頓。改善方向包括：盤點死角補強 AP 布建、依樓層/教室分段管理網路流量、視預算升級對外頻寬、以及區隔行政網與教學網避免互相干擾。校園網路規劃建議請專業廠商實地會勘後規劃，避免憑經驗猜測造成重複施工。
 電腦教室裡的資料安全要注意什麼？
 共用電腦最常見的風險是「上一個使用者的帳號沒登出、檔案留在桌面」。用個別帳號登入而非公用帳號，方便追蹤與權限管理；設定使用完自動登出，或搭配 Deep Freeze 這類還原機制；成績、個資這類敏感資料盡量存在有存取控管的雲端硬碟，不要放本機桌面；作業系統與防毒軟體也要定期更新，降低被入侵風險。
 下一篇：Chromebook 選購指南 →
@@ -5007,7 +4996,7 @@ Google Workspace for Education 導入服務
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -5030,8 +5019,7 @@ Gemini 教育版怎麼用？學校導入、學生使用與管理設定
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 5 日（方案價格可能異動，請以聯繫我們取得的正式報價為準）
 下一篇：Workspace 教育版版本比較 →
 2026 年的兩項更新：①「Gemini Education」附加方案已於 2025 年 8 月更名為 Google AI Pro for Education，「Gemini Education Premium」已停止提供。
-② Google 於 2026 年 1 月宣布，部分 Gemini 功能已下放給多個 Workspace for Education 版本，免費的 Education Fundamentals 也能使用 Gmail 中的 Gemini。
-學校端的完整對照見 Google Workspace 教育版版本比較與授權變更。
+② Google 於 2026 年 1 月宣布，部分 Gemini 功能已下放給多個 Workspace for Education 版本，免費的 Education Fundamentals 也能使用 Gmail 中的 Gemini。學校端的完整對照見 Google Workspace 教育版版本比較與授權變更。
 重點先看
 學校老師要怎麼用到 Gemini 教育版？只要學校有 Google Workspace for Education 帳號（符合資格的教育機構，Education Fundamentals 版本免費），由管理員在管理主控台開啟 Gemini，教師就能用學校帳號登入使用。
 需要另外付費嗎？基本使用隨 Workspace 版本提供；要用進階模型與更高用量，才需另外訂購 Google AI Pro for Education。
@@ -5042,7 +5030,7 @@ Gemini 教育版是什麼
 學校端會遇到的名詞大致是三層：Workspace for Education（帳號與協作工具的底層）、內建的 Gemini 功能（Gmail、文件、簡報、Classroom 裡的 AI）、以及需要另外加購的 Google AI Pro for Education（進階模型與更高用量）。
 2026 年 8 月的重大變更：Classroom 的 Gemini 開放所有年齡
 依 Google Workspace 官方公告，2026 年 8 月 10 日起（網頁版，行動版 8 月 17 日起），Classroom 中的 Gemini 從原本僅限「18 歲以上的高等教育學生」，擴大到 K-12 與高等教育所有年齡的學生。
-適用版本：Education Fundamentals、Standard、Plus 都支援，包含免費的 Fundamentals。
+適用版本：Education Fundamentals、Plus 都支援，包含免費的 Fundamentals。
 管理員預設是「開啟」：控制項為管理主控台的「Gemini in Classroom」。若學校尚未準備好讓未成年學生使用，需要主動針對該組織單位（OU）關閉，不是等它預設關著。
 語言與地區：官方說明為「所有 Classroom 支援的語言、且 Gemini 已推出的地區」。
 這對學校的實際意義：如果貴校已經開通 Gemini，8 月 10 日之後國中小學生在 Classroom 裡就看得到 Gemini 分頁。開學前這幾天是決定政策的時間點，要開放、要限制年級、還是先關閉再逐步開放，建議在學生實際看到之前先決定，並同步公告給老師與家長。
@@ -5059,7 +5047,7 @@ Gemini 教育版是什麼
 依 2026 年 1 月 BETT 的宣布，部分 Gemini 功能已下放到多個教育版版本，免費的 Fundamentals 也能使用 Gmail 中的 Gemini；文件、簡報、表單、Vids、試算表中的 Gemini 則屬於 Plus 與 Teaching and Learning 的範圍，進階模型仍需另購 Google AI Pro for Education。
 其中「簡報中的 Gemini」老師問得最多，包含用 Canvas 生成整份簡報、以及在 Google 簡報裡直接生成可編輯投影片。這兩條路的授權、年齡與語言限制不同，整理在 用 AI 做簡報。
 管理員導入前該確認的四件事
-版本與授權：先確認貴校目前是 Fundamentals、Standard、Teaching and Learning 還是 Plus。版本差異與 2026 年的授權變更整理在這裡，尤其是 2026 年 2 月起 Standard 與 Plus 改為單一授權類型、以及 2025 年 10 月起取消「每 4 個學生送 1 個教職員授權」，這兩項要到續約時才適用，多數學校現在感覺不到。
+版本與授權：先確認貴校目前是 Fundamentals、Teaching and Learning 還是 Plus。版本差異與 2026 年的授權變更整理在這裡，尤其是 2026 年 2 月起 Plus 改為單一授權類型、以及 2025 年 10 月起取消「每 4 個學生送 1 個教職員授權」，這兩項要到續約時才適用，多數學校現在感覺不到。
 組織單位（OU）架構：年齡與年級的差異化開放要靠 OU 切分。如果目前所有人都在同一個 OU，等於只能全開或全關。
 逐一應用程式的開關：Gemini 在 Classroom、Gmail、文件等是分開控制的，「方案有包含」不等於「使用者看得到」。
 使用規範與告知：開放之前先把規範寫清楚並公告，比事後補救容易得多。個資與校園資安的注意事項見 個資法與校園資安須知。
@@ -5114,7 +5102,7 @@ Gemini 個人免費版、個人付費版（Google AI Pro）、教育版/企業�
 Gemini 會不會把我的對話內容拿去訓練模型？
 這是機構導入 Gemini 前最該確認的問題。就目前已知的政策：Gemini 個人免費版與個人付費版（Google AI Pro 消費者訂閱）會將使用者對話內容用於模型訓練，而企業版／機構版／教育版 Workspace 底下的 Gemini 帳號則不會將資料用於訓練模型，這對處理學生個資、公司機密的機構使用者是關鍵差異。實際政策以 Google 官方當下公告為準，建議導入前直接向代理商或 Google 官方確認最新條款。
 國中小的學生也能用 Classroom 裡的 Gemini 嗎？
-可以。依 Google 官方公告，2026 年 8 月 10 日起（網頁版）Classroom 中的 Gemini 從原本僅限 18 歲以上高等教育學生，擴大到 K-12 與高等教育所有年齡的學生，Education Fundamentals、Standard、Plus 都支援。前提是學校管理員已授予存取權，且管理主控台的「Gemini in Classroom」控制項為開啟，該設定預設是開啟的。
+可以。依 Google 官方公告，2026 年 8 月 10 日起（網頁版）Classroom 中的 Gemini 從原本僅限 18 歲以上高等教育學生，擴大到 K-12 與高等教育所有年齡的學生，Education Fundamentals、Plus 都支援。前提是學校管理員已授予存取權，且管理主控台的「Gemini in Classroom」控制項為開啟，該設定預設是開啟的。
 學校不想讓低年級學生使用，可以只關掉某些年級嗎？
 可以，但要靠組織單位（OU）切分。管理員可以針對特定 OU 關閉未成年使用者的存取權限。如果貴校目前所有帳號都在同一個 OU，就只能全開或全關，這種情況建議先規劃 OU 架構再開放。
 免費的 Education Fundamentals 也有 Gemini 嗎？
@@ -5852,7 +5840,7 @@ Gemini Notebook 系列第 7／10 篇・看全部系列
 下一篇：管理員視角：權限設定與資料隱私 →
 Gemini Notebook 有 Google 帳號就能免費用，功能本身在免費版跟付費版之間沒有明顯差異，差別主要在額度上限。這篇整理三個層級各買的是什麼，以及學校該怎麼判斷用不用得到付費方案。
 三個層級：免費版、Education Plus、Teaching and Learning
-目前跟 Gemini Notebook 額度有關的是三個層級：任何 Google 帳號都能用的免費版、教育版付費方案 Education Plus，以及可以加購在 Fundamentals 或 Standard 之上的Teaching and Learning 加購項目。Education Plus 與 Teaching and Learning 在筆記本數量、每個筆記本的來源上限、資訊圖表、測驗卡、練習卡、語音摘要這幾類額度上，都比免費版高出不少。
+目前跟 Gemini Notebook 額度有關的是三個層級：任何 Google 帳號都能用的免費版、教育版付費方案 Education Plus，以及可以加購在 Fundamentals 之上的Teaching and Learning 加購項目。Education Plus 與 Teaching and Learning 在筆記本數量、每個筆記本的來源上限、資訊圖表、測驗卡、練習卡、語音摘要這幾類額度上，都比免費版高出不少。
 這裡刻意不列具體倍數或數字：Google 對這類額度調整得相當頻繁，貼上今天查到的數字，過陣子很可能就不準。實際額度請登入帳號查看畫面上顯示的當下數字，或洽詢授權夥伴確認最新方案內容。
 怎麼判斷免費版夠不夠用
 先看實際用途，不要先看價格：
@@ -6075,14 +6063,14 @@ Gemini 系列第 5／10 篇・看全部系列
 老師端：出作業時直接生成評分量表
 出作業畫面按「評分量表」旁的加號，第一個選項就是「生成新評分量表」：
 出作業畫面按「評分量表」旁的加號，第一個選項就是「生成新評分量表」，標了「新功能」。
-Gemini 會依作業內容生成一份規準草稿，或把手邊已經整理好的規準文件轉換成 Classroom 用得到的格式。這個功能適用 Education Fundamentals、Standard、Plus 三個版本，連免費版都能用，前提是學校網域要先開啟 Gemini 服務。完整的操作細節跟限制，整理在 評分量表自動生成，這裡不重複寫一次。
+Gemini 會依作業內容生成一份規準草稿，或把手邊已經整理好的規準文件轉換成 Classroom 用得到的格式。這個功能適用 Education Fundamentals 與 Plus 兩個版本，連免費版都能用，前提是學校網域要先開啟 Gemini 服務。完整的操作細節跟限制，整理在 評分量表自動生成，這裡不重複寫一次。
 管理員要先開哪個開關？
 管理主控台裡有一個「Gemini in Classroom」的控制項，這個設定預設是開啟的。依 2026 年 8 月 10 日起的官方公告，Classroom 的 Gemini 已經從原本僅限 18 歲以上的高等教育學生，擴大到 K-12 與高等教育所有年齡的學生。不想讓低年級使用的學校，要主動針對該組織單位（OU）關閉，不是等它預設關著，設定方式見 Classroom 的 Gemini 已對所有年齡開啟。
 常見問題
 學生在 Classroom 裡看到的 Gemini 是什麼？
 學生端會看到依課程與作業內容自動產生的抽認卡、練習測驗與學習指南，起始提示也會自動帶入該堂課與該份作業的脈絡，不用自己從零下指令。作業旁還有「Learn with Gemini」的入口，滑到作業上可直接進入，不用切換分頁。
 老師出作業時，Gemini 能幫忙生成評分量表嗎？
-可以。出作業畫面按評分量表旁的加號，第一個選項就是「生成新評分量表」，Gemini 會依作業內容或轉換既有規準文件生成一份草稿。這個功能適用 Education Fundamentals、Standard、Plus 三個版本，連免費版都能用。
+可以。出作業畫面按評分量表旁的加號，第一個選項就是「生成新評分量表」，Gemini 會依作業內容或轉換既有規準文件生成一份草稿。這個功能適用 Education Fundamentals 與 Plus 兩個版本，連免費版都能用。
 管理員要先開哪個開關，學生跟老師才看得到 Gemini？
 管理主控台裡有一個「Gemini in Classroom」的控制項，這個設定預設是開啟的。依 2026 年 8 月 10 日起的官方公告，Classroom 的 Gemini 已經開放給 K-12 與高等教育所有年齡的學生，不想讓低年級使用的學校，需要主動針對該組織單位（OU）關閉。
 評分量表生成出來的草稿可以直接用嗎？
@@ -6133,7 +6121,7 @@ Gemini 系列第 6／10 篇・看全部系列
 OU 架構決定能不能分年級開放
 年齡或年級的差異化開放要靠組織單位（OU）切分。如果貴校目前所有帳號都在同一個 OU，等於只能全開或全關 Gemini，沒辦法只讓高年級用、低年級不用。想做到分層開放，要先規劃好 OU 架構，這部分屬於帳號管理的基本功，不是 Gemini 專屬的設定，做法見 Google 管理主控台校園設定指南。
 開通前的檢查清單
-版本確認：目前是 Fundamentals、Standard 還是 Plus，決定哪些 Gemini 功能能用，方案差異見 Gemini 方案懶人包。
+版本確認：目前是 Fundamentals 還是 Plus，決定哪些 Gemini 功能能用，方案差異見 Gemini 方案懶人包。
 OU 架構：是否已經能做到依年級或身分差異化開放。
 對話記錄政策：保留天數要設多久，開放前先決定。
 使用規範公告：開放之前先把規範寫清楚並公告給老師與家長，比事後補救容易得多。
@@ -6711,10 +6699,10 @@ Classroom 系列文章第 4／10 篇：每天會遇到的兩件事，常見卡�
 哪些功能要付費版本才有？
 卡關排除之後，下一個常見疑問是「這個功能我用得到嗎」。Classroom 本身在所有教育版都能用，差異出現在進階管理與教學工具。各項功能的版本歸屬 Google 會調整，下面是判斷原則，實際請以管理主控台當下顯示的可用狀態為準：
 基本教學功能（課程、作業、評分、公告）：所有版本，含免費的 Fundamentals。
-Classroom 中的 Gemini：Fundamentals、Standard、Plus 都支援。
+Classroom 中的 Gemini：Fundamentals、Plus 都支援。
 Chromebook 課堂管理工具（如專注模式、鎖定畫面）：需要 Education Plus 或 Teaching and Learning，且學生要使用受管理的 Chromebook。這點常被忽略，買了授權但裝置沒納管一樣用不到。
 進階原創性報告、更完整的稽核與資料匯出：屬於付費版本範圍。
-版本之間的完整差異與 2025–2026 的授權變更（取消教職員免費授權、Standard 與 Plus 改單一授權類型），整理在 Google Workspace 教育版版本比較與授權變更。
+版本之間的完整差異與 2025–2026 的授權變更（取消教職員免費授權、Plus 改單一授權類型），整理在 Google Workspace 教育版版本比較與授權變更。
 常見問題
 為什麼學生繳交後我改不動作業內容？
 學生繳交後編輯權會轉移給老師，要點「退回」才能讓學生再編輯。這不是壞掉，是 Classroom 的設計如此，用意是避免繳交後內容被偷改。
@@ -6812,7 +6800,7 @@ Classroom 系列文章第 6／10 篇：全系列難度最高的一篇，近期�
 課程沒有不見，是移到左側導覽了，這是改版後最多人問的一題。三種身分各自看到什麼、身分怎麼切換、能不能切回舊版，完整的畫面說明見Classroom 首頁改版：課程去哪了？
 出處：Google Workspace Updates 官方公告（2026 年 7 月）。
 2026 年 8 月起：Gemini 分頁開放所有年齡
-2026 年 8 月 10 日起（網頁版，行動版 8 月 17 日起），Classroom 中的 Gemini 從原本僅限 18 歲以上高等教育學生，擴大到 K-12 與高等教育所有年齡的學生，Education Fundamentals、Standard、Plus 都支援。
+2026 年 8 月 10 日起（網頁版，行動版 8 月 17 日起），Classroom 中的 Gemini 從原本僅限 18 歲以上高等教育學生，擴大到 K-12 與高等教育所有年齡的學生，Education Fundamentals、Plus 都支援。
 這件事管理員一定要知道的地方是：預設為「開啟」。控制項在管理主控台的「Gemini in Classroom」，若學校尚未準備好讓未成年學生使用，需要主動針對該組織單位（OU）關閉，而不是等它預設關著。完整說明與學生端能做什麼，見 Gemini 教育版怎麼用。
 2026 年新公布的功能：先看清楚哪些是「已經能用」哪些是「試行中」
 Google 在 2026 年初的 BETT 教育科技展公布了幾項 Classroom 新功能，但多數屬於試行計畫（pilot）或尚未公布正式上線日期，導入評估時要分清楚：
@@ -7213,7 +7201,7 @@ OU 規劃、政策盤點到管理員教育訓練，可以一起走過一輪。
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -7768,7 +7756,7 @@ https://www.hunglun.com/knowledge/google-storage
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 6 日
 下一篇：帳號生命週期管理 →
 先搞清楚一件事：這是「共用池」，不是每人一份
-Google for Education 的儲存空間，不管是 Education Fundamentals、Education Standard，還是 Teaching and Learning，基準都是整個網域共用 100TB，不是「每個帳號各自 100GB」這種概念。全校師生的 Google 雲端硬碟、共用雲端硬碟、Gmail 附件、Google 相簿檔案，全部加總算在同一個池子裡。這代表任何一個帳號長期囤積大量檔案，吃掉的是全校共用的額度，不是他自己的。
+Google for Education 的儲存空間，不管是 Education Fundamentals 還是 Teaching and Learning，基準都是整個網域共用 100TB，不是「每個帳號各自 100GB」這種概念。全校師生的 Google 雲端硬碟、共用雲端硬碟、Gmail 附件、Google 相簿檔案，全部加總算在同一個池子裡。這代表任何一個帳號長期囤積大量檔案，吃掉的是全校共用的額度，不是他自己的。
 很多學校收到儲存空間警告時，第一反應是「要不要買更多空間」，但常見的真正原因是沒有人盤點過用量，某幾個帳號累積了多年沒清的檔案。升級之前，先花時間查清楚額度都花在哪，往往比直接升級划算。
 哪些東西會計入額度
 雲端硬碟裡的一般檔案：PDF、圖片、影片、壓縮檔等上傳檔案，含個人雲端硬碟與共用雲端硬碟。
@@ -7799,7 +7787,7 @@ Google 管理主控台有專門的儲存空間報表，能看到：
 資料來源：Google Workspace Admin Help - Overview of Google Workspace for Education storage、Set storage limits。政策與容量數字以 Google 官方最新公告為準。
 常見問題
 Google for Education 的雲端硬碟空間是每個帳號一份，還是大家共用？
-是全網域共用的一個池子，不是每人各自一份配額。Education Fundamentals、Education Standard、Teaching and Learning 這三個版本，基準都是整個網域共用 100TB，全校師生的 Drive、Gmail 附件、共用雲端硬碟、相簿檔案全部算在同一個池子裡，任何一個帳號囤了大量檔案，吃掉的是全校的額度。
+是全網域共用的一個池子，不是每人各自一份配額。Education Fundamentals、Teaching and Learning，基準都是整個網域共用 100TB，全校師生的 Drive、Gmail 附件、共用雲端硬碟、相簿檔案全部算在同一個池子裡，任何一個帳號囤了大量檔案，吃掉的是全校的額度。
 哪些東西會計入這 100TB？哪些不會？
 會計入的：Google 雲端硬碟裡的檔案（含共用雲端硬碟）、Gmail 信件與附件、Google 相簿裡的相片影片。要注意的是，2022年5月起，新建立或編輯過的 Google 文件、試算表、簡報、表單、繪圖檔案也開始計入容量，不再是「Google 原生格式不佔空間」的舊規則，這點很多學校還沒更新認知。
 空間快用完的時候，Google 會怎麼處理？
@@ -7828,7 +7816,7 @@ OU、群組、裝置盤點怎麼做。
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -7901,7 +7889,7 @@ https://www.hunglun.com/knowledge/two-step-verification
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -8062,7 +8050,7 @@ OU、群組、裝置盤點怎麼做。
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -8604,7 +8592,7 @@ Gemini 方案懶人包
 學校正在規劃 Workspace 導入或調整？
 不論是新導入、版本變更還是管理設定調整，先備妥這幾項：
 教職員與學生帳號數
-目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）
+目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）
 這次想解決的主要問題（儲存空間、資安、帳號管理或其他）
 是否需要管理員教育訓練
 預計處理時間
@@ -8890,7 +8878,7 @@ Google Workspace for Education 導入與認證培訓
 網域建置與管理主控台設定：組織架構規劃、使用者派發、安全性與共用政策設定。
 校園數位轉型顧問：協助規劃無紙化流程，逐步導入雲端協作。
 Google Workspace for Education 版本比較
-Education Fundamentals 有靈活安全的工具可供符合資格的教育機構免費使用；如果需要更強大的功能，可選擇 Education Standard、Teaching and Learning 加購項目或 Education Plus。Google 官網目前主打的是 Fundamentals 與 Plus 兩個方案，Standard 已改為僅透過授權夥伴銷售、不再列在官網主比較表，實際採購方式請洽詢確認。
+Education Fundamentals 有靈活安全的工具可供符合資格的教育機構免費使用；如果需要更強大的功能，可選擇 Teaching and Learning 加購項目或 Education Plus。
 方案
 定位
 儲存空間與重點功能
@@ -8898,10 +8886,6 @@ Education Fundamentals
 免費版本
 提供安全的學習協作平台
 整個網域共享 100 TB 雲端儲存空間；Standard 支援服務（說明中心、產品論壇、群組通訊、使用指南與常見問題）；符合資格的教育機構可免費使用
-Education Standard
-付費版本
-進階安全與分析工具，可提供更安全的學習環境
-儲存空間和 Education Fundamentals 相同
 Teaching and Learning
 加購項目
 為教育工作者加強的工具，讓視訊溝通與課程更豐富，也有助於維護學術誠信
@@ -8911,7 +8895,7 @@ Education Plus
 完整方案，包含進階安全與分析選項、各種教學功能
 每個授權另附 20 GB 共用儲存空間；產生數量不限的原創性報告與校內比對；Google Meet 單場會議上限 1,000 人（前 500 人以完整參與者身分加入，其餘以觀看模式加入）
 上表依 Google for Education 官方方案說明整理，實際功能與資格條件以 Google 公告為準。各項升級方案歡迎洽詢 Google 認證授權夥伴鴻綸科技。
-教育部選購名單產品序號：Standard 1152-0281、Plus 1152-0284、T&L Upgrade 1152-0283、T&L Add-on 1152-0280完整對照表 →
+教育部選購名單產品序號：Plus 1152-0284、T&L Upgrade 1152-0283、T&L Add-on 1152-0280完整對照表 →
 點圖看大圖與下載（Google 教育版全系列）
 認證培訓三軌
 Google 認證教育家 Level 1／Level 2：提供考前線上練習課程與輔導，協助教師取得個人認證。
@@ -8919,12 +8903,12 @@ Google 網域管理培訓：對應 Google Workspace Administrator 認證測驗�
 Google 認證訓練講師（Certified Trainer）：申請前須先通過 Level 1、Level 2 與 Trainer Essential 三項基本證書，並備妥至少 10 小時 Google App 應用培訓時數與個人履歷、培訓案例研究，以及 1 分鐘自我介紹加 2 分鐘 Google App 應用說明影片；官方每年開放 12 次申請。
 2025–2026 的三項授權變更，續約前一定要先看
 取消「每 4 個學生授權送 1 個免費教職員授權」（2025 年 10 月起）：以往學校常靠這個比例把教職員授權吸收掉，現在學生與教職員都要各自計算，預算要重編。
-Standard 與 Plus 改為單一授權類型（2026 年 2 月起）：不再分教職員授權與學生授權，功能相同，授權數＝總使用人數。
+Plus 改為單一授權類型（2026 年 2 月起）：不再分教職員授權與學生授權，功能相同，授權數＝總使用人數。
 既有客戶要到續約時才適用：所以多數學校現在看起來一切照舊，真正撞到是下次續約。建議在編列下年度預算前先重算一次，我們可以協助試算。
 上述依 Google for Education 官方公告整理，實際生效條件與計價請以 Google 或授權夥伴當期公告為準。
 常見問題
 學校要用哪一個版本？免費的 Fundamentals 不夠嗎？
-如果只需要帳號、Classroom、雲端硬碟與 Meet 的基本協作，Fundamentals 通常就夠。會需要付費升級的通常是三種情況：要進階資安與稽核（Standard）、要原創性報告與更完整的教學工具（Teaching and Learning），或要一次到位含大型會議與完整分析（Plus）。我們會先盤點貴校實際卡住的環節再建議，不會直接推最貴的。
+如果只需要帳號、Classroom、雲端硬碟與 Meet 的基本協作，Fundamentals 通常就夠。會需要付費升級的通常是兩種情況：要原創性報告與更完整的教學工具（Teaching and Learning），或要進階資安與稽核、大型會議與完整分析一次到位（Plus）。我們會先盤點貴校實際卡住的環節再建議，不會直接推最貴的。
 導入網域要花多久？現有的信箱與資料怎麼辦？
 單純建置網域與管理主控台設定通常一到兩週。若要從既有系統搬移信箱、雲端檔案或帳號資料，時程取決於資料量與來源系統，我們會先做一次盤點再排搬移批次，通常安排在寒暑假或連假執行，降低對師生的影響。
 Google 認證教育家 Level 1、Level 2 有什麼差別？

@@ -3,6 +3,17 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.12.0（2026-10-06）
+
+全站斷行、標點、留白在手機／平板／電腦三種寬度徹底檢查，並全站移除 Google Workspace for Education Standard 品項。
+
+- 斷行：內文避免最後一行只剩一兩個字，標題、表格、清單、麵包屑、按鈕各行長度平均；清單拿掉 `word-break: keep-all`（標點會被擠到行首）；表格每格至少 5 字寬，電腦版第一欄不再強制不換行（長句會把其他欄擠成一字一行，/knowledge/ai-copyright 原本就壞）；程式碼字型的中文改接 Noto Sans TC
+- 標點：圖說與說明補句號、清單句尾統一、半形括號改全形、原始碼中文換行造成的多餘空格移除
+- 留白：文章結尾按鈕框與詢問框之間、區塊開頭標題的上邊距、清單項目間距收斂；首頁直向螢幕（手機、平板）首屏與照片上方留白縮小
+- 修正 /knowledge/gemini-notebook-updates 頁首兩個 meta 標籤壞掉、畫面露出「P26 最新異動…">」（9/14 起）
+- 移除 Education Standard：版本比較表、教育部選購名單序號 1152-0281、Google 產品圖卡、30 頁文章與 llms.txt 內的提及
+- 新檢查工具：`sitemap/check-linebreak.py`（三寬度斷行）、`sitemap/check-punct.py`（標點）；`check-whitespace.py` 先載入延遲載入圖片再量、可指定寬度
+
 ## v1.11.2（2026-10-06）
 
 `/tools` 更正收費說明：研習專區是付費研習的學員專用，其他工具全部免費。

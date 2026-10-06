@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=57" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=76">
+<link rel="stylesheet" href="/assets/style.css?v=77">
 <title>學校雲端硬碟空間不足怎麼辦：100TB共用池監控與清理策略｜鴻綸科技</title>
 <meta name="description" content="Google for Education 的儲存空間是全網域共用的一個池子，不是每人一份。這篇說明 100TB 共用池怎麼運作、快撞到配額時管理員在管理主控台能看到什麼、常見的空間佔用大戶，以及升級方案與清理兩條解法怎麼選。">
 <link rel="canonical" href="https://www.hunglun.com/knowledge/google-storage">
@@ -46,7 +46,7 @@
   "@type": "FAQPage",
   "dateModified": "2026-09-06",
   "mainEntity": [
-    { "@type": "Question", "name": "Google for Education 的雲端硬碟空間是每個帳號一份，還是大家共用？", "acceptedAnswer": { "@type": "Answer", "text": "是全網域共用的一個池子，不是每人各自一份配額。Education Fundamentals、Education Standard、Teaching and Learning 這三個版本，基準都是整個網域共用 100TB，全校師生的 Drive、Gmail 附件、共用雲端硬碟、相簿檔案全部算在同一個池子裡，任何一個帳號囤了大量檔案，吃掉的是全校的額度。" } },
+    { "@type": "Question", "name": "Google for Education 的雲端硬碟空間是每個帳號一份，還是大家共用？", "acceptedAnswer": { "@type": "Answer", "text": "是全網域共用的一個池子，不是每人各自一份配額。Education Fundamentals、Teaching and Learning，基準都是整個網域共用 100TB，全校師生的 Drive、Gmail 附件、共用雲端硬碟、相簿檔案全部算在同一個池子裡，任何一個帳號囤了大量檔案，吃掉的是全校的額度。" } },
     { "@type": "Question", "name": "哪些東西會計入這 100TB？哪些不會？", "acceptedAnswer": { "@type": "Answer", "text": "會計入的：Google 雲端硬碟裡的檔案（含共用雲端硬碟）、Gmail 信件與附件、Google 相簿裡的相片影片。要注意的是，2022年5月起，新建立或編輯過的 Google 文件、試算表、簡報、表單、繪圖檔案也開始計入容量，不再是「Google 原生格式不佔空間」的舊規則，這點很多學校還沒更新認知。" } },
     { "@type": "Question", "name": "空間快用完的時候，Google 會怎麼處理？", "acceptedAnswer": { "@type": "Answer", "text": "超過額度後，官方機制是「超額 25% 或超額 14 天，以先到者為準」才會開始限制服務：使用者不能再上傳新檔案到雲端硬碟、不能在文件/試算表/簡報/繪圖裡建立新檔案、無法編輯或複製受影響的檔案、Google 表單無法再被提交、Meet 也無法錄製新會議。但帳號本身仍能登入、瀏覽與下載既有檔案、收發信件，不會整個帳號被鎖死。管理員在這之前應該先透過管理主控台的用量報表提早發現，不要等到卡在限制才處理。" } },
     { "@type": "Question", "name": "校內哪些帳號最常是空間佔用大戶？", "acceptedAnswer": { "@type": "Answer", "text": "常見情況：畢業多年還沒停用的校友帳號、教學組長或資訊組長個人 Drive 裡累積多年的教材與影音檔案、活動直播錄影未即時清理、Google 相簿自動備份手機照片、共用雲端硬碟裡重複上傳的舊版檔案。這些帳號通常不是故意佔用，而是長期沒有人盤點造成的累積。" } },
@@ -130,7 +130,7 @@
 <section class="section">
   <div class="wrap" style="max-width:780px;">
     <h2 class="section-title reveal">先搞清楚一件事：這是「共用池」，不是每人一份</h2>
-    <p><strong>Google for Education 的儲存空間，不管是 Education Fundamentals、Education Standard，還是 Teaching and Learning，基準都是整個網域共用 100TB，不是「每個帳號各自 100GB」這種概念。</strong>全校師生的 Google 雲端硬碟、共用雲端硬碟、Gmail 附件、Google 相簿檔案，全部加總算在同一個池子裡。這代表任何一個帳號長期囤積大量檔案，吃掉的是全校共用的額度，不是他自己的。</p>
+    <p><strong>Google for Education 的儲存空間，不管是 Education Fundamentals 還是 Teaching and Learning，基準都是整個網域共用 100TB，不是「每個帳號各自 100GB」這種概念。</strong>全校師生的 Google 雲端硬碟、共用雲端硬碟、Gmail 附件、Google 相簿檔案，全部加總算在同一個池子裡。這代表任何一個帳號長期囤積大量檔案，吃掉的是全校共用的額度，不是他自己的。</p>
     <p>很多學校收到儲存空間警告時，第一反應是「要不要買更多空間」，但常見的真正原因是<strong>沒有人盤點過用量，某幾個帳號累積了多年沒清的檔案</strong>。升級之前，先花時間查清楚額度都花在哪，往往比直接升級划算。</p>
 
     <h2 class="section-title reveal">哪些東西會計入額度</h2>
@@ -180,7 +180,7 @@
     <h2 class="section-title reveal">常見問題</h2>
     <details class="faq-item reveal" open>
       <summary>Google for Education 的雲端硬碟空間是每個帳號一份，還是大家共用？</summary>
-      <div class="faq-a">是全網域共用的一個池子，不是每人各自一份配額。Education Fundamentals、Education Standard、Teaching and Learning 這三個版本，基準都是整個網域共用 100TB，全校師生的 Drive、Gmail 附件、共用雲端硬碟、相簿檔案全部算在同一個池子裡，任何一個帳號囤了大量檔案，吃掉的是全校的額度。</div>
+      <div class="faq-a">是全網域共用的一個池子，不是每人各自一份配額。Education Fundamentals、Teaching and Learning，基準都是整個網域共用 100TB，全校師生的 Drive、Gmail 附件、共用雲端硬碟、相簿檔案全部算在同一個池子裡，任何一個帳號囤了大量檔案，吃掉的是全校的額度。</div>
     </details>
     <details class="faq-item reveal">
       <summary>哪些東西會計入這 100TB？哪些不會？</summary>
@@ -248,7 +248,7 @@
       <p>不論是新導入、版本變更還是管理設定調整，先備妥這幾項：</p>
       <ul class="feature-list" style="margin:16px 0;">
         <li>教職員與學生帳號數</li>
-        <li>目前使用的版本（Fundamentals、Standard、Teaching and Learning、Education Plus）</li>
+        <li>目前使用的版本（Fundamentals、Teaching and Learning、Education Plus）</li>
         <li>這次想解決的主要問題（儲存空間、資安、帳號管理或其他）</li>
         <li>是否需要管理員教育訓練</li>
         <li>預計處理時間</li>
@@ -296,7 +296,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.11.2</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.12.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

@@ -110,3 +110,7 @@ html.lenis{scroll-behavior: auto}
 @media (max-width: 860px){.tour-zoom-panel .ai-note{left: 20px;transform: none;bottom: 6px}
 .tour-zoom-text{bottom: 30px}
 }
+/* 直向螢幕（手機、平板直拿）：首屏不撐 44vh 再垂直置中，照片框上緣也縮小，避免小標上方與照片上方各空一大段 */
+@media (orientation: portrait){.l-hero.l-hero--tour{min-height: auto !important;padding: 48px 24px 32px}
+.tour-zoom-panel{inset: 3vh 3vw 6vh}
+}
