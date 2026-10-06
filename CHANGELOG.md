@@ -3,6 +3,17 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.10.0（2026-10-06）
+
+「知識庫」改名為「數位札記」，網址 `/knowledge` 不變；robots.txt 補上新的 AI 爬蟲。
+
+- 全站導覽列、頁尾、麵包屑（含 BreadcrumbList 結構化資料）、索引頁標題與描述、站內搜尋分類、llms.txt／llms-full.txt 一起改名
+- 六個主題頁標題改成「Google Classroom 教學札記」這種寫法
+- 文章裡指 AI 知識庫功能的句子（例如課綱知識庫、持續累積的知識庫）照原文保留
+- 數位札記 90 張分享預覽圖重產，引用改 `?v=3`
+- 字型子集補「札」，字型 v55、CSS v74
+- robots.txt 補 Claude-SearchBot、Claude-User、Applebot、Applebot-Extended、Meta-ExternalAgent、DuckAssistBot、Amazonbot、MistralAI-User、Google-CloudVertexBot
+
 ## v1.9.2（2026-10-05）
 
 教育部產品序號改連到教育部選購名單網站的該產品頁，並移除未販售的品項。
