@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.10.1（2026-10-06）
+
+科技觀察新增一篇（草稿，待 Steve 審閱）：Gemini 免費個人帳號 10 月 9 日起只剩 Flash-Lite。
+
+- 新文章 `insights/gemini-personal-account-model-changes`：個人帳號各方案模型對照、學校帳號額度（10 月 6 日查詢）、給學校的三項建議，出處為 Gemini 說明中心兩份官方說明頁
+- `insights.html` 列表與 ItemList、`sitemap.xml`、`llms.txt` 加入新文章；重產分享預覽圖、`llms-full.txt`、`search-index.json`
+
 ## v1.10.0（2026-10-06）
 
 「知識庫」改名為「數位札記」，網址 `/knowledge` 不變；robots.txt 補上新的 AI 爬蟲。
