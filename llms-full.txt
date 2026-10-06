@@ -517,13 +517,13 @@ Google 認證教育家與認證講師指南 →
 
 ---
 
-## 資源分享｜免費 AI 工具與研習講義｜鴻綸科技
+## 資源分享｜免費 AI 工具與研習專區｜鴻綸科技
 
 https://www.hunglun.com/tools
 
 首頁 ／ 資源分享
 資源分享
-研習講義與線上工具依用途分類，全部免費開放使用。
+研習講義與線上工具依用途分類。研習專區為付費研習的學員專用，其他工具全部免費開放使用。
 研習專區
 行政效率工具
 商用工具
@@ -532,7 +532,7 @@ https://www.hunglun.com/tools
 資料查詢網站
 在地嚮導
 研習專區
-研習講義僅供參加過研習的老師使用，需輸入密碼。
+研習講義僅供參加過付費研習的老師使用，需輸入密碼。
 2026/09/30🔒 需密碼
 吳鳳科技大學 AI 研習
 現場教材連結 hunglun.com/go/0930，需輸入現場公佈的密碼。
@@ -5392,7 +5392,7 @@ Gemini 系列第 3／10 篇・看全部系列
 
 ---
 
-## Gemini Notebook 用法：上傳教材做出有出處的問答｜鴻綸科技
+## Gemini Notebook（原 NotebookLM）用法：上傳教材做出有出處的問答｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-howto
 
@@ -5452,7 +5452,7 @@ Gemini 系列第 4／10 篇・看全部系列
 
 ---
 
-## Gemini Notebook 系列：10 篇系列文章總覽｜鴻綸科技
+## Gemini Notebook（原 NotebookLM）教學系列：10 篇總覽｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-series
 
@@ -5502,7 +5502,7 @@ Gemini 生態系教學系列涵蓋 Gemini 在 Gmail、文件、Classroom 等應�
 
 ---
 
-## Gemini Notebook 是什麼？教育版開箱與建立第一個筆記本｜鴻綸科技
+## Gemini Notebook（原 NotebookLM）是什麼？教育版開箱與建立第一個筆記本｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-intro
 

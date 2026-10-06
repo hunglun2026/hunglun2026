@@ -51,7 +51,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - Intune 到底在幹嘛？跟 Google CEU 有何不同（FAQ 格式共 7 題，誠實劃線服務範圍：鴻綸科技能代購 Intune 授權、也能借用客戶既有 Intune／SCCM 環境大量部署 ChromeOS Flex（Google 官方 Remote Deployment／FRD 機制，免人工跑機）；完整 Intune 導入顧問服務不在服務範圍內）：https://www.hunglun.com/google/intune
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
-- 資源分享（依用途分類：研習專區／校園小程式／學習遊戲／資料查詢網站）：https://www.hunglun.com/tools
+- 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習遊戲／資料查詢網站全部免費）：https://www.hunglun.com/tools
 - 寄信小幫手（學校承辦發研習通知、活動公告的免費群發信工具。貼上名單自動挑出信箱並去掉重複，可用 {{姓名}} 逐封帶入收件人稱謂，先建草稿檢查再送出。信件從承辦自己的 Gmail 寄出，鴻綸科技不經手任何名單與信件內容；實際寄送需向鴻綸索取使用密碼）：https://www.hunglun.com/tools/mail
 - 研習紀錄與講義專區（鴻綸科技到校與線上研習的歷次場次紀錄，由本公司 Google 認證講師授課，主題涵蓋 AI 教學應用、Google Workspace 與校園數位工具。場次與主題公開，講義內容僅供參加過研習的老師憑現場公佈的密碼閱讀，未開放對外抓取）：https://www.hunglun.com/tools/training
   - 各場研習講義（例如「用最簡單的應用程式，了解 Vibe Coding 的邏輯」）皆須密碼才能閱讀，內容不對外公開。想安排到校研習請洽 https://www.hunglun.com/services/campus-training
