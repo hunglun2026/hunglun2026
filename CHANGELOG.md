@@ -13,6 +13,17 @@ Flex 部署工具更新（工具包與 Intune 手冊）。
 - `/tools/flex-deploy-intune`：打包步驟改成自動命名、代碼表補 23
 - `/tools/flex-deploy-intune`：修正打包步驟一個亂碼字元、應用程式欄位表的檔名；`/tools/flex-deploy`：區網部署的記錄範例改成新格式
 
+## v1.11.0（2026-10-06）
+
+依熱門搜尋新增三篇數位札記，Gemini Notebook 入口頁標題補上舊名 NotebookLM。
+
+- 新增 `knowledge/ai-literacy-certification`：AI 素養級認證（AIATCL）2.0 版考試範圍、及格標準、報名費與場次，並比較 Google 認證教育家（來源：台灣人工智慧學校 aiatc.tw）
+- 新增 `knowledge/gemini-free-for-teachers-students`：老師用學校帳號免費用 Gemini、學校帳號額度、大學生免費 AI Plus 一年、對話記錄保留規則（來源：Gemini 說明中心、Google 官方部落格 2026-08-19）
+- 新增 `knowledge/student-tablet-program-2026`：生生用平板方案結束後的 115 年數位學習實施計畫、載具每年汰換 25%、Googlebook 對 Chromebook 採購的影響（來源：行政院、教育部、國教署、Google 說明中心）
+- 數位札記 82 篇改 85 篇；主題頁、sitemap、llms.txt、llms-full、站內搜尋、分享預覽圖都已更新
+- `gemini-notebook-intro`、`-howto`、`-series` 網頁標題加「（原 NotebookLM）」
+- 字型補 10 字，字型 v57、CSS v76
+
 ## v1.10.2（2026-10-06）
 
 手機版選單置中、全站空白過多修正。
