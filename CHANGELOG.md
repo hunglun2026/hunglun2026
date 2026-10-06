@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.11.1（2026-10-06）
+
+Flex 部署工具：新增 Word 版使用說明書。
+
+- `/tools/downloads/ChromeOS-Flex-兩條路線操作說明.docx`：路線 A（Intune＋Surface Go）與路線 B（一般 Windows）完整操作說明，34 頁
+- `/tools/flex-deploy`、`/tools/flex-deploy-intune`：頁首加「Word 使用說明書」下載按鈕
+- 工具包 zip 內附 `使用說明書` 資料夾
+
 ## v1.10.3（2026-10-06）
 
 Flex 部署工具更新（工具包與 Intune 手冊）。
