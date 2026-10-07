@@ -267,15 +267,15 @@ export async function onRequest({ request, env, next }) {
     const input = String(form.get('password') || '');
     if (timingSafeEqual(input, password)) {
       await clearFailures(env.ceu_ratelimit, rlKey);
-      // 密碼對了：把這次 POST 換成一個乾淨的 GET 丟給下一棒去拿真正的檔案內容
-      // （html 頁面或 zip）當回應體，再把 15 分鐘效期的 cookie 掛上去。
-      const response = await next(new Request(url.toString(), { method: 'GET' }));
-      const headers = new Headers(response.headers);
+      // 密碼對了：掛上 15 分鐘效期的 cookie，303 轉回同一個網址讓瀏覽器自己用 GET 重開。
+      // 以前是在伺服器內部把 POST 換成 GET 丟給 next()，資料夾網址（/tools/downloads/，
+      // 靠 index.html 的那種）會變 404（2026-10-07 實測），而且按重新整理會重送表單。
+      const headers = new Headers({ Location: url.pathname + url.search });
       headers.append(
         'Set-Cookie',
         `${group.cookieName}=${expectedHash}; Path=${group.cookiePath}; Max-Age=${MAX_AGE}; HttpOnly; Secure; SameSite=Strict`
       );
-      return new Response(response.body, { status: response.status, headers });
+      return new Response(null, { status: 303, headers });
     }
     await recordFailure(env.ceu_ratelimit, rlKey);
     return new Response(loginPage(pathname, true), {
