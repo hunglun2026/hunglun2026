@@ -622,13 +622,13 @@ $WIFI_PASSWORD = ''</pre></div>
 
   <h3>[4/5] 模擬測試（只檢查，不會動硬碟）</h3>
   <div class="term"><span class="c">[4/5] 模擬測試（只檢查，不會動硬碟）...</span>
-  官方檢查項目完成 5/5：SystemChecked、TPMChecked、MemoryChecked、DiskChecked、FilesChecked
+  官方檢查項目通過 5/5：SystemChecked、TPMChecked、MemoryChecked、DiskChecked、FilesChecked
 <span class="g">  模擬測試完成。</span></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 這兩行是一鍵檔實際印出的文字（agent.exe 用模擬的版本跑出）。真的 agent.exe 執行時，中間會捲過很多英文記錄，是正常的</div>
-  <div class="expect">「官方檢查項目完成 5/5」與綠色的「模擬測試完成」。五個項目是 Google 官方的檢查：系統、TPM、記憶體、磁碟、檔案</div>
+  <div class="expect">「官方檢查項目通過 5/5」與綠色的「模擬測試完成」。五個項目是 Google 官方的檢查：系統、TPM、記憶體、磁碟、檔案</div>
   <div class="ifnot">紅色 [停止]，例如「沒有跑完全部檢查」：Windows 沒有被改動。請對方把桌面上的結果檔傳給你</div>
   <div class="term"><span class="c">[4/5] 模擬測試（只檢查，不會動硬碟）...</span>
-  官方檢查項目完成 2/5：SystemChecked、DiskChecked
+  官方檢查項目通過 2/5：SystemChecked、DiskChecked
 
 <span class="r">[停止] 模擬測試沒有跑完全部檢查。</span>
 <span class="y">Windows 沒有被改動，可以照常使用。</span>
@@ -651,7 +651,7 @@ $WIFI_PASSWORD = ''</pre></div>
   <p>解壓縮後有兩個檔案，用記事本打開：</p>
   <div class="tbl"><table>
     <tr><th>檔案</th><th>要找的內容</th><th>代表</th></tr>
-    <tr><td><code>convert-log.txt</code></td><td>「官方檢查項目完成 5/5」和「模擬測試完成」</td><td>一鍵檔判斷這台可以轉</td></tr>
+    <tr><td><code>convert-log.txt</code></td><td>「官方檢查項目通過 5/5」和「模擬測試完成」</td><td>一鍵檔判斷這台可以轉</td></tr>
     <tr><td><code>agent-dryrun.log</code></td><td>SystemChecked、TPMChecked、MemoryChecked、DiskChecked、FilesChecked 五個字都找得到（記事本按 Ctrl+F 搜尋）</td><td>Google 的 FRD 自己也確認五項檢查都做完</td></tr>
   </table></div>
   <div class="gate">

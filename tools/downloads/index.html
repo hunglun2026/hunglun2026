@@ -70,10 +70,12 @@
   <ol>
     <li>下載完，在 zip 上按右鍵，選「全部解壓縮」</li>
     <li>打開 <code>flex</code> 資料夾，先雙擊 <code>一鍵轉換Flex-模擬.bat</code>，按「是」，輸入 <code>Y</code></li>
-    <li>看到「官方檢查項目完成 5/5」才可以跑 <code>一鍵轉換Flex-正式.bat</code></li>
+    <li>看到「官方檢查項目通過 5/5」才可以跑 <code>一鍵轉換Flex-正式.bat</code></li>
   </ol>
 
   <p class="warn">正式版會清掉這台電腦的 Windows 和所有資料，無法復原。解壓後的檔案要放在同一個資料夾。</p>
+
+  <p class="toc">這一包轉完是一般的 Flex，要自己登入。學校有 CEU、要轉完<b>自動註冊</b>的話，先到 <a href="/tools/flex-enroll">Flex 權杖版產生器</a> 產生填好權杖的 bat，放進這個資料夾取代舊的。</p>
 
   <p class="toc">
     <a href="#pick">1 挑電腦</a>・<a href="#wmi">2 修 WMI</a>・<a href="#sim">3 模擬</a>・<a href="#real">4 正式轉換</a>・<a href="#stuck">5 卡住怎麼辦</a>・<a href="#back">6 改回 Windows</a>
@@ -115,7 +117,7 @@ mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></li>
     <li>雙擊 <code>一鍵轉換Flex-模擬.bat</code>，跳出視窗按「是」</li>
     <li>看到<b>綠字</b>「這次只做模擬測試」，輸入 <code>Y</code> 按 Enter</li>
     <li><code>[2/5]</code> 應該寫「使用同資料夾的 frd-latest.zip（不用上網下載）」</li>
-    <li>最後要看到 <b>「官方檢查項目完成 5/5」</b>、綠字「模擬測試完成」</li>
+    <li>最後要看到 <b>「官方檢查項目通過 5/5」</b>、綠字「模擬測試完成」</li>
     <li>拍下畫面。桌面的 <code>Flex結果-電腦名稱-時間.zip</code> 傳給技術人員</li>
   </ol>
   <p>沒有 5/5、或出現紅字 <code>[停止]</code>：拍下來，<b>不要跑正式版</b>。</p>

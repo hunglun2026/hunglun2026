@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flex 權杖版產生器</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=57" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=33">
+<style>
+  :root {
+    /* 主站 hunglun.com 色票，跟 /tools/downloads 一樣固定亮色 */
+    --ground: #FDFDFC; --surface: #FFFFFF; --sunk: #F7F7F5;
+    --ink: #1A1A1A; --ink-soft: #5C5C5C; --ink-faint: #70706C;
+    --line: rgba(0, 0, 0, .09); --accent: #1E3A5F; --accent-soft: #E8EDF3;
+    --safe: #0F6B45; --safe-soft: #E3F2EA;
+    --danger: #A32017; --danger-soft: #FBE9E7;
+    --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); line-height: 1.7; }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; overflow-wrap: anywhere; }
+  .logo { display: inline-block; margin-bottom: 28px; }
+  .logo img { display: block; width: 180px; height: auto; aspect-ratio: 907 / 180; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .sub { color: var(--ink-soft); margin: 0 0 22px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; margin: 18px 0; }
+  .card h2 { font-size: 18px; margin: 0 0 12px; }
+  label { display: block; font-weight: 700; margin: 14px 0 6px; }
+  label .hint { font-weight: 400; color: var(--ink-faint); font-size: 14px; }
+  input[type=text], input[type=password] { width: 100%; padding: 11px 14px; border: 1px solid #d1d5db; border-radius: 9px; font-size: 16px; font-family: inherit; }
+  input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .radios { display: flex; flex-wrap: wrap; gap: 10px; }
+  .radios label { display: flex; align-items: center; gap: 8px; font-weight: 400; margin: 0; padding: 10px 14px;
+                  border: 1px solid var(--line); border-radius: 10px; cursor: pointer; background: var(--sunk); }
+  .radios input { margin: 0; }
+  .show-pass { display: flex; align-items: center; gap: 6px; font-weight: 400; font-size: 14px; color: var(--ink-soft); margin-top: 8px; }
+  button.go { width: 100%; margin-top: 18px; padding: 15px; border: 0; border-radius: 12px; background: var(--accent); color: #fff;
+              font-size: 17px; font-weight: 700; font-family: inherit; cursor: pointer; }
+  button.go:hover { filter: brightness(1.1); }
+  button.go:disabled { opacity: .55; cursor: default; }
+  .msg { margin-top: 14px; border-radius: 10px; padding: 12px 16px; font-size: 15px; display: none; }
+  .msg.err { display: block; background: var(--danger-soft); color: var(--danger); }
+  .msg.ok { display: block; background: var(--safe-soft); color: var(--safe); }
+  ol { margin: 8px 0; padding-left: 22px; }
+  ol li { margin: 6px 0; }
+  code { background: var(--sunk); padding: 1px 6px; border-radius: 5px; font-size: .95em; }
+  .warn { background: var(--danger-soft); color: var(--danger); border-radius: 12px; padding: 14px 18px; font-size: 15px; }
+  .note { color: var(--ink-soft); font-size: 14.5px; }
+  .more { margin-top: 26px; font-size: 14px; color: var(--ink-faint); }
+  .more a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="https://www.hunglun.com/" aria-label="鴻綸科技官網">
+    <img src="/assets/hunglun-logo-company-light.webp?v=5" alt="鴻綸科技 Hunglun Technology">
+  </a>
+  <h1>Flex 權杖版產生器</h1>
+  <p class="sub">填入學校的註冊權杖，產生「轉完自動註冊、套用 CEU」的一鍵轉換檔。</p>
+
+  <div class="card">
+    <h2>開始之前</h2>
+    <ol>
+      <li>學校網域要有 <b>CEU 授權</b>（管理控制台 →「帳單」→「訂閱」），數量要夠這次的台數</li>
+      <li>管理控制台先建好放 Flex 的機構單位，在那裡把<b>時區設成 Asia/Taipei</b>、語言與注音設好，轉完開機就會是對的</li>
+      <li>註冊權杖要綁在那個機構單位（管理控制台 →「裝置」→「Chrome」→ 註冊權杖）</li>
+    </ol>
+  </div>
+
+  <form class="card" id="f" autocomplete="off">
+    <h2>填寫設定</h2>
+    <label for="label">學校或案名 <span class="hint">（選填，只用在檔名和說明檔）</span></label>
+    <input type="text" id="label" maxlength="30" placeholder="例如：某某國小">
+
+    <label for="token">註冊權杖 <span class="hint">（必填）</span></label>
+    <input type="text" id="token" spellcheck="false" placeholder="從管理控制台複製整串貼上">
+
+    <label>轉完怎麼上網</label>
+    <div class="radios">
+      <label><input type="radio" name="net" value="wifi" checked> Wi-Fi</label>
+      <label><input type="radio" name="net" value="lan"> 插網路線</label>
+    </div>
+
+    <div id="wifiBox">
+      <label for="ssid">Wi-Fi 名稱</label>
+      <input type="text" id="ssid" spellcheck="false">
+      <label for="pass">Wi-Fi 密碼</label>
+      <input type="password" id="pass" spellcheck="false">
+      <label class="show-pass"><input type="checkbox" id="showPass"> 顯示密碼</label>
+      <p class="note">只支援一般密碼型（WPA／WPA2 個人）。要輸入帳號才能登入的企業型 Wi-Fi 請改插網路線。</p>
+    </div>
+
+    <button class="go" type="submit" id="go">產生並下載</button>
+    <div class="msg" id="msg" role="status"></div>
+  </form>
+
+  <div class="card">
+    <h2>下載之後</h2>
+    <ol>
+      <li>先從 <a href="/tools/downloads/">ChromeOS Flex 下載</a> 下載整包（只要一次），解壓縮得到 <code>flex</code> 資料夾</li>
+      <li>把這裡產生的 zip 解壓縮，裡面三個 bat <b>複製到 <code>flex</code> 資料夾，取代舊的</b></li>
+      <li>每台照順序：空間不夠先跑 <code>清出C槽空間.bat</code> → <code>一鍵轉換Flex-模擬.bat</code> 看到 5/5 → <code>一鍵轉換Flex-正式.bat</code></li>
+      <li>每種型號先試 1 台，確認轉完畫面寫「這部裝置由學校網域管理」、時間正確，再做其他台</li>
+    </ol>
+  </div>
+
+  <p class="warn">產生出來的檔案裡有註冊權杖和 Wi-Fi 密碼（明文），只交給要操作的人，不要放到公開的地方。權杖與密碼只在你的瀏覽器裡處理，不會送到我們的伺服器。</p>
+
+  <p class="more">完整操作說明：<a href="/tools/flex-deploy">Flex 遠端部署手冊</a></p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+// 模板是官網上的最新版一鍵轉換檔（由 intune-flex-deploy/build_site_page.py 從正本複製）。
+// 這裡只換設定那幾行，其他內容一個字不動；換不到就停下來，不產生半成品。
+const $ = (id) => document.getElementById(id);
+const msg = (text, kind) => { const m = $('msg'); m.textContent = text; m.className = 'msg ' + kind; };
+// PowerShell 單引號字串裡，單引號要寫成兩個
+const psq = (s) => s.replace(/'/g, "''");
+
+function setLine(text, name, value) {
+  const re = new RegExp('^\\$' + name + " = (''|\\$true)\\r?$", 'm');
+  if (!re.test(text)) throw new Error('模板格式變了（找不到 $' + name + ' 那一行），請聯絡技術人員。');
+  // 用函式回傳，密碼裡有 $& 或 $$ 也不會被 replace 當成特殊符號
+  return text.replace(re, () => '$' + name + ' = ' + value + '\r');
+}
+
+async function getText(url) {
+  const r = await fetch(url + '?v=' + Date.now(), { cache: 'no-store' });
+  if (!r.ok) throw new Error('讀不到模板（' + r.status + '），請重新整理頁面再試，或重新登入。');
+  return r.text();
+}
+
+document.querySelectorAll('input[name=net]').forEach((r) => r.addEventListener('change', () => {
+  $('wifiBox').style.display = document.querySelector('input[name=net]:checked').value === 'wifi' ? '' : 'none';
+}));
+$('showPass').addEventListener('change', (e) => { $('pass').type = e.target.checked ? 'text' : 'password'; });
+
+$('f').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const token = $('token').value.trim();
+  const wifi = document.querySelector('input[name=net]:checked').value === 'wifi';
+  const ssid = $('ssid').value;
+  const pass = $('pass').value;
+  const label = $('label').value.trim().replace(/[\\/:*?"<>|]/g, '');
+
+  if (!token) return msg('請貼上註冊權杖。', 'err');
+  if (/\s/.test(token) || token.includes("'")) return msg('權杖裡不應該有空白或單引號，請確認是不是整串複製對了。', 'err');
+  if (token.length < 10) return msg('權杖太短，請確認是不是整串複製了。', 'err');
+  if (wifi) {
+    if (!ssid.trim()) return msg('請填 Wi-Fi 名稱，或改選「插網路線」。', 'err');
+    if (pass.length < 8 || pass.length > 63) return msg('Wi-Fi 密碼要 8～63 個字（WPA 的規定），請再確認。', 'err');
+  }
+
+  $('go').disabled = true;
+  msg('產生中...', 'ok');
+  try {
+    const [convert, space] = await Promise.all([getText('/tools/downloads/tpl/flex-convert.bat'), getText('/tools/downloads/tpl/free-space.bat')]);
+    let base = setLine(convert, 'ENROLLMENT_TOKEN', "'" + psq(token) + "'");
+    // 插網路線：Wi-Fi 兩行留空，一鍵轉換檔會自動寫官方的有線網路設定
+    base = setLine(base, 'WIFI_SSID', "'" + (wifi ? psq(ssid) : '') + "'");
+    base = setLine(base, 'WIFI_PASSWORD', "'" + (wifi ? psq(pass) : '') + "'");
+    const sim = setLine(base, 'ONLY_TEST', '$true');
+    const real = setLine(base, 'ONLY_TEST', '$false');
+
+    const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Taipei' });
+    const readme = [
+      'Flex 權杖版一鍵轉換檔' + (label ? '（' + label + '）' : ''),
+      '產生日期：' + today,
+      '轉完上網方式：' + (wifi ? 'Wi-Fi「' + ssid + '」' : '插網路線'),
+      '',
+      '1. 這三個 bat 複製到整包的 flex 資料夾，取代舊的（frd-latest.zip、vector.zip 要在同一個資料夾）',
+      '2. 空間不夠先跑「清出C槽空間.bat」',
+      '3. 跑「一鍵轉換Flex-模擬.bat」，看到「官方檢查項目通過 5/5」',
+      '4. 跑「一鍵轉換Flex-正式.bat」，轉完會自動註冊到學校網域',
+      '',
+      '注意：bat 裡有註冊權杖' + (wifi ? '和 Wi-Fi 密碼' : '') + '（明文），只交給要操作的人。',
+      '完整說明：https://www.hunglun.com/tools/downloads/',
+    ].join('\r\n') + '\r\n';
+
+    const zip = new JSZip();
+    const dir = zip.folder('flex');
+    dir.file('一鍵轉換Flex-模擬.bat', sim);
+    dir.file('一鍵轉換Flex-正式.bat', real);
+    dir.file('清出C槽空間.bat', space);
+    dir.file('請先讀我.txt', readme);
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'flex-enroll-' + today.replace(/-/g, '') + '.zip';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    msg('已下載 ' + a.download + '。解壓縮後把三個 bat 放進整包的 flex 資料夾。', 'ok');
+  } catch (err) {
+    msg(err.message, 'err');
+  } finally {
+    $('go').disabled = false;
+  }
+});
+</script>
+</body>
+</html>

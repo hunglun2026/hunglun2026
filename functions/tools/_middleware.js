@@ -20,7 +20,7 @@
  * 需要的環境變數（Cloudflare Pages 專案 → 設定 → 環境變數設定，Production 與
  * Preview 都要，只影響第 1 套邏輯）：
  *   CEU_TOOLS_PASSWORD        /tools/ceu 專用密碼
- *   INTERNAL_TOOLS_PASSWORD   /tools/flex-deploy、/tools/flex-deploy-intune、/tools/downloads 共用密碼
+ *   INTERNAL_TOOLS_PASSWORD   /tools/flex-deploy、/tools/flex-deploy-intune、/tools/flex-enroll、/tools/downloads 共用密碼
  * 沒設的話那一組會直接回 503，不會讓任何人繞過去；第 2 套（研習專區）不受影響。
  *
  * 第 1 套另外搭配 KV binding「ceu_ratelimit」（Steve 2026-09-24 建立，已綁定
@@ -39,7 +39,7 @@ import { clientKey, isLocked, recordFailure, clearFailures } from './_ratelimit.
 // 都放在這底下，之後再加新檔案不用記得回來改這裡。
 const TOOL_GROUPS = [
   { paths: ['/tools/ceu'], envVar: 'CEU_TOOLS_PASSWORD', cookieName: 'hlt_ceu_auth', cookiePath: '/tools/ceu', rlScope: 'ceu' },
-  { paths: ['/tools/flex-deploy', '/tools/flex-deploy-intune', '/tools/downloads'], envVar: 'INTERNAL_TOOLS_PASSWORD', cookieName: 'hlt_tools_auth', cookiePath: '/tools', rlScope: 'tools' },
+  { paths: ['/tools/flex-deploy', '/tools/flex-deploy-intune', '/tools/flex-enroll', '/tools/downloads'], envVar: 'INTERNAL_TOOLS_PASSWORD', cookieName: 'hlt_tools_auth', cookiePath: '/tools', rlScope: 'tools' },
 ];
 const MAX_AGE = 60 * 15; // 15 分鐘
 
