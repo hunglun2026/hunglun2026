@@ -128,7 +128,8 @@ function setLine(text, name, value) {
 async function getText(url) {
   const r = await fetch(url + '?v=' + Date.now(), { cache: 'no-store' });
   if (!r.ok) throw new Error('讀不到模板（' + r.status + '），請重新整理頁面再試，或重新登入。');
-  return r.text();
+  // git 存檔會把換行改成 LF（2026-10-07 線上實測），cmd 讀 LF 的 bat 可能解析錯，一律換回 CRLF
+  return (await r.text()).replace(/\r?\n/g, '\r\n');
 }
 
 document.querySelectorAll('input[name=net]').forEach((r) => r.addEventListener('change', () => {
