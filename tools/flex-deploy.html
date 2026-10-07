@@ -887,6 +887,7 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
   </table></div>
   <h3>縮不出空間怎麼辦</h3>
   <p>FRD 要從 C 槽尾端切出約 5.4GB 放安裝程式。C 槽可用空間再多，只要尾端卡著搬不動的檔案（分頁檔、休眠檔、還原點），能縮的就不夠。2026-10-07 學校的 ASUS SD310（120GB SSD）就是這樣：可用空間超過 12GB，卻只縮得出 2.1GB，一鍵檔停在「C 槽最多只能縮出…」。</p>
+  <p>最簡單：雙擊整包裡的<code>清出C槽空間.bat</code>，按「是」。它會先量能縮多少，不夠就自動關休眠、刪還原點、關分頁檔，重新開機一次；登入後自動接著整理空間再量，最後告訴你夠不夠，不夠時還會列出卡住的檔案。下面是它做的事，要手動做也可以：</p>
   <ol class="steps">
     <li>先看現在能縮多少：系統管理員 PowerShell 輸入 <code>$p=Get-Partition -DriveLetter C; $s=Get-PartitionSupportedSize -DriveLetter C; [math]::Round(($p.Size-$s.SizeMin)/1GB,1)</code>，顯示的數字要 <b>6 以上</b>（FRD 要約 5.4GB）</li>
     <li>關休眠（系統管理員命令提示字元）：<code>powercfg /h off</code></li>
@@ -919,7 +920,7 @@ mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></div></li>
     <tr><td>一鍵檔 [停止]：不是 UEFI／不是 GPT</td><td>舊機 Legacy 開機</td><td>第 18 章，或排除這台</td></tr>
     <tr><td>一鍵檔 [停止]：可用空間不足</td><td>C 槽不到 12GB</td><td>清理檔案、清空資源回收筒後重跑</td></tr>
     <tr><td>一鍵檔 [停止]：請先插上電源</td><td>筆電用電池</td><td>插電後重跑</td></tr>
-    <tr><td>一鍵檔 [停止]：C 槽最多只能縮出 X GB</td><td>尾端有搬不動的檔案（分頁檔、休眠檔、還原點）</td><td>第 19 章「縮不出空間怎麼辦」</td></tr>
+    <tr><td>一鍵檔 [停止]：C 槽最多只能縮出 X GB</td><td>尾端有搬不動的檔案（分頁檔、休眠檔、還原點）</td><td>雙擊 <code>清出C槽空間.bat</code>，詳見第 19 章「縮不出空間怎麼辦」</td></tr>
     <tr><td>一鍵檔 [停止]：系統資訊資料庫（WMI）異常</td><td>WMI 壞掉，學校電腦常是還原卡或還原軟體造成</td><td>第 19 章「WMI 異常怎麼修」</td></tr>
     <tr><td>一鍵檔 [停止]：沒有跑完全部檢查／回報錯誤</td><td>FRD 檢查到問題</td><td>請對方傳桌面的結果檔，看 <code>agent-dryrun.log</code> 裡是哪一項 Checked 沒出現</td></tr>
     <tr><td>結局 2：檢查沒過、FRD 中止</td><td>TPM 需要清除、空間、韌體等</td><td>收桌面的結果檔判斷。TPM 類：在那台的 Windows 裡開 <code>tpm.msc</code> → 清除 TPM，重開機後重試。<b>BitLocker 開著時不要進 BIOS／韌體清除 TPM</b>：Google 官方警告會清掉 BitLocker 金鑰，Windows 就開不了機</td></tr>
