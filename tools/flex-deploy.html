@@ -378,7 +378,7 @@
   <h2><span class="no">5</span>事前確認</h2>
   <p class="lead">這六項全部打勾才往下。一鍵檔會自動檢查第 3～5 項，但先確認可以省下來回。</p>
   <ul class="check">
-    <li><b>型號在 Google 認證清單上</b>，狀態是「通過認證」（只有這項一鍵檔沒辦法自動判斷）</li>
+    <li><b>型號在 Google 認證清單上</b>，狀態是「通過認證」（一鍵檔會自動上網比對並提示，但不會因此擋下）</li>
     <li><b>資料已經備份</b>，客戶書面確認</li>
     <li><b>Windows 10 或 11</b>，不是 S 模式（設定 → 系統 → 啟用，版本名稱裡沒有「S 模式」）</li>
     <li><b>C 槽可用空間 12GB 以上</b>：官方寫 5GB，但同頁列出已知問題「部分裝置需要 9GB」，再加上下載套件約 3GB</li>
@@ -603,9 +603,10 @@ $WIFI_PASSWORD = ''</pre></div>
   <div class="term"><span class="c">[1/5] 檢查這台電腦...</span>
   型號：ASUSTeK COMPUTER INC. E500A_WS770T
   系統：Microsoft Windows 11 專業版｜開機模式：UEFI｜磁碟：GPT，477GB，可用 267.5GB
-<span class="g">  硬體條件合格。型號是否在 Google 認證清單上，請另外確認。</span></div>
-  <div class="term-cap"><span class="tag real">實際畫面</span> 2026-10-02 在 Windows 11 實際執行</div>
-  <div class="expect">綠色的「硬體條件合格」</div>
+<span class="g">  硬體條件合格。</span>
+<span class="y">  認證清單：找不到這台（這台回報：E500A_WS770T／Server／TUF GAMING A620M-PLUS-SYS）。不在清單上也可能轉得成功，但 Google 不保證。</span></div>
+  <div class="term-cap"><span class="tag real">實際畫面</span> 2026-10-07 在 Windows 11 實際執行（這台是組裝桌機，清單上本來就沒有）</div>
+  <div class="expect">綠色的「硬體條件合格」。下一行是認證清單比對，只是提示、不會擋下：綠色「有，型號（Certified，支援到某年）」最好；黃色「相近的有…」請對照機身貼紙；「已被 Google 除名」「找不到」「連不上 Google」都可以繼續，但要自己判斷</div>
   <div class="ifnot">紅色 [停止] 加上原因（例如不是 UEFI、空間不夠、沒插電），照原因處理後重新雙擊。Windows 沒有被改動，桌面也會產生結果檔</div>
 
   <h3>[2/5] 從 Google 下載</h3>
@@ -880,7 +881,7 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
     <tr><td>S 模式</td><td>設定 → 系統 → 啟用，版本名稱有「S 模式」</td><td>S 模式不能執行一般程式（連一鍵檔都跑不了）。每台到 Microsoft Store 搜尋「退出 S 模式」，免費、單向；有 Intune 可以整批退出</td></tr>
     <tr><td>TPM</td><td>官方：部分機型必須先清除 TPM，否則部署不會開始</td><td>FRD 會自動嘗試清除（Windows 自動配置的 TPM 通常可以）。被擋下來時會停在檢查階段、不會動硬碟。在那台的 Windows 裡開 <code>tpm.msc</code> → 清除 TPM，重開機後重試。<b>BitLocker 開著時不要進 BIOS／韌體清除 TPM</b>：Google 官方警告會清掉 BitLocker 金鑰，Windows 就開不了機</td></tr>
     <tr><td>可用空間</td><td>官方寫 5GB，但已知問題「部分裝置需要 9GB」</td><td>預檢照 9GB 判；一鍵檔要求 12GB（多 3GB 給下載的套件）</td></tr>
-    <tr><td>機型相容性</td><td>官方：部署前<b>不會</b>自動檢查機型相容性</td><td>所以「認證清單」一定要人工比對</td></tr>
+    <tr><td>機型相容性</td><td>官方：部署前<b>不會</b>自動檢查機型相容性</td><td>一鍵檔會自動比對清單並提示（只提示不擋下）；PsExec、Intune 路線要人工比對</td></tr>
     <tr><td>還原卡／還原軟體</td><td>開機畫面出現還原卡選單；或裝了還原精靈、Deep Freeze 這類軟體</td><td><b>一定要先移除</b>：轉換寫進硬碟的東西一重開就被還原掉，而且還原卡常要求 Legacy 開機。開機按卡的熱鍵（常見 Home 或 F10）進管理畫面，輸入管理密碼（找學校資訊組），選「移除／解除安裝」，關機後才拔卡。<b>不要直接拔卡</b>，硬碟可能開不了機</td></tr>
     <tr><td>WMI 異常</td><td><code>tpm.msc</code> 顯示「命名空間無效」；一鍵檔停在「系統資訊資料庫（WMI）異常」</td><td>見下方「WMI 異常怎麼修」。不一定是沒有 TPM，修好後 <code>tpm.msc</code> 正常就代表其實有</td></tr>
   </table></div>
