@@ -641,7 +641,7 @@ foreach ($n in $names) {
     <tr><td>12</td><td>磁碟小於 32GB</td><td>沒有</td><td>不轉</td></tr>
     <tr><td>13</td><td>可用空間不足</td><td>沒有</td><td>第 7 章清空間，清完 Intune 會重試</td></tr>
     <tr><td>14</td><td>不是 Windows 10 或 11</td><td>沒有</td><td>查這台的作業系統</td></tr>
-    <tr><td>20</td><td>模擬沒跑完五項官方檢查</td><td>沒有</td><td>看這台的 <code>agent-dryrun.log</code>，找出缺的是哪一項</td></tr>
+    <tr><td>20</td><td>模擬沒通過五項官方檢查</td><td>沒有</td><td>看這台的 <code>agent-dryrun.log</code>，找出缺哪一項或哪一行是 <code>level=ERROR</code>（例如 DiskChecked 的 insufficient disk space）</td></tr>
     <tr><td>21</td><td>模擬時 agent.exe 回報錯誤</td><td>沒有</td><td>同上</td></tr>
     <tr><td>22</td><td>安裝包裡缺檔案</td><td>沒有</td><td>安裝包壞了，重新產生上傳</td></tr>
     <tr><td>23</td><td>模擬沒產生 agent.log（記錄器沒裝好），五項檢查無從核對</td><td>沒有</td><td>安裝包缺 vector.exe，重新產生（工具現在會擋下沒有記錄器的打包）</td></tr>

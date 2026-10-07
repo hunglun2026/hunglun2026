@@ -140,6 +140,7 @@ mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></li>
   <h2 id="stuck"><span class="no">5</span>卡住怎麼辦</h2>
   <div class="tbl"><table>
     <tr><th>狀況</th><th>先做什麼</th></tr>
+    <tr><td>[停止] C 槽最多只能縮出 X GB</td><td>見下方「縮不出空間怎麼辦」</td></tr>
     <tr><td>[停止] 系統資訊資料庫（WMI）異常</td><td>第 2 步修 WMI；有還原卡先移除</td></tr>
     <tr><td>模擬沒有 5/5、卡在 TPM</td><td>進 BIOS（ASUS 常見 <code>F2</code> 或 <code>Del</code>）在 Advanced 或 Security 找 PTT、TPM、Trusted Computing 打開；找不到就換一台</td></tr>
     <tr><td>[停止] 不是 UEFI／不是 GPT</td><td>第 1 步「開機模式」那列</td></tr>
@@ -148,6 +149,17 @@ mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></li>
     <tr><td>重開機又回到 Windows</td><td>安裝程式沒開起來，Windows 還在。拍照，看 <code>C:\deploy\agent.log</code> 最後幾行</td></tr>
     <tr><td>安裝畫面出現錯誤訊息</td><td>拍下錯誤訊息全文</td></tr>
   </table></div>
+    <h3>縮不出空間怎麼辦</h3>
+  <p>FRD 要從 C 槽尾端切出約 5.4GB 放安裝程式。C 槽可用空間再多，只要尾端卡著搬不動的檔案（分頁檔、休眠檔、還原點），能縮的就不夠。2026-10-07 學校的 ASUS SD310（120GB SSD）就是這樣：可用空間超過 12GB，卻只縮得出 2.1GB，一鍵檔停在「C 槽最多只能縮出…」。</p>
+  <ol>
+    <li>先看現在能縮多少：系統管理員 PowerShell 輸入 <code>$p=Get-Partition -DriveLetter C; $s=Get-PartitionSupportedSize -DriveLetter C; [math]::Round(($p.Size-$s.SizeMin)/1GB,1)</code>，顯示的數字要 <b>6 以上</b>（FRD 要約 5.4GB）</li>
+    <li>關休眠（系統管理員命令提示字元）：<code>powercfg /h off</code></li>
+    <li>刪還原點：<code>vssadmin delete shadows /for=C: /all /quiet</code></li>
+    <li>暫時不用分頁檔：設定 → 系統 → 關於 →「進階系統設定」→ 效能「設定」→「進階」→ 虛擬記憶體「變更」→ 取消「自動管理」→ 選 C 槽 →「沒有分頁檔」→「設定」→ 確定，重新開機</li>
+    <li>整理可用空間：<code>defrag C: /X</code>（舊硬碟要十幾分鐘）</li>
+    <li>再跑第 1 步的指令，到 6 以上就重跑模擬；還不夠就用「磁碟清理」清系統檔案後再重複第 5 步</li>
+  </ol>
+  <p>轉換後 Windows 會被清掉，分頁檔、休眠不用改回來；只做模擬不轉的話，記得把分頁檔改回「自動管理」。</p>
   <p>以上都不是：把畫面照片和桌面的結果檔、<code>C:\deploy</code> 裡的記錄檔一起交給技術人員。</p>
 
   <h2 id="back"><span class="no">6</span>轉完想改回 Windows</h2>
