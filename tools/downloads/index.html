@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChromeOS Flex 下載</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=57" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=33">
+<style>
+  :root {
+    /* 主站 hunglun.com 色票，跟 /tools/flex-deploy 一樣固定亮色 */
+    --ground: #FDFDFC; --surface: #FFFFFF; --sunk: #F7F7F5;
+    --ink: #1A1A1A; --ink-soft: #5C5C5C; --ink-faint: #70706C;
+    --line: rgba(0, 0, 0, .09); --accent: #1E3A5F; --accent-soft: #E8EDF3;
+    --danger: #A32017; --danger-soft: #FBE9E7;
+    --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); line-height: 1.7; }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+  .logo { display: inline-block; margin-bottom: 28px; }
+  .logo img { display: block; width: 180px; height: auto; aspect-ratio: 907 / 180; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .sub { color: var(--ink-soft); margin: 0 0 26px; }
+  .dl { display: flex; align-items: center; gap: 14px; padding: 20px 22px; background: var(--accent); color: #fff;
+        border-radius: 14px; text-decoration: none; }
+  .dl:hover { filter: brightness(1.1); }
+  .dl .icon { font-size: 30px; line-height: 1; }
+  .dl b { display: block; font-size: 19px; }
+  .dl span { font-size: 14px; opacity: .85; }
+  ol { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin: 22px 0; padding: 18px 22px 18px 44px; }
+  ol li { margin: 6px 0; }
+  code { background: var(--sunk); padding: 1px 6px; border-radius: 5px; font-size: .95em; }
+  .warn { background: var(--danger-soft); color: var(--danger); border-radius: 12px; padding: 14px 18px; font-size: 15px; }
+  .more { margin-top: 26px; font-size: 14px; color: var(--ink-faint); }
+  .more a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="https://www.hunglun.com/" aria-label="鴻綸科技官網">
+    <img src="/assets/hunglun-logo-company-light.webp?v=5" alt="鴻綸科技 Hunglun Technology">
+  </a>
+  <h1>ChromeOS Flex 下載</h1>
+  <p class="sub">Windows 電腦轉 ChromeOS Flex 的一鍵轉換整包。</p>
+
+  <a class="dl" href="/tools/downloads/flex-full.zip">
+    <span class="icon">&#x2B07;</span>
+    <div><b>下載一鍵轉換整包</b><span>flex-full.zip・約 1GB・含 Google 轉換程式，解壓後不用再上網下載</span></div>
+  </a>
+
+  <ol>
+    <li>下載完，在 zip 上按右鍵，選「全部解壓縮」</li>
+    <li>打開 <code>flex</code> 資料夾，先雙擊 <code>一鍵轉換Flex-模擬.bat</code>，按「是」，輸入 <code>Y</code></li>
+    <li>看到「官方檢查項目完成 5/5」才可以跑 <code>一鍵轉換Flex-正式.bat</code></li>
+  </ol>
+
+  <p class="warn">正式版會清掉這台電腦的 Windows 和所有資料，無法復原。四個檔案要放在同一個資料夾。</p>
+
+  <p class="more">完整操作說明：<a href="/tools/flex-deploy">Flex 遠端部署手冊</a></p>
+</main>
+</body>
+</html>
