@@ -376,13 +376,14 @@
 <!-- 5 -->
 <section id="prep">
   <h2><span class="no">5</span>事前確認</h2>
-  <p class="lead">這五項全部打勾才往下。一鍵檔會自動檢查第 3～5 項，但先確認可以省下來回。</p>
+  <p class="lead">這六項全部打勾才往下。一鍵檔會自動檢查第 3～5 項，但先確認可以省下來回。</p>
   <ul class="check">
     <li><b>型號在 Google 認證清單上</b>，狀態是「通過認證」（只有這項一鍵檔沒辦法自動判斷）</li>
     <li><b>資料已經備份</b>，客戶書面確認</li>
     <li><b>Windows 10 或 11</b>，不是 S 模式（設定 → 系統 → 啟用，版本名稱裡沒有「S 模式」）</li>
     <li><b>C 槽可用空間 12GB 以上</b>：官方寫 5GB，但同頁列出已知問題「部分裝置需要 9GB」，再加上下載套件約 3GB</li>
     <li><b>插著電源、網路連得上</b></li>
+    <li><b>沒有還原卡或還原軟體</b>：學校電腦很常見，有的話要先移除（第 19 章）</li>
   </ul>
   <div class="box info">
     <div class="t">開機模式 UEFI、磁碟 GPT</div>
@@ -507,6 +508,7 @@ $WIFI_PASSWORD = ''</pre></div>
 <section id="send">
   <h2><span class="no">7</span>把檔案交給對方</h2>
   <ul>
+    <li><b>沒有 CEU、給自己人或現場人員</b>：請對方到 <b>hunglun.com/tools/downloads</b> 下載整包（工具密碼另外給），模擬版、正式版和 Google 套件都在裡面，不用再上網下載</li>
     <li><b>推薦：Google 雲端硬碟連結</b>（共用給對方的帳號，不要設成知道連結的人都能看）</li>
     <li><b>不要用 Gmail 附件</b>：Gmail 會擋 <code>.bat</code> 檔，壓成 zip 也會被擋</li>
     <li>隨身碟也可以，複製到對方桌面再執行</li>
@@ -872,14 +874,27 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
 
 <!-- 19 -->
 <section id="smode">
-  <h2><span class="no">19</span>S 模式、TPM、可用空間</h2>
+  <h2><span class="no">19</span>S 模式、TPM、空間、還原卡、WMI 異常</h2>
   <div class="tbl"><table>
     <tr><th>項目</th><th>怎麼看</th><th>怎麼處理</th></tr>
     <tr><td>S 模式</td><td>設定 → 系統 → 啟用，版本名稱有「S 模式」</td><td>S 模式不能執行一般程式（連一鍵檔都跑不了）。每台到 Microsoft Store 搜尋「退出 S 模式」，免費、單向；有 Intune 可以整批退出</td></tr>
     <tr><td>TPM</td><td>官方：部分機型必須先清除 TPM，否則部署不會開始</td><td>FRD 會自動嘗試清除（Windows 自動配置的 TPM 通常可以）。被擋下來時會停在檢查階段、不會動硬碟。在那台的 Windows 裡開 <code>tpm.msc</code> → 清除 TPM，重開機後重試。<b>BitLocker 開著時不要進 BIOS／韌體清除 TPM</b>：Google 官方警告會清掉 BitLocker 金鑰，Windows 就開不了機</td></tr>
     <tr><td>可用空間</td><td>官方寫 5GB，但已知問題「部分裝置需要 9GB」</td><td>預檢照 9GB 判；一鍵檔要求 12GB（多 3GB 給下載的套件）</td></tr>
     <tr><td>機型相容性</td><td>官方：部署前<b>不會</b>自動檢查機型相容性</td><td>所以「認證清單」一定要人工比對</td></tr>
+    <tr><td>還原卡／還原軟體</td><td>開機畫面出現還原卡選單；或裝了還原精靈、Deep Freeze 這類軟體</td><td><b>一定要先移除</b>：轉換寫進硬碟的東西一重開就被還原掉，而且還原卡常要求 Legacy 開機。開機按卡的熱鍵（常見 Home 或 F10）進管理畫面，輸入管理密碼（找學校資訊組），選「移除／解除安裝」，關機後才拔卡。<b>不要直接拔卡</b>，硬碟可能開不了機</td></tr>
+    <tr><td>WMI 異常</td><td><code>tpm.msc</code> 顯示「命名空間無效」；一鍵檔停在「系統資訊資料庫（WMI）異常」</td><td>見下方「WMI 異常怎麼修」。不一定是沒有 TPM，修好後 <code>tpm.msc</code> 正常就代表其實有</td></tr>
   </table></div>
+  <h3>WMI 異常怎麼修</h3>
+  <p>WMI 是 Windows 內建的系統資訊資料庫，一鍵檔和 FRD 都靠它查硬碟與 TPM。2026-10-07 在學校的 ASUS SD310 實際遇到：讀作業系統正常，但讀硬碟出現「類別無效」（0x80041010）、<code>tpm.msc</code> 出現「命名空間無效」。有還原卡或還原軟體的話先移除，否則修好一重開又被還原。</p>
+  <ol class="steps">
+    <li><b>開系統管理員命令提示字元</b>：開始 → 輸入 cmd → 在「命令提示字元」按右鍵 →「以系統管理員身分執行」</li>
+    <li><b>檢查資料庫</b><div class="code"><pre>winmgmt /verifyrepository</pre></div></li>
+    <li><b>重新登錄硬碟與 TPM 的資訊</b><div class="code"><pre>mofcomp %windir%\System32\wbem\storagewmi.mof
+mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></div></li>
+    <li><b>重新開機</b>，開 <code>tpm.msc</code> 看有沒有恢復，再跑一次模擬</li>
+    <li><b>還是不行</b>：第 2 步顯示「不一致」就 <code>winmgmt /salvagerepository</code>，顯示「一致」就 <code>winmgmt /resetrepository</code>，再重新開機</li>
+  </ol>
+  <p>這些指令只重建 Windows 的系統資訊，不會動到檔案。修法來自微軟的 WMI 疑難排解做法，這台實際修好的結果待補。</p>
   <div class="box warn"><div class="t">設定裡的機密</div>官方提醒：權杖、Wi-Fi 密碼會以明文存在磁碟上，直到 ChromeOS Flex 第一次開機為止。</div>
 </section>
 
@@ -892,6 +907,7 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
     <tr><td>一鍵檔 [停止]：不是 UEFI／不是 GPT</td><td>舊機 Legacy 開機</td><td>第 18 章，或排除這台</td></tr>
     <tr><td>一鍵檔 [停止]：可用空間不足</td><td>C 槽不到 12GB</td><td>清理檔案、清空資源回收筒後重跑</td></tr>
     <tr><td>一鍵檔 [停止]：請先插上電源</td><td>筆電用電池</td><td>插電後重跑</td></tr>
+    <tr><td>一鍵檔 [停止]：系統資訊資料庫（WMI）異常</td><td>WMI 壞掉，學校電腦常是還原卡或還原軟體造成</td><td>第 19 章「WMI 異常怎麼修」</td></tr>
     <tr><td>一鍵檔 [停止]：沒有跑完全部檢查／回報錯誤</td><td>FRD 檢查到問題</td><td>請對方傳桌面的結果檔，看 <code>agent-dryrun.log</code> 裡是哪一項 Checked 沒出現</td></tr>
     <tr><td>結局 2：檢查沒過、FRD 中止</td><td>TPM 需要清除、空間、韌體等</td><td>收桌面的結果檔判斷。TPM 類：在那台的 Windows 裡開 <code>tpm.msc</code> → 清除 TPM，重開機後重試。<b>BitLocker 開著時不要進 BIOS／韌體清除 TPM</b>：Google 官方警告會清掉 BitLocker 金鑰，Windows 就開不了機</td></tr>
     <tr><td>模擬測試出現 GetSupportedSize 相關錯誤</td><td>磁碟重組服務設成自動啟動</td><td>agent.toml 加 <code>disable_defragsvc = true</code></td></tr>
@@ -904,6 +920,14 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
     <tr><td>Gmail 寄不出一鍵檔</td><td>Gmail 擋 .bat</td><td>改用 Google 雲端硬碟連結</td></tr>
     <tr><td>Chrome 下載工具包說「不是常見的下載項目」</td><td>沒有數位簽章，正常現象</td><td>點「下載可疑的檔案」繼續</td></tr>
   </table></div>
+  <h3>轉完想改回 Windows</h3>
+  <p>可以，但原本的資料救不回來。</p>
+  <ol class="steps">
+    <li>另一台電腦用微軟的 Media Creation Tool 做 Windows 安裝隨身碟（8GB 以上，隨身碟會被清空）</li>
+    <li>插上這台，開機按開機選單鍵（ASUS 常見 F8 或 Esc）選隨身碟</li>
+    <li>安裝類型選「自訂」，把 Flex 的分割區全部刪掉，裝在空出來的空間，約 30～60 分鐘</li>
+    <li>Windows 10 以後出廠的電腦序號在主機板韌體裡，裝同一版本（家用版或專業版）連上網通常自動啟用；轉換前先在「設定 → 系統 → 關於」記下版本</li>
+  </ol>
   <p>以上都不是：把畫面截圖和桌面的結果檔、<code>C:\deploy</code>（一鍵檔）或 <code>C:\ProgramData\frd-deploy</code>（PsExec）裡的記錄檔一起交給技術人員。</p>
 </section>
 
