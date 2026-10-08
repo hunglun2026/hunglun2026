@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.12.1（2026-10-08）
+
+草稿，待 Steve 審閱。更新科技觀察 /insights/gemini-image-watermark：SynthID Detector（synthid.com）10 月 7 日開放所有人使用。
+
+- 新增「後續：10 月 8 日更新」小節：可查來源（Google、OpenAI、NVIDIA、Kakao，Apple 即將加入）、跟 Gemini 內查驗的差別、「查不到不等於真的」、學校建議四點
+- FAQ「怎麼查一張圖是不是 Gemini 生成的？」補上 SynthID Detector（可見問答與 JSON-LD 同步）；資料來源補 DeepMind 部落格與說明中心
+- 字型子集補「臉」字（font ?v=59、css ?v=78）
+
 ## v1.12.0（2026-10-06）
 
 全站斷行、標點、留白在手機／平板／電腦三種寬度徹底檢查，並全站移除 Google Workspace for Education Standard 品項。
