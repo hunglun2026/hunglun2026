@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.13.0（2026-10-08）
+
+新增服務頁 /services/ceu「ChromeOS 教育升級版（CEU）型錄」（只放教育版）。
+
+- 內容照型錄 PDF：品項規格、CEU 管理功能兩張表與附註，可下載 PDF（/assets/docs/ceu-catalog.pdf）
+- 入口：/services 與 /google 加卡片；chromebook、chromeos-flex 兩頁內文連結與上一頁／下一頁接到 CEU 頁
+- sitemap、llms.txt、llms-full、search-index、OG 圖同步更新
+- 字型子集補「潛」字（font ?v=61、css ?v=79、fonts.css ?v=34）
+
 ## v1.12.1（2026-10-08）
 
 草稿，待 Steve 審閱。更新科技觀察 /insights/gemini-image-watermark：SynthID Detector（synthid.com）10 月 7 日開放所有人使用。

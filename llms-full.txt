@@ -176,6 +176,9 @@ Google AI 校園研習
 Chromebook 與智慧教室建置
 載具這一段。要能統一管理學生機器，靠的是載具管理授權（CEU）而不是機器本身，所以機器與授權要一起規劃，只買機器管不動。
 了解更多 →
+ChromeOS 教育升級版（CEU）型錄
+管理這一段。一台一份、永久授權，全校 Chromebook 在 Google 管理控制台一次設好。品項規格與管理功能一覽，可下載 PDF。
+了解更多 →
 ChromeOS Flex 舊電腦升級與 CEU 授權導入
 舊電腦不用急著換新機。改裝成 ChromeOS Flex 再搭配 CEU 授權統一管理，比整批換新機便宜，適合先撐過這段汰換空窗期。
 了解更多 →
@@ -384,6 +387,9 @@ Thinglink、Edpuzzle、Kami、Padlet、Wordwall、Kahoot! 等教學軟體的校�
 了解更多 →
 Chromebook 與智慧教室建置
 ASUS Chromebook 採購、載具管理授權（CEU）、智慧教室與校園網路規劃建置。
+了解更多 →
+ChromeOS 教育升級版（CEU）型錄
+學校集中管理 Chromebook 與 ChromeOS Flex 電腦的授權，一台一份、永久授權。品項規格與管理功能一覽，可下載 PDF。
 了解更多 →
 ChromeOS Flex 舊電腦升級與 CEU 授權導入
 舊電腦免換機，改裝成 ChromeOS Flex 並搭配 CEU 授權統一管理，延長舊電腦壽命的低成本方案。
@@ -9105,7 +9111,7 @@ ASUS Chromebook Detachable CM3000、CZ1：可拆卸機種，CM3206 的前代。
 ASUS BR1102FGA：教育專用耐用機種。
 舊機型是否仍可採購、自動更新支援到哪一年，依 ASUS 與 Google 官方公告為準，請來信或來電確認。
 載具管理授權
-Chrome Education Upgrade（CEU）：集中管理校內所有 Chromebook 的政策、應用程式、上網規則與使用者權限。CEU 綁定在每一台載具上，只要載具沒換就可永久使用。
+Chrome Education Upgrade（CEU）：集中管理校內所有 Chromebook 的政策、應用程式、上網規則與使用者權限。CEU 綁定在每一台載具上，只要載具沒換就可永久使用。品項規格與管理功能請看 CEU 型錄。
 學校單位可免費借用評估
 導入前想先讓老師實際試用？鴻綸科技提供學校單位免費借用 Chromebook 進行評估與試用，歡迎來電或來信洽詢。
 洽詢借用
@@ -9149,7 +9155,54 @@ Chromebook 優缺點與採購前必看知識 →
 聯絡我們
 看所有服務項目
 ← 數位學習軟體導入
-標案設備採購（台灣銀行共同供應契約） →
+ChromeOS 教育升級版（CEU）型錄 →
+
+---
+
+## ChromeOS 教育升級版（CEU）型錄｜鴻綸科技
+
+https://www.hunglun.com/services/ceu
+
+服務項目 ／ ChromeOS 教育升級版（CEU）型錄
+ChromeOS 教育升級版（CEU）型錄
+學校要在 Google 管理控制台集中管理 Chromebook 或 ChromeOS Flex 電腦，每台裝置需要一份 CEU。
+下載 PDF 型錄
+品項規格
+項目內容
+品名ChromeOS 教育升級版（CEU）
+官方英文名ChromeOS Education Upgrade（舊稱 Chrome Education Upgrade）
+適用對象K-12 學校、大專院校等教育機構
+計價方式永久授權，一台一份，一次買斷，不用年年續費
+適用裝置Chromebook、Chromebox 等 ChromeOS 裝置，以及改裝 ChromeOS Flex 的 Windows／Mac 舊電腦
+購買管道經 Google 授權經銷商
+事前準備學校需先有 Google Workspace for Education 的管理控制台
+原廠支援含 Google 24 小時 IT 管理員支援（ChromeOS 疑難排解）
+附註：一般教育用 Chromebook 出廠通常不含 CEU，採購時請確認報價有沒有包含，不然開箱後無法集中管理。
+CEU 管理功能
+買了 CEU 之後，學校能在 Google 管理控制台做到的事。
+功能說明
+裝置政策開機、更新、螢幕鎖定等整台裝置設定
+使用者政策依師生帳號套用網站封鎖、安全瀏覽等規則
+應用程式與擴充功能管理集中推送或封鎖 App 與擴充功能（含 Android 應用程式；ChromeOS Flex 不支援 Android）
+網路與 Proxy 設定Wi-Fi、Proxy、憑證統一派送
+印表機設定統一派送校內印表機
+自動註冊／持續註冊裝置恢復原廠設定後，仍會自動回到學校管理
+遠端停用遺失或遭竊裝置停用後裝置無法使用，仍佔用授權
+登入控制限定只有學校帳號能登入
+公用工作階段（Managed Guest Session）圖書館、電腦教室免登入使用 Chrome
+Kiosk 與考試應用程式鎖定單一應用程式，考試時學生無法瀏覽其他網頁
+系統更新控制控制更新時程，可選長期支援版本
+Chrome 遠端桌面IT 人員遠端協助排除問題
+裝置報表與健康狀態查看使用情況、硬體狀態與潛在網路威脅報告
+SAML 單一登入可串接學校既有的帳號系統
+24 小時 IT 管理員支援遇到 ChromeOS 問題可直接聯絡 Google
+功能以 Google 官方最新公告為準。
+需要 CEU 報價？
+告訴我們學校的裝置數量與機型，我們提供報價。
+聯絡我們
+Chromebook 與智慧教室建置
+← Chromebook 與智慧教室建置
+ChromeOS Flex 舊電腦升級與 CEU 授權導入 →
 
 ---
 
@@ -9173,7 +9226,7 @@ ChromeOS Flex 舊電腦升級服務：比買新機便宜的延壽方案
 資料一定要先備份：安裝這套系統，等於把整台電腦的硬碟重新格式化，原本 Windows 或 Mac 裡的所有資料都會不見，動手前一定要先備份重要檔案。也可以先用隨身碟開機試用看看，這個階段完全不會動到原本硬碟裡的東西，可以放心先體驗。
 分批安裝比較不累人：電腦教室、圖書館的公用電腦、行政室的備用機，可以先從其中一批開始換，不用一次全部動工，人力負擔會小很多。
 還需要另外買一個「管理授權」（CEU）
-Chrome Education Upgrade（CEU）是什麼：您可以把它想成是「電腦教室的遙控器」。裝了這套系統的電腦，如果沒有搭配 CEU，就只是一台台各自獨立的電腦，IT 人員要一台一台去設定。有了 CEU，就能坐在辦公室裡，透過一個管理畫面，同時幫全校（或全公司）的電腦統一設定要開放哪些網站、裝哪些軟體、誰可以用什麼功能，跟管理一般 Chromebook 完全是同一套做法，不用另外學新工具。
+Chrome Education Upgrade（CEU）是什麼：您可以把它想成是「電腦教室的遙控器」。裝了這套系統的電腦，如果沒有搭配 CEU，就只是一台台各自獨立的電腦，IT 人員要一台一台去設定。有了 CEU，就能坐在辦公室裡，透過一個管理畫面，同時幫全校（或全公司）的電腦統一設定要開放哪些網站、裝哪些軟體、誰可以用什麼功能，跟管理一般 Chromebook 完全是同一套做法，不用另外學新工具。品項規格與管理功能請看 CEU 型錄。
 先幫您看看手上的舊電腦適不適合
 把電腦的型號、大概數量告訴我們，我們免費幫您確認能不能裝、要準備哪些東西，並抓一份分批換裝的時程與費用估算。
 免費諮詢評估
@@ -9209,7 +9262,7 @@ Intune 是什麼？跟 Google CEU 有何不同 →
 告訴我們電腦的型號與大概數量，我們免費幫您確認能不能改裝，並抓一份分批導入的時程與費用估算。
 聯絡我們
 看所有服務項目
-← Chromebook 與智慧教室建置
+← ChromeOS 教育升級版（CEU）型錄
 Google Workspace for Education 導入與認證培訓 →
 
 ---
