@@ -77,6 +77,9 @@
 @media (min-width:769px){.spec-table.compact tbody th{width:14em}}
 .ceu-note{background:#fff4e5;color:#8a4b00;padding:12px 16px;border-radius:8px;font-size:0.88rem}
 :root[data-theme="dark"] .ceu-note{background:#3a2a14;color:#f3c58a}
+/* 浮水印：疊在表格上、點不到，防止整頁截圖被拿去用 */
+.ceu-wm{position:relative}
+.ceu-wm::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="360" height="200"%3E%3Ctext x="180" y="100" text-anchor="middle" dominant-baseline="middle" transform="rotate(-30 180 100)" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif" font-size="18" font-weight="500" fill="%23808080" fill-opacity=".16"%3E%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80 www.hunglun.com%3C/text%3E%3C/svg%3E') repeat}
 </style>
 </head>
 <body>
@@ -117,8 +120,9 @@
 
 <section class="section" style="padding-top:24px;">
   <div class="wrap prose">
-    <p><a class="btn btn-primary" href="/assets/docs/ceu-catalog.pdf" download>下載 PDF 型錄</a></p>
+    <p><a class="btn btn-primary" href="/assets/docs/ceu-catalog.pdf?v=2" download>下載 PDF 型錄</a></p>
 
+    <div class="ceu-wm">
     <h2>品項規格</h2>
     <div class="spec-table-wrap">
     <table class="spec-table compact">
@@ -162,6 +166,7 @@
     </table>
     </div>
     <p class="ceu-note">功能以 Google 官方最新公告為準。</p>
+    </div>
 
     <div class="svc-cta" style="margin-top:28px;">
       <h2 style="margin-top:0;">需要 CEU 報價？</h2>
@@ -209,7 +214,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.13.0</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.13.1</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速諮詢">
   <span class="fab-label">線上諮詢</span>

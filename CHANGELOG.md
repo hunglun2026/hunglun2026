@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.13.1（2026-10-09）
+
+CEU 型錄加浮水印，避免內容被整份拿去用。
+
+- /services/ceu 兩張表上疊一層斜排半透明「鴻綸科技 www.hunglun.com」（CSS，點不到、不影響選字與搜尋引擎）
+- PDF 型錄每頁加浮水印（`sitemap/watermark-pdf.py` 從未加印的原始檔產出），下載連結升 `?v=2`
+
 ## v1.13.0（2026-10-08）
 
 新增服務頁 /services/ceu「ChromeOS 教育升級版（CEU）型錄」（只放教育版）。
