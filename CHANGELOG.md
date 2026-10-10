@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.13.1（2026-10-10）
+
+草稿，待 Steve 審閱。新增科技觀察 /insights/gemini-student-hub：Gemini 學生專區（10 月 1 日）開放給所有年齡的教育版使用者。
+
+- 重點：受 Gemini 應用程式的生成式 AI 設定控制、沒有獨立開關；免費一年方案是給大專學生個人，台灣資格無法確認
+- 出處：Workspace Updates（2026-10-01）、Google 官方部落格（2026-08-19）
+- insights.html、sitemap、llms.txt、llms-full、search-index、OG 圖同步更新
+- 字型子集補「歐」字（font ?v=63、css ?v=80）
+
 ## v1.13.0（2026-10-08）
 
 新增服務頁 /services/ceu「ChromeOS 教育升級版（CEU）型錄」（只放教育版）。
