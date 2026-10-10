@@ -1024,7 +1024,7 @@ AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老�
 2026/10/06
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂加購在 Workspace 教育版上的 AI 方案，功能、適用對象與評估前要確認的事。
 2026/10/02
-Google AI Pro for Education 費用怎麼算？學校採購前先看這些影響總額的四個因素、年約與月繳、Plus 加購折扣條件與編預算清單。
+Google AI Pro for Education 費用怎麼算？學校採購前先看這些影響總額的四個因素、年約與月繳，以及編預算清單。
 2026/10/02
 Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Plus 與 AI Pro 的 Gemini 功能比較，已有 Workspace 還要不要加購。
 2026/10/02
@@ -1225,7 +1225,7 @@ AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老�
 2026/10/06
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂加購在 Workspace 教育版上的 AI 方案，功能、適用對象與評估前要確認的事。
 2026/10/02
-Google AI Pro for Education 費用怎麼算？學校採購前先看這些影響總額的四個因素、年約與月繳、Plus 加購折扣條件與編預算清單。
+Google AI Pro for Education 費用怎麼算？學校採購前先看這些影響總額的四個因素、年約與月繳，以及編預算清單。
 2026/10/02
 Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Plus 與 AI Pro 的 Gemini 功能比較，已有 Workspace 還要不要加購。
 2026/10/02
@@ -2059,7 +2059,7 @@ Google AI Pro for Education 和個人付費的 Google AI Pro 一樣嗎？
 Google AI Pro for Education 與 Workspace 教育版差在哪？
 Fundamentals、Plus 與 AI Pro 的 Gemini 功能比較表。
 Google AI Pro for Education 費用怎麼算？學校採購前先看這些
-影響總額的因素、年約與月繳、加購折扣條件。
+影響總額的因素、年約與月繳、編預算清單。
 Gemini 教育版怎麼用？學校導入與管理設定
 學生與老師實際能做什麼、管理員要設定什麼。
 學校 Google 帳號怎麼申請
@@ -2082,7 +2082,7 @@ Workspace for Education 資格、申請流程與 Gemini 開通。
 
 ---
 
-## Google AI Pro for Education 費用怎麼算？年約、月繳與折扣｜鴻綸科技
+## Google AI Pro for Education 費用怎麼算？年約與月繳｜鴻綸科技
 
 https://www.hunglun.com/knowledge/google-ai-pro-for-education-cost
 
@@ -2090,7 +2090,7 @@ https://www.hunglun.com/knowledge/google-ai-pro-for-education-cost
 Google AI Pro for Education 費用怎麼算？學校採購前先看這些
 費用沒有一個對所有學校都適用的數字，但算法是固定的。這篇把算法和編預算前要準備的東西講清楚。
 這篇適合：負責編列授權預算的資訊組長、總務與採購承辦人，以及要決定導入範圍的主任與校長。
-作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 5 日
+作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 10 日
 下一篇：學校 AI 軟體怎麼採購 →
 教育部選購名單產品序號：AI Pro 1152-0275、Gemini Notebook 1152-0282、Google Vids 1152-0287完整對照表 →
 Google AI Pro for Education 是以「每位使用者每月」計價的授權，總額由授權人數、計費方式（年約或月繳）、學校現有的 Workspace 版本與採購方式決定。Google 官方以美元公告牌價，台灣學校實際金額會依合作夥伴報價、匯率與採購管道而不同，所以這篇不列單價，只說明怎麼算、哪些條件會讓總額變動。
@@ -2103,10 +2103,9 @@ Google AI Pro for Education 費用怎麼計算？
 計費方式特性適合誰
 一年期承諾（年約）每人每月單價較低，承諾期間內授權數原則上不能減少人數穩定、已確定要用一整年的學校
 按月計費（彈性方案）單價較高，可依月份調整人數先試辦一學期、人數還在變動的學校
-另外，官方比較頁註明：已訂閱 Education Plus 的學校，以一年期承諾購買 50 到 999 個授權時，AI Pro 有 25% 折扣。折扣同時有版本、期間與數量三個條件，不是所有 Plus 學校都自動適用，評估時要一併確認。
-價格與折扣條件最後查證：2026 年 10 月 2 日，實際以 Google 官方當期公告與報價為準。
+計費方式最後查證：2026 年 10 月 2 日，實際以 Google 官方當期公告與報價為準。
 Google AI Pro for Education 官方價格在哪裡看？台灣學校為什麼可能不同？
-Google 在 Google for Education 方案比較頁公布 AI Pro 的計費方式與美元牌價，台灣學校實際採購金額則以當期官方資訊與授權合作夥伴報價為準。差異通常來自匯率、計費方式、授權數量、是否符合折扣條件，以及採購管道的作業成本。本文不提供鴻綸科技的固定單價，要編預算可以直接看 官方方案比較頁 抓量級，再依學校條件取得試算。
+Google 在 Google for Education 方案比較頁公布 AI Pro 的計費方式與美元牌價，台灣學校實際採購金額則以當期官方資訊與授權合作夥伴報價為準。差異通常來自匯率、計費方式、授權數量，以及採購管道的作業成本。本文不提供鴻綸科技的固定單價，要編預算可以直接看 官方方案比較頁 抓量級，再依學校條件取得試算。
 授權要買給幾個人？
 授權數就等於實際要使用的人數，而且只能指派給 18 歲以上的使用者。這兩點加起來，對中小學的預算影響最大：
 以未成年學生為主的中小學：未滿 18 歲的學生不在 AI Pro 的範圍內，授權通常先從要用的教職員算起。學生能用的 Gemini 功能來自學校方案本身內含的部分。
@@ -2122,7 +2121,7 @@ Google 在 Google for Education 方案比較頁公布 AI Pro 的計費方式與�
 除了授權，還有哪些費用要編進去？
 授權費之外，最常被漏掉的是教師研習與 Workspace 本身的續約費用。編預算時可以照這張表逐項確認：
 項目要確認什麼
-AI Pro 授權人數、年約或月繳、是否符合 Education Plus 加購折扣
+AI Pro 授權人數、年約或月繳
 Workspace for Education 版本目前是 Fundamentals 還是 Plus，今年是否也要續約或升級
 教師研習場次、時數、對象（行政場、教師場、主管場）
 導入設定管理主控台設定、授權指派、應用程式開關由誰處理
@@ -2137,8 +2136,6 @@ Google Workspace 管理說明：Google AI Pro for Education
 常見問題
 Google AI Pro for Education 多少錢？
 Google 官方以美元、每位使用者每月計價，分一年期承諾與按月計費兩種，年約的月單價較低。台灣學校實際金額依合作夥伴報價、匯率與採購管道而不同，建議以學校的人數與版本取得試算。
-Google AI Pro for Education 有折扣嗎？
-Google for Education 方案比較頁註明，已訂閱 Education Plus 的學校，以一年期承諾購買 50 到 999 個授權時，AI Pro 有 25% 折扣（2026 年 10 月 2 日查證，以官方當期公告為準）。
 國中小要幫學生買 Google AI Pro for Education 嗎？
 不用。依 Google 官方管理說明，AI Pro for Education 只能指派給 18 歲以上的使用者，國中小與高中職只需要算要使用的教職員人數。學生可用的 Gemini 功能來自學校方案內含的 Gemini for Education。
 年約和按月計費該選哪一個？
@@ -2185,7 +2182,7 @@ https://www.hunglun.com/knowledge/google-ai-pro-vs-workspace
 Google AI Pro for Education 與 Workspace 教育版差在哪？
 Workspace 版本和 AI Pro 常被混在一起講。這篇把關係理清楚，再用一張表比較各自內含的 AI 功能。
 這篇適合：正在比較方案的資訊組長、Workspace 管理員，以及要決定升級或加購的主任與校長。
-作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 2 日
+作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 10 日
 下一篇：Google AI Pro for Education 費用怎麼算 →
 Google Workspace for Education 是學校的帳號與協作平台，分 Fundamentals、Plus 等版本；Google AI Pro for Education 是加購在這些版本上的 AI 方案，不是取代 Workspace 的另一個版本。所以問題不是「選 Workspace 還是選 AI Pro」，而是「現有版本內含的 AI 夠不夠用，要不要再加購」。
 Google AI Pro for Education 和 Workspace for Education 是什麼關係？
@@ -2206,7 +2203,7 @@ Meet、雲端硬碟、Chat 中的 Gemini依官方當期公告依官方當期公�
 學校已經有 Workspace，Plus 與 AI Pro 該怎麼選？
 要看學校想用的 AI 功能，現有版本是不是已經內含。可以照學校目前的版本判斷：
 現在是 Fundamentals：先決定缺的是什麼。缺的是資安與管理，加上文件、簡報裡的 Gemini，方向是 Plus；缺的是進階模型、高額度與全面的 AI 整合，方向是加購 AI Pro。兩種都要，就是 Plus 再加 AI Pro。
-現在是 Plus：文件與簡報裡的 Gemini 已經有了，要看老師與行政是否常碰到額度上限，或需要深入研究、Meet 與雲端硬碟的 AI 功能。是的話加購 AI Pro；以一年期承諾購買 50 到 999 個授權時，Plus 學校另有官方折扣。
+現在是 Plus：文件與簡報裡的 Gemini 已經有了，要看老師與行政是否常碰到額度上限，或需要深入研究、Meet 與雲端硬碟的 AI 功能。是的話加購 AI Pro。
 實際是否需要加購，應以學校目前的版本、使用人數、需要的 AI 功能與使用頻率一起判斷。
 選方案時要比較哪些項目？
 至少比較六件事：要用的功能、使用對象與年齡、人數、管理與資安需求、費用與計費方式，以及導入後有沒有人帶研習。我們整理資訊組長在詢價前最常問的問題，可以直接拿來當校內討論的清單：
@@ -2217,7 +2214,6 @@ Meet、雲端硬碟、Chat 中的 Gemini依官方當期公告依官方當期公�
 管理主控台由誰負責開設定？
 需要資安中心、調查工具這類進階管理功能嗎？
 年約還是先按月試辦？
-是否符合 Education Plus 的加購折扣條件？
 要走哪一種採購方式？
 導入後要不要搭配教師研習？
 資料來源與查證（最後查證：2026 年 10 月 2 日）
@@ -2231,7 +2227,7 @@ Google Workspace for Education 是學校的帳號與協作平台，分 Fundament
 免費的 Education Fundamentals 有 Gemini 嗎？
 有。依 Google for Education 方案比較頁，Education Fundamentals 可以使用 Gemini 應用程式與 Gmail 中的 Gemini；文件、簡報、表單、試算表、Vids 裡的 Gemini 則要 Education Plus 或 Teaching and Learning，功能依年齡資格與管理員設定開放。
 已經有 Education Plus，還需要買 Google AI Pro for Education 嗎？
-要看需求。Plus 已內含文件、簡報、表單、試算表、Vids 裡的 Gemini；如果老師與行政常碰到額度上限，或需要深入研究、進階模型、Meet 與雲端硬碟的完整 AI 功能，才需要加購 AI Pro。Plus 學校以年約購買 50 到 999 個授權另有折扣。
+要看需求。Plus 已內含文件、簡報、表單、試算表、Vids 裡的 Gemini；如果老師與行政常碰到額度上限，或需要深入研究、進階模型、Meet 與雲端硬碟的完整 AI 功能，才需要加購 AI Pro。
 Education Plus 和 Google AI Pro for Education 該先買哪一個？
 看學校缺的是什麼。缺資安、進階管理與文件簡報裡的 Gemini，先考慮 Plus；缺的是進階模型、高額度與全面 AI 整合，考慮加購 AI Pro。AI Pro 只能指派給 18 歲以上使用者，中小學通常只開給教職員。
 💡 這篇對同事也有幫助嗎？
@@ -2243,7 +2239,7 @@ Education Plus 和 Google AI Pro for Education 該先買哪一個？
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂
 AI Pro 包含哪些功能、誰可以用。
 Google AI Pro for Education 費用怎麼算？學校採購前先看這些
-年約與月繳、Plus 加購折扣條件。
+年約與月繳、編預算要準備的資料。
 Google Workspace 教育版版本比較與授權變更
 各版本定位與授權變更的時間點。
 Gemini 教育版怎麼用？學校導入與管理設定
