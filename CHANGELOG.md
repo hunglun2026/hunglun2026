@@ -3,7 +3,7 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
-## v1.13.1（2026-10-10）
+## v1.13.2（2026-10-10）
 
 草稿，待 Steve 審閱。新增科技觀察 /insights/gemini-student-hub：Gemini 學生專區（10 月 1 日）開放給所有年齡的教育版使用者。
 
@@ -11,6 +11,13 @@
 - 出處：Workspace Updates（2026-10-01）、Google 官方部落格（2026-08-19）
 - insights.html、sitemap、llms.txt、llms-full、search-index、OG 圖同步更新
 - 字型子集補「歐」字（font ?v=63、css ?v=80）
+
+## v1.13.1（2026-10-09）
+
+CEU 型錄加浮水印，避免內容被整份拿去用。
+
+- /services/ceu 兩張表上疊一層斜排半透明「鴻綸科技 www.hunglun.com」（CSS，點不到、不影響選字與搜尋引擎）
+- PDF 型錄每頁加浮水印（`sitemap/watermark-pdf.py` 從未加印的原始檔產出），下載連結升 `?v=2`
 
 ## v1.13.0（2026-10-08）
 
