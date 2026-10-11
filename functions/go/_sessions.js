@@ -16,7 +16,7 @@ export const MASTER_PASSWORD = 'hung5407';
 
 export const GO_SESSIONS = {
   '1012': {
-    label: '南光高級中學研習',
+    label: '南光高級中學 AI 研習',
     password: '079870',
     url: 'https://docs.google.com/document/d/17gqDTkZKRpCk-7fNN-VFtArKuxUeRw18C4m3-4RLeaY/edit?usp=drive_link',
   },
