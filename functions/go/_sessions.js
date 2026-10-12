@@ -17,7 +17,7 @@ export const MASTER_PASSWORD = 'hung5407';
 export const GO_SESSIONS = {
   '1013': {
     label: '國立臺南高級商業職業學校 AI 研習',
-    password: '905474',
+    password: '209578',
     url: 'https://docs.google.com/document/d/1QQyZ8gvOoiDbd6C1ZbrFkBZJQm93RLgOPznk4UVa7oI/edit?usp=drive_link',
   },
   '1012': {
