@@ -15,6 +15,11 @@
 export const MASTER_PASSWORD = 'hung5407';
 
 export const GO_SESSIONS = {
+  '1015': {
+    label: '國立北港高級中學 AI 研習',
+    password: '106168',
+    url: 'https://docs.google.com/document/d/10mI88gO9MEwQ6uGlR192tZ1jagA7YQmb3yJFXQDTcXk/edit?usp=drive_link',
+  },
   '1013': {
     label: '國立臺南高級商業職業學校 AI 研習',
     password: '206168',
