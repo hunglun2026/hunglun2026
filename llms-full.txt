@@ -96,7 +96,7 @@ for Education 授權導入
 全台服務
 公司沿革
 2013 年 3 月：公司創立，投入教育與企業 IT 系統整合服務。
-2017 年：正式成為 Google 官方授權在台教育的合作發展夥伴，並成立官方認證國際講師培訓的教育訓練中心。
+2017 年：正式成為 Google 官方授權在台教育的合作發展夥伴，並成立官方認證國際講師培訓的教育訓練中心。Google 官方文件亦載明鴻綸為台灣首家授權夥伴（Google 官方亞太地區服務優惠文件）。
 2019 年：取得 Google 專業化夥伴資格。
 2026 年：取得 Google 高等教育（大學端）專業發展夥伴資格，名列 Google 官方全球高等教育專業發展夥伴名冊。
 官方資歷與師資陣容
@@ -539,6 +539,12 @@ https://www.hunglun.com/tools
 在地嚮導
 研習專區
 研習講義僅供參加過付費研習的老師使用，需輸入密碼。
+2026/10/13🔒 需密碼
+國立臺南高級商業職業學校 AI 研習
+現場教材連結 hunglun.com/go/1013，需輸入現場公佈的密碼。
+2026/10/12🔒 需密碼
+南光高級中學 AI 研習
+現場教材連結 hunglun.com/go/1012，需輸入現場公佈的密碼。
 2026/09/30🔒 需密碼
 吳鳳科技大學 AI 研習
 現場教材連結 hunglun.com/go/0930，需輸入現場公佈的密碼。
@@ -693,6 +699,12 @@ https://www.hunglun.com/tools/training
 用最簡單的應用程式，了解 Vibe Coding 的邏輯
 歷次研習講義
 現場講課用的是短連結，方便直接唸給學員：新的在最上面。
+2026/10/13
+國立臺南高級商業職業學校 AI 研習
+hunglun.com/go/1013
+2026/10/12
+南光高級中學 AI 研習
+hunglun.com/go/1012
 2026/09/30
 吳鳳科技大學 AI 研習
 hunglun.com/go/0930
@@ -2551,7 +2563,7 @@ https://www.hunglun.com/knowledge/gemini-free-for-teachers-students
 老師可以免費用 Gemini 嗎？教師與學生方案、學校帳號額度一次看懂
 很多老師在搜「Gemini 教師免費」。答案是：Google 沒有給老師個人的免費方案，但學校的教育版帳號本來就能用 Gemini，而且比個人免費版好用。
 這篇適合：想用 Gemini 備課的老師、想幫老師開通的資訊組，以及想知道學生能不能免費用的導師與家長。
-作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 6 日
+作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 14 日
 重點先看
 老師有免費的 Gemini 方案嗎？沒有給老師個人的免費訂閱方案。老師最划算的做法是用學校的 Google 教育版帳號登入，Education Fundamentals 是符合資格的學校免費使用。
 學校帳號能用到什麼？官方說明列出：Education Fundamentals、Plus 都能用 Pro 模型（每 4 小時最多 25 個提示詞）與 Thinking 模型（每天最多 300 個）。
@@ -2578,6 +2590,8 @@ Education Fundamentals／Plus每 4 小時最多 25 個提示詞每天最多 300 
 有一點要提醒：Gemini 台灣版的學生方案頁面有申請按鈕，但常見問題裡的資格說明仍寫著「美國大學生」，跟官方部落格的說法不一致。能不能申請成功，以申請時的驗證結果為準。
 學校帳號的 Gemini 對話記錄可以刪掉嗎？
 要看管理員的設定。官方說明寫明：對話記錄預設保留 18 個月，管理員可以設定成 3、18 或 36 個月後自動刪除；如果管理員開啟了 Gemini 記錄保留功能，使用者就無法自己變更活動設定。所以老師或學生發現「學校帳號刪不掉對話」，通常是學校的管理設定，不是故障。要調整保留期限，請洽學校資訊組。
+學校怎麼開通學生的 Gemini？
+由學校的網域管理員在 Google 管理主控台，針對學生所在的機構單位開啟 Gemini 應用程式，學生再用學校帳號登入 gemini.google.com 使用。學校必須先有 Google Workspace for Education 網域，開啟後可另外決定對話記錄保留多久。學生個人的免費優惠方案是另一回事，要由學生本人申請並驗證學籍。
 學校要讓老師用 Gemini，要做什麼？
 確認學校有 Google 教育版：還沒申請的，見 Google Workspace for Education 申請流程。
 管理員開啟 Gemini：在管理主控台針對教師所在的機構單位開啟 Gemini 應用程式，並決定學生單位要不要開、對話記錄保留多久。
@@ -2588,6 +2602,8 @@ Google Gemini 說明中心〈透過工作或學校帳號使用 Gemini 應用程�
 常見問題
 老師可以免費用 Gemini 嗎？
 可以，但不是個人方案，而是用學校的 Google 教育版帳號。符合資格的學校可免費使用 Education Fundamentals，管理員開啟 Gemini 後，老師用學校帳號登入就能用，而且能用到 Pro 模型。
+學校怎麼開通學生的 Gemini？
+由學校的網域管理員在 Google 管理主控台，針對學生所在的機構單位開啟 Gemini 應用程式，學生再用學校帳號登入 gemini.google.com 使用。學校必須先有 Google Workspace for Education 網域，開啟後可另外決定對話記錄保留多久。學生個人的免費優惠方案是另一回事，要由學生本人申請並驗證學籍。
 學校帳號的 Gemini 有使用次數限制嗎？
 有。官方說明列出 Education Fundamentals、Plus 的 Pro 模型每 4 小時最多 25 個提示詞，Thinking 模型每天最多 300 個提示詞；加購 Google AI Pro for Education 另享優先存取。額度以帳號當下顯示為準。
 台灣的大學生可以免費用 Google AI Plus 嗎？
@@ -9011,7 +9027,7 @@ Google for Education 合作夥伴
 學校要導入 Google 的教育方案時，最常卡住的不是技術，而是「找誰做」。Google 的授權、Chromebook 的採購、教師的研習，往往分屬不同廠商，出了問題互相推。鴻綸科技從 2013 年做教育 IT 整合，2017 年起成為 Google 官方授權在台的教育合作發展夥伴，這三件事在我們這裡是同一個窗口。
 官方資格
 年份資格認可單位
-2017Google for Education Professional Development Partner（官方授權在台教育合作發展夥伴），並成立官方認證國際講師培訓的教育訓練中心Google for Education
+2017Google for Education Professional Development Partner（官方授權在台教育合作發展夥伴），並成立官方認證國際講師培訓的教育訓練中心。Google 官方文件亦載明：鴻綸科技為台灣首家 Google for Education 授權夥伴（見Google 官方亞太地區服務優惠文件）Google for Education
 2018Google Cloud Partner，專業領域認定為 EducationGoogle Cloud
 2018教育部國中小行動教育推動計畫指定廠商中華民國教育部
 2019Google 專業化夥伴（Specialization Partner）Google for Education
@@ -9278,7 +9294,8 @@ Chrome Education Upgrade（CEU）是什麼：您可以把它想成是「電腦�
 先幫您看看手上的舊電腦適不適合
 把電腦的型號、大概數量告訴我們，我們免費幫您確認能不能裝、要準備哪些東西，並抓一份分批換裝的時程與費用估算。
 免費諮詢評估
-遠端大量部署：整批舊電腦不用一台台跑
+學校 ChromeOS Flex 大量部署怎麼做？整批舊電腦不用一台台跑
+學校 ChromeOS Flex 大量部署的做法是：先對機型、先模擬、小批試點、分批轉換、序號對帳，最後進入 Google 管理主控台集中管理，可用 Microsoft Intune 推送或遠端指令推送。鴻綸科技提供這項整批部署服務，流程如下。
 電腦數量多的時候，一台台插 USB 太慢。除了單台 USB 安裝，我們也提供遠端大量部署的做法，採用 Google 官方的 ChromeOS Flex Remote Deployment（遠端部署）套件，轉換完成後自動註冊進 Google 管理主控台。依學校的網路環境，有兩條路：
 做法怎麼運作適合的情況
 Microsoft Intune 推送把部署套件包成安裝程式，由學校既有的 Intune 推送到每台電腦，用結束代碼回報每台的結果電腦分散在不同地點或網段、學校已經在用 Intune 管理
