@@ -66,7 +66,7 @@ main:focus{outline: none}
 .brand-logo{display: block;width: 454px;max-width: 100%;aspect-ratio: 907 / 180;background: url("/assets/hunglun-logo-company-light.webp?v=5") no-repeat left center;background-size: contain}
 .header-visit-counter{flex-shrink: 0;display: flex;align-items: center;gap: 6px;font-family: var(--mono);font-size: 0.8rem;color: var(--muted);border: 1px solid var(--line);border-radius: 999px;padding: 5px 12px;white-space: nowrap;margin-right: 12px}
 .header-visit-counter span{color: var(--accent);font-weight: 600}
-.main-nav{display: flex;gap: 4px;flex-wrap: wrap}
+.main-nav{display: flex;gap: 4px;flex-wrap: nowrap}
 .main-nav a{color: var(--muted);padding: 8px 9px;font-size: 0.92rem;font-weight: 300;letter-spacing: 0.02em;white-space: nowrap}
 .main-nav a:hover{color: var(--text);text-decoration: none}
 .main-nav a.active{color: var(--accent)}
