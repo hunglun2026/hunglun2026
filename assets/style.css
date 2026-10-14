@@ -410,7 +410,7 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 .kn-item:hover .kn-t{color: var(--accent)}
 .kn-d{display: block;color: var(--muted);font-size: 0.85rem;line-height: 1.6;margin-top: 2px}
 /* 描述用正常折行；<li> 繼承了 balance 會讓描述擠成窄條。標題維持 balance 避免只剩一個孤字 */
-.kn-list li,.kn-d{text-wrap: wrap}
+.kn-list li,.kn-d{text-wrap: pretty}
 .kn-t{max-width: none}
 .kn-date{font-family: var(--mono);font-size: 0.74rem;color: var(--muted-faint);white-space: nowrap}
 @media (max-width: 560px){.kn-item{grid-template-columns: 36px 1fr;gap: 12px;padding: 12px 2px}
