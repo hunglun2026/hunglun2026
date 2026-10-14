@@ -5,11 +5,12 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   var btn=document.createElement("button");
   btn.type="button";btn.className="site-search-btn";
   btn.setAttribute("aria-label","搜尋網站");btn.setAttribute("title","搜尋網站");
-  btn.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>';
+  btn.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span class="ssb-text">搜尋</span>';
   var themeBtn=inner.querySelector(".theme-toggle");
   if(themeBtn) inner.insertBefore(btn,themeBtn); else inner.appendChild(btn);
 
-  var overlay,input,list,status,idx=null,loading=false,lastFocus=null;
+  var HOT=["Google Classroom","Gemini","Google Flow","Google Vids","Chromebook","Google AI Pro","NotebookLM","AI 出題","研習","共同供應契約"];
+  var overlay,input,list,status,hot,idx=null,loading=false,lastFocus=null;
 
   function build(){
     overlay=document.createElement("div");
@@ -19,14 +20,17 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     overlay.innerHTML=''
       +'<div class="ss-panel">'
       +'<div class="ss-bar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>'
-      +'<input type="search" class="ss-input" placeholder="搜尋服務、數位札記文章…" autocomplete="off" aria-label="搜尋關鍵字" aria-controls="ss-results">'
+      +'<input type="search" class="ss-input" placeholder="想找什麼？例如 Classroom" enterkeyhint="search" autocomplete="off" aria-label="搜尋關鍵字" aria-controls="ss-results">'
       +'<button type="button" class="ss-close" aria-label="關閉搜尋">✕</button></div>'
       +'<p class="ss-status" aria-live="polite"></p>'
+      +'<div class="ss-hot"><p class="ss-hot-t">大家常搜尋（點一下直接搜）</p><div class="ss-hot-list">'+HOT.map(function(w){return '<button type="button" class="ss-chip" data-q="'+w+'">'+w+'</button>';}).join('')+'</div></div>'
       +'<ul class="ss-results" id="ss-results"></ul></div>';
     document.body.appendChild(overlay);
     input=overlay.querySelector(".ss-input");
     list=overlay.querySelector(".ss-results");
     status=overlay.querySelector(".ss-status");
+    hot=overlay.querySelector(".ss-hot");
+    hot.addEventListener("click",function(e){var b=e.target.closest(".ss-chip");if(!b)return;input.value=b.getAttribute("data-q");render(input.value);input.focus();});
     input.addEventListener("input",function(){render(input.value);});
     overlay.querySelector(".ss-close").addEventListener("click",close);
     overlay.addEventListener("mousedown",function(e){if(e.target===overlay)close();});
@@ -45,8 +49,9 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
 
   function render(q){
     q=(q||"").trim().toLowerCase();
+    if(hot)hot.hidden=!!q;
     if(!idx){status.textContent=loading?"載入中…":"";list.innerHTML="";return;}
-    if(!q){status.textContent="輸入關鍵字，搜尋全站的服務與文章。";list.innerHTML="";return;}
+    if(!q){status.textContent="輸入關鍵字，或直接點下面的熱門詞。";list.innerHTML="";return;}
     var terms=q.split(/\s+/).filter(Boolean);
     var hits=[];
     for(var i=0;i<idx.length;i++){
