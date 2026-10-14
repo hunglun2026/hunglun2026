@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.14.0（2026-10-14）
+
+依熱門搜尋新增三篇數位札記（GSC 近三個月查詢加 Google 自動完成，找「大家實際打的問法」但站內沒有專頁的題目）。
+
+- 新增 `knowledge/google-flow-credits-taiwan`：Flow 免費額度（未訂閱每天 50 點）、各方案每月點數、台灣開放與 18 歲限制（來源：Google Flow 說明中心）。學校教育版帳號能否使用，官方沒寫，文中明講無法確認
+- 新增 `knowledge/google-vids-education-limits`：官方表格逐項列出 Fundamentals／Standard／Plus／Teaching and Learning／AI Pro for Education 在 Vids 的 Gemini 功能與每月額度（來源：Google Docs 編輯器說明，英文版與繁中版對照）
+- 新增 `knowledge/ai-quiz-generator-for-teachers`：學校 Google 帳號出題的四種做法比較（內容整理自站內已查證文章，不評民間工具）
+- 修正舊文：`gemini-flow-howto`、`gemini-vids-howto`、`gemini-faq-limits` 的 Flow 額度與 Vids 方案說法已過時（Flow 改為每天 50 點加各方案每月點數，Vids 的 AI 功能依教育版本而異），並互相加上連結
+- 數位札記 85 篇改 88 篇；主題頁、sitemap、llms.txt、llms-full、站內搜尋、分享預覽圖都已更新
+
 ## v1.13.2（2026-10-10）
 
 草稿，待 Steve 審閱。新增科技觀察 /insights/gemini-student-hub：Gemini 學生專區（10 月 1 日）開放給所有年齡的教育版使用者。
