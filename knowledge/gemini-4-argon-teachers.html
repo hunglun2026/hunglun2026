@@ -119,7 +119,7 @@
       "name": "把學生成績表上傳給 Gemini 4 Argon 分析，安全嗎？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "官方說了什麼：官方資料有提到模型支援程式碼執行與資料分析。官方沒說什麼：我們沒有查到個人 Pro 訂閱與學校教育版在資料保存與模型訓練上的差異說明，本文無法替它背書。我們的建議：這是我們的看法：在確認資料政策前，不要上傳學生姓名、學號等能辨識身分的資料；想測資料分析，用虛構的去識別化資料，例如下面的實測 3。"
+        "text": "官方說了什麼：學校教育版：Google 教育版 FAQ 寫，Google AI Pro for Education 授權使用者的對話與上傳檔案不會被人工審查，也不會用來改善生成式 AI 模型，使用者須年滿 18 歲。個人帳號：Gemini 應用程式說明頁寫，Google 會用活動紀錄（包含訓練生成式 AI 模型）改善服務，一部分對話會由人工審查，「保留活動」預設保存 18 個月；關閉後新對話不會用於訓練，但仍會暫存 72 小時。官方沒說什麼：兩份說明都不是專門寫 Gemini 4 Argon，沒有說這個模型有沒有不同規定；我們也沒查到個人 Pro 或 Ultra 訂閱有另外的例外。我們的建議：這是我們的看法：用個人帳號時，不要上傳學生姓名、學號等能辨識身分的資料，想測資料分析就用虛構的去識別化資料，例如下面的實測 3。學校帳號要處理學生資料，請先確認校內的資料使用規範，不要只看這一條。"
       }
     },
     {
@@ -233,7 +233,7 @@
     <div class="spec-table-wrap">
     <table class="spec-table">
       <thead><tr><th>項目</th><th>沒有付費的個人帳號</th><th>學校 Workspace for Education</th><th>個人 Google AI Pro</th><th>個人 Google AI Ultra</th></tr></thead>
-      <tbody><tr><td>Gemini App 能用 Gemini 4 Argon</td><td>官方未說明</td><td>官方未說明</td><td>是（10/13 更新日誌）</td><td>是（10/13 更新日誌）</td></tr><tr><td>官方資料怎麼寫</td><td>只寫開放給 Pro 與 Ultra，沒提免費版</td><td>兩份官方資料都沒有提到教育版</td><td>明確列為開放對象</td><td>明確列為開放對象</td></tr><tr><td>繁體中文介面</td><td>官方未說明</td><td>官方未說明</td><td>是（官方日誌有寫）</td><td>同左</td></tr><tr><td>資料政策與隱私</td><td>本文未查</td><td>本文未查個人與教育版差異</td><td>本文未查</td><td>本文未查</td></tr><tr><td>你該怎麼做</td><td>打開 Gemini App 看模型選單</td><td>問管理員，或等官方教育版公告</td><td>想試可個人訂閱一個月評估</td><td>非必要不需要</td></tr></tbody>
+      <tbody><tr><td>Gemini App 能用 Gemini 4 Argon</td><td>官方未說明</td><td>官方未說明</td><td>是（10/13 更新日誌）</td><td>是（10/13 更新日誌）</td></tr><tr><td>官方資料怎麼寫</td><td>只寫開放給 Pro 與 Ultra，沒提免費版</td><td>兩份官方資料都沒有提到教育版</td><td>明確列為開放對象</td><td>明確列為開放對象</td></tr><tr><td>繁體中文介面</td><td>官方未說明</td><td>官方未說明</td><td>是（官方日誌有寫）</td><td>同左</td></tr><tr><td>資料政策與隱私</td><td>個人帳號：對話可能用於改善 AI，一部分會由人工審查，可關閉「保留活動」</td><td>AI Pro for Education 授權使用者：官方寫不人工審查、不用於改善模型（Argon 是否適用，官方未說明）</td><td>個人帳號規定，本文沒查到 Pro 另有例外</td><td>同左</td></tr><tr><td>你該怎麼做</td><td>打開 Gemini App 看模型選單</td><td>問管理員，或等官方教育版公告</td><td>想試可個人訂閱一個月評估</td><td>非必要不需要</td></tr></tbody>
     </table>
     </div>
     <p>表中「官方未說明」的格子，意思是我們查過官方資料找不到答案。其中沒有付費的個人帳號，官方只列了 Pro 與 Ultra 為開放對象，現階段請不要預期能用；學校教育版則是真的沒有資訊，等官方公告或管理員後台實際看到再下結論。</p>
@@ -324,7 +324,7 @@ S10,0,0,0,0,0
       <li><strong>老師：</strong>日常備課與出題，現有模型已經夠用，不必急著訂閱。想試的人用個人訂閱評估一個月，用上面 5 題實測，答不好就不要續。</li>
       <li><strong>資訊組長：</strong>教育版目前無法確認，先別對全校說「可以用」。到管理員後台看有沒有出現這個模型，沒有就等官方公告。</li>
       <li><strong>採購與研習：</strong>不要因為這個模型調整計畫。API 介紹期結束後，價格是現在的兩倍，沒有用量上限就不要開放全校。</li>
-      <li><strong>資料：</strong>在確認資料政策前，不要上傳能辨識學生身分的資料。</li>
+      <li><strong>資料：</strong>個人帳號的對話可能用於改善 AI、部分由人工審查，不要上傳能辨識學生身分的資料；學校帳號處理學生資料前，先確認校內規範。</li>
     </ul>
     <p>以上「建議」都是我們的看法，不是官方說法。個人 Pro 方案與學校方案怎麼分，見<a href="/knowledge/google-ai-pro-vs-workspace">Google AI Pro 與 Workspace 比較</a>；AI Pro 在教育現場的做法與費用，見<a href="/knowledge/google-ai-pro-for-education">Google AI Pro for Education 整理</a>。</p>
 
@@ -355,14 +355,14 @@ S10,0,0,0,0,0
     </details>
     <details class="faq-item reveal">
       <summary>把學生成績表上傳給 Gemini 4 Argon 分析，安全嗎？</summary>
-      <div class="faq-a"><p><strong>官方說了什麼：</strong>官方資料有提到模型支援程式碼執行與資料分析。</p><p><strong>官方沒說什麼：</strong>我們沒有查到個人 Pro 訂閱與學校教育版在資料保存與模型訓練上的差異說明，本文無法替它背書。</p><p><strong>我們的建議：</strong>這是我們的看法：在確認資料政策前，不要上傳學生姓名、學號等能辨識身分的資料；想測資料分析，用虛構的去識別化資料，例如下面的實測 3。</p></div>
+      <div class="faq-a"><p><strong>官方說了什麼：</strong>學校教育版：Google 教育版 FAQ 寫，Google AI Pro for Education 授權使用者的對話與上傳檔案不會被人工審查，也不會用來改善生成式 AI 模型，使用者須年滿 18 歲。個人帳號：Gemini 應用程式說明頁寫，Google 會用活動紀錄（包含訓練生成式 AI 模型）改善服務，一部分對話會由人工審查，「保留活動」預設保存 18 個月；關閉後新對話不會用於訓練，但仍會暫存 72 小時。</p><p><strong>官方沒說什麼：</strong>兩份說明都不是專門寫 Gemini 4 Argon，沒有說這個模型有沒有不同規定；我們也沒查到個人 Pro 或 Ultra 訂閱有另外的例外。</p><p><strong>我們的建議：</strong>這是我們的看法：用個人帳號時，不要上傳學生姓名、學號等能辨識身分的資料，想測資料分析就用虛構的去識別化資料，例如下面的實測 3。學校帳號要處理學生資料，請先確認校內的資料使用規範，不要只看這一條。</p></div>
     </details>
     <details class="faq-item reveal">
       <summary>老師該不該自己花錢訂閱 Google AI Pro？</summary>
       <div class="faq-a"><p><strong>官方說了什麼：</strong>Google AI Pro 是個人付費訂閱，官方更新日誌記載可使用 Gemini 4 Argon。</p><p><strong>官方沒說什麼：</strong>官方沒有說教育工作者有沒有優惠，也沒有保證對備課有多少幫助。</p><p><strong>我們的建議：</strong>我們的看法是多數老師先觀望。日常提問、閱讀測驗、講義微調，現有模型已經夠用；每週要處理大量長文件，或需要整合很多來源做簡報的人，才值得自費試一個月。</p></div>
     </details>
 
-    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:24px;">資料來源：<a href="https://gemini.google/tw/release-notes/?hl=zh-TW" target="_blank" rel="noopener">Gemini Apps 版本更新內容（2026 年 10 月 13 日）</a>、<a href="https://ai.google.dev/gemini-api/docs/models/gemini-4-argon" target="_blank" rel="noopener">Gemini API 文件：Gemini 4 Argon</a>、<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener">Google 官方部落格公告</a>（2026 年 9 月 30 日）。模型開放範圍、價格與規格以 Google 官方最新資料為準；5 個實測題為本站設計，不是官方範例。</p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:24px;">資料來源：<a href="https://gemini.google/tw/release-notes/?hl=zh-TW" target="_blank" rel="noopener">Gemini Apps 版本更新內容（2026 年 10 月 13 日）</a>、<a href="https://ai.google.dev/gemini-api/docs/models/gemini-4-argon" target="_blank" rel="noopener">Gemini API 文件：Gemini 4 Argon</a>、<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener">Google 官方部落格公告</a>（2026 年 9 月 30 日）。資料政策：<a href="https://knowledge.workspace.google.com/admin/generative-ai/workspace-with-gemini/gemini-for-google-workspace-faq-education" target="_blank" rel="noopener">Google Workspace with Gemini 教育版 FAQ</a>、<a href="https://support.google.com/gemini/answer/13594961" target="_blank" rel="noopener">Gemini 應用程式：AI 改善、人工審查與活動設定</a>。模型開放範圍、價格與規格以 Google 官方最新資料為準；5 個實測題為本站設計，不是官方範例。</p>
     <div class="svc-cta">
       <a class="btn btn-primary" href="/contact">聯絡我們</a>
       <a class="btn btn-ghost" href="/insights/gemini-4-argon">看 9/30 發表快訊</a>
