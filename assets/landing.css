@@ -2,6 +2,8 @@ body.landing{overflow-x: hidden}
 .l-hero{min-height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;padding: 24px;background: radial-gradient(circle at 50% 20%,var(--hero-glow-1),transparent 60%),radial-gradient(circle at 50% 80%,var(--hero-glow-2),transparent 60%),var(--bg)}
 .l-eyebrow{letter-spacing: 0.3em;font-size: 12px;color: var(--muted);margin-bottom: 20px;font-family: var(--mono)}
 .l-hero--tour .l-eyebrow{font-size: 20px}
+/* 手機一行放不下：拆成「鴻綸科技」與「GOOGLE FOR EDUCATION 認證夥伴」兩行，不讓英文詞組從中間折斷 */
+@media (max-width: 560px){.l-hero--tour .l-eyebrow{font-size: 15px;letter-spacing: 0.18em}.l-eyebrow-a{display: block;margin-bottom: 4px}.l-eyebrow-sep{display: none}}
 .l-gradient-text{font-size: clamp(1.9rem,4.6vw,3.2rem);font-weight: 300;line-height: 1.5;color: var(--text)}
 .l-hero-sub{margin-top: 20px;color: var(--muted);font-size: clamp(1rem,2vw,1.15rem);max-width: 640px;line-height: 1.8}
 .l-hero-cta{display: inline-block;margin-top: 28px;padding: 14px 28px;border-radius: 999px;background: linear-gradient(100deg,var(--accent),var(--accent-gold));color: #fff;font-weight: 700;font-size: 0.95rem;text-decoration: none;transition: transform 0.25s ease,box-shadow 0.25s ease}
