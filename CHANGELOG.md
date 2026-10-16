@@ -3,6 +3,17 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.15.0（2026-10-16）
+
+依「增加曝光」討論（與 Gemini 帳號 A 共 15 輪）做的站內調整，加一篇 Gemini 4 Argon 新文章。
+
+- 新增 `knowledge/gemini-4-argon-teachers`：Gemini 4 Argon 老師能用嗎？依 Gemini 官方更新日誌（10/13）、API 文件與 9/30 公告，整理 4 種帳號的可用性；官方沒寫的一律標「官方未說明」，建議標明是站方看法；附 5 個老師 15 分鐘實測題，其中成績分析與應用題附驗算過的標準答案
+- 修正舊文 `insights/gemini-4-argon`：原寫「只開給網路防禦者」已過時，改為 9/30 與 10/13 兩段，並加更新方框連到新文；卡片、llms.txt、站內搜尋同步
+- `knowledge/gemini-flow-howto`：標題改「6 步驟」，補上步驟清單、Flow 與 Vids 比較表、兩題 FAQ（內容只用頁面原有已查證事實）
+- `knowledge/classroom`：標題加「首頁」「登不進去怎麼辦」、meta 重寫、第一屏加常見卡關捷徑與常見拼法一句話；不合併頁面、不轉址
+- `knowledge/student-ai-policy`：新增填空範本下載（Word 可編輯＋PDF，含家長知悉回條），產生腳本在 `sitemap/gen-ai-policy-template.py`
+- 數位札記 88 篇改 89 篇；主題頁、sitemap、llms.txt、llms-full、站內搜尋、分享預覽圖都已更新
+
 ## v1.14.1（2026-10-16）
 
 排版健康檢查：修掉全站斷行與段落間距問題，並把偵測方法加進檢查腳本，以後同類問題會自動抓到。
