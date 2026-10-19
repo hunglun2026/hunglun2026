@@ -665,9 +665,9 @@ https://www.hunglun.com/tools/data-search
 免驗證碼・即打即搜
 農業部動物用藥開放資料近萬筆，免驗證碼即時全文搜尋，依對象動物、劑型、有效狀態篩選。
 前往體驗
-全國中小學人數查詢
+全國學校人數查詢
 校名搜尋・縣市鄉鎮篩選・學校比較
-整合教育部統計處開放資料，3,600 多所國小與國中的學生人數、班級數與近五年變化，可依縣市、鄉鎮市區篩選，並挑幾所學校放在一起比較。
+整合教育部統計處開放資料，4,200 多所國小、國中、高中職與大專的學生人數、班級數與近五年變化，附地圖、未來推估與算法說明，可依縣市、鄉鎮市區篩選，並挑幾所學校放在一起比較。
 前往體驗
 其他分類：研習專區行政效率工具商用工具校園小工具學習遊戲在地嚮導回資源分享總覽
 想要一個屬於您的工具？
@@ -1112,7 +1112,7 @@ Gemini 4 Argon 老師能用嗎？4 種帳號一次看懂10 月 13 日開放 Pro 
 2026/10/16
 Google Flow 是什麼？免費嗎、點數怎麼算、台灣能用嗎沒訂閱每天 50 點可以試；台灣能用、限 18 歲以上；點數怎麼算、學校帳號能不能用。
 2026/10/14
-Google Vids 是什麼？教育版能用嗎、AI 功能有哪些限制Fundamentals 與 Standard 沒有 AI 功能，Plus 與加購才有；每月額度逐項對照。
+Google Vids 是什麼？教育版能用嗎、AI 功能有哪些限制Fundamentals 沒有 AI 功能，Plus 與加購才有；每月額度逐項對照。
 2026/10/14
 AI 出題工具怎麼選？老師出考卷與練習題的免費做法比較Gemini 直接出題、貼講義、Notebook 測驗卡、Classroom 四種做法，各自適合什麼情況。
 2026/10/14
@@ -1321,7 +1321,7 @@ Gemini 4 Argon 老師能用嗎？4 種帳號一次看懂10 月 13 日開放 Pro 
 2026/10/16
 Google Flow 是什麼？免費嗎、點數怎麼算、台灣能用嗎沒訂閱每天 50 點可以試；台灣能用、限 18 歲以上；點數怎麼算、學校帳號能不能用。
 2026/10/14
-Google Vids 是什麼？教育版能用嗎、AI 功能有哪些限制Fundamentals 與 Standard 沒有 AI 功能，Plus 與加購才有；每月額度逐項對照。
+Google Vids 是什麼？教育版能用嗎、AI 功能有哪些限制Fundamentals 沒有 AI 功能，Plus 與加購才有；每月額度逐項對照。
 2026/10/14
 AI 出題工具怎麼選？老師出考卷與練習題的免費做法比較Gemini 直接出題、貼講義、Notebook 測驗卡、Classroom 四種做法，各自適合什麼情況。
 2026/10/14
@@ -2600,7 +2600,7 @@ Flow 是什麼：Google 的 AI 影片工具，網址是 flow.google.com，用文
 免費嗎：可以免費試。沒有訂閱的 Google 帳號每天有 50 點，當天沒用完不會留到隔天。
 台灣能用嗎：能。台灣在官方的開放名單內，限年滿 18 歲以上。
 學生呢：因為限 18 歲以上，國中小與高中職學生不能自己用；老師拿來做教材沒問題。
-學校帳號呢：Education Standard、Education Plus 與 AI Pro for Education 加購方案，官方寫有 Flow；學前到高中預設關閉，要管理員開啟。詳見下方「誰可以用」。
+學校帳號呢：Education Plus 與 AI Pro for Education 加購方案，官方寫有 Flow；學前到高中預設關閉，要管理員開啟。詳見下方「誰可以用」。
 Google Flow 是什麼？
 Flow 是 Google 的 AI 影片創作工具，在 flow.google.com 使用。你可以用文字描述生成一段影片，也可以上傳一張圖片讓它動起來。官方說明支援一百多種語言，包含繁體中文，不過建議提示用英文寫，結果會比較好。
 它跟 Google Vids 是兩個不同的東西：Vids 做的是有旁白、有轉場的簡報型影片，Flow 做的是一段有具體畫面的短片。差別在文章後面有整理。想看操作步驟的話，看 Google Flow 怎麼用。
@@ -2623,8 +2623,8 @@ Google Flow 台灣用得到嗎？
 老師和學生可以用嗎？學校帳號行不行？
 學生：官方寫目前開放給 18 歲以上的使用者，所以國中小、高中職的學生不能自己用。大學生只要滿 18 歲可以用，但要用自己的 Google 帳號登入。
 老師：年滿 18 歲，用個人 Google 帳號可以先試。
-學校的教育版帳號：Google Workspace 管理員說明頁寫：Education Standard 與 Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Standard、Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。官方資料沒有說明未滿 18 歲的學生帳號能不能用，請資訊組拿測試帳號實際登入確認。
-學校買的教育版 AI 方案有沒有含 Flow 點數：Education Standard 與 Plus 官方寫每天 50 點；AI Pro for Education 加購方案的點數，官方頁沒有寫明，採購前請先確認，不要看到「AI」兩個字就假設有。
+學校的教育版帳號：Google Workspace 管理員說明頁寫：Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。官方資料沒有說明未滿 18 歲的學生帳號能不能用，請資訊組拿測試帳號實際登入確認。
+學校買的教育版 AI 方案有沒有含 Flow 點數：Education Plus 官方寫每天 50 點；AI Pro for Education 加購方案的點數，官方頁沒有寫明，採購前請先確認，不要看到「AI」兩個字就假設有。
 另外有一個通用的提醒，不是 Flow 才有：學生的照片、姓名這類個資，不要上傳到任何 AI 影片工具。
 Flow 跟 Google Vids 差在哪？
 Vids 做說明型的影片，Flow 做一段有畫面的短片。要把研習簡報、課堂講義變成有旁白的影片，用 Vids；要生一段火山爆發、歷史場景這種具體畫面當開場素材，才需要 Flow。多數學校的日常需求是前者。Vids 在教育版各版本的 AI 功能和每月額度不一樣，我們另外整理在 Google Vids 教育版能用嗎。
@@ -2644,7 +2644,7 @@ Google Flow 台灣可以用嗎？
 學生可以用 Google Flow 嗎？
 官方寫目前開放給 18 歲以上的使用者，所以國中小與高中職學生不能自己用，大學生滿 18 歲可以用自己的 Google 帳號登入。
 學校的教育版帳號可以用 Google Flow 嗎？
-要看版本與管理員設定。Google Workspace 管理員說明頁寫：Education Standard 與 Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Standard、Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。官方資料沒有說明未滿 18 歲的學生帳號能不能用，請資訊組用測試帳號確認。
+要看版本與管理員設定。Google Workspace 管理員說明頁寫：Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。官方資料沒有說明未滿 18 歲的學生帳號能不能用，請資訊組用測試帳號確認。
 💡 這篇對同事也有幫助嗎？
 歡迎複製下面這段文字，分享到貴校的行政或教師群組：
 複製分享文字
@@ -2676,7 +2676,7 @@ Vids 是 Google Workspace 裡做影片的工具，打開瀏覽器就能用。學
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 14 日
 重點先看
 Vids 是什麼：Google Workspace 的影片製作工具，網址是 vids.google.com，用學校或工作帳號登入。
-教育版免費的能用 AI 嗎：依官方表格，Education Fundamentals 和 Standard 都沒有 Vids 的 Gemini AI 功能。
+教育版免費的能用 AI 嗎：依官方表格，Education Fundamentals 都沒有 Vids 的 Gemini AI 功能。
 哪些版本有：Education Plus 和 Teaching and Learning 增購有，但每月有上限，例如 AI 短片每月 200 秒。
 想要更多：加購 Google AI Pro for Education，額度大幅提高，AI 短片變成每月 2,000 秒。
 管理員能關嗎：能。官方說明寫明，學校帳號的 Vids 與生成式 AI 功能由管理員控制。
@@ -2684,8 +2684,8 @@ Google Vids 是什麼？
 Vids 是 Google Workspace 內建的影片製作工具，在 vids.google.com 使用。最常見的用法是把手邊的 Google 簡報丟進去，變成有旁白、有轉場的影片，不用另外學剪輯軟體。操作步驟看 Google Vids 怎麼用。
 這篇要講的是另一件事：學校的帳號到底能用到多少 AI 功能。
 教育版帳號能用 Vids 的 AI 功能嗎？
-要看學校的版本。Education Fundamentals 和 Standard 在官方表格裡，Vids 的 Gemini 功能都是「沒有」。Education Plus 與 Teaching and Learning 增購有，加購 Google AI Pro for Education 的額度最高。下面是官方說明頁的數字：
-功能Fundamentals、StandardPlus、Teaching and Learning 增購加購 AI Pro for Education
+要看學校的版本。Education Fundamentals 在官方表格裡，Vids 的 Gemini 功能都是「沒有」。Education Plus 與 Teaching and Learning 增購有，加購 Google AI Pro for Education 的額度最高。下面是官方說明頁的數字：
+功能FundamentalsPlus、Teaching and Learning 增購加購 AI Pro for Education
 AI 虛擬化身沒有每月 10 次每月 100 次
 AI 短片沒有每月 200 秒每月 2,000 秒
 幫我創作沒有無限制無限制
@@ -2703,7 +2703,7 @@ AI 短片：AI 生成的一小段動態畫面，用秒數計算額度。每月 2
 幫我創作：你描述想做什麼，AI 先幫你生出一份影片草稿。
 簡報轉影片：把 Google 簡報匯入，由 AI 配旁白或虛擬化身，變成影片。
 所以我們學校夠用嗎？
-如果老師只是想把簡報配上旁白做成預習影片，在 Fundamentals 或 Standard 的學校，官方表格寫的是沒有 AI 旁白和簡報轉影片的 AI 功能，老師可能看不到，或要自己錄旁白。版本到 Plus，這兩項是無限制，有每月上限的是 AI 虛擬化身、AI 短片、圖像生成這幾項。
+如果老師只是想把簡報配上旁白做成預習影片，在 Fundamentals 的學校，官方表格寫的是沒有 AI 旁白和簡報轉影片的 AI 功能，老師可能看不到，或要自己錄旁白。版本到 Plus，這兩項是無限制，有每月上限的是 AI 虛擬化身、AI 短片、圖像生成這幾項。
 要確認學校目前是哪個版本，請問資訊組，或看 Google Workspace 教育版怎麼選。
 Google Vids 要另外花錢嗎？
 Vids 沒有單獨的售價，AI 額度跟著學校的版本和加購走。想要更多額度，就是升到 Plus，或加購 Google AI Pro for Education。後者的功能與適用對象見 Google AI Pro for Education 是什麼。
@@ -2717,7 +2717,7 @@ Google Docs 編輯器說明〈Learn about availability of Gemini features in Goo
 Google Vids 是什麼？
 Google Vids 是 Google Workspace 內建的影片製作工具，網址是 vids.google.com，用學校或工作帳號登入。常見用法是把 Google 簡報匯入，由 AI 配旁白、加轉場，做成影片。
 教育版免費的帳號能用 Vids 的 AI 功能嗎？
-依官方表格，Education Fundamentals 和 Standard 的 Vids Gemini 功能都是沒有。Education Plus 與 Teaching and Learning 增購有，加購 Google AI Pro for Education 額度更高。
+依官方表格，Education Fundamentals 的 Vids Gemini 功能都是沒有。Education Plus 與 Teaching and Learning 增購有，加購 Google AI Pro for Education 額度更高。
 Education Plus 在 Vids 裡有哪些 AI 額度？
 官方表格列出：AI 虛擬化身每月 10 次、AI 短片每月 200 秒、圖像生成和編輯每月 5 次、簡報轉影片含 AI 虛擬化身每月 5 次、音樂生成 30 秒片段每月 20 次、完整歌曲每月 10 次；幫我創作、AI 旁白、背景去除、簡報轉影片含 AI 旁白是無限制。
 加購 Google AI Pro for Education 在 Vids 多了什麼？
@@ -6798,7 +6798,7 @@ Google Flow 6 步驟上手
 等待生成：通常一到三分鐘，品質越高、時長越長，等越久。
 下載使用：放進簡報或 Google Vids 當課堂素材。
 先確認能不能用：帳號跟方案
-Flow 的網址是 flow.google.com，要年滿 18 歲、用 Google 帳號登入。沒有訂閱的帳號每天有 50 點可以試用，訂閱 Google AI Plus、Pro 或 Ultra 每月會再加點數，台灣在官方開放名單內。學校教育版帳號：Google 管理員說明寫 Education Standard 與 Plus 含 Flow、每天 50 點，Workspace Updates 公告寫 AI Pro for Education 加購方案也可用；學前到高中預設關閉，要管理員開啟，Fundamentals 官方沒提。學校導入前，請先用測試帳號實際登入確認。免費額度、點數與台灣是否可用，整理在 Google Flow 是什麼？免費嗎、點數怎麼算。
+Flow 的網址是 flow.google.com，要年滿 18 歲、用 Google 帳號登入。沒有訂閱的帳號每天有 50 點可以試用，訂閱 Google AI Plus、Pro 或 Ultra 每月會再加點數，台灣在官方開放名單內。學校教育版帳號：Google 管理員說明寫 Education Plus 含 Flow、每天 50 點，Workspace Updates 公告寫 AI Pro for Education 加購方案也可用；學前到高中預設關閉，要管理員開啟，Fundamentals 官方沒提。學校導入前，請先用測試帳號實際登入確認。免費額度、點數與台灣是否可用，整理在 Google Flow 是什麼？免費嗎、點數怎麼算。
 兩種生成方式：文字描述、或丟一張照片
 文字生成影片：輸入一段描述，例如「火山爆發與地層變動的縮時畫面」，Flow 會生成對應的動態影片片段，適合需要視覺化呈現的教學情境，例如自然科實驗過程、歷史場景重現。
 圖片生成影片：上傳一張靜態圖片，讓 AI 把它動畫化，只需要一句話描述想要的動作，比純文字描述更容易對上想要的畫面風格。
@@ -6817,7 +6817,7 @@ Flow 用點數計算額度：沒訂閱每天 50 點，訂閱方案每月另外�
 Google Flow 是什麼？
 Google Flow（網址 flow.google.com）是用 Veo 影片模型把文字描述或靜態圖片生成成動態影片片段的工具，畫面品質接近電影感，適合需要具體視覺情境的短片素材，例如自然科實驗過程、歷史場景重現，跟 Google Vids 的「簡報型」影片是不同的東西。
 用 Google Flow 需要什麼條件？
-年滿 18 歲、用 Google 帳號登入 flow.google.com 就能試，台灣在官方開放名單內。沒有訂閱的帳號每天有 50 點可以試用，訂閱 Google AI Plus、Pro 或 Ultra 每月會再加點數。Google Workspace 管理員說明頁寫：Education Standard 與 Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Standard、Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。學校導入前請先用測試帳號確認。
+年滿 18 歲、用 Google 帳號登入 flow.google.com 就能試，台灣在官方開放名單內。沒有訂閱的帳號每天有 50 點可以試用，訂閱 Google AI Plus、Pro 或 Ultra 每月會再加點數。Google Workspace 管理員說明頁寫：Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。學校導入前請先用測試帳號確認。
 Flow 的生成額度怎麼算？
 Flow 用點數計算：沒訂閱每天 50 點，AI Plus 每月再加 200 點，AI Pro 每月再加 1,000 點，AI Ultra 每月再加 10,000 或 25,000 點，沒用完都不累積。每支影片花多少點看模型，實際以 Flow 畫面顯示的剩餘點數為準。
 Flow 生一支影片要等多久？
@@ -6827,7 +6827,7 @@ Flow 跟 Google Vids 該用哪一個？
 Google Flow 做的影片可以下載嗎？
 可以。生成後的影片能下載，作為簡報或課堂影音素材使用，也能放進 Google Vids 當開場素材。
 學校的教育版帳號能用 Google Flow 嗎？
-要看版本與管理員設定。Google Workspace 管理員說明頁寫：Education Standard 與 Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Standard、Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。學校導入前，請用實際的教師或學生帳號登入 flow.google.com 測試。
+要看版本與管理員設定。Google Workspace 管理員說明頁寫：Education Plus 含 Flow，每天 50 點 AI 點數，不另外收費；Workspace Updates 公告（2026 年 1 月 14 日起推出）寫 Education Plus 與 Google AI Pro for Education 加購方案可用。學前到高中階段的教育單位，這類服務預設關閉，要由管理員開啟。Education Fundamentals 兩份官方資料都沒提到。學校導入前，請用實際的教師或學生帳號登入 flow.google.com 測試。
 ← 上一篇：Google Vids 怎麼用
 Gemini 系列第 8／10 篇・看全部系列
 下一篇：常見問題與額度限制整理 →
@@ -6869,16 +6869,16 @@ Gemini 系列第 7／10 篇・看全部系列
 跟 Google Flow 差在哪？
 Vids 跟下一篇要講的 Google Flow 常被搞混，但做的是不同的事：Vids 是「簡報型」影片，把文字或投影片變成有旁白的說明影片；Flow 是用 Veo 模型生成電影感的動態影片片段，適合需要視覺化情境的短片素材，例如自然科實驗過程、歷史場景重現。簡單說：要做課堂講解、研習宣導這類「說明性」影片，用 Vids；要生成一段具體畫面的動態素材，才需要 Flow，詳細操作見下一篇 Google Flow 怎麼用。
 額度與方案
-Vids 的 AI 功能依學校的教育版本而定：Education Fundamentals 和 Standard 在官方表格裡沒有 Vids 的 Gemini 功能，Education Plus 與 Teaching and Learning 增購有每月上限，加購 Google AI Pro for Education 額度最高。各版本逐項數字見 Google Vids 教育版能用嗎，方案比較整理在 Gemini 方案懶人包，實際上限以帳號當下顯示為準。
+Vids 的 AI 功能依學校的教育版本而定：Education Fundamentals 在官方表格裡沒有 Vids 的 Gemini 功能，Education Plus 與 Teaching and Learning 增購有每月上限，加購 Google AI Pro for Education 額度最高。各版本逐項數字見 Google Vids 教育版能用嗎，方案比較整理在 Gemini 方案懶人包，實際上限以帳號當下顯示為準。
 常見問題
 Google Vids 是什麼？
 Google Vids 是 Google Workspace 內建的影片製作工具，網址是 vids.google.com，用學校或工作帳號登入即可用。可以用文字腳本或既有的 Google 簡報當素材，由 AI 自動生成旁白配音、轉場與字幕（AI 功能依學校的教育版本而定），產出一支簡報型教學影片，不需要另外的剪輯軟體或技術背景。
 Google Vids 跟 Google Flow 差在哪？
 Vids 做的是「簡報型」影片：把文字或投影片變成有旁白、有轉場的說明影片，適合教學講解、宣導、簡報錄影；Flow 則是用 Veo 模型把文字描述或靜態圖片生成成電影感的動態影片片段，適合需要視覺化情境（例如自然科實驗、歷史場景重現）的短片素材。兩者是不同工具，做的事情不一樣。
 Google Vids 要另外付費嗎？
-Vids 本身沒有單獨的售價，AI 功能要看學校的教育版本：官方表格中 Education Fundamentals 和 Standard 沒有 Vids 的 Gemini 功能，Education Plus 與 Teaching and Learning 增購有每月上限，加購 Google AI Pro for Education 額度更高。實際上限請以帳號當下顯示為準。
+Vids 本身沒有單獨的售價，AI 功能要看學校的教育版本：官方表格中 Education Fundamentals 沒有 Vids 的 Gemini 功能，Education Plus 與 Teaching and Learning 增購有每月上限，加購 Google AI Pro for Education 額度更高。實際上限請以帳號當下顯示為準。
 可以把既有的 Google 簡報直接變成影片嗎？
-可以，這是最常見的用法。把既有的 Google 簡報匯入 Vids，由 AI 生成旁白配音、背景音樂與轉場效果，比自己重新錄影、剪輯要快很多，適合把研習簡報或課堂講義快速轉成翻轉教學用的預習影片。這項要學校版本有 Vids 的 AI 功能才有，Fundamentals 與 Standard 在官方表格裡沒有。
+可以，這是最常見的用法。把既有的 Google 簡報匯入 Vids，由 AI 生成旁白配音、背景音樂與轉場效果，比自己重新錄影、剪輯要快很多，適合把研習簡報或課堂講義快速轉成翻轉教學用的預習影片。這項要學校版本有 Vids 的 AI 功能才有，Fundamentals 在官方表格裡沒有。
 生成的旁白配音可以換成自己的聲音嗎？
 Vids 也支援自己錄旁白或出鏡錄影，AI 語音只是其中一個選項，不是唯一做法。實際可選的配音語言與聲音種類會隨產品更新調整，以介面當下顯示為準。
 ← 上一篇：Admin Console 怎麼管控 Gemini
@@ -6923,7 +6923,7 @@ Gemini 系列第 9／10 篇・看全部系列
 工具額度算的是什麼備註
 Gemini 聊天每日/每月問答次數、上下文長度（Token 數）教育版加購 AI Pro 後大幅提高，見 Gemini 方案懶人包
 Gemini Notebook來源上傳數量、語音摘要（Audio Overview）次數教育版額度比免費版高出好幾倍
-Google VidsAI 虛擬化身、AI 短片秒數依教育版本而定，Fundamentals 與 Standard 沒有（逐項額度）
+Google VidsAI 虛擬化身、AI 短片秒數依教育版本而定，Fundamentals 沒有（逐項額度）
 Google FlowFlow 點數（沒訂閱每天 50 點）年滿 18 歲可試用，學校帳號官方沒寫（點數怎麼算）
 實際數字會隨 Google 官方公告調整，交件或採購前務必以帳號當下顯示的畫面為準，不要用記憶裡的舊數字。
 其他常被問到的事
@@ -6936,7 +6936,7 @@ Google FlowFlow 點數（沒訂閱每天 50 點）年滿 18 歲可試用，學�
 免費版跟付費版的額度差多少？
 以教育版為例，免費的 Education Fundamentals 已內含基本版 Gemini，加購 Google AI Pro for Education 之後，文字上下文長度、圖像生成張數、Deep Research 次數、Gemini Notebook 的來源上傳與語音摘要額度都會大幅提高，實際數字請以帳號當下顯示為準，會隨方案調整。
 Gemini Notebook、Google Vids、Google Flow 的額度是分開算的嗎？
-是分開的三套系統。Gemini Notebook 算的是來源上傳數量與語音摘要次數；Google Vids 的 AI 額度依教育版本而定（Fundamentals、Standard 沒有，Plus 與增購有每月上限）；Google Flow 用點數，沒訂閱每天 50 點，訂閱方案每月另外加點，三者互不共用額度。
+是分開的三套系統。Gemini Notebook 算的是來源上傳數量與語音摘要次數；Google Vids 的 AI 額度依教育版本而定（Fundamentals 沒有，Plus 與增購有每月上限）；Google Flow 用點數，沒訂閱每天 50 點，訂閱方案每月另外加點，三者互不共用額度。
 同一句話問兩次，Gemini 的回答會一樣嗎？
 不會完全一樣，這是模型生成的方式決定的，不是系統故障。對答案不滿意，直接按「重新產生」再試一次即可，不用整句重打，也不代表前一次的回答是錯的。
 額度用完了會怎麼樣？
