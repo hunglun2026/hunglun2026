@@ -69,3 +69,5 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 因為每場都要各自的口令保護（見下方對話紀錄），不能只用這裡的靜態轉址。
 # 新增下一場：改 functions/go/_sessions.js，不要在這裡加 /go/ 開頭的規則，
 # 會蓋掉 Function、讓口令保護失效。
+/demo-student-stats  https://school.hunglun.com/  301
+/demo-student-stats/*  https://school.hunglun.com/  301
