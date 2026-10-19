@@ -28,262 +28,56 @@
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=65" crossorigin>
 <link rel="stylesheet" href="/assets/style.css?v=87">
-<style>
-/* 研習專區清單：跟全站 kn-item 共用骨架，只在這裡加圖示底色徽章、需密碼小標籤、
-   懸停時的輕微上浮陰影。只有這一頁的 #training 用得到，不動全站 kn-item 樣式。 */
-#training .kn-item{grid-template-columns: 44px 1fr;transition: background .2s ease,padding-left .2s ease,box-shadow .25s ease,transform .25s ease}
-#training .kn-item:hover{box-shadow: 0 10px 28px -14px rgba(0,0,0,0.28);transform: translateY(-2px)}
-#training .kn-icon-wrap{display: flex;align-items: center;justify-content: center;width: 44px;height: 44px;border-radius: 999px;background: var(--glow);transition: background .25s ease,transform .25s ease}
-#training .kn-item:hover .kn-icon-wrap{background: var(--accent);transform: scale(1.06)}
-#training .kn-icon-wrap .kn-icon{width: 26px;height: 26px;color: var(--accent)}
-#training .kn-item:hover .kn-icon-wrap .kn-icon{color: #fff}
-#training .kn-meta{display: flex;align-items: center;gap: 8px;margin-bottom: 4px}
-#training .kn-meta time{font-family: var(--mono);font-size: 1.05rem;font-weight: 700;color: var(--text)}
-#training .kn-lock{display: inline-flex;align-items: center;gap: 4px;font-size: 0.72rem;font-weight: 600;letter-spacing: .03em;color: var(--accent);background: var(--glow);border-radius: 999px;padding: 2px 9px}
-@media (max-width: 560px){#training .kn-item{grid-template-columns: 36px 1fr}#training .kn-icon-wrap{width: 36px;height: 36px}#training .kn-icon-wrap .kn-icon{width: 21px;height: 21px}}
-</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "dateModified": "2026-10-06",
   "name": "資源分享",
-  "description": "鴻綸科技的研習講義與線上工具，依用途分五類：研習專區（付費研習學員專用）、校園小工具、學習遊戲、資料查詢網站、在地嚮導（皆免費）。",
+  "description": "鴻綸科技的研習講義與線上工具，依用途分七類：研習專區（付費研習學員專用）、行政效率工具、商用工具、校園小工具、學習遊戲、資料查詢網站、在地嚮導。",
   "url": "https://www.hunglun.com/tools",
   "inLanguage": "zh-Hant-TW",
-  "isPartOf": { "@id": "https://www.hunglun.com/#website" },
-  "publisher": { "@id": "https://www.hunglun.com/#organization" },
+  "isPartOf": {
+    "@id": "https://www.hunglun.com/#website"
+  },
+  "publisher": {
+    "@id": "https://www.hunglun.com/#organization"
+  },
   "hasPart": [
-    { "@type": "WebPage", "name": "研習專區：AI 研習完整講義", "url": "https://www.hunglun.com/tools/training" },
-    { "@type": "WebPage", "name": "校園小工具", "url": "https://www.hunglun.com/tools#campus-tools" },
-    { "@type": "WebPage", "name": "學習遊戲", "url": "https://www.hunglun.com/tools#learning-games" },
-    { "@type": "WebPage", "name": "資料查詢網站", "url": "https://www.hunglun.com/tools#data-search" },
-    { "@type": "WebPage", "name": "在地嚮導：新營・鹽水・東山", "url": "https://www.hunglun.com/tools#local-food" }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "鴻綸科技 免費線上工具",
-  "numberOfItems": 7,
-  "itemListElement": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "WebApplication",
-        "name": "classAI 作業評分小幫手",
-        "url": "https://classai.hunglun.com/",
-        "description": "接 Google Classroom 帶入學生繳交的作業，依老師設定的評分標準或答案卷由 AI 先評分並寫評語，老師逐份確認或改分後發回 Classroom，可匯出 Excel。目前內測中，需要密碼。",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "All",
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
+      "@type": "WebPage",
+      "name": "研習專區",
+      "url": "https://www.hunglun.com/tools/training"
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "WebApplication",
-        "name": "學生回條 AI 辨識系統",
-        "url": "https://lunslip.pages.dev/",
-        "description": "AI 視覺辨識批次讀取家長同意書回條，自動判讀班級、座號、姓名與勾選結果，一鍵匯出 Excel。瀏覽器端處理，不留存影像。",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "TWD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
+      "@type": "WebPage",
+      "name": "行政效率工具",
+      "url": "https://www.hunglun.com/tools/admin"
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "WebApplication",
-        "name": "校園照片 Word 填入工具",
-        "url": "https://lun-school-pic-v2.pages.dev/",
-        "description": "在瀏覽器直接預覽 Word 成果報告，點格子、點照片即完成填入，檔案全程在本機處理。",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "TWD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
+      "@type": "WebPage",
+      "name": "商用工具",
+      "url": "https://www.hunglun.com/tools/commercial"
     },
     {
-      "@type": "ListItem",
-      "position": 4,
-      "item": {
-        "@type": "WebApplication",
-        "name": "小綸出題小幫手",
-        "url": "https://lunquiz.pages.dev/",
-        "description": "依課程知識或上傳教材由 AI 命題，支援單選、複選、填充、簡答，可調整難度與語言。",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "TWD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
+      "@type": "WebPage",
+      "name": "校園小工具",
+      "url": "https://www.hunglun.com/tools/campus"
     },
     {
-      "@type": "ListItem",
-      "position": 5,
-      "item": {
-        "@type": "WebApplication",
-        "name": "藥品許可證外觀查詢系統",
-        "url": "https://lun-med-search.pages.dev/",
-        "description": "整合衛福部食藥署開放資料集，超過 22,000 筆藥品許可證，依外觀、成分、藥名即時查詢。",
-        "applicationCategory": "HealthApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "TWD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
+      "@type": "WebPage",
+      "name": "學習遊戲",
+      "url": "https://www.hunglun.com/tools/games"
     },
     {
-      "@type": "ListItem",
-      "position": 6,
-      "item": {
-        "@type": "WebApplication",
-        "name": "動物用藥許可證查詢",
-        "url": "https://lun-vet-rx.pages.dev/",
-        "description": "農業部動物用藥開放資料近萬筆，免驗證碼即時全文搜尋，依對象動物、劑型、有效狀態篩選。",
-        "applicationCategory": "HealthApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "TWD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
+      "@type": "WebPage",
+      "name": "資料查詢網站",
+      "url": "https://www.hunglun.com/tools/data-search"
     },
     {
-      "@type": "ListItem",
-      "position": 7,
-      "item": {
-        "@type": "WebApplication",
-        "name": "全國中小學人數查詢",
-        "url": "https://school.hunglun.com/",
-        "description": "整合教育部統計處開放資料，3,600 多所國小與國中的學生人數、班級數與近五年變化，可依縣市、鄉鎮市區篩選並比較學校。",
-        "applicationCategory": "EducationApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "TWD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 8,
-      "item": {
-        "@type": "WebApplication",
-        "name": "邊玩邊變強",
-        "url": "https://game.hunglun.com/",
-        "description": "國小九九乘法、加減法、注音符號與英文字母練習遊戲，答對題目才能出手攻擊，打贏升級、掉裝備，可登入帳號建立角色保存進度，也能直接遊戲不登入，另附六款練習小遊戲。",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "TWD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "鴻綸科技 Hunglun Technology",
-          "url": "https://hunglun.com",
-          "@id": "https://www.hunglun.com/#organization"
-        }
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "在地嚮導：新營・鹽水・東山",
-  "url": "https://www.hunglun.com/tools#local-food",
-  "hasPart": [
-    { "@type": "WebPage", "name": "新營推薦美食 Top 5", "url": "https://www.hunglun.com/local-food-xinying" },
-    { "@type": "WebPage", "name": "鹽水推薦美食 Top 5", "url": "https://www.hunglun.com/local-food-yanshui" },
-    { "@type": "WebPage", "name": "東山推薦美食 Top 5", "url": "https://www.hunglun.com/local-food-dongshan" }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "新營、鹽水、東山彼此距離多遠？可以安排一日遊嗎？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "新營、鹽水、東山都在台南市東北角，彼此車程約15~25分鐘，是常見的一日遊組合：新營是交通樞紐（有台鐵新營站），鹽水以月津港燈節與老街聞名，東山則以咖啡、東山鴨頭與中興路老街小吃著稱，三地美食加起來安排一日遊剛剛好。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "鴻綸科技為什麼會整理在地嚮導這個單元？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "鴻綸科技總部位於台南新營，長期深耕在地教育與社區服務，這個單元是回饋在地鄉親與外地朋友的在地生活資訊分享，目前先整理美食地圖，資料整理自各家在地美食部落格與媒體報導，未來會陸續加入景點、交通等其他在地生活內容，非商業合作或業配內容。"
-      }
+      "@type": "WebPage",
+      "name": "在地嚮導",
+      "url": "https://www.hunglun.com/tools/local-food"
     }
   ]
 }
@@ -308,6 +102,7 @@
   ]
 }
 </script>
+<script>(function(){var m={"training":"training","admin-tools":"admin","commercial-tools":"commercial","campus-tools":"campus","learning-games":"games","data-search":"data-search","local-food":"local-food"};var h=location.hash.slice(1);if(m[h])location.replace("/tools/"+m[h]);})();</script>
 </head>
 <body>
 
@@ -341,382 +136,42 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> ／ 資源分享</nav>
     <h1>資源分享</h1>
-    <p>研習講義與線上工具依用途分類。研習專區為付費研習的學員專用，其他工具全部免費開放使用。</p>
-    <nav class="section-sub reveal" style="margin:14px auto 0;max-width:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;" aria-label="分類目錄">
-      <a href="#training">研習專區</a>
-      <a href="#admin-tools">行政效率工具</a>
-      <a href="#commercial-tools">商用工具</a>
-      <a href="#campus-tools">校園小工具</a>
-      <a href="#learning-games">學習遊戲</a>
-      <a href="#data-search">資料查詢網站</a>
-      <a href="#local-food">在地嚮導</a>
-    </nav>
+    <p>研習講義與線上工具依用途分類，每一類是獨立的頁面。研習專區與商用工具需要密碼，其餘全部免費開放使用。</p>
   </div>
 </div>
 
-<section class="section" id="training">
+<section class="section">
   <div class="wrap">
-    <h2 class="section-title reveal" style="text-align:center;">研習專區</h2>
-    <p class="section-sub reveal" style="text-align:center;margin-inline:auto;">研習講義僅供參加過付費研習的老師使用，需輸入密碼。</p>
-    <div class="wrap" style="max-width:820px;padding:0;">
-      <ul class="kn-list">
-        <li><a class="kn-item" href="/go/1015">
-          <span class="kn-icon-wrap"><svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="kn-icon" aria-hidden="true"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-</svg></span>
-          <span class="kn-text">
-            <span class="kn-meta"><time datetime="2026-10-15">2026/10/15</time><span class="kn-lock">🔒 需密碼</span></span>
-            <span class="kn-t">國立北港高級中學 AI 研習</span>
-            <span class="kn-d">現場教材連結 hunglun.com/go/1015，需輸入現場公佈的密碼。</span>
-          </span>
-        </a></li>
-        <li><a class="kn-item" href="/go/1013">
-          <span class="kn-icon-wrap"><svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="kn-icon" aria-hidden="true"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-</svg></span>
-          <span class="kn-text">
-            <span class="kn-meta"><time datetime="2026-10-13">2026/10/13</time><span class="kn-lock">🔒 需密碼</span></span>
-            <span class="kn-t">國立臺南高級商業職業學校 AI 研習</span>
-            <span class="kn-d">現場教材連結 hunglun.com/go/1013，需輸入現場公佈的密碼。</span>
-          </span>
-        </a></li>
-        <li><a class="kn-item" href="/go/1012">
-          <span class="kn-icon-wrap"><svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="kn-icon" aria-hidden="true"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-</svg></span>
-          <span class="kn-text">
-            <span class="kn-meta"><time datetime="2026-10-12">2026/10/12</time><span class="kn-lock">🔒 需密碼</span></span>
-            <span class="kn-t">南光高級中學 AI 研習</span>
-            <span class="kn-d">現場教材連結 hunglun.com/go/1012，需輸入現場公佈的密碼。</span>
-          </span>
-        </a></li>
-        <li><a class="kn-item" href="/go/0930">
-          <span class="kn-icon-wrap"><svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="kn-icon" aria-hidden="true"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-</svg></span>
-          <span class="kn-text">
-            <span class="kn-meta"><time datetime="2026-09-30">2026/09/30</time><span class="kn-lock">🔒 需密碼</span></span>
-            <span class="kn-t">吳鳳科技大學 AI 研習</span>
-            <span class="kn-d">現場教材連結 hunglun.com/go/0930，需輸入現場公佈的密碼。</span>
-          </span>
-        </a></li>
-        <li><a class="kn-item" href="/tools/training">
-          <span class="kn-icon-wrap"><svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="kn-icon" aria-hidden="true"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-</svg></span>
-          <span class="kn-text">
-            <span class="kn-meta"><time datetime="2026-09-17">2026/09/17</time><span class="kn-lock">🔒 需密碼</span></span>
-            <span class="kn-t">研習專區：AI 研習完整講義</span>
-            <span class="kn-d">僅供研習參加者使用。歷次場次與講義主題見專區首頁，各場教材需輸入現場密碼。</span>
-          </span>
-        </a></li>
-        <li><a class="kn-item" href="/go/0916">
-          <span class="kn-icon-wrap"><svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="kn-icon" aria-hidden="true"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-  <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-</svg></span>
-          <span class="kn-text">
-            <span class="kn-meta"><time datetime="2026-09-16">2026/09/16</time><span class="kn-lock">🔒 需密碼</span></span>
-            <span class="kn-t">吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）</span>
-            <span class="kn-d">現場教材連結 hunglun.com/go/0916，需輸入現場公佈的密碼。</span>
-          </span>
-        </a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="admin-tools">
-  <div class="wrap">
-    <h2 class="section-title reveal" style="text-align:center;">行政效率工具</h2>
-    <p class="section-sub reveal" style="text-align:center;margin-inline:auto;">處理行政庶務、對外聯繫用的工具，省下重複的人工作業。</p>
-    <!-- 這一區目前只有一張卡。.grid 是 auto-fit，不限寬的話單卡會被拉成整列寬。
-         加了第二張卡就可以把 max-width 拿掉。 -->
-    <div class="grid" style="max-width:400px;margin-inline:auto;">
-      <article class="card reveal">
-        <div class="card-visual"><img width="88" height="66" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="/tools/mail">寄信小幫手</a></h3>
-          <div class="tagline">貼上名單・逐封帶入姓名・先建草稿再送出</div>
-          <p>研習通知、活動公告、問卷提醒都用得上。整段名單貼上去就會自動挑出信箱並去掉重複，寄過的會標記出來提醒；用表格貼名單還能讓每一封各自帶入收件人的姓名與單位。信件從使用者自己的 Gmail 寄出，簽名檔沿用該帳號的設定，鴻綸科技不經手任何名單與<span class="nowrap">信件內容。</span></p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="/tools/mail">進入工具</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="section alt" id="commercial-tools">
-  <div class="wrap">
-    <h2 class="section-title reveal" style="text-align:center;">商用工具</h2>
-    <p class="section-sub reveal" style="text-align:center;margin-inline:auto;">鴻綸科技內部同事執行商業案件用的工具，需輸入密碼才能進入。</p>
-    <div class="grid" style="max-width:840px;margin-inline:auto;">
-      <article class="card reveal">
+    <div class="grid">
+      <a class="card reveal" href="/tools/training">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-education.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body"><h2 style="font-size:1.15rem;margin:0 0 6px;">研習專區 <span class="kn-lock" style="font-size:.72rem;border:1px solid var(--line);border-radius:4px;padding:0 6px;margin-left:6px;">需密碼</span></h2><p>AI 研習完整講義與歷次場次紀錄，付費研習的學員憑密碼閱讀。</p><p style="margin-top:10px;color:var(--accent);">進入 →</p></div>
+      </a>
+      <a class="card reveal" href="/tools/admin">
+        <div class="card-visual"><img width="160" height="160" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body"><h2 style="font-size:1.15rem;margin:0 0 6px;">行政效率工具</h2><p>處理行政庶務、對外聯繫用的工具，例如貼上名單就能逐封帶入姓名的寄信小幫手。</p><p style="margin-top:10px;color:var(--accent);">進入 →</p></div>
+      </a>
+      <a class="card reveal" href="/tools/commercial">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-admin.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="/tools/ceu">CEU 綁定與解除系統</a></h3>
-          <div class="tagline">大量批次・貼上序號・自動綁定或解除</div>
-          <p>把整批 Chromebook 或 ChromeOS Flex 裝置的序號貼上去，一次完成 Chrome Education Upgrade 授權的綁定或解除。支援從 Excel 整欄複製貼上、自動去除重複、逐台顯示結果。內部同事使用，需輸入密碼。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="/tools/ceu">進入工具</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-laptop.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="/tools/flex-deploy">ChromeOS Flex 遠端部署系統</a></h3>
-          <div class="tagline">Windows 電腦整批遠端轉 ChromeOS Flex・完整操作手冊＋工具下載</div>
-          <p>把一批 Windows 電腦遠端轉成 ChromeOS Flex 並自動註冊，不用一台一台插隨身碟。這個頁面是完整的操作手冊，含現場流程、安全機制、疑難排解，並提供工具程式下載包。工具在同事自己的電腦上執行。內部同事使用，需輸入密碼。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="/tools/flex-deploy">看手冊・下載工具</a>
-            <a class="btn btn-primary btn-sm" href="/tools/downloads/">直接下載</a>
-            <a class="btn btn-primary btn-sm" href="/tools/flex-enroll/">大量部署系統</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="campus-tools">
-  <div class="wrap">
-    <h2 class="section-title reveal">校園小工具</h2>
-    <p class="section-sub reveal">老師與班導日常會用到的自動化小工具。</p>
-    <div class="grid">
-      <article class="card reveal">
+        <div class="card-body"><h2 style="font-size:1.15rem;margin:0 0 6px;">商用工具 <span class="kn-lock" style="font-size:.72rem;border:1px solid var(--line);border-radius:4px;padding:0 6px;margin-left:6px;">需密碼</span></h2><p>鴻綸科技內部同事執行商業案件用的工具，需輸入密碼才能進入。</p><p style="margin-top:10px;color:var(--accent);">進入 →</p></div>
+      </a>
+      <a class="card reveal" href="/tools/campus">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-classai.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://classai.hunglun.com/" target="_blank" rel="noopener">classAI 作業評分小幫手</a></h3>
-          <div class="tagline">接 Google Classroom・AI 先評・老師定案</div>
-          <p>從 Google Classroom 帶入班級與學生繳交的作業，老師先設好評分標準或答案卷，AI 讀完每份作答給出分數與評語，老師逐份確認或自己改分，再一次發回 Classroom，也能匯出 Excel。AI 只負責先看過一遍，分數與評語一律由老師定案。</p>
-          <p style="margin-top:10px;">目前為內測階段，需要密碼才能進入，想試用請<a href="/contact">與我們聯絡</a>。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://classai.hunglun.com/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-slip.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://lunslip.pages.dev/" target="_blank" rel="noopener">學生回條 AI 辨識系統</a></h3>
-          <div class="tagline">拍照上傳・自動統計・匯出 Excel</div>
-          <p>AI 視覺辨識批次讀取家長同意書回條，自動判讀班級、座號、姓名與勾選結果，一鍵匯出 Excel。整個流程在瀏覽器端執行，鴻綸科技未架設伺服器儲存或留存上傳的回條影像。</p>
-          <p style="margin-top:10px;"><a href="/knowledge/ocr">AI OCR 文件辨識技術知識 →</a></p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://lunslip.pages.dev/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-photo.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://lun-school-pic-v2.pages.dev/" target="_blank" rel="noopener">校園照片 Word 填入工具</a></h3>
-          <div class="tagline">所見即所得・照片自動排版</div>
-          <p>在瀏覽器直接預覽 Word 成果報告，點格子、點照片即完成填入，檔案全程在本機處理，不上傳雲端。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://lun-school-pic-v2.pages.dev/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-quiz.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://lunquiz.pages.dev/" target="_blank" rel="noopener">小綸出題小幫手</a></h3>
-          <div class="tagline">AI 智慧出題・支援多種題型</div>
-          <p>依課程知識或上傳教材由 AI 命題，支援單選、複選、填充、簡答，可調整難度與語言，完成後能編輯、下載、列印，或分享給學生線上作答。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://lunquiz.pages.dev/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section alt" id="learning-games">
-  <div class="wrap">
-    <h2 class="section-title reveal">學習遊戲</h2>
-    <p class="section-sub reveal">給國小學生的免費闖關遊戲，邊玩邊練基本功。</p>
-    <div class="grid" style="max-width:400px;margin-inline:auto;">
-      <article class="card reveal">
+        <div class="card-body"><h2 style="font-size:1.15rem;margin:0 0 6px;">校園小工具</h2><p>老師與班導日常會用到的自動化小工具：作業評分、回條辨識、照片填入 Word、出題。</p><p style="margin-top:10px;color:var(--accent);">進入 →</p></div>
+      </a>
+      <a class="card reveal" href="/tools/games">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-9x9game.webp?v=2" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://game.hunglun.com/" target="_blank" rel="noopener">邊玩邊變強</a></h3>
-          <div class="tagline">答題觸發戰鬥・答對就出手打怪</div>
-          <p>國小九九乘法、加減法、注音符號與英文字母練習遊戲，答對題目才能出手攻擊，打贏還能升級、掉裝備。登入帳號可建立角色保存進度，也能直接遊戲不必登入，另外附六款練習小遊戲，免安裝就能玩。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://game.hunglun.com/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="data-search">
-  <div class="wrap">
-    <h2 class="section-title reveal">資料查詢網站</h2>
-    <p class="section-sub reveal">整合政府開放資料，比官方系統更快更好用。</p>
-    <div class="grid">
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-med.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://lun-med-search.pages.dev/" target="_blank" rel="noopener">藥品許可證外觀查詢系統</a></h3>
-          <div class="tagline">看外觀找藥・查仿單 PDF</div>
-          <p>整合衛福部食藥署三大開放資料集，超過 22,000 筆藥品許可證，依外觀、成分、藥名即時查詢。</p>
-          <p style="margin-top:10px;"><a href="/knowledge/opendata">開放資料應用手冊 →</a></p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://lun-med-search.pages.dev/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-vet.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://lun-vet-rx.pages.dev/" target="_blank" rel="noopener">動物用藥許可證查詢</a></h3>
-          <div class="tagline">免驗證碼・即打即搜</div>
-          <p>農業部動物用藥開放資料近萬筆，免驗證碼即時全文搜尋，依對象動物、劑型、有效狀態篩選。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://lun-vet-rx.pages.dev/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal">
+        <div class="card-body"><h2 style="font-size:1.15rem;margin:0 0 6px;">學習遊戲</h2><p>給國小學生的免費闖關遊戲，邊玩邊練基本功。</p><p style="margin-top:10px;color:var(--accent);">進入 →</p></div>
+      </a>
+      <a class="card reveal" href="/tools/data-search">
         <div class="card-visual"><img width="160" height="160" src="/assets/icon-svc-data.webp" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <h3><a href="https://school.hunglun.com/" target="_blank" rel="noopener">全國中小學人數查詢</a></h3>
-          <div class="tagline">校名搜尋・縣市鄉鎮篩選・學校比較</div>
-          <p>整合教育部統計處開放資料，3,600 多所國小與國中的學生人數、班級數與近五年變化，可依縣市、鄉鎮市區篩選，並挑幾所學校放在一起比較。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://school.hunglun.com/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="local-food">
-  <div class="wrap">
-    <h2 class="section-title reveal">在地嚮導：新營・鹽水・東山</h2>
-    <p class="section-sub reveal">總部在新營，這是我們整理的在地美食地圖。選一個區域看 Top 5 必吃推薦，每家都附 Google Maps 連結。常有學校老師來新營總部參加研習或洽談，這份地圖也可以直接當作行程中的用餐參考。</p>
-
-    <div class="grid">
-      <a class="card reveal" href="/local-food-xinying">
-        <div class="card-visual food-visual" style="--bg-img:url('/assets/images/food-xinying-01.webp')"><img width="640" height="349" class="photo food-photo" src="/assets/images/food-xinying-01.webp" alt="新營必吃美食" loading="lazy"></div>
-        <div class="card-body"><h3>新營推薦美食 Top 5</h3><p>鴻綸科技總部所在地，宇航牛肉湯、郭家紅燒土魠魚羹、陳記鱔魚麵等在地老字號小吃。</p></div>
+        <div class="card-body"><h2 style="font-size:1.15rem;margin:0 0 6px;">資料查詢網站</h2><p>整合政府開放資料，比官方系統更快更好用：藥品許可證、動物用藥、全國中小學人數。</p><p style="margin-top:10px;color:var(--accent);">進入 →</p></div>
       </a>
-      <a class="card reveal" href="/local-food-yanshui">
-        <div class="card-visual food-visual" style="--bg-img:url('/assets/images/food-yanshui-01.webp')"><img width="640" height="349" class="photo food-photo" src="/assets/images/food-yanshui-01.webp" alt="鹽水必吃美食" loading="lazy"></div>
-        <div class="card-body"><h3>鹽水推薦美食 Top 5</h3><p>加鴨蛋提香的意麵、70年老字號銀鋒冰果室，順遊月津港前後吃透透。</p></div>
-      </a>
-      <a class="card reveal" href="/local-food-dongshan">
-        <div class="card-visual food-visual" style="--bg-img:url('/assets/images/food-dongshan-01.webp')"><img width="640" height="349" class="photo food-photo" src="/assets/images/food-dongshan-01.webp" alt="東山必吃美食" loading="lazy"></div>
-        <div class="card-body"><h3>東山推薦美食 Top 5</h3><p>中興路商圈東山鴨頭創始店籃記、東山肉圓、排骨酥等在地老店。</p></div>
+      <a class="card reveal" href="/tools/local-food">
+        <div class="card-visual"><img width="160" height="160" src="/assets/images/food-xinying-01.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card-body"><h2 style="font-size:1.15rem;margin:0 0 6px;">在地嚮導：新營・鹽水・東山</h2><p>總部在新營，整理的在地美食地圖，每區 Top 5，每家附 Google Maps 連結。</p><p style="margin-top:10px;color:var(--accent);">進入 →</p></div>
       </a>
     </div>
-  </div>
-  <div class="wrap" style="max-width:780px;margin-top:56px;">
-    <h2 class="section-title reveal">常見問題</h2>
-    <details class="faq-item reveal" open>
-      <summary>新營、鹽水、東山彼此距離多遠？可以安排一日遊嗎？</summary>
-      <div class="faq-a">新營、鹽水、東山都在台南市東北角，彼此車程約15~25分鐘，是常見的一日遊組合：新營是交通樞紐（有台鐵新營站），鹽水以月津港燈節與老街聞名，東山則以咖啡、東山鴨頭與中興路老街小吃著稱，三地美食加起來安排一日遊剛剛好。</div>
-    </details>
-    <details class="faq-item reveal">
-      <summary>鴻綸科技為什麼會整理在地嚮導這個單元？</summary>
-      <div class="faq-a">鴻綸科技總部位於台南新營，長期深耕在地教育與社區服務，這個單元是回饋在地鄉親與外地朋友的在地生活資訊分享，目前先整理美食地圖，資料整理自各家在地美食部落格與媒體報導，未來會陸續加入景點、交通等其他在地生活內容，非商業合作或業配內容。</div>
-    </details>
-  </div>
-  <div class="wrap" style="max-width:780px;margin-top:56px;">
-    <h2 class="section-title reveal">參考來源</h2>
-    <p class="section-sub reveal">美食地圖資訊整理自以下報導與在地部落格：</p>
-    <ul style="color:var(--muted);line-height:2;">
-      <li><a href="https://supertaste.tvbs.com.tw/pack/349428" target="_blank" rel="noopener">台南新營美食推薦９家｜食尚玩家</a></li>
-      <li><a href="https://mytainan.com/tainan-food-drink/xinying-foods-sstainan/" target="_blank" rel="noopener">新營美食9間一次推薦｜MyTainan</a></li>
-      <li><a href="https://www.gomaji.com/blog/%E6%96%B0%E7%87%9F%E7%81%AB%E8%BB%8A%E7%AB%99%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%96%A6%EF%BD%9C%E5%9C%A8%E5%9C%B0%E4%BA%BA%E7%A7%81%E8%97%8F%EF%BC%81%E9%81%93%E5%9C%B0%E5%B0%8F%E5%90%83%E3%80%81%E7%BE%8E/" target="_blank" rel="noopener">新營火車站美食推薦｜GOMAJI</a></li>
-      <li><a href="https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E6%96%B0%E7%87%9F%E7%BE%8E%E9%A3%9F%E5%B0%8F%E5%90%83" target="_blank" rel="noopener">台南新營美食小吃 TOP15｜愛食記</a></li>
-      <li><a href="https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E9%B9%BD%E6%B0%B4%E7%BE%8E%E9%A3%9F%E5%B0%8F%E5%90%83" target="_blank" rel="noopener">台南鹽水美食小吃 TOP15｜愛食記</a></li>
-      <li><a href="https://journey.tw/yanshuei-food/" target="_blank" rel="noopener">5家鹽水美食推薦｜美食漫旅</a></li>
-      <li><a href="https://ajtravel.tw/yanshui/" target="_blank" rel="noopener">2026台南鹽水美食｜AJ的旅行地圖</a></li>
-      <li><a href="https://udn.com/news/story/7208/7746677" target="_blank" rel="noopener">分享11間東山美食小吃｜聯合新聞網</a></li>
-      <li><a href="https://www.gomaji.com/blog/%E5%8F%B0%E5%8D%97%E6%9D%B1%E5%B1%B1%E7%BE%8E%E9%A3%9F/" target="_blank" rel="noopener">台南東山美食地圖｜GOMAJI</a></li>
-      <li><a href="https://kenantravel.tw/dongshan-food-0707/" target="_blank" rel="noopener">東山美食懶人包｜跟著凱南瘋旅遊</a></li>
-    </ul>
   </div>
 </section>
 
