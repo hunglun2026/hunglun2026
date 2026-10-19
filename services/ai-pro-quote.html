@@ -563,5 +563,16 @@
   });
 })();
 </script>
+<script>
+/* prefillFromQuery：從「全國學校人數查詢」的導入試算帶入學校名、授權人數級距與備註（網址參數 org、seats、note）。
+   只填欄位、不送出；seats 必須是下拉選單裡存在的選項才採用，其餘一律忽略。 */
+(function prefillFromQuery() {
+  var q = new URLSearchParams(location.search);
+  var org = document.getElementById('qOrg'), seats = document.getElementById('qSeats'), note = document.getElementById('qNote');
+  if (org && q.get('org')) org.value = q.get('org').slice(0, 200);
+  if (seats && q.get('seats')) { for (var i = 0; i < seats.options.length; i++) if (seats.options[i].value === q.get('seats')) { seats.value = seats.options[i].value; break; } }
+  if (note && q.get('note')) note.value = q.get('note').slice(0, 1000);
+})();
+</script>
 </body>
 </html>
