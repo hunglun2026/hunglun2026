@@ -109,9 +109,9 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   var CLOSE_LEFT="）」』》〉】",OPEN="（「『《〈【",PUNCT="）」』》〉】。，、；：！？（「『《〈【";
   var SKIP="script,style,code,pre,kbd,samp,textarea,input,select,svg,.g-word,.nowrap,[aria-hidden='true']";
 
-  function textNodes(root){
-    var out=[],w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n;
-    while((n=w.nextNode())){if(n.nodeValue.trim()&&!n.parentElement.closest(SKIP))out.push(n);}
+  function textNodes(root,skip){
+    var out=[],w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n;skip=skip||SKIP;
+    while((n=w.nextNode())){if(n.nodeValue.trim()&&!n.parentElement.closest(skip))out.push(n);}
     return out;
   }
 
@@ -132,11 +132,28 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   }
   textNodes(main).forEach(function(n){if(/[）」』》〉】。，、；：！？][）」』》〉】。，、；：！？（「『《〈【]/.test(n.nodeValue))squeeze(n);});
 
+  // ③ 網址（flow.google.com、takeout.google.com/transfer）中間沒有斷點，整串掉到下一行，上一行左右對齊會被撐很開；
+  //    在「.」「/」後面插 <wbr>（不會被複製進網址）；<code> 裡的網址也要處理
+  textNodes(main,"script,style,pre,textarea,input,select,svg,.nowrap,[aria-hidden='true']").forEach(function(n){
+    var s=n.nodeValue,re=/[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+(?:\/[A-Za-z0-9._~%\/-]*)?/g,m,last=0,frag=null;
+    while((m=re.exec(s))){
+      if(m[0].length<12||!/[a-z]/i.test(m[0]))continue;
+      frag=frag||document.createDocumentFragment();
+      frag.appendChild(document.createTextNode(s.slice(last,m.index)));
+      m[0].split(/(?<=[.\/])/).forEach(function(part,k){if(k)frag.appendChild(document.createElement("wbr"));frag.appendChild(document.createTextNode(part));});
+      last=m.index+m[0].length;
+    }
+    if(!frag)return;
+    frag.appendChild(document.createTextNode(s.slice(last)));
+    n.parentNode.replaceChild(frag,n);
+  });
+
   // ② 段落最後幾個字綁在一起。Safari 不套 pretty，Chrome 的 pretty 在中文也擋不完（360 寬實測 20 處），所以全部瀏覽器都做
   // 從結尾往回數「單位」：一個中文字或一串英數字算一個，湊滿三個就停（不夠三個但有兩個也綁），中間的空白與標點一起綁
   // 綁太長（含英文或數字時）上一行會空一大塊：估計寬度超過 6 個中文字就改綁兩個單位，還是太寬就不綁（英數約半個字寬）
   function wid(t){var w=0;for(var k=0;k<t.length;k++)w+=/[⺀-￯]/.test(t.charAt(k))?1:0.55;return w;}
-  function tailOf(s){var t=tailN(s,3);if(wid(t)>6)t=tailN(s,2);return wid(t)>6?"":t;}
+  // 結尾有標點時綁兩個字＋標點就夠（最後一行已有三格寬），少綁一個字，上一行左右對齊時撐開的字距也少一點
+  function tailOf(s){var n=/[。，、；：！？）」』》〉】.,!?)]$/.test(s)?2:3,t=tailN(s,n);if(wid(t)>6)t=tailN(s,2);return wid(t)>6?"":t;}
   function tailN(s,want){
     var units=0,i=s.length;
     while(i>0&&units<want){
@@ -152,6 +169,10 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     // 結尾只有標點的節點（例如連結後的「。」）往前找：標點本來就不會放在行首，會跟著前一個字走
     while(i>=0&&/^[\s）」』》〉】。，、；：！？.,)]*$/.test(ns[i].nodeValue))i--;
     if(i<0)return;
+    // 段落真正的結尾在 <code>、英文品牌字這類跳過的元素裡：綁前面的字沒有意義，不綁
+    var all=textNodes(el,"script,style"),j=all.length-1;
+    while(j>=0&&/^[\s）」』》〉】。，、；：！？.,)]*$/.test(all[j].nodeValue))j--;
+    if(all[j]!==ns[i])return;
     var node=ns[i],s=node.nodeValue.replace(/\s+$/,""),tail=tailOf(s);
     if(!tail||tail.length>=s.length&&node===ns[0])return;  // 整個區塊就這幾個字，不用綁
     var sp=document.createElement("span");sp.className="nowrap";sp.textContent=tail;
