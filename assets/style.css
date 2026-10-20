@@ -127,7 +127,7 @@ a.stat:hover{transform: none}
 .card{position: relative;background: transparent;border-bottom: 1px solid var(--line);display: flex;flex-direction: column;transition: transform 0.25s ease}
 .card:hover{transform: translateY(-3px)}
 .card:hover .card-visual{background: var(--glow)}
-.card-num{font-family: var(--mono);font-size: 0.72rem;letter-spacing: 0.05em;color: var(--accent);opacity: 0.85;display: block;margin-bottom: 6px}
+.card-num{font-family: var(--mono);font-size: 0.75rem;letter-spacing: 0.05em;color: var(--accent);opacity: 0.85;display: block;margin-bottom: 6px}
 .card-visual{height: 152px;display: flex;align-items: center;justify-content: center;font-size: 2.1rem;background: var(--bg-soft);transition: background 0.3s ease}
 .card-visual svg{width: 44px;height: 44px;color: var(--accent);stroke-width: 1.4}
 .card-visual img{width: 108px;height: 108px;object-fit: contain}
@@ -224,10 +224,10 @@ a.stat:hover{transform: none}
 .fc-key{font-size: 0.68rem;letter-spacing: 0.16em;color: var(--muted-faint);white-space: nowrap}
 .footer-contact a:hover .fc-key{color: var(--accent)}
 .fc-val{font-size: 0.9rem;color: var(--text);line-height: 1.6;word-break: keep-all}
-.fc-val em{display: block;font-style: normal;font-size: 0.74rem;color: var(--muted-faint);margin-top: 3px;letter-spacing: 0.01em}
+.fc-val em{display: block;font-style: normal;font-size: 0.75rem;color: var(--muted-faint);margin-top: 3px;letter-spacing: 0.01em}
 .footer-contact li.fc-has-copy{display: flex;align-items: center;gap: 6px}
 .footer-contact li.fc-has-copy > a{flex: 1;min-width: 0}
-.fc-copy{flex: none;font-size: 0.72rem;letter-spacing: 0.08em;color: var(--muted);background: transparent;border: 1px solid var(--line);border-radius: 8px;padding: 6px 10px;min-height: 32px;cursor: pointer;white-space: nowrap;transition: color 0.2s ease,border-color 0.2s ease,background 0.2s ease}
+.fc-copy{flex: none;font-size: 0.75rem;letter-spacing: 0.08em;color: var(--muted);background: transparent;border: 1px solid var(--line);border-radius: 8px;padding: 6px 10px;min-height: 32px;cursor: pointer;white-space: nowrap;transition: color 0.2s ease,border-color 0.2s ease,background 0.2s ease}
 .fc-copy:hover{color: var(--accent);border-color: var(--accent);background: var(--bg-soft)}
 .fc-copy.copied{color: var(--accent);border-color: var(--accent)}
 @media (prefers-reduced-motion: reduce){.footer-nav a,.footer-contact a{transition: none}
@@ -274,7 +274,7 @@ html{scroll-behavior: auto}
 @media (max-width: 1600px) and (min-width: 1281px){.header-inner{gap: 10px;padding: 12px 20px}
 .brand-logo{width: 302px}
 .brand img{max-height: 60px}
-.header-visit-counter{font-size: 0.74rem;padding: 4px 10px;margin-right: 6px}
+.header-visit-counter{font-size: 0.75rem;padding: 4px 10px;margin-right: 6px}
 .main-nav{gap: 0}
 .main-nav a{padding: 8px 7px;font-size: 0.88rem}
 .nav-tools-trigger{padding: 7px 11px;font-size: 0.88rem}
@@ -293,7 +293,7 @@ html{scroll-behavior: auto}
 .brand{max-width: 100%}
 .header-inner{padding: 8px 10px;gap: 8px}
 .nav-toggle{padding: 6px 10px}
-.header-visit-counter{font-size: 0.72rem;padding: 4px 10px;margin-right: 6px}
+.header-visit-counter{font-size: 0.75rem;padding: 4px 10px;margin-right: 6px}
 .wrap{padding: 0 16px}
 .section{padding: 40px 0}
 .btn{padding: 13px 22px}
@@ -421,7 +421,7 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 /* 描述用正常折行；<li> 繼承了 balance 會讓描述擠成窄條。標題維持 balance 避免只剩一個孤字 */
 .kn-list li,.kn-d{text-wrap: pretty}
 .kn-t{max-width: none}
-.kn-date{font-family: var(--mono);font-size: 0.74rem;color: var(--muted-faint);white-space: nowrap}
+.kn-date{font-family: var(--mono);font-size: 0.75rem;color: var(--muted-faint);white-space: nowrap}
 @media (max-width: 560px){.kn-item{grid-template-columns: 36px 1fr;gap: 12px;padding: 12px 2px}
 .kn-icon{width: 36px;height: 36px}
 .kn-date{grid-column: 2;margin-top: 2px}
