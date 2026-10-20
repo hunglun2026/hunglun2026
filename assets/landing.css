@@ -89,7 +89,7 @@ body.landing{overflow-x: hidden}
 .l-svc-cat > summary:hover .l-cat-t,.l-svc-cat[open] > summary .l-cat-t{color: var(--accent)}
 .l-svc-cat > summary:focus-visible{outline: 2px solid var(--accent);outline-offset: -4px;border-radius: 18px}
 .l-cat-t{grid-column: 1;grid-row: 1;font-size: 1.15rem;font-weight: 500;transition: color 0.3s ease}
-.l-cat-d{grid-column: 1;grid-row: 2;color: var(--muted);font-size: 0.88rem}
+.l-cat-d{grid-column: 1;grid-row: 2;color: var(--muted);font-size: 0.88rem;word-break: keep-all}
 .l-cat-n{grid-column: 2;grid-row: 1 / span 2;justify-self: end;font-family: var(--mono);font-size: 0.75rem;color: var(--accent);border: 1px solid var(--line);border-radius: 999px;padding: 4px 11px;white-space: nowrap}
 .l-svc-cat > summary::after{content: "▾";grid-column: 3;grid-row: 1 / span 2;display: inline-block;color: var(--muted);font-size: 0.9rem;transition: transform 0.3s ease,color 0.3s ease}
 .l-svc-cat[open] > summary::after{transform: rotate(180deg);color: var(--accent)}

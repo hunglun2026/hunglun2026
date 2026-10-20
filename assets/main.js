@@ -97,3 +97,65 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     }
   });
 })();
+
+/* 中文排版補強（2026-10-20 iPhone 實機截圖後加）
+   ① 相鄰標點擠緊：「）。」「」，」這類收尾標點右半是空白，後面再接標點就空出一大格。
+      字型子集沒有 halt／chws，Chrome 與 Safari 都不會自動擠，所以把前一個標點包起來縮半格。
+   ② 防孤字：Safari 不套 text-wrap:pretty（會每行提早換行），Chrome 的 pretty 在中文也擋不完；
+      把段落最後三個字綁在同一行，最後一行至少三個字。只動畫面，原始 HTML 與爬蟲讀到的文字不變。 */
+(function(){
+  var main=document.querySelector("main");
+  if(!main)return;
+  var CLOSE_LEFT="）」』》〉】",OPEN="（「『《〈【",PUNCT="）」』》〉】。，、；：！？（「『《〈【";
+  var SKIP="script,style,code,pre,kbd,samp,textarea,input,select,svg,.g-word,.nowrap,[aria-hidden='true']";
+
+  function textNodes(root){
+    var out=[],w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n;
+    while((n=w.nextNode())){if(n.nodeValue.trim()&&!n.parentElement.closest(SKIP))out.push(n);}
+    return out;
+  }
+
+  // ① 收尾標點（墨在左半）後面接標點，或任何標點後面接開頭標點（墨在右半），前一個縮半格
+  function squeeze(node){
+    var s=node.nodeValue,re=/[）」』》〉】。，、；：！？](?=[）」』》〉】。，、；：！？（「『《〈【])/g,m,last=0,frag=null;
+    while((m=re.exec(s))){
+      var a=m[0],b=s.charAt(m.index+1);
+      if(CLOSE_LEFT.indexOf(a)<0&&OPEN.indexOf(b)<0)continue;  // 「。」」置中標點後接收尾標點：兩邊都有字身空白，不縮
+      frag=frag||document.createDocumentFragment();
+      frag.appendChild(document.createTextNode(s.slice(last,m.index)));
+      var sp=document.createElement("span");sp.className="pt-half";sp.textContent=a;frag.appendChild(sp);
+      last=m.index+1;
+    }
+    if(!frag)return;
+    frag.appendChild(document.createTextNode(s.slice(last)));
+    node.parentNode.replaceChild(frag,node);
+  }
+  textNodes(main).forEach(function(n){if(/[）」』》〉】。，、；：！？][）」』》〉】。，、；：！？（「『《〈【]/.test(n.nodeValue))squeeze(n);});
+
+  // ② 段落最後幾個字綁在一起。Safari 不套 pretty，Chrome 的 pretty 在中文也擋不完（360 寬實測 20 處），所以全部瀏覽器都做
+  // 從結尾往回數「單位」：一個中文字或一串英數字算一個，湊滿三個就停（不夠三個但有兩個也綁），中間的空白與標點一起綁
+  // 綁太長（含英文或數字時）上一行會空一大塊：估計寬度超過 6 個中文字就改綁兩個單位，還是太寬就不綁（英數約半個字寬）
+  function wid(t){var w=0;for(var k=0;k<t.length;k++)w+=/[⺀-￯]/.test(t.charAt(k))?1:0.55;return w;}
+  function tailOf(s){var t=tailN(s,3);if(wid(t)>6)t=tailN(s,2);return wid(t)>6?"":t;}
+  function tailN(s,want){
+    var units=0,i=s.length;
+    while(i>0&&units<want){
+      var c=s.charAt(i-1);
+      if(/[A-Za-z0-9]/.test(c)){while(i>0&&/[A-Za-z0-9.\/\-]/.test(s.charAt(i-1)))i--;units++;}
+      else{if(/[㐀-鿿]/.test(c))units++;i--;}
+    }
+    return units<2?"":s.slice(i);
+  }
+  main.querySelectorAll("p,li,dd,figcaption,.faq-a,.kn-d,.section-sub,.svc-pager a").forEach(function(el){
+    if(el.closest(SKIP))return;
+    var ns=textNodes(el),i=ns.length-1;
+    // 結尾只有標點的節點（例如連結後的「。」）往前找：標點本來就不會放在行首，會跟著前一個字走
+    while(i>=0&&/^[\s）」』》〉】。，、；：！？.,)]*$/.test(ns[i].nodeValue))i--;
+    if(i<0)return;
+    var node=ns[i],s=node.nodeValue.replace(/\s+$/,""),tail=tailOf(s);
+    if(!tail||tail.length>=s.length&&node===ns[0])return;  // 整個區塊就這幾個字，不用綁
+    var sp=document.createElement("span");sp.className="nowrap";sp.textContent=tail;
+    node.nodeValue=s.slice(0,s.length-tail.length);
+    node.parentNode.insertBefore(sp,node.nextSibling);
+  });
+})();

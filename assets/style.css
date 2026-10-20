@@ -65,7 +65,7 @@ main:focus{outline: none}
 @media (max-width: 768px){body{letter-spacing: 0.02em;line-height: 1.8}
 }
 .wrap{max-width: var(--maxw);margin: 0 auto;padding: 0 20px}
-.site-header{position: sticky;top: 0;z-index: 50;background: var(--header-bg);border-bottom: 1px solid var(--line)}
+.site-header{position: sticky;top: 0;z-index: 50;background: var(--header-bg);-webkit-backdrop-filter: saturate(180%) blur(14px);backdrop-filter: saturate(180%) blur(14px);border-bottom: 1px solid var(--line)}
 .header-inner{display: flex;align-items: center;gap: 16px;padding: 16px 20px;max-width: 1600px;margin: 0 auto}
 .brand{display: flex;align-items: center;gap: 10px;flex-shrink: 1;min-width: 0;max-width: 55%;margin-right: auto}
 .brand img{height: auto;width: auto;max-height: 90px;max-width: 100%;display: block}
@@ -149,10 +149,17 @@ a.stat:hover{transform: none}
 .card-body .tagline{color: var(--accent);font-size: 0.85rem;margin-bottom: 10px}
 .card-body p{color: var(--muted);font-size: 0.92rem;flex: 1}
 .card-actions{margin-top: 20px;display: flex;gap: 10px;flex-wrap: wrap}
-.feature-list{list-style: none;display: grid;gap: 18px}
-.feature-list li{margin-bottom: 0;padding-left: 28px;position: relative;color: var(--muted);overflow-wrap: anywhere}
+.feature-list{list-style: none;display: grid;grid-template-columns: minmax(0,1fr);gap: 14px}
+/* 清單項目間距只用 gap，不再疊 .prose li 的下外距（原本 18＋10，手機上像斷成好幾段） */
+.prose .feature-list li{margin-bottom: 0}
+/* 左邊縮排：feature-list 自己畫「▸」，不要再疊 .prose ul 的 24px；手機再把符號位置收窄（原本內文離左邊約 66px，一般段落只有 16px） */
+.prose ul.feature-list{padding-left: 0}
+/* 相鄰標點擠緊（main.js 包起來的前一個標點縮半格） */
+.pt-half{letter-spacing: -0.5em}
+.feature-list li{margin-bottom: 0;padding-left: 28px;position: relative;color: var(--muted);overflow-wrap: break-word}
 .feature-list li::before{content: "▸";position: absolute;left: 8px;color: var(--accent)}
 .feature-list li strong{color: var(--text)}
+@media (max-width: 640px){.feature-list li{padding-left: 20px}.feature-list li::before{left: 2px}.prose ul{padding-left: 20px}}
 .faq-item{border-bottom: 1px solid var(--line);margin-bottom: 0}
 .faq-item summary{cursor: pointer;padding: 22px 4px;font-weight: 500;list-style: none;position: relative;padding-right: 40px}
 .faq-item summary::-webkit-details-marker{display: none}
