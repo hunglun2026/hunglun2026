@@ -40,6 +40,9 @@ body{font-family: "Noto Sans TC","PingFang TC",system-ui,sans-serif;font-weight:
 /* 斷行：內文避免最後一行只剩一兩個字，標題各行長度平均；不支援的瀏覽器照舊斷行。
    balance 只給短字（標題、按鈕）與表格。表格欄窄，balance 能避免孤字。清單、卡片內文多行時套 balance 會整段擠成窄條、詞被切開 */
 body{text-wrap: pretty}
+/* Safari（iPhone、Mac）的 pretty 會整段重新分配，每行提早換行、右邊空一大塊；只給非 Safari 瀏覽器用。font:-apple-system-body 只有 Safari 認得（2026-10-20 iPhone 實機截圖） */
+@supports (font: -apple-system-body){body,.kn-list li,.kn-d{text-wrap: wrap}}
+@supports (-webkit-touch-callout: none){body,.kn-list li,.kn-d{text-wrap: wrap}}
 h1,h2,h3,h4,summary,td,th,.crumbs,nav[aria-label="麵包屑"],.series-index,.kn-t,.event-title,.btn{text-wrap: balance}
 /* 麵包屑每一層整段不拆（避免「AI 導／入」），要換行只在「／」之間換 */
 nav[aria-label="麵包屑"] a{white-space: nowrap}
