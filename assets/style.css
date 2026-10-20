@@ -61,7 +61,7 @@ main:focus{outline: none}
 :focus-visible{outline: 3px solid var(--accent);outline-offset: 2px;border-radius: 2px}
 :root[data-theme="dark"] :focus-visible{outline-color: #9dc2ec}
 .visually-hidden{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;clip-path: inset(50%);overflow: hidden;white-space: nowrap}
-.prose p a,.prose li a,.prose td a,.faq-a a,.section-sub a,.wrap > p a,.series-index a,.feature-list li > a,.card-body p > a{text-decoration: underline;text-underline-offset: 2px}
+.prose p a,.prose li a,.prose td a,.faq-a a,.section-sub a,.wrap > p a,.series-index a,.feature-list li > a,.card-body p > a,.svc-cta p > a{text-decoration: underline;text-underline-offset: 2px}
 @media (max-width: 768px){body{letter-spacing: 0.02em;line-height: 1.8}
 }
 .wrap{max-width: var(--maxw);margin: 0 auto;padding: 0 20px}
@@ -144,8 +144,8 @@ a.stat:hover{transform: none}
 .card-visual.food-visual img.food-photo{position: relative;z-index: 1;width: 76%;height: 76%;object-fit: cover;border-radius: 14px;box-shadow: 0 12px 28px rgba(0,0,0,0.3)}
 .v-blue,.v-indigo,.v-cyan,.v-teal,.v-navy{background: var(--bg-soft)}
 .card-body{padding: 22px 24px 24px;display: flex;flex-direction: column;flex: 1}
-.card-body h3{font-size: 1.1rem;font-weight: 500;margin-bottom: 8px}
-.card-body h3 a{color: var(--text)}
+.card-body h3,.card-body h2.card-h{font-size: 1.1rem;font-weight: 500;margin-bottom: 8px}
+.card-body h3 a,.card-body h2.card-h a{color: var(--text)}
 .card-body .tagline{color: var(--accent);font-size: 0.85rem;margin-bottom: 10px}
 .card-body p{color: var(--muted);font-size: 0.92rem;flex: 1}
 .card-actions{margin-top: 20px;display: flex;gap: 10px;flex-wrap: wrap}
@@ -334,10 +334,12 @@ a.svc-card:hover h3{color: var(--accent)}
 .svc-more{display: inline-block;margin-top: 14px;font-family: var(--mono);font-size: 0.82rem;letter-spacing: 0.04em;color: var(--accent)}
 a.svc-card:hover .svc-more{transform: translateX(3px)}
 .svc-more{transition: transform 0.2s ease}
-.crumbs{font-family: var(--mono);font-size: 0.8rem;color: var(--muted);margin-bottom: 14px}
+.crumbs{font-family: var(--mono);font-size: 0.8rem;color: var(--muted);margin-bottom: 9px}
 .crumbs a{color: var(--muted)}
 .crumbs a:hover{color: var(--accent)}
-.crumbs a{display: inline-block;padding: 5px 4px;margin: -5px -4px}
+/* 連結上下不用負外距：換兩行時上下兩行的連結會互相蓋住 10px（axe target-size）；改由 .crumbs 外距抵銷，單行時位置不變 */
+.crumbs a{display: inline-block;padding: 5px 4px;margin: 0 -4px}
+.crumbs{margin-top: -5px}
 .svc-cta{margin-top: 48px;padding: 32px;border: 1px solid var(--line);background: var(--card)}
 .svc-cta .btn{margin-right: 10px;margin-top: 8px}
 .svc-cta :is(h2,h3) + p{margin-top: 8px}
@@ -507,7 +509,8 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
   .fc-copy{min-height:44px;padding:6px 14px;font-size:.78rem}
   .footer-nav a{min-height:44px}
   .contact-fab a{width:44px;height:44px}
-  .crumbs a{padding:6px 8px;margin:-6px -8px}
+  .crumbs a{padding:6px 8px;margin:0 -8px}
+  .crumbs{margin-top:-6px;margin-bottom:8px}
   .section-sub a[href^="#cat-"]{padding:7px 0}
 }
 @media (pointer:coarse) and (max-width:480px){
@@ -526,7 +529,7 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 .pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:28px;margin-top:28px}
 .pc-item{display:flex;flex-direction:column;gap:12px;padding:14px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-soft)}
 .pc-item img{display:block;width:100%;height:auto;border-radius:10px}
-.pc-item h3{margin:0;font-size:1.1rem}
+.pc-item h3,.pc-item h2{margin:0;font-size:1.1rem}
 .pc-item p{margin:0;font-size:.92rem;color:var(--muted)}
 .pc-code{font-variant-numeric:tabular-nums}
 .pc-actions{display:flex;flex-wrap:wrap;gap:8px}

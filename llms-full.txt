@@ -829,6 +829,9 @@ https://www.hunglun.com/tools/training
 用最簡單的應用程式，了解 Vibe Coding 的邏輯
 歷次研習講義
 現場講課用的是短連結，方便直接唸給學員：新的在最上面。
+2026/10/20
+長榮大學 AI 研習
+hunglun.com/go/1020
 2026/10/15
 國立北港高級中學 AI 研習
 hunglun.com/go/1015
