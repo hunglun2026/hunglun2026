@@ -12,6 +12,10 @@
 - 評估後不新增：Chromebook 缺點、AI 素養著作權考題、Gemini 看不到，站內已有對應段落（`chromebook`、`ai-copyright`、`gemini-faq-limits`），新增只會互搶排名
 - 評估後不改寫：Padlet／Wordwall／Kahoot／Chromebook／Flow 標題與描述已含查詢詞，低點擊來自排名與查詢本身，不盲改
 - 數位札記 89 篇改 91 篇；主題頁、sitemap、llms.txt、llms-full、站內搜尋、分享預覽圖都已更新
+- 修正 `insights/gemini-4-argon`：FAQPage 結構化資料第 2 答漏了頁面結尾「完整整理見 Gemini 4 Argon 老師能用嗎」，與頁面文字補成一致
+- `sitemap/ld.py`：實測區塊（`faq-item is-demo`）不算 FAQ，與 `seo-audit.py` 的約定一致，不再誤報 `gemini-4-argon-teachers` 題數不符
+- 字型子集重建：補進 23 個新字（來自 Argon 實測文與 tools 頁，不補會退回系統字型），字型版號 ?v=67、style.css ?v=99
+- `assets/main.js`：兩個判斷中文字的範圍正規式改寫成 Unicode 跳脫碼，功能不變，只讓字型檢查不再把範圍端點當成要顯示的字
 
 ## v1.15.0（2026-10-16）
 

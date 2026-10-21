@@ -151,7 +151,7 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   // ② 段落最後幾個字綁在一起。Safari 不套 pretty，Chrome 的 pretty 在中文也擋不完（360 寬實測 20 處），所以全部瀏覽器都做
   // 從結尾往回數「單位」：一個中文字或一串英數字算一個，湊滿三個就停（不夠三個但有兩個也綁），中間的空白與標點一起綁
   // 綁太長（含英文或數字時）上一行會空一大塊：估計寬度超過 6 個中文字就改綁兩個單位，還是太寬就不綁（英數約半個字寬）
-  function wid(t){var w=0;for(var k=0;k<t.length;k++)w+=/[⺀-￯]/.test(t.charAt(k))?1:0.55;return w;}
+  function wid(t){var w=0;for(var k=0;k<t.length;k++)w+=/[\u2e80-\uffef]/.test(t.charAt(k))?1:0.55;return w;}
   // 結尾有標點時綁兩個字＋標點就夠（最後一行已有三格寬），少綁一個字，上一行左右對齊時撐開的字距也少一點
   function tailOf(s){var n=/[。，、；：！？）」』》〉】.,!?)]$/.test(s)?2:3,t=tailN(s,n);if(wid(t)>6)t=tailN(s,2);return wid(t)>6?"":t;}
   function tailN(s,want){
@@ -159,7 +159,7 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     while(i>0&&units<want){
       var c=s.charAt(i-1);
       if(/[A-Za-z0-9]/.test(c)){while(i>0&&/[A-Za-z0-9.\/\-]/.test(s.charAt(i-1)))i--;units++;}
-      else{if(/[㐀-鿿]/.test(c))units++;i--;}
+      else{if(/[\u3400-\u9fff]/.test(c))units++;i--;}
     }
     return units<2?"":s.slice(i);
   }
