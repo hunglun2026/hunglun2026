@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.16.0（2026-10-21）
+
+用 Search Console 近三個月查詢（1,000 組）檢查後，只補「站內完全沒有對應頁」的題目，不為湊篇數新增會互搶排名的頁面。
+
+- 新增 `knowledge/intune-for-education`：Intune 是什麼、Intune for Education 差在哪、能管哪些裝置、授權與導入前要確認的事，以及和 Google 管理主控台怎麼分工；依 Microsoft Learn 官方文件整理（查詢「intune」「intune是什麼」合計約 650 曝光，原本站內無專頁）
+- 新增 `knowledge/school-account-after-graduation`：學校 Google 帳號畢業後還能用嗎、停用與刪除差別、用 takeout.google.com/transfer 轉出資料、哪些轉不走、帳號被刪怎麼辦；轉移範圍依 Google 管理員說明（2026-10-13 更新）；與管理員視角的 `account-lifecycle` 互相導流（相關查詢合計約 350 曝光）
+- 評估後不新增：Chromebook 缺點、AI 素養著作權考題、Gemini 看不到，站內已有對應段落（`chromebook`、`ai-copyright`、`gemini-faq-limits`），新增只會互搶排名
+- 評估後不改寫：Padlet／Wordwall／Kahoot／Chromebook／Flow 標題與描述已含查詢詞，低點擊來自排名與查詢本身，不盲改
+- 數位札記 89 篇改 91 篇；主題頁、sitemap、llms.txt、llms-full、站內搜尋、分享預覽圖都已更新
+
 ## v1.15.0（2026-10-16）
 
 依「增加曝光」討論（與 Gemini 帳號 A 共 15 輪）做的站內調整，加一篇 Gemini 4 Argon 新文章。
