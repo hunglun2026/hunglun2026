@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.18.0（2026-10-21）
+
+校園小工具新增「小綸即時測驗」（quiz.hunglun.com）與「課堂遊戲工坊」（classgames.hunglun.com）。
+
+- 新增兩張卡片與 ItemList 結構化資料；新增卡片圖示 `icon-proj-livequiz.webp`、`icon-proj-classgames.webp`
+- 校園小工具頁標題、描述（含 og、twitter）、頁首說明補上即時測驗與課堂遊戲；資源分享總覽同步更新
+- 順手修掉校園小工具頁 og:title、twitter:title 多出來的一個引號，以及 ItemList 的 numberOfItems（寫 7、實際 4，現為 6）
+- llms.txt 補兩個工具；搜尋索引與 llms-full 已重產；sitemap 的 /tools、/tools/campus lastmod 更新
+
 ## v1.17.0（2026-10-21）
 
 學習遊戲分類新增「動物探險家」（zoo.hunglun.com）。
