@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.16.1（2026-10-21）
+
+「數位札記」改名「教學專區」。「札記」帶文學語氣，老師與資訊組不會這樣搜（GSC 近三個月查詢沒有人搜過）；站上實際查詢以「教學」「怎麼用」「是什麼」類為主，所以用「教學專區」。
+
+- 畫面文字全站改：導覽、麵包屑、BreadcrumbList、頁尾、搜尋框提示、主題頁標題（例：Google Classroom 教學專區）；網址 `/knowledge` 不動、各篇網址與 lastmod 不動
+- 分享預覽圖 172 張重產，`OG_VER` 升到 4
+- 本機產生器（gen-knowledge-topics／hub／search-index、add-topic-breadcrumb）同步改名；主題頁、站內搜尋、llms-full 已重產
+
 ## v1.16.0（2026-10-21）
 
 用 Search Console 近三個月查詢（1,000 組）檢查後，只補「站內完全沒有對應頁」的題目，不為湊篇數新增會互搶排名的頁面。
