@@ -436,8 +436,8 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 .kn-d{display: block;color: var(--muted);font-size: 0.85rem;line-height: 1.6;margin-top: 2px}
 /* 描述用正常折行；<li> 繼承了 balance 會讓描述擠成窄條。標題維持 balance 避免只剩一個孤字 */
 .kn-list li,.kn-d{text-wrap: pretty}
-/* 標題只在空白與標點（「：」「，」）斷行：單用 balance 會把詞從中間切開（「獨立／開關」）；整段沒有斷點時才退回任意處斷 */
-.kn-t{max-width: none;word-break: keep-all;overflow-wrap: anywhere}
+/* 標題排滿整行（不用 balance：會切成兩行等長，第一行只剩半寬）；只在空白與標點斷行，不把詞從中間切開（「獨立／開關」）；整段沒有斷點時才退回任意處斷 */
+.kn-t{max-width: none;text-wrap: pretty;word-break: keep-all;overflow-wrap: anywhere}
 .kn-date{font-family: var(--mono);font-size: 0.75rem;color: var(--muted-faint);white-space: nowrap}
 @media (max-width: 560px){.kn-item{grid-template-columns: 36px 1fr;gap: 12px;padding: 12px 2px}
 .kn-icon{width: 36px;height: 36px}
