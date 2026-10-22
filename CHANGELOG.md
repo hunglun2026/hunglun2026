@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.22.0（2026-10-22）
+
+學習遊戲分類新增「昆蟲探險家」（insects.hunglun.com）。
+
+- 新增卡片：用林業試驗所昆蟲標本館開放資料、臺灣物種名錄與 iNaturalist 觀察照片做的國小到高中台灣昆蟲教學網站；新增卡片圖示 `icon-proj-insect.webp`
+- 學習遊戲頁描述（含 og、twitter）補上昆蟲探險家；ItemList 補第 5 個；資源分享總覽的學習遊戲說明同步更新；llms.txt 補上昆蟲探險家
+- 搜尋索引與 llms-full 已重產
+
 ## v1.21.1（2026-10-22）
 
 - 海洋探險家正式網址改成 ocean.hunglun.com（舊網址 sea.hunglun.com 已整站 301 轉址）：學習遊戲頁卡片、ItemList、llms.txt 連結同步更新；搜尋索引與 llms-full 重產
