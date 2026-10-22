@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.18.1（2026-10-22）
+
+「全國學校人數查詢」（school.hunglun.com）從資料查詢網站移到商用工具。這個站有密碼閘門，是內部推廣 Google AI Pro for Education 用的。
+
+- 商用工具頁新增卡片，頁面描述（含 og、twitter）補上學校人數查詢；資料查詢頁拿掉卡片與 ItemList 那一筆，標題與描述只剩藥品許可證、動物用藥
+- 資源分享總覽兩個分類的說明、llms.txt 同步更新；搜尋索引與 llms-full 已重產；sitemap 的 /tools、/tools/commercial、/tools/data-search lastmod 更新
+- 順手修掉商用工具、資料查詢兩頁 og:title、twitter:title 多出來的引號，資料查詢 ItemList 的 numberOfItems（寫 7、實際 3，現為 2）；補產生這兩頁的 og 圖（原本 404）
+- 學校人數查詢站頁首頁尾的「更多資料查詢」改成「更多商用工具」，連到 /tools/commercial
+
 ## v1.18.0（2026-10-21）
 
 校園小工具新增「小綸即時測驗」（quiz.hunglun.com）與「課堂遊戲工坊」（classgames.hunglun.com）。
