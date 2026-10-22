@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.19.0（2026-10-22）
+
+學習遊戲分類新增「故宮探險家」（museum.hunglun.com）。
+
+- 新增卡片：用國立故宮博物院開放資料做的國小到高中文物教學網站，含猜朝代、朝代排排站、史料探究與老師專區；新增卡片圖示 `icon-proj-museum.webp`
+- 學習遊戲頁描述（含 og、twitter）與頁首說明改成「國小到高中」並補上故宮探險家；資源分享總覽的學習遊戲說明同步更新
+- 順手修 ItemList：原本只列邊玩邊變強、numberOfItems 寫 7，現在列出三個遊戲、改為 3；llms.txt 補上動物探險家與故宮探險家
+- 補產生學習遊戲頁的分享預覽圖 `assets/og/tools-games.png`（10-19 拆頁後一直 404）
+- 搜尋索引與 llms-full 已重產；sitemap 的 /tools、/tools/games lastmod 更新
+
 ## v1.18.1（2026-10-22）
 
 「全國學校人數查詢」（school.hunglun.com）從資料查詢網站移到商用工具。這個站有密碼閘門，是內部推廣 Google AI Pro for Education 用的。
