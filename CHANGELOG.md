@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.21.1（2026-10-22）
+
+- 海洋探險家正式網址改成 ocean.hunglun.com（舊網址 sea.hunglun.com 已整站 301 轉址）：學習遊戲頁卡片、ItemList、llms.txt 連結同步更新；搜尋索引與 llms-full 重產
+
 ## v1.21.0（2026-10-22）
 
 學習遊戲分類新增「海洋探險家」（sea.hunglun.com）。
