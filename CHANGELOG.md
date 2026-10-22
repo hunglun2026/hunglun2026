@@ -3,13 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.19.4（2026-10-22）
+
+補產生資源分享最後三個分類頁的分享預覽圖：`assets/og/tools-admin.png`、`tools-campus.png`、`tools-local-food.png`（10-19 拆頁後一直 404）。全站掃過 og:image 與 twitter:image，已沒有指到不存在檔案的頁面。
+
 ## v1.19.3（2026-10-22）
 
 內頁標題區拿掉毛玻璃泡泡，恢復原本的米白底置中標題（泡泡不符合專業形象）；style.css v103。
-
-## v1.19.2（2026-10-22）
-
-補產生資源分享最後三個分類頁的分享預覽圖：`assets/og/tools-admin.png`、`tools-campus.png`、`tools-local-food.png`（10-19 拆頁後一直 404）。全站掃過 og:image 與 twitter:image，已沒有指到不存在檔案的頁面。
 
 ## v1.19.2（2026-10-22）
 
