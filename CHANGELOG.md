@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.20.0（2026-10-22）
+
+依 GSC 近三個月資料改善搜尋結果的點擊率：
+- 21 頁標題縮短到 Google 搜尋結果放得下的長度（原本超過約 30 字被截成「…」），查詢字放前面，例如「Gemini 4 Argon 可以用了嗎」「Gemini Notebook 用法教學」。h1 與標題相同的頁一起改，列表、結構化資料、交叉連結同步；流量最大的 gemini、google-ai-pro-for-education、gemini-free-for-teachers-students 不動。
+- 分享預覽圖產生器改成只在標點、空白、左括號前斷行，標點不放行首，不再把詞從中間切開；全站 172 張重產，OG_VER 5。
+- 教學專區與觀察列表標題（`.kn-t`）改成第一行排滿、只在空白與標點斷行（style.css v104、v105）。
+- sync-dates 修正 134 處 dateModified 與 sitemap lastmod 不一致。
+
 ## v1.19.4（2026-10-22）
 
 補產生資源分享最後三個分類頁的分享預覽圖：`assets/og/tools-admin.png`、`tools-campus.png`、`tools-local-food.png`（10-19 拆頁後一直 404）。全站掃過 og:image 與 twitter:image，已沒有指到不存在檔案的頁面。

@@ -1020,7 +1020,7 @@ Google Classroom 完全指南（Edpuzzle、Kami 等工具的作業派送都走�
 
 ---
 
-## 教育部選購名單產品介紹圖卡｜Kahoot・Padlet・Wordwall・ThingLink｜鴻綸科技
+## 教育部選購名單產品圖卡｜Kahoot・Padlet・Wordwall｜鴻綸科技
 
 https://www.hunglun.com/software/cards
 
@@ -1183,7 +1183,7 @@ Google Classroom 10
 資安與個資法遵 4
 Google 與 AI 導入
 授權方案怎麼選、AI 怎麼真的用在教學與行政上。
-學校 Google 帳號畢業後還能用嗎？資料轉移、停用與刪除一次看懂由學校決定能不能用；停用與刪除的差別、用 Takeout 轉出雲端硬碟與 Gmail 的步驟、哪些轉不走。
+學校 Google 帳號畢業後還能用嗎？資料轉移與刪除由學校決定能不能用；停用與刪除的差別、用 Takeout 轉出雲端硬碟與 Gmail 的步驟、哪些轉不走。
 2026/10/21
 Gemini 4 Argon 老師能用嗎？4 種帳號一次看懂10 月 13 日開放 Pro 與 Ultra，學校教育版官方未說明；4 種帳號可用性、API 費用與 5 個實測題。
 2026/10/16
@@ -1193,7 +1193,7 @@ Google Vids 是什麼？教育版能用嗎、AI 功能有哪些限制Fundamental
 2026/10/14
 AI 出題工具怎麼選？老師出考卷與練習題的免費做法比較Gemini 直接出題、貼講義、Notebook 測驗卡、Classroom 四種做法，各自適合什麼情況。
 2026/10/14
-AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老師要不要考2.0 版四大考試範圍、及格標準、報名費與場次，以及老師該考哪一張證照。
+AI 素養級認證（AIATCL）是什麼？考什麼、怎麼報名2.0 版四大考試範圍、及格標準、報名費與場次，以及老師該考哪一張證照。
 2026/10/06
 老師可以免費用 Gemini 嗎？教師與學生方案、學校帳號額度一次看懂老師用學校帳號就能免費用 Gemini；學生優惠、學校帳號額度與對話記錄規則一次整理。
 2026/10/06
@@ -1205,7 +1205,7 @@ Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Pl
 2026/10/02
 學校 AI 教師研習怎麼規劃？內容、分場與追蹤研習要教什麼、怎麼分場、半天與全天怎麼排、研習後怎麼追蹤。
 2026/10/02
-學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
+邀請 AI 研習講師要準備什麼？需求單、報價與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
 2026/10/05
 學校 AI 助手怎麼選？Claude、ChatGPT、Gemini 比較三者定位比較表，以及 Google AI Pro for Education 加贈 Gemini Notebook 的實際教學用途。
 2026/09/10
@@ -1353,9 +1353,9 @@ LINE 官方帳號心法圖文選單設計、自動回覆、經營策略。
 2026/08/04
 設備選型與採購
 載具怎麼挑、規格怎麼看、預算與配套怎麼編。
-Intune 是什麼？學校管理電腦與平板的 MDM，跟 Google 管理主控台差在哪Intune 與 Intune for Education 的差別、能管哪些裝置、授權怎麼來，以及 Chromebook 為什麼要用 Google 管理主控台。
+Intune 是什麼？學校 MDM 跟 Google 管理主控台比較Intune 與 Intune for Education 的差別、能管哪些裝置、授權怎麼來，以及 Chromebook 為什麼要用 Google 管理主控台。
 2026/10/21
-生生用平板結束了嗎？115 年數位學習計畫、載具汰換與學校該做的準備115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
+生生用平板結束了嗎？115 年數位學習計畫與載具汰換115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
 2026/10/06
 學校 AI 軟體怎麼採購？從需求、授權到共同供應契約AI 授權採購流程、詢價 10 問、報價前常缺的資料與驗收重點。
 2026/10/02
@@ -1396,7 +1396,7 @@ Gemini 教育版與 Notebook 20
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-學校 Google 帳號畢業後還能用嗎？資料轉移、停用與刪除一次看懂由學校決定能不能用；停用與刪除的差別、用 Takeout 轉出雲端硬碟與 Gmail 的步驟、哪些轉不走。
+學校 Google 帳號畢業後還能用嗎？資料轉移與刪除由學校決定能不能用；停用與刪除的差別、用 Takeout 轉出雲端硬碟與 Gmail 的步驟、哪些轉不走。
 2026/10/21
 Gemini 4 Argon 老師能用嗎？4 種帳號一次看懂10 月 13 日開放 Pro 與 Ultra，學校教育版官方未說明；4 種帳號可用性、API 費用與 5 個實測題。
 2026/10/16
@@ -1406,7 +1406,7 @@ Google Vids 是什麼？教育版能用嗎、AI 功能有哪些限制Fundamental
 2026/10/14
 AI 出題工具怎麼選？老師出考卷與練習題的免費做法比較Gemini 直接出題、貼講義、Notebook 測驗卡、Classroom 四種做法，各自適合什麼情況。
 2026/10/14
-AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老師要不要考2.0 版四大考試範圍、及格標準、報名費與場次，以及老師該考哪一張證照。
+AI 素養級認證（AIATCL）是什麼？考什麼、怎麼報名2.0 版四大考試範圍、及格標準、報名費與場次，以及老師該考哪一張證照。
 2026/10/06
 老師可以免費用 Gemini 嗎？教師與學生方案、學校帳號額度一次看懂老師用學校帳號就能免費用 Gemini；學生優惠、學校帳號額度與對話記錄規則一次整理。
 2026/10/06
@@ -1418,7 +1418,7 @@ Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Pl
 2026/10/02
 學校 AI 教師研習怎麼規劃？內容、分場與追蹤研習要教什麼、怎麼分場、半天與全天怎麼排、研習後怎麼追蹤。
 2026/10/02
-學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
+邀請 AI 研習講師要準備什麼？需求單、報價與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
 2026/10/05
 學校 AI 助手怎麼選？Claude、ChatGPT、Gemini 比較三者定位比較表，以及 Google AI Pro for Education 加贈 Gemini Notebook 的實際教學用途。
 2026/09/10
@@ -1636,9 +1636,9 @@ Gemini 教育版與 Notebook 20
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-Intune 是什麼？學校管理電腦與平板的 MDM，跟 Google 管理主控台差在哪Intune 與 Intune for Education 的差別、能管哪些裝置、授權怎麼來，以及 Chromebook 為什麼要用 Google 管理主控台。
+Intune 是什麼？學校 MDM 跟 Google 管理主控台比較Intune 與 Intune for Education 的差別、能管哪些裝置、授權怎麼來，以及 Chromebook 為什麼要用 Google 管理主控台。
 2026/10/21
-生生用平板結束了嗎？115 年數位學習計畫、載具汰換與學校該做的準備115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
+生生用平板結束了嗎？115 年數位學習計畫與載具汰換115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
 2026/10/06
 學校 AI 軟體怎麼採購？從需求、授權到共同供應契約AI 授權採購流程、詢價 10 問、報價前常缺的資料與驗收重點。
 2026/10/02
@@ -1690,15 +1690,15 @@ https://www.hunglun.com/insights
 教育科技觀察
 Google 教育方案、AI 導入與校園數位政策的變動，以及這些變動對台灣學校的實際意義。不轉述新聞，只寫學校真正需要知道的判讀與下一步。
 觀察文章列表
-Gemini 學生專區開放給教育版帳號：沒有獨立開關，學校要看的是 Gemini 應用程式的設定10/1 開放所有年齡的教育版使用者，受 Gemini 應用程式的 AI 設定控制，沒有獨立開關。免費一年方案台灣資格無法確認。
+Gemini 學生專區開放教育版：沒有獨立開關10/1 開放所有年齡的教育版使用者，受 Gemini 應用程式的 AI 設定控制，沒有獨立開關。免費一年方案台灣資格無法確認。
 2026/10/10
-Gemini 免費個人帳號 10 月 9 日起只剩 Flash-Lite：老師學生改用學校帳號登入10 月 9 日起免費個人帳號只剩 Flash-Lite，AI Plus 失去 Pro。調整只針對個人帳號，學校帳號另有規定。
+Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號10 月 9 日起免費個人帳號只剩 Flash-Lite，AI Plus 失去 Pro。調整只針對個人帳號，學校帳號另有規定。
 2026/10/06
-Gemini 4 Argon 發表：9/30 先給防禦者，10/13 已開放 Pro 與 Ultra輸出上限 100 萬 token、程式與企業知識工作評測領先。9/30 只開給網路防禦者，10/13 起 Gemini App 開放給 Pro 與 Ultra，教育版官方未說明。
+Gemini 4 Argon 可以用了嗎？開放時程與方案整理輸出上限 100 萬 token、程式與企業知識工作評測領先。9/30 只開給網路防禦者，10/13 起 Gemini App 開放給 Pro 與 Ultra，教育版官方未說明。
 2026/10/01
 教育部 115 年數位與 AI 指引出爐：學校這學期先做這三件事三份指引加三份學生手冊，各寫給誰、跟 2024 年版差在哪，學校這學期可以先做什麼。
 2026/09/25
-Gemini Notebook 返校季五項更新：語音對話、錄音機、互動式學習總覽語音對話、錄音機、互動式學習總覽、更多測驗題型、短影片摘要。語音對話先給付費訂閱者，教育版時程未定。
+Gemini Notebook 返校季更新：語音對話、錄音機等五項語音對話、錄音機、互動式學習總覽、更多測驗題型、短影片摘要。語音對話先給付費訂閱者，教育版時程未定。
 2026/09/18
 Gemini Notebook 新增 Expert Intelligence：買的電子書能直接餵給 AI 讀8/27 上線，先開放 Play Books 逾 10 萬本電子書。只認真的買過的內容，這件事對師生比想像中重要。
 2026/09/18
@@ -1719,7 +1719,7 @@ Gemini 圖片的浮水印可以關了：官方設定就能做到，但標註的�
 
 ---
 
-## Google Pics 上線：Workspace 內建 AI 生圖修圖，學校要先決定開不開｜鴻綸科技
+## Google Pics 上線：Workspace 內建 AI 生圖，學校要開嗎｜鴻綸科技
 
 https://www.hunglun.com/insights/google-pics
 
@@ -2263,7 +2263,7 @@ Gemini 教育版怎麼用？學校導入與管理設定
 學生與老師實際能做什麼、管理員要設定什麼。
 學校 Google 帳號怎麼申請
 Workspace for Education 資格、申請流程與 Gemini 開通。
-Gemini 4 Argon 發表：9/30 先給防禦者，10/13 已開放 Pro 與 Ultra
+Gemini 4 Argon 可以用了嗎？開放時程與方案整理
 輸出上限 100 萬 token、程式與企業知識工作評測領先。9/30 只開給網路防禦者，10/13 起 Gemini App 開放給 Pro 與 Ultra，教育版官方未說明。
 老師可以免費用 Gemini 嗎？教師與學生方案、學校帳號額度一次看懂
 老師用學校帳號就能免費用 Gemini；學生優惠、學校帳號額度與對話記錄規則一次整理。
@@ -2904,12 +2904,12 @@ Classroom 裡的 Gemini 怎麼用
 
 ---
 
-## AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老師要不要考｜鴻綸科技
+## AI 素養級認證（AIATCL）是什麼？考什麼、怎麼報名｜鴻綸科技
 
 https://www.hunglun.com/knowledge/ai-literacy-certification
 
 教學專區 ／ Google 與 AI 導入 ／ AI 素養級認證（AIATCL）
-AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老師要不要考
+AI 素養級認證（AIATCL）是什麼？考什麼、怎麼報名
 AI 素養級認證是台灣人工智慧學校主辦的 AI 基礎能力證照，2026 年 8 月起改成 2.0 版。這篇整理新版考什麼、怎麼報名，以及老師要不要考。
 這篇適合：想取得 AI 相關證照的老師、規劃教師增能的教務處與資訊組，以及想知道這張證照跟 Google 認證有什麼不同的人。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 6 日
@@ -3052,7 +3052,7 @@ Google AI Pro for Education 是什麼？
 什麼情況需要加購、跟一般教育版差在哪。
 Gemini 管理員設定
 管理主控台怎麼為師生開啟 Gemini。
-Gemini 學生專區開放給教育版帳號：沒有獨立開關，學校要看的是 Gemini 應用程式的設定
+Gemini 學生專區開放教育版：沒有獨立開關
 受 Gemini 應用程式的 AI 設定控制，沒有獨立開關。學校現在該確認的事，以及免費一年方案的限制。
 想讓全校老師都用學校帳號用 Gemini？
 我們可以協助確認網域方案、開啟 Gemini 並設定學生與對話記錄的規則，也能到校辦研習。
@@ -3062,7 +3062,7 @@ Gemini 學生專區開放給教育版帳號：沒有獨立開關，學校要看�
 
 ---
 
-## Intune 是什麼？學校管理電腦與平板的 MDM，跟 Google 管理主控台差在哪｜鴻綸科技
+## Intune 是什麼？學校 MDM 跟 Google 管理主控台比較｜鴻綸科技
 
 https://www.hunglun.com/knowledge/intune-for-education
 
@@ -3136,12 +3136,12 @@ Google 管理主控台校園設定指南
 
 ---
 
-## 學校 Google 帳號畢業後還能用嗎？資料轉移、停用與刪除一次看懂｜鴻綸科技
+## 學校 Google 帳號畢業後還能用嗎？資料轉移與刪除｜鴻綸科技
 
 https://www.hunglun.com/knowledge/school-account-after-graduation
 
 教學專區 ／ Google 與 AI 導入 ／ 學校 Google 帳號畢業後
-學校 Google 帳號畢業後還能用嗎？資料轉移、停用與刪除一次看懂
+學校 Google 帳號畢業後還能用嗎？資料轉移與刪除
 每年畢業季，家長與學生最常問：學校給的 Google 帳號，畢業後還能用嗎？答案是：能不能用由學校決定，不是 Google 統一規定。重點是在帳號被停用之前，把自己的檔案轉出來。
 這篇適合：即將畢業的學生、家長與導師，以及要回答這類問題的學校資訊組。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 21 日
@@ -3212,12 +3212,12 @@ Google 管理主控台校園設定指南
 
 ---
 
-## 生生用平板結束了嗎？115 年數位學習計畫、載具汰換與學校該做的準備｜鴻綸科技
+## 生生用平板結束了嗎？115 年數位學習計畫與載具汰換｜鴻綸科技
 
 https://www.hunglun.com/knowledge/student-tablet-program-2026
 
 教學專區 ／ 設備選型與採購 ／ 生生用平板結束後怎麼辦
-生生用平板結束了嗎？115 年數位學習計畫、載具汰換與學校該做的準備
+生生用平板結束了嗎？115 年數位學習計畫與載具汰換
 「生生用平板」的四年方案已經走完，但數位學習沒有停：115 年起改成年度實施計畫，第一批載具也到了該汰換的時候。這篇整理學校現在該準備什麼。
 這篇適合：資訊組長、教務主任、校長，以及負責載具採購與管理的承辦人。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 6 日
@@ -3286,12 +3286,12 @@ Chromebook 與智慧教室建置
 
 ---
 
-## 學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程｜鴻綸科技
+## 邀請 AI 研習講師要準備什麼？需求單、報價與到校流程｜鴻綸科技
 
 https://www.hunglun.com/knowledge/invite-ai-trainer
 
 教學專區 ／ Google 與 AI 導入 ／ 邀請 AI 研習講師前的準備
-學校邀請 AI 研習講師前要準備什麼？需求單、報價條件與到校流程
+邀請 AI 研習講師要準備什麼？需求單、報價與到校流程
 研習辦得順不順，一半在講師到校前就決定了。這篇整理承辦人要先備齊的資料，讓洽談和排程一次到位。
 這篇適合：負責安排研習的教務處、研發處、資訊組承辦人，以及想先弄清楚流程再詢問的主任與校長。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 5 日
@@ -3377,12 +3377,12 @@ Google AI Pro for Education 費用怎麼算？
 
 ---
 
-## 台南、嘉義、高雄學校推數位轉型：現況與導入 Google 方案常見問題｜鴻綸科技
+## 台南、嘉義、高雄學校數位轉型：導入 Google 常見問題｜鴻綸科技
 
 https://www.hunglun.com/knowledge/south-taiwan-digital-transformation
 
 教學專區 ／ 設備選型與採購 ／ 台南、嘉義、高雄學校推數位轉型
-台南、嘉義、高雄學校推數位轉型：現況與導入 Google 方案常見問題
+台南、嘉義、高雄學校數位轉型：導入 Google 常見問題
 3 個縣市的背景相似、卡點也相似。整理資訊教育推動單位、學校常遇到的 3 個卡關點，以及導入 Google for Education 方案的常見問題。
 這篇適合：規劃校內教師研習的教學組長、資訊組長與研習承辦人。
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 3 日
@@ -3628,7 +3628,7 @@ Gemini 圖片浮水印開關什麼時候上線？
 
 ---
 
-## Classroom 的 Gemini 已對所有年齡學生開啟：學校這週該檢查什麼｜鴻綸科技
+## Classroom 的 Gemini 開放所有年齡：學校該檢查什麼｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-classroom-all-ages
 
@@ -3683,7 +3683,7 @@ Classroom 的 Gemini 對所有年齡開放，什麼時候生效？
 
 ---
 
-## Gemini Notebook 能讀買過的電子書了：Expert Intelligence 解析｜鴻綸科技
+## Gemini Notebook 能讀買過的電子書：Expert Intelligence｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-notebook-expert-intelligence
 
@@ -3728,12 +3728,12 @@ Google 表示這是跨產品的長期方向，Play Books 只是第一步，後�
 
 ---
 
-## Gemini 學生專區開放給教育版帳號：沒有獨立開關，學校要看的是 Gemini 應用程式的設定｜鴻綸科技
+## Gemini 學生專區開放教育版：沒有獨立開關｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-student-hub
 
 教育科技觀察 ／ Gemini 學生專區
-Gemini 學生專區開放給教育版帳號：沒有獨立開關，學校要看的是 Gemini 應用程式的設定
+Gemini 學生專區開放教育版：沒有獨立開關
 10 月 1 日起，所有年齡的教育版使用者都看得到。重點不是新入口有多少功能，而是它跟著 Gemini 應用程式的設定走，學校沒有另一個開關可以單獨處理。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 10 日
 發生了什麼事
@@ -3778,12 +3778,12 @@ Gemini 學生專區現在學校帳號能用嗎？
 
 ---
 
-## Gemini 免費個人帳號 10 月 9 日起只剩 Flash-Lite：老師學生改用學校帳號登入｜鴻綸科技
+## Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-personal-account-model-changes
 
 教育科技觀察 ／ Gemini 個人帳號模型調整
-Gemini 免費個人帳號 10 月 9 日起只剩 Flash-Lite：老師學生改用學校帳號登入
+Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號
 Google 公告，10 月 9 日起沒有訂閱 AI 方案的個人帳號，在 Gemini App 只能用最輕量的 Flash-Lite。這次調整只針對個人帳號，學校的教育版帳號另有規定。學校不用加買什麼，該做的是確認師生登入的是學校帳號。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 6 日
 發生了什麼事
@@ -3828,12 +3828,12 @@ Pro 模型次數不夠用的老師，可以評估 Google AI Pro for Education；
 
 ---
 
-## Gemini 4 Argon 發表：9/30 先給防禦者，10/13 已開放 Pro 與 Ultra｜鴻綸科技
+## Gemini 4 Argon 可以用了嗎？開放時程與方案整理｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-4-argon
 
 教育科技觀察 ／ Gemini 4 Argon 發表
-Gemini 4 Argon 發表：9/30 先給防禦者，10/13 已開放 Pro 與 Ultra
+Gemini 4 Argon 可以用了嗎？開放時程與方案整理
 Google 9 月 30 日發表新一代前沿模型，數字很漂亮。9 月 30 日的公告只開給受信任的網路防禦者，10 月 13 日起 Gemini App 已開放給 Google AI Pro 與 Ultra 訂閱者，教育版官方沒有說明。學校不用急，我們把能確認的整理給你。
 2026 年 10 月 16 日更新：Gemini 官方更新日誌記載，10 月 13 日起 Gemini 4 Argon 在 Gemini App 開放給 Google AI Pro 與 Google AI Ultra 訂閱者。下方 9 月 30 日公告的內容保留原樣，教育版帳號、免費版與老師該不該自費升級，請看 Gemini 4 Argon 老師能用嗎。
 作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 16 日
@@ -3940,12 +3940,12 @@ AI之學習應用手冊（高中版）高中學生AI 運作原理、資訊判讀
 
 ---
 
-## Gemini Notebook 返校季五項更新：語音對話、錄音機、互動式學習總覽｜鴻綸科技
+## Gemini Notebook 返校季更新：語音對話、錄音機等五項｜鴻綸科技
 
 https://www.hunglun.com/insights/gemini-notebook-study-tools-update
 
 教育科技觀察 ／ Gemini Notebook 返校季更新
-Gemini Notebook 返校季五項更新：語音對話、錄音機、互動式學習總覽
+Gemini Notebook 返校季更新：語音對話、錄音機等五項
 9 月 15 日一次公告五項更新，主打返校季的自主學習情境。重點不是功能多，而是最受矚目的語音對話功能，先給付費訂閱者用，教育版帳號目前完全沒有時程。
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 18 日
 發生了什麼事
@@ -4043,7 +4043,7 @@ LINE 官方帳號／LINE 自動化
 
 ---
 
-## 學校 Google 帳號怎麼申請？Workspace for Education 資格與流程｜鴻綸科技
+## 學校 Google 帳號怎麼申請？Workspace 教育版資格與流程｜鴻綸科技
 
 https://www.hunglun.com/knowledge/education-apply
 
@@ -4133,12 +4133,12 @@ Google 官方說明是通常 14 個工作天內完成。沒有官方的加速管
 
 ---
 
-## 學校 Google 帳號生命週期管理：新生建檔、畢業生轉出與停權 SOP｜鴻綸科技
+## 學校 Google 帳號管理 SOP：新生建檔、畢業轉出與停權｜鴻綸科技
 
 https://www.hunglun.com/knowledge/account-lifecycle
 
 教學專區 ／ Google 與 AI 導入 ／ 帳號生命週期管理
-學校 Google 帳號生命週期管理：新生建檔、畢業生轉出與停權 SOP
+學校 Google 帳號管理 SOP：新生建檔、畢業轉出與停權
 開學前手忙腳亂建新生帳號、畢業前才想起要處理離校學生，這兩件事其實可以變成一份每年照做的檢查清單。
 這篇適合：學校的 Google Workspace 管理員、資訊組長，以及負責校務系統與個資盤點的行政人員。
 下一篇：Google 管理主控台校園設定指南（OU、群組、Chrome 政策） →
@@ -4780,7 +4780,7 @@ Google 管理主控台設定指南
 載具進來之後怎麼管：OU、政策設定與裝置盤點。
 Chromebook 與智慧教室建置服務
 看鴻綸科技怎麼協助學校規劃導入。
-生生用平板結束了嗎？115 年數位學習計畫、載具汰換與學校該做的準備
+生生用平板結束了嗎？115 年數位學習計畫與載具汰換
 115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
 學校在考慮 Chromebook？
 規格、載具管理到教師研習，可以一起看過一輪再決定。
@@ -4885,7 +4885,7 @@ Chromebook 選購與導入
 主機、顯示器、平板與電腦軟體的品項對照。
 校園研習與教師培訓
 讓設備真的被用起來的關鍵配套。
-生生用平板結束了嗎？115 年數位學習計畫、載具汰換與學校該做的準備
+生生用平板結束了嗎？115 年數位學習計畫與載具汰換
 115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
 要規劃校內的設備導入嗎？
 告訴我們要用在哪、規模多大，一起把選型與配套想清楚。
@@ -5254,7 +5254,7 @@ Level 2 比 Level 1 難在哪裡？
 說明老師目前的使用狀況與想達到的程度，我們把梯次與課程內容排出來。
 聯絡我們
 看校園研習服務
-AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老師要不要考
+AI 素養級認證（AIATCL）是什麼？考什麼、怎麼報名
 2.0 版四大考試範圍、及格標準、報名費與場次，以及老師該考哪一張證照。
 想在校內辦一場認證培訓？
 安排培訓前先想好這幾項：
@@ -5927,7 +5927,7 @@ Gemini 回答的內容可以直接拿去用嗎？
 Gemini 系列第 1／10 篇・看全部系列
 下一篇：老師怎麼用 Gemini 備課 →
 相關閱讀
-Gemini 免費個人帳號 10 月 9 日起只剩 Flash-Lite：老師學生改用學校帳號登入
+Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號
 聯絡我們
 看 Gemini 方案懶人包
 學校正在評估 AI 導入？
@@ -6063,7 +6063,7 @@ Gemini 系列第 3／10 篇・看全部系列
 
 ---
 
-## Gemini Notebook（原 NotebookLM）用法：上傳教材做出有出處的問答｜鴻綸科技
+## Gemini Notebook 用法教學：上傳教材做有出處的問答｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-howto
 
@@ -6173,7 +6173,7 @@ Gemini 生態系教學系列涵蓋 Gemini 在 Gmail、文件、Classroom 等應�
 
 ---
 
-## Gemini Notebook（原 NotebookLM）是什麼？教育版開箱與建立第一個筆記本｜鴻綸科技
+## Gemini Notebook 是什麼？原 NotebookLM 教育版入門｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-intro
 
@@ -6215,7 +6215,7 @@ Gemini Notebook 跟一般在 Gemini 網站打字聊天，差在哪裡？
 Gemini Notebook 系列第 1／10 篇・看全部系列
 下一篇：Audio Overview 與 Video Overview 怎麼用 →
 相關閱讀
-Gemini Notebook 能讀買過的電子書了：Expert Intelligence 解析
+Gemini Notebook 能讀買過的電子書：Expert Intelligence
 聯絡我們
 看 Gemini 方案懶人包
 學校正在評估 AI 導入？
@@ -6233,7 +6233,7 @@ Gemini Notebook 能讀買過的電子書了：Expert Intelligence 解析
 
 ---
 
-## Gemini Notebook 講義變 Podcast：Audio／Video Overview 怎麼用｜鴻綸科技
+## Gemini Notebook 講義變 Podcast：Audio Overview 用法｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini-notebook-audio-video
 
@@ -6388,7 +6388,7 @@ Gemini Notebook 系列第 4／10 篇・看全部系列
 Gemini Notebook 系列第 4／10 篇・看全部系列
 下一篇：教師備課實戰 →
 相關閱讀
-Gemini Notebook 返校季五項更新：語音對話、錄音機、互動式學習總覽
+Gemini Notebook 返校季更新：語音對話、錄音機等五項
 AI 出題工具怎麼選？老師出考卷與練習題的免費做法比較
 聯絡我們
 看校園研習服務
@@ -6445,7 +6445,7 @@ Gemini Notebook 系列第 5／10 篇・看全部系列
 Gemini Notebook 系列第 5／10 篇・看全部系列
 下一篇：學生自主學習：打造專屬 AI 課業助手 →
 相關閱讀
-Gemini Notebook 能讀買過的電子書了：Expert Intelligence 解析
+Gemini Notebook 能讀買過的電子書：Expert Intelligence
 聯絡我們
 看校園研習服務
 學校正在評估 AI 導入？
@@ -6500,7 +6500,7 @@ Gemini Notebook 系列第 6／10 篇・看全部系列
 Gemini Notebook 系列第 6／10 篇・看全部系列
 下一篇：免費版與教育版額度差在哪 →
 相關閱讀
-Gemini Notebook 返校季五項更新：語音對話、錄音機、互動式學習總覽
+Gemini Notebook 返校季更新：語音對話、錄音機等五項
 聯絡我們
 看 Gemini Notebook 基礎教學
 學校正在評估 AI 導入？
@@ -6773,7 +6773,7 @@ Gemini 會依作業內容生成一份規準草稿，或把手邊已經整理好�
 Gemini 系列第 5／10 篇・看全部系列
 下一篇：Admin Console 怎麼管控 Gemini →
 相關閱讀
-Gemini 學生專區開放給教育版帳號：沒有獨立開關，學校要看的是 Gemini 應用程式的設定
+Gemini 學生專區開放教育版：沒有獨立開關
 聯絡我們
 看 Classroom 完全指南系列
 學校正在評估 AI 導入？
@@ -7178,7 +7178,7 @@ Gemini Notebook、Google Vids、Google Flow 的額度是分開算的嗎？
 Gemini 系列第 9／10 篇・看全部系列
 下一篇：資安與學生使用規範 →
 相關閱讀
-Gemini 4 Argon 發表：9/30 先給防禦者，10/13 已開放 Pro 與 Ultra
+Gemini 4 Argon 可以用了嗎？開放時程與方案整理
 Gemini 4 Argon 老師能用嗎？4 種帳號一次看懂
 老師可以免費用 Gemini 嗎？教師與學生方案、學校帳號額度一次看懂
 聯絡我們
@@ -7234,7 +7234,7 @@ Gemini 系列第 10／10 篇（完結）・看全部系列
 ← 上一篇：常見問題與額度限制整理
 Gemini 系列第 10／10 篇（完結）・看全部系列
 相關閱讀
-Gemini 學生專區開放給教育版帳號：沒有獨立開關，學校要看的是 Gemini 應用程式的設定
+Gemini 學生專區開放教育版：沒有獨立開關
 聯絡我們
 看校園研習服務
 學校正在評估 AI 導入？
@@ -8269,7 +8269,7 @@ Google AI 校園研習：由官方認證講師到校授課 →
 說明老師目前的 AI 使用狀況與想達到的程度，我們一起盤授權、排梯次與課程內容。
 聯絡我們
 看校園研習服務
-AI 素養級認證（AIATCL）是什麼？2.0 版考什麼、怎麼報名、老師要不要考
+AI 素養級認證（AIATCL）是什麼？考什麼、怎麼報名
 2.0 版四大考試範圍、及格標準、報名費與場次，以及老師該考哪一張證照。
 想在校內辦一場認證培訓？
 安排培訓前先想好這幾項：
@@ -8333,7 +8333,7 @@ SEO／AEO／GEO 搜尋引擎最佳化服務
 
 ---
 
-## 數位學習軟體怎麼選？Edpuzzle、Thinglink、Kami 等六套定位比較｜鴻綸科技
+## 數位學習軟體怎麼選？Edpuzzle、ThingLink、Kami 比較｜鴻綸科技
 
 https://www.hunglun.com/knowledge/edtech-software
 
@@ -8716,7 +8716,7 @@ OU、群組、裝置盤點怎麼做。
 
 ---
 
-## 學校怎麼強制開啟兩步驟驗證（2SV）？排除學生 OU 與防鎖死設定｜鴻綸科技
+## 學校怎麼強制兩步驟驗證（2SV）？排除學生與防鎖死｜鴻綸科技
 
 https://www.hunglun.com/knowledge/two-step-verification
 
