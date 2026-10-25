@@ -549,3 +549,8 @@ html.pl-on::after{left:calc(50% - var(--pl-w) / 2);top:calc(50% - var(--pl-h) / 
 @keyframes pl-sweep{to{transform:translateX(101%)}}
 @keyframes pl-out{to{opacity:0;visibility:hidden}}
 @media (prefers-reduced-motion:reduce){html.pl-on::before,html.pl-on::after{display:none}}
+.fab-pop{position: absolute;right: 0;bottom: calc(100% + 10px);background: var(--card);border: 1px solid var(--line);border-radius: 14px;box-shadow: 0 8px 28px rgba(0,0,0,0.16);padding: 14px 16px;display: flex;flex-wrap: wrap;align-items: center;gap: 8px 10px;width: max-content;max-width: 260px}
+.fab-pop b{font-size: 1.05rem}
+.fab-pop small{flex-basis: 100%;color: var(--muted);font-size: 0.82rem}
+.contact-fab .fab-pop a{width: auto;height: auto;flex-basis: 100%;border-radius: 0;background: none;justify-content: flex-start;font-size: 0.82rem;color: var(--accent);text-decoration: underline}
+.contact-fab .fab-pop a:hover{transform: none;opacity: 1}

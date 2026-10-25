@@ -180,3 +180,23 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     node.parentNode.insertBefore(sp,node.nextSibling);
   });
 })();
+
+// 右下角 LINE 鈕：電腦版（有滑鼠）lin.ee 開不了對話，改彈小卡片顯示 ID＋複製鈕；手機照舊直接開 LINE
+(function(){
+  var a=document.querySelector(".contact-fab .fab-line");
+  if(!a||!window.matchMedia("(hover: hover) and (pointer: fine)").matches)return;
+  var id="@gdm6961p",pop=null;
+  function close(){if(pop){pop.remove();pop=null}}
+  a.addEventListener("click",function(e){
+    e.preventDefault();
+    if(pop)return close();
+    pop=document.createElement("div");
+    pop.className="fab-pop";
+    pop.innerHTML='<b></b><button type="button" class="fc-copy" data-label="複製 ID">複製 ID</button><small>電腦版請在 LINE 搜尋 ID 加入</small><a href="'+a.href+'" target="_blank" rel="noopener">或用手機開啟</a>';
+    pop.querySelector("b").textContent=id;
+    pop.querySelector(".fc-copy").setAttribute("data-copy",id);
+    document.querySelector(".contact-fab").appendChild(pop);
+  });
+  document.addEventListener("click",function(e){if(pop&&!e.target.closest(".fab-pop")&&!e.target.closest(".fab-line"))close()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
