@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.22.2（2026-10-25）
+
+拿掉「CEU 綁定與解除系統」自動綁定程式（商用工具）。
+
+- `tools/commercial`：刪卡片，三處描述改掉 CEU 字樣；`tools`、`llms.txt` 的商用工具說明同步
+- 刪除自動綁定程式本身：`tools/ceu.html` 與後端代理 `functions/tools/ceu/api/`；`services/ceu` 服務頁、各文章提及 CEU 的地方、`_middleware.js` 不動
+- 搜尋索引與 llms-full 已重產
+
 ## v1.22.1（2026-10-25）
 
 拿掉全站對政府資料來源的標註（機關名稱與入口）。
