@@ -26,8 +26,8 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=72" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=109">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=74" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=110">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -216,6 +216,7 @@
       <a href="/about">關於我們</a>
       <a href="/google">Google 解決方案</a>
       <a href="/services" class="active">服務項目</a>
+      <a href="/enterprise">企業方案</a>
       <a href="/software">數位學習軟體導入</a>
       <a href="/knowledge">教學專區</a>
       <a href="/insights">科技觀察</a>
@@ -333,11 +334,28 @@
           notes.push('請補選目前的 Workspace 版本，AI Pro 必須加購在 Fundamentals 或 Plus 上。');
         }
         notes.push('不必全校購買，可以只開給部分人，之後再依實際使用情形增減。');
+        notes.push('經費可能來自學校自有預算或計畫補助，適用哪些補助請依貴校所屬縣市與當年度公告確認；單價與總價請按下方「索取報價」，我們依貴校人數回覆。');
         var lis = notes.map(function (t) { return '<li>' + t + '</li>'; }).join('');
         out.hidden = false;
         out.innerHTML = '<h2>試算結果</h2><p style="margin:0 0 8px;"><strong>建議授權套數：' + total + ' 套</strong>（教職員 ' + staff + '、學生 ' + stu + '）</p><ul>' + lis + '</ul>' +
-          '<p style="margin:12px 0 0;"><button type="button" class="btn btn-ghost btn-sm" id="cApply">帶入下方報價表單</button></p>';
-        last = { staff: staff, stu: stu, total: total, ed: ed };
+          '<p style="margin:12px 0 0;"><button type="button" class="btn btn-ghost btn-sm" id="cApply">帶入下方報價表單</button> <button type="button" class="btn btn-ghost btn-sm" id="cCopy">複製試算結果</button> <span id="cCopyMsg" role="status" aria-live="polite" style="font-size:0.88rem;margin-left:6px;"></span></p>';
+        last = { staff: staff, stu: stu, total: total, ed: ed, notes: notes };
+        $('cCopy').addEventListener('click', function () {
+          if (!last) return;
+          var NL = String.fromCharCode(10);
+          var text = 'Google AI Pro for Education 授權套數試算' + NL + '建議授權套數：' + last.total + ' 套（教職員 ' + last.staff + '、18 歲以上學生 ' + last.stu + '）' + NL + last.notes.map(function (t) { return '・' + t; }).join(NL) + NL + '試算來源：https://www.hunglun.com/services/ai-pro-quote';
+          var msg = $('cCopyMsg');
+          function done(ok) { msg.textContent = ok ? '已複製，可貼到簽呈或信件。' : '複製沒有成功，請手動選取結果文字。'; }
+          function fallback() {
+            var ta = document.createElement('textarea');
+            ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '-1000px';
+            document.body.appendChild(ta); ta.select();
+            var ok = false;
+            try { ok = document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta); done(ok);
+          }
+          if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(function () { done(true); }, fallback); } else { fallback(); }
+        });
         $('cApply').addEventListener('click', function () {
           if (!last) return;
           var seats = $('qSeats'), note = $('qNote');
@@ -539,7 +557,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.23.0</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.24.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

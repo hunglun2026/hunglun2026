@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.24.0（2026-10-26）
+
+補完 Gemini 建議裡上一版沒做到的部分（一般企業分流、工具獨立頁、Lead Magnet、試算器）。
+
+- 新增 `/enterprise`（企業與公部門數位方案）並在全站導覽列加「企業方案」，教育與企業分流：Google 雲端與 Gemini 企業導入、客製系統與自動化整合、品牌官網與搜尋曝光、客戶案例、網站互動效果範例整區搬到這裡；頁面用 Service＋OfferCatalog 結構化資料；服務項目頁拿掉「網站效果」分頁與一般企業案例，只留一張入口卡；舊網址 `/services#effects` 會轉到新頁。既有 `/services/*` 單頁網址不動（保護已收錄連結），以企業專頁彙整與結構化資料區分
+- 新增兩個工具獨立介紹頁：`/tools/consent-slip-ai`（學生回條 AI 辨識系統）、`/tools/photo-word`（校園照片 Word 填入工具），各含重點摘要、FAQ、SoftwareApplication 結構化資料與「複製推薦信給資訊組長」
+- 新增 `/knowledge/gemini-prompt-kit`：Gemini 備課與校務提示詞 30 組（Word＋PDF），填學校、姓名、信箱後才顯示下載連結，資料走 `/api/contact`；產生器 `sitemap/gen-prompt-kit.py`；8 篇決策型文章文末加下載入口
+- 報價頁試算器：補「複製試算結果」與經費來源說明（不編價格）
+- sitemap、llms.txt、og 圖同步
+
 ## v1.23.0（2026-10-26）
 
 依 Gemini 對官網的 SEO／AEO／GEO 建議，查證後只做站上真正缺的四項，另把一般商業業務降級。
