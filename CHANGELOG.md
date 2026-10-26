@@ -3,6 +3,18 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.23.0（2026-10-26）
+
+依 Gemini 對官網的 SEO／AEO／GEO 建議，查證後只做站上真正缺的四項，另把一般商業業務降級。
+
+- Organization（首頁、關於）：補 `taxID` 與 Google 官方亞太服務文件的 `sameAs`；關於頁公司沿革補登記資料
+- 商業業務降級（不移除、不搬頁，避免斷掉 `/services#cases` 等已收錄連結）：首頁巡覽拿掉「網站效果」面板（圓點與高度同步）、服務分類「官網與數位行銷」排最後；服務頁同樣排最後，成功案例拆成教育工具與「客戶委託案例（一般企業）」兩段
+- 9 篇決策型文章補「重點先看」摘要框（`kb-quick`）：google-ai-pro-vs-workspace、education-apply、gemini-notebook-plans、gemini-faq-limits、chromebook、school-ai-procurement、workspace-editions、procurement、gemini-admin-setup
+- 兩份採購規格書範本（Word＋PDF）：`assets/docs/spec-google-ai-pro.*`、`spec-chromebook-ceu.*`，下載區放在 school-ai-procurement 與 procurement 兩篇；產生器 `sitemap/gen-spec-templates.py`（沿用 gen-ai-policy-template.py）
+- `gen-ai-policy-template.py` 的 `build_pdf` 修正：等 Chrome 寫完 PDF 才清暫存資料夾（原本偶爾產不出 PDF）
+- 報價頁新增授權套數試算器（只算數量、不含價格），可一鍵帶入下方表單的人數與備註
+- 查證結論：FAQPage（150 頁）、SoftwareApplication（24 個）、靜態 HTML、無測試機網域，Gemini 說缺的都已經有
+
 ## v1.22.2（2026-10-25）
 
 拿掉「CEU 綁定與解除系統」自動綁定程式（商用工具）。

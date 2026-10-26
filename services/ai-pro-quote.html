@@ -36,7 +36,7 @@
   "url": "https://www.hunglun.com/services/ai-pro-quote",
   "name": "Google AI Pro for Education 校園授權報價｜線上索取試算｜鴻綸科技",
   "inLanguage": "zh-Hant-TW",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-10-26",
   "isPartOf": { "@id": "https://www.hunglun.com/#website" },
   "about": { "@id": "https://www.hunglun.com/#organization" }
 }
@@ -270,6 +270,91 @@
       <li><strong>先想清楚要用在哪。</strong>授權買了沒人用是最常見的浪費。建議先盤點三到五個真實情境（例如公文改寫、家長通知、命題），導入與研習就從那幾個情境開始。</li>
     </ul>
 
+    <h2 id="calc">先試算：要買幾套授權？</h2>
+    <p>輸入人數就能算出建議的授權套數與要注意的事。這裡只算<strong>授權數量</strong>，不含價格；金額依年限與採購方式而定，會在回信的報價裡列出。</p>
+    <div class="ct-form" id="seatCalc" role="group" aria-label="授權套數試算">
+      <div class="ct-row">
+        <label class="ct-field">
+          <span class="ct-label">預計開通的教職員人數</span>
+          <input type="number" id="cStaff" min="0" max="100000" step="1" inputmode="numeric" placeholder="例：40">
+        </label>
+        <label class="ct-field">
+          <span class="ct-label">預計開通的學生人數（只填年滿 18 歲者）</span>
+          <input type="number" id="cStu" min="0" max="100000" step="1" inputmode="numeric" placeholder="國中小請填 0">
+        </label>
+      </div>
+      <label class="ct-field">
+        <span class="ct-label">目前的 Workspace for Education 版本</span>
+        <select id="cEdition">
+          <option value="">請選擇</option>
+          <option value="Education Fundamentals">Education Fundamentals（免費）</option>
+          <option value="Education Plus">Education Plus</option>
+          <option value="還不確定">還不確定</option>
+        </select>
+      </label>
+      <div class="ct-actions">
+        <button type="button" class="btn btn-primary" id="cRun">試算</button>
+      </div>
+      <div class="kb-quick" id="cOut" role="status" aria-live="polite" hidden></div>
+    </div>
+    <script>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      var last = null;
+      function bucket(n) {
+        if (n <= 50) return '50 人以下';
+        if (n <= 100) return '51–100 人';
+        if (n <= 300) return '101–300 人';
+        if (n <= 600) return '301–600 人';
+        return '600 人以上';
+      }
+      function num(el) {
+        var v = parseInt(el.value, 10);
+        return isFinite(v) && v > 0 ? v : 0;
+      }
+      $('cRun').addEventListener('click', function () {
+        var staff = num($('cStaff')), stu = num($('cStu')), ed = $('cEdition').value;
+        var out = $('cOut');
+        var total = staff + stu;
+        if (!total) {
+          out.hidden = false;
+          out.innerHTML = '<p style="margin:0;">請至少填一項人數，再按試算。</p>';
+          last = null;
+          return;
+        }
+        var notes = [];
+        notes.push('授權一人一份，只能指派給 18 歲以上的使用者；未滿 18 歲的學生不能算進來。');
+        notes.push('2025 年 10 月起已取消「每 4 個學生授權搭配 1 個教職員授權」，教職員的 ' + staff + ' 套要自己編列。');
+        if (ed === 'Education Fundamentals' || ed === 'Education Plus') {
+          notes.push('AI Pro 是加購在 ' + ed + ' 上的方案，貴校版本符合加購的前提。');
+        } else if (ed === '還不確定') {
+          notes.push('AI Pro 必須加購在 Education Fundamentals 或 Plus 上，建議先到管理主控台確認版本，或在表單備註留言，我們協助確認。');
+        } else {
+          notes.push('請補選目前的 Workspace 版本，AI Pro 必須加購在 Fundamentals 或 Plus 上。');
+        }
+        notes.push('不必全校購買，可以只開給部分人，之後再依實際使用情形增減。');
+        var lis = notes.map(function (t) { return '<li>' + t + '</li>'; }).join('');
+        out.hidden = false;
+        out.innerHTML = '<h2>試算結果</h2><p style="margin:0 0 8px;"><strong>建議授權套數：' + total + ' 套</strong>（教職員 ' + staff + '、學生 ' + stu + '）</p><ul>' + lis + '</ul>' +
+          '<p style="margin:12px 0 0;"><button type="button" class="btn btn-ghost btn-sm" id="cApply">帶入下方報價表單</button></p>';
+        last = { staff: staff, stu: stu, total: total, ed: ed };
+        $('cApply').addEventListener('click', function () {
+          if (!last) return;
+          var seats = $('qSeats'), note = $('qNote');
+          if (seats) seats.value = bucket(last.total);
+          if (note) {
+            var line = '【試算】建議 ' + last.total + ' 套（教職員 ' + last.staff + '、18 歲以上學生 ' + last.stu + '）' + (last.ed ? '，現有版本：' + last.ed : '') + '。';
+            var NL = String.fromCharCode(10);
+            var rest = note.value.split(NL).filter(function (l) { return l.indexOf('【試算】') !== 0; }).join(NL);
+            note.value = line + (rest ? NL + rest : '');
+          }
+          var f = $('form');
+          if (f && f.scrollIntoView) f.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    })();
+    </script>
+
     <h2 id="form">索取報價</h2>
     <p>標示必填的欄位填完就能送出，其餘留白也沒關係，我們會在回信裡問。</p>
 
@@ -454,7 +539,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.22.2</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.23.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
