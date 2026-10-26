@@ -39,7 +39,7 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 /services/digital-learning /software 301
 # 在地嚮導後來從 /services 移到 /tools（三個區域頁仍獨立存在）
 # ⚠️ 這條原本還指向 /services#local-food，但那個錨點已隨搬移消失，會落到 services 頁頂
-/local-food /tools/local-food 301
+/local-food /tools 301
 
 # 舊的特效展示頁：帶 .html 的已轉，無副檔名的路徑原本漏掉，
 # 會以 200 回一個只寫「已搬移」的空殼頁（重複內容），一併轉走
@@ -71,3 +71,9 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 會蓋掉 Function、讓口令保護失效。
 /demo-student-stats  https://school.hunglun.com/  301
 /demo-student-stats/*  https://school.hunglun.com/  301
+
+# 2026-10-27 在地嚮導與官網主題無關、稀釋教育專業度，下架；舊網址 301 回資源分享
+/tools/local-food /tools 301
+/local-food-xinying /tools 301
+/local-food-yanshui /tools 301
+/local-food-dongshan /tools 301

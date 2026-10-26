@@ -56,7 +56,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
 - 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習遊戲／資料查詢網站全部免費）：https://www.hunglun.com/tools
-  - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、學習遊戲 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search、在地嚮導 https://www.hunglun.com/tools/local-food
+  - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、學習遊戲 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
 - 學生回條 AI 辨識系統介紹（家長同意書回條拍照統計、匯出 Excel）：https://www.hunglun.com/tools/consent-slip-ai
 - 校園照片 Word 填入工具介紹（活動成果報告照片排版）：https://www.hunglun.com/tools/photo-word
 - Gemini 備課與校務提示詞 30 組（免費下載，Word 與 PDF）：https://www.hunglun.com/knowledge/gemini-prompt-kit
@@ -67,10 +67,6 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 教育部選購名單產品介紹圖卡（Kahoot、Padlet、Wordwall、ThingLink、Google 教育版、ChromeOS Flex 的產品介紹圖卡與教育部選購名單產品編號，可下載圖片，網址 https://www.hunglun.com/software/cards）
 - 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
 - 常見問題（公司背景與 Google 官方授權身分、學校導入從哪一步開始、可否委託客製開發、服務範圍、系統是否留存學生個資、SEO／GEO／AEO 的差別。**教學與選型類文章不在這裡，在 /knowledge**）：https://www.hunglun.com/faq
-- 在地嚮導：新營・鹽水・東山美食地圖（以新營為中心的周邊美食推薦，各5家共15家，每家附Google Maps連結）：https://www.hunglun.com/tools/local-food
-  - [新營推薦美食 Top 5](https://www.hunglun.com/local-food-xinying)
-  - [鹽水推薦美食 Top 5](https://www.hunglun.com/local-food-yanshui)
-  - [東山推薦美食 Top 5](https://www.hunglun.com/local-food-dongshan)
 - 邊玩邊變強（國小九九乘法、加減法、注音符號與英文字母練習遊戲，答對題目才能出手攻擊，打贏還能升級、掉裝備，登入帳號可建立角色保存進度，也能直接遊戲不登入，另附六款練習小遊戲，免安裝）：https://game.hunglun.com/
 - 動物探險家（國小動物教學網站：動物小百科、分類闖關、誰住哪裡、猜猜我是誰、保育小教室，老師可產生可列印的學習單並用搶答計分板，免註冊、免安裝）：https://zoo.hunglun.com/
 - 故宮探險家（國小到高中文物教學網站，三種難度：文物小百科、典藏搜尋、猜猜哪個朝代、朝代排排站、分類闖關、翻牌配對、我的小展覽、清代檔案史料探究，老師專區有課程包、學習單與搶答計分板，免註冊、免安裝）：https://museum.hunglun.com/
