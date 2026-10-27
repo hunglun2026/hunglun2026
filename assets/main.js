@@ -206,6 +206,8 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
 // 參數 placement：fab（右下角浮動鈕）／footer（頁尾）／content（頁面內文）；device：touch／mouse
 (function(){
   var GA_ID="G-98E81H81F6";
+  // 只在正式網域送資料：本機測試（localhost）與 .pages.dev 預覽網址不記，避免污染數字
+  if(!/(^|\.)hunglun\.com$/.test(location.hostname))return;
   window.dataLayer=window.dataLayer||[];
   window.gtag=function(){window.dataLayer.push(arguments)};
   window.gtag("js",new Date());
