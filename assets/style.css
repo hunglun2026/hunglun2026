@@ -113,6 +113,10 @@ main:focus{outline: none}
 .section > .wrap > :is(p,ul,ol,figure,table,blockquote) + :is(p,ul,ol,figure,table,blockquote):not(.section-sub){margin-top: 16px}
 .section > .wrap > .grid + p{margin-top: 20px}
 .section-sub{text-align: left;color: var(--muted);font-weight: 300;margin: 12px 0 36px;max-width: 620px}
+/* /services 解決方案分頁：頁首置中，下方說明、分類連結、各組標題與簡介一併置中 */
+#tab-services .section-title,#tab-services .section-sub{text-align: center}
+#tab-services .section-sub{margin-left: auto;margin-right: auto}
+#tab-services nav.section-sub{justify-content: center}
 .eyebrow{display: block;text-align: left;color: var(--accent);font-size: 0.76rem;font-weight: 500;letter-spacing: 0.35em;margin-bottom: 14px}
 .stats{display: flex;flex-wrap: wrap;gap: 40px}
 .stat{flex: 1;min-width: 160px;text-align: left}
