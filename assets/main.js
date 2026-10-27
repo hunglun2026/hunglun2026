@@ -200,3 +200,44 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   document.addEventListener("click",function(e){if(pop&&!e.target.closest(".fab-pop")&&!e.target.closest(".fab-line"))close()});
   document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 })();
+
+// Google Analytics 4（資源「hunglun.com」，評估 ID 由 Steve 於 2026-10-27 建立）＋聯絡按鈕點擊事件
+// 事件名稱：line_click／line_id_copy／facebook_click／map_click／email_click／phone_click
+// 參數 placement：fab（右下角浮動鈕）／footer（頁尾）／content（頁面內文）；device：touch／mouse
+(function(){
+  var GA_ID="G-98E81H81F6";
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){window.dataLayer.push(arguments)};
+  window.gtag("js",new Date());
+  window.gtag("config",GA_ID);
+  var s=document.createElement("script");
+  s.async=true;
+  s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(GA_ID);
+  document.head.appendChild(s);
+
+  var mouse=window.matchMedia&&window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  function eventFor(el){
+    if(el.closest(".fab-pop .fc-copy"))return"line_id_copy";
+    if(el.closest(".fc-has-copy .fc-copy")){var c=el.closest(".fc-copy").getAttribute("data-copy")||"";return c.charAt(0)==="@"?"line_id_copy":null}
+    var a=el.closest("a");
+    if(!a)return null;
+    var h=a.getAttribute("href")||"";
+    if(a.classList.contains("fab-line")||/lin\.ee|line\.me/.test(h))return"line_click";
+    if(/facebook\.com\/hungluntechnology/.test(h))return"facebook_click";
+    if(/google\.[a-z.]+\/maps|maps\.app\.goo\.gl/.test(h))return"map_click";
+    if(/^mailto:|mail\.google\.com/.test(h))return"email_click";
+    if(/^tel:/.test(h))return"phone_click";
+    return null;
+  }
+  function placementFor(el){
+    if(el.closest(".contact-fab"))return"fab";
+    if(el.closest(".site-footer"))return"footer";
+    return"content";
+  }
+  document.addEventListener("click",function(e){
+    if(!e.target||!e.target.closest||typeof window.gtag!=="function")return;
+    var name=eventFor(e.target);
+    if(!name)return;
+    window.gtag("event",name,{placement:placementFor(e.target),device:mouse?"mouse":"touch",page_path:location.pathname});
+  },true);
+})();
