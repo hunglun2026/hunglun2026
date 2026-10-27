@@ -81,9 +81,8 @@
 .lg-body h3 a::after{content:"";position:absolute;inset:-400px -1px -1px -1px;z-index:2}
 .lg-body .tagline{color:var(--c);font-size:.84rem;font-weight:500;margin-bottom:10px}
 .lg-body p{color:var(--muted);font-size:.92rem;flex:1}
-.lg-levels{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.lg-levels{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;min-height:24px}
 .lg-levels span{font-size:.75rem;font-weight:500;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent);border-radius:999px;padding:2px 10px}
-.lg-go{margin-top:16px;font-size:.9rem;font-weight:500;color:var(--c)}
 .lg-teacher{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px;padding:26px;border-radius:20px;background:color-mix(in srgb,var(--accent) 7%,var(--bg));border:1px solid var(--line)}
 .lg-teacher h2{grid-column:1/-1;font-size:1.15rem;font-weight:500;text-align:center}
 .lg-teacher h2 + p{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.9rem;margin-top:-8px}
@@ -319,16 +318,15 @@
 
 <section class="section alt" id="learning-games">
   <div class="wrap">
-    <div class="lg-filter" id="lgFilter" role="group" aria-label="依程度篩選" hidden>
-      <button type="button" data-level="all" aria-pressed="true">全部</button>
-      <button type="button" data-level="幼" aria-pressed="false">幼兒園</button>
-      <button type="button" data-level="小" aria-pressed="false">國小</button>
-      <button type="button" data-level="中" aria-pressed="false">國中</button>
-      <button type="button" data-level="高" aria-pressed="false">高中</button>
+    <div class="lg-filter" id="lgFilter" role="group" aria-label="依遊戲內容篩選" hidden>
+      <button type="button" data-cat="all" aria-pressed="true">全部</button>
+      <button type="button" data-cat="基本功練習" aria-pressed="false">基本功練習</button>
+      <button type="button" data-cat="生物與自然" aria-pressed="false">生物與自然</button>
+      <button type="button" data-cat="歷史與文化" aria-pressed="false">歷史與文化</button>
     </div>
     <p class="lg-count" id="lgCount" aria-live="polite" hidden></p>
     <div class="lg-grid" id="lgGrid">
-      <article class="lg-card reveal" style="--c:#7b45d6" data-levels="小">
+      <article class="lg-card reveal" style="--c:#7b45d6" data-cat="基本功練習">
         <a class="lg-shot" href="https://game.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-game.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">基本功練習</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-9x9game.webp?v=2" alt="" loading="lazy" decoding="async">
@@ -336,62 +334,56 @@
           <div class="tagline">答題觸發戰鬥・答對就出手打怪</div>
           <p>九九乘法、加減法、注音符號與英文字母。答對題目才能出手攻擊，打贏升級、掉裝備。可登入保存進度，也能直接玩。</p>
           <div class="lg-levels" aria-label="適用程度"><span>國小</span></div>
-          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="lg-card reveal" style="--c:#5b9b45" data-levels="小">
-        <a class="lg-shot" href="https://zoo.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-zoo.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+      <article class="lg-card reveal" style="--c:#5b9b45" data-cat="生物與自然">
+        <a class="lg-shot" href="https://zoo.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-zoo.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">生物與自然</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-zoo.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://zoo.hunglun.com/" target="_blank" rel="noopener">動物探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">臺北動物園 271 種動物・分類闖關與猜謎</div>
           <p>動物小百科、分類闖關、誰住哪裡、猜猜我是誰、保育小教室。</p>
           <div class="lg-levels" aria-label="適用程度"><span>國小</span></div>
-          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="lg-card reveal" style="--c:#2f7d7d" data-levels="小 中 高">
-        <a class="lg-shot" href="https://museum.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-museum.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+      <article class="lg-card reveal" style="--c:#2f7d7d" data-cat="歷史與文化">
+        <a class="lg-shot" href="https://museum.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-museum.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">歷史與文化</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-museum.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://museum.hunglun.com/" target="_blank" rel="noopener">故宮探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">故宮 10.9 萬件文物・猜朝代與時間軸</div>
           <p>文物小百科、典藏搜尋、猜朝代、朝代排排站、翻牌配對。高中可用 39.6 萬件清代檔案做史料探究。</p>
           <div class="lg-levels" aria-label="適用程度"><span>國小</span><span>國中</span><span>高中</span></div>
-          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="lg-card reveal" style="--c:#2b7fb8" data-levels="幼 小 中 高">
-        <a class="lg-shot" href="https://ocean.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-ocean.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+      <article class="lg-card reveal" style="--c:#2b7fb8" data-cat="生物與自然">
+        <a class="lg-shot" href="https://ocean.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-ocean.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">生物與自然</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-sea.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://ocean.hunglun.com/" target="_blank" rel="noopener">海洋探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">跟著海生館認識約兩百種海洋生物</div>
           <p>逛海生館、特展教室、分類闖關、誰住哪片海。幼兒園模式只看照片、會唸出名字，高中可用環境 DNA 做探究。</p>
           <div class="lg-levels" aria-label="適用程度"><span>幼兒園</span><span>國小</span><span>國中</span><span>高中</span></div>
-          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="lg-card reveal" style="--c:#4d8f35" data-levels="小 中 高">
-        <a class="lg-shot" href="https://insects.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-insects.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+      <article class="lg-card reveal" style="--c:#4d8f35" data-cat="生物與自然">
+        <a class="lg-shot" href="https://insects.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-insects.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">生物與自然</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-insect.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://insects.hunglun.com/" target="_blank" rel="noopener">昆蟲探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">認識台灣上千種昆蟲，還能查 14.8 萬筆標本</div>
           <p>昆蟲小百科、是不是昆蟲、變態排排站、幾月看得到。用縣市地圖與年代長條探究標本紀錄。</p>
           <div class="lg-levels" aria-label="適用程度"><span>國小</span><span>國中</span><span>高中</span></div>
-          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="lg-card reveal" style="--c:#a5422a" data-levels="幼 小 中 高">
-        <a class="lg-shot" href="https://heritage.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-heritage.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+      <article class="lg-card reveal" style="--c:#a5422a" data-cat="歷史與文化">
+        <a class="lg-shot" href="https://heritage.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-heritage.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">歷史與文化</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-heritage.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://heritage.hunglun.com/" target="_blank" rel="noopener">古蹟探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">認識臺灣 1,065 處古蹟・地圖找家附近的古蹟</div>
           <p>古蹟圖鑑、地圖找附近的古蹟、看建築認類型、探險護照，還能挑兩處比一比。</p>
           <div class="lg-levels" aria-label="適用程度"><span>幼兒園</span><span>國小</span><span>國中</span><span>高中</span></div>
-          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
     </div>
@@ -467,11 +459,11 @@
   bar.hidden=false;count.hidden=false;
   function apply(lv){
     var n=0;
-    cards.forEach(function(c){var ok=lv==='all'||c.getAttribute('data-levels').split(' ').indexOf(lv)>-1;c.hidden=!ok;if(ok)n++;});
-    btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-level')===lv?'true':'false');});
+    cards.forEach(function(c){var ok=lv==='all'||c.getAttribute('data-cat')===lv;c.hidden=!ok;if(ok)n++;});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-cat')===lv?'true':'false');});
     count.textContent='共 '+n+' 個遊戲';
   }
-  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-level'));});});
+  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-cat'));});});
   apply('all');
 })();
 </script>
