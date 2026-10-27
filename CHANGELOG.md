@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.25.0（2026-10-27）
+
+學習遊戲分類新增「古蹟探險家」（heritage.hunglun.com）。
+
+- 新增卡片：幼兒園到高中的臺灣古蹟教學網站，收錄 1,065 處古蹟，含古蹟圖鑑、地圖找家附近的古蹟、看建築認類型、時代排排看、猜猜我是誰、翻牌配對、探險護照與老師專區；新增卡片圖示 `icon-proj-heritage.webp`
+- 學習遊戲頁描述（含 og、twitter）補上古蹟；資源分享總覽的學習遊戲說明、llms.txt 同步更新
+- 修 ItemList：昆蟲探險家原本誤放在 BreadcrumbList（position 5），ItemList 實際只有 4 筆；現在移回 ItemList 並補第 6 個，numberOfItems 改 6
+- 字型補「塔、宅、寺」，字型 v75、CSS 版號同步升
+- 搜尋索引與 llms-full 已重產
+
 ## v1.24.0（2026-10-26）
 
 補完 Gemini 建議裡上一版沒做到的部分（一般企業分流、工具獨立頁、Lead Magnet、試算器）。
