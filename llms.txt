@@ -55,8 +55,8 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - Intune 到底在幹嘛？跟 Google CEU 有何不同（FAQ 格式共 7 題，誠實劃線服務範圍：鴻綸科技能代購 Intune 授權、也能借用客戶既有 Intune／SCCM 環境大量部署 ChromeOS Flex（Google 官方 Remote Deployment／FRD 機制，免人工跑機）；完整 Intune 導入顧問服務不在服務範圍內）：https://www.hunglun.com/google/intune
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
-- 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習遊戲／資料查詢網站全部免費）：https://www.hunglun.com/tools
-  - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、學習遊戲 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
+- 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／互動學習遊戲／資料查詢網站全部免費）：https://www.hunglun.com/tools
+  - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、互動學習遊戲 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
 - 學生回條 AI 辨識系統介紹（家長同意書回條拍照統計、匯出 Excel）：https://www.hunglun.com/tools/consent-slip-ai
 - 校園照片 Word 填入工具介紹（活動成果報告照片排版）：https://www.hunglun.com/tools/photo-word
 - Gemini 備課與校務提示詞 30 組（免費下載，Word 與 PDF）：https://www.hunglun.com/knowledge/gemini-prompt-kit
