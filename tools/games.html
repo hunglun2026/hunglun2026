@@ -42,24 +42,56 @@
 #training .kn-lock{display: inline-flex;align-items: center;gap: 4px;font-size: 0.75rem;font-weight: 600;letter-spacing: .03em;color: var(--accent);background: var(--glow);border-radius: 999px;padding: 2px 9px}
 @media (max-width: 560px){#training .kn-item{grid-template-columns: 36px 1fr}#training .kn-icon-wrap{width: 36px;height: 36px}#training .kn-icon-wrap .kn-icon{width: 21px;height: 21px}}
 
-/* 互動學習遊戲頁：分兩區、卡片瘦身、程度標籤。只用 #learning-games 限定，不動全站 .card */
+/* 互動學習遊戲頁：卡片牆版型。只用 .lg-* 與 #learning-games 限定，不動全站 .card */
+.lg-hero{position:relative;overflow:hidden;background:radial-gradient(60% 90% at 12% 0%,color-mix(in srgb,#7b45d6 11%,transparent),transparent 70%),radial-gradient(55% 90% at 90% 10%,color-mix(in srgb,#2b7fb8 11%,transparent),transparent 70%),var(--bg)}
+.lg-hero .wrap{position:relative;z-index:1}
 .lg-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;margin:18px auto 0;padding:0;list-style:none}
-.lg-badges li{font-size:.82rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 14px}
-#learning-games .lg-group + .lg-group{margin-top:52px}
-#learning-games .group-head{text-align:center;margin-bottom:22px}
-#learning-games .group-head h2{font-size:1.3rem;font-weight:500}
-#learning-games .group-head p{color:var(--muted);font-size:.92rem;margin:6px auto 0;max-width:640px}
-#learning-games .card-visual{height:112px}
-#learning-games .card-visual img{width:76px;height:76px}
-#learning-games .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-#learning-games .chip{font-size:.75rem;font-weight:500;color:var(--accent);background:var(--glow);border-radius:999px;padding:2px 10px}
-#learning-games .card-body p{flex:1}
-#learning-games .lg-single{grid-template-columns:minmax(0,680px);justify-content:center}
-#learning-games .lg-single .card{flex-direction:row}
-#learning-games .lg-single .card-visual{width:168px;height:auto;flex:none}
-#learning-games .lg-series{display:flex;flex-wrap:wrap;justify-content:center}
-#learning-games .lg-series .card{flex:0 1 calc((100% - 44px)/3);min-width:260px}
-@media (max-width:560px){#learning-games .lg-single .card{flex-direction:column}#learning-games .lg-single .card-visual{width:auto;height:112px}}
+.lg-badges li{font-size:.82rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 14px;background:var(--bg)}
+.lg-deco{position:absolute;inset:0;pointer-events:none;z-index:0}
+.lg-deco img{position:absolute;width:68px;height:68px;border-radius:18px;box-shadow:0 10px 26px -10px rgba(0,0,0,.35);animation:lg-float 6s ease-in-out infinite}
+.lg-deco img:nth-child(1){left:7%;top:22%;--r:-8deg}
+.lg-deco img:nth-child(2){left:17%;top:58%;--r:6deg;animation-delay:-2s}
+.lg-deco img:nth-child(3){left:3%;top:64%;--r:-4deg;animation-delay:-4s;width:56px;height:56px}
+.lg-deco img:nth-child(4){right:7%;top:20%;--r:8deg;animation-delay:-1s}
+.lg-deco img:nth-child(5){right:17%;top:58%;--r:-6deg;animation-delay:-3s}
+.lg-deco img:nth-child(6){right:3%;top:62%;--r:4deg;animation-delay:-5s;width:56px;height:56px}
+@keyframes lg-float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-8px) rotate(var(--r))}}
+@media (max-width:1020px){.lg-deco{display:none}}
+.lg-filter{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 10px;padding:0}
+.lg-filter[hidden]{display:none}
+.lg-filter button{font:inherit;font-size:.92rem;cursor:pointer;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:8px 18px;transition:background .2s,color .2s,border-color .2s}
+.lg-filter button:hover{border-color:var(--accent)}
+.lg-filter button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.lg-filter button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lg-count{text-align:center;color:var(--muted);font-size:.86rem;margin:0 0 26px}
+.lg-count[hidden]{display:none}
+@media (max-width:560px){.lg-filter{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}.lg-filter::-webkit-scrollbar{display:none}.lg-filter button{flex:none}}
+.lg-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:26px}
+.lg-card{--c:var(--accent);position:relative;flex:0 1 calc((100% - 52px)/3);min-width:280px;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.lg-card[hidden]{display:none}
+.lg-card:hover,.lg-card:focus-within{transform:translateY(-5px);border-color:color-mix(in srgb,var(--c) 55%,var(--line));box-shadow:0 18px 36px -18px color-mix(in srgb,var(--c) 55%,transparent)}
+.lg-shot{position:relative;display:block;aspect-ratio:8/5;overflow:hidden;background:color-mix(in srgb,var(--c) 12%,var(--bg))}
+.lg-shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.lg-card:hover .lg-shot img{transform:scale(1.05)}
+.lg-kind{position:absolute;left:12px;top:12px;font-size:.74rem;font-weight:600;color:#fff;background:var(--c);border-radius:999px;padding:3px 11px;box-shadow:0 4px 10px -4px rgba(0,0,0,.4)}
+.lg-body{position:relative;display:flex;flex-direction:column;flex:1;padding:0 22px 22px;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 9%,var(--bg)),var(--bg) 70%)}
+.lg-icon{width:56px;height:56px;border-radius:16px;margin-top:-28px;margin-bottom:10px;background:var(--bg);border:3px solid var(--bg);box-shadow:0 8px 18px -8px rgba(0,0,0,.4);object-fit:cover;position:relative}
+.lg-body h3{font-size:1.2rem;font-weight:500;margin-bottom:4px}
+.lg-body h3 a{color:var(--text)}
+.lg-body h3 a::after{content:"";position:absolute;inset:-400px -1px -1px -1px;z-index:2}
+.lg-body .tagline{color:var(--c);font-size:.84rem;font-weight:500;margin-bottom:10px}
+.lg-body p{color:var(--muted);font-size:.92rem;flex:1}
+.lg-levels{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.lg-levels span{font-size:.75rem;font-weight:500;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent);border-radius:999px;padding:2px 10px}
+.lg-go{margin-top:16px;font-size:.9rem;font-weight:500;color:var(--c)}
+.lg-teacher{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px;padding:26px;border-radius:20px;background:color-mix(in srgb,var(--accent) 7%,var(--bg));border:1px solid var(--line)}
+.lg-teacher h2{grid-column:1/-1;font-size:1.15rem;font-weight:500;text-align:center}
+.lg-teacher h2 + p{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.9rem;margin-top:-8px}
+.lg-teacher div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lg-teacher strong{display:block;font-weight:500;margin-bottom:4px}
+.lg-teacher span{color:var(--muted);font-size:.88rem}
+@media (max-width:760px){.lg-teacher{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.lg-deco img{animation:none;transform:rotate(var(--r))}.lg-card,.lg-shot img{transition:none}}
 .cta-center .section-title,.cta-center .section-sub{text-align:center;margin-inline:auto}
 </style>
 <script type="application/ld+json">
@@ -267,7 +299,8 @@
 
 <main id="main" tabindex="-1">
 
-<div class="page-head">
+<div class="page-head lg-hero">
+  <div class="lg-deco" aria-hidden="true"><img width="68" height="68" src="/assets/icon-proj-zoo.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-sea.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-9x9game.webp?v=2" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-museum.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-heritage.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-insect.webp?v=1" alt="" decoding="async"></div>
   <div class="wrap">
     <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> ／ <a href="/tools">資源分享</a> ／ 互動學習遊戲</nav>
     <h1>互動學習遊戲</h1>
@@ -286,93 +319,88 @@
 
 <section class="section alt" id="learning-games">
   <div class="wrap">
-    <div class="lg-group">
-      <div class="group-head">
-        <h2>基本功練習</h2>
-        <p>用打怪升級的方式練九九乘法、加減法、注音與英文字母。</p>
-      </div>
-      <div class="grid lg-single">
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-9x9game.webp?v=2" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="chips" aria-label="適用程度"><span class="chip">國小</span></div>
-          <h3><a href="https://game.hunglun.com/" target="_blank" rel="noopener">邊玩邊變強</a></h3>
+    <div class="lg-filter" id="lgFilter" role="group" aria-label="依程度篩選" hidden>
+      <button type="button" data-level="all" aria-pressed="true">全部</button>
+      <button type="button" data-level="幼" aria-pressed="false">幼兒園</button>
+      <button type="button" data-level="小" aria-pressed="false">國小</button>
+      <button type="button" data-level="中" aria-pressed="false">國中</button>
+      <button type="button" data-level="高" aria-pressed="false">高中</button>
+    </div>
+    <p class="lg-count" id="lgCount" aria-live="polite" hidden></p>
+    <div class="lg-grid" id="lgGrid">
+      <article class="lg-card reveal" style="--c:#7b45d6" data-levels="小">
+        <a class="lg-shot" href="https://game.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-game.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">基本功練習</span></a>
+        <div class="lg-body">
+          <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-9x9game.webp?v=2" alt="" loading="lazy" decoding="async">
+          <h3><a href="https://game.hunglun.com/" target="_blank" rel="noopener">邊玩邊變強<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">答題觸發戰鬥・答對就出手打怪</div>
-          <p>九九乘法、加減法、注音符號與英文字母。答對題目才能出手攻擊，打贏升級、掉裝備；可登入保存進度，也能直接玩。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://game.hunglun.com/" target="_blank" rel="noopener">前往體驗 ↗</a>
-          </div>
+          <p>九九乘法、加減法、注音符號與英文字母。答對題目才能出手攻擊，打贏升級、掉裝備。可登入保存進度，也能直接玩。</p>
+          <div class="lg-levels" aria-label="適用程度"><span>國小</span></div>
+          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      </div>
-    </div>
-    <div class="lg-group">
-      <div class="group-head">
-        <h2>主題探險家系列</h2>
-        <p>動物、文物、海洋、昆蟲、古蹟五個主題網站。老師專區可一鍵產生可列印的學習單與答案頁，還有出題投影與全班搶答計分板。</p>
-      </div>
-      <div class="grid lg-series">
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-zoo.webp?v=1" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="chips" aria-label="適用程度"><span class="chip">國小</span></div>
-          <h3><a href="https://zoo.hunglun.com/" target="_blank" rel="noopener">動物探險家</a></h3>
+      <article class="lg-card reveal" style="--c:#5b9b45" data-levels="小">
+        <a class="lg-shot" href="https://zoo.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-zoo.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+        <div class="lg-body">
+          <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-zoo.webp?v=1" alt="" loading="lazy" decoding="async">
+          <h3><a href="https://zoo.hunglun.com/" target="_blank" rel="noopener">動物探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">臺北動物園 271 種動物・分類闖關與猜謎</div>
           <p>動物小百科、分類闖關、誰住哪裡、猜猜我是誰、保育小教室。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://zoo.hunglun.com/" target="_blank" rel="noopener">前往體驗 ↗</a>
-          </div>
+          <div class="lg-levels" aria-label="適用程度"><span>國小</span></div>
+          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-museum.webp?v=1" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="chips" aria-label="適用程度"><span class="chip">國小</span><span class="chip">國中</span><span class="chip">高中</span></div>
-          <h3><a href="https://museum.hunglun.com/" target="_blank" rel="noopener">故宮探險家</a></h3>
+      <article class="lg-card reveal" style="--c:#2f7d7d" data-levels="小 中 高">
+        <a class="lg-shot" href="https://museum.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-museum.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+        <div class="lg-body">
+          <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-museum.webp?v=1" alt="" loading="lazy" decoding="async">
+          <h3><a href="https://museum.hunglun.com/" target="_blank" rel="noopener">故宮探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">故宮 10.9 萬件文物・猜朝代與時間軸</div>
-          <p>文物小百科、典藏搜尋、猜朝代、朝代排排站、翻牌配對；高中可用 39.6 萬件清代檔案做史料探究。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://museum.hunglun.com/" target="_blank" rel="noopener">前往體驗 ↗</a>
-          </div>
+          <p>文物小百科、典藏搜尋、猜朝代、朝代排排站、翻牌配對。高中可用 39.6 萬件清代檔案做史料探究。</p>
+          <div class="lg-levels" aria-label="適用程度"><span>國小</span><span>國中</span><span>高中</span></div>
+          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-sea.webp?v=1" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="chips" aria-label="適用程度"><span class="chip">幼兒園</span><span class="chip">國小</span><span class="chip">國中</span><span class="chip">高中</span></div>
-          <h3><a href="https://ocean.hunglun.com/" target="_blank" rel="noopener">海洋探險家</a></h3>
+      <article class="lg-card reveal" style="--c:#2b7fb8" data-levels="幼 小 中 高">
+        <a class="lg-shot" href="https://ocean.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-ocean.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+        <div class="lg-body">
+          <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-sea.webp?v=1" alt="" loading="lazy" decoding="async">
+          <h3><a href="https://ocean.hunglun.com/" target="_blank" rel="noopener">海洋探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">跟著海生館認識約兩百種海洋生物</div>
-          <p>逛海生館、特展教室、分類闖關、誰住哪片海；幼兒園模式只看照片、會唸出名字，高中可用環境 DNA 與擱淺紀錄做探究。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://ocean.hunglun.com/" target="_blank" rel="noopener">前往體驗 ↗</a>
-          </div>
+          <p>逛海生館、特展教室、分類闖關、誰住哪片海。幼兒園模式只看照片、會唸出名字，高中可用環境 DNA 做探究。</p>
+          <div class="lg-levels" aria-label="適用程度"><span>幼兒園</span><span>國小</span><span>國中</span><span>高中</span></div>
+          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-insect.webp?v=1" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="chips" aria-label="適用程度"><span class="chip">國小</span><span class="chip">國中</span><span class="chip">高中</span></div>
-          <h3><a href="https://insects.hunglun.com/" target="_blank" rel="noopener">昆蟲探險家</a></h3>
+      <article class="lg-card reveal" style="--c:#4d8f35" data-levels="小 中 高">
+        <a class="lg-shot" href="https://insects.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-insects.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+        <div class="lg-body">
+          <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-insect.webp?v=1" alt="" loading="lazy" decoding="async">
+          <h3><a href="https://insects.hunglun.com/" target="_blank" rel="noopener">昆蟲探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">認識台灣上千種昆蟲，還能查 14.8 萬筆標本</div>
-          <p>昆蟲小百科、是不是昆蟲、變態排排站、幾月看得到；用縣市地圖與年代長條探究標本紀錄。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://insects.hunglun.com/" target="_blank" rel="noopener">前往體驗 ↗</a>
-          </div>
+          <p>昆蟲小百科、是不是昆蟲、變態排排站、幾月看得到。用縣市地圖與年代長條探究標本紀錄。</p>
+          <div class="lg-levels" aria-label="適用程度"><span>國小</span><span>國中</span><span>高中</span></div>
+          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      <article class="card reveal">
-        <div class="card-visual"><img width="160" height="160" src="/assets/icon-proj-heritage.webp?v=1" alt="" loading="lazy" decoding="async"></div>
-        <div class="card-body">
-          <div class="chips" aria-label="適用程度"><span class="chip">幼兒園</span><span class="chip">國小</span><span class="chip">國中</span><span class="chip">高中</span></div>
-          <h3><a href="https://heritage.hunglun.com/" target="_blank" rel="noopener">古蹟探險家</a></h3>
+      <article class="lg-card reveal" style="--c:#a5422a" data-levels="幼 小 中 高">
+        <a class="lg-shot" href="https://heritage.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-heritage.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">主題探險家</span></a>
+        <div class="lg-body">
+          <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-heritage.webp?v=1" alt="" loading="lazy" decoding="async">
+          <h3><a href="https://heritage.hunglun.com/" target="_blank" rel="noopener">古蹟探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
           <div class="tagline">認識臺灣 1,065 處古蹟・地圖找家附近的古蹟</div>
           <p>古蹟圖鑑、地圖找附近的古蹟、看建築認類型、探險護照，還能挑兩處比一比。</p>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://heritage.hunglun.com/" target="_blank" rel="noopener">前往體驗 ↗</a>
-          </div>
+          <div class="lg-levels" aria-label="適用程度"><span>幼兒園</span><span>國小</span><span>國中</span><span>高中</span></div>
+          <div class="lg-go" aria-hidden="true">前往體驗 →</div>
         </div>
       </article>
-      </div>
+    </div>
+    <div class="lg-teacher">
+      <h2>給老師的功能</h2>
+      <p>動物、故宮、海洋、昆蟲、古蹟五個探險家網站都有老師專區。</p>
+      <div><strong>可列印學習單</strong><span>一鍵產生學習單與答案頁，直接印出來上課。</span></div>
+      <div><strong>全班搶答計分板</strong><span>分組搶答、計分與倒數計時，課堂互動用。</span></div>
+      <div><strong>課程包與出題投影</strong><span>故宮、海洋、昆蟲提供課程包與投影出題。</span></div>
     </div>
   </div>
 </section>
@@ -431,5 +459,22 @@
 
 
 <script src="/assets/main.js?v=30"></script>
+<script>
+(function(){
+  var bar=document.getElementById('lgFilter'),grid=document.getElementById('lgGrid'),count=document.getElementById('lgCount');
+  if(!bar||!grid)return;
+  var cards=[].slice.call(grid.querySelectorAll('.lg-card')),btns=[].slice.call(bar.querySelectorAll('button'));
+  bar.hidden=false;count.hidden=false;
+  function apply(lv){
+    var n=0;
+    cards.forEach(function(c){var ok=lv==='all'||c.getAttribute('data-levels').split(' ').indexOf(lv)>-1;c.hidden=!ok;if(ok)n++;});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-level')===lv?'true':'false');});
+    count.textContent='共 '+n+' 個遊戲';
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-level'));});});
+  apply('all');
+})();
+</script>
+
 </body>
 </html>
