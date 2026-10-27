@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.26.0（2026-10-27）
+
+學習遊戲分類新增「土石流小偵探」（landslide.hunglun.com）。
+
+- 新增卡片：國小土石流防災教學網站，用農業部水保署的開放資料做，含看溪觀察站（64 支溪邊鏡頭的即時畫面）、臺灣地圖、認識溪流與前兆、我的鄉鎮（全臺 17 縣市的潛勢溪流）、防災闖關，老師專區有可列印學習單、全螢幕上課模式、搶答計分板與班級連結；新增卡片圖示 `icon-proj-landslide.webp` 與卡片截圖 `games/game-landslide.webp`
+- ItemList 補第 7 筆，numberOfItems 改 7；學習遊戲頁描述（含 og、twitter）補上土石流；「給教師與家長的功能」補上土石流小偵探
+- 資源分享總覽的學習遊戲說明、llms.txt 同步更新
+- 搜尋索引與 llms-full 已重產
+
 ## v1.25.0（2026-10-27）
 
 學習遊戲分類新增「古蹟探險家」（heritage.hunglun.com）。
