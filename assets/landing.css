@@ -116,3 +116,18 @@ html.lenis{scroll-behavior: auto}
 @media (orientation: portrait){.l-hero.l-hero--tour{min-height: auto !important;padding: 48px 24px 32px}
 .tour-zoom-panel{inset: 3vh 3vw 6vh}
 }
+
+/* 首頁信任區與職務分流（2026-10-27）：資歷數字只用已證實事實，卡片依讀者職務分流 */
+.l-proof{max-width: 1080px;margin: 0 auto;padding: 8px 6vw 40px}
+.l-proof h2{font-size: clamp(1.3rem,3vw,1.8rem);font-weight: 700;line-height: 1.4;text-align: center;margin-bottom: 20px}
+.l-proof-facts{list-style: none;margin: 0 0 28px;padding: 0;display: grid;grid-template-columns: repeat(auto-fit,minmax(190px,1fr));gap: 12px}
+.l-proof-facts li{background: var(--bg-soft);border: 1px solid var(--line);border-radius: 12px;padding: 14px 16px;font-size: 0.9rem;line-height: 1.55;color: var(--text-body)}
+.l-proof-facts strong{display: block;font-size: 1.05rem;color: var(--text);margin-bottom: 2px}
+.l-proof-roles{display: grid;grid-template-columns: repeat(auto-fit,minmax(190px,1fr));gap: 14px}
+.l-role-card{display: block;background: var(--card);border: 1px solid var(--line);border-radius: 14px;padding: 18px;color: var(--text)}
+.l-role-card:hover{border-color: var(--accent);text-decoration: none}
+.l-role-card .l-role-who{display: block;font-weight: 700;font-size: 1rem;margin-bottom: 6px}
+.l-role-card .l-role-need{display: block;font-size: 0.88rem;color: var(--muted);line-height: 1.6;margin-bottom: 10px}
+.l-role-card .l-role-go{font-size: 0.88rem;color: var(--accent);font-weight: 700}
+.l-proof-cta{display: flex;flex-wrap: wrap;gap: 12px;justify-content: center;margin-top: 26px}
+.l-proof-cta .btn{min-height: 44px}
