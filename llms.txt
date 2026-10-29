@@ -74,6 +74,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 昆蟲探險家（國小到高中台灣昆蟲教學網站，三種難度：昆蟲小百科、猜猜我是誰、分類闖關、是不是昆蟲、翻牌配對、變態排排站、幾月看得到、標本館探究，老師專區有課程包、學習單與搶答計分板，免註冊、免安裝）：https://insects.hunglun.com/
 - 古蹟探險家（幼兒園到高中臺灣古蹟教學網站，四種程度：古蹟圖鑑、地圖找家附近的古蹟、看建築認類型、時代排排看、猜猜我是誰、翻牌配對、探險護照，收錄 1,065 處古蹟，老師專區有可列印的學習單與答案頁、搶答計分板，免註冊、免安裝）：https://heritage.hunglun.com/
 - 土石流小偵探（國小土石流防災教學網站：看水保署溪邊鏡頭的即時畫面、臺灣地圖、認識土石流與前兆、查全臺 17 縣市 1,692 條土石流潛勢溪流、防災闖關，知識出自水保署官方頁面，老師專區有可列印學習單、全螢幕上課模式、搶答計分板與班級連結 QR 碼，免註冊、免安裝；不是官方警報）：https://landslide.hunglun.com/
+- 植物探險家（國小植物教學網站：臺北市立動物園園區 100 種植物的小百科，有學名、科屬、用途與在園區哪裡看得到；用台北植物園十多年的花曆觀察紀錄看每個月開什麼花；開花植物、蕨類、裸子植物分類與植物用途遊戲；逛園區看植物；低年級有注音；老師專區有可列印學習單與搶答計分板，免註冊、免安裝）：https://plant.hunglun.com/
 - 教育科技觀察（Google 教育方案、AI 導入與校園數位政策的變動判讀。**不轉述新聞，寫的是對台灣學校的實際意義與下一步**）：https://www.hunglun.com/insights
   - [Gemini 學生專區開放教育版帳號](https://www.hunglun.com/insights/gemini-student-hub)：Google 於 2026-10-01 公告 Gemini 學生專區（gemini.google.com/students）開放給所有年齡的 Workspace for Education 使用者，內容為學習筆記本、學習卡片、練習測驗；**受 Gemini 應用程式的生成式 AI 設定控制，沒有獨立開關**。8 月官方「免費一年」方案是給大專學生個人，台灣資格無法確認。
   - [Gemini 免費個人帳號只剩 Flash-Lite](https://www.hunglun.com/insights/gemini-personal-account-model-changes)：Google 說明中心公告 2026-10-09 起，沒有訂閱 AI 方案的 Gemini App 個人帳號只能用 Flash-Lite，AI Plus 保留 Flash-Lite 與 Flash、失去 Pro（生效日以個別電子郵件通知），AI Pro 與 AI Ultra 三種模型都可用，Deep Think 限 AI Ultra。**調整只針對個人帳號**；學校 Workspace for Education 帳號適用另一份說明，Education Fundamentals／Plus 列有 Pro 模型每 4 小時最多 25 次（2026-10-06 查詢）。站方建議：師生改用學校帳號登入、資訊組確認 Gemini App 已開啟、研習示範一律用學校帳號。
