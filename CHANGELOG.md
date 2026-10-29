@@ -10,6 +10,7 @@
 - 原本講師總密碼、各場口令與講義網址寫在 `functions/go/_sessions.js`，公開 repo 任何人都讀得到；改存 Cloudflare Pages 加密變數 `GO_SESSIONS_JSON`、`GO_MASTER_PASSWORD`，`_sessions.js` 只留代碼與標題
 - 舊密碼已在 git 歷史公開，總密碼與 6 場口令全部換新
 - 變數讀不到或格式錯誤時回 503，不放行
+- 研習專區講義頁（/tools/training/<slug>）的各篇密碼同樣移到加密變數 `GO_TOPIC_PASSWORDS_JSON` 並換新；內部工具中介程式改讀 `env.GO_MASTER_PASSWORD`（第一次推送漏改這裡，Pages 建置失敗，線上維持舊版，未影響使用）
 
 ## v1.30.0（2026-10-29）
 

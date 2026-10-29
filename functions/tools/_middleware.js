@@ -12,7 +12,7 @@
  *    （Steve 2026-09-24：ceu 單獨換成自己的密碼，跟其他商用工具分開）。
  *    15 分鐘 cookie。tools/mail 等既有免費工具不受影響。
  * 2. /tools/training（研習專區）：每篇講義各自一組密碼＋共用講師萬用密碼，密碼清單
- *    在 ./training/_topics.js 跟 ../go/_sessions.js，30 天 cookie（跟第 1 套 15 分鐘
+ *    在 Cloudflare 加密變數 GO_TOPIC_PASSWORDS_JSON 與 GO_MASTER_PASSWORD（2026-10-29 起，見 ./training/_topics.js），30 天 cookie（跟第 1 套 15 分鐘
  *    刻意不同，研習教材是自己找時間看，不是看完馬上關掉）。
  *    2026-09-20 起專區「首頁」改成公開：辦過哪些場次是對外的實績證明，鎖起來等於
  *    讓搜尋引擎與 AI 問答引擎查不到，實際要保護的是講義內容本身。
@@ -29,8 +29,6 @@
  * 跟 ceu 這組同一個 scope，避免留一條繞過鎖定的路。
  * 沒綁 KV 時 isLocked 一律回 false，不影響原本的密碼驗證邏輯。
  */
-import { MASTER_PASSWORD } from '../go/_sessions.js';
-import { TOPIC_PASSWORDS } from './training/_topics.js';
 import { clientKey, isLocked, recordFailure, clearFailures } from './_ratelimit.js';
 
 // 下載檔用繁體中文檔名，瀏覽器網址列會把它編碼成 %E9%83%A8... 這種形式，
@@ -175,8 +173,18 @@ function trainingLoginPage(pathname, error) {
 </body></html>`;
 }
 
-async function handleTraining({ request, next }, pathname, slug) {
-  const validPasswords = [MASTER_PASSWORD, ...(TOPIC_PASSWORDS[slug] ? [TOPIC_PASSWORDS[slug]] : [])];
+function topicPasswords(env) {
+  try { return JSON.parse(env.GO_TOPIC_PASSWORDS_JSON || '{}'); } catch (e) { return {}; }
+}
+
+async function handleTraining({ request, next, env }, pathname, slug) {
+  const topics = topicPasswords(env);
+  // 只收有值的密碼：加密變數沒設好時不能讓空字串變成「什麼都不打也能進」
+  const validPasswords = [env.GO_MASTER_PASSWORD, topics[slug]].filter((p) => typeof p === 'string' && p.length >= 6);
+  if (!validPasswords.length) {
+    console.log('研習專區密碼變數（GO_MASTER_PASSWORD／GO_TOPIC_PASSWORDS_JSON）沒設定');
+    return new Response('研習教材暫時無法使用，請聯絡講師。', { status: 503 });
+  }
   const expectedHashes = await Promise.all(validPasswords.map(sha256Hex));
   const cookieName = `hlt_training_${slug || 'index'}`;
 
@@ -220,7 +228,7 @@ export async function onRequest({ request, env, next }) {
   // 能被搜尋引擎與 AI 問答引擎查得到。各篇講義（slug 非空）維持密碼保護不變。
   const slug = trainingSlug(pathname);
   if (slug) {
-    return handleTraining({ request, next }, pathname, slug);
+    return handleTraining({ request, next, env }, pathname, slug);
   }
 
   const group = findGroup(pathname);

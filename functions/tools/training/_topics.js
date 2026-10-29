@@ -1,15 +1,10 @@
 /**
- * /tools/training 底下每篇講義各自的密碼（Steve 2026-09-17 定案：整個研習
- * 專區改成要密碼，不再對外公開；每篇各自一組＋共用講師萬用密碼）。
+ * /tools/training 底下每篇講義的代號（Steve 2026-09-17 定案：整個研習專區要密碼；每篇各自一組＋共用講師總密碼）。
  *
- * 首頁本身（/tools/training）不算某一篇的教材，只認萬用密碼
- * （見 ../../go/_sessions.js 的 MASTER_PASSWORD，兩邊共用同一組，別重複維護）。
- * 每篇講義（/tools/training/<slug>）除了萬用密碼，也可以用這篇自己的密碼。
- *
- * 新增下一篇：檔案放進 tools/training/<slug>.html，在下面加一組密碼，
- * 同步在 tools/training.html 的主題清單補一個連結即可。
- * 沒列在這裡的 slug 預設也要密碼（只認萬用密碼），不會漏保護。
+ * 密碼不放這裡（2026-10-29 健檢發現原本寫在公開 repo，已全部換新）：
+ * - 各篇講義密碼 → Cloudflare Pages 加密變數 GO_TOPIC_PASSWORDS_JSON（{"<slug>": "6 位數字"}）
+ * - 講師總密碼   → GO_MASTER_PASSWORD（跟 /go 短連結共用）
+ * 來源是 sitemap/go_sessions.private.json 的 topic_passwords，改完跑 python sitemap/go-sessions-push.py。
+ * 沒列密碼的篇預設也要密碼（只認總密碼），不會漏保護。
  */
-export const TOPIC_PASSWORDS = {
-  'vibe-coding': '348047',
-};
+export const TOPIC_SLUGS = ["vibe-coding"];
