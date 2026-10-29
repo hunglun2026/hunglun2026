@@ -140,3 +140,6 @@ html.lenis{scroll-behavior: auto}
 @media (max-width:600px){.l-learn-row{gap:12px 4px}.l-learn-tile{width:100px;font-size:.82rem;white-space:nowrap}.l-learn-tile img{width:56px;height:56px}}
 /* 信任區塊文字裡的連結：只靠顏色分不出來（axe link-in-text-block），加底線 2026-10-29 */
 .l-proof li a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+/* 學習專區展示區：10 個圖示一排放不下會變 9＋1，桌機限寬排成 5＋5（2026-10-29 加兩棲探險家後）；手機維持 3 個一排 */
+@media (min-width:601px){.l-learn-row{max-width:600px;margin-left:auto;margin-right:auto;column-gap:6px}}
+@media (min-width:601px) and (max-width:640px){.l-learn-tile{width:100px}}
