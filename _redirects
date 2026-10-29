@@ -16,6 +16,8 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 #   Preserve query string 全開。實測 pages.dev 各層路徑都會 301 到正式網域。
 # 設定在帳戶層級，不在這個檔案裡——所以改這個檔案不會影響它，反之亦然。
 
+# 學習專區短網址（老師口頭分享、研習講義用），2026-10-29
+/learn /tools/games 301
 /effect-home.html / 301
 /effects.html /services 301
 

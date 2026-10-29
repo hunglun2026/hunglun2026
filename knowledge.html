@@ -1097,7 +1097,7 @@
 .kn-tabs a[aria-current="page"] span{color:var(--accent)}
 @media (max-width:640px){.kn-tabs{margin:0 -16px;padding-left:16px;padding-right:16px}}
 </style>
-<style>.page-head p{text-align:center;max-width:760px}.prose p.kn-intro-note{max-width:none;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}</style>
+<style>.page-head p{text-align:center;max-width:760px}.kn-insights-more{text-align:center;margin:18px 0 0}.prose p.kn-intro-note{max-width:none;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}</style>
 </head>
 <body>
 
@@ -1114,7 +1114,7 @@
       <a href="/enterprise">企業方案</a>
       <a href="/software">數位學習軟體導入</a>
       <a href="/knowledge" class="active">教學專區</a>
-      <a href="/insights">科技觀察</a>
+      <a href="/tools/games">學習專區</a>
       <a href="/tools" class="mobile-tools-link">資源分享</a>
       <a href="/contact" class="mobile-contact-link">聯絡我們</a>
     </nav>
@@ -1145,6 +1145,33 @@
   </div>
 </section>
 
+<!-- 教育科技觀察：主選單拿掉「科技觀察」後改從這裡進（2026-10-29）。只放最新 3 篇，完整清單在 /insights。
+     不用 kn-group：gen-knowledge-topics.py 會把 kn-group 當成主題產生分類頁 -->
+<section class="section kn-insights" id="insights" aria-labelledby="insightsTitle">
+  <div class="wrap">
+    <h2 class="section-title reveal" id="insightsTitle">教育科技觀察</h2>
+    <p class="section-sub reveal">Google 教育方案與 AI 政策的最新變動，對學校代表什麼、下一步該做什麼。</p>
+    <ul class="kn-list">
+      <li><a class="kn-item" href="/insights/gemini-student-hub">
+        <img class="kn-icon" width="160" height="160" src="/assets/icon-gemini.svg" alt="" loading="lazy" decoding="async">
+        <span class="kn-text"><span class="kn-t">Gemini 學生專區開放教育版：沒有獨立開關</span><span class="kn-d">10/1 開放所有年齡的教育版使用者，受 Gemini 應用程式的 AI 設定控制，沒有獨立開關。免費一年方案台灣資格無法確認。</span></span>
+        <time class="kn-date" datetime="2026-10-10">2026/10/10</time>
+        </a></li>
+      <li><a class="kn-item" href="/insights/gemini-personal-account-model-changes">
+        <img class="kn-icon" width="160" height="160" src="/assets/icon-gemini.svg" alt="" loading="lazy" decoding="async">
+        <span class="kn-text"><span class="kn-t">Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號</span><span class="kn-d">10 月 9 日起免費個人帳號只剩 Flash-Lite，AI Plus 失去 Pro。調整只針對個人帳號，學校帳號另有規定。</span></span>
+        <time class="kn-date" datetime="2026-10-06">2026/10/06</time>
+        </a></li>
+      <li><a class="kn-item" href="/insights/gemini-4-argon">
+        <img class="kn-icon" width="160" height="160" src="/assets/icon-gemini.svg" alt="" loading="lazy" decoding="async">
+        <span class="kn-text"><span class="kn-t">Gemini 4 Argon 可以用了嗎？開放時程與方案整理</span><span class="kn-d">輸出上限 100 萬 token、程式與企業知識工作評測領先。9/30 只開給網路防禦者，10/13 起 Gemini App 開放給 Pro 與 Ultra，教育版官方未說明。</span></span>
+        <time class="kn-date" datetime="2026-10-01">2026/10/01</time>
+        </a></li>
+    </ul>
+    <p class="kn-insights-more"><a class="btn" href="/insights">看全部 11 篇觀察 →</a></p>
+  </div>
+</section>
+
 <div class="section kn-filter-wrap">
   <div class="wrap">
 <nav class="kn-tabs" aria-label="教學專區主題">
@@ -1155,6 +1182,7 @@
   <a href="/knowledge/topic/classroom">Google Classroom <span>10</span></a>
   <a href="/knowledge/topic/hardware">設備選型與採購 <span>7</span></a>
   <a href="/knowledge/topic/compliance">資安與個資法遵 <span>4</span></a>
+  <a href="/insights">教育科技觀察 <span>11</span></a>
 </nav>
   </div>
 </div>
@@ -2251,6 +2279,7 @@
           <li><a href="/services#cases">成功案例</a></li>
           <li><a href="/software">數位學習軟體導入</a></li>
           <li><a href="/knowledge">教學專區</a></li>
+          <li><a href="/tools/games">學習專區</a></li>
           <li><a href="/insights">教育科技觀察</a></li>
           <li><a href="/tools">資源分享</a></li>
           <li><a href="/faq">常見問題</a></li>
@@ -2267,7 +2296,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.28.1</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.29.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
