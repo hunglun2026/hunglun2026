@@ -55,8 +55,12 @@
 .lg-deco img:nth-child(4){right:7%;top:20%;--r:8deg;animation-delay:-1s}
 .lg-deco img:nth-child(5){right:17%;top:58%;--r:-6deg;animation-delay:-3s}
 .lg-deco img:nth-child(6){right:3%;top:62%;--r:4deg;animation-delay:-5s;width:56px;height:56px}
+/* 第 7、8 個（植物、土石流）：左右各一，放在標題外側上方，維持左右各 4 個對稱 */
+.lg-deco img:nth-child(7){left:25%;top:10%;--r:5deg;animation-delay:-1.5s;width:52px;height:52px}
+.lg-deco img:nth-child(8){right:25%;top:10%;--r:-5deg;animation-delay:-3.5s;width:52px;height:52px}
 @keyframes lg-float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-8px) rotate(var(--r))}}
-@media (max-width:1020px){.lg-deco{display:none}}
+/* 1230 以下浮動圖示會壓到副標與分頁連結（2026-10-29 逐寬度量過），直接不顯示 */
+@media (max-width:1240px){.lg-deco{display:none}}
 .lg-filter{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 10px;padding:0}
 .lg-filter[hidden]{display:none}
 .lg-filter button{font:inherit;font-size:.92rem;cursor:pointer;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:8px 18px;transition:background .2s,color .2s,border-color .2s}
@@ -346,7 +350,7 @@
 <main id="main" tabindex="-1">
 
 <div class="page-head lg-hero">
-  <div class="lg-deco" aria-hidden="true"><img width="68" height="68" src="/assets/icon-proj-zoo.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-sea.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-9x9game.webp?v=2" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-museum.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-heritage.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-insect.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-plant.webp?v=1" alt="" decoding="async"></div>
+  <div class="lg-deco" aria-hidden="true"><img width="68" height="68" src="/assets/icon-proj-zoo.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-sea.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-9x9game.webp?v=2" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-museum.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-heritage.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-insect.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-plant.webp?v=1" alt="" decoding="async"><img width="68" height="68" src="/assets/icon-proj-landslide.webp?v=1" alt="" decoding="async"></div>
   <div class="wrap">
     <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> ／ <a href="/tools">資源分享</a> ／ 互動學習遊戲</nav>
     <h1>互動學習遊戲</h1>
