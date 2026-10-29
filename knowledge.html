@@ -1089,13 +1089,13 @@
 </script>
 <style>
 /* 教學專區主題分頁列：一般連結，沒有 JS 也能用 */
-.kn-tabs{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:6px;margin:0 -4px;padding-left:4px;padding-right:4px}
+.kn-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .kn-tabs a{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;min-height:44px;padding:10px 18px;font-size:1rem;line-height:1.2;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
 .kn-tabs a:hover{color:var(--text);border-color:var(--accent)}
 .kn-tabs a[aria-current="page"]{color:var(--accent);border-color:var(--accent);background:var(--card-hover);font-weight:600}
 .kn-tabs a span{font-size:.82rem;color:var(--muted-faint)}
 .kn-tabs a[aria-current="page"] span{color:var(--accent)}
-@media (max-width:640px){.kn-tabs{margin:0 -16px;padding-left:16px;padding-right:16px}}
+@media (max-width:640px){.kn-tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}.kn-tabs::-webkit-scrollbar{display:none}}
 </style>
 <style>.page-head p{text-align:center;max-width:760px}.kn-insights-more{text-align:center;margin:18px 0 0}.prose p.kn-intro-note{max-width:none;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}</style>
 </head>
@@ -1137,6 +1137,21 @@
   </div>
 </div>
 
+<div class="section kn-filter-wrap">
+  <div class="wrap">
+<nav class="kn-tabs" aria-label="教學專區主題">
+  <a href="/knowledge" aria-current="page">全部 <span>92</span></a>
+  <a href="/knowledge/topic/google-ai">Google 與 AI 導入 <span>36</span></a>
+  <a href="/knowledge/topic/gemini">Gemini 教育版與 Notebook <span>20</span></a>
+  <a href="/knowledge/topic/web">數位學習軟體與網站 <span>15</span></a>
+  <a href="/knowledge/topic/classroom">Google Classroom <span>10</span></a>
+  <a href="/knowledge/topic/hardware">設備選型與採購 <span>7</span></a>
+  <a href="/knowledge/topic/compliance">資安與個資法遵 <span>4</span></a>
+  <a href="/insights">教育科技觀察 <span>11</span></a>
+</nav>
+  </div>
+</div>
+
 <section class="section">
   <div class="wrap prose">
     <p>這裡整理的是我們在學校端實際被問到的問題。與其在每次研習或案場重講一次，不如寫成可以直接引用的文章：<strong>授權與方案</strong>類回答「該買哪個版本、續約會遇到什麼」，<strong>設備採購</strong>類回答「載具怎麼選、預算怎麼編」，<strong>網站與工具</strong>類回答「自己做還是委外、要注意什麼」。</p>
@@ -1171,21 +1186,6 @@
     <p class="kn-insights-more"><a class="btn" href="/insights">看全部 11 篇觀察 →</a></p>
   </div>
 </section>
-
-<div class="section kn-filter-wrap">
-  <div class="wrap">
-<nav class="kn-tabs" aria-label="教學專區主題">
-  <a href="/knowledge" aria-current="page">全部 <span>92</span></a>
-  <a href="/knowledge/topic/google-ai">Google 與 AI 導入 <span>36</span></a>
-  <a href="/knowledge/topic/gemini">Gemini 教育版與 Notebook <span>20</span></a>
-  <a href="/knowledge/topic/web">數位學習軟體與網站 <span>15</span></a>
-  <a href="/knowledge/topic/classroom">Google Classroom <span>10</span></a>
-  <a href="/knowledge/topic/hardware">設備選型與採購 <span>7</span></a>
-  <a href="/knowledge/topic/compliance">資安與個資法遵 <span>4</span></a>
-  <a href="/insights">教育科技觀察 <span>11</span></a>
-</nav>
-  </div>
-</div>
 
 <section class="section kn-group" id="google-ai" data-cat="google-ai">
   <div class="wrap">
@@ -2296,7 +2296,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.29.1</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.30.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

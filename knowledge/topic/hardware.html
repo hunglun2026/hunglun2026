@@ -68,13 +68,13 @@
 </script>
 <style>
 /* 教學專區主題分頁列：一般連結，沒有 JS 也能用 */
-.kn-tabs{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:6px;margin:0 -4px;padding-left:4px;padding-right:4px}
+.kn-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .kn-tabs a{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;min-height:44px;padding:10px 18px;font-size:1rem;line-height:1.2;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
 .kn-tabs a:hover{color:var(--text);border-color:var(--accent)}
 .kn-tabs a[aria-current="page"]{color:var(--accent);border-color:var(--accent);background:var(--card-hover);font-weight:600}
 .kn-tabs a span{font-size:.82rem;color:var(--muted-faint)}
 .kn-tabs a[aria-current="page"] span{color:var(--accent)}
-@media (max-width:640px){.kn-tabs{margin:0 -16px;padding-left:16px;padding-right:16px}}
+@media (max-width:640px){.kn-tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}.kn-tabs::-webkit-scrollbar{display:none}}
 </style>
 </head>
 <body>
@@ -279,7 +279,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.29.1</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.30.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

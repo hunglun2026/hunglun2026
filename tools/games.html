@@ -62,6 +62,16 @@
 /* 1230 以下浮動圖示會壓到副標與分頁連結（2026-10-29 逐寬度量過），直接不顯示 */
 @media (max-width:1240px){.lg-deco{display:none}}
 .lg-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:26px}
+/* 分類分頁（樣式同教學專區 .kn-tabs）：沒有 JS 時是頁內連結，有 JS 時只顯示選到的那一類 */
+.lg-tabs-wrap{padding-top:0;padding-bottom:0}
+.lg-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+.lg-tabs a{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;min-height:44px;padding:10px 18px;font-size:1rem;line-height:1.2;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
+.lg-tabs a:hover{color:var(--text);border-color:var(--accent)}
+.lg-tabs a[aria-current="page"]{color:var(--accent);border-color:var(--accent);background:var(--card-hover);font-weight:600}
+.lg-tabs a span{font-size:.82rem;color:var(--muted-faint)}
+.lg-tabs a[aria-current="page"] span{color:var(--accent)}
+@media (max-width:640px){.lg-tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}.lg-tabs::-webkit-scrollbar{display:none}}
+[data-cat][hidden]{display:none!important}
 .lg-block{margin:0 0 56px}
 .lg-h2{text-align:center;font-size:1.5rem;margin:0 0 6px}
 .lg-lead{text-align:center;color:var(--muted);margin:0 auto 26px;max-width:640px}
@@ -372,9 +382,20 @@
   </div>
 </div>
 
+<div class="section lg-tabs-wrap">
+  <div class="wrap">
+<nav class="lg-tabs" id="lgTabs" aria-label="學習專區分類">
+  <a href="#all" data-cat="all" aria-current="page">全部 <span>9</span></a>
+  <a href="#explore" data-cat="explore">主題探險網站 <span>7</span></a>
+  <a href="#game" data-cat="game">闖關遊戲 <span>1</span></a>
+  <a href="#quiz" data-cat="quiz">課堂即時測驗 <span>1</span></a>
+</nav>
+  </div>
+</div>
+
 <section class="section alt" id="learning-games">
   <div class="wrap">
-    <div class="lg-block">
+    <div class="lg-block" id="explore" data-cat="explore">
       <h2 class="lg-h2 reveal">主題探險網站</h2>
       <p class="lg-lead">用政府開放資料做的教學網站，分年級，有小百科、地圖、分類練習和學習單。</p>
       <div class="lg-grid">
@@ -451,7 +472,7 @@
       </div>
     </div>
     <div class="lg-pair">
-      <div class="lg-block">
+      <div class="lg-block" id="game" data-cat="game">
       <h2 class="lg-h2 reveal">闖關遊戲</h2>
       <p class="lg-lead">答對題目才能出手攻擊，邊玩邊練九九乘法、注音與英文字母。</p>
       <div class="lg-grid">
@@ -467,7 +488,7 @@
       </article>
       </div>
     </div>
-      <div class="lg-block">
+      <div class="lg-block" id="quiz" data-cat="quiz">
       <h2 class="lg-h2 reveal">課堂即時測驗</h2>
       <p class="lg-lead">老師開房間，全班用手機作答，即時看到誰寫到哪一題。</p>
       <div class="lg-grid">
@@ -538,7 +559,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.29.1</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.30.0</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -551,5 +572,20 @@
 
 <script src="/assets/main.js?v=32"></script>
 
+<script>
+(function(){
+  var nav=document.getElementById('lgTabs');if(!nav)return;
+  var tabs=[].slice.call(nav.querySelectorAll('a')),blocks=[].slice.call(document.querySelectorAll('.lg-block[data-cat]'));
+  function show(cat,push){
+    if(!tabs.some(function(t){return t.dataset.cat===cat;}))cat='all';
+    blocks.forEach(function(b){b.hidden=cat!=='all'&&b.dataset.cat!==cat;});
+    tabs.forEach(function(t){if(t.dataset.cat===cat)t.setAttribute('aria-current','page');else t.removeAttribute('aria-current');});
+    if(push)history.replaceState(null,'',cat==='all'?location.pathname:'#'+cat);
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(e){e.preventDefault();show(t.dataset.cat,true);});});
+  show((location.hash||'#all').slice(1),false);
+  window.addEventListener('hashchange',function(){show((location.hash||'#all').slice(1),false);});
+})();
+</script>
 </body>
 </html>
