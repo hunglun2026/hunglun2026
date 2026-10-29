@@ -49,7 +49,7 @@
     { "@type": "Question", "name": "設計問卷時 AI 能幫上什麼忙？", "acceptedAnswer": { "@type": "Answer", "text": "可以請 AI 檢查題目有沒有誘導性用詞、選項是否互斥且完整、題目順序會不會互相影響作答。這類「幫忙抓盲點」的用法風險很低，因為最後決定題目內容的還是承辦人，AI 只是多一雙眼睛。" } },
     { "@type": "Question", "name": "開放式回答要怎麼用 AI 彙整？", "acceptedAnswer": { "@type": "Answer", "text": "把整批開放式回答貼給 AI，請它依常見主題分類並各給幾則代表性引述，比人工一則一則讀快很多。但這只是初步彙整，正式報告前務必抽查幾筆原始回答，確認分類沒有走偏、沒有把語氣強烈但少數的意見歸類掉。" } },
     { "@type": "Question", "name": "問卷內容有個資或敏感資訊，還能用 AI 處理嗎？", "acceptedAnswer": { "@type": "Answer", "text": "能，但要看用的是哪個帳號跟工具。含姓名、學號、健康或家庭狀況這類敏感內容，不要貼進沒有資料處理保障的公開 AI 工具；建議用學校網域帳號登入的教育版或企業版服務，並先確認該服務當下的資料處理政策是否符合學校規範，不確定就先去識別化（拿掉姓名學號）再處理。" } },
-    { "@type": "Question", "name": "AI 彙整出來的結果可以直接當成正式報告嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不建議。AI 擅長把大量文字快速分類摘要，但無法判斷哪些意見在校務決策上比較重要，也可能誤讀語意（例如把反諷當成正面回饋）。務實的做法是把 AI 的分類摘要當初稿，承辦人抽查驗證後再補上判讀與建議，才送出正式報告。" } },
+    { "@type": "Question", "name": "AI 彙整出來的結果可以直接當成正式報告嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不建議。AI 擅長把大量文字快速分類摘要，但無法判斷哪些意見在校務決策上比較重要，也可能誤讀語氣（例如把反諷當成正面回饋）。務實的做法是把 AI 的分類摘要當初稿，承辦人抽查驗證後再補上判讀與建議，才送出正式報告。" } },
     { "@type": "Question", "name": "Google Forms 加上 AI 的具體流程是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "常見流程是：用 Google Forms 收集回答 → 自動彙整進 Google Sheets → 有 Workspace 進階授權的話，直接在 Sheets 或 Docs 裡用 Gemini 對開放式欄位做分類摘要。整段流程都在學校網域帳號內完成，資料不用另外匯出到第三方工具，也比較好管理存取權限。" } },
     { "@type": "Question", "name": "問卷回收量很大的時候要注意什麼？", "acceptedAnswer": { "@type": "Answer", "text": "一次丟太多筆給 AI 容易超出單次處理的合理範圍，導致摘要品質下降或遺漏。建議分批處理（例如每 100–200 筆一批），彙整完再合併結果，並在每一批都抽查幾筆核對，而不是等全部處理完才一次檢查。" } }
   ]
@@ -137,7 +137,7 @@
 
 <section class="section">
   <div class="wrap prose" style="max-width:780px;">
-    <p>校內問卷（教師研習滿意度、家長意見調查、學生生活狀況調查）常見的痛點不是設計題目，是<strong>回收後一則一則讀開放式回答</strong>，這件事真的很花時間。這篇把 AI 能幫上忙的地方拆成三個階段。</p>
+    <p>校內問卷（教師研習滿意度、家長意見調查、學生生活狀況調查）常見的卡關處不是設計題目，是<strong>回收後一則一則讀開放式回答</strong>，這件事真的很花時間。這篇把 AI 能幫上忙的地方拆成三個階段。</p>
 
     <h2>一、出題階段：幫忙抓盲點</h2>
     <p>請 AI 檢查題目有沒有誘導性用詞、選項是否互斥且完整、題目順序會不會互相影響作答。這類用法風險很低，<strong>最後決定題目內容的還是承辦人，AI 只是多一雙眼睛</strong>幫忙抓平常自己看不出來的問題。</p>
@@ -156,7 +156,7 @@
     <p>常見流程是：<strong>Google Forms 收集回答 → 自動彙整進 Google Sheets → 有 Workspace 進階授權的話，直接在 Sheets 或 Docs 裡用 Gemini 對開放式欄位做分類摘要</strong>。整段流程都在學校網域帳號內完成，資料不用另外匯出到第三方工具，存取權限也比較好管理。方案差異可參考<a href="/knowledge/gemini">Gemini 教育版怎麼用</a>。</p>
 
     <h2>最後一步：AI 摘要不是正式報告</h2>
-    <p>AI 擅長把大量文字快速分類摘要，但無法判斷哪些意見在校務決策上比較重要，也可能誤讀語意。把 AI 的分類摘要當初稿，承辦人抽查驗證後再補上判讀與建議，才是可以送出去的正式報告。這個原則跟其他行政工作的用法是一致的，可對照<a href="/knowledge/admin-automation">學校行政可以自動化的十件事</a>。</p>
+    <p>AI 擅長把大量文字快速分類摘要，但無法判斷哪些意見在校務決策上比較重要，也可能誤讀語氣。把 AI 的分類摘要當初稿，承辦人抽查驗證後再補上判讀與建議，才是可以送出去的正式報告。這個原則跟其他行政工作的用法是一致的，可對照<a href="/knowledge/admin-automation">學校行政可以自動化的十件事</a>。</p>
   </div>
 </section>
 
@@ -177,7 +177,7 @@
     </details>
     <details class="faq-item reveal">
       <summary>AI 彙整出來的結果可以直接當成正式報告嗎？</summary>
-      <div class="faq-a">不建議。AI 擅長把大量文字快速分類摘要，但無法判斷哪些意見在校務決策上比較重要，也可能誤讀語意（例如把反諷當成正面回饋）。務實的做法是把 AI 的分類摘要當初稿，承辦人抽查驗證後再補上判讀與建議，才送出正式報告。</div>
+      <div class="faq-a">不建議。AI 擅長把大量文字快速分類摘要，但無法判斷哪些意見在校務決策上比較重要，也可能誤讀語氣（例如把反諷當成正面回饋）。務實的做法是把 AI 的分類摘要當初稿，承辦人抽查驗證後再補上判讀與建議，才送出正式報告。</div>
     </details>
     <details class="faq-item reveal">
       <summary>Google Forms 加上 AI 的具體流程是什麼？</summary>
@@ -290,7 +290,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.2</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.3</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -302,5 +302,6 @@
 
 
 <script src="/assets/main.js?v=32"></script>
+<script src="/assets/wordwrap.js?v=1"></script>
 </body>
 </html>
