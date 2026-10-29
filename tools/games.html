@@ -26,8 +26,8 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=82" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=115">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=84" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=116">
 <style>
 /* 研習專區清單：跟全站 kn-item 共用骨架，只在這裡加圖示底色徽章、需密碼小標籤、
    懸停時的輕微上浮陰影。只有這一頁的 #training 用得到，不動全站 kn-item 樣式。 */
@@ -84,7 +84,8 @@
 .lg-shot{position:relative;display:block;aspect-ratio:8/5;overflow:hidden;background:color-mix(in srgb,var(--c) 12%,var(--bg))}
 .lg-shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .lg-card:hover .lg-shot img{transform:scale(1.05)}
-.lg-kind{position:absolute;left:12px;top:12px;font-size:.74rem;font-weight:600;color:#fff;background:var(--c);border-radius:999px;padding:3px 11px;box-shadow:0 4px 10px -4px rgba(0,0,0,.4)}
+/* 底色比卡片主色深一階：白字對比要 4.5 以上（2026-10-29 axe 量到 4 張不足，80% 時最低 4.97） */
+.lg-kind{position:absolute;left:12px;top:12px;font-size:.74rem;font-weight:600;color:#fff;background:var(--c);background:color-mix(in srgb,var(--c) 80%,#000);border-radius:999px;padding:3px 11px;box-shadow:0 4px 10px -4px rgba(0,0,0,.4)}
 .lg-body{position:relative;display:flex;flex-direction:column;flex:1;padding:0 22px 22px;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 9%,var(--bg)),var(--bg) 70%)}
 .lg-icon{width:56px;height:56px;border-radius:16px;margin-top:-28px;margin-bottom:10px;background:var(--bg);border:3px solid var(--bg);box-shadow:0 8px 18px -8px rgba(0,0,0,.4);object-fit:cover;position:relative}
 .lg-body h3{font-size:1.2rem;font-weight:500;margin-bottom:4px}
@@ -423,17 +424,17 @@
       <p class="lg-lead">用政府開放資料做的教學網站，分年級，有小百科、地圖、分類練習和學習單。</p>
       <div class="lg-grid">
       <article class="lg-card reveal" style="--c:#5b9b45" data-cat="生物與自然">
-        <a class="lg-shot" href="https://zoo.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-zoo.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">生物與自然</span></a>
+        <a class="lg-shot" href="https://zoo.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-zoo.webp?v=1" alt="" fetchpriority="high" decoding="async"><span class="lg-kind">生物與自然</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-zoo.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://zoo.hunglun.com/" target="_blank" rel="noopener">動物探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
-          <div class="tagline">臺北動物園 271 種動物・分類闖關與猜謎</div>
+          <div class="tagline">動物園 270 種動物・分類闖關與猜謎</div>
           <p>動物小百科、分類闖關、誰住哪裡、猜猜我是誰、保育小教室。</p>
           <div class="lg-levels" aria-label="適用程度"><span>國小</span></div>
         </div>
       </article>
       <article class="lg-card reveal" style="--c:#2f7d4f" data-cat="生物與自然">
-        <a class="lg-shot" href="https://plant.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-plant.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">生物與自然</span></a>
+        <a class="lg-shot" href="https://plant.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-plant.webp?v=1" alt="" decoding="async"><span class="lg-kind">生物與自然</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-plant.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://plant.hunglun.com/" target="_blank" rel="noopener">植物探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
@@ -443,7 +444,7 @@
         </div>
       </article>
       <article class="lg-card reveal" style="--c:#22795a" data-cat="生物與自然">
-        <a class="lg-shot" href="https://frog.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-frog.webp?v=1" alt="" loading="lazy" decoding="async"><span class="lg-kind">生物與自然</span></a>
+        <a class="lg-shot" href="https://frog.hunglun.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-frog.webp?v=1" alt="" decoding="async"><span class="lg-kind">生物與自然</span></a>
         <div class="lg-body">
           <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-frog.webp?v=1" alt="" loading="lazy" decoding="async">
           <h3><a href="https://frog.hunglun.com/" target="_blank" rel="noopener">兩棲探險家<span class="visually-hidden">（開新分頁）</span></a></h3>
@@ -579,6 +580,7 @@
           <li><a href="/insights">教育科技觀察</a></li>
           <li><a href="/tools">資源分享</a></li>
           <li><a href="/faq">常見問題</a></li>
+          <li><a href="/privacy">隱私權政策</a></li>
         </ul>
       </div>
       <div>
@@ -592,7 +594,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.0</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.1</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

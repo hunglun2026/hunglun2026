@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flex 大量部署教學</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=82" crossorigin>
-<link rel="stylesheet" href="/assets/fonts.css?v=42">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=84" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=43">
 <!-- Flex 大量部署（零接觸式）教學。控制台按鈕名稱照 2026-10-07 實際操作 gedu.demo.gfeh.org 的繁中介面截圖。
      搭配同資料夾 index.html（大量部署系統）使用。 -->
 <style>
@@ -57,7 +57,7 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" role="main">
 
   <div class="card"><div class="stripe"></div><div class="in">
     <div class="top">
@@ -87,8 +87,8 @@
   <div class="card" id="s1"><div class="in">
     <h2><span class="n">1</span>先弄懂：Flex 的「零接觸」怎麼做到</h2>
     <p>零接觸的意思是：<b>事先把「這台屬於哪個學校」記好，現場不用設定，電腦連上網就自己註冊</b>。Chromebook 和 Flex 都做得到，差在「事先記在哪裡」。</p>
-    <div class="tbl"><table>
-      <tr><th></th><th>Chromebook 零接觸</th><th>Flex（這套做法）</th></tr>
+    <div class="tbl" tabindex="0"><table>
+      <tr><th><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">項目</span></th><th>Chromebook 零接觸</th><th>Flex（這套做法）</th></tr>
       <tr><td>「屬於誰」記在哪</td><td>Google 伺服器（用序號事先登記）</td><td>電腦自己身上（轉換時寫入註冊權杖）</td></tr>
       <tr><td>怎麼記進去</td><td>零接觸工具送序號、型號給 Google</td><td>一鍵轉換檔帶著權杖執行</td></tr>
       <tr><td>開機連網後</td><td>問 Google → 自動註冊</td><td>用權杖 → 自動註冊</td></tr>
@@ -107,7 +107,7 @@
   <div class="card" id="s2"><div class="in">
     <h2><span class="n">2</span>要準備什麼、不用準備什麼</h2>
     <p>零接觸工具要填的欄位，Flex 大部分都不用：</p>
-    <div class="tbl"><table>
+    <div class="tbl" tabindex="0"><table>
       <tr><th>欄位</th><th>Flex 要不要</th><th>說明</th></tr>
       <tr><td>序號（SN）</td><td class="no">選填</td><td>方便之後在控制台對照是哪一台</td></tr>
       <tr><td>硬體型號（Model）</td><td class="no">不用</td><td>電腦報到時自己回報；一鍵檔模擬時會自動比對 Google 認證清單</td></tr>
@@ -164,7 +164,7 @@
   <div class="card" id="s6"><div class="in">
     <h2><span class="n">6</span>控制台：先設好政策</h2>
     <p>電腦註冊進單位就會自動套用，事先設好，轉完開機就是對的。選好單位後到 <span class="ui">裝置 → Chrome → 設定</span>：</p>
-    <div class="tbl"><table>
+    <div class="tbl" tabindex="0"><table>
       <tr><th>分頁</th><th>設定</th><th>建議</th></tr>
       <tr><td>裝置</td><td>時區</td><td>Asia/Taipei（沒設會顯示美國時間）</td></tr>
       <tr><td>裝置</td><td>登入限制</td><td>只允許學校網域帳號</td></tr>
@@ -215,8 +215,8 @@
 
   <div class="card" id="s10"><div class="in">
     <h2><span class="n">10</span>很多學校時怎麼分</h2>
-    <div class="tbl"><table>
-      <tr><th></th><th>每校有自己的 Google 網域</th><th>全部在同一個網域（一校一個單位）</th></tr>
+    <div class="tbl" tabindex="0"><table>
+      <tr><th><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">項目</span></th><th>每校有自己的 Google 網域</th><th>全部在同一個網域（一校一個單位）</th></tr>
       <tr><td>CEU</td><td>各校自己買，買在哪個網域只能用在那個網域</td><td>同一池共用</td></tr>
       <tr><td>權杖</td><td>各校管理員各自產生</td><td>每校的單位各產生一組</td></tr>
       <tr><td>做法</td><td colspan="2">一次做一間學校：填該校電腦、貼該校權杖按填滿、產生；清空後換下一校。也可以先在 Excel 把各校清冊整理好（權杖欄直接填好），一校匯入一次</td></tr>
@@ -226,7 +226,7 @@
 
   <div class="card" id="s11"><div class="in">
     <h2><span class="n">11</span>出問題怎麼辦</h2>
-    <div class="tbl"><table>
+    <div class="tbl" tabindex="0"><table>
       <tr><th>狀況</th><th>原因</th><th>怎麼做</th></tr>
       <tr><td>開機沒有自動註冊，停在網路畫面</td><td>網路沒通，或 Wi-Fi 名稱密碼錯</td><td>插網路線；或在畫面上手動選 Wi-Fi，連上後照設計會繼續自動註冊（還沒實測）</td></tr>
       <tr><td>註冊失敗，說授權不足</td><td>CEU 用完了</td><td>補買，或在控制台把不用的裝置「解除佈建」退回 CEU</td></tr>

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flex 遠端部署說明</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=82" crossorigin>
-<link rel="stylesheet" href="/assets/fonts.css?v=42">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=84" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=43">
 <style>
   :root {
     /* 主站 hunglun.com 色票（assets/style.css 的 :root），固定亮色 */
@@ -253,7 +253,7 @@
 <section id="read">
   <h2><span class="no">0</span>這份說明怎麼讀</h2>
   <p class="lead">先看第一部弄懂觀念，然後依你的情況只讀需要的那一部。</p>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>你的情況</th><th>讀哪裡</th></tr>
     <tr><td>一台或幾台電腦，什麼都沒裝</td><td><b>第二部：一鍵轉換檔</b>（最常用）</td></tr>
     <tr><td>一整間教室、幾十台</td><td>第三部：大量派送</td></tr>
@@ -325,7 +325,7 @@
     </div>
     <div class="rel-out">↓ 權杖填進一鍵檔 → 電腦轉成 Flex → 第一次開機用權杖註冊 → 從授權池扣 1 個 CEU 綁給這台</div>
   </div>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>常見問題</th><th>答案</th></tr>
     <tr><td>Windows 電腦上要先有 CEU 嗎？</td><td><b>不用，也不可能。</b>CEU 只能綁在已經是 ChromeOS 而且註冊好的裝置上。綁定是轉完註冊的那一刻自動發生的</td></tr>
     <tr><td>「網域」是指什麼？</td><td>指<b>客戶的 Google 網域</b>。跟 Windows 有沒有加入公司網域（Active Directory）無關</td></tr>
@@ -406,7 +406,7 @@
     <div class="fc-arrow"></div>
     <div class="fc-step hl"><b>第 2 次</b>正式轉換<br><code>$ONLY_TEST = $false</code></div>
   </div>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>情況</th><th><code>$ONLY_TEST</code></th><th>會發生什麼</th></tr>
     <tr><td>這個型號第一次做</td><td><code>$true</code>（預設）</td><td>只跑檢查與模擬測試，<b>硬碟完全不動</b>，跑完桌面出現結果檔</td></tr>
     <tr><td>同型號已經測過、結果沒問題</td><td><code>$false</code></td><td>檢查、模擬，接著正式轉換，Windows 會被清空</td></tr>
@@ -425,7 +425,7 @@
 
   <h3>情況 B：有 CEU → 先拿權杖，再填設定</h3>
   <h4>步驟 1：請客戶的 Google 管理員產生權杖</h4>
-  <figure class="mock">
+  <figure class="mock" tabindex="0">
     <svg viewBox="0 0 560 300" role="img" aria-label="Google 管理控制台產生註冊權杖示意圖" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
       <rect x="0" y="0" width="560" height="300" rx="10" fill="#ffffff" stroke="#c8ced8"/>
       <rect x="0" y="0" width="560" height="34" rx="10" fill="#f1f3f4"/><rect x="0" y="24" width="560" height="10" fill="#f1f3f4"/>
@@ -466,7 +466,7 @@
 
   <h4>步驟 3：用記事本填設定</h4>
   <p>在 <code>一鍵轉換Flex.bat</code> 上按右鍵 →「以記事本開啟」（或「編輯」），往下捲到「設定」那段：</p>
-  <figure class="mock">
+  <figure class="mock" tabindex="0">
     <svg viewBox="0 0 560 300" role="img" aria-label="記事本填寫設定示意圖" font-family="Consolas, Noto Sans TC, monospace">
       <rect x="0" y="0" width="560" height="300" rx="8" fill="#ffffff" stroke="#c8ced8"/>
       <rect x="0" y="0" width="560" height="30" rx="8" fill="#f3f3f3"/><rect x="0" y="22" width="560" height="8" fill="#f3f3f3"/>
@@ -487,13 +487,13 @@
     </svg>
     <figcaption><span class="tag mockt">示意圖</span> 黃色三行的值一定要包在單引號 <code>'</code> 裡面；綠色那行是 <code>$true</code> 或 <code>$false</code>，不加引號</figcaption>
   </figure>
-  <div class="code"><div class="lbl">有 CEU、用 Wi-Fi</div><pre>$ENROLLMENT_TOKEN = '貼上權杖'
+  <div class="code"><div class="lbl">有 CEU、用 Wi-Fi</div><pre tabindex="0">$ENROLLMENT_TOKEN = '貼上權杖'
 $WIFI_SSID = 'Wi-Fi名稱'
 $WIFI_PASSWORD = 'Wi-Fi密碼'</pre></div>
-  <div class="code"><div class="lbl">有 CEU、用網路線</div><pre>$ENROLLMENT_TOKEN = '貼上權杖'
+  <div class="code"><div class="lbl">有 CEU、用網路線</div><pre tabindex="0">$ENROLLMENT_TOKEN = '貼上權杖'
 $WIFI_SSID = ''
 $WIFI_PASSWORD = ''</pre></div>
-  <div class="code"><div class="lbl">測試過、要正式轉換時（不管有沒有 CEU）</div><pre>$ONLY_TEST = $false</pre></div>
+  <div class="code"><div class="lbl">測試過、要正式轉換時（不管有沒有 CEU）</div><pre tabindex="0">$ONLY_TEST = $false</pre></div>
   <div class="box warn">
     <div class="t">三個容易出錯的地方</div>
     <ul>
@@ -528,7 +528,7 @@ $WIFI_PASSWORD = ''</pre></div>
 
   <h3>第 1 個：如果跳出「Windows 已保護您的電腦」</h3>
   <p>從網路下載的檔案，Windows 有時會先跳這個藍色視窗。不一定會出現，出現的話照下圖按兩下：</p>
-  <figure class="mock">
+  <figure class="mock" tabindex="0">
     <svg viewBox="0 0 560 230" role="img" aria-label="Windows 已保護您的電腦示意圖" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
       <rect x="0" y="0" width="270" height="230" rx="4" fill="#0067b8"/>
       <text x="16" y="36" font-size="16" fill="#fff" font-weight="700">Windows 已保護您的電腦</text>
@@ -551,7 +551,7 @@ $WIFI_PASSWORD = ''</pre></div>
   </figure>
 
   <h3>第 2 個：「您要允許此 App 變更您的裝置嗎？」按「是」</h3>
-  <figure class="mock">
+  <figure class="mock" tabindex="0">
     <svg viewBox="0 0 460 250" role="img" aria-label="使用者帳戶控制示意圖" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
       <rect x="0" y="0" width="460" height="250" rx="6" fill="#ffffff" stroke="#c8ced8"/>
       <rect x="0" y="0" width="460" height="34" rx="6" fill="#f3f3f3"/><rect x="0" y="26" width="460" height="8" fill="#f3f3f3"/>
@@ -571,7 +571,7 @@ $WIFI_PASSWORD = ''</pre></div>
 
   <h3>第 3 個：看完說明，輸入 Y 按 Enter</h3>
   <p>只測試和正式轉換，開頭的畫面不一樣，對方一看就知道是哪一種：</p>
-  <div class="term"><span class="c">==============================================
+  <div class="term" tabindex="0"><span class="c">==============================================
    把這台電腦轉換成 ChromeOS Flex
 ==============================================</span>
 
@@ -581,7 +581,7 @@ $WIFI_PASSWORD = ''</pre></div>
 
 要開始測試，請輸入 Y 再按 Enter: <span class="y">Y</span></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 只測試（<code>$ONLY_TEST = $true</code>），綠字開頭</div>
-  <div class="term"><span class="c">==============================================
+  <div class="term" tabindex="0"><span class="c">==============================================
    把這台電腦轉換成 ChromeOS Flex
 ==============================================</span>
 
@@ -600,7 +600,7 @@ $WIFI_PASSWORD = ''</pre></div>
   <p class="lead">輸入 Y 之後就不用再按任何東西。下面是每個階段實際會看到的文字，以及代表什麼。</p>
 
   <h3>[1/5] 檢查這台電腦</h3>
-  <div class="term"><span class="c">[1/5] 檢查這台電腦...</span>
+  <div class="term" tabindex="0"><span class="c">[1/5] 檢查這台電腦...</span>
   型號：ASUSTeK COMPUTER INC. E500A_WS770T
   系統：Microsoft Windows 11 專業版｜開機模式：UEFI｜磁碟：GPT，477GB，可用 267.5GB
 <span class="g">  硬體條件合格。</span>
@@ -610,24 +610,24 @@ $WIFI_PASSWORD = ''</pre></div>
   <div class="ifnot">紅色 [停止] 加上原因（例如不是 UEFI、空間不夠、沒插電），照原因處理後重新雙擊。Windows 沒有被改動，桌面也會產生結果檔</div>
 
   <h3>[2/5] 從 Google 下載</h3>
-  <div class="term"><span class="c">[2/5] 從 Google 下載 ChromeOS Flex（約 1GB，依網速需要幾分鐘）...</span>
+  <div class="term" tabindex="0"><span class="c">[2/5] 從 Google 下載 ChromeOS Flex（約 1GB，依網速需要幾分鐘）...</span>
   下載完成，解壓縮中...</div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 下載時視窗上方會出現進度條。實測一般網路約 1～2 分鐘</div>
   <div class="ifnot">下載失敗或卡住很久：檢查網路後重新雙擊，會從頭重新下載</div>
 
   <h3>[3/5] 寫入設定</h3>
-  <div class="term"><span class="c">[3/5] 寫入設定...</span>
+  <div class="term" tabindex="0"><span class="c">[3/5] 寫入設定...</span>
   完成。</div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 設定檔寫在 <code>C:\deploy</code></div>
 
   <h3>[4/5] 模擬測試（只檢查，不會動硬碟）</h3>
-  <div class="term"><span class="c">[4/5] 模擬測試（只檢查，不會動硬碟）...</span>
+  <div class="term" tabindex="0"><span class="c">[4/5] 模擬測試（只檢查，不會動硬碟）...</span>
   官方檢查項目通過 5/5：SystemChecked、TPMChecked、MemoryChecked、DiskChecked、FilesChecked
 <span class="g">  模擬測試完成。</span></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 這兩行是一鍵檔實際印出的文字（agent.exe 用模擬的版本跑出）。真的 agent.exe 執行時，中間會捲過很多英文記錄，是正常的</div>
   <div class="expect">「官方檢查項目通過 5/5」與綠色的「模擬測試完成」。五個項目是 Google 官方的檢查：系統、TPM、記憶體、磁碟、檔案</div>
   <div class="ifnot">紅色 [停止]，例如「沒有跑完全部檢查」：Windows 沒有被改動。請對方把桌面上的結果檔傳給你</div>
-  <div class="term"><span class="c">[4/5] 模擬測試（只檢查，不會動硬碟）...</span>
+  <div class="term" tabindex="0"><span class="c">[4/5] 模擬測試（只檢查，不會動硬碟）...</span>
   官方檢查項目通過 2/5：SystemChecked、DiskChecked
 
 <span class="r">[停止] 模擬測試沒有跑完全部檢查。</span>
@@ -638,7 +638,7 @@ $WIFI_PASSWORD = ''</pre></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 檢查沒過時的樣子（agent.exe 用模擬的版本跑出，路徑裡的使用者與電腦名稱依實際電腦而定）</div>
 
   <h3>只測試：到這裡結束</h3>
-  <div class="term"><span class="g">這次只做模擬測試，到這裡結束。硬碟完全沒有被動到，Windows 照常可以用。</span>
+  <div class="term" tabindex="0"><span class="g">這次只做模擬測試，到這裡結束。硬碟完全沒有被動到，Windows 照常可以用。</span>
 
 <span class="c">結果已經打包好：C:\Users\使用者\Desktop\Flex結果-電腦名稱-1002-1653.zip</span>
 請把這個檔案傳給技術人員。
@@ -649,7 +649,7 @@ $WIFI_PASSWORD = ''</pre></div>
 
   <h3>收到結果檔，你要看什麼</h3>
   <p>解壓縮後有兩個檔案，用記事本打開：</p>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>檔案</th><th>要找的內容</th><th>代表</th></tr>
     <tr><td><code>convert-log.txt</code></td><td>「官方檢查項目通過 5/5」和「模擬測試完成」</td><td>一鍵檔判斷這台可以轉</td></tr>
     <tr><td><code>agent-dryrun.log</code></td><td>SystemChecked、TPMChecked、MemoryChecked、DiskChecked、FilesChecked 五個字都找得到（記事本按 Ctrl+F 搜尋）</td><td>Google 的 FRD 自己也確認五項檢查都做完</td></tr>
@@ -664,7 +664,7 @@ $WIFI_PASSWORD = ''</pre></div>
   </div>
 
   <h3>[5/5] 正式轉換（只有 <code>$ONLY_TEST = $false</code> 才會到這裡）</h3>
-  <div class="term"><span class="y">[5/5] 開始正式轉換。過程中不要關機、不要拔電源。</span></div>
+  <div class="term" tabindex="0"><span class="y">[5/5] 開始正式轉換。過程中不要關機、不要拔電源。</span></div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 接著會出現下一章三種結局之一</div>
 </section>
 
@@ -674,14 +674,14 @@ $WIFI_PASSWORD = ''</pre></div>
   <p class="lead">只有正式轉換才會走到這裡。判斷依據是 Google 官方的記錄事件：<code>InstallStarted</code>＝「所有檢查都通過，開始改動硬碟」；<code>InstallSkipped</code>＝「模擬結束，或檢查沒過、部署中止」。</p>
 
   <h3>結局 1：成功開始轉換</h3>
-  <div class="term"><span class="g">轉換已經開始：電腦會重新開機，進入 ChromeOS Flex 安裝。</span>
+  <div class="term" tabindex="0"><span class="g">轉換已經開始：電腦會重新開機，進入 ChromeOS Flex 安裝。</span>
 重新開機後的安裝不需要網路，也不用按任何東西，等它自己完成。
 如果 2 分鐘內都沒有自動重新開機，請手動重新開機一次。</div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 一鍵檔實際印出的文字（agent.exe 用模擬的版本跑出）</div>
   <div class="expect">電腦自己重新開機，接著第 11 章</div>
 
   <h3>結局 2：檢查沒過，FRD 自己中止（硬碟沒被動到）</h3>
-  <div class="term"><span class="r">[停止] 正式執行前的檢查沒有通過，FRD 自己中止了，硬碟沒有被動到。</span>
+  <div class="term" tabindex="0"><span class="r">[停止] 正式執行前的檢查沒有通過，FRD 自己中止了，硬碟沒有被動到。</span>
 <span class="y">Windows 沒有被改動，可以照常使用。</span>
 
 <span class="c">結果已經打包好：C:\Users\使用者\Desktop\Flex結果-電腦名稱-1002-1653.zip</span>
@@ -690,7 +690,7 @@ $WIFI_PASSWORD = ''</pre></div>
   <div class="expect">Windows 照常能用。拿到結果檔（裡面有三個記錄檔）後，照第 20 章排錯</div>
 
   <h3>結局 3：讀不到記錄，無法判斷</h3>
-  <div class="term"><span class="y">沒有讀到執行記錄（代碼 0），無法判斷結果。請先不要關機。</span>
+  <div class="term" tabindex="0"><span class="y">沒有讀到執行記錄（代碼 0），無法判斷結果。請先不要關機。</span>
 
 <span class="c">結果已經打包好：C:\Users\使用者\Desktop\Flex結果-電腦名稱-1002-1653.zip</span>
 請把這個檔案傳給技術人員。</div>
@@ -702,7 +702,7 @@ $WIFI_PASSWORD = ''</pre></div>
 <section id="after">
   <h2><span class="no">11</span>重開機之後與驗收</h2>
   <p class="lead">官方說明：重新開機之後的安裝完全離線進行，不需要任何操作。等它自己跑完，會停在下面其中一個畫面。</p>
-  <figure class="mock">
+  <figure class="mock" tabindex="0">
     <svg viewBox="0 0 560 230" role="img" aria-label="ChromeOS Flex 開機畫面示意圖" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
       <rect x="0" y="0" width="270" height="230" rx="8" fill="#ffffff" stroke="#c8ced8"/>
       <text x="135" y="24" font-size="12" fill="#5f6368" text-anchor="middle" font-weight="700">沒有 CEU（未受管）</text>
@@ -746,7 +746,7 @@ $WIFI_PASSWORD = ''</pre></div>
     <div class="fc-arrow"></div>
     <div class="fc-step hl"><b>第四步</b>全部正式部署</div>
   </div>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>路線</th><th>要同網路</th><th>每台要先做</th><th>要帳密</th><th>狀態</th></tr>
     <tr><td>A PsExec</td><td>要</td><td>改一個設定＋開防火牆</td><td>要</td><td>本機實測過</td></tr>
     <tr><td>B Action1</td><td>不用</td><td>裝代理程式（前 200 台免費）</td><td>不用</td><td>未實測</td></tr>
@@ -761,7 +761,7 @@ $WIFI_PASSWORD = ''</pre></div>
   <ol class="steps">
     <li><b>建一個每台都一樣的系統管理員帳號和密碼</b></li>
     <li><b>非網域電腦（個人電腦、工作群組、只加入 Entra ID）</b>：用系統管理員身分開命令提示字元，執行下面這行。不做的話，從遠端連進來會一律「拒絕存取」
-      <div class="code"><pre>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f</pre></div></li>
+      <div class="code"><pre tabindex="0">reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f</pre></div></li>
     <li><b>打開防火牆的「檔案及印表機共用」</b>：控制台 → Windows Defender 防火牆 → 允許應用程式通過防火牆 → 勾「檔案及印表機共用」的「私人」；網路設定檔設成私人網路</li>
   </ol>
   <p>網路條件：你的電腦跟這批電腦在同一個網段，Wi-Fi 沒有開「AP 隔離」（訪客網路常常有開）。</p>
@@ -839,8 +839,8 @@ $WIFI_PASSWORD = ''</pre></div>
   <h2><span class="no">17</span>部署前預檢</h2>
   <p class="lead">只讀資訊、不改任何設定。檢查 UEFI、GPT、磁碟 32GB、可用 9GB、Windows 10/11，並列出型號給你比對認證清單。</p>
   <h3>單台：在那台電腦上跑</h3>
-  <div class="code"><div class="lbl">系統管理員身分的 PowerShell</div><pre>powershell -ExecutionPolicy Bypass -File precheck.ps1</pre></div>
-  <div class="term">電腦名稱   : HUNGLUN-STEVE
+  <div class="code"><div class="lbl">系統管理員身分的 PowerShell</div><pre tabindex="0">powershell -ExecutionPolicy Bypass -File precheck.ps1</pre></div>
+  <div class="term" tabindex="0">電腦名稱   : HUNGLUN-STEVE
 廠牌型號   : ASUSTeK COMPUTER INC. E500A_WS770T
 作業系統   : Microsoft Windows 11 專業版
 開機模式   : UEFI
@@ -853,7 +853,7 @@ TPM        : 有
 最後一步要人工做：拿「廠牌型號」去 Google 認證清單比對，狀態要是「通過認證」</div>
   <div class="term-cap"><span class="tag real">實際畫面</span> 2026-10-02 實測</div>
   <h3>大量：從你的電腦一次查全部（路線 A 的條件）</h3>
-  <div class="code"><pre>python psexec_mass_deploy.py --precheck</pre></div>
+  <div class="code"><pre tabindex="0">python psexec_mass_deploy.py --precheck</pre></div>
   <p>結果存成 <code>output\precheck-時間.xlsx</code>：合格綠色、不合格紅色、連不上黃色，另有一欄讓你填認證清單比對結果。需要 Python 和 openpyxl。</p>
   <div class="box warn"><div class="t">precheck.ps1 不要用記事本另存</div>它存成「UTF-8 含 BOM」，Windows 內建 PowerShell 才讀得懂中文。另存成別的編碼會出現一堆紅字，壞了就從工具資料夾重新複製。</div>
 </section>
@@ -866,7 +866,7 @@ TPM        : 有
   <ol class="steps">
     <li><b>備份</b></li>
     <li><b>在 Windows 裡把磁碟轉成 GPT</b>（系統管理員命令提示字元；有開 BitLocker 先暫停：<code>manage-bde -protectors -disable C:</code>）
-      <div class="code"><pre>mbr2gpt /validate /allowFullOS
+      <div class="code"><pre tabindex="0">mbr2gpt /validate /allowFullOS
 mbr2gpt /convert /allowFullOS</pre></div></li>
     <li><b>重開機進韌體設定</b>：Dell F2、HP F10、Lenovo F1 或 F2、ASUS／Acer F2 或 Del、Surface 按住音量＋再按電源</li>
     <li><b>Boot Mode 改成 UEFI</b>，關掉 CSM 或 Legacy Support，存檔重開機，再跑一次預檢</li>
@@ -876,7 +876,7 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
 <!-- 19 -->
 <section id="smode">
   <h2><span class="no">19</span>S 模式、TPM、空間、還原卡、WMI 異常</h2>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>項目</th><th>怎麼看</th><th>怎麼處理</th></tr>
     <tr><td>S 模式</td><td>設定 → 系統 → 啟用，版本名稱有「S 模式」</td><td>S 模式不能執行一般程式（連一鍵檔都跑不了）。每台到 Microsoft Store 搜尋「退出 S 模式」，免費、單向；有 Intune 可以整批退出</td></tr>
     <tr><td>TPM</td><td>官方：部分機型必須先清除 TPM，否則部署不會開始</td><td>FRD 會自動嘗試清除（Windows 自動配置的 TPM 通常可以）。被擋下來時會停在檢查階段、不會動硬碟。在那台的 Windows 裡開 <code>tpm.msc</code> → 清除 TPM，重開機後重試。<b>BitLocker 開著時不要進 BIOS／韌體清除 TPM</b>：Google 官方警告會清掉 BitLocker 金鑰，Windows 就開不了機</td></tr>
@@ -901,8 +901,8 @@ mbr2gpt /convert /allowFullOS</pre></div></li>
   <p>WMI 是 Windows 內建的系統資訊資料庫，一鍵檔和 FRD 都靠它查硬碟與 TPM。2026-10-07 在學校的 ASUS SD310 實際遇到：讀作業系統正常，但讀硬碟出現「類別無效」（0x80041010）、<code>tpm.msc</code> 出現「命名空間無效」。有還原卡或還原軟體的話先移除，否則修好一重開又被還原。</p>
   <ol class="steps">
     <li><b>開系統管理員命令提示字元</b>：開始 → 輸入 cmd → 在「命令提示字元」按右鍵 →「以系統管理員身分執行」</li>
-    <li><b>檢查資料庫</b><div class="code"><pre>winmgmt /verifyrepository</pre></div></li>
-    <li><b>重新登錄硬碟與 TPM 的資訊</b><div class="code"><pre>mofcomp %windir%\System32\wbem\storagewmi.mof
+    <li><b>檢查資料庫</b><div class="code"><pre tabindex="0">winmgmt /verifyrepository</pre></div></li>
+    <li><b>重新登錄硬碟與 TPM 的資訊</b><div class="code"><pre tabindex="0">mofcomp %windir%\System32\wbem\storagewmi.mof
 mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></div></li>
     <li><b>重新開機</b>，開 <code>tpm.msc</code> 看有沒有恢復，再跑一次模擬</li>
     <li><b>還是不行</b>：第 2 步顯示「不一致」就 <code>winmgmt /salvagerepository</code>，顯示「一致」就 <code>winmgmt /resetrepository</code>，再重新開機</li>
@@ -914,7 +914,7 @@ mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></div></li>
 <!-- 20 -->
 <section id="trouble">
   <h2><span class="no">20</span>出問題怎麼辦</h2>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>看到的狀況</th><th>可能原因</th><th>怎麼處理</th></tr>
     <tr><td>雙擊一鍵檔沒反應、閃一下就關</td><td>按了「否」；或被防毒軟體擋</td><td>重新雙擊，按「是」；防毒軟體跳警告選允許</td></tr>
     <tr><td>一鍵檔 [停止]：不是 UEFI／不是 GPT</td><td>舊機 Legacy 開機</td><td>第 18 章，或排除這台</td></tr>
@@ -957,7 +957,7 @@ mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></div></li>
     <div class="ok"><b>註冊之後（又可以遠端）</b>政策、App、設定都從管理控制台遠端派送</div>
   </div>
   <h3>已經轉好的機器，三種補救</h3>
-  <div class="tbl"><table>
+  <div class="tbl" tabindex="0"><table>
     <tr><th>做法</th><th>現場要做的</th><th>會不會清資料</th><th>適合</th></tr>
     <tr><td>A. 手動註冊</td><td>登入畫面（還沒有人登入前）按 <code>Ctrl+Alt+E</code>，輸入管理員或被允許註冊的帳號</td><td>沒人登入過不會；有人登入過要先 Powerwash（<code>Ctrl+Alt+Shift+R</code>），會清空</td><td>台數少</td></tr>
     <tr><td>B. 封權杖的 USB 重灌</td><td>每台插隨身碟開機安裝，第一次開機自動註冊</td><td>會</td><td>台數多</td></tr>
@@ -970,7 +970,7 @@ mofcomp %windir%\System32\wbem\Win32_Tpm.mof</pre></div></li>
 <!-- 22 -->
 <section id="cli">
   <h2><span class="no">22</span>指令速查</h2>
-  <div class="code"><div class="lbl">在工具資料夾（你的電腦）</div><pre># 開操作介面
+  <div class="code"><div class="lbl">在工具資料夾（你的電腦）</div><pre tabindex="0"># 開操作介面
 開始操作.bat
 
 # 大量預檢（只讀不改）
@@ -985,7 +985,7 @@ python intune_flex_packager.py
 
 # 重新打包員工用工具包
 pwsh build-release.ps1</pre></div>
-  <div class="code"><div class="lbl">在目標電腦（系統管理員身分）</div><pre># 單台預檢
+  <div class="code"><div class="lbl">在目標電腦（系統管理員身分）</div><pre tabindex="0"># 單台預檢
 powershell -ExecutionPolicy Bypass -File precheck.ps1
 
 # 看開機模式與磁碟格式

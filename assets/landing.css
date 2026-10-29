@@ -138,3 +138,5 @@ html.lenis{scroll-behavior: auto}
 .l-learn-tile img{width:64px;height:64px;border-radius:16px;box-shadow:0 8px 20px -10px rgba(0,0,0,.35)}
 .l-learn-more{margin-top:22px}
 @media (max-width:600px){.l-learn-row{gap:12px 4px}.l-learn-tile{width:100px;font-size:.82rem;white-space:nowrap}.l-learn-tile img{width:56px;height:56px}}
+/* 信任區塊文字裡的連結：只靠顏色分不出來（axe link-in-text-block），加底線 2026-10-29 */
+.l-proof li a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}

@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.31.1（2026-10-29）
+
+全站健檢後的修正。
+
+- 新增隱私權政策頁 `/privacy`（只寫實際有做的事：聯絡表單只寄給承辦同事不存資料庫、瀏覽人次只暫存雜湊 IP 5 小時、GA4 統計與 cookie、密碼頁 cookie 期限、怎麼拒絕 cookie）；全站頁尾加連結、sitemap、llms.txt
+- 壞連結：會員集點系統 `antia-members.pages.dev` 網域已不存在，企業方案頁拿掉「前往體驗」與 JSON-LD url，會員文章延伸閱讀改連 /enterprise
+- 數字：學習專區動物探險家卡片 271 → 270（動物站 API 實際 270），並改「動物園」少兩字，修掉手機與平板的孤字
+- 無障礙：學習專區分類小標籤底色調深（color-mix 80%，白字對比最低 4.97）；首頁信任區文字裡的連結加底線（landing.css v33）；Flex 工具四頁可捲動表格、終端機、程式碼、示意圖加 tabindex、空表頭補隱藏文字、註冊工具頁補 role=main；表格欄位加 aria-label（table.js，已隨 v1.31.0 提交）；`intune-flex-deploy/build_site_page.py` 同步加 a11y()
+- 速度：學習專區第一排三張截圖改為立即載入，第一張 fetchpriority=high（手機最大內容原本 3.0 秒）
+
 ## v1.31.0（2026-10-29）
 
 學習專區新增兩棲探險家（frog.hunglun.com）。
