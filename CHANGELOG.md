@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.30.1（2026-10-29）
+
+安全修正：研習短連結（/go/<代碼>）的密碼不再寫在公開 repo。
+
+- 原本講師總密碼、各場口令與講義網址寫在 `functions/go/_sessions.js`，公開 repo 任何人都讀得到；改存 Cloudflare Pages 加密變數 `GO_SESSIONS_JSON`、`GO_MASTER_PASSWORD`，`_sessions.js` 只留代碼與標題
+- 舊密碼已在 git 歷史公開，總密碼與 6 場口令全部換新
+- 變數讀不到或格式錯誤時回 503，不放行
+
 ## v1.30.0（2026-10-29）
 
 學習專區與教學專區的分類都移到頁面上方。

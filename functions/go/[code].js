@@ -6,10 +6,10 @@
  * 同一堂課期間不用重打；換一場代碼要重新輸入，因為每場學員不同、
  * 口令也不一樣，不共用登入狀態。
  *
- * 每場的口令、標題、目的地網址在 ./_sessions.js 維護；同一個檔案裡的
- * MASTER_PASSWORD 是講師專屬密碼，不管哪一場代碼都能用它直接進去。
+ * 每場的標題在 ./_sessions.js；口令與目的地網址在 Cloudflare Pages 加密變數 GO_SESSIONS_JSON，
+ * 講師總密碼在 GO_MASTER_PASSWORD（2026-10-29 起，不再寫在公開 repo）。來源與推送方式見 _sessions.js。
  */
-import { GO_SESSIONS, MASTER_PASSWORD } from './_sessions.js';
+import { GO_LABELS } from './_sessions.js';
 
 const MAX_AGE = 60 * 60 * 8; // 8 小時，蓋過一整天的研習
 
@@ -68,9 +68,26 @@ function loginPage(code, label, error) {
 </body></html>`;
 }
 
-export async function onRequest({ request, params }) {
+// 加密變數讀不到或格式壞掉時回 503，絕不放行（不要退回任何寫死的預設密碼）
+function loadSessions(env) {
+  try {
+    const all = JSON.parse(env.GO_SESSIONS_JSON || '');
+    return env.GO_MASTER_PASSWORD ? { all, master: env.GO_MASTER_PASSWORD } : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+export async function onRequest({ request, params, env }) {
   const code = String(params.code || '');
-  const session = GO_SESSIONS[code];
+  const cfg = loadSessions(env);
+  if (!cfg) {
+    console.log('GO_SESSIONS_JSON 或 GO_MASTER_PASSWORD 沒設定或格式錯誤');
+    return new Response('研習連結暫時無法使用，請聯絡講師。', { status: 503 });
+  }
+  const label = GO_LABELS[code];
+  const secret = cfg.all[code];
+  const session = label && secret ? { label, password: secret.password, url: secret.url } : null;
   if (!session) {
     return new Response('找不到這場研習的連結，請確認代碼是否正確。', { status: 404 });
   }
@@ -85,7 +102,7 @@ export async function onRequest({ request, params }) {
   if (request.method === 'POST') {
     const form = await request.formData();
     const input = String(form.get('password') || '');
-    if (timingSafeEqual(input, session.password) || timingSafeEqual(input, MASTER_PASSWORD)) {
+    if (timingSafeEqual(input, session.password) || timingSafeEqual(input, cfg.master)) {
       const headers = new Headers({ Location: session.url });
       headers.append(
         'Set-Cookie',
