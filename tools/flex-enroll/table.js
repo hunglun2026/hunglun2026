@@ -32,18 +32,22 @@ const FE = (() => {
 
   function statusClass(s) { return OK.includes(s) ? 'st-ok' : BAD.includes(s) ? 'st-bad' : s === '待處理' ? '' : 'st-run'; }
 
+  // 每格都要有報讀名稱（「第 3 台 序號」）：表格欄位沒有 <label>，螢幕報讀軟體只會念「編輯文字」（2026-10-29 axe）
+  const NAME = Object.fromEntries(COLS);
+  const lab = (i, key) => ' aria-label="第 ' + (i + 1) + ' 台 ' + NAME[key] + '"';
+
   function cell(i, key, type) {
     const r = rows[i];
     if (key === 'net') {
-      return '<select data-i="' + i + '" data-k="net"><option value="wifi"' + (r.net === 'wifi' ? ' selected' : '') + '>Wi-Fi</option>' +
+      return '<select data-i="' + i + '" data-k="net"' + lab(i, 'net') + '><option value="wifi"' + (r.net === 'wifi' ? ' selected' : '') + '>Wi-Fi</option>' +
              '<option value="lan"' + (r.net === 'lan' ? ' selected' : '') + '>網路線</option></select>';
     }
     if (key === 'status') {
-      return '<select class="' + statusClass(r.status) + '" data-i="' + i + '" data-k="status">' +
+      return '<select class="' + statusClass(r.status) + '" data-i="' + i + '" data-k="status"' + lab(i, 'status') + '>' +
              STATUS.map((s) => '<option' + (s === r.status ? ' selected' : '') + '>' + s + '</option>').join('') + '</select>';
     }
     const off = r.net === 'lan' && (key === 'ssid' || key === 'pass') ? ' disabled placeholder="（網路線不用）"' : '';
-    return '<input type="' + (type || 'text') + '" data-i="' + i + '" data-k="' + key + '" spellcheck="false" value="' + esc(r[key]) + '"' + off + '>';
+    return '<input type="' + (type || 'text') + '" data-i="' + i + '" data-k="' + key + '" spellcheck="false"' + lab(i, key) + ' value="' + esc(r[key]) + '"' + off + '>';
   }
   const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 

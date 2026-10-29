@@ -55,7 +55,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - Intune 到底在幹嘛？跟 Google CEU 有何不同（FAQ 格式共 7 題，誠實劃線服務範圍：鴻綸科技能代購 Intune 授權、也能借用客戶既有 Intune／SCCM 環境大量部署 ChromeOS Flex（Google 官方 Remote Deployment／FRD 機制，免人工跑機）；完整 Intune 導入顧問服務不在服務範圍內）：https://www.hunglun.com/google/intune
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
-- 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分三區：七個主題探險網站〔動物、植物、故宮、海洋、昆蟲、古蹟、土石流〕、闖關遊戲〔邊玩邊變強〕、課堂即時測驗〔小綸即時測驗，老師開房全班用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
+- 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分三區：八個主題探險網站〔動物、植物、兩棲、故宮、海洋、昆蟲、古蹟、土石流〕、闖關遊戲〔邊玩邊變強〕、課堂即時測驗〔小綸即時測驗，老師開房全班用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
 - 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習專區／資料查詢網站全部免費）：https://www.hunglun.com/tools
   - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、學習專區 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
 - 學生回條 AI 辨識系統介紹（家長同意書回條拍照統計、匯出 Excel）：https://www.hunglun.com/tools/consent-slip-ai
@@ -76,6 +76,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 古蹟探險家（幼兒園到高中臺灣古蹟教學網站，四種程度：古蹟圖鑑、地圖找家附近的古蹟、看建築認類型、時代排排看、猜猜我是誰、翻牌配對、探險護照，收錄 1,065 處古蹟，老師專區有可列印的學習單與答案頁、搶答計分板，免註冊、免安裝）：https://heritage.hunglun.com/
 - 土石流小偵探（國小土石流防災教學網站：看水保署溪邊鏡頭的即時畫面、臺灣地圖、認識土石流與前兆、查全臺 17 縣市 1,692 條土石流潛勢溪流、防災闖關，知識出自水保署官方頁面，老師專區有可列印學習單、全螢幕上課模式、搶答計分板與班級連結 QR 碼，免註冊、免安裝；不是官方警報）：https://landslide.hunglun.com/
 - 植物探險家（國小植物教學網站：臺北市立動物園園區 100 種植物的小百科，有學名、科屬、用途與在園區哪裡看得到；用台北植物園十多年的花曆觀察紀錄看每個月開什麼花；開花植物、蕨類、裸子植物分類與植物用途遊戲；逛園區看植物；低年級有注音；老師專區有可列印學習單與搶答計分板，免註冊、免安裝）：https://plant.hunglun.com/
+- 兩棲探險家（國小兩棲類教學網站：用經濟部水利署河川情勢調查 1995～2019 年的 6,681 筆紀錄，認識臺灣溪流記錄到的 31 種兩棲類〔樹蛙、赤蛙、蟾蜍、狹口蛙、臺灣山椒魚等 7 個科〕；兩棲小百科有學名、科別、在哪些流域與月份被記錄；幾月遇得到；蛙蛙分類遊戲；溪流地圖可找離自己最近的調查樣點；低年級有注音；老師專區有可列印學習單與搶答計分板，免註冊、免安裝）：https://frog.hunglun.com/
 - 教育科技觀察（Google 教育方案、AI 導入與校園數位政策的變動判讀。**不轉述新聞，寫的是對台灣學校的實際意義與下一步**）：https://www.hunglun.com/insights
   - [Gemini 學生專區開放教育版帳號](https://www.hunglun.com/insights/gemini-student-hub)：Google 於 2026-10-01 公告 Gemini 學生專區（gemini.google.com/students）開放給所有年齡的 Workspace for Education 使用者，內容為學習筆記本、學習卡片、練習測驗；**受 Gemini 應用程式的生成式 AI 設定控制，沒有獨立開關**。8 月官方「免費一年」方案是給大專學生個人，台灣資格無法確認。
   - [Gemini 免費個人帳號只剩 Flash-Lite](https://www.hunglun.com/insights/gemini-personal-account-model-changes)：Google 說明中心公告 2026-10-09 起，沒有訂閱 AI 方案的 Gemini App 個人帳號只能用 Flash-Lite，AI Plus 保留 Flash-Lite 與 Flash、失去 Pro（生效日以個別電子郵件通知），AI Pro 與 AI Ultra 三種模型都可用，Deep Think 限 AI Ultra。**調整只針對個人帳號**；學校 Workspace for Education 帳號適用另一份說明，Education Fundamentals／Plus 列有 Pro 模型每 4 小時最多 25 次（2026-10-06 查詢）。站方建議：師生改用學校帳號登入、資訊組確認 Gemini App 已開啟、研習示範一律用學校帳號。
