@@ -7,7 +7,7 @@
   if(typeof Intl==="undefined"||!Intl.Segmenter)return;
   var root=document.querySelector("main")||document.body;
   var SKIP="script,style,code,pre,kbd,samp,textarea,input,select,svg,.g-word,.nowrap,.pt-half,[aria-hidden='true']";
-  var seg=new Intl.Segmenter("zh-TW",{granularity:"word"}),HAN=/[㐀-鿿]/,SHUT="，。、；：！？）」』》〉】",OPEN="（「『《〈【";
+  var seg=new Intl.Segmenter("zh-TW",{granularity:"word"}),HAN=/[\u3400-\u9fff]/,SHUT="，。、；：！？）」』》〉】",OPEN="（「『《〈【";
   // 能在 i 前面斷：漢字接漢字（詞界）、收尾標點後接非收尾標點、非開頭標點後接開頭標點；keep-all 下標點旁不會自己斷，要補
   function gap(s,i,len){
     var a=s.charAt(i-1),b=s.charAt(i);

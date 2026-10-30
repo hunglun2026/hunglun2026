@@ -26,8 +26,8 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=84" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=116">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=86" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=117">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -210,24 +210,102 @@
     </div>
 
     <h2>學校端要怎麼操作？</h2>
-    <p><strong>Google Workspace 的轉移共 6 個步驟，全部在學校的管理控制台完成。</strong>Google AI Pro for Education 的授權方式不同，放在下一節。</p>
+    <p><strong>Google Workspace 的轉移共 6 個步驟，全部在學校的管理控制台完成。</strong>Google AI Pro for Education 的授權方式不同，放在下一節。下面的畫面取自實際操作錄影，紅框是要按的位置。</p>
     <ol class="feature-list">
       <li>學校的超級管理員登入 Google 管理控制台，開啟 <code>admin.google.com/TransferToken</code>，或從「帳戶」進入「經銷商管理」。</li>
-      <li>在「向 Google 購買的訂閱方案」區塊，按右側的「轉移」。</li>
-      <li>進入「建立轉移授權」頁，輸入新經銷商提供的公開 ID（格式像 C123abcde），按「繼續」。這一頁會提醒三件事：授權有效期限 30 天；可轉給任意經銷商，每年最多 5 次；改由其他經銷商提供服務，會失去預付期間獲得的優惠，且無法取得退款或抵免額，所以建議在付款週期結束時轉。</li>
-      <li>在「選擇轉移方式」頁，每個產品群組都要選一個選項，沒選會跳出「未選取轉移選項」。Google Workspace 群組選「轉移至（經銷商網域）」，群組底下的訂閱（例如 Education Fundamentals、封存使用者、Gmail Only User）會一起轉。Google Play（Android Enterprise）與 Google Chrome 瀏覽器管理（Chrome Enterprise 基本版）只有「保留在 Google」可選。選完按「繼續」。</li>
-      <li>在「轉移到經銷商」確認頁核對要轉的訂閱。頁面下方註明按下按鈕即表示同意相關協議，確認後按「產生授權轉移程序」，看到「已成功產生轉移授權」再按「確定」。</li>
+      <li>在「向 Google 購買的訂閱方案」區塊，按右側的「轉移」。
+        <figure class="prose-figure" style="max-width:610px">
+          <img src="/assets/images/reseller-ws-1-transfer.webp"
+          srcset="/assets/images/reseller-ws-1-transfer-480.webp 480w, /assets/images/reseller-ws-1-transfer.webp 610w" sizes="(max-width: 820px) 100vw, 610px"
+          width="610" height="410" loading="lazy" decoding="async" style="filter:none"
+          alt="管理控制台的經銷商管理頁，「向 Google 購買的訂閱方案」區塊右側的「轉移」連結以紅框標示">
+          <figcaption>紅框是「轉移」，在「向 Google 購買的訂閱方案」區塊的右側。</figcaption>
+        </figure>
+      </li>
+      <li>進入「建立轉移授權」頁，輸入新經銷商提供的公開 ID（格式像 C123abcde），按「繼續」。這一頁會提醒三件事：授權有效期限 30 天；可轉給任意經銷商，每年最多 5 次；改由其他經銷商提供服務，會失去預付期間獲得的優惠，且無法取得退款或抵免額，所以建議在付款週期結束時轉。
+        <figure class="prose-figure" style="max-width:1000px">
+          <img src="/assets/images/reseller-ws-2-id.webp"
+          srcset="/assets/images/reseller-ws-2-id-480.webp 480w, /assets/images/reseller-ws-2-id.webp 1000w" sizes="(max-width: 820px) 100vw, 780px"
+          width="1000" height="590" loading="lazy" decoding="async" style="filter:none"
+          alt="建立轉移授權頁，紅框標示輸入經銷商公開 ID 的欄位，欄位提示範例為 C123abcde">
+          <figcaption>紅框是公開 ID 欄位，欄位裡的 C123abcde 只是格式範例。這一頁的灰底說明就是上面提醒的三件事。</figcaption>
+        </figure>
+      </li>
+      <li>在「選擇轉移方式」頁，每個產品群組都要選一個選項，沒選會跳出「未選取轉移選項」。Google Workspace 群組選「轉移至（經銷商網域）」，群組底下的訂閱（例如 Education Fundamentals、封存使用者、Gmail Only User）會一起轉。Google Play（Android Enterprise）與 Google Chrome 瀏覽器管理（Chrome Enterprise 基本版）只有「保留在 Google」可選。選完按「繼續」。
+        <figure class="prose-figure" style="max-width:1000px">
+          <img src="/assets/images/reseller-ws-3-choose.webp"
+          srcset="/assets/images/reseller-ws-3-choose-480.webp 480w, /assets/images/reseller-ws-3-choose.webp 1000w" sizes="(max-width: 820px) 100vw, 780px"
+          width="1000" height="600" loading="lazy" decoding="async" style="filter:none"
+          alt="選擇轉移方式頁，Google Workspace 選擇「轉移至」經銷商，Google Play 與 Chrome 瀏覽器管理為「保留在 Google」，右下角「繼續」以紅框標示">
+          <figcaption>Google Workspace 選「轉移至」經銷商，Google Play 與 Chrome 瀏覽器管理只能「保留在 Google」，每個群組都選好才能按右下角的「繼續」。</figcaption>
+        </figure>
+      </li>
+      <li>在「轉移到經銷商」確認頁核對要轉的訂閱。頁面下方註明按下按鈕即表示同意相關協議，確認後按「產生授權轉移程序」，看到「已成功產生轉移授權」再按「確定」。
+        <figure class="prose-figure" style="max-width:1000px">
+          <img src="/assets/images/reseller-ws-4-confirm.webp"
+          srcset="/assets/images/reseller-ws-4-confirm-480.webp 480w, /assets/images/reseller-ws-4-confirm.webp 1000w" sizes="(max-width: 820px) 100vw, 780px"
+          width="1000" height="490" loading="lazy" decoding="async" style="filter:none"
+          alt="轉移到經銷商確認頁，列出要轉移的 Google Workspace，右下角「產生授權轉移程序」按鈕以紅框標示">
+          <figcaption>確認要轉移的是 Google Workspace，再按紅框的「產生授權轉移程序」。</figcaption>
+        </figure>
+      
+        <figure class="prose-figure" style="max-width:1000px">
+          <img src="/assets/images/reseller-ws-5-done.webp"
+          srcset="/assets/images/reseller-ws-5-done-480.webp 480w, /assets/images/reseller-ws-5-done.webp 1000w" sizes="(max-width: 820px) 100vw, 780px"
+          width="1000" height="490" loading="lazy" decoding="async" style="filter:none"
+          alt="跳出「已成功產生轉移授權」的視窗，右下角「確定」以紅框標示">
+          <figcaption>看到「已成功產生轉移授權」就完成學校端，按「確定」關閉。</figcaption>
+        </figure>
+      </li>
       <li>通知新經銷商「已產生轉移授權」，接下來由經銷商在自己的後台接收。授權有效 30 天，逾期或經銷商沒辦法完成，重新做一次這些步驟即可。</li>
     </ol>
 
     <h2>Google AI Pro for Education 要怎麼授權給經銷商？</h2>
-    <p><strong>這一項不是轉移，而是在同一個「經銷商管理」頁建立「購買同意聲明」，讓經銷商可以銷售指定的產品群組給學校。</strong>共 5 個步驟：</p>
+    <p><strong>這一項不是轉移，而是在同一個「經銷商管理」頁建立「購買同意聲明」，讓經銷商可以銷售指定的產品群組給學校。</strong>共 5 個步驟，畫面取自實際操作錄影，紅框是要按的位置：</p>
     <ol class="feature-list">
-      <li>超級管理員進入「經銷商管理」，在「向經銷商購買的訂閱方案」區塊按「透過經銷商購買」；已經有經銷商時，改按該區塊右上的「向其他經銷商購買」。</li>
-      <li>在「向其他經銷商購買」頁輸入經銷商的公開 ID，按「繼續」。</li>
-      <li>勾選要向這家經銷商購買的產品群組，例如 Gemini for Workspace。頁面提醒：只能選經銷商有權銷售的群組，先前向其他經銷商或 Google 購買的群組不能選。</li>
-      <li>按「建立購買同意聲明」，看到「購買同意聲明建立完成」，按「確定」。</li>
-      <li>回到「經銷商管理」，「向經銷商購買的訂閱方案」會列出該經銷商與剛建立的購買同意聲明。同一頁上方有「經銷商存取權」開關，決定經銷商能不能存取學校的管理控制台，畫面提醒這可能造成財務影響，學校自行決定是否開啟。</li>
+      <li>超級管理員進入「經銷商管理」，在「向經銷商購買的訂閱方案」區塊按「透過經銷商購買」；已經有經銷商時，改按該區塊右上的「向其他經銷商購買」。
+        <figure class="prose-figure" style="max-width:610px">
+          <img src="/assets/images/reseller-ai-1-buy.webp"
+          srcset="/assets/images/reseller-ai-1-buy-480.webp 480w, /assets/images/reseller-ai-1-buy.webp 610w" sizes="(max-width: 820px) 100vw, 610px"
+          width="610" height="410" loading="lazy" decoding="async" style="filter:none"
+          alt="經銷商管理頁，「向經銷商購買的訂閱方案」區塊的「透過經銷商購買」按鈕以紅框標示">
+          <figcaption>紅框是「透過經銷商購買」。</figcaption>
+        </figure>
+      </li>
+      <li>在「向其他經銷商購買」頁輸入經銷商的公開 ID，按「繼續」。
+        <figure class="prose-figure" style="max-width:920px">
+          <img src="/assets/images/reseller-ai-2-id.webp"
+          srcset="/assets/images/reseller-ai-2-id-480.webp 480w, /assets/images/reseller-ai-2-id.webp 920w" sizes="(max-width: 820px) 100vw, 780px"
+          width="920" height="330" loading="lazy" decoding="async" style="filter:none"
+          alt="向其他經銷商購買頁，紅框標示輸入經銷商公開 ID 的欄位與「繼續」按鈕">
+          <figcaption>輸入經銷商的公開 ID 後按「繼續」。</figcaption>
+        </figure>
+      </li>
+      <li>勾選要向這家經銷商購買的產品群組，例如 Gemini for Workspace。頁面提醒：只能選經銷商有權銷售的群組，先前向其他經銷商或 Google 購買的群組不能選。
+        <figure class="prose-figure" style="max-width:440px">
+          <img src="/assets/images/reseller-ai-3-pick.webp"
+          width="440" height="558" loading="lazy" decoding="async" style="filter:none"
+          alt="勾選產品群組頁，Gemini for Workspace 已勾選，底部「建立購買同意聲明」按鈕以紅框標示">
+          <figcaption>勾選要購買的產品群組（圖為 Gemini for Workspace），再按「建立購買同意聲明」。黃色提示就是上面說的限制。</figcaption>
+        </figure>
+      </li>
+      <li>按「建立購買同意聲明」，看到「購買同意聲明建立完成」，按「確定」。
+        <figure class="prose-figure" style="max-width:420px">
+          <img src="/assets/images/reseller-ai-4-done.webp"
+          width="420" height="300" loading="lazy" decoding="async" style="filter:none"
+          alt="跳出「購買同意聲明建立完成」的視窗，內容列出 Gemini for Workspace，「確定」以紅框標示">
+          <figcaption>看到「購買同意聲明建立完成」，按「確定」。</figcaption>
+        </figure>
+      </li>
+      <li>回到「經銷商管理」，「向經銷商購買的訂閱方案」會列出該經銷商與剛建立的購買同意聲明。同一頁上方有「經銷商存取權」開關，決定經銷商能不能存取學校的管理控制台，畫面提醒這可能造成財務影響，學校自行決定是否開啟。
+        <figure class="prose-figure" style="max-width:610px">
+          <img src="/assets/images/reseller-ai-5-result.webp"
+          srcset="/assets/images/reseller-ai-5-result-480.webp 480w, /assets/images/reseller-ai-5-result.webp 610w" sizes="(max-width: 820px) 100vw, 610px"
+          width="610" height="485" loading="lazy" decoding="async" style="filter:none"
+          alt="經銷商管理頁，上方「經銷商存取權」開關以紅框標示，下方列出經銷商與購買同意聲明 Gemini for Workspace">
+          <figcaption>完成後，「向經銷商購買的訂閱方案」會列出經銷商與購買同意聲明。紅框是「經銷商存取權」開關，由學校決定開或關。</figcaption>
+        </figure>
+      </li>
     </ol>
 
     <h2>經銷商端要做什麼？</h2>
@@ -367,7 +445,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.5</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.6</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -379,6 +457,6 @@
 
 
 <script src="/assets/main.js?v=32"></script>
-<script src="/assets/wordwrap.js?v=1"></script>
+<script src="/assets/wordwrap.js?v=2"></script>
 </body>
 </html>
