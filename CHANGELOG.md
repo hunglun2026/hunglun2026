@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.31.4（2026-10-30）
+
+學校換 Google 經銷商流程更正。
+
+- 原本寫成「經銷商管理 > 轉移 > 公開識別碼 > 選產品群組」，與實務不符。改為先到 `admin.google.com/TransferToken` 產生轉移權杖，整個網域先轉給新經銷商，網域底下的產品（Google Workspace、Google AI Pro for Education）一次全部轉移，不能逐項挑選
+- 同步更新 knowledge.html、主題頁摘要、llms.txt、llms-full.txt、search-index.json
+
 ## v1.31.3（2026-10-30）
 
 全站用詞與斷行修正。

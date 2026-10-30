@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <title>學校換 Google 經銷商怎麼換？轉移流程、帳單與注意事項｜鴻綸科技</title>
-<meta name="description" content="學校的 Google Workspace 訂閱想換經銷商，由超級管理員在管理控制台產生轉移授權即可。整理官方流程 6 步、轉移前要確認的 6 件事、帳單怎麼算，以及資料與服務會不會中斷。">
+<meta name="description" content="學校想換 Google 經銷商，先由超級管理員到 admin.google.com/TransferToken 產生轉移權杖，整個網域連同底下的產品一次全部轉移。整理操作步驟、轉移前要確認的 6 件事、帳單怎麼算，以及資料與服務會不會中斷。">
 <link rel="canonical" href="https://www.hunglun.com/knowledge/change-google-reseller">
 <meta property="og:type" content="article">
 <meta property="og:title" content="學校換 Google 經銷商怎麼換？轉移流程、帳單與注意事項｜鴻綸科技">
-<meta property="og:description" content="轉移授權怎麼產生、年繳預付不退費、授權數不能減少、資料與服務不受影響。">
+<meta property="og:description" content="轉移權杖怎麼產生、整個網域與產品一次全轉、年繳預付不退費、資料與服務不受影響。">
 <meta property="og:url" content="https://www.hunglun.com/knowledge/change-google-reseller">
 <meta property="og:image" content="https://www.hunglun.com/assets/og/knowledge-change-google-reseller.png?v=5">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="學校換 Google 經銷商怎麼換？轉移流程、帳單與注意事項｜鴻綸科技">
-<meta name="twitter:description" content="轉移授權怎麼產生、年繳預付不退費、授權數不能減少、資料與服務不受影響。">
+<meta name="twitter:description" content="轉移權杖怎麼產生、整個網域與產品一次全轉、年繳預付不退費、資料與服務不受影響。">
 <meta name="twitter:image" content="https://www.hunglun.com/assets/og/knowledge-change-google-reseller.png?v=5">
 <meta name="twitter:image:alt" content="學校想換 Google 經銷商怎麼換？流程、帳單與資料會不會受影響｜鴻綸科技">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -64,7 +64,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-10-30",
   "mainEntity": [
     {
       "@type": "Question",
@@ -79,7 +79,7 @@
       "name": "誰可以做轉移這個動作？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "要由學校的超級管理員在 Google 管理控制台操作。經銷商那一端只需要提供自己的公開識別碼，並在自己的後台完成接收。"
+        "text": "要由學校的超級管理員操作。先到 admin.google.com/TransferToken 產生轉移權杖交給新經銷商，經銷商再在自己的後台用網域與權杖完成接收。"
       }
     },
     {
@@ -114,10 +114,10 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "學校想換 Google 經銷商怎麼換？流程、帳單與資料會不會受影響",
-  "description": "學校的 Google Workspace 訂閱想換經銷商，由超級管理員在管理控制台產生轉移授權即可。整理官方流程 6 步、轉移前要確認的 6 件事、帳單怎麼算，以及資料與服務會不會中斷。",
+  "description": "學校想換 Google 經銷商，先由超級管理員到 admin.google.com/TransferToken 產生轉移權杖，整個網域連同底下的產品一次全部轉移。整理操作步驟、轉移前要確認的 6 件事、帳單怎麼算，以及資料與服務會不會中斷。",
   "image": "https://www.hunglun.com/assets/og/knowledge-change-google-reseller.png",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-10-30",
   "author": {
     "@type": "Person",
     "name": "鴻綸科技 Steve",
@@ -191,40 +191,37 @@
     <h1>學校想換 Google 經銷商怎麼換？流程、帳單與資料會不會受影響</h1>
     <p>換經銷商常被誤會成要重建帳號、停機一陣子。依 Google 官方說明，轉移只改變訂閱的歸屬與帳單對象，資料和服務照常使用。</p>
     <p class="kb-audience" style="margin-top:14px;font-size:0.9rem;color:var(--muted);"><strong>這篇適合：</strong>學校的資訊組長與超級管理員、負責續約的總務與事務組承辦人。</p>
-    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-10-27">2026 年 10 月 27 日</time></p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-10-30">2026 年 10 月 30 日</time></p>
   </div>
 </div>
 
 <section class="section">
   <div class="wrap prose" style="max-width:780px;">
-    <p><strong>學校要換 Google Workspace 的經銷商，由超級管理員在管理控制台產生「轉移授權」，輸入新經銷商的公開識別碼，再由經銷商接收即可。</strong>Google 說明頁寫明轉移不會影響資料與服務可用性。要留意的是帳單、授權數量與次數限制，這些都會影響什麼時候換最划算。本文依 2026 年 10 月 27 日查閱的 Google 官方說明整理，規則可能調整，實際以管理控制台畫面為準。</p>
+    <p><strong>學校要換 Google Workspace 的經銷商，先由超級管理員到 admin.google.com/TransferToken 產生「轉移權杖」，把整個網域轉給新經銷商，網域底下的產品會一次全部轉移。</strong>Google 說明頁寫明轉移不會影響資料與服務可用性。要留意的是帳單、授權數量與次數限制，這些都會影響什麼時候換最划算。本文依 2026 年 10 月 27 日查閱的 Google 官方說明整理，規則可能調整，實際以管理控制台畫面為準。</p>
 
     <div class="kb-quick" data-quick-answer>
       <h2>重點先看</h2>
       <ul>
         <li><strong>資料會受影響嗎？</strong>不會。Google 說明頁寫明轉移不影響資料與服務可用性。</li>
-        <li><strong>誰操作？</strong>學校的超級管理員在管理控制台產生轉移授權，經銷商再到自己的後台接收。</li>
+        <li><strong>誰操作？</strong>學校的超級管理員產生轉移權杖交給新經銷商，經銷商再到自己的後台接收。</li>
         <li><strong>什麼時候換？</strong>年繳預付的訂閱不退費，建議在續約時換。</li>
         <li><strong>有什麼限制？</strong>授權數不能少於原承諾、一年最多轉 2 次、轉移後不可還原。</li>
       </ul>
     </div>
 
     <h2>學校端要怎麼操作？</h2>
-    <p><strong>學校端共 6 個步驟，全部在 Google 管理控制台完成。</strong></p>
+    <p><strong>實務上是先把整個網域轉給新經銷商，網域底下的產品（Google Workspace、Google AI Pro for Education）會一次全部轉過去，不能只挑其中幾項。</strong>學校端只要做 3 件事，Google Workspace 與 Google AI Pro for Education 用的是同一個入口。</p>
     <ol class="feature-list">
-      <li>學校的超級管理員登入 Google 管理控制台，進入「帳戶」下的「經銷商管理」。</li>
-      <li>在目前訂閱所在的區塊按「轉移」。</li>
-      <li>輸入新經銷商提供的公開識別碼（Public Identifier），按「繼續」。</li>
-      <li>針對每一個產品群組，選擇要轉到哪裡；不想轉的群組可以保留。</li>
-      <li>按「繼續」，接受條款，再按「產生轉移授權」。</li>
-      <li>按「關閉」。接下來由經銷商在自己的後台接收。若經銷商沒辦法完成，重新登入再做一次這些步驟即可。</li>
+      <li>學校的超級管理員用超級管理員帳號，開啟 <code>https://admin.google.com/TransferToken</code>。</li>
+      <li>確認頁面上的網域是要轉移的那一個，依畫面指示產生「轉移權杖」。這一步轉移的是整個網域，不是單一產品。</li>
+      <li>把轉移權杖交給新經銷商，後面由經銷商在自己的後台接收。</li>
     </ol>
 
     <h2>經銷商端要做什麼？</h2>
-    <p><strong>經銷商這一端有 3 件事，學校只需要把公開識別碼向對方要來。</strong></p>
+    <p><strong>經銷商這一端有 3 件事，學校只需要把轉移權杖交給對方。</strong></p>
     <ol class="feature-list">
-      <li>經銷商從自己的合作夥伴銷售後台（Partner Sales Console）設定頁取得帳戶識別碼，交給學校。</li>
-      <li>學校產生轉移授權後，經銷商在後台建立客戶，選擇「轉移客戶」，輸入學校的網域。</li>
+      <li>收到學校的轉移權杖後，在自己的合作夥伴銷售後台（Partner Sales Console）建立客戶，選擇「轉移客戶」，輸入學校的網域。</li>
+      <li>網域轉入後，該網域底下的產品會一次全部轉移，經銷商不需要也不能逐項挑選。</li>
       <li>經銷商選定帳單帳戶、付款方案與授權數量，完成轉移。</li>
     </ol>
 
@@ -238,7 +235,7 @@
         <tr><td>授權數量</td><td>新訂閱的授權數要等於或多於原本的承諾量。年約快到期前 30 天內有例外。</td></tr>
         <tr><td>預付款</td><td>年約一次預付一年的，轉移時預付款不退費，所以建議在續約時轉。</td></tr>
         <tr><td>次數限制</td><td>一個日曆年內，轉給經銷商最多 2 次。</td></tr>
-        <tr><td>整組一起轉</td><td>同一個產品群組裡的所有訂閱，必須一起轉給同一個新經銷商。</td></tr>
+        <tr><td>整個網域一起轉</td><td>轉移的單位是整個網域，網域底下的產品一次全部轉給同一個新經銷商，不能只轉一部分。</td></tr>
         <tr><td>多個版本</td><td>學校同時有多個 Workspace 版本時，要聯絡 Google 業務或 Workspace 支援才能轉。</td></tr>
       </tbody>
     </table>
@@ -260,7 +257,7 @@
     </details>
     <details class="faq-item reveal">
       <summary>誰可以做轉移這個動作？</summary>
-      <div class="faq-a">要由學校的超級管理員在 Google 管理控制台操作。經銷商那一端只需要提供自己的公開識別碼，並在自己的後台完成接收。</div>
+      <div class="faq-a">要由學校的超級管理員操作。先到 admin.google.com/TransferToken 產生轉移權杖交給新經銷商，經銷商再在自己的後台用網域與權杖完成接收。</div>
     </details>
     <details class="faq-item reveal">
       <summary>什麼時候換最划算？</summary>
@@ -357,7 +354,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.3</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.31.4</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
