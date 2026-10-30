@@ -3,6 +3,12 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.31.7（2026-10-30）
+
+學校換 Google 經銷商文章附上操作簡報連結。
+
+- Workspace 轉移、Google AI Pro for Education 授權各附一份 Google 簡報（含操作影片），可轉給學校管理員
+
 ## v1.31.6（2026-10-30）
 
 學校換 Google 經銷商文章加上操作畫面。
