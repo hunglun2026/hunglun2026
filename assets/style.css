@@ -523,7 +523,7 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 }
 .moe-code{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:14px 0 4px;padding:8px 14px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);background:var(--bg-soft);font-size:.9rem;line-height:1.6}
 .moe-code-label{color:var(--muted)}
-.moe-code strong{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.moe-code strong{font-variant-numeric:tabular-nums;letter-spacing:.02em;min-width:0;overflow-wrap:anywhere}
 .moe-code-vendor{color:var(--muted-faint);font-size:.82rem}
 .moe-code a[href^="/software"]{margin-left:auto}
 .moe-code strong a,.pc-code a{color:inherit;text-decoration:underline;text-underline-offset:3px}

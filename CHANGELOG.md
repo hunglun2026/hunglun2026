@@ -3,6 +3,17 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.32.0（2026-11-01）
+
+答案引擎（Perplexity、ChatGPT 搜尋、Gemini）與詢問入口加強。
+
+- **「重點先看」摘要**：98 篇文章原本沒有，補上 3 到 4 條問答放在正文最前面，內容只取自各頁已寫的事實；現在 121 頁都有（`gemini-4-argon-teachers` 本來就有 30 秒重點）
+- **官方資料來源**：16 頁在摘要後加一行連到 Google 官方說明（Classroom 說明中心、Workspace 版本總覽、Chrome 自動更新政策、教師認證制度），網址逐一確認可開且標題相符
+- **浮動聯絡鈕加「填寫詢問表單」**：177 頁，放在地圖與 Gmail 之間，連到 `/contact?topic=…#contactForm`，依頁面預選主題（研習、AI Pro、Workspace）；Gmail 鈕保留；點擊追蹤新增 `form_click`；`main.js` v33
+- **修 Safari 手機橫向溢出**：教育部序號列（`.moe-code`）在 WebKit 會撐到 644px（Chromium 正常），`.moe-code strong` 加 `min-width:0` 與 `overflow-wrap:anywhere`；style.css v118
+- 新增 `sitemap/apply-fab.py`、`sitemap/add-official-sources.py`（可重複執行）
+- 全站檢查：結構、簡體字、標點、FAQ 結構化資料、SEO 體檢、字型子集皆通過；llms-full 重產
+
 ## v1.31.7（2026-10-30）
 
 學校換 Google 經銷商文章附上操作簡報連結。

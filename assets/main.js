@@ -225,6 +225,7 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     if(!a)return null;
     var h=a.getAttribute("href")||"";
     if(a.classList.contains("fab-line")||/lin\.ee|line\.me/.test(h))return"line_click";
+    if(a.classList.contains("fab-form"))return"form_click";
     if(/facebook\.com\/hungluntechnology/.test(h))return"facebook_click";
     if(/google\.[a-z.]+\/maps|maps\.app\.goo\.gl/.test(h))return"map_click";
     if(/^mailto:|mail\.google\.com/.test(h))return"email_click";
