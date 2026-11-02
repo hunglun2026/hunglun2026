@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <title>Google Classroom 教學：建課程、出作業、批改發還到成績單｜鴻綸科技</title>
-<meta name="description" content="Google Classroom 完整操作教學，用 2026 年 8 月的最新介面實際截圖：建立課程、學生加入、發公告、出作業、批改發還、成績單到學期末封存，八個步驟一次走完。打了分數學生看不到？因為還沒按發還。">
+<meta name="description" content="Google Classroom 完整操作教學，用 2026 年 8 月的最新介面實際截圖：建立課程、學生加入、發公告、出作業、批改發還、成績單到學期末封存，八個步驟一次走完。打了分數學生看不到？因為還沒按發還。也說明課程代碼（邀請碼）怎麼看，以及課程怎麼封存與刪除。">
 <link rel="canonical" href="https://www.hunglun.com/knowledge/classroom-guide">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Google Classroom 教學：建課程到成績單八步驟｜鴻綸科技">
@@ -76,15 +76,16 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "dateModified": "2026-08-23",
+  "dateModified": "2026-11-02",
   "mainEntity": [
     { "@type": "Question", "name": "為什麼我只有「加入課程」，沒有「建立課程」？", "acceptedAnswer": { "@type": "Answer", "text": "右上角「＋」按下去只出現「加入課程」，通常是帳號身分的問題。學校（Workspace for Education）帳號要由管理員在管理主控台把您歸入「老師」群組才能開課；一般個人 Gmail 第一次建課程時要先同意教師資格聲明。如果您確定自己是老師卻建不了課，先找學校的網域管理員。" } },
-    { "@type": "Question", "name": "課程代碼在哪裡？學生要怎麼加入？", "acceptedAnswer": { "@type": "Answer", "text": "課程代碼在「訊息串」左側的「課程代碼」區塊，也可以在課程設定裡找到，旁邊有放大顯示的按鈕，方便上課時投影給全班抄。學生在自己的 Classroom 按右上「＋」→「加入課程」，輸入代碼即可。嫌抄代碼麻煩，也可以複製「邀請連結」貼到班級群組，學生點開按「加入課程」就完成。" } },
+    { "@type": "Question", "name": "課程代碼（邀請碼）在哪裡？學生要怎麼加入？", "acceptedAnswer": { "@type": "Answer", "text": "課程代碼在「訊息串」左側的「課程代碼」區塊，也可以在課程設定裡找到，旁邊有放大顯示的按鈕，方便上課時投影給全班抄。學生在自己的 Classroom 按右上「＋」→「加入課程」，輸入代碼即可。嫌抄代碼麻煩，也可以複製「邀請連結」貼到班級群組，學生點開按「加入課程」就完成。" } },
     { "@type": "Question", "name": "我打了分數，學生為什麼看不到？", "acceptedAnswer": { "@type": "Answer", "text": "因為分數還在「草稿」狀態。Classroom 的設計是：老師打的分數與評語先存成草稿，要按下「發還」，學生才會收到通知並看到成績。這樣老師可以整批改完、確認沒改錯，再一次發還全班。批改列表上分數旁邊標著小小的「草稿」兩個字，就代表學生還看不到。" } },
     { "@type": "Question", "name": "「標示為完成」和「繳交」差在哪？", "acceptedAnswer": { "@type": "Answer", "text": "同一顆按鈕，字會依作業內容變化。作業有要交的檔案時，學生附上檔案後按鈕是「繳交」；作業不需要交檔案（例如「回家讀課本第三章」）時，按鈕顯示「標示為完成」，讓學生回報做完了。對老師端來說兩者都會變成「已繳交」狀態。" } },
     { "@type": "Question", "name": "作業可以只出給部分學生嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。出作業畫面右欄的「出作業給」預設是所有學生，點開可以逐一勾選要指派的學生，適合補救教學或分組任務。同一個畫面也能一次把作業發布到您教的多門課程。" } },
     { "@type": "Question", "name": "成績可以匯出成 Excel 或試算表嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。打開任一份作業的「學生的作業」頁，右上角齒輪選單裡有「將所有成績複製到 Google 試算表」與下載 CSV 的選項，前者會把整門課的成績匯出成一份試算表，之後在試算表裡加權、排名都行。" } },
     { "@type": "Question", "name": "學期結束後，課程要刪掉嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不要刪，用「封存」。封存後課程移到左側導覽的「封存的課程」，老師與學生都還看得到內容，但學生不能再繳交，課程也不會出現在日常清單裡。日後要查成績、要複製課程結構開新學期的課，都還找得回來。刪除是不可逆的，而且要先封存才能刪。" } },
+    { "@type": "Question", "name": "怎麼刪除 Classroom 課程？刪掉還能救回來嗎？", "acceptedAnswer": { "@type": "Answer", "text": "先封存，再刪除。在首頁左側導覽打開「封存的課程」，找到要刪的課程卡片，按右上角三點選單選「刪除」，再確認一次。三件事要先知道：一，沒封存的課程看不到刪除選項；二，只有建立課程的主要老師能刪，共同授課老師不能；三，刪除無法復原，課程貼文與留言都看不到了，不過老師與學生仍可開啟課程 Drive 資料夾裡的檔案。只是想收起課程，封存就夠了，之後隨時能還原。" } },
     { "@type": "Question", "name": "舊課程的作業，新學期可以拿來再用嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以，有兩條路。要整門課重開：在課程卡片右上的三點選單選「複製」，Classroom 會複製課程結構與課堂作業（草稿狀態），不會把學生與成績帶過去。只要搬個別作業：在新課程的「課堂作業」→「建立」→「重複使用訊息」，挑舊課程裡的那一份即可。" } }
   ]
 }
@@ -97,7 +98,7 @@
   "description": "Google Classroom 完整操作教學，以 2026 年 8 月最新介面實際截圖，涵蓋建立課程、學生加入、出作業、批改發還、成績單與學期末封存八個步驟。",
   "image": "https://www.hunglun.com/assets/images/classroom-guide-home.webp",
   "datePublished": "2026-08-23",
-  "dateModified": "2026-08-23",
+  "dateModified": "2026-11-02",
   "author": {
     "@type": "Person",
     "name": "鴻綸科技 Steve",
@@ -150,9 +151,9 @@
   <div class="wrap">
     <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/knowledge">教學專區</a> ／ <a href="/knowledge/topic/classroom">Google Classroom</a> ／ Classroom 操作教學</nav>
     <h1>Google Classroom 教學：建課程到成績單，八個步驟走完一學期</h1>
-    <p>每一步都附最新介面的實際截圖：建立課程、學生加入、出作業、批改發還、成績單、學期末封存。</p>
+    <p>每一步都附最新介面的實際截圖：建立課程、學生加入、出作業、批改發還、成績單、學期末封存。要找登入網址，請看<a href="/knowledge/classroom">Google Classroom 登入網址與首頁</a>。</p>
     <p class="kb-audience" style="margin-top:14px;font-size:0.9rem;color:var(--muted);"><strong>這篇適合：</strong>使用或準備導入 Google Classroom 的老師、教學組長與資訊組長。</p>
-    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-08-23">2026 年 8 月 23 日</time></p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-11-02">2026 年 11 月 2 日</time></p>
   </div>
 </div>
 
@@ -246,7 +247,7 @@
     </figure>
     <p>讓學生進來有三種方式，實務上最快的是前兩種：</p>
     <ol class="cg-steps reveal">
-      <li><strong>課程代碼</strong>：在「訊息串」左側或課程設定裡。上課時投影出來，學生在自己的 Classroom 按「＋」→「加入課程」輸入即可。</li>
+      <li><strong>課程代碼（也有人叫邀請碼）</strong>：在「訊息串」左側或課程設定裡。上課時投影出來，學生在自己的 Classroom 按「＋」→「加入課程」輸入即可。</li>
       <li><strong>邀請連結</strong>：課程設定裡有「複製邀請連結」，貼到班級的通訊群組，學生點開按「加入課程」就完成。</li>
       <li><strong>輸入信箱逐一邀請</strong>：在成員頁按學生區的邀請圖示，輸入學生信箱。人少或補加轉學生時用。</li>
     </ol>
@@ -414,6 +415,7 @@
       <li><strong>封存</strong>：課程移到左側導覽的「封存的課程」。師生都還看得到內容與成績，但學生不能再繳交。日後要查分數、要調資料都找得回來；想恢復就到封存區還原。</li>
       <li><strong>複製</strong>：新學年開同一門課的捷徑，複製課程結構與課堂作業（以草稿保存），學生與成績不會帶過去，等於拿去年的課當範本開新班。</li>
       <li><strong>複製邀請連結、編輯、移動</strong>：同一個選單裡的日常管理功能。</li>
+      <li><strong>刪除</strong>：要先封存，才能到「封存的課程」裡刪。<strong>刪除無法復原</strong>，課程貼文與留言就看不到了；只有建立課程的主要老師能刪，共同授課老師不行。真的要刪，先確認成績已匯出。</li>
     </ul>
     <p>照這個循環走：學年初「複製」去年的課 → 改一改出作業 → 學年末「封存」，一門課的資產就會一年一年累積下來。</p>
 
@@ -440,7 +442,7 @@
       <div class="faq-a">右上角「＋」按下去只出現「加入課程」，通常是帳號身分的問題。學校（Workspace for Education）帳號要由管理員在管理主控台把您歸入「老師」群組才能開課；一般個人 Gmail 第一次建課程時要先同意教師資格聲明。如果您確定自己是老師卻建不了課，先找學校的網域管理員。</div>
     </details>
     <details class="faq-item reveal">
-      <summary>課程代碼在哪裡？學生要怎麼加入？</summary>
+      <summary>課程代碼（邀請碼）在哪裡？學生要怎麼加入？</summary>
       <div class="faq-a">課程代碼在「訊息串」左側的「課程代碼」區塊，也可以在課程設定裡找到，旁邊有放大顯示的按鈕，方便上課時投影給全班抄。學生在自己的 Classroom 按右上「＋」→「加入課程」，輸入代碼即可。嫌抄代碼麻煩，也可以複製「邀請連結」貼到班級群組，學生點開按「加入課程」就完成。</div>
     </details>
     <details class="faq-item reveal">
@@ -462,6 +464,10 @@
     <details class="faq-item reveal">
       <summary>學期結束後，課程要刪掉嗎？</summary>
       <div class="faq-a">不要刪，用「封存」。封存後課程移到左側導覽的「封存的課程」，老師與學生都還看得到內容，但學生不能再繳交，課程也不會出現在日常清單裡。日後要查成績、要複製課程結構開新學期的課，都還找得回來。刪除是不可逆的，而且要先封存才能刪。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>怎麼刪除 Classroom 課程？刪掉還能救回來嗎？</summary>
+      <div class="faq-a">先封存，再刪除。在首頁左側導覽打開「封存的課程」，找到要刪的課程卡片，按右上角三點選單選「刪除」，再確認一次。三件事要先知道：一，沒封存的課程看不到刪除選項；二，只有建立課程的主要老師能刪，共同授課老師不能；三，刪除無法復原，課程貼文與留言都看不到了，不過老師與學生仍可開啟課程 Drive 資料夾裡的檔案。只是想收起課程，封存就夠了，之後隨時能還原。（依 <a href="https://support.google.com/edu/classroom/answer/6149813" target="_blank" rel="noopener">Google 官方說明</a>）</div>
     </details>
     <details class="faq-item reveal">
       <summary>舊課程的作業，新學期可以拿來再用嗎？</summary>
@@ -558,7 +564,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.32.3</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.32.4</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

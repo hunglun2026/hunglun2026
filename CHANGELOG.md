@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.32.4（2026-11-02）
+
+Classroom 兩頁依 GSC 分析微調（導航型查詢不追，只補資訊型缺口並分工）。
+
+- `classroom-guide`：新增「怎麼刪除 Classroom 課程？」常見問題（HTML＋FAQ 結構化資料，依官方說明：先封存才能刪、只有主要老師能刪、無法復原）；步驟 8 加「刪除」一項；「課程代碼」補「邀請碼」說法
+- `classroom-guide`、`classroom-basics`：開頭加連結指向主頁 `/knowledge/classroom`，讓登入網址類查詢由主頁負責
+- 兩頁更新日期與 sitemap lastmod
+
 ## v1.32.3（2026-11-02）
 
 依 GSC 近 3 個月 1000 組查詢（67.8 萬曝光），改 4 頁標題與描述，補上用戶實際搜尋的用詞。
