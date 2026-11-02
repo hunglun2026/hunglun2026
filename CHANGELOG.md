@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.32.1（2026-11-02）
+
+活動剪影新增高雄女中 2026/11/02 教師研習（真實現場照）。
+
+- `events.html` 2026 區最上方新增活動卡與 Event 結構化資料（共 24 場）；`about.html` 活動剪影改為最新三場
+- 新增 `event-2026-11-kaohsiung-girls` 三種寬度 webp（480／768／1024）
+- 照片挑講師與大螢幕最清楚、畫面無私人內容的一張；其餘兩張未上架
+- sitemap 的 about、events 更新日期；llms-full、搜尋索引重產；字型子集檢查通過
+
 ## v1.32.0（2026-11-01）
 
 答案引擎（Perplexity、ChatGPT 搜尋、Gemini）與詢問入口加強。
