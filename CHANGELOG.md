@@ -8,7 +8,8 @@
 學習專區「課堂即時測驗」那張卡由小綸即時測驗改成 Luno 綸諾・互動式評量（luno.hunglun.com）。
 
 - 卡片、連結、結構化資料、頁面描述、教師區用語、首頁學習專區 tile、tools.html 說明、llms.txt 同步改成綸諾；新增圖示 `icon-proj-luno.webp`（綸諾徽章）、卡片圖 `game-luno.webp`（綸諾使用說明書歡迎頁截圖）
-- 小綸即時測驗仍保留在校園工具頁（tools/campus），llms.txt 校園工具清單也留著；llms.txt 舊的「小綸出題小幫手」連到已搬家的 lunquiz.pages.dev，改成綸諾新網址
+- 校園工具頁（tools/campus）原本的「小綸出題小幫手」卡（連到已搬家的 lunquiz.pages.dev）一併改成 Luno 綸諾，所以綸諾在「校園工具」與「學習專區」兩邊都有；llms.txt 同樣修正
+- 小綸即時測驗仍保留在校園工具頁與 llms.txt 校園工具清單
 
 ## v1.33.5（2026-11-02）
 
