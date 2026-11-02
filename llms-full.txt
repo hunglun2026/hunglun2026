@@ -2099,7 +2099,7 @@ https://www.hunglun.com/knowledge/security-incident-response
 
 ---
 
-## 學校行政可以自動化的 10 件事：AI 幫得上忙的地方｜鴻綸科技
+## 學校行政用 AI：會議紀錄、通知稿 10 件事與公文注意事項｜鴻綸科技
 
 https://www.hunglun.com/knowledge/admin-automation
 
@@ -2107,7 +2107,7 @@ https://www.hunglun.com/knowledge/admin-automation
 學校行政可以自動化的 10 件事：AI 幫得上忙的地方
 不是每件行政工作都適合交給 AI，但有些真的能省下大量時間。10 件可以先讓 AI 幫忙草擬或整理的工作，附注意事項與個資紅線。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
-作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 3 日
+作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 2 日
 下一篇：AI 融入教學實務指南 →
 重點先看
 學校行政有哪些工作可以交給 AI 自動化？會議紀錄摘要、常見問答回覆草稿、活動通知初稿、開放式問卷回答分類等 10 件事都適合。原則是 AI 負責草擬與整理，人負責核對與決策。
@@ -3272,7 +3272,7 @@ https://www.hunglun.com/knowledge/gemini-free-for-teachers-students
 老師可以免費用 Gemini 嗎？教師與學生方案、學校帳號額度一次看懂
 很多老師在搜「Gemini 教師免費」或「Gemini 教育帳號」。答案是：Google 沒有給老師個人的免費方案，但學校的教育版帳號本來就能用 Gemini，而且比個人免費版好用。
 這篇適合：想用 Gemini 備課的老師、想幫老師開通的資訊組，以及想知道學生能不能免費用的導師與家長。
-作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 14 日
+作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 2 日
 重點先看
 老師有免費的 Gemini 方案嗎？沒有給老師個人的免費訂閱方案。老師最划算的做法是用學校的 Google 教育版帳號登入，Education Fundamentals 是符合資格的學校免費使用。
 學校帳號能用到什麼？官方說明列出：Education Fundamentals、Plus 都能用 Pro 模型（每 4 小時最多 25 個提示詞）與 Thinking 模型（每天最多 300 個）。
@@ -3311,6 +3311,8 @@ Google Gemini 說明中心〈透過工作或學校帳號使用 Gemini 應用程�
 常見問題
 老師可以免費用 Gemini 嗎？
 可以，但不是個人方案，而是用學校的 Google 教育版帳號。符合資格的學校可免費使用 Education Fundamentals，管理員開啟 Gemini 後，老師用學校帳號登入就能用，而且能用到 Pro 模型。
+Gemini 對老師有優惠嗎？
+目前沒有查到 Google 針對台灣老師個人的 Gemini 優惠方案。老師最實際的優惠，是用學校的 Google 教育版帳號免費使用：官方說明 Gemini app 與 Gemini Notebook 包含在所有 Google Workspace for Education 版本裡，不另外收費，也不會拿對話去訓練模型。想要更高的使用額度，由學校加購 Google AI Pro for Education，價格與促銷依地區與合作夥伴而異，請洽詢。另外台灣大專校院學生有免費 Google AI Plus 一年的優惠，兌換期限到 2026 年 12 月 31 日，見本文下方說明。
 學校怎麼開通學生的 Gemini？
 由學校的網域管理員在 Google 管理主控台，針對學生所在的機構單位開啟 Gemini 應用程式，學生再用學校帳號登入 gemini.google.com 使用。學校必須先有 Google Workspace for Education 網域，開啟後可另外決定對話記錄保留多久。學生個人的免費優惠方案是另一回事，要由學生本人申請並驗證學籍。
 學校帳號的 Gemini 有使用次數限制嗎？
@@ -7496,7 +7498,7 @@ https://www.hunglun.com/knowledge/gemini-vids-howto
 Google Vids 怎麼用？AI 生成教學影片入門
 Google Vids 是 Google 的 AI 影片工具：把手邊的簡報丟進去，出來的是一支有旁白、有轉場的教學影片。學校帳號能用到什麼程度、每月額度多少，文中也一併說明。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
-作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 14 日
+作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 2 日
 ← 上一篇：Admin Console 怎麼管控 Gemini
 Gemini 系列第 7／10 篇・看全部系列
 下一篇：Google Flow 怎麼用 →
@@ -7520,8 +7522,8 @@ Google Vids 是什麼？
 Google Vids 是 Google Workspace 內建的影片製作工具，網址是 vids.google.com，用學校或工作帳號登入即可用。可以用文字腳本或既有的 Google 簡報當素材，由 AI 自動生成旁白配音、轉場與字幕（AI 功能依學校的教育版本而定），產出一支簡報型教學影片，不需要另外的剪輯軟體或技術背景。
 Google Vids 跟 Google Flow 差在哪？
 Vids 做的是「簡報型」影片：把文字或投影片變成有旁白、有轉場的說明影片，適合教學講解、宣導、簡報錄影；Flow 則是用 Veo 模型把文字描述或靜態圖片生成成電影感的動態影片片段，適合需要畫面情境（例如自然科實驗、歷史場景重現）的短片素材。兩者是不同工具，做的事情不一樣。
-Google Vids 要另外付費嗎？
-Vids 本身沒有單獨的售價，AI 功能要看學校的教育版本：官方表格中 Education Fundamentals 沒有 Vids 的 Gemini 功能，Education Plus 與 Teaching and Learning 增購有每月上限，加購 Google AI Pro for Education 額度更高。實際上限請以帳號當下顯示為準。
+Google Vids 費用多少？要另外付費嗎？
+Vids 本身沒有單獨的售價，在 Fundamentals、Standard、Plus 各教育版都能開啟，個人 Google 帳號也能免費試用。AI 功能要看學校的教育版本：官方表格中 Education Fundamentals 沒有 Vids 的 Gemini 功能，Education Plus 與 Teaching and Learning 增購有每月上限，加購 Google AI Pro for Education 額度更高。實際上限請以帳號當下顯示為準。
 可以把既有的 Google 簡報直接變成影片嗎？
 可以，這是最常見的用法。把既有的 Google 簡報匯入 Vids，由 AI 生成旁白配音、背景音樂與轉場效果，比自己重新錄影、剪輯要快很多，適合把研習簡報或課堂講義快速轉成翻轉教學用的預習影片。這項要學校版本有 Vids 的 AI 功能才有，Fundamentals 在官方表格裡沒有。
 生成的旁白配音可以換成自己的聲音嗎？
