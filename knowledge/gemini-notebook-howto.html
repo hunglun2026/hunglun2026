@@ -47,6 +47,7 @@
   "dateModified": "2026-09-13",
   "mainEntity": [
     { "@type": "Question", "name": "Gemini Notebook 是什麼？跟一般 Gemini 聊天有什麼不同？", "acceptedAnswer": { "@type": "Answer", "text": "Gemini Notebook（2026 年 7 月由 NotebookLM 更名，功能相同）只根據你上傳的文件回答問題，不會拿訓練資料裡的內容硬答，每句話也會標出處於原文哪一段。一般 Gemini 聊天則是憑訓練資料回答，範圍更廣但比較容易講出看起來合理、實際不存在的內容。" } },
+    { "@type": "Question", "name": "Gemini Notebook 可以直接做簡報嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以。在筆記本右側 Studio 面板選「Slide Deck」，設定格式、語言、篇幅並選好來源後生成，可下載 PDF 或 PowerPoint（.pptx），也能逐頁輸入修改指示。這項功能只開放 18 歲以上的使用者，學生帳號用不到；AI 生成的簡報可能有視覺或事實錯誤，上課前要自己核對。" } },
     { "@type": "Question", "name": "可以上傳哪些類型的來源？", "acceptedAnswer": { "@type": "Answer", "text": "常見的有 PDF、Word 文件、純文字、網頁連結、YouTube 影片連結、Google 文件與簡報。教育版方案的來源數量上限比免費版高出好幾倍，實際上限以帳號當下顯示為準，Google 會隨方案調整。" } },
     { "@type": "Question", "name": "問答一定要有出處嗎？沒有上傳的內容它會不會亂編？", "acceptedAnswer": { "@type": "Answer", "text": "Gemini Notebook 設計上只根據你上傳的來源回答，遇到來源裡沒有的內容，會直接說找不到，而不是憑空生成答案，這是它跟一般聊天型 AI 最大的差別。每個答案旁邊也會標出處，可以點回去對照原文，不用全盤信任 AI 給的答案。" } },
     { "@type": "Question", "name": "語音摘要（Audio Overview）是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "上傳來源後，Gemini Notebook 可以把內容生成一段像 Podcast 的語音導讀，用對話的方式摘要重點，適合當作課前導聆或通勤時複習用。教育版方案的語音摘要額度比免費版高。" } },
@@ -125,7 +126,7 @@
     <h1>Gemini Notebook 怎麼用？上傳教材做成有出處的問答</h1>
     <p>一般 AI 聊天憑訓練資料回答，Gemini Notebook 只根據你上傳的文件回答，答錯了也查得到是哪裡錯。</p>
     <p class="kb-audience" style="margin-top:14px;font-size:0.9rem;color:var(--muted);"><strong>這篇適合：</strong>國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。</p>
-    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-09-13">2026 年 9 月 13 日</time></p>
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-11-02">2026 年 11 月 2 日</time></p>
   </div>
 </div>
 
@@ -188,10 +189,24 @@
     </ul>
     <p>Gemini Notebook 跟教育版方案的關係、進階額度差異，整理在 <a href="/knowledge/gemini">Gemini 方案懶人包</a>；跟 Claude、ChatGPT 的整體比較見 <a href="/knowledge/ai-comparison">學校 AI 助手怎麼選</a>。</p>
 
+    <h2 class="section-title reveal" style="margin-top:48px;">把來源變成簡報：Slide Deck</h2>
+    <p>Gemini Notebook 可以把筆記本裡的來源直接做成一份簡報（介面上叫 Slide Deck）。步驟依官方說明：</p>
+    <ol class="cg-steps reveal">
+      <li><strong>打開有來源的筆記本</strong>，在右側 Studio 面板選「Slide Deck」。</li>
+      <li><strong>設定格式、輸出語言、篇幅，並選擇要用哪些來源</strong>。可以用一句話描述需求，例如「給初學者看、風格活潑、重點放在步驟說明」。</li>
+      <li><strong>選「立即生成」或「稍後生成」</strong>，做好後可以簡報播放，或從三點選單下載 PDF 或 PowerPoint（.pptx）。</li>
+      <li><strong>要改某一頁</strong>，在該頁輸入修改指示，可以調整文字、版面或視覺。注意官方說明：修改時<strong>不會再參考來源</strong>。</li>
+    </ol>
+    <p>老師要先知道三件事：一，這項功能<strong>只開放 18 歲以上的使用者</strong>，學生帳號用不到；二，邊做邊檢視大綱的「共同創作」模式，目前只有 Google AI Ultra 訂閱者才有；三，官方提醒簡報由 AI 生成，<strong>畫面與內容都可能有錯</strong>，上課前要自己逐頁核對。依來源做簡報的好處是內容有依據，跟用 Gemini 或 Canvas 憑空生成不同，兩種做法的比較見<a href="/knowledge/ai-slides">用 AI 做簡報</a>。（<a href="https://support.google.com/gemininotebook/answer/16757456" target="_blank" rel="noopener">Google 官方說明</a>）</p>
+
     <h2 class="section-title reveal" style="margin-top:48px;">常見問題</h2>
     <details class="faq-item reveal" open>
       <summary>Gemini Notebook 是什麼？跟一般 Gemini 聊天有什麼不同？</summary>
       <div class="faq-a">Gemini Notebook（2026 年 7 月由 NotebookLM 更名，功能相同）只根據你上傳的文件回答問題，不會拿訓練資料裡的內容硬答，每句話也會標出處於原文哪一段。一般 Gemini 聊天則是憑訓練資料回答，範圍更廣但比較容易講出看起來合理、實際不存在的內容。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>Gemini Notebook 可以直接做簡報嗎？</summary>
+      <div class="faq-a">可以。在筆記本右側 Studio 面板選「Slide Deck」，設定格式、語言、篇幅並選好來源後生成，可下載 PDF 或 PowerPoint（.pptx），也能逐頁輸入修改指示。這項功能只開放 18 歲以上的使用者，學生帳號用不到；AI 生成的簡報可能有視覺或事實錯誤，上課前要自己核對。</div>
     </details>
     <details class="faq-item reveal">
       <summary>可以上傳哪些類型的來源？</summary>
@@ -281,7 +296,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.33.1</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.33.2</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
