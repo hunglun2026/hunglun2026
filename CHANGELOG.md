@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.33.5（2026-11-02）
+
+更正 Kahoot! EDU Standard 人數：100 位改 800 位。
+
+- 核對：Kahoot 官方 EDU School & District 方案比較表（kahoot.com/schools/edu-school-and-district）寫 Standard 即時 800、指派作業 800；Pro 即時 2,000、指派作業 10,000。教育部選購名單頁未載明人數，站內原本的 100 位找不到依據
+- 改動：`kahoot` 頁（描述、結構化資料、內文、常見問題，加官方出處連結）、`edtech-software`、`software`、`software/cards`、教學專區索引、主題頁、`llms.txt`、llms-full
+- 圖卡 `cards/kahoot*` 重產（「800 人上線」，避免折行孤字），引用處 `?v=3` 升 `?v=4`；產生器 `gen-product-cards.py` 同步
+
 ## v1.33.4（2026-11-02）
 
 自動完成缺口收尾：三個題目站內其實已有頁，只補用戶用詞，不新增重複頁。
