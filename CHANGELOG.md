@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.33.3（2026-11-02）
+
+Classroom 主頁補「電腦、手機與學生怎麼登入」（自動完成缺口：「classroom 手機登入」「學生帳號」）。
+
+- `classroom`：新增登入一節（電腦、Android、iPhone、Chromebook 步驟，課程代碼 6 到 8 碼規則，加入一次全裝置可見）與 3 則常見問題（手機登入、加入課程、家長能否登入），HTML 與 FAQ 結構化資料都加
+- 更正：Google 官方列出個人 Google 帳號也能進 Classroom（只是沒有學生／老師身分選項），原文「不是個人 Gmail」改為「學校的課程不能用個人 Gmail 進」
+- 資料來自 Google Classroom 說明中心三篇（登入、App、加入課程）
+
 ## v1.33.2（2026-11-02）
 
 依自動完成缺口，在現有頁補兩段（內容取自官方說明）。
