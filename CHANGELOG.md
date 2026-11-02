@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.32.6（2026-11-02）
+
+依 GSC「能引進流量的關鍵字」分析，改 4 頁標題與描述（h1 不動）。
+
+- `workspace-editions`：標題與描述加「教育部選購名單序號」（「教育部google workspace」排名 2.0、147 曝光、0 點擊）
+- `gemini-free-for-teachers-students`：標題改「Gemini 免費嗎？老師可以免費用嗎？」（「gemini 免費」排名 2.7 到 2.9、0 點擊）
+- `gemini`：標題與描述加「怎麼申請」「教育帳號」（「gemini 教育版」「教育版申請」「教育帳號」買家型詞）
+- `gemini-flow-howto`：標題加「是什麼」「登入」「免費點數」（「google flow」13,320 曝光、點閱率偏低）
+
 ## v1.32.5（2026-11-02）
 
 課堂花絮的高雄女中卡片補上另外兩張現場照。
