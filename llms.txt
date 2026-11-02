@@ -40,7 +40,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [classAI 作業評分小幫手](https://classai.hunglun.com/)：接 Google Classroom 的作業評分工具，AI 依老師設定的評分標準或答案卷先評分寫評語，老師確認或改分後發回 Classroom，可匯出 Excel。內測中，需要密碼。
 - [學生回條 AI 辨識系統](https://lunslip.pages.dev/)：AI 視覺辨識家長同意書，自動比對名單並匯出 Excel。
 - [校園照片 Word 填入工具](https://lun-school-pic-v2.pages.dev/)：活動照片自動填入 Word 表格圖片格，本機處理不上傳。
-- [小綸出題小幫手](https://lunquiz.pages.dev/)：AI 依課程知識或上傳教材命題，支援單選/複選/填充/簡答，可調整難度與語言。
+- [Luno 綸諾・互動式評量](https://luno.hunglun.com/)：老師用 AI 依年級與科目出題，可下載 Word、PDF，也能發連結讓學生用手機或平板線上作答，系統自動評分，老師與家長即時看到作答進度；免安裝，打開網頁就能用。
 - [小綸即時測驗](https://quiz.hunglun.com/)：老師開房、學生輸入房號用手機作答同一份卷子，老師即時看到每位學生寫到哪、哪題錯最多，結束後下載 Excel 成績；學生免註冊，成績只保留 24 小時。
 - [課堂遊戲工坊](https://classgames.hunglun.com/)：請 Gemini 出題後貼回來，一份題庫變成連連看、記憶翻牌、轉盤抽題、打地鼠、闖關測驗五款課堂遊戲，分享前先列出正解讓老師審題；題庫只存在分享連結裡。
 - [會員集點系統（客戶委託案例）](https://www.hunglun.com/enterprise)：店家客製會員集點與後台管理系統，四種角色權限，雲端部署。
@@ -55,7 +55,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - Intune 到底在幹嘛？跟 Google CEU 有何不同（FAQ 格式共 7 題，誠實劃線服務範圍：鴻綸科技能代購 Intune 授權、也能借用客戶既有 Intune／SCCM 環境大量部署 ChromeOS Flex（Google 官方 Remote Deployment／FRD 機制，免人工跑機）；完整 Intune 導入顧問服務不在服務範圍內）：https://www.hunglun.com/google/intune
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
-- 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分三區：九個主題探險網站〔動物、植物、兩棲、故宮、海洋、昆蟲、古蹟、土石流、美食〕、闖關遊戲〔邊玩邊變強〕、課堂即時測驗〔小綸即時測驗，老師開房全班用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
+- 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分三區：九個主題探險網站〔動物、植物、兩棲、故宮、海洋、昆蟲、古蹟、土石流、美食〕、闖關遊戲〔邊玩邊變強〕、課堂即時測驗〔Luno 綸諾，老師出題、學生線上作答用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
 - 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習專區／資料查詢網站全部免費）：https://www.hunglun.com/tools
   - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、學習專區 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
 - 學生回條 AI 辨識系統介紹（家長同意書回條拍照統計、匯出 Excel）：https://www.hunglun.com/tools/consent-slip-ai
