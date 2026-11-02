@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.32.7（2026-11-02）
+
+依 Google 搜尋框自動完成（「ai 教案」「ai 教案 生成」）改教案頁標題。
+
+- `gemini-teaching-prompts`：標題改「AI 教案怎麼生成？老師用 Gemini 備課的提示詞與實測」，描述開頭加「AI 教案怎麼生成？」，h1 不動
+- 不新增文章：站內已有教案（本頁、`gemini-lesson-planning`）與出題（`ai-quiz-generator-for-teachers`）專頁，新頁會互搶排名
+- 站內 Gemini Notebook（原 NotebookLM）改名已一致，不需再改
+
 ## v1.32.6（2026-11-02）
 
 依 GSC「能引進流量的關鍵字」分析，改 4 頁標題與描述（h1 不動）。
