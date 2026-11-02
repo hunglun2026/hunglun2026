@@ -67,7 +67,7 @@ const NAV = {
   "3": "/software",               // 雲端數位學習
   "4": "/services/procurement",   // 台銀標專區
   "5": "/services/campus-training", // Google 認證培訓
-  "7": "/events",                 // 活動剪影
+  "7": "/events",                 // 課堂花絮
   "8": "/google",                 // Google 教育
   "9": "/services/chromebook",    // Chromebook
 };

@@ -21,7 +21,7 @@ const MAP = {
   "3": "/software",                       // 雲端數位學習 總覽（直接指現址，避免 301 接 301）
   "4": "/services/procurement",           // 台銀標專區 總覽
   "5": "/services/campus-training",       // Google 認證培訓 總覽
-  "7": "/events",                         // 活動剪影
+  "7": "/events",                         // 課堂花絮
 
   // ── Google 教育子頁 ──
   "8:42": "/knowledge/google",            // Google for Education

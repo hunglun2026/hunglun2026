@@ -66,7 +66,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
   - 各場研習講義（例如「用最簡單的應用程式，了解 Vibe Coding 的邏輯」）皆須密碼才能閱讀，內容不對外公開。想安排到校研習請洽 https://www.hunglun.com/services/campus-training
 - 數位學習軟體導入（選型建議、校園授權採購、帳號開通與網域整合、教師應用培訓，以及各軟體完整說明：Thinglink VR360 六種一年期校園授權、Edpuzzle 無限制建立課程影片、Kami 支援 Word/PowerPoint/PDF 並可連結 Google Classroom、Padlet 校園版 11 項功能且最低購買 10U、Wordwall 基本／標準／專業三版本含 12 款標準範本與 22 款專業範本、Kahoot! EDU Standard 支援 100 位學生同時參與與 AI Generator、Adobe Creative Cloud 與 Document Cloud）：https://www.hunglun.com/software
 - 教育部選購名單產品介紹圖卡（Kahoot、Padlet、Wordwall、ThingLink、Google 教育版、ChromeOS Flex 的產品介紹圖卡與教育部選購名單產品編號，可下載圖片，網址 https://www.hunglun.com/software/cards）
-- 活動剪影（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
+- 課堂花絮（2017 年至今參與及協辦的教育研習、成果展與 Google 教育活動累計數十場，本頁收錄其中 20 場留有影像紀錄者）：https://www.hunglun.com/events
 - 常見問題（公司背景與 Google 官方授權身分、學校導入從哪一步開始、可否委託客製開發、服務範圍、系統是否留存學生個資、SEO／GEO／AEO 的差別。**教學與選型類文章不在這裡，在 /knowledge**）：https://www.hunglun.com/faq
 - 邊玩邊變強（國小九九乘法、加減法、注音符號與英文字母練習遊戲，答對題目才能出手攻擊，打贏還能升級、掉裝備，登入帳號可建立角色保存進度，也能直接遊戲不登入，另附六款練習小遊戲，免安裝）：https://game.hunglun.com/
 - 動物探險家（國小動物教學網站：動物小百科、分類闖關、誰住哪裡、猜猜我是誰、保育小教室，老師可產生可列印的學習單並用搶答計分板，免註冊、免安裝）：https://zoo.hunglun.com/
