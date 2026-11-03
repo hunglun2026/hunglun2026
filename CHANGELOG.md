@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.34.6（2026-11-03）
+
+學習專區 13 個遊戲／學習網站的 SEO／AEO／GEO 補齊，全部網址送進索引。
+
+- 13 個子網域（game、zoo、plant、frog、ocean、insects、museum、heritage、landslide、food、physics、zoodefense、luno）各補：robots.txt（含 Sitemap 與主要 AI 爬蟲允許）、sitemap.xml、llms.txt、首頁 JSON-LD（WebApplication＋BreadcrumbList）、各頁 canonical、IndexNow 金鑰檔；plant／frog／heritage 原本沒有 sitemap，game／luno 的 robots／sitemap 原本被 HTML 墊檔蓋掉
+- 新增 `sitemap/seo-games.py`（一次補齊、可重跑）與 `sitemap/indexnow-games.py`（依子網域送 IndexNow）
+- llms-full.txt 的學習專區頁補上 13 個網站的名稱、網址與說明（連結網址原本在抽文字時被剝掉）
+- 已送 IndexNow（Bing／ChatGPT 搜尋）；Google 端待 GSC 登入後提交各站 sitemap
+
 ## v1.34.5（2026-11-03）
 
 學習專區新增「動物園守護戰」（zoodefense.hunglun.com）。
