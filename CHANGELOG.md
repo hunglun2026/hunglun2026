@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.34.5（2026-11-03）
+
+學習專區新增「動物園守護戰」（zoodefense.hunglun.com）。
+
+- 新增卡片（闖關遊戲區第二張）：國小自然課塔防遊戲，動物當砲塔、答「這是什麼動物？」升級，10 關，低年級有注音與朗讀；新增卡片圖 `game-zoodefense.webp`（線上遊戲畫面）與圖示 `icon-proj-zoodefense.webp`（遊戲裡大象塔的徽章）
+- ItemList 補第 13 筆，numberOfItems 改 13；分頁數字「全部 13」「闖關遊戲 2」；首頁學習專區 tile、tools.html 總覽描述、llms.txt 同步
+- 搜尋索引與 llms-full 已重產
+
 ## v1.34.4（2026-11-03）
 
 Flex 部署工具包加入「依學校產生 Intune 安裝包」小程式，簡易說明頁步驟 2 同步改寫。
