@@ -84,11 +84,12 @@
   </section>
 
   <section>
-    <h2><span class="no">2</span>產生兩個安裝包</h2>
+    <h2><span class="no">2</span>替學校產生兩個安裝包</h2>
     <ol>
-      <li>下載下方的「Flex 部署工具包」，解壓縮後雙擊 <code>開始操作.bat</code>，選「產生 Intune 安裝包」。</li>
-      <li>填權杖、Wi-Fi 名稱、Wi-Fi 密碼。<b>不要勾「不註冊」</b>。</li>
-      <li>按綠色一次（模擬版）、紅色一次（正式版），<code>output\</code> 會出現 <code>flex-DRYRUN-…</code> 和 <code>flex-REAL-…</code> 兩個檔。</li>
+      <li>下載下方的「Flex 部署工具包」，在 zip 上按右鍵「全部解壓縮」，雙擊 <code>產生學校安裝包.bat</code>（不用另外裝任何東西）。</li>
+      <li>第一次先輸入 <code>A</code>，依序貼學校名稱、權杖、Wi-Fi 名稱、Wi-Fi 密碼。權杖格式不對，程式會直接擋下。</li>
+      <li>回到清單後輸入該校的編號，再輸入 <code>Y</code>，程式會連續做出模擬版和正式版，各約 1GB，要等幾分鐘。</li>
+      <li>成品在 <code>output\學校名稱\</code>：兩個 <code>.intunewin</code> 檔和一份「上傳清單」，下一步建 App 照著抄。換學校就重複這一步，每間學校的檔案各放各的資料夾。</li>
     </ol>
     <div class="note warn"><b>Wi-Fi 一定要打對</b>打錯的話，轉換會成功，但電腦都註冊不上。</div>
     <div class="note warn"><b>安裝包內含權杖</b>只放在自己的電腦和 Intune，不要放雲端分享、不要寄出去。</div>

@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.34.4（2026-11-03）
+
+Flex 部署工具包加入「依學校產生 Intune 安裝包」小程式，簡易說明頁步驟 2 同步改寫。
+
+- `Flex部署工具包.zip` 重新打包（8.8MB）：新增 `產生學校安裝包.bat`（用內建執行檔，同事電腦不用裝 Python），學校清單與權杖只存在使用者自己電腦，zip 內不含任何權杖
+- `/tools/flex-deploy-intune` 步驟 2 改成用新的 bat：新增學校、選編號、產出模擬版與正式版
+
 ## v1.34.3（2026-11-03）
 
 Intune 簡易說明頁取代舊的「Intune 大量部署手冊」，網址改用原本的 `/tools/flex-deploy-intune`。
