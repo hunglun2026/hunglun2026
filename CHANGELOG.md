@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.34.1（2026-11-03）
+
+內部工具區新增「Intune 派送 Flex 簡易使用說明」，給第一次用 Intune 的人。
+
+- 新頁 `/tools/flex-enroll/intune-quick`（工具密碼保護）：一頁六步，含 Intune 建 App 的欄位表、可一鍵複製的安裝命令、傳回代碼表
+- 新增下載 `Intune派送Flex-新手使用說明.docx`（4 頁，無圖）；Intune 篇完整手冊頂部加連結到簡易頁
+
 ## v1.34.0（2026-11-03）
 
 學習專區新增「普通物理」（physics.hunglun.com），也是第一個大學程度的網站。
