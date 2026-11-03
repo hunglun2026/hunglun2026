@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.34.3（2026-11-03）
+
+Intune 簡易說明頁取代舊的「Intune 大量部署手冊」，網址改用原本的 `/tools/flex-deploy-intune`。
+
+- `/tools/flex-deploy-intune` 內容換成一頁六步的簡易說明（原長手冊下架，歷史紀錄仍在 git）
+- 舊的 `/tools/flex-enroll/intune-quick` 301 轉到 `/tools/flex-deploy-intune`
+- 商用工具頁 Flex 卡片：標題與主按鈕改指向簡易說明，說明文字同步；原「看手冊・下載工具」按鈕拿掉
+- `/tools/flex-deploy`（Windows 版長手冊）暫時保留，教學頁與下載頁仍連到它
+
 ## v1.34.2（2026-11-03）
 
 商用工具頁的 ChromeOS Flex 卡片新增「Intune 派送說明」按鈕，連到簡易使用說明頁。

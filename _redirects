@@ -79,3 +79,6 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 /local-food-xinying /tools 301
 /local-food-yanshui /tools 301
 /local-food-dongshan /tools 301
+
+# Intune 簡易說明頁已取代舊的 Intune 大量部署手冊，2026-11-03
+/tools/flex-enroll/intune-quick /tools/flex-deploy-intune 301
