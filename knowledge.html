@@ -1108,7 +1108,7 @@
 .kn-tabs a[aria-current="page"] span{color:var(--accent)}
 @media (max-width:640px){.kn-tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}.kn-tabs::-webkit-scrollbar{display:none}}
 </style>
-<style>.page-head p{text-align:center;max-width:760px}.kn-insights-more{text-align:center;margin:18px 0 0}.prose p.kn-intro-note{max-width:none;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}</style>
+<style>.page-head p{text-align:center;max-width:760px}.prose p.kn-intro-note{max-width:none;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}</style>
 </head>
 <body>
 
@@ -1125,6 +1125,7 @@
       <a href="/enterprise">企業方案</a>
       <a href="/software">數位學習軟體導入</a>
       <a href="/knowledge" class="active">教學專區</a>
+      <a href="/insights">AI 最新消息</a>
       <a href="/tools/games">學習專區</a>
       <a href="/tools" class="mobile-tools-link">資源分享</a>
       <a href="/contact" class="mobile-contact-link">聯絡我們</a>
@@ -1143,7 +1144,7 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="麵包屑"><a href="/">首頁</a> ／ 教學專區</nav>
     <h1>教學專區</h1>
-    <p>92 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。<br>內容由 Google for Education 認證夥伴整理，每篇都是獨立網址，方便查找與分享。</p>
+    <p>93 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。<br>內容由 Google for Education 認證夥伴整理，每篇都是獨立網址，方便查找與分享。</p>
     <p><a class="btn btn-primary" href="/knowledge/gemini-prompt-kit">免費下載：Gemini 備課與校務提示詞 30 組</a></p>
   </div>
 </div>
@@ -1151,14 +1152,13 @@
 <div class="section kn-filter-wrap">
   <div class="wrap">
 <nav class="kn-tabs" aria-label="教學專區主題">
-  <a href="/knowledge" aria-current="page">全部 <span>92</span></a>
+  <a href="/knowledge" aria-current="page">全部 <span>93</span></a>
   <a href="/knowledge/topic/google-ai">Google 與 AI 導入 <span>36</span></a>
   <a href="/knowledge/topic/gemini">Gemini 教育版與 Notebook <span>20</span></a>
   <a href="/knowledge/topic/web">數位學習軟體與網站 <span>16</span></a>
   <a href="/knowledge/topic/classroom">Google Classroom <span>10</span></a>
   <a href="/knowledge/topic/hardware">設備選型與採購 <span>7</span></a>
   <a href="/knowledge/topic/compliance">資安與個資法遵 <span>4</span></a>
-  <a href="/insights">教育科技觀察 <span>11</span></a>
 </nav>
   </div>
 </div>
@@ -1167,34 +1167,7 @@
   <div class="wrap prose">
     <p>這裡整理的是我們在學校端實際被問到的問題。與其在每次研習或案場重講一次，不如寫成可以直接引用的文章：<strong>授權與方案</strong>類回答「該買哪個版本、續約會遇到什麼」，<strong>設備採購</strong>類回答「載具怎麼選、預算怎麼編」，<strong>網站與工具</strong>類回答「自己做還是委外、要注意什麼」。</p>
     <p>內容原則是<strong>不寫會過期的價格與法規金額門檻</strong>，改寫判斷原則與檢查清單；牽涉 Google 產品版本與授權政策的部分，都以官方最新公告為準並附上出處連結。每篇文末標示最後更新日期。</p>
-    <p class="kn-intro-note">想看最新的變動與判讀？<a href="/insights">教育科技觀察</a>寫的是當下發生的事對學校代表什麼；下面這些是系統性的實務指南。</p>
-  </div>
-</section>
-
-<!-- 教育科技觀察：主選單拿掉「科技觀察」後改從這裡進（2026-10-29）。只放最新 3 篇，完整清單在 /insights。
-     不用 kn-group：gen-knowledge-topics.py 會把 kn-group 當成主題產生分類頁 -->
-<section class="section kn-insights" id="insights" aria-labelledby="insightsTitle">
-  <div class="wrap">
-    <h2 class="section-title reveal" id="insightsTitle">教育科技觀察</h2>
-    <p class="section-sub reveal">Google 教育方案與 AI 政策的最新變動，對學校代表什麼、下一步該做什麼。</p>
-    <ul class="kn-list">
-      <li><a class="kn-item" href="/insights/gemini-student-hub">
-        <img class="kn-icon" width="160" height="160" src="/assets/icon-gemini.svg" alt="" loading="lazy" decoding="async">
-        <span class="kn-text"><span class="kn-t">Gemini 學生專區開放教育版：沒有獨立開關</span><span class="kn-d">10/1 開放所有年齡的教育版使用者，受 Gemini 應用程式的 AI 設定控制，沒有獨立開關。免費一年方案台灣資格無法確認。</span></span>
-        <time class="kn-date" datetime="2026-10-10">2026/10/10</time>
-        </a></li>
-      <li><a class="kn-item" href="/insights/gemini-personal-account-model-changes">
-        <img class="kn-icon" width="160" height="160" src="/assets/icon-gemini.svg" alt="" loading="lazy" decoding="async">
-        <span class="kn-text"><span class="kn-t">Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號</span><span class="kn-d">10 月 9 日起免費個人帳號只剩 Flash-Lite，AI Plus 失去 Pro。調整只針對個人帳號，學校帳號另有規定。</span></span>
-        <time class="kn-date" datetime="2026-10-06">2026/10/06</time>
-        </a></li>
-      <li><a class="kn-item" href="/insights/gemini-4-argon">
-        <img class="kn-icon" width="160" height="160" src="/assets/icon-gemini.svg" alt="" loading="lazy" decoding="async">
-        <span class="kn-text"><span class="kn-t">Gemini 4 Argon 可以用了嗎？開放時程與方案整理</span><span class="kn-d">輸出上限 100 萬 token、程式與企業知識工作評測領先。9/30 只開給網路防禦者，10/13 起 Gemini App 開放給 Pro 與 Ultra，教育版官方未說明。</span></span>
-        <time class="kn-date" datetime="2026-10-01">2026/10/01</time>
-        </a></li>
-    </ul>
-    <p class="kn-insights-more"><a class="btn" href="/insights">看全部 11 篇觀察 →</a></p>
+    <p class="kn-intro-note">想看最新的變動與判讀？<a href="/insights">AI 最新消息</a>寫的是當下發生的事對學校代表什麼；下面這些是系統性的實務指南。</p>
   </div>
 </section>
 
@@ -2309,7 +2282,7 @@
           <li><a href="/software">數位學習軟體導入</a></li>
           <li><a href="/knowledge">教學專區</a></li>
           <li><a href="/tools/games">學習專區</a></li>
-          <li><a href="/insights">教育科技觀察</a></li>
+          <li><a href="/insights">AI 最新消息</a></li>
           <li><a href="/tools">資源分享</a></li>
           <li><a href="/faq">常見問題</a></li>
           <li><a href="/privacy">隱私權政策</a></li>

@@ -581,6 +581,10 @@ Windows 電腦整批遠端轉 ChromeOS Flex・Intune 派送簡易說明＋工具
 Intune 派送說明
 直接下載
 大量部署系統
+安裝 ChromeOS Flex 至無 Intune 電腦
+適用 Surface Go、一般 Windows 電腦・隨身碟安裝
+電腦沒有 Intune、不能遠端派送時，用隨身碟一台一台安裝。隨身碟做好一次，之後換學校只要用小程式改掉裡面的註冊權杖，約 0.1 秒，不用重做。這個頁面有完整流程：後台建機構單位、產權杖、設時區、換權杖、裝機，以及隨身碟卡在 0% 的處理。小程式只支援 Windows 10／11。內部同事使用，需輸入密碼。
+隨身碟安裝說明
 全國學校人數查詢
 各校人數・推廣名單・AI Pro 導入試算
 整合公開統計資料，4,200 多所國小、國中、高中職與大專的學生人數、班級數與歷年變化，附地圖與未來推估。另有 Google AI Pro for Education 推廣名單與導入試算，可估算各校授權數並產生提案。內部同事使用，需輸入密碼。
@@ -1302,29 +1306,19 @@ https://www.hunglun.com/knowledge
 
 首頁 ／ 教學專區
 教學專區
-92 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。
+93 篇實務文章，涵蓋 Google 授權方案、AI 融入教學、資訊設備採購、網站建置與校園法遵。
 內容由 Google for Education 認證夥伴整理，每篇都是獨立網址，方便查找與分享。
 免費下載：Gemini 備課與校務提示詞 30 組
-全部 92
+全部 93
 Google 與 AI 導入 36
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 16
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-教育科技觀察 11
 這裡整理的是我們在學校端實際被問到的問題。與其在每次研習或案場重講一次，不如寫成可以直接引用的文章：授權與方案類回答「該買哪個版本、續約會遇到什麼」，設備採購類回答「載具怎麼選、預算怎麼編」，網站與工具類回答「自己做還是委外、要注意什麼」。
 內容原則是不寫會過期的價格與法規金額門檻，改寫判斷原則與檢查清單；牽涉 Google 產品版本與授權政策的部分，都以官方最新公告為準並附上出處連結。每篇文末標示最後更新日期。
-想看最新的變動與判讀？教育科技觀察寫的是當下發生的事對學校代表什麼；下面這些是系統性的實務指南。
-教育科技觀察
-Google 教育方案與 AI 政策的最新變動，對學校代表什麼、下一步該做什麼。
-Gemini 學生專區開放教育版：沒有獨立開關10/1 開放所有年齡的教育版使用者，受 Gemini 應用程式的 AI 設定控制，沒有獨立開關。免費一年方案台灣資格無法確認。
-2026/10/10
-Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號10 月 9 日起免費個人帳號只剩 Flash-Lite，AI Plus 失去 Pro。調整只針對個人帳號，學校帳號另有規定。
-2026/10/06
-Gemini 4 Argon 可以用了嗎？開放時程與方案整理輸出上限 100 萬 token、程式與企業知識工作評測領先。9/30 只開給網路防禦者，10/13 起 Gemini App 開放給 Pro 與 Ultra，教育版官方未說明。
-2026/10/01
-看全部 11 篇觀察 →
+想看最新的變動與判讀？AI 最新消息寫的是當下發生的事對學校代表什麼；下面這些是系統性的實務指南。
 Google 與 AI 導入
 授權方案怎麼選、AI 怎麼真的用在教學與行政上。
 學校想換 Google 經銷商怎麼換？流程、帳單與資料會不會受影響轉移授權怎麼產生、Workspace 與 Google AI Pro 的操作步驟、年繳預付不退費、資料與服務不受影響。
@@ -1537,14 +1531,13 @@ https://www.hunglun.com/knowledge/topic/google-ai
 首頁 ／ 教學專區 ／ Google 與 AI 導入
 Google 與 AI 導入
 授權方案怎麼選、AI 怎麼真的用在教學與行政上。共 36 篇，每篇都是獨立網址，方便查找與分享。
-全部 92
+全部 93
 Google 與 AI 導入 36
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 16
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-教育科技觀察 11
 學校想換 Google 經銷商怎麼換？流程、帳單與資料會不會受影響轉移授權怎麼產生、Workspace 與 Google AI Pro 的操作步驟、年繳預付不退費、資料與服務不受影響。
 2026/10/27
 學校 Google 帳號畢業後還能用嗎？資料轉移與刪除由學校決定能不能用；停用與刪除的差別、用 Takeout 轉出雲端硬碟與 Gmail 的步驟、哪些轉不走。
@@ -1629,14 +1622,13 @@ https://www.hunglun.com/knowledge/topic/gemini
 首頁 ／ 教學專區 ／ Gemini 教育版與 Gemini Notebook
 Gemini 教育版與 Gemini Notebook
 Gemini 教育版怎麼開通與使用，以及 Gemini Notebook 的完整教學系列。共 20 篇，每篇都是獨立網址，方便查找與分享。
-全部 92
+全部 93
 Google 與 AI 導入 36
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 16
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-教育科技觀察 11
 Gemini 系列
 10 篇由淺入深的實際操作教學，附真實截圖，持續更新中。看 系列總覽頁。
 1．Gemini 怎麼用？從打開到第一次提問沒用過生成式 AI 也沒關係，從打開網頁到看懂第一個回答，五分鐘走完。
@@ -1692,15 +1684,14 @@ https://www.hunglun.com/knowledge/topic/web
 
 首頁 ／ 教學專區 ／ 數位學習軟體與網站工具
 數位學習軟體與網站工具
-校園常用的數位學習軟體怎麼選，以及網站與系統相關的實務知識。共 15 篇，每篇都是獨立網址，方便查找與分享。
-全部 92
+校園常用的數位學習軟體怎麼選，以及網站與系統相關的實務知識。共 16 篇，每篇都是獨立網址，方便查找與分享。
+全部 93
 Google 與 AI 導入 36
 Gemini 教育版與 Notebook 20
-數位學習軟體與網站 15
+數位學習軟體與網站 16
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-教育科技觀察 11
 Canva 教育版怎麼申請老師資格、學校信箱或上傳文件兩種驗證、48 小時審核與申請失敗的處理。
 2026/11/02
 Edpuzzle 是什麼把影片變成看得到學生進度的課程：Classroom 串接、AI 出題與免費版限制。
@@ -1745,14 +1736,13 @@ https://www.hunglun.com/knowledge/topic/classroom
 首頁 ／ 教學專區 ／ Google Classroom 教學
 Google Classroom 教學
 從建立課程到成績結算，Classroom 在校園實際會用到的功能與卡關排除。共 10 篇，每篇都是獨立網址，方便查找與分享。
-全部 92
+全部 93
 Google 與 AI 導入 36
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 16
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-教育科技觀察 11
 1．Google Classroom 是什麼？新手入門課程與名冊、作業與評分、公告互動等五大基本功能，第一次接觸從這篇開始。
 2026/09/10
 2．Classroom 教學：建課程到成績單八個步驟走完一學期，出作業、批改發還、成績單到封存，全程最新介面實際截圖。
@@ -1785,14 +1775,13 @@ https://www.hunglun.com/knowledge/topic/hardware
 首頁 ／ 教學專區 ／ 校園資訊設備選型與採購
 校園資訊設備選型與採購
 Chromebook、電腦與校園設備怎麼選、怎麼走採購流程。共 7 篇，每篇都是獨立網址，方便查找與分享。
-全部 92
+全部 93
 Google 與 AI 導入 36
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 16
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-教育科技觀察 11
 Intune 是什麼？學校 MDM 跟 Google 管理主控台比較Intune 與 Intune for Education 的差別、能管哪些裝置、授權怎麼來，以及 Chromebook 為什麼要用 Google 管理主控台。
 2026/10/21
 生生用平板結束了嗎？115 年數位學習計畫與載具汰換115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
@@ -1819,14 +1808,13 @@ https://www.hunglun.com/knowledge/topic/compliance
 首頁 ／ 教學專區 ／ 校園資安與個資法遵
 校園資安與個資法遵
 個資盤點、資安事件處理與校園法遵要求。共 4 篇，每篇都是獨立網址，方便查找與分享。
-全部 92
+全部 93
 Google 與 AI 導入 36
 Gemini 教育版與 Notebook 20
 數位學習軟體與網站 16
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-教育科技觀察 11
 校園資安事件通報與處理流程發現後第一小時該做的五件事、誰要通報給誰、應變小組怎麼組。
 2026/09/03
 個資法與校安須知校園個資風險、AI工具導入檢查重點。
@@ -1840,12 +1828,12 @@ Google Classroom 10
 
 ---
 
-## 教育科技觀察：Google 教育方案與 AI 導入的變動判讀｜鴻綸科技
+## AI 最新消息：Google 教育方案與 AI 導入的變動判讀｜鴻綸科技
 
 https://www.hunglun.com/insights
 
-首頁 ／ 教育科技觀察
-教育科技觀察
+首頁 ／ AI 最新消息
+AI 最新消息
 Google 教育方案、AI 導入與校園數位政策的變動，以及這些變動對台灣學校的實際意義。不轉述新聞，只寫學校真正需要知道的判讀與下一步。
 觀察文章列表
 Gemini 學生專區開放教育版：沒有獨立開關10/1 開放所有年齡的教育版使用者，受 Gemini 應用程式的 AI 設定控制，沒有獨立開關。免費一年方案台灣資格無法確認。
@@ -1881,7 +1869,7 @@ Gemini 圖片的浮水印可以關了：官方設定就能做到，但標註的�
 
 https://www.hunglun.com/insights/google-pics
 
-教育科技觀察 ／ Google Pics 上線
+AI 最新消息 ／ Google Pics 上線
 Google Pics 上線：AI 生圖修圖進了 Docs 和 Slides，而且預設是開的
 9 月 1 日推出，底層是 Nano Banana 影像模型。獨立網站 pics.new 之外，也直接接在 Docs 與 Slides 裡。適用方案包含 Google AI Pro for Education，預設為開啟，學校要主動決定各組織單位開不開。
 重點先看
@@ -1902,7 +1890,7 @@ Google 在 2026 年 9 月 1 日推出 Google Pics，是一套 AI 生圖與修圖
 官方公告的適用方案包含 Business Standard 與 Plus、Enterprise Standard 與 Plus、消費者的 Google AI Pro 與 Ultra，教育端則是 Google AI Pro for Education 這個外掛，以及 AI Expanded Access 外掛。有買 Google AI Pro for Education 的學校在這波範圍內，免費的 Education Fundamentals 本身不含這項功能。
 時間上，Rapid Release 網域從 9 月 1 日起漸進推出，功能完全顯示最長要 15 天；Scheduled Release 網域從 9 月 15 日起。方案與教育版差異見Gemini 教育版怎麼用。
 這次要特別留意的是「預設開啟」
-公告寫明這項產品預設為開啟，管理員可以在網域、組織單位或群組層級關閉。這跟前面幾篇教育科技觀察講的模式一樣，功能是預設開的，學校端要不要保留、對誰保留，得自己到管理主控台看，不會有通知請你決定。
+公告寫明這項產品預設為開啟，管理員可以在網域、組織單位或群組層級關閉。這跟前面幾篇文章講的模式一樣，功能是預設開的，學校端要不要保留、對誰保留，得自己到管理主控台看，不會有通知請你決定。
 要判斷的主要是未滿 18 歲學生端。Google Pics 接在 Docs 與 Slides 裡，等於學生在做報告、編簡報時，插入圖片的地方就會出現 AI 生圖選項。這跟一個獨立網站不一樣：獨立網站可以「不主動去用就沒事」，內建在日常工具裡的功能，預設開著就會被自然遇到。學校要嘛清楚決定「開放給學生、搭配使用規範」，要嘛在學生的組織單位關閉，兩種都可以，但這是一個要主動做的決定。
 AI 生圖的標註責任，跟浮水印那篇是同一件事
 技術面先講清楚：Nano Banana 產出的圖片一律帶 SynthID 隱形標記，可見浮水印則已經可以由使用者自行關閉（詳見Gemini 圖片的浮水印可以關了）。所以「這張圖是不是 AI 生成、要不要註明」在多數情況不是工具會替使用者處理的事。
@@ -3776,7 +3764,7 @@ Google for Education、Workspace 基礎版/進階版差異。
 
 https://www.hunglun.com/insights/classroom-rubric-generation
 
-教育科技觀察 ／ Classroom 評分量表生成
+AI 最新消息 ／ Classroom 評分量表生成
 Classroom 能自動生成評分量表了：省的是打字，不是判斷
 8 月 5 日起 3 天內全面上線，連免費的 Fundamentals 版都有。這功能省下的是打草稿的時間，評分標準要訂得準不準，還是得靠老師自己把關。
 ← 上一篇：Canva for Education 串接
@@ -3834,7 +3822,7 @@ Gemini 生成的評分量表可以直接拿來用嗎？
 
 https://www.hunglun.com/insights/classroom-context-aware-access
 
-教育科技觀察 ／ Classroom 情境感知存取
+AI 最新消息 ／ Classroom 情境感知存取
 Classroom 也能設定情境感知存取了，但多數學校不用急著鎖
 8 月 26 日公告，僅 Education Plus 可用。這是一項資安存取控制功能，不是教學功能，重點不是「有沒有開」，而是「用哪種邏輯開」。
 ← 上一篇：評分量表自動生成
@@ -3896,7 +3884,7 @@ Google 於 2026 年 8 月 26 日在 Workspace Updates 公告這項功能，目�
 
 https://www.hunglun.com/insights/gemini-image-watermark
 
-教育科技觀察 ／ Gemini 圖片浮水印
+AI 最新消息 ／ Gemini 圖片浮水印
 Gemini 圖片的浮水印可以關了：官方設定就能做到，但標註的責任回到人身上
 不用再找去浮水印工具。8 月 14 日起，Gemini 設定裡新增了「媒體浮水印」開關，要不要那個印，自己決定。真正值得學校注意的是沒被關掉的那一層。
 重點先看
@@ -3970,7 +3958,7 @@ Gemini 圖片浮水印開關什麼時候上線？
 
 https://www.hunglun.com/insights/gemini-classroom-all-ages
 
-教育科技觀察 ／ Gemini 開放所有年齡
+AI 最新消息 ／ Gemini 開放所有年齡
 學校可能沒發現：Classroom 的 Gemini 已經對所有年齡學生開啟了
 8 月 10 日生效，行動版 8 月 17 日跟上。重點不是這項功能好不好，而是管理主控台的預設值是「開啟」。沒有做任何決定的學校，決定已經生效了。
 重點先看
@@ -4030,7 +4018,7 @@ Classroom 的 Gemini 對所有年齡開放，什麼時候生效？
 
 https://www.hunglun.com/insights/gemini-notebook-expert-intelligence
 
-教育科技觀察 ／ Gemini Notebook Expert Intelligence
+AI 最新消息 ／ Gemini Notebook Expert Intelligence
 Gemini Notebook 新增 Expert Intelligence：買的電子書能直接餵給 AI 讀
 8 月 27 日上線，先開放 Google Play Books，超過 10 萬本主要出版社的電子書可用。重點不是又多一個來源類型，而是 Google 這次只認「使用者真的買過」的內容，這條線正好接住師生最常問的著作權疑慮。
 重點先看
@@ -4080,7 +4068,7 @@ Google 表示這是跨產品的長期方向，Play Books 只是第一步，後�
 
 https://www.hunglun.com/insights/gemini-student-hub
 
-教育科技觀察 ／ Gemini 學生專區
+AI 最新消息 ／ Gemini 學生專區
 Gemini 學生專區開放教育版：沒有獨立開關
 10 月 1 日起，所有年齡的教育版使用者都看得到。重點不是新入口有多少功能，而是它跟著 Gemini 應用程式的設定走，學校沒有另一個開關可以單獨處理。
 重點先看
@@ -4135,7 +4123,7 @@ Gemini 學生專區現在學校帳號能用嗎？
 
 https://www.hunglun.com/insights/gemini-personal-account-model-changes
 
-教育科技觀察 ／ Gemini 個人帳號模型調整
+AI 最新消息 ／ Gemini 個人帳號模型調整
 Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號
 Google 公告，10 月 9 日起沒有訂閱 AI 方案的個人帳號，在 Gemini App 只能用最輕量的 Flash-Lite。這次調整只針對個人帳號，學校的教育版帳號另有規定。學校不用加買什麼，該做的是確認師生登入的是學校帳號。
 重點先看
@@ -4190,7 +4178,7 @@ Pro 模型次數不夠用的老師，可以評估 Google AI Pro for Education；
 
 https://www.hunglun.com/insights/gemini-4-argon
 
-教育科技觀察 ／ Gemini 4 Argon 發表
+AI 最新消息 ／ Gemini 4 Argon 發表
 Gemini 4 Argon 可以用了嗎？開放時程與方案整理
 Google 9 月 30 日發表新一代前沿模型，數字很漂亮。9 月 30 日的公告只開給受信任的網路防禦者，10 月 13 日起 Gemini App 已開放給 Google AI Pro 與 Ultra 訂閱者，教育版官方沒有說明。學校不用急，我們把能確認的整理給你。
 2026 年 10 月 16 日更新：Gemini 官方更新日誌記載，10 月 13 日起 Gemini 4 Argon 在 Gemini App 開放給 Google AI Pro 與 Google AI Ultra 訂閱者。下方 9 月 30 日公告的內容保留原樣，教育版帳號、免費版與老師該不該自費升級，請看 Gemini 4 Argon 老師能用嗎。
@@ -4253,7 +4241,7 @@ Gemini 4 Argon 跟前一代差在哪？
 
 https://www.hunglun.com/insights/moe-ai-guidelines-115
 
-教育科技觀察 ／ 教育部 115 年數位與 AI 指引
+AI 最新消息 ／ 教育部 115 年數位與 AI 指引
 教育部 115 年數位與 AI 指引出爐：學校這學期先做這三件事
 三份指引寫給老師、校長、家長，三份手冊寫給國小、國中、高中學生。文件不難找，難的是這學期要先拿哪一份、交給誰。
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 25 日
@@ -4312,7 +4300,7 @@ AI之學習應用手冊（高中版）高中學生AI 運作原理、資訊判讀
 
 https://www.hunglun.com/insights/gemini-notebook-study-tools-update
 
-教育科技觀察 ／ Gemini Notebook 返校季更新
+AI 最新消息 ／ Gemini Notebook 返校季更新
 Gemini Notebook 返校季更新：語音對話、錄音機等五項
 9 月 15 日一次公告五項更新，主打返校季的自主學習情境。重點不是功能多，而是最受矚目的語音對話功能，先給付費訂閱者用，教育版帳號目前完全沒有時程。
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 18 日
