@@ -19,21 +19,31 @@ const BIG_FILES = {
   'flex-usb-tool.zip': 'FLEX_USB_URL',
 };
 
-export async function onRequest({ params, env, next }) {
+export async function onRequest({ request, params, env, next }) {
   const envVar = BIG_FILES[params.name];
   if (!envVar) return next();
 
   const src = env[envVar];
   if (!src) return new Response('伺服器尚未設定這個檔案，請聯絡管理員。', { status: 503 });
 
-  const upstream = await fetch(src);
+  // 支援「續傳」（Range）：1GB 以上的檔案下載中斷時，瀏覽器會用 Range 要求從中斷處接著下載，
+  // 若這裡忽略它、回整份新檔案，瀏覽器就會判定下載失敗。把 Range 原樣轉給 R2，回應也照 R2 的 206 與 Content-Range。
+  const range = request.headers.get('Range');
+  const isHead = request.method === 'HEAD';
+  const upstream = await fetch(src, { method: isHead ? 'HEAD' : 'GET', headers: range ? { Range: range } : {} });
+  if (upstream.status === 416) {
+    return new Response(null, { status: 416, headers: { 'Content-Range': upstream.headers.get('Content-Range') || '', 'Cache-Control': 'private, no-store' } });
+  }
   if (!upstream.ok) return new Response('檔案暫時無法下載，請聯絡管理員。', { status: 502 });
 
   const headers = new Headers();
   headers.set('Content-Type', 'application/zip');
   headers.set('Content-Disposition', `attachment; filename="${params.name}"`);
   headers.set('Cache-Control', 'private, no-store');
+  headers.set('Accept-Ranges', 'bytes');
   const len = upstream.headers.get('Content-Length');
   if (len) headers.set('Content-Length', len);
-  return new Response(upstream.body, { status: 200, headers });
+  const cr = upstream.headers.get('Content-Range');
+  if (cr) headers.set('Content-Range', cr);
+  return new Response(isHead ? null : upstream.body, { status: upstream.status === 206 ? 206 : 200, headers });
 }
