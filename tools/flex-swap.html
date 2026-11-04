@@ -68,6 +68,8 @@
   th { color: var(--muted); font-weight: 600; font-size: 14px; }
   th:first-child, td.k { width: 34%; }
   td.k { font-weight: 600; }
+  pre { background: var(--code-bg); border-radius: 10px; padding: 12px 16px; overflow-x: auto; margin: 10px 0; }
+  pre code { background: none; padding: 0; }
   ul { padding-left: 22px; margin: 8px 0; }
   li { margin: 4px 0; }
   footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
@@ -98,6 +100,7 @@
   <a href="#timezone">時區設定</a>
   <a href="#token">後台產權杖</a>
   <a href="#trouble">出狀況怎麼辦</a>
+  <a href="#clear">手動清空隨身碟</a>
   <a href="#notes">注意事項</a>
 </nav>
 
@@ -213,11 +216,41 @@
       <tr><td class="k">跳出錯誤對話框</td><td>記錄也存在 <code>%TEMP%\flex-swap-error.txt</code>，把這個檔案或對話框內容給 Claude。</td></tr>
       <tr><td class="k">找不到 USB、表格怪怪的</td><td>按視窗上的「診斷（複製資訊）」，貼給 Claude。內容只有電腦與磁碟基本資料，權杖只含前 8 碼。</td></tr>
       <tr><td class="k">寫入失敗，提示「存取被拒」</td><td>多半是防毒軟體或群組原則擋住直接寫入磁碟（公司或學校管理的電腦常見），這台就不能用。</td></tr>
-      <tr><td class="k">做 USB 時，復原公用程式卡在 0%</td><td>隨身碟上有舊分割區（別人用過的碟常見），跟容量無關。先取消工具，用系統管理員在 PowerShell 執行 <code>Clear-Disk -Number &lt;編號&gt; -RemoveData -RemoveOEM</code> 清空（先用 <code>Get-Disk</code> 確認編號是那顆 USB，千萬不要選到系統碟），再重新做。</td></tr>
+      <tr><td class="k">做 USB 時，復原公用程式卡在 0%</td><td>隨身碟上有舊分割區（別人用過的碟常見），跟容量無關。照下面「<a href="#clear">手動清空隨身碟</a>」清掉再重做。</td></tr>
       <tr><td class="k">插上 USB，Windows 跳「需要格式化磁碟」</td><td>一律按取消，千萬不要格式化。</td></tr>
       <tr><td class="k">視窗顯示「設定檔被系統清除，要重做 USB」</td><td>Flex 從 USB 開機時偶爾會把 USB 的資料區重建，權杖檔就消失了（2026-11-03 遇過一次，原因不明；11-04 還原後連續裝機沒再發生）。這時換權杖會被擋下來，要把 USB 還原或重做，把畫面貼給 Claude。</td></tr>
       <tr><td class="k">裝完機時區不是台灣</td><td>回後台看該單位的「時區」有沒有存成 <code>Asia/Taipei</code>，沒存就補存；存了還是錯，把機器序號與單位名稱給 Claude。</td></tr>
     </table>
+  </div>
+</section>
+
+<section id="clear">
+  <h2>手動清空隨身碟（復原公用程式卡在 0% 時）</h2>
+  <p>先按復原公用程式的「取消」並關掉它（它不能續跑，開著會佔住隨身碟）。清空會<strong>整顆刪除</strong>，不能復原，選錯碟會清到別顆，所以一定用<strong>容量</strong>認碟。</p>
+
+  <h3>方法一：磁碟管理（不用打指令，建議）</h3>
+  <div class="card">
+    <ol class="steps">
+      <li>對「開始」按右鍵 → <strong>磁碟管理</strong>。</li>
+      <li>看下半部，找那顆隨身碟（標「卸除式」、容量跟你買的一樣，例如 32GB 約顯示 29.3GB）。<strong>不要選到電腦內建的硬碟</strong>（通常是最大、標系統或開機的那顆）。</li>
+      <li>在它右邊每個區塊上按右鍵 → <strong>刪除磁碟區</strong>，直到整條變成黑色「<strong>未配置</strong>」。</li>
+      <li>回復原公用程式重新做。不用格式化，它會自己分割。</li>
+    </ol>
+  </div>
+
+  <h3>方法二：diskpart（幾行指令）</h3>
+  <div class="card">
+    <p>用系統管理員開 PowerShell 或命令提示字元，依序輸入：</p>
+    <pre tabindex="0"><code>diskpart
+list disk
+select disk 2
+clean
+exit</code></pre>
+    <p><code>list disk</code> 會列出所有碟，<strong>用容量認出隨身碟</strong>。<code>select disk</code> 後面的編號要換成你認出的那個，不要照抄 2，插拔後編號可能不同。</p>
+  </div>
+
+  <div class="warn">
+    <strong>小心：</strong>選錯碟會清掉別顆，而且救不回來。電腦內建的硬碟容量通常是 256GB 以上，跟 16～64GB 的隨身碟差很多，看容量不會搞混。Windows 跳「需要格式化磁碟」時一律按取消。
   </div>
 </section>
 
