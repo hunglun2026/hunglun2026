@@ -9,11 +9,14 @@
  * 等於任何人都能繞過密碼直接下載。
  *   FLEX_FULL_URL   flex-full.zip：一鍵轉換檔模擬版＋正式版＋Google FRD 套件＋記錄器（約 1GB），
  *                   解壓縮後不用再上網下載
+ *   FLEX_USB_URL    flex-usb-tool.zip：Flex 隨身碟工具包（換學校視窗＋做 Flex 隨身碟＋映像檔，約 1.5GB），
+ *                   給沒有 Intune 的電腦用，說明見 /tools/flex-swap
  *
  * 其他檔名一律 next()，交回給靜態檔案（例如 Flex部署工具包.zip、Word 說明書）。
  */
 const BIG_FILES = {
   'flex-full.zip': 'FLEX_FULL_URL',
+  'flex-usb-tool.zip': 'FLEX_USB_URL',
 };
 
 export async function onRequest({ params, env, next }) {
