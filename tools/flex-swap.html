@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=91" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=44">
+<title>Flex USB 換學校說明｜鴻綸科技</title>
+<style>
+  :root {
+    /* 主站 hunglun.com 色票（assets/style.css 的 :root），固定亮色 */
+    --bg: #FDFDFC; --card: #FFFFFF; --text: #1A1A1A; --muted: #5C5C5C; --line: rgba(0, 0, 0, .09);
+    --accent: #1E3A5F; --accent-soft: #E8EDF3; --warn: #8A5A00; --warn-soft: #FDF2DC;
+    --code-bg: #F1F2F4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px; line-height: 1.75; overflow-wrap: anywhere;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 80px; }
+  header { padding: 20px 0 8px; }
+  h1 { font-size: 30px; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0; }
+  nav {
+    position: sticky; top: 0; z-index: 5; background: var(--bg);
+    padding: 12px 0; margin: 12px 0 8px; border-bottom: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  nav a {
+    text-decoration: none; color: var(--text); background: var(--card);
+    border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 15px;
+  }
+  nav a:hover { border-color: var(--accent); color: var(--accent); }
+  section { margin-top: 28px; scroll-margin-top: 70px; }
+  h2 { font-size: 23px; margin: 0 0 12px; }
+  h3 { font-size: 18px; margin: 20px 0 8px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 20px; margin: 12px 0;
+  }
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; }
+  ol.steps > li {
+    counter-increment: s; position: relative; padding: 10px 0 10px 46px;
+    border-bottom: 1px dashed var(--line);
+  }
+  ol.steps > li:last-child { border-bottom: 0; }
+  ol.steps > li::before {
+    content: counter(s); position: absolute; left: 0; top: 11px;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;
+  }
+  code, kbd {
+    background: var(--code-bg); border-radius: 6px; padding: 1px 7px;
+    font-family: Consolas, "Courier New", monospace; font-size: 0.92em; word-break: break-all;
+  }
+  .note, .warn {
+    border-radius: 10px; padding: 12px 16px; margin: 12px 0; font-size: 16px;
+  }
+  .note { background: var(--accent-soft); }
+  .warn { background: var(--warn-soft); color: var(--warn); }
+  .warn strong { color: inherit; }
+  table { width: 100%; border-collapse: collapse; font-size: 16px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 14px; }
+  th:first-child, td.k { width: 34%; }
+  td.k { font-weight: 600; }
+  ul { padding-left: 22px; margin: 8px 0; }
+  li { margin: 4px 0; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+  .logo-link { display: inline-block; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+  .logo-link img { display: block; width: 200px; max-width: 46vw; height: auto; aspect-ratio: 907 / 180; object-fit: contain; }
+  footer.site { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+  footer.site a { color: var(--muted); }
+  @media (max-width: 560px) {
+    body { font-size: 16px; } h1 { font-size: 25px; }
+    .card { padding: 14px 14px; } th { width: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="logo-link" href="https://www.hunglun.com/" target="_blank" rel="noopener" aria-label="前往鴻綸科技官網">
+  <img src="/assets/hunglun-logo-company-light.webp?v=5" alt="鴻綸科技 Hunglun Technology">
+</a>
+<header>
+  <h1>Flex USB 換學校說明</h1>
+  <p class="sub">一支 USB 通用多間學校，換學校只改 USB 裡的註冊權杖，約 0.1 秒，不用重刷。只支援 Windows 10／11。</p>
+</header>
+
+<nav>
+  <a href="#quick">快速使用</a>
+  <a href="#newschool">新增學校完整流程</a>
+  <a href="#timezone">時區設定</a>
+  <a href="#token">後台產權杖</a>
+  <a href="#trouble">出狀況怎麼辦</a>
+  <a href="#notes">注意事項</a>
+</nav>
+
+<section id="quick">
+  <h2>快速使用（學校已經設好的情況）</h2>
+  <div class="card">
+    <ol class="steps">
+      <li><strong>整個資料夾先完整解壓縮</strong>到一般資料夾，不要在 zip 裡直接雙擊。</li>
+      <li>雙擊 <code>換學校.bat</code>（打不開就雙擊 <code>Start-GUI.bat</code>），Windows 詢問視窗按「是」。</li>
+      <li>第一次用：按「新增學校」，打學校名稱，貼後台產的自動註冊權杖（小寫 UUID，36 個字元）。</li>
+      <li>插上 USB，在清單選學校，按綠色大按鈕「換成選取的學校」（雙擊那一列也可以）。</li>
+      <li>記錄欄出現「完成：已換成……讀回相符」，就能拔 USB 去裝電腦。</li>
+    </ol>
+  </div>
+  <ul>
+    <li>視窗上方的狀態列會寫這支 USB 現在綁哪間學校；清單裡有「★ 這支 USB 現在綁這間學校」。</li>
+    <li>視窗開不起來，改用 <code>換學校-文字版.bat</code>（黑底文字選單，功能一樣）。</li>
+    <li>全新 USB：先用 Chrome 擴充功能「裝置復原公用程式」做好 Flex（16GB 以上），插上後按「第一次準備這支 USB」，之後才能換學校。</li>
+  </ul>
+</section>
+
+<section id="newschool">
+  <h2>新增一間學校的完整流程</h2>
+  <div class="card">
+    <ol class="steps">
+      <li><strong>後台建機構單位</strong>：目錄 → 機構單位 → 建立新單位，名稱例如 <code>2026-1104-flex測試</code>。</li>
+      <li><strong>後台產註冊權杖</strong>：照下面「<a href="#token">後台產權杖</a>」，選這個新單位，複製那串權杖。</li>
+      <li><strong>後台設時區</strong>（每個單位一次）：照下面「<a href="#timezone">時區設定</a>」。</li>
+      <li><strong>換權杖</strong>：開這個視窗，按「新增學校」貼上名稱和權杖，選那一列，按綠色大按鈕。</li>
+      <li><strong>裝機</strong>：用這支 USB 開機安裝。裝完後台「裝置 → Chrome → 裝置」會在該單位底下看到這台，狀態「已佈建」。</li>
+      <li><strong>驗證</strong>：登入畫面確認時區是台灣；之後把 USB 插回來，視窗上方狀態仍顯示那間學校，沒有「設定檔被系統清除」。</li>
+    </ol>
+  </div>
+  <div class="note">
+    <strong>同一台電腦要重裝測試：</strong>先在後台把那台「取消佈建」，授權會還回來，再重裝。
+    測完的清理：把測試裝置取消佈建；單位與權杖可以留著下次用，不想用了就到後台「註冊憑證」取消那組權杖。
+  </div>
+</section>
+
+<section id="timezone">
+  <h2>時區設定（每個機構單位做一次）</h2>
+  <p>沒指定時，ChromeOS 靠 IP 位址猜時區，有些網路會猜錯，所以裝完有時是台灣、有時不是。在單位的政策裡固定成台灣，就不會再猜。</p>
+
+  <h3>一、進到設定頁</h3>
+  <div class="card">
+    <ol class="steps">
+      <li>後台左邊選單：<code>裝置</code> → <code>Chrome</code> → <code>設定</code>。</li>
+      <li>上方分頁點 <strong>「裝置設定」</strong>（不是預設的「使用者與瀏覽器設定」）。</li>
+      <li>左邊機構單位清單，點你要設的單位。<strong>一定要先選對單位</strong>，設定才會存在那個單位。</li>
+    </ol>
+  </div>
+
+  <h3>二、找到時區</h3>
+  <div class="card">
+    <ol class="steps">
+      <li>點「搜尋或新增篩選器」，輸入 <strong>時區</strong>。</li>
+      <li>往下捲到 <strong>「其他設定」</strong> 區塊，點 <strong>「時區」</strong> 那一列。</li>
+    </ol>
+  </div>
+
+  <h3>三、改兩個欄位並儲存</h3>
+  <div class="card">
+    <table>
+      <tr><th>欄位</th><th>改成</th></tr>
+      <tr><td>系統時區</td><td><code>Asia/Taipei - 台北標準時間 GMT+08:00</code>（原本是「沿用裝置目前的時區」）</td></tr>
+      <tr><td>自動偵測系統時區</td><td><strong>一律不自動偵測時區</strong>（原本是「讓使用者決定」）</td></tr>
+    </table>
+    <p>最後按左下角藍色 <strong>「儲存」</strong>。</p>
+  </div>
+
+  <h3>四、確認有存成功</h3>
+  <div class="card">
+    <ol class="steps">
+      <li>回到清單，「時區」那列的沿用來源，應該從上層網域變成這個單位，或顯示「已在機構內採行」。</li>
+      <li>再點進去，兩個欄位還是上面那兩個值。</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    <strong>改在哪一層：</strong>設在上層單位，底下的學校單位會繼承；但上層會影響所有單位，包括別的學校。
+    先在測試單位驗證沒問題，再決定要不要往上放。沒設在上層的話，每新增一個學校單位都要重做一次，漏掉就回到「靠 IP 猜時區」。
+  </div>
+  <div class="note">
+    <strong>實機驗證：</strong>取消佈建測試機，用 USB 重裝，裝完到登入畫面看時區是不是台灣。錯誤不是每次都發生，建議多裝幾次。
+    註冊完成之前（安裝中、第一次歡迎畫面），政策還沒下載，這段時間的時區可能還是猜的；這點沒有官方文件佐證，以登入畫面看到的為準。
+  </div>
+</section>
+
+<section id="token">
+  <h2>後台產註冊權杖</h2>
+  <div class="card">
+    <ol class="steps">
+      <li>後台 <code>裝置</code> → <code>Chrome</code> → <code>註冊憑證</code>，按「註冊」。</li>
+      <li>選「非 ChromeOS 裝置」→「自動註冊（USB 安裝程式）」。</li>
+      <li>選<strong>該校的機構單位</strong>。</li>
+      <li>新增權杖（授權類型：ChromeOS Enterprise 或 Education 升級版）。</li>
+      <li>複製畫面上那串 36 字元權杖，停在那頁不用往下。</li>
+    </ol>
+  </div>
+  <div class="warn">
+    <strong>權杖等同註冊憑證：</strong>拿到的人可以把電腦註冊進該校網域並用掉授權。請只放在自己的雲端硬碟，不要分享連結；
+    不用了就到後台「註冊憑證」取消那組權杖。學校清單（<code>學校清單.json</code>）內含權杖，不要放進公開的地方。
+  </div>
+</section>
+
+<section id="trouble">
+  <h2>出狀況怎麼辦</h2>
+  <div class="card">
+    <table>
+      <tr><th>狀況</th><th>處理</th></tr>
+      <tr><td class="k">雙擊後黑視窗寫 <code>[ERROR]</code></td><td>照它說的做。常見三種：沒解壓縮完整；這台電腦把 PowerShell 鎖住（受限語言模式）；腳本被群組原則或資安軟體擋掉。後兩種這台電腦就沒辦法用，換一台。</td></tr>
+      <tr><td class="k">沒有視窗、也沒有訊息</td><td>多半是 Windows 詢問視窗被取消。重新雙擊，按「是」；要輸入密碼就用有系統管理員權限的帳號。</td></tr>
+      <tr><td class="k">跳出錯誤對話框</td><td>記錄也存在 <code>%TEMP%\flex-swap-error.txt</code>，把這個檔案或對話框內容給 Claude。</td></tr>
+      <tr><td class="k">找不到 USB、表格怪怪的</td><td>按視窗上的「診斷（複製資訊）」，貼給 Claude。內容只有電腦與磁碟基本資料，權杖只含前 8 碼。</td></tr>
+      <tr><td class="k">寫入失敗，提示「存取被拒」</td><td>多半是防毒軟體或群組原則擋住直接寫入磁碟（公司或學校管理的電腦常見），這台就不能用。</td></tr>
+      <tr><td class="k">插上 USB，Windows 跳「需要格式化磁碟」</td><td>一律按取消，千萬不要格式化。</td></tr>
+      <tr><td class="k">視窗顯示「設定檔被系統清除，要重做 USB」</td><td>Flex 從 USB 開機時偶爾會把 USB 的資料區重建，權杖檔就消失了（2026-11-03 遇過一次，原因不明；11-04 還原後連續裝機沒再發生）。這時換權杖會被擋下來，要把 USB 還原或重做，把畫面貼給 Claude。</td></tr>
+      <tr><td class="k">裝完機時區不是台灣</td><td>回後台看該單位的「時區」有沒有存成 <code>Asia/Taipei</code>，沒存就補存；存了還是錯，把機器序號與單位名稱給 Claude。</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="notes">
+  <h2>注意事項</h2>
+  <ul>
+    <li>需要<strong>系統管理員權限</strong>（用內建的 Windows PowerShell 5.1，不用裝任何東西）。</li>
+    <li>USB 要 16GB 以上，而且是用我們做好的那種（映像版本 16805.36.0）。版本換了，檢查會不符並停手，不會亂寫。</li>
+    <li>只處理「16GB 以上、外接、非開機碟、非系統碟」的 USB；寫入前比對位置簽名，寫完讀回比對。</li>
+    <li>放雲端硬碟用時：Google Drive 要把資料夾設成「離線可用」（或複製到電腦上）再執行；zip 被 Windows 擋，解壓縮前先在 zip 上按右鍵 → 內容 → 勾「解除封鎖」。</li>
+    <li>官方文件沒有寫換權杖的方法，這是依官方腳本 package_flex_image 的原始碼推出來，已在實機驗證（2026-11-02 首次、2026-11-04 換單位重裝）。</li>
+  </ul>
+</section>
+
+<footer class="site">
+  <div><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 Hunglun Technology</a>・Google for Education Professional Development Partner</div>
+  <div>Steve · November 2026</div>
+</footer>
+
+</div>
+</body>
+</html>
