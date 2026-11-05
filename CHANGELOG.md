@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.35.5（2026-11-05）
+
+全站斷行檢查（手機、平板、電腦）找到的剩餘孤字（最後一行只剩 2 個字），沿用既有 `.nowrap` 類別修掉，沒動 CSS。
+
+- 表格欄位：`/knowledge/gemini`（2 格）、`/knowledge/chromebook`、`/knowledge/ai-teaching`、`/knowledge/school-account-after-graduation`、`/knowledge/gemini-4-argon-teachers`、`/insights/classroom-context-aware-access`、`/insights/gemini-4-argon`、`/insights/gemini-notebook-study-tools-update`、`/services/ceu`
+- 段落：`/knowledge/google-certification` 結尾「往 Trainer 走。」
+- 沒動：`/knowledge`、`/contact`、`/knowledge/google-storage` 各一處「行沒填滿」，那是行尾留白不是孤字，硬改會牽動整段排版
+
 ## v1.35.4（2026-11-05）
 
 兩篇 Flow 文章的標題開頭都是「Google Flow 是什麼？」，會互搶排名（依 GSC 近 3 個月：`gemini-flow-howto` 曝光 28,573、排名 5.9）。把曝光較少的一篇改成主打「點數與台灣」，「是什麼」留給 `gemini-flow-howto`。
