@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.35.3（2026-11-05）
+
+修表格欄位文字在手機上最後一行只剩 2 個字的孤字（沿用既有 `.nowrap` 類別，沒動 CSS）。
+
+- 採購清單 22 頁的「決標單價」欄標題、`/knowledge/procurement` 的「開機與登入」、`/knowledge/school-ai-procurement` 的三個採購方式、`/knowledge/intune-for-education` 的「兩邊的關係」
+- 複查：三種寬度無斷行問題、無橫向溢出
+
 ## v1.35.2（2026-11-05）
 
 AIO（AI 總覽優化）盤點後補唯一有價值的缺口：全站 182 頁中，robots 對 AI 爬蟲全開、126 頁有重點先看、156 頁有 FAQPage、文章 110 頁都有 Article 與外部來源，只有 40 個長頁沒重點先看，其中多為採購清單與導覽頁，加了反而灌水，只補校園方案頁。
