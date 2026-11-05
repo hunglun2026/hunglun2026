@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.35.4（2026-11-05）
+
+兩篇 Flow 文章的標題開頭都是「Google Flow 是什麼？」，會互搶排名（依 GSC 近 3 個月：`gemini-flow-howto` 曝光 28,573、排名 5.9）。把曝光較少的一篇改成主打「點數與台灣」，「是什麼」留給 `gemini-flow-howto`。
+
+- `/knowledge/google-flow-credits-taiwan` 標題改為「Google Flow 點數怎麼算？免費額度、台灣能不能用」（title、og、h1、分享文案、教學資源清單、主題頁、Gemini 系列頁、llms.txt、llms-full、搜尋索引同步），OG 圖重產並升 `?v=6`
+- 網址不變；內文與結構化資料沒動
+
 ## v1.35.3（2026-11-05）
 
 修表格欄位文字在手機上最後一行只剩 2 個字的孤字（沿用既有 `.nowrap` 類別，沒動 CSS）。
