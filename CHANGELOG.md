@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.36.0（2026-11-05）
+
+新文章 `/knowledge/ai-teacher-free-plans`：Claude、ChatGPT 老師免費方案，台灣老師能用嗎？
+
+- 選題依據（GSC 近 3 個月）：「Claude／ChatGPT／Gemini 比較」各種寫法合計約 1,200 曝光、排名 8～10、13 點擊；既有 `ai-comparison` 走全校採購角度，新文章改走「老師方案資格」，避免互搶
+- 事實查證：Claude for Teachers 以 Anthropic 官方公告為準（美國 K-12 學校與學區、2027 年 6 月 30 日前申請可免費用一年、資料不用於訓練）；ChatGPT for Teachers 的 OpenAI 官方說明頁撰文時回傳 403，文中標示為媒體報導並註明請以官網為準，資料訓練欄位不下結論
+- 內容：三方案資格對照表、台灣老師三條路、看到「老師免費」先問的 4 件事、FAQ 5 題、資料來源與查證區塊
+- 登記：knowledge.html（清單、ItemList 放最前面並重編 position、篇數 93／95）、六個主題頁 tabs 計數與 google-ai 清單（37→38）、sitemap、llms.txt、llms-full、搜尋索引、OG 圖
+- `ai-comparison` 補一句導流與延伸閱讀卡片、更新日期；其餘不動
+
 ## v1.35.5（2026-11-05）
 
 全站斷行檢查（手機、平板、電腦）找到的剩餘孤字（最後一行只剩 2 個字），沿用既有 `.nowrap` 類別修掉，沒動 CSS。
