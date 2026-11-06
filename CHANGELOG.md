@@ -3,6 +3,14 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.36.2（2026-11-06）
+
+依 GSC 查詢資料調整兩頁的標題與描述，提高搜尋結果點閱率。
+
+- `knowledge/ai-copyright`：考題措辭對齊考卷原文「學生在使用 AI 時，下列何者行為沒有著作權」（原本站內寫「哪個」，搜尋用「何者」，該長查詢排名 3.6、908 曝光、點閱率 1.3%）；meta description 補上考題與答案
+- `knowledge/gemini-certification`：標題加入英文原名 Gemini Certified Educator（「gemini certified educator」1,268 曝光、排名 6.9、點閱率 1.6%，原標題沒有這個詞）；og／twitter 標題同步
+- 重建 search-index、llms-full
+
 ## v1.36.1（2026-11-06）
 
 聯絡表單送出成功時，新增 GA4 轉換事件 `generate_lead`。
