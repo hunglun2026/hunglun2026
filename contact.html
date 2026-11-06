@@ -379,7 +379,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.36.0</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.36.1</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -460,6 +460,17 @@
       return r.json().catch(function () { return { ok: false, error: 'bad_response' }; });
     }).then(function (out) {
       if (out && out.ok) {
+        // GA4 轉換事件：真正送出成功才算一筆詢價；from_path 記訪客是從哪一頁點進表單的
+        // （main.js 只在 hunglun.com 正式網域定義 gtag，本機與預覽網址不會送）
+        if (typeof window.gtag === 'function') {
+          var ref = '(direct)';
+          try {
+            var ru = new URL(document.referrer);
+            if (ru.hostname === location.hostname) ref = ru.pathname;
+            else if (document.referrer) ref = ru.hostname;
+          } catch (e) {}
+          window.gtag('event', 'generate_lead', { from_path: ref, page_path: location.pathname });
+        }
         form.reset();
         say('收到了，謝謝您。我們會在上班時間以電子郵件回覆，通常一個工作天內。', 'ok');
         btn.textContent = '已送出';

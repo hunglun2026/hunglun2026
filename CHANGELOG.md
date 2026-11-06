@@ -3,6 +3,15 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.36.1（2026-11-06）
+
+聯絡表單送出成功時，新增 GA4 轉換事件 `generate_lead`。
+
+- 原本只追蹤到「點進表單頁」（`form_click`）與 LINE、電話、信箱等點擊，看不出多少人真的寫完送出
+- 事件帶 `from_path`（訪客是從哪一頁點進表單；同網域記路徑，外站記網域，直接進來記 `(direct)`）與 `page_path`
+- 只在 `hunglun.com` 正式網域送出（沿用 `main.js` 的判斷），本機與預覽網址不記
+- 待辦：到 GA4 後台把 `generate_lead` 標成重要事件，報表才會算成轉換
+
 ## v1.36.0（2026-11-05）
 
 新文章 `/knowledge/ai-teacher-free-plans`：Claude、ChatGPT 老師免費方案，台灣老師能用嗎？
