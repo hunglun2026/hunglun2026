@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head><script>try{if(!sessionStorage.getItem("plseen")){sessionStorage.setItem("plseen","1");document.documentElement.classList.add("pl-on")}}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
+<link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=91" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=122">
+<title>「一句話做出你的 App」這句廣告詞，只說對了 30%｜鴻綸科技</title>
+<meta name="description" content="「一句話做出你的 App」只說對一小部分：第一版真的變快，但資安、除錯、上架、維護都沒包含。附 Veracode 與 Stack Overflow 數據，以及校園怎麼用才安全。">
+<link rel="canonical" href="https://www.hunglun.com/insights/ai-app-one-sentence-ad">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一句話做出你的 App」這句廣告詞，只說對了 30%｜鴻綸科技">
+<meta property="og:description" content="第一版真的變快，但資安、除錯、上架、維護都沒包含。附數據與校園使用建議。">
+<meta property="og:url" content="https://www.hunglun.com/insights/ai-app-one-sentence-ad">
+<meta property="og:image" content="https://www.hunglun.com/assets/og/insights-ai-app-one-sentence-ad.png?v=5">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="「一句話做出你的 App」這句廣告詞，只說對了 30%｜鴻綸科技">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="「一句話做出你的 App」這句廣告詞，只說對了 30%｜鴻綸科技">
+<meta name="twitter:description" content="第一版真的變快，但資安、除錯、上架、維護都沒包含。附數據與校園使用建議。">
+<meta name="twitter:image" content="https://www.hunglun.com/assets/og/insights-ai-app-one-sentence-ad.png?v=5">
+<meta name="twitter:image:alt" content="「一句話做出你的 App」這句廣告詞，只說對了 30%｜鴻綸科技">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://www.hunglun.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI 最新消息",
+      "item": "https://www.hunglun.com/insights"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "一句話做出 App",
+      "item": "https://www.hunglun.com/insights/ai-app-one-sentence-ad"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "「一句話做出你的 App」這句廣告詞，只說對了 30%",
+  "description": "第一版真的變快，但資安、除錯、上架、維護都沒包含。附數據與校園使用建議。",
+  "inLanguage": "zh-Hant-TW",
+  "image": "https://www.hunglun.com/assets/og/insights-ai-app-one-sentence-ad.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.hunglun.com/insights/ai-app-one-sentence-ad"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "鴻綸科技 Steve"
+  },
+  "publisher": {
+    "@id": "https://www.hunglun.com/#organization"
+  },
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Vibe Coding"
+    },
+    {
+      "@type": "Thing",
+      "name": "生成式 AI 程式碼安全"
+    },
+    {
+      "@type": "Thing",
+      "name": "Gemini Canvas"
+    },
+    {
+      "@type": "Thing",
+      "name": "Google AI Studio"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "dateModified": "2026-11-06",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "一句話真的能做出 App 嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能做出可以操作的第一版。Gemini Canvas 和 Google AI Studio 的 Build 都有這類功能，用文字描述就會產生可以點的畫面。但「能不能長期用」「能不能放真實資料」是另一回事，這篇討論的就是第一版之後的事。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不會寫程式的老師可以用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，建議從老師自己課堂用、不放學生個資的小工具開始，例如抽籤、計時、單字小遊戲。壞了重做就好，風險最低。要放學生資料、成績或家長聯絡方式的系統，不建議只靠一句話產生。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "用 AI 做的 App 能上 App Store 嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "無法一概而論。依科技新報報導，Apple 引用的是審查指南 2.5.2（App 安裝後不得執行或修改程式碼），被擋的是 Replit 這類「在 App 裡再產生程式」的工具。這是針對工具本身，不是說用 AI 輔助寫出來的一般 App 就不能上架。我們沒有逐條核對 Apple 原文，上架前請以 Apple 最新審查指南為準。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "標題的 30% 是怎麼算出來的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是算出來的。這是我們的個人觀點與比喻：從零到第一版，大約是整件事裡最容易的一小段，其餘的資安、除錯、上架與維護才是大部分的力氣。沒有任何研究量出這個比例。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/"><span class="brand-logo" role="img" aria-label="鴻綸科技 Hunglun Technology"></span></a>
+    <div class="header-visit-counter" title="累計瀏覽人次">👀 <span id="visitCount">--</span></div>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+            <nav class="main-nav" aria-label="主選單">
+      <a href="/about">關於我們</a>
+      <a href="/google">Google 解決方案</a>
+      <a href="/services">教育方案</a>
+      <a href="/enterprise">企業方案</a>
+      <a href="/software">數位學習軟體導入</a>
+      <a href="/knowledge">教學資源</a>
+      <a href="/insights" class="active">AI 最新消息</a>
+      <a href="/tools/games">學習專區</a>
+      <a href="/tools" class="mobile-tools-link">資源分享</a>
+      <a href="/contact" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <div class="nav-tools">
+        <a href="/tools" class="nav-tools-trigger">資源分享</a>
+      </div>
+      <a href="/contact" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+
+<main id="main" tabindex="-1">
+
+<div class="page-head">
+  <div class="wrap">
+    <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/insights">AI 最新消息</a> ／ 一句話做出 App</nav>
+    <h1>「一句話做出你的 App」這句廣告詞，只說對了 30%</h1>
+    <p>近來不少 AI 工具的宣傳，主打「一句話做出你的 App」。我們的看法是：這句話只說對了從零到第一版，第一版之後才開始花力氣的那一大段，廣告沒有說。</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap prose">
+    <div class="kb-quick" data-quick-answer>
+      <h2>重點先看</h2>
+      <ul>
+        <li><strong>這句廣告詞對在哪？</strong>從什麼都沒有到「畫面能動的第一版」，確實變得很快。Gemini Canvas、Google AI Studio 的 Build 都主打用文字描述就能做出可操作的 App。</li>
+        <li><strong>沒說的是什麼？</strong>資安、除錯、上架、長期維護，還有「你到底要什麼」這個最難的問題。一句話把需求壓成最模糊的形式。</li>
+        <li><strong>有數字嗎？</strong>Veracode 2025 年測試 100 多個模型、80 項任務，45% 的情況 AI 選了有已知弱點的寫法；Stack Overflow 2025 年調查，66% 的開發者說 AI 常給「差一點就對」的答案。</li>
+        <li><strong>30% 怎麼來的？</strong>是我們的比喻，不是量出來的數字。</li>
+        <li><strong>學校怎麼用？</strong>老師自用、不放學生個資的小工具，放心玩；碰到成績、名冊、家長聯絡的系統，要有看得懂程式碼的人把關。</li>
+      </ul>
+    </div>
+
+    <p style="color:var(--muted-faint);font-size:0.85rem;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-11-06">2026 年 11 月 6 日</time></p>
+
+    <h2>廣告說對的那 30%</h2>
+    <p>先講公道話：這類宣傳不是假的。Gemini Canvas 可以用一句提示寫出能玩的小遊戲，Google AI Studio 的 Build 也讓不懂程式的人做出能操作的 App。以前要找工程師排期的事，現在老師自己下午就能試出第一版，這個進步是真的。</p>
+    <p>對教學現場來說，這代表「想法變成可以點的東西」的門檻大幅降低。想到一個課堂小遊戲，十分鐘後就能在投影幕上試給學生看。</p>
+
+    <h2>廣告沒說的那 70%</h2>
+    <p>問題在於，「做出第一版」和「做出可以長期用的東西」是兩件事。把能找到的資料整理成下表，每一列都有出處：</p>
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <thead><tr><th>項目</th><th>實際狀況</th><th>出處</th></tr></thead>
+        <tbody>
+          <tr><td>資安</td><td>Veracode 2025 年測試 100 多個模型、80 項寫程式任務，45% 的情況 AI 選了有已知弱點的寫法；跨網站指令碼（XSS）有 86% 沒防住；Java 失敗率超過 70%，Python、C#、JavaScript 在 38% 到 45%。模型變大並沒有比較安全。</td><td>Veracode 2025 GenAI Code Security Report 新聞稿</td></tr>
+          <tr><td><span class="nowrap">差一點就對</span></td><td>Stack Overflow 2025 年開發者調查：66% 遇到「差一點就對」的 AI 答案；45.2% 覺得除錯 AI 產生的程式碼更花時間；不信任 AI 準確度的合計 45.7%，信任的 32.7%。</td><td>Stack Overflow 2025 Developer Survey</td></tr>
+          <tr><td>上架</td><td>Apple 引用 App Store 審查指南 2.5.2（App 安裝後不得執行或修改程式碼），Replit 被擋下更新；也有人批評 Apple 選擇性執法，同時 Xcode 內建 AI 寫程式功能。</td><td>科技新報 2026-03-23</td></tr>
+          <tr><td>維護</td><td>登入與帳號管理、資料表改版、串接第三方服務、部署設定，是一句話產生的 App 最常出狀況的地方。這是廠商依自身經驗的說法，文中沒有附統計。</td><td>Upsilon IT 部落格</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>上架那一列要分清楚：Apple 擋的是 Replit 這類「在 App 裡再產生並執行程式」的工具，這是我們依報導做的解讀，不是說用 AI 輔助寫出來的一般 App 就上不了架。資安那一列也不要讀成「AI 寫的程式都有洞」，Veracode 的結論是 AI 寫出能跑的程式越來越好，但安全表現沒有跟著進步。</p>
+
+    <h2>最難的一段，其實是那句話本身</h2>
+    <p>這是我們的觀察，沒有統計：一句話是需求最模糊的形式。誰會用、資料放哪裡、出錯怎麼辦、誰來維護，這些都不在那句話裡，AI 只能替你猜。猜對了像魔法，猜錯了你連哪裡錯都看不出來，因為你沒有讀過那些程式碼。</p>
+    <p>所以我們自己做專案時，動手前一定先把這幾題問完。工具變快之後，說清楚「要什麼」反而變成更重要的能力，這也是我們認為廣告最該補上的一句話。</p>
+
+    <h2>放到校園，我們建議這樣分</h2>
+    <ul class="feature-list" style="margin-top:16px;">
+      <li><strong>可以放手玩：</strong>老師自己課堂用的小工具：抽籤、計時、單字小遊戲、課堂投票。不收個資，壞了重做就好。</li>
+      <li><strong>要有人把關：</strong>全班都會用、而且會留下紀錄的：作業繳交、點名、問卷。先搞清楚資料存在哪裡、誰看得到、帳號怎麼登入。</li>
+      <li><strong>不要只靠一句話：</strong>成績、學生名冊、家長聯絡方式，任何含學生個資的系統。這類要符合個人資料保護法與校內資安規範，並且有看得懂程式碼的人負責。</li>
+    </ul>
+    <p>老師想自己試，可以先從第一類開始。想把學校的流程交給 AI 一句話產生的系統，請先回頭看<a href="/knowledge/student-ai-policy">學生使用 AI 的校內規範</a>，並讓懂程式的人看過再上線。</p>
+
+    <h2>我們的建議</h2>
+    <ul class="feature-list" style="margin-top:16px;">
+      <li><strong>把一句話當成草稿，不是成品。</strong>第一版出來後，再用幾輪對話補上「資料怎麼存、誰能看、錯誤怎麼處理」。</li>
+      <li><strong>先講清楚用途再動手。</strong>一句話裡至少寫明誰用、放什麼資料、用在哪個場合。</li>
+      <li><strong>不要把真實學生資料放進試做版本。</strong>試做時用假資料，確定沒問題再談正式使用。</li>
+      <li><strong>要讓很多人用的，找人看過。</strong>即使不是工程師，也請懂資訊的同事確認登入與資料存放的做法。</li>
+    </ul>
+
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:24px;">資料來源：<a href="https://www.veracode.com/press-release/ai-generated-code-poses-major-security-risks-in-nearly-half-of-all-development-tasks-veracode-research-reveals/" target="_blank" rel="noopener">Veracode 2025 GenAI Code Security Report 新聞稿</a>（2025 年 7 月）；<a href="https://survey.stackoverflow.co/2025/ai" target="_blank" rel="noopener">Stack Overflow 2025 Developer Survey：AI</a>；<a href="https://technews.tw/2026/03/23/apple-blocks-vibe-coding-tools-from-store/" target="_blank" rel="noopener">科技新報：Apple 擋下 Vibe Coding 工具上架</a>（2026-03-23）；<a href="https://www.upsilonit.com/blog/vibe-coding-limitations" target="_blank" rel="noopener">Upsilon IT：Vibe Coding Limitations</a>；<a href="https://www.bnext.com.tw/article/82670/gemini-canvas-2025" target="_blank" rel="noopener">數位時代：Gemini Canvas 新功能</a>。文中「一句話做出你的 App」是對近期 AI 開發工具宣傳調性的概括，不是引用單一廣告。「30%」是我們的個人觀點，不是研究數字。查證日期：2026 年 11 月 6 日。</p>
+
+    <div class="svc-cta">
+      <h2 style="margin-top:0;">想讓老師安全地用 AI 做課堂工具？</h2>
+      <p>我們是 Google for Education 專業發展夥伴，可以安排教師研習：從 Gemini Canvas 做出第一版，到資料與帳號的基本把關，一次講清楚。</p>
+      <a class="btn btn-primary" href="/services/campus-training">看校園研習服務</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap" style="max-width:780px;">
+    <h2 class="section-title reveal">常見問題</h2>
+    <details class="faq-item reveal" open>
+      <summary>一句話真的能做出 App 嗎？</summary>
+      <div class="faq-a">能做出可以操作的第一版。Gemini Canvas 和 Google AI Studio 的 Build 都有這類功能，用文字描述就會產生可以點的畫面。但「能不能長期用」「能不能放真實資料」是另一回事，這篇討論的就是第一版之後的事。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>不會寫程式的老師可以用嗎？</summary>
+      <div class="faq-a">可以，建議從老師自己課堂用、不放學生個資的小工具開始，例如抽籤、計時、單字小遊戲。壞了重做就好，風險最低。要放學生資料、成績或家長聯絡方式的系統，不建議只靠一句話產生。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>用 AI 做的 App 能上 App Store 嗎？</summary>
+      <div class="faq-a">無法一概而論。依科技新報報導，Apple 引用的是審查指南 2.5.2（App 安裝後不得執行或修改程式碼），被擋的是 Replit 這類「在 App 裡再產生程式」的工具。這是針對工具本身，不是說用 AI 輔助寫出來的一般 App 就不能上架。我們沒有逐條核對 Apple 原文，上架前請以 Apple 最新審查指南為準。</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary>標題的 30% 是怎麼算出來的？</summary>
+      <div class="faq-a">不是算出來的。這是我們的個人觀點與比喻：從零到第一版，大約是整件事裡最容易的一小段，其餘的資安、除錯、上架與維護才是大部分的力氣。沒有任何研究量出這個比例。</div>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <span class="footer-logo-img" role="img" aria-label="鴻綸科技"></span>
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul class="footer-nav">
+          <li><a href="/about">關於我們</a></li>
+          <li><a href="/google">Google 解決方案</a></li>
+          <li><a href="/services">服務項目</a></li>
+          <li><a href="/services#cases">成功案例</a></li>
+          <li><a href="/software">數位學習軟體導入</a></li>
+          <li><a href="/knowledge">教學資源</a></li>
+          <li><a href="/tools/games">學習專區</a></li>
+          <li><a href="/insights">AI 最新消息</a></li>
+          <li><a href="/tools">資源分享</a></li>
+          <li><a href="/faq">常見問題</a></li>
+          <li><a href="/privacy">隱私權政策</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>聯絡方式</h2>
+        <ul class="footer-contact">
+          <li><a href="tel:+88666371192"><span class="fc-key">電話</span><span class="fc-val">06-6371192<em>週一至週五 08:30–17:30</em></span></a></li>
+          <!--email_off--><li class="fc-has-copy"><a href="mailto:gfeh@hunglun.com"><span class="fc-key">信箱</span><span class="fc-val">gfeh@hunglun.com<em>傳真 06-6371112</em></span></a><button type="button" class="fc-copy" data-copy="gfeh@hunglun.com" data-label="複製信箱" aria-label="複製信箱地址 gfeh@hunglun.com">複製信箱</button></li><!--/email_off-->
+          <li class="fc-has-copy"><a href="https://lin.ee/zo6euCb" target="_blank" rel="noopener"><span class="fc-key">LINE</span><span class="fc-val">@gdm6961p<em>電腦版請在 LINE 搜尋 ID 加入</em></span></a><button type="button" class="fc-copy" data-copy="@gdm6961p" data-label="複製 ID" aria-label="複製 ID，LINE 官方帳號 @gdm6961p">複製 ID</button></li>
+          <li><a href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener"><span class="fc-key">粉絲頁</span><span class="fc-val">Facebook<em>鴻綸科技</em></span></a></li>
+          <li><a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" target="_blank" rel="noopener"><span class="fc-key">地址</span><span class="fc-val">台南市新營區綠川路10號<em>開啟 Google 地圖</em></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.37.0</span></div>  </div>
+</footer>
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://lin.ee/zo6euCb" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號 @gdm6961p" title="LINE 官方帳號（電腦版請搜尋 ID：@gdm6961p）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img width="160" height="160" src="/assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
+  <a class="fab-form" href="/contact#contactForm" aria-label="填寫線上詢問表單" title="填寫線上詢問表單"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=gfeh@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 gfeh@hunglun.com（開啟 Gmail）" title="寄信給 gfeh@hunglun.com"><img width="88" height="66" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></a>
+</div>
+
+
+<script src="/assets/main.js?v=33"></script>
+<script src="/assets/wordwrap.js?v=2"></script>
+</body>
+</html>

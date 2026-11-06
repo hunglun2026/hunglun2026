@@ -3,6 +3,16 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.37.0（2026-11-06）
+
+新文章 `/insights/ai-app-one-sentence-ad`：「一句話做出你的 App」這句廣告詞，只說對了 30%。
+
+- 觀點文章：一句話做出的第一版是真的變快，但資安、除錯、上架、維護都沒包含；「30%」明標為個人比喻，不是研究數字
+- 事實查證（原始出處已核對）：Veracode 2025 GenAI Code Security Report 新聞稿、Stack Overflow 2025 Developer Survey、科技新報（Apple 審查指南 2.5.2、Replit）、Upsilon IT（廠商經驗，標明無統計）。沒找到單一廣告可引用，文末註明是對宣傳調性的概括
+- 校園建議分三級：可以放手玩、要有人把關、不要只靠一句話
+- 登記：insights.html（篇數 12→13、ItemList 重編）、sitemap、llms.txt、llms-full、搜尋索引、OG 圖
+- 檢查：簡體、標點、三寬度斷行通過；來源連結文字避開字型子集缺字
+
 ## v1.36.2（2026-11-06）
 
 依 GSC 查詢資料調整兩頁的標題與描述，提高搜尋結果點閱率。
