@@ -244,3 +244,4 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     window.gtag("event",name,{placement:placementFor(e.target),device:mouse?"mouse":"touch",page_path:location.pathname});
   },true);
 })();
+(function(){var gs=document.querySelectorAll(".nav-group");if(!gs.length||!window.matchMedia("(hover: none)").matches)return;function closeAll(){gs.forEach(function(g){g.classList.remove("open");var b=g.querySelector(".nav-group-label");b&&b.setAttribute("aria-expanded","false")})}gs.forEach(function(g){var b=g.querySelector(".nav-group-label");b&&b.addEventListener("click",function(e){e.stopPropagation();var o=!g.classList.contains("open");closeAll(),o&&(g.classList.add("open"),b.setAttribute("aria-expanded","true"))})}),document.addEventListener("click",closeAll),document.addEventListener("keydown",function(e){"Escape"===e.key&&closeAll()})})();
