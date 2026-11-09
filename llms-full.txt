@@ -1126,6 +1126,7 @@ Photontree 是台灣設計製造、台灣唯一通過 Google 官方認證的 VR 
 延伸閱讀
 數位學習軟體怎麼選：六套工具的定位與適用情境 →
 Chromebook 與智慧情境教室建置 →
+電腦軟體共同供應契約採購：作業系統、文書、防毒、虛擬化與繪圖軟體授權 →
 Google Workspace for Education 導入與認證培訓 →
 Google Classroom 完全指南（Edpuzzle、Kami 等工具的作業派送都走這裡） →
 想了解方案內容或報價？
