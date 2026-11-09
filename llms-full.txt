@@ -365,18 +365,15 @@ https://www.hunglun.com/services
 解決方案
 成功案例
 服務項目分類
-依重要性分成四類，共 14 項服務。
+依重要性分成四類，共 13 項服務。
 Google 授權與培訓
 系統開發與自動化
 教學軟硬體與設備採購
 企業與公部門數位方案
 Google 授權與培訓
-公司的主力業務。從授權方案評估、帳號開通、網域與載具管理，到教師培訓與校園研習一次到位。四項方案的比較與導入流程，整理在 Google 解決方案；Google AI Pro for Education 的校園授權可以線上索取報價。
+公司的主力業務。從授權方案評估、帳號開通、網域與載具管理，到教師培訓與校園研習一次到位。各項方案的比較與導入流程，整理在 Google 解決方案；Google AI Pro for Education 的校園授權可以線上索取報價。
 Google AI Pro for Education 授權導入
 Gemini Pro 教育版帳號開通、導入規劃與教師研習，由 Google 官方授權夥伴交付。
-了解更多 →
-Google AI 企業級授權導入
-Gemini Enterprise 與 Google Workspace 企業版授權導入，協助企業把 AI 用在實際業務流程上。
 了解更多 →
 Google Workspace for Education 導入與認證培訓
 網域導入、管理主控台設定，以及 Google 認證教育家 Level 1／2、網域管理、認證訓練講師培訓。
