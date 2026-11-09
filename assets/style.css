@@ -577,3 +577,10 @@ a.card:hover,a.card:hover *{text-decoration: none}
 .nav-sub{display: block;position: static;min-width: 0;border: 0;padding: 0}
 .nav-sub a{padding: 8px 7px}
 }
+
+/* 頁尾「網站導覽」兩欄排列（v1.38.2）：12 個連結改兩欄各 6 項，左欄關於與方案、右欄內容與資訊，高度減半 */
+.footer-grid{grid-template-columns: 1.2fr 1.55fr 1.35fr}
+.footer-nav{display: grid;grid-template-columns: repeat(2,auto);grid-template-rows: repeat(6,auto);grid-auto-flow: column;column-gap: 28px;justify-content: start}
+@media (max-width: 860px){.footer-grid{grid-template-columns: 1fr}
+.footer-nav{column-gap: 24px;justify-items: start}
+}
