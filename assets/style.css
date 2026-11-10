@@ -302,7 +302,7 @@ html{scroll-behavior: auto}
 .nav-contact-cta{padding: 7px 12px;font-size: 0.88rem}
 }
 @media (max-width: 1280px){.nav-toggle{display: block}
-.main-nav{display: none;position: absolute;top: 100%;left: 0;right: 0;flex-direction: column;background: var(--bg);border-bottom: 1px solid var(--line);padding: 8px 16px 16px;align-items: center;text-align: center}
+.main-nav{display: none;position: absolute;top: 100%;left: 0;right: 0;flex-direction: column;background: var(--bg);border-bottom: 1px solid var(--line);padding: 8px 16px 16px;align-items: center;text-align: center;max-height: calc(100vh - 80px);max-height: calc(100dvh - 80px);overflow-y: auto;overscroll-behavior: contain;-webkit-overflow-scrolling: touch}
 .main-nav.open{display: flex}
 .nav-contact-cta{display: none}
 .mobile-contact-link{display: block}
