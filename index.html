@@ -28,7 +28,7 @@
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=91" crossorigin>
 <link rel="stylesheet" href="/assets/style.css?v=127">
-<link rel="stylesheet" href="/assets/landing.css?v=37">
+<link rel="stylesheet" href="/assets/landing.css?v=38">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -308,54 +308,16 @@
   </div>
 </section>
 
-<!-- 7 段全站巡覽：全螢幕照片 zoom-through（捲動時鏡頭穿越畫面飛進下一景，文字跟著飄過） -->
-<section class="tour-zoom" id="tourZoom" style="height:350vh;">
-  <div class="tour-zoom-sticky">
-    <div class="tour-zoom-panel" data-i="0">
-      <img fetchpriority="high" width="1017" height="572" src="/assets/images/tour-ai-about.webp" alt="示意圖：教育科技顧問團隊在明亮的教師研習中心討論，桌上排放筆電" decoding="async" srcset="/assets/images/tour-ai-about-480.webp 480w, /assets/images/tour-ai-about-768.webp 768w, /assets/images/tour-ai-about.webp 1017w" sizes="(max-width: 700px) 377px, 1270px"><span class="ai-note">為保護隱私，此為示意圖</span>
-      <div class="tour-zoom-text">
-        <h2>關於我們</h2>
-        <p>認證沿革與服務理念</p>
-        <a class="btn btn-primary" href="/about">前往頁面 →</a>
-      </div>
-    </div>
-    <div class="tour-zoom-panel" data-i="1">
-      <img width="1017" height="572" src="/assets/images/tour-ai-services.webp" alt="示意圖：智慧教室裡老師協助學生使用筆電，前方有觸控大屏，旁邊是筆電充電車" loading="lazy" decoding="async" srcset="/assets/images/tour-ai-services-480.webp 480w, /assets/images/tour-ai-services-768.webp 768w, /assets/images/tour-ai-services.webp 1017w" sizes="(max-width: 700px) 377px, 1270px"><span class="ai-note">為保護隱私，此為示意圖</span>
-      <div class="tour-zoom-text">
-        <h2>服務項目</h2>
-        <p>服務類別介紹</p>
-        <a class="btn btn-primary" href="/services">前往頁面 →</a>
-      </div>
-    </div>
-    <div class="tour-zoom-panel" data-i="2">
-      <img width="1017" height="572" src="/assets/images/tour-ai-projects.webp" alt="示意圖：顧問在學校辦公室用平板向行政同仁與老師展示客製網頁工具" loading="lazy" decoding="async" srcset="/assets/images/tour-ai-projects-480.webp 480w, /assets/images/tour-ai-projects-768.webp 768w, /assets/images/tour-ai-projects.webp 1017w" sizes="(max-width: 700px) 377px, 1270px"><span class="ai-note">為保護隱私，此為示意圖</span>
-      <div class="tour-zoom-text">
-        <h2>成功案例</h2>
-        <p>客製工具與實際案例</p>
-        <a class="btn btn-primary" href="/services#projects">前往頁面 →</a>
-      </div>
-    </div>
-    <div class="tour-zoom-panel" data-i="3">
-      <img width="1017" height="572" src="/assets/images/tour-ai-faq.webp" alt="示意圖：老師透過視訊會議向顧問詢問問題" loading="lazy" decoding="async" srcset="/assets/images/tour-ai-faq-480.webp 480w, /assets/images/tour-ai-faq-768.webp 768w, /assets/images/tour-ai-faq.webp 1017w" sizes="(max-width: 700px) 377px, 1270px"><span class="ai-note">為保護隱私，此為示意圖</span>
-      <div class="tour-zoom-text">
-        <h2>常見問題</h2>
-        <p>Q&amp;A</p>
-        <a class="btn btn-primary" href="/faq">前往頁面 →</a>
-      </div>
-    </div>
-    <div class="tour-zoom-panel" data-i="4">
-      <img width="1382" height="867" src="/assets/images/tour-contact.webp?v=2" alt="鴻綸科技股份有限公司台南新營店面外觀" loading="lazy" decoding="async" srcset="/assets/images/tour-contact-480.webp?v=2 480w, /assets/images/tour-contact-768.webp?v=2 768w, /assets/images/tour-contact-1024.webp?v=2 1024w, /assets/images/tour-contact.webp?v=2 1382w" sizes="(max-width: 700px) 377px, 1270px">
-      <div class="tour-zoom-text">
-        <h2>聯絡我們</h2>
-        <p>聯繫方式、地址與服務範圍</p>
-        <a class="btn btn-primary" href="/contact">前往頁面 →</a>
-      </div>
-    </div>
-    <div class="l-dots tour-zoom-dots">
-      <span class="l-dot active"></span><span class="l-dot"></span><span class="l-dot"></span><span class="l-dot"></span><span class="l-dot"></span>
-    </div>
-  </div>
-</section>
+<!-- 全站導覽索引：細線分隔的目錄式清單（取代舊的捲動劫持照片巡覽，文字與連結沿用原內容） -->
+<nav class="l-index" aria-label="網站內容導覽">
+  <ol>
+    <li><a href="/about"><span class="l-index-n">01</span><span class="l-index-t">關於我們</span><span class="l-index-d">認證沿革與服務理念</span><span class="l-index-go" aria-hidden="true">→</span></a></li>
+    <li><a href="/services"><span class="l-index-n">02</span><span class="l-index-t">服務項目</span><span class="l-index-d">服務類別介紹</span><span class="l-index-go" aria-hidden="true">→</span></a></li>
+    <li><a href="/services#projects"><span class="l-index-n">03</span><span class="l-index-t">成功案例</span><span class="l-index-d">客製工具與實際案例</span><span class="l-index-go" aria-hidden="true">→</span></a></li>
+    <li><a href="/faq"><span class="l-index-n">04</span><span class="l-index-t">常見問題</span><span class="l-index-d">Q&amp;A</span><span class="l-index-go" aria-hidden="true">→</span></a></li>
+    <li><a href="/contact"><span class="l-index-n">05</span><span class="l-index-t">聯絡我們</span><span class="l-index-d">聯繫方式、地址與服務範圍</span><span class="l-index-go" aria-hidden="true">→</span></a></li>
+  </ol>
+</nav>
 
 <!-- 服務圖示牆 -->
 <section class="l-services">
