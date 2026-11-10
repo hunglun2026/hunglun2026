@@ -5,10 +5,10 @@ body.landing{overflow-x: hidden}
 /* 手機一行放不下：拆成「鴻綸科技」與「GOOGLE FOR EDUCATION 認證夥伴」兩行，不讓英文詞組從中間折斷 */
 @media (max-width: 560px){.l-hero--tour .l-eyebrow{font-size: 15px;letter-spacing: 0.18em}.l-eyebrow-a{display: block;margin-bottom: 4px}.l-eyebrow-sep{display: none}}
 .l-gradient-text{font-size: clamp(1.9rem,4.6vw,3.2rem);font-weight: 300;line-height: 1.5;color: var(--text)}
-.l-hero-sub{margin-top: 20px;color: var(--muted);font-size: clamp(1rem,2vw,1.15rem);max-width: 640px;line-height: 1.8}
+.l-hero-sub{margin-top: 40px;color: var(--muted);font-size: clamp(1rem,2vw,1.15rem);max-width: 640px;line-height: 2.2}
 .l-hero-cta{display: inline-block;margin-top: 28px;padding: 14px 28px;border-radius: 999px;background: linear-gradient(100deg,var(--accent),var(--accent-gold));color: #fff;font-weight: 700;font-size: 0.95rem;text-decoration: none;transition: transform 0.25s ease,box-shadow 0.25s ease}
 .l-hero-cta:hover{transform: translateY(-2px);box-shadow: 0 14px 30px -10px var(--glow);text-decoration: none}
-.l-scroll-hint{margin-top: 40px;color: var(--text);font-size: 1.05rem;font-weight: 600;animation: l-bob 1.8s ease-in-out infinite}
+.l-scroll-hint{margin-top: 72px;color: var(--text);font-size: 1.05rem;font-weight: 600;animation: l-bob 1.8s ease-in-out infinite}
 @keyframes l-bob{0%,100%{transform: translateY(0);opacity: .5}
 50%{transform: translateY(8px);opacity: 1}
 }
