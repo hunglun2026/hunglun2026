@@ -41,8 +41,6 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [學生回條 AI 辨識系統](https://lunslip.pages.dev/)：AI 視覺辨識家長同意書，自動比對名單並匯出 Excel。
 - [校園照片 Word 填入工具](https://lun-school-pic-v2.pages.dev/)：活動照片自動填入 Word 表格圖片格，本機處理不上傳。
 - [刻度・互動式評量](https://luno.hunglun.com/)：老師用 AI 依年級與科目出題，可下載 Word、PDF，也能發連結讓學生用手機或平板線上作答，系統自動評分，老師與家長即時看到作答進度；免安裝，打開網頁就能用。
-- [小綸即時測驗](https://quiz.hunglun.com/)：老師開房、學生輸入房號用手機作答同一份卷子，老師即時看到每位學生寫到哪、哪題錯最多，結束後下載 Excel 成績；學生免註冊，成績只保留 24 小時。
-- [課堂遊戲工坊](https://classgames.hunglun.com/)：請 Gemini 出題後貼回來，一份題庫變成連連看、記憶翻牌、轉盤抽題、打地鼠、闖關測驗五款課堂遊戲，分享前先列出正解讓老師審題；題庫只存在分享連結裡。
 - [會員集點系統（客戶委託案例）](https://www.hunglun.com/enterprise)：店家客製會員集點與後台管理系統，四種角色權限，雲端部署。
 - [伊登森活 Idun Beauty SPA（客戶委託案例）](https://idun10.pages.dev/)：台南東區美容 SPA 官方網站，8 個獨立頁面各自具備完整 SEO/AEO 結構化資料。
 - [喜翻親子感統遊戲空間（客戶委託案例）](https://xifun.tonpair.com/)：台南新營親子遊戲空間官方網站，課程介紹、課堂花絮與近 30 篇家長學堂文章，全站約 40 頁各自具備完整 SEO/AEO 結構化資料。
