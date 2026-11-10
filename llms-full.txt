@@ -46,10 +46,12 @@ Google AI 校園研習
 客製會員系統
 教學軟硬體與設備採購
 教學軟體、Chromebook、共同供應契約
-3 項
+4 項
 數位學習軟體導入
 Chromebook／智慧教室
 標案設備採購
+ChromeOS 教育升級版
+（CEU）型錄
 企業與公部門數位方案
 Google 與 Gemini 企業導入、客製系統、官網與搜尋曝光
 3 項
