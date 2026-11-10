@@ -175,7 +175,7 @@ a.stat:hover{transform: none}
 .page-head .wrap{max-width: 760px}
 .page-head h1{font-size: clamp(2rem,4.4vw,3.1rem);font-weight: 300;line-height: 1.28;letter-spacing: -0.01em}
 .page-head p{color: var(--muted);margin-top: 22px;max-width: 40em;font-size: 1.06rem;line-height: 1.85}
-.page-head + .section{border-top: 1px solid var(--line);padding-top: 44px}
+.page-head + .section{padding-top: 14px}
 .svc-tabs{display: flex;gap: 8px;justify-content: center;margin-top: 28px;border-bottom: 1px solid var(--grid-line)}
 .svc-tab{font: inherit;color: var(--muted);background: none;border: none;border-bottom: 2px solid transparent;padding: 10px 18px;cursor: pointer;white-space: nowrap}
 .svc-tab.active{color: var(--text);border-bottom-color: var(--accent)}
@@ -188,7 +188,7 @@ a.stat:hover{transform: none}
 .prose > p,.prose > ul,.prose > ol{max-width: 43em}
 .prose > p,.prose > ul,.prose > ol{font-size: 1.0625rem;margin-bottom: 22px}
 .prose > p:last-child,.prose > ul:last-child,.prose > ol:last-child{margin-bottom: 0}
-.prose h2{margin: 64px 0 18px;padding-top: 30px;border-top: 1px solid var(--line);font-size: 1.5rem;font-weight: 400;letter-spacing: -0.005em;color: var(--text)}
+.prose h2{margin: 46px 0 16px;font-size: 1.45rem;font-weight: 500;color: var(--text)}
 /* 區塊第一個標題不再疊 46px，section 本身已有上下間距 */
 .prose > h2:first-child{margin-top: 0}
 .prose h3{margin: 28px 0 12px;font-size: 1.08rem;font-weight: 500;color: var(--text)}
@@ -255,7 +255,7 @@ a.stat:hover{transform: none}
 }
 .callout-box{border: 1px solid var(--line);border-radius: var(--radius);padding: 14px 16px;font-size: 0.88rem;margin-top: 10px}
 .callout-box strong{font-weight: 600}
-.share-box{padding: 18px 0;margin: 0 0 28px}
+.share-box{border: 1px solid var(--line);border-left: 3px solid var(--accent);border-radius: var(--radius);background: var(--bg-soft);padding: 16px 20px;margin: 0 0 28px}
 .share-box-lead{font-weight: 700;margin: 0 0 4px;font-size: 0.96rem}
 .share-box-text{margin: 0 0 12px;font-size: 0.86rem;color: var(--muted-faint);line-height: 1.7}
 .share-box .fc-copy{font-size: 0.82rem;padding: 8px 14px;min-height: 36px}
@@ -327,7 +327,7 @@ html{scroll-behavior: auto}
 .footer-nav a{font-size: 0.86rem}
 .hero{padding: 56px 0 44px}
 .page-head{padding: 36px 0 28px}
-.page-head + .section{padding-top: 28px}
+.page-head + .section{padding-top: 10px}
 .section + .section{padding-top: 20px}
 .section:has(+ .section){padding-bottom: 20px}
 }
@@ -524,7 +524,7 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 @media (pointer:coarse) and (max-width:480px){
   .header-inner{gap:4px}
 }
-.moe-code{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:14px 0 4px;padding:10px 0;font-size:.9rem;line-height:1.6}
+.moe-code{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:14px 0 4px;padding:8px 14px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);background:var(--bg-soft);font-size:.9rem;line-height:1.6}
 .moe-code-label{color:var(--muted)}
 .moe-code strong{font-variant-numeric:tabular-nums;letter-spacing:.02em;min-width:0;overflow-wrap:anywhere}
 .moe-code-vendor{color:var(--muted-faint);font-size:.82rem}
@@ -541,11 +541,8 @@ a.svc-card:hover .svc-more{transform: translateX(3px)}
 .pc-item p{margin:0;font-size:.92rem;color:var(--muted)}
 .pc-code{font-variant-numeric:tabular-nums}
 .pc-actions{display:flex;flex-wrap:wrap;gap:8px}
-/* 重點先看／分享／採購編號：不用色塊與粗左線，只留上下各一條細線（出版社風） */
-.kb-quick,.share-box,.moe-code{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.kb-quick{margin:22px 0 28px;padding:18px 0}
-.prose > .kb-quick:first-child{border-top:0;padding-top:0;margin-top:0}
-.kb-quick h2{margin:0 0 12px;font-size:.8rem;font-weight:500;letter-spacing:.16em;color:var(--muted)}
+.kb-quick{margin:22px 0 28px;padding:16px 20px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius);background:var(--bg-soft)}
+.kb-quick h2{margin:0 0 8px;font-size:1.05rem}
 .kb-quick ul{margin:0;padding-left:1.2em}
 .kb-quick li{margin:6px 0;line-height:1.7}
 
