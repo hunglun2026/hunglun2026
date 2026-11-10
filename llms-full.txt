@@ -13,7 +13,7 @@ Google 官方授權的教育合作夥伴
 十餘年 IT 經驗
 ↓ 向下滑動，開啟探索
 學校導入 Google，從授權、研習到後續維護一家接手
-2017 年起Google 官方授權在台教育夥伴，官方文件載明台灣首家
+2017 年起Google 官方授權在台教育夥伴，並成立國際講師教育訓練中心
 5 位認證講師另有 2 位 Google 認證網域管理員
 200+ 客戶以各級學校為主，2013 年創立
 台銀共同供應契約機關學校可依契約向我們採購設備
@@ -133,7 +133,7 @@ for Education 授權導入
 全台服務
 公司沿革
 2013 年 3 月：鴻綸科技股份有限公司（統一編號 54072037，總部位於台南市新營區）創立，投入教育與企業 IT 系統整合服務。
-2017 年：正式成為 Google 官方授權在台教育的合作發展夥伴，並成立官方認證國際講師培訓的教育訓練中心。Google 官方文件亦載明鴻綸為台灣首家授權夥伴（Google 官方亞太地區服務優惠文件）。
+2017 年：正式成為 Google 官方授權在台教育的合作發展夥伴，並成立官方認證國際講師培訓的教育訓練中心。訓練中心提供 5 位認證講師與 2 位認證網域管理員（見Google for Education 亞太地區服務優惠單張）。
 2019 年：取得 Google 專業化夥伴資格。
 2026 年：取得 Google 高等教育（大學端）專業發展夥伴資格，名列 Google 官方全球高等教育專業發展夥伴名冊。
 官方資歷與師資陣容
@@ -10874,7 +10874,7 @@ Google for Education 合作夥伴
 學校要導入 Google 的教育方案時，最常卡住的不是技術，而是「找誰做」。Google 的授權、Chromebook 的採購、教師的研習，往往分屬不同廠商，出了問題互相推。鴻綸科技從 2013 年做教育 IT 整合，2017 年起成為 Google 官方授權在台的教育合作發展夥伴，這三件事在我們這裡是同一個窗口。
 官方資格
 年份資格認可單位
-2017Google for Education Professional Development Partner（官方授權在台教育合作發展夥伴），並成立官方認證國際講師培訓的教育訓練中心。Google 官方文件亦載明：鴻綸科技為台灣首家 Google for Education 授權夥伴（見Google 官方亞太地區服務優惠文件）Google for Education
+2017Google for Education Professional Development Partner（官方授權在台教育合作發展夥伴），並成立官方認證國際講師培訓的教育訓練中心。訓練中心提供 5 位認證講師與 2 位認證網域管理員（見Google for Education 亞太地區服務優惠單張）Google for Education
 2018Google Cloud Partner，專業領域認定為 EducationGoogle Cloud
 2018教育部國中小行動教育推動計畫指定廠商中華民國教育部
 2019Google 專業化夥伴（Specialization Partner）Google for Education
