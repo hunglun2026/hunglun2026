@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.10（2026-11-10）
+
+還原首頁照片捲動巡覽（v1.38.15 換成目錄索引，Steve 要求恢復）：index.html 巡覽區與 `.tour-zoom*` 樣式取回，移除目錄索引樣式；照片之後另案換成更不像 AI 的圖。`landing.css` 升 v43。
+
 ## v1.39.9（2026-11-10）
 
 首頁「教學軟硬體與設備採購」群組新增「ChromeOS 教育升級版（CEU）型錄」卡片（連到 `/services/ceu`，原本只有 `/services`、`/google`、Chromebook 與 Flex 兩頁有入口），3 項改 4 項。

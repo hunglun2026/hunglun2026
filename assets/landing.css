@@ -43,11 +43,39 @@ body.landing{overflow-x: hidden}
 .l-cta p{color: var(--muted)}
 .l-reveal{opacity: 0;transform: translateY(12px);transition: opacity 0.5s ease,transform 0.5s ease;transition-delay: calc(var(--delay,0) * 90ms)}
 .l-reveal.in-view{opacity: 1;transform: translateY(0)}
+.tour-zoom{position: relative}
+.tour-zoom-sticky{position: sticky;top: 0;height: 100vh;overflow: hidden;background: var(--bg)}
+.tour-zoom-panel{position: absolute;inset: 6vh 5vw;opacity: 0;border-radius: 22px;overflow: hidden;box-shadow: 0 30px 70px -25px rgba(0,0,0,0.35);will-change: transform,opacity}
+.tour-zoom-sticky>.tour-zoom-panel:first-child{opacity: 1}
+.tour-zoom-panel img{position: absolute;inset: 0;width: 100%;height: 100%;object-fit: cover}
+.tour-zoom-panel::after{content: '';position: absolute;inset: 0;background: linear-gradient(to top right,rgba(0,0,0,0.58) 0%,rgba(0,0,0,0.22) 40%,rgba(0,0,0,0) 66%);pointer-events: none}
+.tour-zoom-text{position: absolute;left: clamp(28px,5%,64px);bottom: clamp(28px,9%,72px);max-width: 440px;z-index: 2;color: #fff;will-change: transform,opacity}
+.tour-zoom-text .l-tag{color: #ffd68a;margin-bottom: 14px;display: inline-block}
+.tour-zoom-text h2{font-size: clamp(1.8rem,3.6vw,2.8rem);font-weight: 700;line-height: 1.25;color: #fff;margin-bottom: 12px;text-shadow: 0 2px 18px rgba(0,0,0,0.45)}
+.tour-zoom-text p{color: rgba(255,255,255,0.85);font-size: 1.02rem;line-height: 1.7;margin-bottom: 24px;text-shadow: 0 1px 10px rgba(0,0,0,0.4)}
+.tour-zoom-panel[data-light] ::selection{background: inherit}
+.tour-zoom-panel[data-light]::after{background: none}
+.tour-zoom-panel[data-light] .tour-zoom-text{color: var(--text)}
+.tour-zoom-panel[data-light] .tour-zoom-text h2{color: var(--text);text-shadow: none}
+.tour-zoom-panel[data-light] .tour-zoom-text p{color: var(--muted);text-shadow: none}
+.tour-zoom-panel[data-light] .tour-zoom-text .l-tag{color: var(--accent)}
+.tour-zoom-dots{position: absolute;right: calc(7vw - 30px);top: 50%;transform: translateY(-50%);display: flex;flex-direction: column;gap: 10px;z-index: 3}
+.tour-zoom-dots .l-dot{background: var(--line)}
+.tour-zoom-dots .l-dot.active{background: var(--accent)}
 @media (max-width: 600px){.l-services{padding: 48px 4vw 24px}
 .l-services-grid{grid-template-columns: 1fr 1fr;gap: 12px;margin-top: 22px}
 .l-service-card{padding: 14px 12px}
 .l-service-card h3{font-size: 0.95rem;line-height: 1.35;margin-top: 10px !important}
 .l-service-card p{font-size: 0.82rem;line-height: 1.55}
+}
+@media (max-width: 860px){.tour-zoom-panel{inset: 9vh 3vw 6vh}
+.tour-zoom-text{left: 20px;right: 20px;bottom: 24px;max-width: none}
+.tour-zoom-dots{right: 6px}
+#tourZoom.tour-zoom{height: 300vh !important}
+}
+@media (prefers-reduced-motion: reduce){.tour-zoom{height: auto !important}
+.tour-zoom-sticky{position: static;height: auto}
+.tour-zoom-panel{position: relative;opacity: 1 !important;transform: none !important;height: 70vh;pointer-events: auto !important}
 }
 .l-svc-hint{color: var(--muted);font-size: 0.95rem;margin-top: 12px}
 .l-svc-cats{margin-top: 28px;display: grid;gap: 14px;text-align: left}
@@ -77,8 +105,13 @@ html.lenis,html.lenis body{height: auto}
 html.lenis{scroll-behavior: auto}
 .lenis.lenis-stopped{overflow: clip}
 .lenis.lenis-smooth iframe{pointer-events: none}
-/* 直向螢幕（手機、平板直拿）：首屏不撐滿再垂直置中，避免小標上方空一大段 */
+.tour-zoom-panel .ai-note{position: absolute;left: 50%;bottom: 10px;transform: translateX(-50%);z-index: 2;font-size: 12px;line-height: 1.4;color: rgba(255,255,255,0.85);text-shadow: 0 1px 4px rgba(0,0,0,0.6);white-space: nowrap;pointer-events: none}
+@media (max-width: 860px){.tour-zoom-panel .ai-note{left: 20px;transform: none;bottom: 6px}
+.tour-zoom-text{bottom: 30px}
+}
+/* 直向螢幕（手機、平板直拿）：首屏不撐 44vh 再垂直置中，照片框上緣也縮小，避免小標上方與照片上方各空一大段 */
 @media (orientation: portrait){.l-hero.l-hero--tour{min-height: auto !important;padding: 48px 24px 32px}
+.tour-zoom-panel{inset: 3vh 3vw 6vh}
 }
 
 /* 首頁信任區與職務分流（2026-10-27）：資歷數字只用已證實事實，卡片依讀者職務分流 */
@@ -109,19 +142,3 @@ html.lenis{scroll-behavior: auto}
 @media (min-width:601px){.l-learn-row{max-width:600px;margin-left:auto;margin-right:auto;column-gap:6px}}
 @media (min-width:601px) and (max-width:640px){.l-learn-tile{width:100px}}
 .l-faq-wrap{max-width: 720px;margin: 0;text-align: left}
-
-/* 全站導覽索引：細線分隔的目錄式清單（出版社風，取代舊的捲動照片巡覽） */
-.l-index{max-width: 1080px;margin: 0 auto;padding: 56px 6vw 24px}
-.l-index ol{list-style: none;margin: 0;padding: 0;border-top: 1px solid var(--line)}
-.l-index a{display: grid;grid-template-columns: 56px minmax(140px,260px) 1fr 24px;align-items: baseline;gap: 8px 16px;padding: 34px 4px;border-bottom: 1px solid var(--line);color: var(--text);text-decoration: none}
-.l-index-n{font-family: var(--mono);font-size: 0.78rem;letter-spacing: 0.12em;color: var(--muted-faint);font-variant-numeric: tabular-nums}
-.l-index-t{font-size: 1.6rem;font-weight: 300}
-.l-index-d{color: var(--muted);font-size: 0.92rem}
-.l-index-go{justify-self: end;color: var(--muted)}
-.l-index a:hover .l-index-t{color: var(--accent);text-decoration: underline;text-underline-offset: 0.3em;text-decoration-thickness: 1px}
-.l-index a:hover .l-index-go{color: var(--accent)}
-@media (max-width: 600px){.l-index{padding-top: 40px}
-.l-index a{grid-template-columns: 36px 1fr 20px;padding: 20px 2px}
-.l-index-d{grid-column: 2 / 3;grid-row: 2}
-.l-index-go{grid-row: 1 / span 2;grid-column: 3;align-self: center}
-}
