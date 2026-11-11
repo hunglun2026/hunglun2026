@@ -11492,7 +11492,7 @@ Adobe、Autodesk 等設計與工程繪圖軟體授權，含教育版與電腦教
 人工智慧與數據應用
 生成式 AI 平台、知識管理與數據分析工具授權。
 看品項與單價 →
-61 項
+60 項
 微軟軟體
 Microsoft 各項產品授權，含 Dynamics 365 與伺服器端授權。
 看品項與單價 →
@@ -12441,74 +12441,73 @@ Microsoft 的各類產品授權。同一產品常有依使用者、依裝置、�
 隨機授權還是大量授權：隨機授權綁機器，機器汰換後不能移轉。
 會不會重複付費：已導入雲端方案的學校，部分授權可能已含在內。
 契約品項與單價
-共 61 筆，可用關鍵字或金額範圍篩選。
+共 60 筆，可用關鍵字或金額範圍篩選。
 關鍵字
 金額
 ~
 清除條件
-顯示 61 / 61 筆
+顯示 60 / 60 筆
 項次品項名稱決標單價最低量最高量
 1Dynamics 365 Field Service40,28511111
 2Exchange Server Enterprise 最新版167,3801248
 3Exchange Server Std User CAL (含軟體保證)6,95111419
 4Exchange Server Standard 最新版29,29111419
 5GGWA 教育版 (舊機合法化)4,91117415
-6Intune Suite 教育版87117416
-7Microsoft 365 E3 零信任標準版15,76312701
-8Microsoft 365 E5 零信任終極版23,14611803
-9Microsoft 365 F33,214113227
-10Office 365 E14,533112698
-11Office 365 E310,08514409
-12Office ProPlus 最新版23,48211800
-13Office Standard 最新版17,01312455
-14Power Apps (單一應用)1,901121164
-15Power Automate (流程授權)37,06211056
-16Power Automate (用戶授權)5,54017054
-17Power BI Pro 最新版5,450110582
-18Project Professional 最新版40,6321980
-19Project Server Device CAL6,98415954
-20Project Server 最新版234,1021177
-21Remote Desktop Service User CAL 教育版5,89017877
-22RMS External Connector 最新版725,774155
-23Sharepoint Plan 11,869121164
-24Sharepoint Plan 23,748110582
-25SharePoint Server Std Device CAL3,979110448
-26SharePoint Server Std User CAL5,06918203
-27SharePoint Server Std User CAL (含軟體保證)9,66818203
-28SQL Server Device/User CAL8,61114817
-29SQL Server Enterprise 2 Core (租用)504,9671168
-30SQL Server Standard 2 Core (租用)150,8911645
-31SQL Server 企業版 2 Core 最新版531,009173
-32Teams Premium4,324114109
-33Visio Plan 11,869121164
-34Visio Plan 27,03717054
-35Visual Studio Professional 最新版18,55712219
-36Windows 10 延伸安全更新 20252,26713000
-37Windows 10 延伸安全更新 20264,53713000
-38Windows 10 延伸安全更新 20279,07813000
-39Windows Enterprise Upgrade 最新版11,07913753
-40Windows Professional Upgrade 最新版7,02115922
-41Windows Server Device CAL (5套授權)6,86115979
-42教育版 Microsoft 365 Apps978141006
-43教育版 Exchange Server Enterprise41,4491994
-44教育版 Exchange Server Standard7,24815679
-45教育版 Project Professional6,34016534
-46教育版 Project Standard3,821110859
-47教育版 SharePoint Server69,5751592
-48教育版 SQL Server 企業版 2 Core141,6221292
-49教育版 SQL Server 標準版 2 Core42,18711122
-50教育版 Visio Professional3,257112732
-51教育版 Visio Standard1,702123824
-52教育版 Windows Pro Upgrade2,456116923
-53數位戰情室套件包-高階3,476,266111
-54混合雲中階套件包258,5801156
-55混合雲初階套件包86,1831470
-56混合雲高階套件包449,117194
-57端點偵測回應系統入門套件包4,024110059
-58端點安全防護平台導入套件包170,0771235
-59跨平台備份套件包1,292,884131
-60身分安全防護平台導入套件包172,3821235
-61防止釣魚郵件入侵平台導入套件包86,1831470
+6Microsoft 365 E3 零信任標準版15,76312701
+7Microsoft 365 E5 零信任終極版23,14611803
+8Microsoft 365 F33,214113227
+9Office 365 E14,533112698
+10Office 365 E310,08514409
+11Office ProPlus 最新版23,48211800
+12Office Standard 最新版17,01312455
+13Power Apps (單一應用)1,901121164
+14Power Automate (流程授權)37,06211056
+15Power Automate (用戶授權)5,54017054
+16Power BI Pro 最新版5,450110582
+17Project Professional 最新版40,6321980
+18Project Server Device CAL6,98415954
+19Project Server 最新版234,1021177
+20Remote Desktop Service User CAL 教育版5,89017877
+21RMS External Connector 最新版725,774155
+22Sharepoint Plan 11,869121164
+23Sharepoint Plan 23,748110582
+24SharePoint Server Std Device CAL3,979110448
+25SharePoint Server Std User CAL5,06918203
+26SharePoint Server Std User CAL (含軟體保證)9,66818203
+27SQL Server Device/User CAL8,61114817
+28SQL Server Enterprise 2 Core (租用)504,9671168
+29SQL Server Standard 2 Core (租用)150,8911645
+30SQL Server 企業版 2 Core 最新版531,009173
+31Teams Premium4,324114109
+32Visio Plan 11,869121164
+33Visio Plan 27,03717054
+34Visual Studio Professional 最新版18,55712219
+35Windows 10 延伸安全更新 20252,26713000
+36Windows 10 延伸安全更新 20264,53713000
+37Windows 10 延伸安全更新 20279,07813000
+38Windows Enterprise Upgrade 最新版11,07913753
+39Windows Professional Upgrade 最新版7,02115922
+40Windows Server Device CAL (5套授權)6,86115979
+41教育版 Microsoft 365 Apps978141006
+42教育版 Exchange Server Enterprise41,4491994
+43教育版 Exchange Server Standard7,24815679
+44教育版 Project Professional6,34016534
+45教育版 Project Standard3,821110859
+46教育版 SharePoint Server69,5751592
+47教育版 SQL Server 企業版 2 Core141,6221292
+48教育版 SQL Server 標準版 2 Core42,18711122
+49教育版 Visio Professional3,257112732
+50教育版 Visio Standard1,702123824
+51教育版 Windows Pro Upgrade2,456116923
+52數位戰情室套件包-高階3,476,266111
+53混合雲中階套件包258,5801156
+54混合雲初階套件包86,1831470
+55混合雲高階套件包449,117194
+56端點偵測回應系統入門套件包4,024110059
+57端點安全防護平台導入套件包170,0771235
+58跨平台備份套件包1,292,884131
+59身分安全防護平台導入套件包172,3821235
+60防止釣魚郵件入侵平台導入套件包86,1831470
 沒有符合條件的品項，試著放寬關鍵字或金額範圍。
 品項與價格整理自臺灣銀行共同供應契約，實際可供項目、規格與單價依當期公告為準，正式資訊以政府電子採購網與臺灣銀行共同供應契約專區公告為準；保固條件一律以原廠公告為主。
 延伸閱讀

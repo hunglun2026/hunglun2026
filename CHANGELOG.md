@@ -9,7 +9,8 @@
 - 新文章 `/knowledge/ceu-mdm`〈學校 MDM 怎麼選？用 CEU 管理 Chromebook 的 8 個好處〉：依 Google〈ChromeOS Education Upgrade〉官方單頁說明與管理說明〈Order options for managing ChromeOS devices〉整理（永久授權、同網域可轉移、免接觸部署、自動重新註冊、遠端鎖定、登入套用規則、考試禁止外部網頁、免登入公用電腦、安全更新與報表、24 小時原廠支援），附採購前四件事與 5 題 FAQ。
 - 下架 `/google/intune` 與 `/knowledge/intune-for-education`，原檔與 og 圖移到 `工作紀錄/下架文章/`；兩個舊網址與 `/knowledge/intune` 一律 301 到新文章。
 - 改連新文章：Google 解決方案卡片、學習專區列表與 ItemList、設備選型主題頁、ChromeOS Flex 服務頁與微軟軟體頁的延伸連結；sitemap、llms、search-index、llms-full 同步。
-- 保留：用學校既有 Intune 派送 ChromeOS Flex 的工具頁（`/tools/flex-deploy*`）、共契微軟頁的 Intune Suite 教育版品項。
+- 共契微軟頁拿掉「Intune Suite 教育版」：項次重編，微軟 61 改 60 項、電腦軟體總數 739 改 738 項；它原是最低價品項，微軟頁價格範圍改為 978–3,476,266 元。
+- 保留：用學校既有 Intune 派送 ChromeOS Flex 的工具頁（`/tools/flex-deploy*`）。
 
 ## v1.39.15（2026-11-11）
 
