@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.19（2026-11-11）
+
+服務與工具卡片圖示全部換成統一的 Google Material 圖示（淡色圓角底、Google 四色），取代原本風格不一的剪貼畫；Gemini 星形、Classroom、Gmail 這些 Google 原廠圖示不動。轉換腳本 `sitemap/build-card-icons.py`。`tools/campus.html` 因另一視窗在改，圖示已換但未納入此版。
+
 ## v1.39.18（2026-11-11）
 
 研習專區新增 2026/11/12 敏惠護理專科學校 AI 研習（`/go/1112`）：密碼與講義網址只在私有檔與 Pages 加密變數。版號略過另一視窗未提交的 `tools/campus.html`。
