@@ -7,6 +7,8 @@
 
 下架文章 `/knowledge/change-google-reseller`（學校換 Google 經銷商流程），依公司指示不對外公開。原檔移到 `工作紀錄/下架文章/`（不上線）；網址改回 404 讓搜尋引擎移除，不做轉址。同步拿掉：首頁「資訊組長」卡片（改連 `/knowledge/workspace-editions` 方案比較）、學習專區列表與 ItemList、Google 與 AI 主題頁、sitemap.xml、llms.txt；重產 search-index.json、llms-full.txt。學習專區篇數統一為 92 篇（原本 93／95 混用），主題頁 38 篇改 37 篇。
 
+全站體檢順手修兩處：`/knowledge/classroom-guide` 第 8 題 FAQPage 結構化答案補上頁面有的「（依 Google 官方說明）」，與頁面逐字一致；`/tools/campus` 描述 54 字補到建議長度，用詞照頁面內文。
+
 ## v1.39.13（2026-11-11）
 
 手機版內文改為靠左對齊：768px 以下取消左右對齊（`text-align: justify`），修正 iPhone 上中英混排段落字距被撐開（例如「買了授權，老師就看得到功能嗎」字字分開）。桌機（769px 以上）維持原樣。全站 191 頁在 390px 逐頁量測，已無左右對齊文字、無橫向溢出。`style.css` 升 v133。
