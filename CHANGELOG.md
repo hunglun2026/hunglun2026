@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.20（2026-11-12）
+
+卡片圖示改用 Gemini 生成的 3D 圖示（Google 品牌色、同一風格家族，共 27 張，webp 去背邊緣羽化），取代上一版的 Material 平面圖示；`tools/campus.html` 已改引用新圖，但該檔有另一視窗的未提交改動，未納入此版。
+
 ## v1.39.19（2026-11-11）
 
 服務與工具卡片圖示全部換成統一的 Google Material 圖示（淡色圓角底、Google 四色），取代原本風格不一的剪貼畫；Gemini 星形、Classroom、Gmail 這些 Google 原廠圖示不動。轉換腳本 `sitemap/build-card-icons.py`。`tools/campus.html` 因另一視窗在改，圖示已換但未納入此版。
