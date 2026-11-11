@@ -50,7 +50,6 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 關於我們：https://www.hunglun.com/about
 - Google 解決方案（Google AI Pro for Education 授權導入、Google Workspace for Education 導入與認證培訓、Google AI 校園研習、Chromebook 與智慧教室建置、Google AI 企業級授權導入，含導入流程說明）：https://www.hunglun.com/google
 - 智慧校園：Google AI Pro for Education 導入說明（到校簡報的網頁版：教育版資安與合規承諾；基礎版與進階版額度比較：Token 32,000 對 1,000,000、Deep Research 每月 5 份對每天 20 份、Nano Banana 2 生圖、Gemini Omni 影片每天 10 部；Gemini Notebook 筆記本／來源／查詢與每日生成額度比較；Gem、Google Vids、Help me write／organize；授權級距與贈送服務；Teaching and Learning 對 Education Plus 的會議人數與儲存空間差異。單價不公開，請洽詢報價）：https://www.hunglun.com/google/ai-pro-campus
-- Intune 到底在幹嘛？跟 Google CEU 有何不同（FAQ 格式共 7 題，誠實劃線服務範圍：鴻綸科技能代購 Intune 授權、也能借用客戶既有 Intune／SCCM 環境大量部署 ChromeOS Flex（Google 官方 Remote Deployment／FRD 機制，免人工跑機）；完整 Intune 導入顧問服務不在服務範圍內）：https://www.hunglun.com/google/intune
 - 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
 - 已上線的作品（自主開發的教育行政 AI 工具與客戶委託案例）：https://www.hunglun.com/services#projects
 - 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分四區：八個主題探險網站〔動物、植物、兩棲、故宮、海洋、昆蟲、古蹟、土石流〕、大學自學〔普通物理〕、闖關遊戲〔邊玩邊變強、動物園守護戰〕、課堂即時測驗〔刻度，老師出題、學生線上作答用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
@@ -172,7 +171,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [AI 出題工具怎麼選？老師出考卷與練習題的免費做法比較](https://www.hunglun.com/knowledge/ai-quiz-generator-for-teachers)：比較用學校 Google 帳號出題的四種做法：Gemini 直接出題、貼講義出題、Gemini Notebook 測驗卡、Classroom 裡的 Gemini；差別在題目根據什麼出，AI 出的是草稿，範圍與難易度要老師檢查。
 - [AI 素養級認證（AIATCL）是什麼？考什麼、怎麼報名](https://www.hunglun.com/knowledge/ai-literacy-certification)：台灣人工智慧學校主辦，2026 年 8 月起改為 2.0 版；四大範圍（AI 基礎與生成式 AI 原理 30%、職場實踐與進階技巧 30%、負責任與安全使用 30%、維護與成長 10%），總分 80 分且四範圍皆非 0 分才通過，官網場次報名費 3,000 元，政大、元智、逢甲、南臺四個區域認證中心辦理；並比較 Google 認證教育家
 - [老師可以免費用 Gemini 嗎？教師與學生方案、學校帳號額度一次看懂](https://www.hunglun.com/knowledge/gemini-free-for-teachers-students)：老師沒有個人免費方案，用學校 Google 教育版帳號即可（Education Fundamentals／Plus 的 Pro 模型每 4 小時 25 個提示詞、Thinking 每天 300 個）；18 歲以上大學生可免費用 Google AI Plus 一年（台灣不在官方排除名單，兌換至 2026-12-31）；學校帳號對話記錄由管理員設定保留 3／18／36 個月
-- [Intune 是什麼？學校 MDM 跟 Google 管理主控台比較](https://www.hunglun.com/knowledge/intune-for-education)：Intune 是微軟的雲端裝置管理服務；Intune for Education 是同一服務的精簡介面（支援 Windows 與 iPadOS）；官方支援平台不含 ChromeOS，Chromebook 要用 Google 管理主控台加 CEU；授權可能已含在 Microsoft 365 教育方案
+- [學校 MDM 怎麼選？用 CEU 管理 Chromebook 的 8 個好處](https://www.hunglun.com/knowledge/ceu-mdm)：ChromeOS 教育升級版（CEU）是 Chromebook 與 ChromeOS Flex 的 MDM 載具管理授權。依 Google 官方說明整理 8 個好處：永久授權一台一份（同網域可轉移）、從管理主控台部署不必碰機器、重置後自動重新註冊、遺失遭竊可遠端鎖定、登入即套用內容封鎖與 App 管理、標準化測驗與測驗時禁止外部網頁、統一推送安全更新與報表、24 小時原廠支援；以及採購前要確認的四件事。
 - [學校 Google 帳號畢業後還能用嗎？資料轉移與刪除](https://www.hunglun.com/knowledge/school-account-after-graduation)：畢業後能否使用由學校管理員決定；用 takeout.google.com/transfer 把雲端硬碟、Gmail、相簿複製到另一個 Google 帳號（不含聯絡人、聊天、工作）；停用可恢復，刪除約 20 天內可嘗試復原
 - [生生用平板結束了嗎？115 年數位學習計畫與載具汰換](https://www.hunglun.com/knowledge/student-tablet-program-2026)：推動中小學數位學習精進方案期程 110 年 12 月至 114 年 12 月；115 年改以年度數位學習實施計畫延續（載具含管理系統每年汰換 25%、4 年補足一生一機，國中小新增 AI 導入數位教學示範學校）；Googlebook 推出後 ChromeOS 更新到 2034 年中、現有 Chrome Education Upgrade 授權持續有效
 - [邀請 AI 研習講師要準備什麼？需求單、報價與到校流程](https://www.hunglun.com/knowledge/invite-ai-trainer)：邀請前先備齊對象與人數、問題、日期時數、場地設備、帳號狀態、時數登錄與經費七項；附需求單欄位、影響報價的條件（研習費用不公開，依需求單報價）與到校流程。

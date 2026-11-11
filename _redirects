@@ -63,8 +63,10 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 /knowledge/mobile-guardian /knowledge/chromebook 301
 /software/mobile-guardian /software 301
 
-# Intune 文章 2026-09-08 從知識庫改放進 Google 解決方案底下（Steve：這篇應該放 google 解決方案）
-/knowledge/intune /google/intune 301
+# Intune 介紹文 2026-11-11 下架（公司指示：競爭品項），兩篇舊網址都轉到 CEU 載具管理文章
+/knowledge/intune /knowledge/ceu-mdm 301
+/google/intune /knowledge/ceu-mdm 301
+/knowledge/intune-for-education /knowledge/ceu-mdm 301
 
 # ── 研習現場短連結（2026-09-17 起）──
 # hunglun.com/go/<日期碼> 現在是 Cloudflare Pages Function 處理（functions/go/[code].js），

@@ -217,8 +217,8 @@ ChromeOS 教育升級版（CEU）型錄
 ChromeOS Flex 舊電腦升級與 CEU 授權導入
 舊電腦不用急著換新機。改裝成 ChromeOS Flex 再搭配 CEU 授權統一管理，比整批換新機便宜，適合先撐過這段汰換空窗期。
 了解更多 →
-Intune 是什麼？跟 Google CEU 有何不同
-貴單位已經有 Intune 在管理 Windows 電腦嗎？可以借力遠端大量部署 ChromeOS Flex，省下工友一台一台跑的人力。
+用 CEU 管理 Chromebook 的 8 個好處
+一次買斷不用年年續費、開箱不必一台台設定、遺失可遠端鎖定，跟學校 Google 帳號同一個管理後台。
 了解更多 →
 GOOGLE FOR EDUCATION
 Google for Education 產品家族
@@ -1498,8 +1498,8 @@ LINE 官方帳號心法圖文選單設計、自動回覆、經營策略。
 2026/08/04
 設備選型與採購
 載具怎麼挑、規格怎麼看、預算與配套怎麼編。
-Intune 是什麼？學校 MDM 跟 Google 管理主控台比較Intune 與 Intune for Education 的差別、能管哪些裝置、授權怎麼來，以及 Chromebook 為什麼要用 Google 管理主控台。
-2026/10/21
+學校 MDM 怎麼選？用 CEU 管理 Chromebook 的 8 個好處CEU 是 Chromebook 的 MDM 授權：一次買斷、開箱免設定、遺失可鎖定、考試鎖網頁，跟學校 Google 帳號同一個後台。
+2026/11/11
 生生用平板結束了嗎？115 年數位學習計畫與載具汰換115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
 2026/10/06
 學校 AI 軟體怎麼採購？從需求、授權到共同供應契約AI 授權採購流程、詢價 10 問、報價前常缺的資料與驗收重點。
@@ -1785,8 +1785,8 @@ Gemini 教育版與 Notebook 20
 Google Classroom 10
 設備選型與採購 7
 資安與個資法遵 4
-Intune 是什麼？學校 MDM 跟 Google 管理主控台比較Intune 與 Intune for Education 的差別、能管哪些裝置、授權怎麼來，以及 Chromebook 為什麼要用 Google 管理主控台。
-2026/10/21
+學校 MDM 怎麼選？用 CEU 管理 Chromebook 的 8 個好處CEU 是 Chromebook 的 MDM 授權：一次買斷、開箱免設定、遺失可鎖定、考試鎖網頁，跟學校 Google 帳號同一個後台。
+2026/11/11
 生生用平板結束了嗎？115 年數位學習計畫與載具汰換115 年數位學習計畫怎麼延續、載具汰換怎麼做、Chromebook 與 Googlebook 怎麼看。
 2026/10/06
 學校 AI 軟體怎麼採購？從需求、授權到共同供應契約AI 授權採購流程、詢價 10 問、報價前常缺的資料與驗收重點。
@@ -3370,77 +3370,73 @@ Gemini 學生專區開放教育版：沒有獨立開關
 
 ---
 
-## Intune 是什麼？學校 MDM 跟 Google 管理主控台比較｜鴻綸科技
+## 學校 MDM 怎麼選？用 CEU 管理 Chromebook 的 8 個好處｜鴻綸科技
 
-https://www.hunglun.com/knowledge/intune-for-education
+https://www.hunglun.com/knowledge/ceu-mdm
 
-教學資源 ／ 設備選型與採購 ／ Intune 是什麼
-Intune 是什麼？跟 Google 管理主控台差在哪
-很多資訊組在問 Intune，多半是學校有 Windows 筆電或 iPad，想像 Chromebook 在 Google 管理主控台那樣集中管理。這篇依微軟官方文件，說明 Intune 是什麼、Intune for Education 差在哪，以及學校該選哪一邊。
-這篇適合：學校資訊組長、負責採購或管理載具的主任，以及正在評估 Windows 筆電、iPad 或 Chromebook 怎麼納管的承辦人。
-作者：鴻綸科技 Steve｜最後更新：2026 年 10 月 21 日
+教學資源 ／ 設備選型與採購 ／ CEU 管理 Chromebook 的好處
+學校 MDM 怎麼選？用 CEU 管理 Chromebook 的 8 個好處
+學校載具一多，最怕一台一台設定、遺失找不回、考試時學生亂開網頁。這篇依 Google 官方說明，整理 ChromeOS 教育升級版（CEU）能幫資訊組省下哪些事。
+這篇適合：學校資訊組長、負責採購或管理載具的主任，以及正在評估學生載具怎麼集中管理的承辦人。
+作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 11 日
 重點先看
-Intune 是什麼？微軟的雲端裝置管理服務（MDM），學校用它集中管理電腦與平板、控制 App 和資料的存取方式。
-Intune for Education 是另一個產品嗎？不是。它是同一個 Intune 服務的精簡管理介面，只提供適合中小學簡單情境的一部分政策與 App；在一邊改的設定，另一邊也會反映。
-能管 Chromebook 嗎？不能。微軟官方列出的平台是 Windows、iOS、iPadOS、macOS、Android、Linux，沒有 ChromeOS。Chromebook 要用 Google 管理主控台，搭配 Chrome Education Upgrade（CEU）。
-學校該用哪個？以 Chromebook 和 Google 帳號為主，用 Google 管理主控台就夠；以 Windows 筆電、iPad 和 Microsoft 帳號為主，才需要 Intune。兩種載具都有，就是兩個管理後台並行。
-Intune 是什麼？
-Intune 是微軟的雲端裝置管理服務，白話說就是學校的「載具管理後台」。微軟官方文件的說法是：Intune 是一組服務，用來簡化大量裝置的管理。學校可以用它做三件事：管理師生用的裝置和 App、控制資料怎麼被存取與分享、檢查裝置是否符合資安要求。
-在 Google 的世界裡，對應的是 Google 管理主控台。兩者做的是同一類事，差別在管的裝置和帳號體系不同。
-MDM 是 Mobile Device Management 的縮寫，意思是行動裝置管理：管理員從雲端替裝置統一安裝 App、套用規則，必要時遠端重置。
-Intune 和 Intune for Education 差在哪？
-兩者設定的是同一個 Intune 服務，差在管理介面：Intune for Education 是精簡版。微軟官方稱它是 Intune 的「精選檢視」，只支援適合中小學簡單情境的一部分政策與 App。
-項目Intune 管理中心Intune for Education
-定位支援整個裝置生命週期，可管理所有支援平台的所有設定精選檢視，同樣涵蓋從註冊到汰除，提供大量註冊與簡化的部署流程
-支援裝置Windows、Windows 11 SE、iOS、iPadOS、macOS、Android、LinuxWindows、Windows 11 SE、iPadOS
-政策與 App完整只有適合中小學簡單情境的一部分
-兩邊的關係一邊修改的設定，會反映在另一邊同左
-要注意：微軟的概覽頁把 Intune for Education 的適用範圍寫成 Windows 與 iOS/iPadOS，設定教學頁寫的是 Windows、Windows 11 SE 與 iPadOS，兩頁寫法略有出入。實際以你登入後看到的管理介面為準。
-Intune 要另外買嗎？
-不一定，要看學校現有的授權。微軟官方文件列出三種取得方式：單獨購買、包含在 Enterprise Mobility + Security 裡，或包含在 Microsoft 365 教育方案裡。所以學校如果已經訂了 Microsoft 365 教育方案，先查授權內容，再決定要不要另外加購。價格與方案內容請洽微軟授權商，本篇不列金額。
-學校導入前要先確認的四件事
-以下依微軟官方的學校部署教學整理：
-授權與帳號：師生要有 Microsoft 帳號，且授權涵蓋 Intune。這一步沒確認，後面都做不了。
-網路：官方要求 Intune 需要的網路端點，不能經過 SSL 檢查或任何形式的過濾。學校防火牆如果有做 SSL 解密或內容過濾，要先把這些端點排除，否則裝置可能連不上。
-註冊限制：可以在註冊限制裡封鎖個人裝置，避免老師或學生的私人手機被納入管理。
-iPad 的憑證與權杖：iPad 要搭配 Apple School Manager 做自動裝置註冊。Apple MDM 憑證、Volume Purchase Program 權杖、自動註冊權杖，官方都註明每年要更新，建議直接在行事曆設提醒。
-Windows 這邊，官方範例還有兩個常見設定：用 Windows Autopilot 搭配「註冊狀態頁」，讓裝置在必要 App 裝好之前不能使用；另外因為學生帳號通常沒開多重要素驗證，官方範例是先在整個租戶停用 Windows Hello for Business，再只對老師開啟。
-Chromebook 為什麼不歸 Intune 管？
-因為 Intune 官方支援的平台清單裡沒有 ChromeOS。Chromebook 要用 Google 管理主控台管理，並搭配 Chrome Education Upgrade（簡稱 CEU，Chromebook 的載具管理授權）才能集中套用政策。詳細見 Chromebook 是什麼、學校怎麼選。
-學校該選 Intune 還是 Google 管理主控台？
-學生載具以 Chromebook 為主、帳號是 Google：用 Google 管理主控台就夠，不需要 Intune。
-學生載具以 Windows 筆電或 iPad 為主、帳號是 Microsoft：用 Intune，學校資訊組通常會從 Intune for Education 開始，不夠用再轉到完整的管理中心。
-兩種載具都有：會變成兩個後台、兩套帳號並行。建議先決定學校的主要帳號體系，再決定每一類載具怎麼納管，避免同一位老師有兩組帳密。
-鴻綸科技是 Google for Education 夥伴，Chromebook、CEU 與 Google 管理主控台這一側我們可以協助評估；Intune 屬於微軟產品，授權與設定細節請以微軟官方文件與你的授權商為準。
-資料來源與查證（最後查證：2026 年 10 月 21 日）
-Microsoft Learn〈What is Intune for Education?〉（2025 年 2 月發布，2026 年 10 月 7 日更新）、〈Set up device management〉（2026 年 7 月 1 日更新）。授權、支援平台與功能以微軟官方最新公告為準。
+CEU 是什麼？ChromeOS 教育升級版（ChromeOS Education Upgrade），讓學校在 Google 管理主控台集中管理 Chromebook 與 ChromeOS Flex 電腦的授權，也就是學校的 MDM（載具管理）。
+要年年續費嗎？不用。單獨購買的 CEU 是永久授權，一台一份，裝置用多久就管多久。
+最大的好處是什麼？開箱不用一台台設定、重置後自動回到學校管理、遺失可遠端鎖定、考試時鎖住外部網頁，而且跟學校的 Google 帳號用同一個管理後台。
+舊電腦也能管嗎？可以。Windows 或 Mac 舊電腦改裝 ChromeOS Flex 之後，同樣用 CEU 納入管理。
+MDM 是什麼？CEU 又是什麼？
+MDM 是 Mobile Device Management 的縮寫，意思是行動裝置管理：資訊組從雲端替全校載具統一安裝 App、套用規則，必要時遠端鎖定或重置，不必跑到每一台機器前面操作。
+CEU 就是 Chromebook 的 MDM 授權。Google 官方說明是：有了 ChromeOS 教育升級版，學校可以管理任何 Chromebook，或任何安裝了 ChromeOS Flex 的裝置。管理介面就是學校原本管 Google 帳號的 Google 管理主控台，不必另外學一套系統。
+用 CEU 管理 Chromebook 的 8 個好處
+一次買斷，不用年年續費：單獨購買的 CEU 是永久授權，一台一份，涵蓋裝置的整個使用期間；裝置汰換時，也能轉移到同一個學校網域的另一台。
+開箱不用一台台設定：Google 官方說法是，在管理主控台就能部署上千台 Chromebook，不必親手碰任何一台。Wi-Fi、App、瀏覽規則都由後台統一派送。
+重置也跑不掉：裝置被恢復原廠設定後，會自動重新註冊回學校網域，學生沒辦法把學校載具變成私人電腦。
+遺失或遭竊可遠端鎖定：在後台把那台裝置停用，拿到的人也無法使用。
+師生一登入就套用規則：老師與學生用學校帳號登入任何一台學校載具，都會套用同一套設定：封鎖不當內容、開啟安全瀏覽、集中管理 Chrome 與各種 App、擴充功能。
+為考試與教室設計：可以在 Chromebook 上辦標準化測驗，測驗時禁止學生開啟外部網頁；圖書館與電腦教室的公用電腦，也能讓學生不用登入就直接使用 Chrome。
+更新與資安看得見：統一推送安全性更新，並在後台查看裝置使用情況與潛在網路威脅的報表。
+24 小時原廠支援：CEU 含 ChromeOS 疑難排解協助，遇到問題隨時可以聯絡 Google，不另外收費。
+跟學校的 Google 帳號同一個後台
+多數學校本來就用 Google Workspace for Education，帳號、Classroom、雲端硬碟都在 Google 管理主控台管理。CEU 讓載具也進到同一個後台：同一個管理員、同一套組織單位、同一組學校帳號，就能決定哪個年級的學生能用哪些 App、哪些網站要擋。不必多一套系統、多一組帳密，資訊組的工作量也不會因為載具增加而翻倍。
+組織單位與 Chrome 政策怎麼規劃，可以看 Google 管理主控台校園設定指南。
+舊電腦也能一起管
+學校電腦教室或行政室的舊 Windows、Mac 電腦，改裝 ChromeOS Flex 之後，一樣用 CEU 納入管理，跟 Chromebook 套用同一套政策。台數多的學校，可以用學校現有的軟體派送工具遠端批次改裝，不必一台一台插隨身碟。做法見 ChromeOS Flex 舊電腦升級與 CEU 授權導入。
+採購前要先確認的四件事
+報價有沒有含 CEU：一般教育用 Chromebook 出廠通常不含 CEU，採購時請確認報價有沒有包含，否則開箱後無法集中管理。
+學校要先有管理主控台：CEU 是在 Google Workspace for Education 的管理主控台裡使用，學校要先有教育版網域。
+先查機型的自動更新到期日：Google 建議訂購永久授權前，先確認每個機型的自動更新政策，避免授權買在快要停止更新的機器上。
+授權只能在同一個網域內轉移：裝置汰換時可以把 CEU 轉到同網域的另一台，但不能轉給別的學校。
+品項規格與完整管理功能，見 ChromeOS 教育升級版（CEU）型錄。
+資料來源與查證（最後查證：2026 年 11 月 11 日）
+Google〈ChromeOS Education Upgrade〉官方單頁說明、Google 管理說明〈Order options for managing ChromeOS devices〉。授權內容、功能與價格以 Google 官方最新公告為準。
 常見問題
-Intune 是什麼？
-Intune 是微軟的雲端裝置管理服務（MDM）。學校可以用它集中管理師生的電腦與平板、控制 App 與資料的存取方式，並檢查裝置是否符合資安要求。
-Intune for Education 和 Intune 有什麼不同？
-兩者設定的是同一個 Intune 服務。Intune for Education 是精簡的管理介面，只提供適合中小學簡單情境的一部分政策與 App，支援 Windows 與 iPadOS；完整的 Intune 管理中心支援更多平台與設定。在一邊修改的設定會反映在另一邊。
-Intune 可以管理 Chromebook 嗎？
-不行。微軟官方列出的支援平台是 Windows、iOS、iPadOS、macOS、Android 與 Linux，沒有 ChromeOS。Chromebook 要用 Google 管理主控台管理，並搭配 Chrome Education Upgrade（CEU）授權。
-Intune 要另外付費嗎？
-不一定。微軟官方文件列出三種取得方式：單獨購買、包含在 Enterprise Mobility + Security、或包含在 Microsoft 365 教育方案。學校要先查現有授權是否已涵蓋，價格請洽微軟授權商。
-學校用 Intune 管理 iPad，要先準備什麼？
-要搭配 Apple School Manager 做自動裝置註冊，並準備 Apple MDM 憑證、Volume Purchase Program 權杖與自動註冊權杖。官方註明這三項每年都要更新，建議在行事曆設提醒。
+CEU 是什麼？
+CEU 是 ChromeOS 教育升級版（ChromeOS Education Upgrade，舊稱 Chrome Education Upgrade），讓學校在 Google 管理主控台集中管理 Chromebook 與 ChromeOS Flex 電腦，等於 Chromebook 的 MDM 載具管理授權。
+CEU 要年年續費嗎？
+不用。單獨購買的 CEU 是永久授權，一台一份，涵蓋裝置的整個使用期間。Google 建議訂購前先確認機型的自動更新到期日。
+Chromebook 買來就能集中管理嗎？
+不一定。一般教育用 Chromebook 出廠通常不含 CEU，要另外購買並註冊到學校網域，才能在管理主控台集中套用政策。採購時請確認報價有沒有包含 CEU。
+舊的 Windows 電腦也能用 CEU 管嗎？
+可以。舊電腦改裝 ChromeOS Flex 之後，同樣用 CEU 納入 Google 管理主控台，跟 Chromebook 套用同一套政策。
+裝置壞了，CEU 可以轉到新的機器嗎？
+可以。把舊裝置取消註冊後，CEU 可以轉到同一個學校網域的另一台裝置，不限機型；但不能轉給其他學校或機構的網域。
 💡 這篇對同事也有幫助嗎？
 歡迎複製下面這段文字，分享到貴校的行政或教師群組：
 複製分享文字
 延伸閱讀
+ChromeOS 教育升級版（CEU）型錄
+品項規格、計價方式與完整管理功能。
 Chromebook 是什麼？跟一般筆電差在哪
 Chromebook 的優缺點、適合情境與 CEU 載具管理授權。
 Google 管理主控台校園設定指南
 組織單位、群組與 Chrome 政策怎麼規劃。
-學校資訊設備採購指南
-載具選型與共同供應契約的採購流程。
-學校怎麼強制開啟兩步驟驗證
-排除學生單位並避免鎖死的設定順序。
-學校同時有 Chromebook 和其他載具，不知道怎麼管？
-我們可以協助評估 Chromebook 與 Google 管理主控台這一側的設定與授權，也能和學校既有的載具管理方式一起規劃。
-詢問載具管理規劃
+ChromeOS Flex 舊電腦升級
+舊電腦免換機，改裝 ChromeOS Flex 並用 CEU 統一管理。
+學校想集中管理 Chromebook？
+告訴我們載具數量與機型，我們協助確認 CEU 授權、管理主控台設定與舊電腦改裝怎麼做最省事。
+詢問 CEU 報價與導入
 來電 06-6371192
+看 CEU 型錄 →
 
 ---
 
@@ -10984,56 +10980,13 @@ Google 有公布一份「測試過沒問題」的官方機型清單（開啟 Goo
 延伸閱讀
 Chromebook 與智慧教室建置 →
 Chromebook 選購與校園導入指南 →
-Intune 是什麼？跟 Google CEU 有何不同 →
+用 CEU 管理 Chromebook 的 8 個好處 →
 手上有一批舊電腦想先延長使用？
 告訴我們電腦的型號與大概數量，我們免費幫您確認能不能改裝，並抓一份分批導入的時程與費用估算。
 聯絡我們
 看所有服務項目
 ← ChromeOS 教育升級版（CEU）型錄
 Google Workspace for Education 導入與認證培訓 →
-
----
-
-## Intune 是什麼？跟 Google CEU 有何不同｜鴻綸科技
-
-https://www.hunglun.com/google/intune
-
-Google 解決方案 ／ Intune 是什麼
-Intune 到底在幹嘛？看完這篇就懂
-白話版說明：Intune 是什麼、能幫學校/公司做到什麼，以及鴻綸科技實際上能幫多少忙。
-作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 5 日
-Intune 是微軟做的一套「遠端管理電腦跟手機」的雲端工具。可以把它想成：IT 人員坐在辦公室，透過一個網頁後台，就能同時管理全校或全公司所有的電腦跟手機，設定誰能裝什麼軟體、誰能連上什麼網站、電腦有沒有中毒風險，不用親自跑到每一台機器前面操作。
-重點先看
-Intune 是什麼？微軟做的雲端裝置管理工具，IT 人員用網頁後台，就能遠端管理全校或全公司的電腦與手機。
-跟 Google 的 CEU 差在哪？CEU 只管 ChromeOS 裝置；Intune 則 Windows、Mac、iPhone、Android 都能管。
-鴻綸科技能幫什麼？貴單位已有 Intune 時，可借用它把舊電腦遠端改裝成 ChromeOS Flex；完整的 Intune 導入與長期維護不在服務範圍內。
-常見用途
-新電腦一開箱就自動設定好：照公司規則自動裝好軟體與政策，不用 IT 人員一台一台裝。
-檢查電腦有沒有裝防毒、有沒有更新系統：沒過關的電腦可以擋掉存取權。
-員工自己的手機也能保護公司資料：不是公司配發的手機，也能只保護公司的 App 資料，不用整支手機都被公司管控。
-跟 Google 的 CEU（Chrome 教育升級授權）有什麼不一樣
-最大差別是管的裝置種類跟出身。CEU 只管 ChromeOS 裝置（Chromebook，以及改裝 ChromeOS Flex 的電腦），是 Google 自己的系統；Intune 則 Windows、Mac、iPhone、Android 都能管，是微軟的系統。裝置品牌很多元、或本來就已經用 Microsoft 365 的單位，通常會考慮 Intune；主力就是 Chromebook 的單位，用 CEU 比較單純。
-鴻綸科技能幫忙的範圍
-誠實說，可以幫忙的是：如果貴單位本來就已經有 Intune 在管理 Windows 電腦，可以借用這套既有系統，把一批舊電腦遠端改裝成 ChromeOS Flex，不用工友一台一台拿隨身碟去裝（下一段細講）。但完整的 Intune 導入設定與長期維護（建置管理主控台、寫資安政策、教 IT 人員操作），不在鴻綸科技目前的服務範圍內，這塊建議另外找 Microsoft 認證夥伴，鴻綸科技的核心專長仍在 Google 這一側。
-借用 Intune 遠端改裝 ChromeOS Flex，怎麼運作
-Google 官方有一套做法：先在 Google 後台產生一組登記憑證，包成一個檔案，透過學校或公司原本就在用的 Intune（或 SCCM 之類的工具）直接推送到每一台目標電腦，排在下班後自動執行安裝，電腦重開機就已經變成 ChromeOS Flex，還會自動登記進正確的帳號網域。整個過程不用 IT 人員實際碰到那台電腦，一次改裝幾十台、幾百台是同樣的工。
-如果貴單位還沒有 Intune 環境，也可以，只是辛苦一點：用隨身碟一台一台開機安裝，適合十幾二十台以內的規模，詳細做法見鴻綸科技的 ChromeOS Flex 服務頁。裝置數量多、又剛好已經有 Intune 環境的單位，走遠端部署會省下非常多人力。
-延伸閱讀
-更多裝置管理與校園設備相關知識。
-ChromeOS Flex 舊電腦升級服務
-舊電腦免換機，改裝成 ChromeOS Flex 並搭配 CEU 授權統一管理。
-Chromebook 選購指南
-什麼是 Chromebook、優缺點與校園導入知識。
-想了解 ChromeOS Flex 大量部署？
-把貴單位現有的裝置環境告訴我們，我們幫您確認能不能接、怎麼做最省事。
-聯絡我們
-常見問題
-Intune 跟 Google 的 CEU（Chrome 教育升級授權）有什麼不一樣？
-最大差別是管的裝置種類跟出身。CEU 只管 ChromeOS 裝置（Chromebook，以及改裝 ChromeOS Flex 的電腦），是 Google 自己的系統；Intune 則 Windows、Mac、iPhone、Android 都能管，是微軟的系統。裝置品牌很多元、或本來就已經用 Microsoft 365 的單位，通常會考慮 Intune；主力就是 Chromebook 的單位，用 CEU 比較單純。
-鴻綸科技在 Intune 這塊能幫忙的範圍是什麼？
-如果貴單位本來就已經有 Intune 在管理 Windows 電腦，可以借用這套既有系統，把一批舊電腦遠端改裝成 ChromeOS Flex，不用工友一台一台拿隨身碟去裝。但完整的 Intune 導入設定與長期維護（建置管理主控台、寫資安政策、教 IT 人員操作），不在鴻綸科技目前的服務範圍內，這塊建議另外找 Microsoft 認證夥伴，鴻綸科技的核心專長仍在 Google 這一側。
-借用 Intune 遠端改裝 ChromeOS Flex，實際怎麼運作？
-先在 Google 後台產生一組登記憑證，包成一個檔案，透過學校或公司原本就在用的 Intune（或 SCCM 之類的工具）直接推送到每一台目標電腦，排在下班後自動執行安裝，電腦重開機就已經變成 ChromeOS Flex，還會自動登記進正確的帳號網域。整個過程不用 IT 人員實際碰到那台電腦，一次改裝幾十台、幾百台是同樣的工；如果還沒有 Intune 環境，也可以用隨身碟一台一台開機安裝，適合十幾二十台以內的規模。
 
 ---
 
@@ -12561,7 +12514,7 @@ Microsoft 的各類產品授權。同一產品常有依使用者、依裝置、�
 延伸閱讀
 Google Workspace 教育版版本比較 →
 Google Workspace for Education 導入 →
-Intune 是什麼？跟 Google CEU 有何不同 →
+用 CEU 管理 Chromebook 的 8 個好處 →
 需要這一類設備？
 把需要的規格與數量給我們，我們協助對契約項目、備齊請購文件。
 聯絡我們
