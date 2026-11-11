@@ -198,6 +198,8 @@ a.stat:hover{transform: none}
    本身或外層是置中的不動；用 :where 讓權重為 0，任何寫了置中的 class 都會贏。
    左右對齊配 pretty 會刻意留空再被撐開，字距忽大忽小；防孤字已由 main.js 綁段尾三字處理，這裡改回一般斷行 */
 :where(.prose p,.prose li,.prose dd,.faq-a,.card-body p,.kn-d):where(:not(.page-head *,.contact-card *,.series-pager *,[style*="text-align:center"],[style*="text-align: center"],[style*="text-align:center"] *,[style*="text-align: center"] *)){text-align: justify;text-wrap: wrap}
+/* 手機欄寬窄、中英混排，左右對齊會把空間平均撐在字距上（iPhone 上「買了授權，老師就…」字字分開）；窄螢幕一律靠左 */
+@media (max-width: 768px){:where(.prose p,.prose li,.prose dd,.faq-a,.card-body p,.kn-d){text-align: left}}
 .prose ul{padding-left: 24px}
 .tags{display: flex;gap: 8px;flex-wrap: wrap;margin: 14px 0}
 .tag{font-size: 0.76rem;padding: 4px 12px;border: 1px solid var(--line);color: var(--muted);background: none}
