@@ -3,6 +3,13 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.15（2026-11-11）
+
+依公司指示調整提到其他家 AI 產品的內容：
+- 下架 `/knowledge/ai-teacher-free-plans`（Claude、ChatGPT 老師免費方案）：原檔與 og 圖移到 `工作紀錄/下架文章/`，網址回 404；學習專區、Google 與 AI 主題頁、sitemap、llms、search-index、llms-full 一併拿掉。學習專區 91 篇、主題頁 36 篇。
+- 改寫 `/knowledge/ai-comparison`（網址不變）：標題改為「學校 AI 助手怎麼選？Gemini 和 ChatGPT、Claude 比較，校園為什麼選 Google」；新增「一個學校帳號，生圖、做影片、寫程式都在裡面」一節（Nano Banana 生圖、Vids 生成式 AI 須年滿 18 歲、Gemini Canvas 寫程式、Deep Research 免費版每月 5 份，依 Google for Education 方案比較頁）；比較表改為「Gemini／AI Pro」對「其他 AI 助手」兩欄、從學校導入角度比；常見問題與列表描述同步。og 圖重產、`?v=6`。
+- 微軟軟體共契頁拿掉 Microsoft 365 Copilot：項次重編，微軟 62 改 61 項，電腦軟體總數 740 改 739 項。
+
 ## v1.39.14（2026-11-11）
 
 下架文章 `/knowledge/change-google-reseller`（學校換 Google 經銷商流程），依公司指示不對外公開。原檔移到 `工作紀錄/下架文章/`（不上線）；網址改回 404 讓搜尋引擎移除，不做轉址。同步拿掉：首頁「資訊組長」卡片（改連 `/knowledge/workspace-editions` 方案比較）、學習專區列表與 ItemList、Google 與 AI 主題頁、sitemap.xml、llms.txt；重產 search-index.json、llms-full.txt。學習專區篇數統一為 92 篇（原本 93／95 混用），主題頁 38 篇改 37 篇。
