@@ -1350,7 +1350,7 @@ Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Pl
 2026/10/02
 邀請 AI 研習講師要準備什麼？需求單、報價與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
 2026/10/05
-學校 AI 助手怎麼選？Gemini 和 ChatGPT、Claude 比較，校園為什麼選 Google同一組學校帳號就能生圖、做影片、寫程式，管理員統一控管；附跟其他 AI 助手的校園導入比較表。
+學校 AI 助手怎麼選？校園為什麼選 Google Gemini同一組學校帳號就能生圖、做影片、寫程式，管理員統一控管；附跟其他 AI 助手的校園導入比較表。
 2026/09/10
 學校行政可以自動化的十件事會議紀錄、活動通知、資料核對，AI 幫得上忙的地方與個資紅線。
 2026/09/03
@@ -1567,7 +1567,7 @@ Google AI Pro for Education 與 Workspace 教育版差在哪？Fundamentals、Pl
 2026/10/02
 邀請 AI 研習講師要準備什麼？需求單、報價與到校流程邀請 AI 研習講師前要備齊的資料、報價看哪些條件，以及到校流程。
 2026/10/05
-學校 AI 助手怎麼選？Gemini 和 ChatGPT、Claude 比較，校園為什麼選 Google同一組學校帳號就能生圖、做影片、寫程式，管理員統一控管；附跟其他 AI 助手的校園導入比較表。
+學校 AI 助手怎麼選？校園為什麼選 Google Gemini同一組學校帳號就能生圖、做影片、寫程式，管理員統一控管；附跟其他 AI 助手的校園導入比較表。
 2026/09/10
 學校行政可以自動化的十件事會議紀錄、活動通知、資料核對，AI 幫得上忙的地方與個資紅線。
 2026/09/03
@@ -5884,12 +5884,12 @@ AI 應用與客製工具開發
 
 ---
 
-## 學校 AI 助手怎麼選？Gemini 和 ChatGPT、Claude 比較，校園為什麼選 Google｜鴻綸科技
+## 學校 AI 助手怎麼選？校園為什麼選 Google Gemini｜鴻綸科技
 
 https://www.hunglun.com/knowledge/ai-comparison
 
 教學資源 ／ Google 與 AI 導入 ／ AI 助手怎麼選
-學校 AI 助手怎麼選？Gemini 和 ChatGPT、Claude 比較，校園為什麼選 Google
+學校 AI 助手怎麼選？校園為什麼選 Google Gemini
 不比誰的模型跑分高，比誰能用學校現有的帳號，真的省下行政與備課時間。
 這篇適合：國中小、高中職與大專的資訊組長、教學組長，以及正在評估 Google AI 導入校園的行政人員。
 作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 11 日
@@ -5909,8 +5909,8 @@ Gemini Notebook 要另外付費嗎？不用，已包含在 Google AI Pro for Edu
 在每天用的應用程式裡直接叫出 AI：AI Pro 把 Gemini 放進 Gmail、文件、簡報、試算表、表單、Vids、Meet、雲端硬碟與 Chat，寫公文、做簡報、整理成績不必切換分頁。
 功能與額度依 Google for Education 方案比較頁整理，部分功能分批開放；Google AI Pro for Education 只能指派給 18 歲以上的使用者，實際內容以官方當期公告為準。
 跟其他 AI 助手比，學校該看哪幾件事
-ChatGPT、Claude 也是好用的 AI 助手，老師個人用來寫作、發想都沒問題。但學校要全校導入，比的是下面這幾件事：
-評估項目Gemini／Google AI Pro for Education其他 AI 助手（ChatGPT、Claude 等）
+市面上的 AI 助手很多，老師個人用來寫作、發想都沒問題。但學校要全校導入，比的是下面這幾件事：
+評估項目Gemini／Google AI Pro for Education其他 AI 助手
 帳號直接用學校既有的 Google 帳號另外註冊，或另購團隊、企業方案
 管理管理員在管理主控台統一指派、開關功能要另外建一套帳號與權限管理
 資料訓練政策教育版內容不用於訓練模型依各家方案條款，學校要另外確認
@@ -5944,7 +5944,7 @@ Google AI Pro for Education 除了 Gemini 應用程式本身升級到進階模�
 模型能力接近，但整合體驗不同：個人帳號無法讀取學校網域的共用雲端硬碟與 Classroom 課程，也不受管理主控台的統一控管。要評估全校導入效果，建議直接申請學校測試帳號。
 採購 Google AI Pro for Education 之後，Gemini Notebook 要另外開通或付費嗎？
 不用。Gemini Notebook（原 NotebookLM，2026 年 7 月更名）已包含在 Google AI Pro for Education 授權內，管理員在管理主控台指派授權後，老師直接用學校帳號登入即可拿到較高的來源上傳與語音摘要額度，實際數字以官方當下公告為準。
-學校可以用 ChatGPT 或 Claude 嗎？
+學校可以讓老師各自用其他 AI 助手嗎？
 老師個人用沒問題，但全校導入要多想一步：每位老師各自註冊，學校管不到帳號，也無法統一確認資料政策，成果還要再搬回學校系統。學校已經用 Google Workspace 的話，Gemini 直接用學校帳號登入，生圖、做影片、寫程式都在同一個帳號裡，管理員統一控管，行政成本最低。
 下一篇：Gemini 方案懶人包 →
 延伸閱讀

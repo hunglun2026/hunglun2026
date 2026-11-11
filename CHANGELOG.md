@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.17（2026-11-11）
+
+`/knowledge/ai-comparison` 全篇不再點名其他 AI 產品：標題改為「學校 AI 助手怎麼選？校園為什麼選 Google Gemini」（網址不變），比較段開頭、比較表欄名、常見問題改寫成「其他 AI 助手」；學習專區、Google 與 AI 主題頁、llms 的標題與描述同步，og 圖重產並升 `?v=7`。版號只寫入已追蹤的頁面（另一視窗的新檔 `tools/parent-message.html` 未動）。
+
 ## v1.39.16（2026-11-11）
 
 依公司指示拿掉微軟 Intune 介紹（競爭品項），改寫成 CEU 載具管理的好處：
