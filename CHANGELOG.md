@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.23（2026-11-12）
+
+服務與工具卡片改成「分類標籤卡」：全站 52 張圖示卡拿掉圖示，整圈 1px 細邊框、12px 圓角，標題上方放小標籤（前面一顆站上主色的小圓點，例如「教育授權」「師資研習」「智慧教室」），標籤文字寫在卡片的 `data-tag` 屬性，不靠順序。起因是圖示連換三版都被認為不好看；經與 Gemini 帳號 A 討論 5 輪並實際渲染比對後，採用此版（對標 Google Cloud 解決方案頁）。照片卡、產品卡沒有 `data-tag`，樣式不變。深色模式沿用站上 `--accent`、`--line` 變數。`style.css` 版號升到 v=135，轉換腳本 `sitemap/tag-cards.py`，刪除不再使用的 `sitemap/build-card-icons.py` 與所有 `icon-d-*.svg`。
+
 ## v1.39.22（2026-11-12）
 
 圖示型卡片改版：拿掉 152px 的灰底封面區，圖示縮成 60px 放在標題左上方（參考 Atlassian、Microsoft 教育、Google Cloud 解決方案頁的做法，大塊灰底配大圖示是最像模板的地方）；Gemini 星、Classroom、Gmail 這類官方圖示縮成 48px 並對齊。圖示換成 Phosphor Duotone（MIT 授權）雙色調，仍只用品牌藍，底座改淡藍漸層加細邊，檔名改為 `icon-d-*.svg`，產生腳本 `sitemap/build-card-icons.py` 同步改寫。照片卡、機器人卡不受影響。`tools/campus.html` 與 `tools/commercial.html` 剩下的 6 張舊剪貼畫圖示一併換成同一套線條圖示。`style.css` 版號升到 v=134。

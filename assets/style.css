@@ -144,11 +144,11 @@ a.stat:hover{transform: none}
 .card-visual img.food-photo{width: 100%;height: 100%;object-fit: cover}
 .card-visual.photo-visual{height: 190px;padding: 0;overflow: hidden}
 .card-visual.photo-visual img{width: 100%;height: 100%;object-fit: cover}
-.card-visual:not(.photo-visual):not(.food-visual):not(.bot-visual):has(> img[src*="/assets/icon-"]){height: auto;justify-content: flex-start;background: transparent;padding: 26px 24px 0}
-.card:hover .card-visual:not(.photo-visual):not(.food-visual):not(.bot-visual):has(> img[src*="/assets/icon-"]){background: transparent}
-.card-visual:not(.photo-visual):not(.food-visual):not(.bot-visual) > img[src*="/assets/icon-"]{width: 60px;height: 60px}
-.card-visual:not(.photo-visual):not(.food-visual):not(.bot-visual):has(> img[src*="icon-gemini"]) > img,.card-visual:not(.photo-visual):not(.food-visual):not(.bot-visual):has(> img[src*="icon-classroom"]) > img,.card-visual:not(.photo-visual):not(.food-visual):not(.bot-visual):has(> img[src*="icon-gmail"]) > img{width: 48px;height: 48px;margin: 6px}
-.card-visual:has(> img[src*="/assets/icon-"]) + .card-body{padding-top: 16px}
+/* 分類標籤卡：有 data-tag 的卡片，整圈細邊框，標題上方放小標籤（前面一顆主色小圓點）；沒有 data-tag 的照片卡、產品卡不受影響 */
+.card[data-tag]{background: var(--card);border: 1px solid var(--line);border-radius: 12px;transition: transform 0.25s ease,border-color 0.2s ease,box-shadow 0.2s ease}
+.card[data-tag]::before{content: attr(data-tag);align-self: flex-start;margin: 24px 24px 0;padding: 5px 11px 5px 22px;font-size: 0.75rem;font-weight: 500;line-height: 1.3;letter-spacing: 0.04em;color: var(--muted);background: radial-gradient(circle at 11px 50%,var(--accent) 3px,transparent 3.5px),var(--bg-soft);border: 1px solid var(--line);border-radius: 6px}
+.card[data-tag] .card-body{padding: 16px 24px 24px}
+.card[data-tag]:hover{border-color: var(--accent);box-shadow: 0 12px 28px -14px var(--glow)}
 .card-visual.food-visual{height: 190px;position: relative;overflow: hidden;padding: 0}
 .card-visual.food-visual::before{content: "";position: absolute;inset: -20px;background-image: var(--bg-img);background-size: cover;background-position: center;filter: blur(20px) brightness(0.72) saturate(1.1);transform: scale(1.15);z-index: 0}
 .card-visual.food-visual img.food-photo{position: relative;z-index: 1;width: 76%;height: 76%;object-fit: cover;border-radius: 14px;box-shadow: 0 12px 28px rgba(0,0,0,0.3)}
