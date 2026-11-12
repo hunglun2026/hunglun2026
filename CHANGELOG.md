@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.22（2026-11-12）
+
+圖示型卡片改版：拿掉 152px 的灰底封面區，圖示縮成 48px 放在標題左上方（參考 Atlassian、Microsoft 教育、Google Cloud 解決方案頁的做法，大塊灰底配大圖示是最像模板的地方）；Gemini 星、Classroom、Gmail 這類官方圖示縮成 40px 並對齊。照片卡、機器人卡不受影響。`tools/campus.html` 與 `tools/commercial.html` 剩下的 6 張舊剪貼畫圖示一併換成同一套線條圖示。`style.css` 版號升到 v=134。
+
 ## v1.39.21（2026-11-12）
 
 卡片圖示撤回 v1.39.20 的 3D 圖，改成單一品牌藍（#1A73E8 圖形、#E8F0FE 圓角底）的 Material outlined 線條圖示，依品牌套件「只鎖一支主色、四色不當裝飾色」的規定；檔名改為 `icon-c-*.svg` 避開舊圖快取，轉換腳本 `sitemap/build-card-icons.py` 同步更新。3D 圖有背景殘影、與官方平面標誌風格不一，也偏 AI 生成感，不符公司形象。
