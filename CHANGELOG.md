@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.26（2026-11-13）
+
+新增三篇知識文章，內容都取自 Google 官方說明頁：親師座談用 Google 日曆預約時間表（`calendar-appointment-schedule`）、Classroom 家長電子郵件摘要（`classroom-guardian-summary`）、用 Google 協作平台做班級網站（`google-sites-class-website`）。官方沒寫的做法一律標明是我們的實務建議。登記：sitemap、教學專區索引、主題頁 `topic/web`（16 變 18）與 `topic/classroom`（10 變 11）、`llms.txt`、llms-full、搜尋索引、專屬 og 圖。搜尋索引與 llms-full 順便補上 v1.39.25 英文一堂一頁的網址（上一版提交時被我的暫存版蓋掉）。
+
 ## v1.39.25（2026-11-13）
 
 英文自學課程改成「一堂一頁」，並擴充為 110 堂：每堂獨立網頁 `/tools/english-lesson-N`（入門 101 到 110、第 1 到 100 堂），各級頁 `/tools/english-0` 到 `/tools/english-5` 只放課程列表、完成標記與完成證明；新增第 0 級「字母發音入門」10 堂（字母、母音子音、教室用語、文具、拼名字）。每堂小測從 5 題增為 10 題（含 4 題聽力），加入星星（全對 3 顆）、20 個徽章、連續學習天數、各級完成證明（可列印），紀錄只存在使用者瀏覽器。`sitemap.xml` 加 111 個網址、`llms.txt` 與 `tools/games.html` 文字改為 110 堂 6 級。字型子集重建補新字，字型與 `style.css` 版號各升一號。單字與例句仍沒有英文老師審稿，頁面已寫明不保證多益分數。
