@@ -5,7 +5,7 @@
 
 ## v1.39.22（2026-11-12）
 
-圖示型卡片改版：拿掉 152px 的灰底封面區，圖示縮成 48px 放在標題左上方（參考 Atlassian、Microsoft 教育、Google Cloud 解決方案頁的做法，大塊灰底配大圖示是最像模板的地方）；Gemini 星、Classroom、Gmail 這類官方圖示縮成 40px 並對齊。照片卡、機器人卡不受影響。`tools/campus.html` 與 `tools/commercial.html` 剩下的 6 張舊剪貼畫圖示一併換成同一套線條圖示。`style.css` 版號升到 v=134。
+圖示型卡片改版：拿掉 152px 的灰底封面區，圖示縮成 60px 放在標題左上方（參考 Atlassian、Microsoft 教育、Google Cloud 解決方案頁的做法，大塊灰底配大圖示是最像模板的地方）；Gemini 星、Classroom、Gmail 這類官方圖示縮成 48px 並對齊。圖示換成 Phosphor Duotone（MIT 授權）雙色調，仍只用品牌藍，底座改淡藍漸層加細邊，檔名改為 `icon-d-*.svg`，產生腳本 `sitemap/build-card-icons.py` 同步改寫。照片卡、機器人卡不受影響。`tools/campus.html` 與 `tools/commercial.html` 剩下的 6 張舊剪貼畫圖示一併換成同一套線條圖示。`style.css` 版號升到 v=134。
 
 ## v1.39.21（2026-11-12）
 
