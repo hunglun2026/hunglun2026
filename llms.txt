@@ -55,7 +55,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分四區：八個主題探險網站〔動物、植物、兩棲、故宮、海洋、昆蟲、古蹟、土石流〕、大學自學〔普通物理〕、闖關遊戲〔邊玩邊變強、動物園守護戰〕、課堂即時測驗〔刻度，老師出題、學生線上作答用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
 - 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習專區／資料查詢網站全部免費）：https://www.hunglun.com/tools
   - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、學習專區 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
-- 英文自學課程（學習專區「語文自學」；100 堂、每堂 10 分鐘，從最基礎排到多益 800 左右，可聽發音、記錄進度，免註冊、不用 AI；分 5 級：https://www.hunglun.com/tools/english-1 到 https://www.hunglun.com/tools/english-5）：https://www.hunglun.com/tools/english
+- 英文自學課程（學習專區「語文自學」；110 堂、每堂 10 分鐘、一堂一頁，從字母排到多益 800 左右，可聽發音、星星與徽章、記錄進度，免註冊、不用 AI；分 6 級：https://www.hunglun.com/tools/english-0 到 https://www.hunglun.com/tools/english-5，每堂網址 https://www.hunglun.com/tools/english-lesson-1 起）：https://www.hunglun.com/tools/english
 - 學生回條 AI 辨識系統介紹（家長同意書回條拍照統計、匯出 Excel）：https://www.hunglun.com/tools/consent-slip-ai
 - 校園照片 Word 填入工具介紹（活動成果報告照片排版）：https://www.hunglun.com/tools/photo-word
 - Gemini 備課與校務提示詞 30 組（免費下載，Word 與 PDF）：https://www.hunglun.com/knowledge/gemini-prompt-kit
