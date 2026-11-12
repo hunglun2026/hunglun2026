@@ -26,8 +26,8 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=91" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=135">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=93" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=136">
 <style>
 /* 研習專區清單：跟全站 kn-item 共用骨架，只在這裡加圖示底色徽章、需密碼小標籤、
    懸停時的輕微上浮陰影。只有這一頁的 #training 用得到，不動全站 kn-item 樣式。 */
@@ -128,7 +128,7 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "學習專區：免費學習遊戲與主題探險網站",
-  "numberOfItems": 12,
+  "numberOfItems": 13,
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -406,6 +406,29 @@
           "@id": "https://www.hunglun.com/#organization"
         }
       }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "WebApplication",
+        "name": "英文自學課程",
+        "url": "https://www.hunglun.com/tools/english",
+        "description": "免費英文自學：100 堂課、每堂 10 分鐘，從字母和問候一路排到多益 800 左右的題型與職場字，可聽發音、記錄進度，免註冊、不用 AI。",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "TWD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "鴻綸科技 Hunglun Technology",
+          "url": "https://hunglun.com",
+          "@id": "https://www.hunglun.com/#organization"
+        }
+      }
     }
   ]
 }
@@ -459,9 +482,10 @@
 <div class="section lg-tabs-wrap">
   <div class="wrap">
 <nav class="lg-tabs" id="lgTabs" aria-label="學習專區分類">
-  <a href="#all" data-cat="all" aria-current="page">全部 <span>12</span></a>
+  <a href="#all" data-cat="all" aria-current="page">全部 <span>13</span></a>
   <a href="#explore" data-cat="explore">主題探險網站 <span>8</span></a>
   <a href="#univ" data-cat="univ">大學自學 <span>1</span></a>
+  <a href="#lang" data-cat="lang">語文自學 <span>1</span></a>
   <a href="#game" data-cat="game">闖關遊戲 <span>2</span></a>
   <a href="#quiz" data-cat="quiz">課堂即時測驗 <span>1</span></a>
 </nav>
@@ -581,7 +605,24 @@
       </article>
       </div>
     </div>
-      <div class="lg-block" id="game" data-cat="game">
+      <div class="lg-block" id="lang" data-cat="lang">
+      <h2 class="lg-h2 reveal">語文自學</h2>
+      <p class="lg-lead">不用註冊、不用 AI 的免費語文自學，每堂只要 10 分鐘，進度存在自己的瀏覽器。</p>
+      <div class="lg-grid">
+      <article class="lg-card reveal" style="--c:#1a73e8" data-cat="英文">
+        <a class="lg-shot" href="/tools/english" tabindex="-1" aria-hidden="true"><img width="800" height="500" src="/assets/games/game-english.webp?v=1" alt="" loading="lazy" decoding="async"></a>
+        <div class="lg-body">
+          <span class="lg-kind">英文</span>
+          <img class="lg-icon" width="56" height="56" src="/assets/icon-proj-english.webp?v=1" alt="" loading="lazy" decoding="async">
+          <h3><a href="/tools/english">英文自學課程</a></h3>
+          <div class="tagline">100 堂・每堂 10 分鐘・可聽發音</div>
+          <p>從字母和問候開始，一路排到多益 800 左右的題型與職場字，分 5 個級別。每堂 8 個單字、3 個例句、5 題小測（含聽力），完成後自動記錄進度。</p>
+          <div class="lg-levels" aria-label="適用程度"><span>國小</span><span>國中</span><span>高中</span><span>成人</span></div>
+        </div>
+      </article>
+      </div>
+    </div>
+    <div class="lg-block" id="game" data-cat="game">
       <h2 class="lg-h2 reveal">闖關遊戲</h2>
       <p class="lg-lead">兩款闖關遊戲：答對題目才能出手攻擊，邊玩邊練九九乘法、注音與英文字母；或認出動物讓牠升級，守住動物園。</p>
       <div class="lg-grid">
@@ -682,7 +723,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.39.23</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.39.24</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

@@ -760,9 +760,10 @@ https://www.hunglun.com/tools/games
 免註冊
 免安裝
 電腦與平板都能用
-全部 12
+全部 13
 主題探險網站 8
 大學自學 1
+語文自學 1
 闖關遊戲 2
 課堂即時測驗 1
 主題探險網站
@@ -814,6 +815,13 @@ https://www.hunglun.com/tools/games
 41 章免費大學普通物理・19 個互動模擬
 力學、振動與波、熱學、電磁學、光學與近代物理，每章有白話講解、互動模擬和附解答的練習題。內容為鴻綸原創，答案都經程式驗算。
 大學
+語文自學
+不用註冊、不用 AI 的免費語文自學，每堂只要 10 分鐘，進度存在自己的瀏覽器。
+英文
+英文自學課程
+100 堂・每堂 10 分鐘・可聽發音
+從字母和問候開始，一路排到多益 800 左右的題型與職場字，分 5 個級別。每堂 8 個單字、3 個例句、5 題小測（含聽力），完成後自動記錄進度。
+國小國中高中成人
 闖關遊戲
 兩款闖關遊戲：答對題目才能出手攻擊，邊玩邊練九九乘法、注音與英文字母；或認出動物讓牠升級，守住動物園。
 基本功練習
@@ -856,6 +864,7 @@ AI 出題・線上作答・自動評分・即時看進度
 - 兩棲探險家：https://frog.hunglun.com/：國小兩棲類教學網站：用經濟部水利署河川調查的紀錄認識臺灣溪流的 31 種兩棲類，有兩棲小百科、幾月遇得到、蛙蛙分類遊戲、溪流地圖與找我附近的調查樣點、探險護照，老師可產生學習單並用搶答計分板。
 - 普通物理：https://physics.hunglun.com/：免費大學普通物理自學網站：41 章涵蓋力學、振動與波、熱學、電磁學、光學與近代物理，白話講解、19 個互動模擬、205 題附解答的練習題，免註冊，內容為鴻綸原創，答案經程式驗算。
 - 動物園守護戰：https://zoodefense.hunglun.com/：國小自然課的塔防遊戲：動物當砲塔，敵人沿步道走向動物的家，認出「這是什麼動物」就能讓牠升級，一共 10 關，第 5、10 關有魔王，免註冊、免安裝。
+- 英文自學課程：https://www.hunglun.com/tools/english：免費英文自學：100 堂課、每堂 10 分鐘，從字母和問候一路排到多益 800 左右的題型與職場字，可聽發音、記錄進度，免註冊、不用 AI。
 
 ---
 
@@ -885,6 +894,5180 @@ https://www.hunglun.com/tools/data-search
 想要一個屬於您的工具？
 這些成果都從一句「有沒有辦法自動化」開始。
 委託開發洽詢
+
+---
+
+## 英文自學課程：從最基礎到多益 800 左右，100 堂、每堂 10 分鐘｜鴻綸科技
+
+https://www.hunglun.com/tools/english
+
+首頁 ／ 資源分享 ／ 英文自學課程
+英文自學課程：每堂 10 分鐘，從零排到多益 800 左右
+100 堂課、5 個級別。每堂 8 個單字、3 個例句、5 題小測（含 2 題聽力）。不用註冊、不用 AI，進度存在你自己的瀏覽器。
+從第 1 堂開始
+重點先看
+怎麼學？每天一堂，約 10 分鐘。單字、例句都能按「聽」跟著唸。
+從哪裡開始？完全沒學過從第 1 級；會一些就看下面每一級的「適合誰」。
+能考到多益 800 嗎？課程把基礎到題型排成一條路，但不保證分數，要到 800 還需要大量的聽讀練習。
+資料安全嗎？全部在你的瀏覽器裡執行，進度只存在你自己的裝置。
+5 個級別
+第 1 級：起步
+約國小程度（CEFR A1）
+第 1 到 20 堂
+適合：完全沒學過，或只記得字母和幾個單字。
+學完：能自我介紹、數數、說顏色食物家人，聽懂最簡單的問候。
+進入這一級
+第 2 級：基礎
+約國中程度（CEFR A2）
+第 21 到 40 堂
+適合：能認得常見單字，但一開口就卡住。
+學完：能說日常作息、過去與未來的事，會購物、點餐、問路。
+進入這一級
+第 3 級：進階
+約高中程度（CEFR B1）
+第 41 到 60 堂
+適合：國中文法大致會，想把句子寫得更完整。
+學完：能用完成式、被動、條件句與關係代名詞，讀懂一般新聞與簡單的職場信件。
+進入這一級
+第 4 級：多益入門
+目標多益約 550 到 650（CEFR B1）
+第 61 到 80 堂
+適合：想準備多益，但還不熟題型。
+學完：熟悉 Part 1 到 Part 7 的題型，認得常見職場字。
+進入這一級
+第 5 級：多益衝刺
+目標多益 800 左右（CEFR B2）
+第 81 到 100 堂
+適合：已經有基礎，想把分數往上推。
+學完：處理文法陷阱、同義詞、雙篇閱讀與聽力預測，並有自己的複習節奏。
+進入這一級
+一堂課怎麼上
+3 分鐘看單字：8 個字，按「聽」跟著唸一次，再自己唸一次。
+3 分鐘看例句：3 個句子，大聲唸兩次，看中文確認意思。
+3 分鐘小測：5 題，其中 2 題要聽，對完答案，錯的看一眼正確答案。
+1 分鐘開口：不看畫面，說出三個今天學到的字。
+建議的學習節奏
+每天一堂：100 堂約 3 個多月。比一次學很多更容易堅持。
+每週複習：第 7 天回頭做前 6 堂的小測，錯的字寫在筆記本上。
+多聽多讀：課程之外，每天另外聽 10 分鐘英文、讀一篇短文，進步會快很多。
+以上是我們整理的建議，不是什麼規定；請依自己的時間調整。
+清除我的進度
+常見問題
+真的從零開始也能學嗎？
+可以。第 1 級從打招呼和自我介紹開始，每堂只有 8 個單字、3 個例句。如果你已經會一些，可以看每一級的「適合誰」自己選起點。
+學完 100 堂就能考到多益 800 嗎？
+不能保證。這套課程把基礎、文法和多益題型排成一條路，但多益 800 通常還需要更多的聽力、閱讀和整份模擬考練習。我們沒有測過學員的成績，所以不保證分數。
+需要註冊或付費嗎？
+不用。全部免費，也不用登入。進度只存在你自己的瀏覽器，我們看不到。
+按「聽」沒有聲音怎麼辦？
+這個功能使用你裝置內建的語音。請確認音量，並試試手機或最新版 Chrome；有些瀏覽器沒有英文語音。
+多益和 CEFR 的對照是官方的嗎？
+頁面上的對照只是方便你抓程度的概略說明，不是官方認證。實際對應請以多益主辦單位公布的資料為準。
+想讓學校或公司一起學？
+鴻綸科技提供教育訓練與學習工具規劃，可以依你的單位需要調整內容。
+聯絡我們
+看教育方案
+← 資源分享
+校園小工具 →
+
+---
+
+## 英文自學第 1 級：起步（第 1 到 20 堂），每堂 10 分鐘｜鴻綸科技
+
+https://www.hunglun.com/tools/english-1
+
+首頁 ／ 資源分享 ／ 英文自學課程 ／ 第 1 級
+英文自學第 1 級：起步
+第 1 到 20 堂，約國小程度（CEFR A1 的概略說明）。每堂 10 分鐘，打開就能學。
+重點先看
+適合誰？完全沒學過，或只記得字母和幾個單字。
+學完會什麼？能自我介紹、數數、說顏色食物家人，聽懂最簡單的問候。
+一堂怎麼上？10 分鐘：單字 3 分鐘、例句 3 分鐘、小測 3 分鐘、開口說 1 分鐘。
+進度存在哪？只存在你自己的瀏覽器，換手機或清除瀏覽資料就會歸零。
+開始 10 分鐘計時10:00
+你的瀏覽器不支援發音功能，「聽」鈕和聽力題已隱藏。可以用手機或最新版 Chrome 試試。
+按「聽」是用你裝置內建的語音唸出來，每台裝置聲音不同。
+第 1 到 20 堂
+第 1 堂打招呼已完成
+這堂學會：會用英文說早安、再見、謝謝、對不起。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+hello聽你好
+hi聽嗨
+goodbye聽再見
+bye聽掰掰
+morning聽早晨
+night聽夜晚
+thanks聽謝謝
+sorry聽對不起
+例句
+Good morning, teacher.聽老師早安。
+Thanks for your help.聽謝謝你的幫忙。
+Sorry, I am late.聽對不起，我遲到了。
+小提醒：英文打招呼不分輩分，對老師、朋友都可以說 Hello。
+小測（5 題，含 2 題聽力）
+1. 「bye」是什麼意思？
+在後面
+掰掰
+蘋果
+會
+2. 哪一個字的意思是「對不起」？
+bye
+sorry
+goodbye
+hello
+3. 填空：_____ for your help.（謝謝你的幫忙。）
+Goodbye
+Morning
+Bye
+Thanks
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+hello
+bye
+hi
+night
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+老師早安。
+她有八顆蘋果。
+對不起，我遲到了。
+謝謝你的幫忙。
+對答案
+我完成這堂了
+第 2 堂自我介紹 I am已完成
+這堂學會：會說「我是誰、我叫什麼、我是學生」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+name聽名字
+student聽學生
+teacher聽老師
+my聽我的
+your聽你的
+friend聽朋友
+meet聽認識
+nice聽很好的
+例句
+My name is Amy.聽我的名字是艾美。
+I am a student.聽我是學生。
+Nice to meet you.聽很高興認識你。
+小提醒：I am 可以縮短成 I'm。my 是「我的」，your 是「你的」。
+小測（5 題，含 2 題聽力）
+1. 「meet」是什麼意思？
+點鐘
+跳舞
+認識
+單字
+2. 哪一個字的意思是「老師」？
+nice
+teacher
+your
+my
+3. 填空：Nice to _____ you.（很高興認識你。）
+teacher
+name
+nice
+meet
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+student
+meet
+friend
+your
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我每天讀一本書。
+我是學生。
+我的名字是艾美。
+很高興認識你。
+對答案
+我完成這堂了
+第 3 堂問名字、問怎麼拼已完成
+這堂學會：會問別人的名字，也會請對方拼出來。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+spell聽拼字
+letter聽字母
+write聽寫
+read聽讀
+word聽單字
+book聽書
+pen聽筆
+paper聽紙
+例句
+How do you spell your name?聽你的名字怎麼拼？
+Please write your name on the paper.聽請把你的名字寫在紙上。
+I read a book every day.聽我每天讀一本書。
+小提醒：How do you spell it? 是請對方一個字母一個字母念出來。
+小測（5 題，含 2 題聽力）
+1. 「letter」是什麼意思？
+誰的
+哪一個
+字母
+紙
+2. 哪一個字的意思是「書」？
+word
+paper
+book
+spell
+3. 填空：How do you _____ your name?（你的名字怎麼拼？）
+write
+pen
+read
+spell
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+write
+paper
+letter
+read
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+你的名字怎麼拼？
+請把你的名字寫在紙上。
+現在幾點？
+我每天讀一本書。
+對答案
+我完成這堂了
+第 4 堂數字 1 到 10已完成
+這堂學會：會數 1 到 10，也會說「我有幾個」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+one聽一
+two聽二
+three聽三
+four聽四
+five聽五
+six聽六
+seven聽七
+eight聽八
+例句
+I have two pens.聽我有兩支筆。
+There are five books.聽有五本書。
+She has eight apples.聽她有八顆蘋果。
+小提醒：數字後面的名詞，超過一個要加 s，例如 two books。
+小測（5 題，含 2 題聽力）
+1. 「five」是什麼意思？
+五
+蘋果
+房子
+煮飯
+2. 哪一個字的意思是「一」？
+two
+three
+eight
+one
+3. 填空：There are _____ books.（有五本書。）
+five
+one
+three
+two
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+two
+four
+one
+three
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我有兩支筆。
+很高興認識你。
+有五本書。
+她有八顆蘋果。
+對答案
+我完成這堂了
+第 5 堂數字 11 到 100 與年齡已完成
+這堂學會：會說比較大的數字，也會說自己幾歲。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+eleven聽十一
+twelve聽十二
+twenty聽二十
+thirty聽三十
+fifty聽五十
+hundred聽一百
+old聽歲數大的
+year聽年
+例句
+I am twelve years old.聽我十二歲。
+My grandpa is fifty years old.聽我爺爺五十歲。
+The book has one hundred pages.聽這本書有一百頁。
+小提醒：問年齡說 How old are you?，回答 I am twelve years old.
+小測（5 題，含 2 題聽力）
+1. 「year」是什麼意思？
+哪一個
+年
+馬
+早上
+2. 哪一個字的意思是「三十」？
+old
+hundred
+thirty
+year
+3. 填空：The book has one _____ pages.（這本書有一百頁。）
+eleven
+old
+hundred
+thirty
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+fifty
+hundred
+eleven
+old
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這本書有一百頁。
+她穿一件粉紅色的洋裝。
+我十二歲。
+我爺爺五十歲。
+對答案
+我完成這堂了
+第 6 堂顏色已完成
+這堂學會：會說常見顏色，也會描述東西是什麼顏色。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+red聽紅色
+blue聽藍色
+green聽綠色
+yellow聽黃色
+black聽黑色
+white聽白色
+pink聽粉紅色
+orange聽橘色
+例句
+I like the blue bag.聽我喜歡那個藍色的包包。
+The cat is black and white.聽那隻貓是黑白相間的。
+She wears a pink dress.聽她穿一件粉紅色的洋裝。
+小提醒：顏色放在名詞前面：a red bag（一個紅色的包包）。
+小測（5 題，含 2 題聽力）
+1. 「green」是什麼意思？
+綠色
+魚
+在旁邊
+如何
+2. 哪一個字的意思是「粉紅色」？
+pink
+red
+green
+yellow
+3. 填空：I like the _____ bag.（我喜歡那個藍色的包包。）
+yellow
+white
+blue
+pink
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+red
+yellow
+pink
+orange
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我喜歡那個藍色的包包。
+那隻貓是黑白相間的。
+冬天很冷。
+她穿一件粉紅色的洋裝。
+對答案
+我完成這堂了
+第 7 堂家人已完成
+這堂學會：會介紹自己的家人。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+mother聽媽媽
+father聽爸爸
+sister聽姊姊或妹妹
+brother聽哥哥或弟弟
+grandma聽奶奶或外婆
+grandpa聽爺爺或外公
+family聽家人
+baby聽寶寶
+例句
+This is my mother.聽這是我媽媽。
+I have one brother.聽我有一個哥哥或弟弟。
+My family is small.聽我的家庭很小。
+小提醒：grandma 是奶奶或外婆，grandpa 是爺爺或外公，英文不分父系母系。
+小測（5 題，含 2 題聽力）
+1. 「grandpa」是什麼意思？
+時間
+下午
+爺爺或外公
+最喜歡的
+2. 哪一個字的意思是「爸爸」？
+brother
+father
+baby
+family
+3. 填空：I have one _____.（我有一個哥哥或弟弟。）
+father
+sister
+brother
+grandpa
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+brother
+mother
+father
+family
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我的家庭很小。
+我有一個哥哥或弟弟。
+這是我媽媽。
+很高興認識你。
+對答案
+我完成這堂了
+第 8 堂This 和 That已完成
+這堂學會：會分辨「這個」和「那個」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+this聽這個
+that聽那個
+these聽這些
+those聽那些
+bag聽包包
+desk聽書桌
+chair聽椅子
+door聽門
+例句
+This is my bag.聽這是我的包包。
+That is a big door.聽那是一扇大門。
+These are my chairs.聽這些是我的椅子。
+小提醒：近的用 this / these，遠的用 that / those。these 和 those 是複數。
+小測（5 題，含 2 題聽力）
+1. 「this」是什麼意思？
+黑色
+這個
+白色
+這些
+2. 哪一個字的意思是「包包」？
+desk
+this
+these
+bag
+3. 填空：_____ are my chairs.（這些是我的椅子。）
+That
+Those
+Bag
+These
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+that
+those
+chair
+these
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這些是我的椅子。
+柳橙汁是我最喜歡的果汁。
+這是我的包包。
+那是一扇大門。
+對答案
+我完成這堂了
+第 9 堂食物與飲料已完成
+這堂學會：會說常見食物，也會說想吃什麼。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+rice聽米飯
+noodles聽麵
+bread聽麵包
+egg聽蛋
+milk聽牛奶
+water聽水
+apple聽蘋果
+banana聽香蕉
+例句
+I eat rice every day.聽我每天吃飯。
+She drinks milk in the morning.聽她早上喝牛奶。
+He wants a banana.聽他想要一根香蕉。
+小提醒：rice 和 water 不能數，不加 s。apple 可以數，兩個以上要寫 apples。
+小測（5 題，含 2 題聽力）
+1. 「egg」是什麼意思？
+蛋
+星期六
+口渴的
+晚的
+2. 哪一個字的意思是「香蕉」？
+banana
+egg
+apple
+water
+3. 填空：I eat _____ every day.（我每天吃飯。）
+rice
+noodles
+banana
+egg
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+bread
+milk
+apple
+noodles
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+他想要一根香蕉。
+她早上喝牛奶。
+我每天吃飯。
+我搭公車去學校。
+對答案
+我完成這堂了
+第 10 堂喜歡與不喜歡已完成
+這堂學會：會說「我喜歡」和「我不喜歡」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+like聽喜歡
+love聽愛
+fruit聽水果
+cake聽蛋糕
+juice聽果汁
+hungry聽餓的
+thirsty聽口渴的
+favorite聽最喜歡的
+例句
+I like cake.聽我喜歡蛋糕。
+I am hungry. Let's eat.聽我餓了，我們吃吧。
+Orange is my favorite juice.聽柳橙汁是我最喜歡的果汁。
+小提醒：不喜歡要加 do not，縮短成 don't：I don't like fish.
+小測（5 題，含 2 題聽力）
+1. 「thirsty」是什麼意思？
+年
+煮飯
+口渴的
+紙
+2. 哪一個字的意思是「水果」？
+favorite
+cake
+thirsty
+fruit
+3. 填空：I am _____. Let's eat.（我餓了，我們吃吧。）
+juice
+favorite
+like
+hungry
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+love
+cake
+hungry
+juice
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我喜歡蛋糕。
+柳橙汁是我最喜歡的果汁。
+我餓了，我們吃吧。
+我會游泳。
+對答案
+我完成這堂了
+第 11 堂動物已完成
+這堂學會：會說常見動物名稱。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+cat聽貓
+dog聽狗
+bird聽鳥
+fish聽魚
+rabbit聽兔子
+horse聽馬
+pig聽豬
+tiger聽老虎
+例句
+The dog is under the table.聽狗在桌子下面。
+A bird can fly.聽鳥會飛。
+The tiger is very big.聽老虎非常大。
+小提醒：fish 單複數同形，一條魚和兩條魚都寫 fish。
+小測（5 題，含 2 題聽力）
+1. 「dog」是什麼意思？
+狗
+浴室
+冷的
+姊姊或妹妹
+2. 哪一個字的意思是「馬」？
+horse
+fish
+bird
+rabbit
+3. 填空：The _____ is very big.（老虎非常大。）
+dog
+horse
+tiger
+bird
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+pig
+tiger
+bird
+fish
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+狗在桌子下面。
+鳥會飛。
+老虎非常大。
+我的名字是艾美。
+對答案
+我完成這堂了
+第 12 堂身體部位已完成
+這堂學會：會說身體的名稱，也會說哪裡痛。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+head聽頭
+eye聽眼睛
+ear聽耳朵
+nose聽鼻子
+mouth聽嘴巴
+hand聽手
+leg聽腿
+foot聽腳
+例句
+Open your mouth.聽把嘴巴張開。
+I wash my hands.聽我洗手。
+My head hurts.聽我的頭痛。
+小提醒：哪裡痛說 My head hurts.（我的頭痛）。
+小測（5 題，含 2 題聽力）
+1. 「mouth」是什麼意思？
+傍晚
+嘴巴
+臥室
+鼻子
+2. 哪一個字的意思是「頭」？
+nose
+head
+eye
+foot
+3. 填空：Open your _____.（把嘴巴張開。）
+mouth
+foot
+ear
+nose
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+head
+leg
+foot
+ear
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我洗手。
+把嘴巴張開。
+我的頭痛。
+現在幾點？
+對答案
+我完成這堂了
+第 13 堂日常動作已完成
+這堂學會：會說最常用的動作。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+eat聽吃
+drink聽喝
+go聽去
+come聽來
+sit聽坐
+stand聽站
+sleep聽睡覺
+play聽玩
+例句
+I go to school by bus.聽我搭公車去學校。
+Please sit down.聽請坐下。
+The children play in the park.聽孩子們在公園玩。
+小提醒：I、you、we、they 後面動詞不變；he、she、it 後面動詞要加 s：She eats.
+小測（5 題，含 2 題聽力）
+1. 「play」是什麼意思？
+什麼時候
+腳
+玩
+早晨
+2. 哪一個字的意思是「來」？
+drink
+come
+sit
+play
+3. 填空：Please _____ down.（請坐下。）
+sleep
+stand
+come
+sit
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+stand
+play
+eat
+come
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我們星期日不用上學。
+我搭公車去學校。
+孩子們在公園玩。
+請坐下。
+對答案
+我完成這堂了
+第 14 堂Can：我會做什麼已完成
+這堂學會：會說「我會」和「我不會」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+can聽會
+run聽跑
+jump聽跳
+swim聽游泳
+sing聽唱歌
+dance聽跳舞
+cook聽煮飯
+ride聽騎
+例句
+I can swim.聽我會游泳。
+She can sing very well.聽她很會唱歌。
+Can you ride a bike?聽你會騎腳踏車嗎？
+小提醒：can 後面的動詞不加 s，也不變形：She can swim.
+小測（5 題，含 2 題聽力）
+1. 「jump」是什麼意思？
+星期三
+藍色
+跳
+在裡面
+2. 哪一個字的意思是「煮飯」？
+ride
+dance
+run
+cook
+3. 填空：Can you _____ a bike?（你會騎腳踏車嗎？）
+ride
+can
+cook
+dance
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+can
+jump
+dance
+ride
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+她很會唱歌。
+我會游泳。
+你會騎腳踏車嗎？
+這是我的包包。
+對答案
+我完成這堂了
+第 15 堂星期與今天已完成
+這堂學會：會說星期幾，也會問今天是星期幾。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+Monday聽星期一
+Tuesday聽星期二
+Wednesday聽星期三
+Thursday聽星期四
+Friday聽星期五
+Saturday聽星期六
+Sunday聽星期日
+today聽今天
+例句
+Today is Monday.聽今天是星期一。
+We have no school on Sunday.聽我們星期日不用上學。
+I play basketball on Friday.聽我星期五打籃球。
+小提醒：星期的第一個字母要大寫：Monday。問法是 What day is it today?
+小測（5 題，含 2 題聽力）
+1. 「Saturday」是什麼意思？
+十一
+二十
+星期六
+在裡面
+2. 哪一個字的意思是「星期二」？
+Thursday
+Friday
+Sunday
+Tuesday
+3. 填空：Today is _____.（今天是星期一。）
+Wednesday
+Monday
+Sunday
+Saturday
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+Thursday
+Sunday
+Tuesday
+Monday
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我星期五打籃球。
+我洗手。
+今天是星期一。
+我們星期日不用上學。
+對答案
+我完成這堂了
+第 16 堂時間與一天的時段已完成
+這堂學會：會說現在幾點，也會說早上、下午、晚上。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+time聽時間
+o'clock聽點鐘
+morning聽早上
+afternoon聽下午
+evening聽傍晚
+night聽夜晚
+early聽早的
+late聽晚的
+例句
+What time is it?聽現在幾點？
+I get up early.聽我很早起床。
+We eat dinner in the evening.聽我們傍晚吃晚餐。
+小提醒：問時間：What time is it? 回答：It is seven o'clock.
+小測（5 題，含 2 題聽力）
+1. 「time」是什麼意思？
+蛋
+家人
+水
+時間
+2. 哪一個字的意思是「傍晚」？
+early
+late
+evening
+o'clock
+3. 填空：I get up _____.（我很早起床。）
+morning
+early
+evening
+night
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+early
+late
+night
+morning
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我很早起床。
+我們傍晚吃晚餐。
+現在幾點？
+我洗手。
+對答案
+我完成這堂了
+第 17 堂天氣已完成
+這堂學會：會說今天天氣怎麼樣。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+sunny聽晴朗的
+rainy聽下雨的
+cloudy聽多雲的
+windy聽有風的
+hot聽熱的
+cold聽冷的
+warm聽溫暖的
+cool聽涼爽的
+例句
+It is sunny today.聽今天天氣晴朗。
+It is cold in winter.聽冬天很冷。
+Take an umbrella. It is rainy.聽帶把傘，下雨了。
+小提醒：問天氣：How is the weather? 回答：It is sunny.
+小測（5 題，含 2 題聽力）
+1. 「windy」是什麼意思？
+兔子
+晴朗的
+有風的
+香蕉
+2. 哪一個字的意思是「涼爽的」？
+rainy
+windy
+cool
+cold
+3. 填空：Take an umbrella. It is _____.（帶把傘，下雨了。）
+rainy
+windy
+sunny
+cold
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+hot
+cold
+rainy
+warm
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+冬天很冷。
+今天天氣晴朗。
+帶把傘，下雨了。
+我洗手。
+對答案
+我完成這堂了
+第 18 堂房間與地方 There is已完成
+這堂學會：會說「這裡有什麼」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+room聽房間
+kitchen聽廚房
+bathroom聽浴室
+bedroom聽臥室
+school聽學校
+park聽公園
+house聽房子
+shop聽商店
+例句
+There is a bed in the bedroom.聽臥室裡有一張床。
+There are many trees in the park.聽公園裡有很多樹。
+My mother is in the kitchen.聽我媽媽在廚房。
+小提醒：There is 後面接一個，There are 後面接很多個。
+小測（5 題，含 2 題聽力）
+1. 「house」是什麼意思？
+那些
+鳥
+房子
+麵
+2. 哪一個字的意思是「浴室」？
+bathroom
+school
+bedroom
+house
+3. 填空：There is a bed in the _____.（臥室裡有一張床。）
+bedroom
+house
+park
+bathroom
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+kitchen
+school
+bedroom
+bathroom
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我媽媽在廚房。
+現在幾點？
+公園裡有很多樹。
+臥室裡有一張床。
+對答案
+我完成這堂了
+第 19 堂東西在哪裡：位置字已完成
+這堂學會：會說東西放在哪裡。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+in聽在裡面
+on聽在上面
+under聽在下面
+near聽靠近
+behind聽在後面
+between聽在兩者之間
+in front of聽在前面
+next to聽在旁邊
+例句
+The cat is under the chair.聽貓在椅子下面。
+The book is on the desk.聽書在書桌上。
+The bank is next to the school.聽銀行在學校旁邊。
+小提醒：in 是「裡面」，on 是「上面」，under 是「下面」。
+小測（5 題，含 2 題聽力）
+1. 「on」是什麼意思？
+在上面
+五十
+一百
+晚的
+2. 哪一個字的意思是「在兩者之間」？
+behind
+near
+next to
+between
+3. 填空：The book is _____ the desk.（書在書桌上。）
+on
+between
+behind
+in
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+between
+next to
+near
+under
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+銀行在學校旁邊。
+書在書桌上。
+老虎非常大。
+貓在椅子下面。
+對答案
+我完成這堂了
+第 20 堂疑問詞 What、Who、Where已完成
+這堂學會：會用疑問詞問問題。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+what聽什麼
+who聽誰
+where聽哪裡
+when聽什麼時候
+why聽為什麼
+how聽如何
+which聽哪一個
+whose聽誰的
+例句
+What is this?聽這是什麼？
+Where is my bag?聽我的包包在哪裡？
+Who is that man?聽那個男人是誰？
+小提醒：疑問詞放句首：What is this? Where is my bag?
+小測（5 題，含 2 題聽力）
+1. 「why」是什麼意思？
+為什麼
+門
+在下面
+紅色
+2. 哪一個字的意思是「什麼」？
+what
+how
+which
+why
+3. 填空：_____ is that man?（那個男人是誰？）
+What
+Who
+How
+Which
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+where
+whose
+what
+when
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我的包包在哪裡？
+這是什麼？
+今天天氣晴朗。
+那個男人是誰？
+對答案
+我完成這堂了
+← 課程總覽
+第 2 級 →
+
+---
+
+## 英文自學第 2 級：基礎（第 21 到 40 堂），每堂 10 分鐘｜鴻綸科技
+
+https://www.hunglun.com/tools/english-2
+
+首頁 ／ 資源分享 ／ 英文自學課程 ／ 第 2 級
+英文自學第 2 級：基礎
+第 21 到 40 堂，約國中程度（CEFR A2 的概略說明）。每堂 10 分鐘，打開就能學。
+重點先看
+適合誰？能認得常見單字，但一開口就卡住。
+學完會什麼？能說日常作息、過去與未來的事，會購物、點餐、問路。
+一堂怎麼上？10 分鐘：單字 3 分鐘、例句 3 分鐘、小測 3 分鐘、開口說 1 分鐘。
+進度存在哪？只存在你自己的瀏覽器，換手機或清除瀏覽資料就會歸零。
+開始 10 分鐘計時10:00
+你的瀏覽器不支援發音功能，「聽」鈕和聽力題已隱藏。可以用手機或最新版 Chrome 試試。
+按「聽」是用你裝置內建的語音唸出來，每台裝置聲音不同。
+第 21 到 40 堂
+第 21 堂現在簡單式：每天做的事已完成
+這堂學會：會用現在簡單式說日常作息。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+wake up聽醒來
+get up聽起床
+brush聽刷
+breakfast聽早餐
+lunch聽午餐
+dinner聽晚餐
+homework聽功課
+shower聽淋浴
+例句
+I wake up at six every day.聽我每天六點醒來。
+He eats breakfast at seven.聽他七點吃早餐。
+She does her homework after dinner.聽她晚餐後寫功課。
+小提醒：he、she、it 後面的動詞要加 s 或 es：He gets up at six.
+小測（5 題，含 2 題聽力）
+1. 「shower」是什麼意思？
+讀書了
+淋浴
+計畫
+右轉
+2. 哪一個字的意思是「早餐」？
+brush
+dinner
+breakfast
+get up
+3. 填空：I _____ at six every day.（我每天六點醒來。）
+wake up
+dinner
+homework
+breakfast
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+shower
+lunch
+dinner
+wake up
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+她晚餐後寫功課。
+我每天六點醒來。
+他七點吃早餐。
+在轉角左轉。
+對答案
+我完成這堂了
+第 22 堂頻率副詞已完成
+這堂學會：會說「常常、有時、從不」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+always聽總是
+usually聽通常
+often聽常常
+sometimes聽有時候
+never聽從不
+seldom聽很少
+every day聽每天
+once a week聽一週一次
+例句
+I always eat breakfast.聽我總是吃早餐。
+He sometimes plays games.聽他有時候玩遊戲。
+They never eat meat.聽他們從不吃肉。
+小提醒：頻率副詞放在 be 動詞後面、一般動詞前面：I always eat breakfast.
+小測（5 題，含 2 題聽力）
+1. 「often」是什麼意思？
+常常
+價格
+去了
+有時候
+2. 哪一個字的意思是「每天」？
+usually
+often
+sometimes
+every day
+3. 填空：He _____ plays games.（他有時候玩遊戲。）
+sometimes
+often
+never
+once a week
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+seldom
+often
+always
+every day
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+他有時候玩遊戲。
+他們從不吃肉。
+我總是吃早餐。
+今晚大概會下雨。
+對答案
+我完成這堂了
+第 23 堂現在進行式已完成
+這堂學會：會說「現在正在做什麼」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+now聽現在
+right now聽此刻
+watch聽看
+listen聽聽
+talk聽說話
+wait聽等
+study聽讀書
+clean聽打掃
+例句
+I am studying now.聽我現在正在讀書。
+They are waiting for the bus.聽他們正在等公車。
+She is listening to music.聽她正在聽音樂。
+小提醒：結構是 am / is / are + 動詞加 ing：She is reading.
+小測（5 題，含 2 題聽力）
+1. 「wait」是什麼意思？
+機場
+等
+說話
+行李
+2. 哪一個字的意思是「此刻」？
+watch
+right now
+study
+wait
+3. 填空：She is _____ to music.（她正在聽音樂。）
+listened
+listening
+listens
+listen
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+watch
+right now
+talk
+listen
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我現在正在讀書。
+他們正在等公車。
+我們去看了奶奶。
+她正在聽音樂。
+對答案
+我完成這堂了
+第 24 堂過去式：規則動詞已完成
+這堂學會：會說昨天發生的事（規則變化）。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+walked聽走路了
+played聽玩了
+watched聽看了
+cooked聽煮了
+cleaned聽打掃了
+visited聽拜訪了
+studied聽讀書了
+yesterday聽昨天
+例句
+I played basketball yesterday.聽我昨天打了籃球。
+She cooked dinner last night.聽她昨晚煮了晚餐。
+We visited my grandma.聽我們去看了奶奶。
+小提醒：多數動詞加 ed：play → played。結尾是 e 只加 d：like → liked。
+小測（5 題，含 2 題聽力）
+1. 「walked」是什麼意思？
+走路了
+帳單
+付錢
+拿了
+2. 哪一個字的意思是「打掃了」？
+watched
+cleaned
+walked
+played
+3. 填空：I _____ basketball yesterday.（我昨天打了籃球。）
+studied
+played
+visited
+walked
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+visited
+watched
+studied
+cleaned
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+在轉角左轉。
+她昨晚煮了晚餐。
+我們去看了奶奶。
+我昨天打了籃球。
+對答案
+我完成這堂了
+第 25 堂過去式：不規則動詞已完成
+這堂學會：會說常見的不規則過去式。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+went聽去了
+ate聽吃了
+saw聽看見了
+bought聽買了
+had聽有了
+made聽做了
+took聽拿了
+came聽來了
+例句
+I went to the park.聽我去了公園。
+She bought a new bag.聽她買了一個新包包。
+We ate noodles for lunch.聽我們午餐吃了麵。
+小提醒：不規則動詞沒有規則，要一個一個背：go → went。
+小測（5 題，含 2 題聽力）
+1. 「bought」是什麼意思？
+買了
+早餐
+閱讀
+帳單
+2. 哪一個字的意思是「來了」？
+bought
+made
+ate
+came
+3. 填空：She _____ a new bag.（她買了一個新包包。）
+had
+went
+came
+bought
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+bought
+ate
+made
+took
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+她買了一個新包包。
+我去了公園。
+她正在聽音樂。
+我們午餐吃了麵。
+對答案
+我完成這堂了
+第 26 堂過去式：問句與否定已完成
+這堂學會：會問「你昨天有沒有…」和說「我沒有…」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+did聽（過去式助動詞）
+didn't聽沒有（過去）
+last night聽昨晚
+ago聽以前
+last week聽上週
+then聽然後
+after聽在…之後
+before聽在…之前
+例句
+Did you go to school yesterday?聽你昨天有去學校嗎？
+I didn't see him last week.聽我上週沒有看到他。
+She left two hours ago.聽她兩小時前離開了。
+小提醒：問句和否定用 did / did not，後面動詞變回原形：Did you go? I didn't go.
+小測（5 題，含 2 題聽力）
+1. 「after」是什麼意思？
+在…之後
+醫生
+同學
+派對
+2. 哪一個字的意思是「昨晚」？
+did
+before
+last night
+didn't
+3. 填空：She left two hours _____.（她兩小時前離開了。）
+before
+ago
+then
+last week
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+last week
+after
+did
+didn't
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我的興趣是閱讀。
+她兩小時前離開了。
+你昨天有去學校嗎？
+我上週沒有看到他。
+對答案
+我完成這堂了
+第 27 堂未來式：will 和 be going to已完成
+這堂學會：會說明天、下週要做什麼。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+tomorrow聽明天
+next week聽下週
+plan聽計畫
+trip聽旅行
+will聽將會
+going to聽打算
+maybe聽也許
+probably聽大概
+例句
+I will call you tomorrow.聽我明天會打給你。
+We are going to take a trip next week.聽我們下週打算去旅行。
+It will probably rain tonight.聽今晚大概會下雨。
+小提醒：will 後面接原形動詞。be going to 常用在已經決定好的計畫。
+小測（5 題，含 2 題聽力）
+1. 「next week」是什麼意思？
+記得
+下週
+計畫
+在…之後
+2. 哪一個字的意思是「打算」？
+probably
+tomorrow
+going to
+will
+3. 填空：I will call you _____.（我明天會打給你。）
+trip
+plan
+maybe
+tomorrow
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+going to
+probably
+trip
+will
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我去了公園。
+我們下週打算去旅行。
+今晚大概會下雨。
+我明天會打給你。
+對答案
+我完成這堂了
+第 28 堂比較級已完成
+這堂學會：會比較兩個東西：更高、更快、更貴。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+taller聽更高的
+bigger聽更大的
+faster聽更快的
+better聽更好的
+more expensive聽更貴的
+cheaper聽更便宜的
+than聽比
+smarter聽更聰明的
+例句
+My brother is taller than me.聽我哥哥比我高。
+This bag is cheaper than that one.聽這個包包比那個便宜。
+A plane is faster than a train.聽飛機比火車快。
+小提醒：短的字加 er：tall → taller。長的字前面加 more：more expensive。後面接 than。
+小測（5 題，含 2 題聽力）
+1. 「more expensive」是什麼意思？
+拿了
+問
+更貴的
+下週
+2. 哪一個字的意思是「更高的」？
+smarter
+better
+more expensive
+taller
+3. 填空：This bag is _____ than that one.（這個包包比那個便宜。）
+more expensive
+than
+better
+cheaper
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+more expensive
+faster
+cheaper
+bigger
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我哥哥比我高。
+這個包包比那個便宜。
+那家店的麵包最便宜。
+飛機比火車快。
+對答案
+我完成這堂了
+第 29 堂最高級已完成
+這堂學會：會說「最…的」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+the tallest聽最高的
+the biggest聽最大的
+the best聽最好的
+the most beautiful聽最漂亮的
+the worst聽最差的
+the cheapest聽最便宜的
+in the class聽在班上
+of all聽在所有之中
+例句
+He is the tallest in the class.聽他是班上最高的。
+This is the best movie of all.聽這是所有電影裡最好的。
+That shop has the cheapest bread.聽那家店的麵包最便宜。
+小提醒：最高級前面要加 the：the tallest。長的字用 the most：the most beautiful。
+小測（5 題，含 2 題聽力）
+1. 「of all」是什麼意思？
+更快的
+便宜的
+湯
+在所有之中
+2. 哪一個字的意思是「最漂亮的」？
+of all
+the tallest
+the most beautiful
+the worst
+3. 填空：That shop has the _____ bread.（那家店的麵包最便宜。）
+tallest
+best
+worst
+cheapest
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+the most beautiful
+the best
+the cheapest
+the biggest
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+那家店的麵包最便宜。
+這是所有電影裡最好的。
+我今晚可以打給你嗎？
+他是班上最高的。
+對答案
+我完成這堂了
+第 30 堂must、should、have to已完成
+這堂學會：會說「必須、應該、需要」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+must聽一定要
+should聽應該
+have to聽必須
+need to聽需要
+may聽可以
+could聽可以（較客氣）
+would聽願意
+might聽可能
+例句
+You should drink more water.聽你應該多喝水。
+I have to finish my homework.聽我必須寫完功課。
+May I come in?聽我可以進來嗎？
+小提醒：should 是建議，must 和 have to 比較強，表示一定要。後面都接原形動詞。
+小測（5 題，含 2 題聽力）
+1. 「have to」是什麼意思？
+預約
+必須
+煮了
+閱讀
+2. 哪一個字的意思是「願意」？
+have to
+could
+would
+should
+3. 填空：You _____ drink more water.（你應該多喝水。）
+should
+have to
+would
+may
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+might
+could
+must
+should
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我可以進來嗎？
+我可以試穿這件外套嗎？
+我必須寫完功課。
+你應該多喝水。
+對答案
+我完成這堂了
+第 31 堂購物已完成
+這堂學會：會問價錢、問尺寸、討價還價。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+price聽價格
+cheap聽便宜的
+expensive聽貴的
+size聽尺寸
+try on聽試穿
+pay聽付錢
+cash聽現金
+discount聽折扣
+例句
+How much is this shirt?聽這件襯衫多少錢？
+Can I try on this jacket?聽我可以試穿這件外套嗎？
+Is there a discount?聽有折扣嗎？
+小提醒：問價錢：How much is it? 或 How much are they?（複數）。
+小測（5 題，含 2 題聽力）
+1. 「pay」是什麼意思？
+痛
+折扣
+每天
+付錢
+2. 哪一個字的意思是「便宜的」？
+pay
+discount
+cheap
+price
+3. 填空：Can I _____ this jacket?（我可以試穿這件外套嗎？）
+discount
+try on
+pay
+expensive
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+pay
+cash
+discount
+size
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這件襯衫多少錢？
+飛機比火車快。
+有折扣嗎？
+我可以試穿這件外套嗎？
+對答案
+我完成這堂了
+第 32 堂餐廳點餐已完成
+這堂學會：會看菜單、點餐、結帳。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+menu聽菜單
+order聽點餐
+waiter聽服務生
+bill聽帳單
+would like聽想要
+steak聽牛排
+soup聽湯
+dessert聽甜點
+例句
+Can I see the menu, please?聽請給我看菜單好嗎？
+I would like a bowl of soup.聽我想要一碗湯。
+The bill, please.聽請買單。
+小提醒：客氣地點餐：I would like a steak, please.（我想要一份牛排）
+小測（5 題，含 2 題聽力）
+1. 「menu」是什麼意思？
+價格
+菜單
+許多
+右轉
+2. 哪一個字的意思是「想要」？
+dessert
+soup
+steak
+would like
+3. 填空：The _____, please.（請買單。）
+menu
+waiter
+bill
+would like
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+order
+soup
+dessert
+bill
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+請買單。
+我每天六點醒來。
+請給我看菜單好嗎？
+我想要一碗湯。
+對答案
+我完成這堂了
+第 33 堂問路與交通已完成
+這堂學會：會問路，也會指路。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+turn left聽左轉
+turn right聽右轉
+go straight聽直走
+corner聽轉角
+street聽街道
+bus stop聽公車站
+station聽車站
+far聽遠的
+例句
+Turn left at the corner.聽在轉角左轉。
+Go straight for two blocks.聽直走兩個街區。
+Is the station far from here?聽車站離這裡遠嗎？
+小提醒：問路：Excuse me, where is the station? 指路：Go straight, then turn left.
+小測（5 題，含 2 題聽力）
+1. 「corner」是什麼意思？
+解釋
+看
+轉角
+現金
+2. 哪一個字的意思是「遠的」？
+go straight
+turn right
+far
+station
+3. 填空：Turn left at the _____.（在轉角左轉。）
+corner
+far
+station
+turn left
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+bus stop
+turn right
+corner
+street
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+在轉角左轉。
+車站離這裡遠嗎？
+這個藥一天吃三次。
+直走兩個街區。
+對答案
+我完成這堂了
+第 34 堂旅遊與住宿已完成
+這堂學會：會訂房、問機場和票的事。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+hotel聽飯店
+ticket聽票
+passport聽護照
+airport聽機場
+luggage聽行李
+reservation聽預約
+tourist聽觀光客
+journey聽旅程
+例句
+I have a reservation for two nights.聽我訂了兩晚。
+Please show your passport.聽請出示護照。
+My luggage is very heavy.聽我的行李很重。
+小提醒：預約的英文是 reservation，I have a reservation 是「我有訂位或訂房」。
+小測（5 題，含 2 題聽力）
+1. 「tourist」是什麼意思？
+願意
+觀光客
+最漂亮的
+醫生
+2. 哪一個字的意思是「護照」？
+passport
+hotel
+ticket
+airport
+3. 填空：Please show your _____.（請出示護照。）
+journey
+passport
+ticket
+tourist
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+passport
+luggage
+tourist
+reservation
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我訂了兩晚。
+我的行李很重。
+我們星期一有考試。
+請出示護照。
+對答案
+我完成這堂了
+第 35 堂身體不舒服已完成
+這堂學會：會跟醫生說哪裡不舒服。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+headache聽頭痛
+fever聽發燒
+cough聽咳嗽
+cold聽感冒
+doctor聽醫生
+medicine聽藥
+hurt聽痛
+sick聽生病的
+例句
+I have a headache.聽我頭痛。
+You should see a doctor.聽你應該去看醫生。
+Take this medicine three times a day.聽這個藥一天吃三次。
+小提醒：What's wrong? 是「怎麼了？」，回答 I have a headache.（我頭痛）
+小測（5 題，含 2 題聽力）
+1. 「fever」是什麼意思？
+發燒
+介紹
+淋浴
+看
+2. 哪一個字的意思是「藥」？
+hurt
+sick
+medicine
+cold
+3. 填空：Take this _____ three times a day.（這個藥一天吃三次。）
+medicine
+fever
+sick
+cold
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+sick
+fever
+hurt
+cold
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這個藥一天吃三次。
+我頭痛。
+你應該去看醫生。
+我想要一碗湯。
+對答案
+我完成這堂了
+第 36 堂電話與邀約已完成
+這堂學會：會打電話、邀請朋友、接受或婉拒。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+call聽打電話
+message聽訊息
+invite聽邀請
+party聽派對
+free聽有空的
+busy聽忙碌的
+join聽加入
+sure聽當然
+例句
+Can I call you tonight?聽我今晚可以打給你嗎？
+Are you free on Saturday?聽你星期六有空嗎？
+Sure, I would love to join.聽當然，我很樂意參加。
+小提醒：邀請：Do you want to come to my party? 婉拒：Sorry, I'm busy.
+小測（5 題，含 2 題聽力）
+1. 「free」是什麼意思？
+有空的
+可以
+買了
+然後
+2. 哪一個字的意思是「打電話」？
+join
+busy
+free
+call
+3. 填空：Can I _____ you tonight?（我今晚可以打給你嗎？）
+call
+join
+busy
+free
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+invite
+sure
+join
+message
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+你星期六有空嗎？
+當然，我很樂意參加。
+你最喜歡哪一科？
+我今晚可以打給你嗎？
+對答案
+我完成這堂了
+第 37 堂興趣與運動已完成
+這堂學會：會聊自己的興趣。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+hobby聽興趣
+basketball聽籃球
+swimming聽游泳
+music聽音樂
+movie聽電影
+reading聽閱讀
+collect聽收集
+exercise聽運動
+例句
+My hobby is reading.聽我的興趣是閱讀。
+I collect stamps.聽我收集郵票。
+Exercise is good for your health.聽運動對健康有好處。
+小提醒：問興趣：What do you do in your free time?
+小測（5 題，含 2 題聽力）
+1. 「exercise」是什麼意思？
+訊息
+運動
+在…之後
+忙碌的
+2. 哪一個字的意思是「音樂」？
+hobby
+exercise
+basketball
+music
+3. 填空：I _____ stamps.（我收集郵票。）
+movie
+reading
+collect
+basketball
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+exercise
+music
+collect
+reading
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我想要一碗湯。
+我收集郵票。
+運動對健康有好處。
+我的興趣是閱讀。
+對答案
+我完成這堂了
+第 38 堂學校生活已完成
+這堂學會：會說學科、考試和同學。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+subject聽科目
+math聽數學
+science聽科學
+history聽歷史
+exam聽考試
+classmate聽同學
+lesson聽課
+teach聽教
+例句
+What is your favorite subject?聽你最喜歡哪一科？
+We have an exam on Monday.聽我們星期一有考試。
+My classmate helps me with math.聽我的同學幫我學數學。
+小提醒：subject 是「科目」，What is your favorite subject? 問的是最喜歡哪一科。
+小測（5 題，含 2 題聽力）
+1. 「science」是什麼意思？
+科學
+看見了
+看了
+當然
+2. 哪一個字的意思是「課」？
+lesson
+math
+exam
+science
+3. 填空：My classmate helps me with _____.（我的同學幫我學數學。）
+subject
+lesson
+teach
+math
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+subject
+history
+classmate
+exam
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我們星期一有考試。
+我的同學幫我學數學。
+請出示護照。
+你最喜歡哪一科？
+對答案
+我完成這堂了
+第 39 堂數量：some、any、many、much已完成
+這堂學會：會問和回答數量。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+some聽一些
+any聽任何
+many聽很多（可數）
+much聽很多（不可數）
+a lot of聽許多
+few聽很少（可數）
+little聽很少（不可數）
+enough聽足夠的
+例句
+I have some water.聽我有一些水。
+How many books do you have?聽你有幾本書？
+We have enough time.聽我們有足夠的時間。
+小提醒：可數名詞用 many，不可數名詞用 much。肯定句用 some，問句和否定句用 any。
+小測（5 題，含 2 題聽力）
+1. 「few」是什麼意思？
+更貴的
+很少（可數）
+籃球
+生病的
+2. 哪一個字的意思是「任何」？
+many
+any
+enough
+some
+3. 填空：I have _____ water.（我有一些水。）
+any
+some
+a lot of
+little
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+any
+a lot of
+much
+enough
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+你有幾本書？
+我們有足夠的時間。
+在轉角左轉。
+我有一些水。
+對答案
+我完成這堂了
+第 40 堂第 2 級總複習：常用動詞已完成
+這堂學會：複習前面學過的，並多認識 8 個常用動詞。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+introduce聽介紹
+describe聽描述
+explain聽解釋
+remember聽記得
+forget聽忘記
+learn聽學習
+ask聽問
+answer聽回答
+例句
+Please introduce yourself.聽請自我介紹。
+Can you explain this word?聽你可以解釋這個字嗎？
+I forget his name.聽我忘記他的名字了。
+小提醒：遇到不會的字，先猜整句意思，再查字典。
+小測（5 題，含 2 題聽力）
+1. 「introduce」是什麼意思？
+便宜的
+介紹
+考試
+可能
+2. 哪一個字的意思是「忘記」？
+forget
+explain
+ask
+remember
+3. 填空：Can you _____ this word?（你可以解釋這個字嗎？）
+describe
+explain
+remember
+forget
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+explain
+answer
+ask
+describe
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我忘記他的名字了。
+你可以解釋這個字嗎？
+她昨晚煮了晚餐。
+請自我介紹。
+對答案
+我完成這堂了
+← 第 1 級
+第 3 級 →
+
+---
+
+## 英文自學第 3 級：進階（第 41 到 60 堂），每堂 10 分鐘｜鴻綸科技
+
+https://www.hunglun.com/tools/english-3
+
+首頁 ／ 資源分享 ／ 英文自學課程 ／ 第 3 級
+英文自學第 3 級：進階
+第 41 到 60 堂，約高中程度（CEFR B1 的概略說明）。每堂 10 分鐘，打開就能學。
+重點先看
+適合誰？國中文法大致會，想把句子寫得更完整。
+學完會什麼？能用完成式、被動、條件句與關係代名詞，讀懂一般新聞與簡單的職場信件。
+一堂怎麼上？10 分鐘：單字 3 分鐘、例句 3 分鐘、小測 3 分鐘、開口說 1 分鐘。
+進度存在哪？只存在你自己的瀏覽器，換手機或清除瀏覽資料就會歸零。
+開始 10 分鐘計時10:00
+你的瀏覽器不支援發音功能，「聽」鈕和聽力題已隱藏。可以用手機或最新版 Chrome 試試。
+按「聽」是用你裝置內建的語音唸出來，每台裝置聲音不同。
+第 41 到 60 堂
+第 41 堂現在完成式 1：到現在為止已完成
+這堂學會：會說「已經、還沒、曾經」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+already聽已經
+yet聽還（用在問句與否定）
+just聽剛剛
+ever聽曾經
+never聽從未
+since聽自從
+for聽持續了
+recently聽最近
+例句
+I have already finished my work.聽我已經做完工作了。
+Have you ever been to Japan?聽你曾經去過日本嗎？
+She has lived here since 2020.聽她從 2020 年起就住在這裡。
+小提醒：結構是 have / has + 過去分詞。已經完成或到現在的經驗都用它，不寫確切的過去時間。
+小測（5 題，含 2 題聽力）
+1. 「ever」是什麼意思？
+承諾
+處理
+是否
+曾經
+2. 哪一個字的意思是「最近」？
+just
+recently
+yet
+never
+3. 填空：She has lived here _____ 2020.（她從 2020 年起就住在這裡。）
+recently
+ever
+since
+never
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+already
+never
+yet
+ever
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我已經做完工作了。
+我已附上檔案。
+她從 2020 年起就住在這裡。
+你曾經去過日本嗎？
+對答案
+我完成這堂了
+第 42 堂現在完成式 2：和過去式的差別已完成
+這堂學會：會分辨什麼時候用現在完成式，什麼時候用過去式。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+experience聽經驗
+finish聽完成
+lose聽遺失
+find聽找到
+travel聽旅行
+abroad聽國外
+several聽好幾個
+once聽一次
+例句
+I lost my keys. I can't open the door.聽我弄丟了鑰匙，所以進不了門。
+She has traveled abroad several times.聽她出國旅行過好幾次。
+He went to Paris in 2019.聽他 2019 年去了巴黎。
+小提醒：有明確過去時間（yesterday、in 2019）用過去式；沒說時間、重點在現在的結果，用現在完成式。
+小測（5 題，含 2 題聽力）
+1. 「several」是什麼意思？
+環境
+百分之
+承諾
+好幾個
+2. 哪一個字的意思是「遺失」？
+lose
+experience
+travel
+abroad
+3. 填空：I _____ my keys. I can't open the door.（我弄丟了鑰匙，所以進不了門。）
+loses
+lost
+losing
+lose
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+once
+several
+travel
+experience
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+作者沒有提到價格。
+他 2019 年去了巴黎。
+我弄丟了鑰匙，所以進不了門。
+她出國旅行過好幾次。
+對答案
+我完成這堂了
+第 43 堂被動語態已完成
+這堂學會：會說「被…」，重點放在事情而不是人。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+build聽建造
+invent聽發明
+discover聽發現
+produce聽生產
+repair聽修理
+publish聽出版
+design聽設計
+translate聽翻譯
+例句
+The bridge was built in 1990.聽這座橋是 1990 年建的。
+English is spoken in many countries.聽很多國家說英文。
+The book was translated into five languages.聽這本書被翻成五種語言。
+小提醒：結構是 be + 過去分詞：The bridge was built in 1990. 不知道或不重要是誰做的時候最適合用。
+小測（5 題，含 2 題聽力）
+1. 「invent」是什麼意思？
+出現
+履歷
+發明
+好幾個
+2. 哪一個字的意思是「出版」？
+design
+invent
+publish
+translate
+3. 填空：English is _____ in many countries.（很多國家說英文。）
+speak
+spoken
+speaks
+speaking
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+translate
+discover
+invent
+design
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+銷售量增加了百分之十。
+這座橋是 1990 年建的。
+這本書被翻成五種語言。
+很多國家說英文。
+對答案
+我完成這堂了
+第 44 堂條件句：如果…就…已完成
+這堂學會：會說「如果下雨，我就不去」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+if聽如果
+unless聽除非
+until聽直到
+as soon as聽一…就
+when聽當
+in case聽以防萬一
+probably聽大概
+otherwise聽否則
+例句
+If it rains, I will stay home.聽如果下雨，我就待在家。
+Call me as soon as you arrive.聽你一到就打給我。
+Hurry up. Otherwise, we will be late.聽快點，不然我們會遲到。
+小提醒：if 子句用現在式，主要子句用 will：If it rains, I will stay home.
+小測（5 題，含 2 題聽力）
+1. 「when」是什麼意思？
+百分之
+雖然
+當
+除非
+2. 哪一個字的意思是「如果」？
+if
+until
+probably
+otherwise
+3. 填空：Hurry up. _____, we will be late.（快點，不然我們會遲到。）
+Probably
+When
+Unless
+Otherwise
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+when
+if
+otherwise
+until
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+如果下雨，我就待在家。
+如果我中樂透，我就環遊世界。
+快點，不然我們會遲到。
+你一到就打給我。
+對答案
+我完成這堂了
+第 45 堂假設語氣：要是…就好了已完成
+這堂學會：會說跟現實相反的想像。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+wish聽希望
+imagine聽想像
+suppose聽假設
+lottery聽樂透
+dream聽夢想
+advice聽建議
+could聽能夠
+would聽會
+例句
+If I were you, I would study harder.聽如果我是你，我會更用功。
+If I won the lottery, I would travel around the world.聽如果我中樂透，我就環遊世界。
+I wish I could fly.聽我真希望我會飛。
+小提醒：If I were you, I would… 是「如果我是你」。if 子句裡 be 動詞一律用 were。
+小測（5 題，含 2 題聽力）
+1. 「would」是什麼意思？
+會
+出版
+應徵者
+借出
+2. 哪一個字的意思是「樂透」？
+imagine
+dream
+would
+lottery
+3. 填空：If I _____ you, I would study harder.（如果我是你，我會更用功。）
+am
+were
+was
+be
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+imagine
+could
+suppose
+advice
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+如果我中樂透，我就環遊世界。
+我真希望我會飛。
+我們的紙用完了。
+如果我是你，我會更用功。
+對答案
+我完成這堂了
+第 46 堂關係代名詞 who、which、that已完成
+這堂學會：會用一個句子補充說明前面的人或東西。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+who聽（指人）
+which聽（指物）
+that聽（指人或物）
+whose聽…的
+person聽人
+thing聽東西
+place聽地方
+where聽（指地方）
+例句
+The girl who sits next to me is Amy.聽坐在我旁邊的女孩是艾美。
+This is the book that I told you about.聽這就是我跟你說過的那本書。
+That is the restaurant where we had dinner.聽那就是我們吃晚餐的餐廳。
+小提醒：指人用 who，指東西用 which，兩種都可以用 that。whose 表示「…的」。
+小測（5 題，含 2 題聽力）
+1. 「that」是什麼意思？
+想出
+（指人或物）
+主修
+根據
+2. 哪一個字的意思是「地方」？
+person
+thing
+who
+place
+3. 填空：This is the book _____ I told you about.（這就是我跟你說過的那本書。）
+that
+who
+whose
+where
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+where
+who
+whose
+that
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+那就是我們吃晚餐的餐廳。
+壓力會影響你的睡眠。
+這就是我跟你說過的那本書。
+坐在我旁邊的女孩是艾美。
+對答案
+我完成這堂了
+第 47 堂間接問句已完成
+這堂學會：會客氣地問問題：「你知道…嗎？」
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+wonder聽想知道
+know聽知道
+ask聽詢問
+whether聽是否
+tell聽告訴
+sure聽確定的
+depend聽取決於
+explain聽解釋
+例句
+Do you know where the station is?聽你知道車站在哪裡嗎？
+I wonder whether he will come.聽我不知道他會不會來。
+Can you tell me how much it costs?聽你可以告訴我多少錢嗎？
+小提醒：間接問句的字序是肯定句：Do you know where he lives?（不是 where does he live）。
+小測（5 題，含 2 題聽力）
+1. 「sure」是什麼意思？
+放棄
+確定的
+請求
+經驗
+2. 哪一個字的意思是「知道」？
+know
+tell
+wonder
+explain
+3. 填空：Can you _____ me how much it costs?（你可以告訴我多少錢嗎？）
+wonder
+tell
+whether
+sure
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+know
+tell
+whether
+ask
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+他 2019 年去了巴黎。
+我不知道他會不會來。
+你可以告訴我多少錢嗎？
+你知道車站在哪裡嗎？
+對答案
+我完成這堂了
+第 48 堂不定詞與動名詞已完成
+這堂學會：會分辨 want to 和 enjoy ing。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+enjoy聽享受
+avoid聽避免
+decide聽決定
+hope聽希望
+plan聽計畫
+refuse聽拒絕
+promise聽承諾
+suggest聽建議
+例句
+I enjoy reading in the evening.聽我喜歡晚上閱讀。
+She decided to study abroad.聽她決定出國念書。
+He refused to answer the question.聽他拒絕回答這個問題。
+小提醒：enjoy、avoid、finish 後面接 V-ing；decide、hope、plan 後面接 to + 原形。
+小測（5 題，含 2 題聽力）
+1. 「enjoy」是什麼意思？
+如果
+科技
+享受
+生產
+2. 哪一個字的意思是「計畫」？
+suggest
+avoid
+plan
+refuse
+3. 填空：I enjoy _____ in the evening.（我喜歡晚上閱讀。）
+to read
+reads
+reading
+read
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+promise
+plan
+hope
+decide
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+很多國家說英文。
+他拒絕回答這個問題。
+她決定出國念書。
+我喜歡晚上閱讀。
+對答案
+我完成這堂了
+第 49 堂連接詞與轉折已完成
+這堂學會：會讓句子連貫：雖然、可是、因此。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+although聽雖然
+however聽然而
+because聽因為
+therefore聽因此
+while聽然而（對比）
+instead聽反而
+besides聽此外
+also聽也
+例句
+Although it was raining, we went out.聽雖然下雨，我們還是出去了。
+He was tired. However, he kept working.聽他很累，然而他繼續工作。
+It was late. Therefore, we took a taxi.聽時間很晚，因此我們搭計程車。
+小提醒：although 後面接句子；however 是副詞，前面用句號或分號，後面加逗號。
+小測（5 題，含 2 題聽力）
+1. 「therefore」是什麼意思？
+處理
+因此
+健康的
+遺失
+2. 哪一個字的意思是「也」？
+besides
+also
+instead
+while
+3. 填空：He was tired. _____, he kept working.（他很累，然而他繼續工作。）
+While
+Because
+Although
+However
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+therefore
+however
+instead
+because
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+他很累，然而他繼續工作。
+時間很晚，因此我們搭計程車。
+雖然下雨，我們還是出去了。
+這就是我跟你說過的那本書。
+對答案
+我完成這堂了
+第 50 堂片語動詞 1已完成
+這堂學會：會用動詞加介系詞組成的常用片語。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+look for聽尋找
+look after聽照顧
+give up聽放棄
+turn on聽打開
+turn off聽關掉
+put on聽穿上
+take off聽脫下
+pick up聽撿起
+例句
+I am looking for my keys.聽我正在找我的鑰匙。
+Don't give up.聽不要放棄。
+Please turn off the lights.聽請把燈關掉。
+小提醒：片語動詞的意思常常和單字不同，要整組背：look for 是「尋找」，不是「看」。
+小測（5 題，含 2 題聽力）
+1. 「take off」是什麼意思？
+照顧
+…的
+脫下
+建議
+2. 哪一個字的意思是「放棄」？
+look for
+give up
+take off
+pick up
+3. 填空：Please _____ the lights.（請把燈關掉。）
+look for
+look after
+put on
+turn off
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+turn off
+take off
+look after
+look for
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我正在找我的鑰匙。
+請把燈關掉。
+平均分數是八十分。
+不要放棄。
+對答案
+我完成這堂了
+第 51 堂片語動詞 2已完成
+這堂學會：再認識 8 個常考的片語動詞。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+find out聽查明
+set up聽建立
+carry out聽執行
+run out of聽用完
+come up with聽想出
+get along聽相處
+show up聽出現
+deal with聽處理
+例句
+We ran out of paper.聽我們的紙用完了。
+She came up with a good idea.聽她想出一個好點子。
+I get along with my classmates.聽我跟同學相處得很好。
+小提醒：set up 是「建立、設定」，run out of 是「用完」，兩個都很常出現在職場文章。
+小測（5 題，含 2 題聽力）
+1. 「set up」是什麼意思？
+否則
+大概
+知道
+建立
+2. 哪一個字的意思是「相處」？
+deal with
+show up
+get along
+run out of
+3. 填空：We _____ paper.（我們的紙用完了。）
+ran out of
+ran away
+ran into
+ran after
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+run out of
+find out
+carry out
+deal with
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我們的紙用完了。
+她想出一個好點子。
+你知道車站在哪裡嗎？
+我跟同學相處得很好。
+對答案
+我完成這堂了
+第 52 堂求職已完成
+這堂學會：會看懂徵才訊息，也會談自己的經驗。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+apply聽應徵
+resume聽履歷
+interview聽面試
+position聽職位
+experience聽經驗
+skill聽技能
+salary聽薪水
+candidate聽應徵者
+例句
+I would like to apply for this position.聽我想應徵這個職位。
+Please send your resume by Friday.聽請在週五前寄來你的履歷。
+She has five years of experience.聽她有五年經驗。
+小提醒：resume 是履歷，interview 是面試，面試時常問 Tell me about yourself.
+小測（5 題，含 2 題聽力）
+1. 「experience」是什麼意思？
+經驗
+環境
+剛剛
+也
+2. 哪一個字的意思是「應徵」？
+skill
+apply
+candidate
+interview
+3. 填空：Please send your _____ by Friday.（請在週五前寄來你的履歷。）
+apply
+skill
+resume
+interview
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+experience
+interview
+position
+apply
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+請在週五前寄來你的履歷。
+她有五年經驗。
+很多國家說英文。
+我想應徵這個職位。
+對答案
+我完成這堂了
+第 53 堂寫簡單的電子郵件已完成
+這堂學會：會寫開頭、結尾和請對方回覆。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+dear聽親愛的（信件開頭）
+regards聽問候
+attach聽附上
+reply聽回覆
+forward聽轉寄
+subject聽主旨
+request聽請求
+inform聽通知
+例句
+Dear Ms. Chen, thank you for your email.聽陳小姐您好，謝謝您的來信。
+I have attached the file.聽我已附上檔案。
+Please reply by Monday.聽請在星期一前回覆。
+小提醒：開頭 Dear Mr. Lin,，結尾 Best regards, 加上名字，是最安全的職場寫法。
+小測（5 題，含 2 題聽力）
+1. 「inform」是什麼意思？
+希望
+樂透
+社會
+通知
+2. 哪一個字的意思是「回覆」？
+reply
+regards
+forward
+subject
+3. 填空：Please _____ by Monday.（請在星期一前回覆。）
+reply
+attach
+inform
+subject
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+subject
+regards
+reply
+forward
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+請把燈關掉。
+陳小姐您好，謝謝您的來信。
+我已附上檔案。
+請在星期一前回覆。
+對答案
+我完成這堂了
+第 54 堂描述數字與趨勢已完成
+這堂學會：會說「上升、下降、平均」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+increase聽增加
+decrease聽減少
+rise聽上升
+fall聽下降
+stable聽穩定的
+percent聽百分之
+average聽平均
+total聽總共
+例句
+Sales increased by ten percent.聽銷售量增加了百分之十。
+The price fell last month.聽價格上個月下跌了。
+The average score is eighty.聽平均分數是八十分。
+小提醒：rise 和 fall 後面不接受詞：Sales rose. 要說「提高」用 raise，後面要接東西。
+小測（5 題，含 2 題聽力）
+1. 「rise」是什麼意思？
+否則
+例子
+回收
+上升
+2. 哪一個字的意思是「平均」？
+decrease
+increase
+average
+percent
+3. 填空：Sales increased by ten _____.（銷售量增加了百分之十。）
+average
+fall
+percent
+increase
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+fall
+decrease
+increase
+rise
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+價格上個月下跌了。
+平均分數是八十分。
+雖然下雨，我們還是出去了。
+銷售量增加了百分之十。
+對答案
+我完成這堂了
+第 55 堂表達意見已完成
+這堂學會：會說同意、不同意，並說明理由。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+agree聽同意
+disagree聽不同意
+opinion聽意見
+believe聽相信
+argue聽主張
+support聽支持
+reason聽理由
+example聽例子
+例句
+In my opinion, it is a good plan.聽依我看，這是個好計畫。
+I disagree with you.聽我不同意你的看法。
+Can you give me an example?聽你可以舉個例子嗎？
+小提醒：表達意見常用句型：In my opinion... / I agree because...
+小測（5 題，含 2 題聽力）
+1. 「support」是什麼意思？
+想出
+照顧
+支持
+一次
+2. 哪一個字的意思是「不同意」？
+disagree
+example
+opinion
+argue
+3. 填空：I _____ with you.（我不同意你的看法。）
+opinion
+reason
+disagree
+believe
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+believe
+example
+argue
+opinion
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+他拒絕回答這個問題。
+我不同意你的看法。
+你可以舉個例子嗎？
+依我看，這是個好計畫。
+對答案
+我完成這堂了
+第 56 堂新聞與社會議題已完成
+這堂學會：會讀懂新聞裡常見的字。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+environment聽環境
+pollution聽汙染
+recycle聽回收
+society聽社會
+government聽政府
+population聽人口
+technology聽科技
+safety聽安全
+例句
+We should protect the environment.聽我們應該保護環境。
+The government will build a new road.聽政府將興建一條新路。
+Technology changes our lives.聽科技改變我們的生活。
+小提醒：recycle 是動詞「回收」，recycling 是名詞「資源回收」，詞性不同。
+小測（5 題，含 2 題聽力）
+1. 「environment」是什麼意思？
+例子
+關掉
+反而
+環境
+2. 哪一個字的意思是「政府」？
+society
+pollution
+population
+government
+3. 填空：_____ changes our lives.（科技改變我們的生活。）
+Technology
+Recycle
+Population
+Government
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+technology
+pollution
+safety
+population
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+作者沒有提到價格。
+政府將興建一條新路。
+我們應該保護環境。
+科技改變我們的生活。
+對答案
+我完成這堂了
+第 57 堂健康與生活習慣已完成
+這堂學會：會談飲食、睡眠和壓力。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+diet聽飲食
+nutrition聽營養
+habit聽習慣
+stress聽壓力
+fitness聽體能
+sleep聽睡眠
+balance聽平衡
+healthy聽健康的
+例句
+A balanced diet is important.聽均衡飲食很重要。
+Stress can affect your sleep.聽壓力會影響你的睡眠。
+Exercise is a good habit.聽運動是個好習慣。
+小提醒：healthy 是形容詞「健康的」，health 是名詞「健康」。
+小測（5 題，含 2 題聽力）
+1. 「stress」是什麼意思？
+壓力
+撿起
+知道
+地方
+2. 哪一個字的意思是「健康的」？
+balance
+sleep
+stress
+healthy
+3. 填空：A balanced _____ is important.（均衡飲食很重要。）
+diet
+nutrition
+healthy
+fitness
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+nutrition
+stress
+balance
+fitness
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+均衡飲食很重要。
+你一到就打給我。
+運動是個好習慣。
+壓力會影響你的睡眠。
+對答案
+我完成這堂了
+第 58 堂學習與教育已完成
+這堂學會：會談學校、學位和研究。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+education聽教育
+university聽大學
+degree聽學位
+scholarship聽獎學金
+major聽主修
+lecture聽演講或授課
+research聽研究
+graduate聽畢業
+例句
+She is studying at a university.聽她正在大學念書。
+He won a scholarship.聽他拿到獎學金。
+I will graduate next year.聽我明年畢業。
+小提醒：major 當名詞是「主修」：My major is biology.（我主修生物）
+小測（5 題，含 2 題聽力）
+1. 「research」是什麼意思？
+效果（名詞）
+詢問
+研究
+如果
+2. 哪一個字的意思是「學位」？
+research
+university
+degree
+scholarship
+3. 填空：He won a _____.（他拿到獎學金。）
+scholarship
+education
+lecture
+major
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+education
+major
+scholarship
+degree
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+他拿到獎學金。
+我不同意你的看法。
+她正在大學念書。
+我明年畢業。
+對答案
+我完成這堂了
+第 59 堂閱讀技巧：主旨與細節已完成
+這堂學會：會先找主旨，再找答案的細節。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+main idea聽主旨
+detail聽細節
+topic聽主題
+summary聽摘要
+infer聽推論
+mention聽提到
+according to聽根據
+passage聽短文
+例句
+What is the main idea of the passage?聽這篇短文的主旨是什麼？
+According to the article, sales rose.聽根據文章，銷售量上升了。
+The writer does not mention the price.聽作者沒有提到價格。
+小提醒：先看第一段和最後一段找主旨；細節題要回文章裡找原句，不要憑印象。
+小測（5 題，含 2 題聽力）
+1. 「detail」是什麼意思？
+細節
+例子
+然而
+拒絕
+2. 哪一個字的意思是「提到」？
+detail
+mention
+infer
+according to
+3. 填空：The writer does not _____ the price.（作者沒有提到價格。）
+detail
+mention
+main idea
+passage
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+infer
+topic
+passage
+detail
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+根據文章，銷售量上升了。
+作者沒有提到價格。
+這篇短文的主旨是什麼？
+均衡飲食很重要。
+對答案
+我完成這堂了
+第 60 堂第 3 級總複習：易混淆的字已完成
+這堂學會：分清楚長得像、意思不同的字。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+affect聽影響（動詞）
+effect聽效果（名詞）
+borrow聽借入
+lend聽借出
+raise聽提高
+rise聽上升
+advice聽建議（名詞）
+advise聽建議（動詞）
+例句
+Can I borrow your pen?聽我可以跟你借筆嗎？
+Smoking can affect your health.聽吸菸會影響你的健康。
+Thank you for your advice.聽謝謝你的建議。
+小提醒：affect 是動詞「影響」，effect 是名詞「效果」。borrow 是借入，lend 是借出。
+小測（5 題，含 2 題聽力）
+1. 「raise」是什麼意思？
+關掉
+承諾
+提高
+汙染
+2. 哪一個字的意思是「影響（動詞）」？
+effect
+affect
+advise
+rise
+3. 填空：Can I _____ your pen?（我可以跟你借筆嗎？）
+raise
+rise
+advise
+borrow
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+borrow
+advise
+effect
+affect
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+很多國家說英文。
+我可以跟你借筆嗎？
+謝謝你的建議。
+吸菸會影響你的健康。
+對答案
+我完成這堂了
+← 第 2 級
+第 4 級 →
+
+---
+
+## 英文自學第 4 級：多益入門（第 61 到 80 堂），每堂 10 分鐘｜鴻綸科技
+
+https://www.hunglun.com/tools/english-4
+
+首頁 ／ 資源分享 ／ 英文自學課程 ／ 第 4 級
+英文自學第 4 級：多益入門
+第 61 到 80 堂，目標多益約 550 到 650（CEFR B1 的概略說明）。每堂 10 分鐘，打開就能學。
+重點先看
+適合誰？想準備多益，但還不熟題型。
+學完會什麼？熟悉 Part 1 到 Part 7 的題型，認得常見職場字。
+一堂怎麼上？10 分鐘：單字 3 分鐘、例句 3 分鐘、小測 3 分鐘、開口說 1 分鐘。
+進度存在哪？只存在你自己的瀏覽器，換手機或清除瀏覽資料就會歸零。
+開始 10 分鐘計時10:00
+你的瀏覽器不支援發音功能，「聽」鈕和聽力題已隱藏。可以用手機或最新版 Chrome 試試。
+按「聽」是用你裝置內建的語音唸出來，每台裝置聲音不同。
+第 61 到 80 堂
+第 61 堂認識多益：題型與時間已完成
+這堂學會：知道多益聽力與閱讀怎麼考、怎麼分配時間。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+photograph聽照片
+conversation聽對話
+talk聽獨白
+incomplete聽不完整的
+passage聽短文
+schedule聽時間表
+score聽分數
+section聽部分
+例句
+Listen to the conversation.聽請聽這段對話。
+Choose the best answer.聽請選出最佳答案。
+Your score will be sent by email.聽您的成績會用電子郵件寄出。
+小提醒：多益聽力閱讀測驗共 200 題、約 2 小時：聽力 100 題（約 45 分鐘）、閱讀 100 題（75 分鐘），滿分 990。細節請以官方網站為準。
+小測（5 題，含 2 題聽力）
+1. 「section」是什麼意思？
+對話
+打字
+儘管如此
+部分
+2. 哪一個字的意思是「不完整的」？
+schedule
+section
+incomplete
+photograph
+3. 填空：Choose the _____ answer.（請選出最佳答案。）
+worst
+best
+last
+next
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+incomplete
+conversation
+section
+schedule
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+請聽這段對話。
+會議每週一舉行。
+請選出最佳答案。
+您的成績會用電子郵件寄出。
+對答案
+我完成這堂了
+第 62 堂Part 1 照片題：人物動作已完成
+這堂學會：會描述照片裡的人正在做什麼。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+carrying聽搬運著
+holding聽拿著
+pushing聽推著
+wearing聽穿著
+standing聽站著
+sitting聽坐著
+typing聽打字
+reading聽閱讀
+例句
+A woman is carrying a box.聽一位女士正搬著一個箱子。
+Two men are sitting at a table.聽兩個男人坐在桌邊。
+He is typing on a laptop.聽他正在筆電上打字。
+小提醒：Part 1 常用現在進行式。選項動作要和照片完全一致，看到沒拍到的東西就是陷阱。
+小測（5 題，含 2 題聽力）
+1. 「pushing」是什麼意思？
+照片
+特賣
+根據
+推著
+2. 哪一個字的意思是「打字」？
+sitting
+wearing
+pushing
+typing
+3. 填空：He is _____ on a laptop.（他正在筆電上打字。）
+reading
+pushing
+carrying
+typing
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+holding
+carrying
+reading
+wearing
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+公司最近成長了。
+一位女士正搬著一個箱子。
+他正在筆電上打字。
+兩個男人坐在桌邊。
+對答案
+我完成這堂了
+第 63 堂Part 1 照片題：物品與場景已完成
+這堂學會：會描述物品擺放的狀態。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+displayed聽展示著
+stacked聽堆疊著
+parked聽停放著
+arranged聽排列著
+hanging聽懸掛著
+empty聽空的
+occupied聽有人使用的
+lined up聽排成一列
+例句
+Cars are parked along the street.聽汽車沿著街道停放。
+Chairs are arranged in a circle.聽椅子排成一圈。
+The shelves are empty.聽架子是空的。
+小提醒：物品沒有人在動作，常用被動或 be + 形容詞：Boxes are stacked on the floor.
+小測（5 題，含 2 題聽力）
+1. 「empty」是什麼意思？
+空的
+另外
+搬運著
+同時
+2. 哪一個字的意思是「堆疊著」？
+displayed
+stacked
+parked
+empty
+3. 填空：Cars are _____ along the street.（汽車沿著街道停放。）
+occupied
+lined up
+parked
+hanging
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+lined up
+occupied
+arranged
+hanging
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+椅子排成一圈。
+汽車沿著街道停放。
+一位女士正搬著一個箱子。
+架子是空的。
+對答案
+我完成這堂了
+第 64 堂Part 2 應答題：疑問詞問句已完成
+這堂學會：會聽出問句開頭，選出合理的回答。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+in charge of聽負責
+deadline聽截止日期
+available聽有空的
+appointment聽預約
+confirm聽確認
+location聽地點
+responsible聽負責的
+due聽到期的
+例句
+Who is in charge of the project?聽誰負責這個專案？
+When is the deadline?聽截止日期是什麼時候？
+Is Mr. Lee available this afternoon?聽李先生今天下午有空嗎？
+小提醒：聽到 When 就要選時間，Where 選地點，Who 選人。答非所問的選項是陷阱。
+小測（5 題，含 2 題聽力）
+1. 「in charge of」是什麼意思？
+彼此
+到期
+備忘錄
+負責
+2. 哪一個字的意思是「確認」？
+confirm
+location
+due
+available
+3. 填空：When is the _____?（截止日期是什麼時候？）
+deadline
+due
+in charge of
+responsible
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+location
+confirm
+available
+responsible
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+截止日期是什麼時候？
+課程九點開始。
+誰負責這個專案？
+李先生今天下午有空嗎？
+對答案
+我完成這堂了
+第 65 堂Part 2 應答題：是非題、選擇題與請求已完成
+這堂學會：會聽懂客氣的請求與選擇問句。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+Would you mind聽你介意嗎
+Could you聽你可以…嗎
+Why don't we聽我們何不
+How about聽…如何
+either聽兩者之一
+whichever聽哪一個都
+prefer聽比較喜歡
+shall we聽我們…好嗎
+例句
+Would you mind closing the window?聽你介意把窗戶關起來嗎？
+Why don't we meet at noon?聽我們何不中午碰面？
+Which do you prefer, tea or coffee?聽你比較喜歡哪個，茶還是咖啡？
+小提醒：Would you mind...? 回答 Not at all 是「完全不介意」。選擇問句通常回答其中一個，或說都可以。
+小測（5 題，含 2 題聽力）
+1. 「How about」是什麼意思？
+拿著
+升職
+政策
+…如何
+2. 哪一個字的意思是「我們…好嗎」？
+Why don't we
+shall we
+How about
+Could you
+3. 填空：Which do you _____, tea or coffee?（你比較喜歡哪個，茶還是咖啡？）
+prefer
+Why don't we
+How about
+shall we
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+Could you
+either
+whichever
+Why don't we
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+公司最近成長了。
+你介意把窗戶關起來嗎？
+你比較喜歡哪個，茶還是咖啡？
+我們何不中午碰面？
+對答案
+我完成這堂了
+第 66 堂Part 3 對話題：辦公室已完成
+這堂學會：會聽懂辦公室裡的簡短對話。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+supervisor聽主管
+colleague聽同事
+employee聽員工
+department聽部門
+assistant聽助理
+manager聽經理
+project聽專案
+meeting聽會議
+例句
+I need to talk to my supervisor.聽我需要跟我的主管談談。
+The marketing department is hiring.聽行銷部正在徵人。
+My colleague will join the meeting.聽我的同事會參加會議。
+小提醒：先看題目和選項，再聽對話，邊聽邊找答案，這樣專注力才夠。
+小測（5 題，含 2 題聽力）
+1. 「project」是什麼意思？
+開始（同 start）
+專案
+懸掛著
+經理
+2. 哪一個字的意思是「員工」？
+supervisor
+meeting
+employee
+colleague
+3. 填空：I need to talk to my _____.（我需要跟我的主管談談。）
+employee
+department
+supervisor
+meeting
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+meeting
+colleague
+project
+assistant
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我需要跟我的主管談談。
+憑收據可以退款。
+行銷部正在徵人。
+我的同事會參加會議。
+對答案
+我完成這堂了
+第 67 堂Part 3 對話題：訂購與客服已完成
+這堂學會：會聽懂訂單、退款和客訴。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+order聽訂單
+delivery聽送貨
+refund聽退款
+receipt聽收據
+invoice聽發票或帳單
+complaint聽抱怨
+warranty聽保固
+replace聽更換
+例句
+I'd like to place an order.聽我想下訂單。
+You can get a refund with the receipt.聽憑收據可以退款。
+The warranty lasts for one year.聽保固期一年。
+小提醒：客服對話常見流程：問題 → 確認資料 → 解決方式。題目常問「接下來會做什麼」。
+小測（5 題，含 2 題聽力）
+1. 「delivery」是什麼意思？
+改期
+開始（同 start）
+通知
+送貨
+2. 哪一個字的意思是「抱怨」？
+delivery
+complaint
+replace
+invoice
+3. 填空：You can get a _____ with the receipt.（憑收據可以退款。）
+receipt
+complaint
+refund
+delivery
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+complaint
+receipt
+replace
+delivery
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我想下訂單。
+誰負責這個專案？
+保固期一年。
+憑收據可以退款。
+對答案
+我完成這堂了
+第 68 堂Part 4 獨白：公告與廣播已完成
+這堂學會：會聽懂機場、車站、賣場的廣播。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+announcement聽公告
+attention聽請注意
+passengers聽乘客
+delay聽延誤
+gate聽登機門
+boarding聽登機
+cancelled聽取消的
+shuttle聽接駁車
+例句
+May I have your attention, please?聽請各位注意。
+The flight has been delayed.聽班機延誤了。
+Passengers should go to Gate 5.聽乘客請前往五號登機口。
+小提醒：公告題常問「為什麼廣播」「聽眾接下來要做什麼」。注意 delay 和 cancel 這類關鍵字。
+小測（5 題，含 2 題聽力）
+1. 「gate」是什麼意思？
+遵守
+成功（名詞）
+登機門
+延誤
+2. 哪一個字的意思是「公告」？
+announcement
+gate
+attention
+passengers
+3. 填空：_____ should go to Gate 5.（乘客請前往五號登機口。）
+Passengers
+Boarding
+Cancelled
+Attention
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+boarding
+gate
+passengers
+shuttle
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+班機延誤了。
+請各位注意。
+她工作非常有效率。
+乘客請前往五號登機口。
+對答案
+我完成這堂了
+第 69 堂Part 4 獨白：留言與廣告已完成
+這堂學會：會聽懂語音留言和促銷廣告。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+voicemail聽語音留言
+promotion聽促銷
+sale聽特賣
+offer聽優惠
+limited聽限量的
+expire聽到期
+coupon聽優惠券
+customer聽顧客
+例句
+You have a new voicemail.聽您有一則新的語音留言。
+This offer expires on Friday.聽這個優惠星期五到期。
+Customers can use this coupon.聽顧客可以使用這張優惠券。
+小提醒：廣告常出現數字、期限和折扣，邊聽邊記下來。
+小測（5 題，含 2 題聽力）
+1. 「customer」是什麼意思？
+收件人
+顧客
+公告
+去年
+2. 哪一個字的意思是「優惠」？
+limited
+customer
+expire
+offer
+3. 填空：You have a new _____.（您有一則新的語音留言。）
+voicemail
+coupon
+limited
+customer
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+limited
+expire
+sale
+promotion
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這是緊急的請求。
+這個優惠星期五到期。
+顧客可以使用這張優惠券。
+您有一則新的語音留言。
+對答案
+我完成這堂了
+第 70 堂Part 5 詞性判斷已完成
+這堂學會：會看空格前後，判斷要填名詞、動詞、形容詞還是副詞。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+decision聽決定（名詞）
+decisive聽果斷的
+effective聽有效的
+effectively聽有效地
+efficient聽有效率的
+efficiently聽有效率地
+success聽成功（名詞）
+successful聽成功的
+例句
+The manager made a quick decision.聽經理很快做了決定。
+She works very efficiently.聽她工作非常有效率。
+This is an effective method.聽這是一個有效的方法。
+小提醒：副詞多半以 ly 結尾，修飾動詞和形容詞；形容詞修飾名詞。空格前是 the 或 a，通常填名詞或形容詞。
+小測（5 題，含 2 題聽力）
+1. 「effective」是什麼意思？
+拿著
+購買
+有效的
+被完成
+2. 哪一個字的意思是「成功（名詞）」？
+effective
+effectively
+success
+efficient
+3. 填空：She works very _____.（她工作非常有效率。）
+decisive
+efficiently
+successful
+effective
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+decisive
+effective
+efficiently
+decision
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這是一個有效的方法。
+她工作非常有效率。
+我們打算僱用三名新員工。
+經理很快做了決定。
+對答案
+我完成這堂了
+第 71 堂Part 5 時態與主動被動已完成
+這堂學會：會判斷空格該用哪個時態、主動還是被動。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+last year聽去年
+next month聽下個月
+by聽在…之前
+since聽自從
+currently聽目前
+recently聽最近
+is held聽被舉行
+was completed聽被完成
+例句
+The report was completed yesterday.聽報告昨天完成了。
+The meeting is held every Monday.聽會議每週一舉行。
+The company has grown recently.聽公司最近成長了。
+小提醒：看句子裡的時間線索：last year 用過去式，by next month 用未來式；主詞是物品，多半用被動。
+小測（5 題，含 2 題聽力）
+1. 「recently」是什麼意思？
+展示著
+最近
+同事
+送貨
+2. 哪一個字的意思是「下個月」？
+since
+next month
+by
+last year
+3. 填空：The company has grown _____.（公司最近成長了。）
+recently
+is held
+last year
+currently
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+is held
+recently
+since
+last year
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+公司最近成長了。
+報告昨天完成了。
+會議每週一舉行。
+他正在筆電上打字。
+對答案
+我完成這堂了
+第 72 堂Part 5 介系詞與連接詞已完成
+這堂學會：會分辨 because of 和 because。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+due to聽由於
+because of聽因為
+despite聽儘管
+according to聽根據
+regarding聽關於
+throughout聽自始至終
+within聽在…之內
+by聽在…之前
+例句
+The flight was delayed due to bad weather.聽因為天氣不好，班機延誤了。
+Despite the rain, the event continued.聽儘管下雨，活動仍繼續。
+Please submit it within three days.聽請在三天內提交。
+小提醒：because of、due to、despite 後面接名詞；because、although 後面接完整句子。
+小測（5 題，含 2 題聽力）
+1. 「due to」是什麼意思？
+促銷
+到期
+哪一個都
+由於
+2. 哪一個字的意思是「關於」？
+despite
+because of
+regarding
+according to
+3. 填空：The flight was delayed _____ bad weather.（因為天氣不好，班機延誤了。）
+because of
+despite
+due to
+by
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+within
+due to
+despite
+by
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+儘管下雨，活動仍繼續。
+因為天氣不好，班機延誤了。
+請在三天內提交。
+這支手機有很多實用功能。
+對答案
+我完成這堂了
+第 73 堂Part 5 代名詞與關係詞已完成
+這堂學會：會選對代名詞與關係詞。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+whose聽…的
+whom聽（受格）誰
+whichever聽無論哪一個
+whoever聽無論誰
+each other聽彼此
+themselves聽他們自己
+both聽兩者都
+neither聽兩者都不
+例句
+Whoever arrives first can choose.聽誰先到誰就可以選。
+The two teams respect each other.聽兩隊彼此尊重。
+They finished the work themselves.聽他們自己完成了工作。
+小提醒：whoever 是「無論誰」，whichever 是「無論哪一個」。each other 是「彼此」。
+小測（5 題，含 2 題聽力）
+1. 「whoever」是什麼意思？
+適用的
+成功的
+排成一列
+無論誰
+2. 哪一個字的意思是「兩者都不」？
+whoever
+whom
+each other
+neither
+3. 填空：The two teams respect _____.（兩隊彼此尊重。）
+both
+each other
+whom
+whoever
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+whoever
+both
+whom
+each other
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+兩隊彼此尊重。
+議程附在這封電子郵件裡。
+誰先到誰就可以選。
+他們自己完成了工作。
+對答案
+我完成這堂了
+第 74 堂Part 6 篇章填空：轉折與銜接已完成
+這堂學會：會用連接副詞讓前後句通順。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+similarly聽同樣地
+furthermore聽此外
+in addition聽另外
+meanwhile聽同時
+therefore聽因此
+nevertheless聽儘管如此
+as a result聽結果
+otherwise聽否則
+例句
+The roads were closed. As a result, many people were late.聽道路封閉了，結果很多人遲到。
+The price is low. Furthermore, delivery is free.聽價格很低，此外還免運費。
+Please sign here. Otherwise, we cannot process your order.聽請在這裡簽名，否則我們無法處理訂單。
+小提醒：先看空格前後兩句的關係：相反用 however，補充用 in addition，結果用 as a result。
+小測（5 題，含 2 題聽力）
+1. 「as a result」是什麼意思？
+耐用的
+排成一列
+結果
+緊急的
+2. 哪一個字的意思是「另外」？
+as a result
+therefore
+in addition
+similarly
+3. 填空：Please sign here. _____, we cannot process your order.（請在這裡簽名，否則我們無法處理訂單。）
+Similarly
+As a result
+Therefore
+Otherwise
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+therefore
+otherwise
+meanwhile
+in addition
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+道路封閉了，結果很多人遲到。
+價格很低，此外還免運費。
+請在這裡簽名，否則我們無法處理訂單。
+這份備忘錄是給所有員工的。
+對答案
+我完成這堂了
+第 75 堂Part 7 閱讀：電子郵件與備忘錄已完成
+這堂學會：會快速抓出誰寫給誰、為什麼寫。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+memo聽備忘錄
+recipient聽收件人
+sender聽寄件人
+attachment聽附件
+enclosed聽隨函附上的
+regarding聽關於
+urgent聽緊急的
+respond聽回應
+例句
+This memo is for all employees.聽這份備忘錄是給所有員工的。
+Please see the attachment.聽請見附件。
+This is an urgent request.聽這是緊急的請求。
+小提醒：先看主旨和第一段，通常寫出目的；最後一段常是請求或下一步。
+小測（5 題，含 2 題聽力）
+1. 「recipient」是什麼意思？
+開始（同 start）
+收件人
+需要（同 need）
+專案
+2. 哪一個字的意思是「關於」？
+urgent
+regarding
+memo
+enclosed
+3. 填空：This _____ is for all employees.（這份備忘錄是給所有員工的。）
+regarding
+sender
+respond
+memo
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+attachment
+enclosed
+urgent
+respond
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這是緊急的請求。
+她工作非常有效率。
+這份備忘錄是給所有員工的。
+請見附件。
+對答案
+我完成這堂了
+第 76 堂Part 7 閱讀：通知與公告已完成
+這堂學會：會看懂規定、生效日期和注意事項。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+notice聽通知
+effective聽生效的
+policy聽政策
+regulation聽規定
+applicable聽適用的
+comply聽遵守
+in effect聽實施中
+revise聽修訂
+例句
+The new policy is effective on May 1.聽新政策五月一日生效。
+All staff must comply with the rules.聽所有員工都必須遵守規定。
+The schedule has been revised.聽時程表已經修訂。
+小提醒：通知題常考日期與數字，用刪去法：選項裡有文章沒提的就不是答案。
+小測（5 題，含 2 題聽力）
+1. 「applicable」是什麼意思？
+部門
+適用的
+比較喜歡
+因此
+2. 哪一個字的意思是「通知」？
+notice
+revise
+applicable
+policy
+3. 填空：All staff must _____ with the rules.（所有員工都必須遵守規定。）
+regulation
+comply
+revise
+effective
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+policy
+in effect
+regulation
+effective
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+所有員工都必須遵守規定。
+時程表已經修訂。
+新政策五月一日生效。
+李先生今天下午有空嗎？
+對答案
+我完成這堂了
+第 77 堂Part 7 閱讀：廣告與商品已完成
+這堂學會：會看懂商品特色、價格和購買方式。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+feature聽特色
+brand聽品牌
+durable聽耐用的
+affordable聽負擔得起的
+available聽可購得的
+purchase聽購買
+discount聽折扣
+rebate聽退款優惠
+例句
+This phone has many useful features.聽這支手機有很多實用功能。
+The bag is durable and affordable.聽這個包包耐用又平價。
+Purchase two items and get a discount.聽買兩件享折扣。
+小提醒：廣告常用 available（可取得）、while supplies last（售完為止）、free shipping（免運費）。
+小測（5 題，含 2 題聽力）
+1. 「rebate」是什麼意思？
+負責
+通知
+退款優惠
+同事
+2. 哪一個字的意思是「負擔得起的」？
+brand
+affordable
+discount
+available
+3. 填空：_____ two items and get a discount.（買兩件享折扣。）
+Feature
+Discount
+Purchase
+Durable
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+purchase
+affordable
+brand
+rebate
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+買兩件享折扣。
+這支手機有很多實用功能。
+這個包包耐用又平價。
+會議延到星期五。
+對答案
+我完成這堂了
+第 78 堂職場字：人事已完成
+這堂學會：會讀懂人事公告和徵才訊息。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+recruit聽招募
+hire聽僱用
+resign聽辭職
+promote聽升職
+retire聽退休
+benefit聽福利
+payroll聽薪資
+training聽訓練
+例句
+We plan to hire three new employees.聽我們打算僱用三名新員工。
+He was promoted to manager.聽他被升為經理。
+All employees receive health benefits.聽所有員工都享有健康福利。
+小提醒：resign 是主動辭職，retire 是退休，promote 是升職。
+小測（5 題，含 2 題聽力）
+1. 「resign」是什麼意思？
+哪一個都
+辭職
+提案
+議程
+2. 哪一個字的意思是「薪資」？
+training
+recruit
+payroll
+benefit
+3. 填空：We plan to _____ three new employees.（我們打算僱用三名新員工。）
+recruit
+hire
+retire
+payroll
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+training
+hire
+recruit
+resign
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我們打算僱用三名新員工。
+他被升為經理。
+所有員工都享有健康福利。
+報告昨天完成了。
+對答案
+我完成這堂了
+第 79 堂職場字：會議與行程已完成
+這堂學會：會讀懂會議通知與行程變更。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+agenda聽議程
+attendee聽與會者
+postpone聽延後
+reschedule聽改期
+conference聽研討會
+minutes聽會議記錄
+adjourn聽休會
+proposal聽提案
+例句
+The agenda is attached to this email.聽議程附在這封電子郵件裡。
+The meeting has been postponed until Friday.聽會議延到星期五。
+Please review the proposal before the meeting.聽請在會議前看過提案。
+小提醒：postpone 是延後，reschedule 是改時間，cancel 是取消。
+小測（5 題，含 2 題聽力）
+1. 「minutes」是什麼意思？
+站著
+退款
+果斷的
+會議記錄
+2. 哪一個字的意思是「與會者」？
+conference
+attendee
+agenda
+adjourn
+3. 填空：The meeting has been _____ until Friday.（會議延到星期五。）
+postpones
+postpone
+postponed
+postponing
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+proposal
+adjourn
+conference
+reschedule
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+會議每週一舉行。
+議程附在這封電子郵件裡。
+請在會議前看過提案。
+會議延到星期五。
+對答案
+我完成這堂了
+第 80 堂第 4 級總複習：同義詞替換已完成
+這堂學會：多益閱讀常用不同的字改寫同一個意思。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+purchase聽購買（同 buy）
+assist聽協助（同 help）
+obtain聽取得（同 get）
+require聽需要（同 need）
+begin聽開始（同 start）
+inform聽通知（同 tell）
+attend聽出席
+complete聽完成（同 finish）
+例句
+Please assist the customer.聽請協助這位顧客。
+You must obtain a permit.聽你必須取得許可。
+The class begins at nine.聽課程九點開始。
+小提醒：題目問 closest in meaning（意思最接近）時，要看上下文，不是背單字。
+小測（5 題，含 2 題聽力）
+1. 「purchase」是什麼意思？
+登機門
+決定（名詞）
+購買（同 buy）
+搬運著
+2. 哪一個字的意思是「開始（同 start）」？
+complete
+assist
+inform
+begin
+3. 填空：The class _____ at nine.（課程九點開始。）
+begins
+beginning
+begun
+begin
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+attend
+require
+obtain
+assist
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+課程九點開始。
+會議每週一舉行。
+請協助這位顧客。
+你必須取得許可。
+對答案
+我完成這堂了
+← 第 3 級
+第 5 級 →
+
+---
+
+## 英文自學第 5 級：多益衝刺（第 81 到 100 堂），每堂 10 分鐘｜鴻綸科技
+
+https://www.hunglun.com/tools/english-5
+
+首頁 ／ 資源分享 ／ 英文自學課程 ／ 第 5 級
+英文自學第 5 級：多益衝刺
+第 81 到 100 堂，目標多益 800 左右（CEFR B2 的概略說明）。每堂 10 分鐘，打開就能學。
+重點先看
+適合誰？已經有基礎，想把分數往上推。
+學完會什麼？處理文法陷阱、同義詞、雙篇閱讀與聽力預測，並有自己的複習節奏。
+一堂怎麼上？10 分鐘：單字 3 分鐘、例句 3 分鐘、小測 3 分鐘、開口說 1 分鐘。
+進度存在哪？只存在你自己的瀏覽器，換手機或清除瀏覽資料就會歸零。
+開始 10 分鐘計時10:00
+你的瀏覽器不支援發音功能，「聽」鈕和聽力題已隱藏。可以用手機或最新版 Chrome 試試。
+按「聽」是用你裝置內建的語音唸出來，每台裝置聲音不同。
+第 81 到 100 堂
+第 81 堂職場字：財務已完成
+這堂學會：會讀懂預算、費用和報帳的文件。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+budget聽預算
+revenue聽營收
+expense聽費用
+profit聽利潤
+invoice聽發票
+tax聽稅
+audit聽稽核
+reimburse聽報銷
+例句
+The budget for this year is limited.聽今年的預算有限。
+Travel expenses will be reimbursed.聽差旅費會報銷。
+The company's profit rose by ten percent.聽公司的利潤成長了百分之十。
+小提醒：revenue 是營收（總收入），profit 是利潤（扣掉成本後），兩個不一樣。
+小測（5 題，含 2 題聽力）
+1. 「profit」是什麼意思？
+限制
+接下來的
+利潤
+錯誤
+2. 哪一個字的意思是「報銷」？
+audit
+expense
+budget
+reimburse
+3. 填空：The _____ for this year is limited.（今年的預算有限。）
+audit
+budget
+invoice
+expense
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+revenue
+invoice
+audit
+expense
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+今年的預算有限。
+公司的利潤成長了百分之十。
+猜一個答案比空白好。
+差旅費會報銷。
+對答案
+我完成這堂了
+第 82 堂職場字：行銷已完成
+這堂學會：會讀懂行銷活動與市場調查。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+campaign聽宣傳活動
+target聽目標對象
+market share聽市占率
+launch聽推出
+consumer聽消費者
+survey聽問卷調查
+brand聽品牌
+competitor聽競爭對手
+例句
+The company will launch a new product in May.聽公司五月會推出新產品。
+A survey showed that consumers like the design.聽調查顯示消費者喜歡這個設計。
+Our main competitor lowered its prices.聽我們的主要競爭對手降價了。
+小提醒：campaign 是一檔宣傳活動，launch 是推出新產品，target 當動詞是「以…為目標」。
+小測（5 題，含 2 題聽力）
+1. 「brand」是什麼意思？
+聽見
+接下來的
+品牌
+一…就
+2. 哪一個字的意思是「市占率」？
+survey
+market share
+consumer
+campaign
+3. 填空：A survey showed that _____ like the design.（調查顯示消費者喜歡這個設計。）
+customers
+consumers
+consumer
+customer
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+launch
+market share
+consumer
+brand
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我們的主要競爭對手降價了。
+調查顯示消費者喜歡這個設計。
+公司五月會推出新產品。
+很多人喜歡它，例如我姊姊每週都買。
+對答案
+我完成這堂了
+第 83 堂職場字：採購與物流已完成
+這堂學會：會讀懂訂貨、出貨與庫存。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+supplier聽供應商
+shipment聽出貨
+inventory聽庫存
+warehouse聽倉庫
+stock聽存貨
+vendor聽廠商
+bulk聽大量
+deliver聽遞送
+例句
+The supplier will deliver the goods on Monday.聽供應商星期一會送貨。
+We are out of stock.聽我們缺貨了。
+The shipment arrived two days late.聽這批貨晚了兩天到。
+小提醒：shipment 是整批出貨，delivery 是送達；題目常考哪一批貨延誤。
+小測（5 題，含 2 題聽力）
+1. 「shipment」是什麼意思？
+使安心
+出貨
+續約
+目標
+2. 哪一個字的意思是「廠商」？
+warehouse
+vendor
+stock
+supplier
+3. 填空：The _____ arrived two days late.（這批貨晚了兩天到。）
+warehouse
+inventory
+shipment
+vendor
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+inventory
+deliver
+vendor
+warehouse
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+他付出相當大的努力。
+我們缺貨了。
+供應商星期一會送貨。
+這批貨晚了兩天到。
+對答案
+我完成這堂了
+第 84 堂職場字：設備與維修已完成
+這堂學會：會讀懂設備故障、維修與更換的通知。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+maintenance聽維護
+malfunction聽故障
+technician聽技術人員
+install聽安裝
+upgrade聽升級
+replace聽更換
+defective聽有瑕疵的
+repair聽修理
+例句
+The printer is malfunctioning.聽印表機故障了。
+A technician will visit your office.聽技術人員會到你的辦公室。
+We will replace the defective part.聽我們會更換有瑕疵的零件。
+小提醒：malfunction 是機器故障，常出現在 Part 3 的客服對話。
+小測（5 題，含 2 題聽力）
+1. 「upgrade」是什麼意思？
+升級
+干擾選項
+費用
+出貨
+2. 哪一個字的意思是「維護」？
+repair
+malfunction
+maintenance
+install
+3. 填空：The printer is _____.（印表機故障了。）
+malfunctioning
+installing
+maintaining
+upgrading
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+defective
+upgrade
+repair
+technician
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我們會更換有瑕疵的零件。
+印表機故障了。
+合約六月底到期。
+技術人員會到你的辦公室。
+對答案
+我完成這堂了
+第 85 堂職場字：旅遊與餐飲已完成
+這堂學會：會讀懂行程、交通與宴會安排。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+itinerary聽行程表
+accommodation聽住宿
+fare聽票價
+depart聽出發
+arrive聽抵達
+boarding pass聽登機證
+catering聽外燴
+venue聽場地
+例句
+Here is your itinerary for the trip.聽這是您旅程的行程表。
+The train departs at nine.聽火車九點出發。
+The company hired a catering service.聽公司請了外燴服務。
+小提醒：itinerary 是行程表，accommodation 是住宿，兩個字常成對出現。
+小測（5 題，含 2 題聽力）
+1. 「venue」是什麼意思？
+聽見
+而且
+跳過
+場地
+2. 哪一個字的意思是「出發」？
+venue
+itinerary
+depart
+boarding pass
+3. 填空：The train _____ at nine.（火車九點出發。）
+departs
+departing
+departed
+depart
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+catering
+venue
+fare
+boarding pass
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+公司的利潤成長了百分之十。
+火車九點出發。
+公司請了外燴服務。
+這是您旅程的行程表。
+對答案
+我完成這堂了
+第 86 堂職場字：合約與法律已完成
+這堂學會：會讀懂合約條款與期限。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+contract聽合約
+agreement聽協議
+terms聽條款
+clause聽條文
+liable聽有責任的
+expire聽到期
+renew聽續約
+terminate聽終止
+例句
+The contract expires at the end of June.聽合約六月底到期。
+Please read the terms carefully.聽請仔細閱讀條款。
+You can renew your membership online.聽您可以在網路上續約會員。
+小提醒：terms 是條款，terminate 是終止。renew 是續約。
+小測（5 題，含 2 題聽力）
+1. 「terms」是什麼意思？
+轉折
+條款
+先前的
+也不
+2. 哪一個字的意思是「續約」？
+contract
+clause
+renew
+expire
+3. 填空：You can _____ your membership online.（您可以在網路上續約會員。）
+renew
+liable
+contract
+agreement
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+terminate
+clause
+contract
+terms
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+您可以在網路上續約會員。
+請仔細閱讀條款。
+火車九點出發。
+合約六月底到期。
+對答案
+我完成這堂了
+第 87 堂Part 5 陷阱 1：長得像的字已完成
+這堂學會：會分辨詞形相近、意思不同的字。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+complement聽補充
+compliment聽稱讚
+principal聽主要的
+principle聽原則
+economic聽經濟的
+economical聽節約的
+considerable聽相當多的
+considerate聽體貼的
+例句
+We received a compliment from the customer.聽我們收到顧客的稱讚。
+This car is very economical.聽這輛車很省錢。
+He made a considerable effort.聽他付出相當大的努力。
+小提醒：考試愛考這類字：看空格需要名詞還是形容詞，再選。
+小測（5 題，含 2 題聽力）
+1. 「economical」是什麼意思？
+條款
+然而
+節約的
+稱讚
+2. 哪一個字的意思是「稱讚」？
+economic
+considerable
+complement
+compliment
+3. 填空：We received a _____ from the customer.（我們收到顧客的稱讚。）
+economic
+principal
+principle
+compliment
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+considerate
+economic
+economical
+principle
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我們收到顧客的稱讚。
+聽力練習很重要。
+他付出相當大的努力。
+這輛車很省錢。
+對答案
+我完成這堂了
+第 88 堂Part 5 陷阱 2：-ing 與 -ed 形容詞已完成
+這堂學會：會分辨 interesting 和 interested。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+interesting聽有趣的
+interested聽感興趣的
+boring聽無聊的
+bored聽覺得無聊的
+exciting聽刺激的
+excited聽興奮的
+surprising聽令人驚訝的
+surprised聽感到驚訝的
+例句
+The movie was very interesting.聽那部電影很有趣。
+I am interested in this job.聽我對這份工作有興趣。
+The results were surprising.聽結果令人驚訝。
+小提醒：-ing 形容詞形容「事物本身」，-ed 形容詞形容「人的感受」。
+小測（5 題，含 2 題聽力）
+1. 「interesting」是什麼意思？
+有趣的
+供應商
+結果
+專注
+2. 哪一個字的意思是「刺激的」？
+exciting
+bored
+interested
+surprising
+3. 填空：I am _____ in this job.（我對這份工作有興趣。）
+surprising
+interesting
+interested
+surprised
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+surprising
+boring
+interesting
+excited
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+那部電影很有趣。
+結果令人驚訝。
+不要在一題花太多時間。
+我對這份工作有興趣。
+對答案
+我完成這堂了
+第 89 堂Part 5 陷阱 3：成對詞與否定副詞已完成
+這堂學會：會看懂 not only…but also 這類成對的句型。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+not only聽不僅
+but also聽而且
+either聽兩者之一
+neither聽兩者皆非
+nor聽也不
+hardly聽幾乎不
+rarely聽很少
+no sooner聽一…就
+例句
+She is not only smart but also kind.聽她不僅聰明，而且善良。
+Neither Tom nor Amy was there.聽湯姆和艾美都不在那裡。
+We rarely work on weekends.聽我們很少週末工作。
+小提醒：成對詞要搭配正確：either…or、neither…nor、both…and。
+小測（5 題，含 2 題聽力）
+1. 「neither」是什麼意思？
+兩者皆非
+相關的
+準確度
+消費者
+2. 哪一個字的意思是「一…就」？
+either
+not only
+no sooner
+rarely
+3. 填空：We _____ work on weekends.（我們很少週末工作。）
+either
+rarely
+hardly
+but also
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+either
+but also
+hardly
+nor
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這個產品是新的；相反地，舊款比較便宜。
+湯姆和艾美都不在那裡。
+我們很少週末工作。
+她不僅聰明，而且善良。
+對答案
+我完成這堂了
+第 90 堂Part 5 陷阱 4：固定搭配已完成
+這堂學會：會背常考的「動詞加介系詞」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+look forward to聽期待
+be used to聽習慣於
+be responsible for聽負責
+depend on聽取決於
+contribute to聽促成
+object to聽反對
+in addition to聽除…之外
+apply for聽申請
+例句
+I look forward to meeting you.聽我期待見到你。
+He is responsible for the budget.聽他負責預算。
+It depends on the weather.聽要看天氣而定。
+小提醒：look forward to 的 to 是介系詞，後面接 V-ing，不接原形：I look forward to meeting you.
+小測（5 題，含 2 題聽力）
+1. 「in addition to」是什麼意思？
+幾乎不
+無聊的
+除…之外
+快速瀏覽
+2. 哪一個字的意思是「負責」？
+be responsible for
+depend on
+in addition to
+look forward to
+3. 填空：I _____ meeting you.（我期待見到你。）
+apply for
+in addition to
+look forward to
+be used to
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+apply for
+contribute to
+be responsible for
+depend on
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+要看天氣而定。
+我期待見到你。
+他負責預算。
+合約六月底到期。
+對答案
+我完成這堂了
+第 91 堂Part 6 篇章邏輯已完成
+這堂學會：會判斷整段文章的邏輯，選出最合適的句子。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+however聽然而
+in contrast聽相反地
+for instance聽例如
+in other words聽換句話說
+specifically聽具體地說
+nonetheless聽儘管如此
+accordingly聽因此
+as a result聽結果
+例句
+The product is new. In contrast, the old model is cheaper.聽這個產品是新的；相反地，舊款比較便宜。
+Many people like it. For instance, my sister buys it every week.聽很多人喜歡它，例如我姊姊每週都買。
+In other words, we need more time.聽換句話說，我們需要更多時間。
+小提醒：選句子時，先看前一句和後一句的關係，再看代名詞指的是誰。
+小測（5 題，含 2 題聽力）
+1. 「in contrast」是什麼意思？
+相反地
+目標
+感謝
+記錄
+2. 哪一個字的意思是「儘管如此」？
+specifically
+nonetheless
+accordingly
+as a result
+3. 填空：Many people like it. _____, my sister buys it every week.（很多人喜歡它，例如我姊姊每週都買。）
+For instance
+Nonetheless
+In contrast
+Specifically
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+accordingly
+for instance
+specifically
+as a result
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這個產品是新的；相反地，舊款比較便宜。
+很多人喜歡它，例如我姊姊每週都買。
+換句話說，我們需要更多時間。
+供應商星期一會送貨。
+對答案
+我完成這堂了
+第 92 堂Part 7 雙篇閱讀：交叉比對已完成
+這堂學會：會在兩篇文章裡找到對應的資訊。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+cross-reference聽交叉參照
+refer to聽提到
+indicate聽指出
+suggest聽顯示或建議
+imply聽暗示
+state聽陳述
+related聽相關的
+correspond聽相符
+例句
+The email refers to the attached schedule.聽電子郵件提到了附件的時程表。
+The data indicates a rise in sales.聽數據顯示銷售量上升。
+The two documents correspond with each other.聽兩份文件互相吻合。
+小提醒：雙篇題常問「兩份文件合起來才能回答」。先看題目，再回兩篇找關鍵字。
+小測（5 題，含 2 題聽力）
+1. 「imply」是什麼意思？
+暗示
+天氣
+登機證
+取決於
+2. 哪一個字的意思是「交叉參照」？
+refer to
+cross-reference
+correspond
+imply
+3. 填空：The two documents _____ with each other.（兩份文件互相吻合。）
+refer to
+indicate
+suggest
+correspond
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+imply
+correspond
+indicate
+cross-reference
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+電子郵件提到了附件的時程表。
+兩份文件互相吻合。
+數據顯示銷售量上升。
+聽力練習很重要。
+對答案
+我完成這堂了
+第 93 堂Part 7 同義詞題已完成
+這堂學會：會回答「這個字的意思最接近哪個」。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+closest in meaning聽意思最接近
+assist聽協助
+acquire聽取得
+maintain聽維持
+demonstrate聽展示
+anticipate聽預期
+enhance聽提升
+commence聽開始
+例句
+The firm will acquire a new office.聽公司將取得一間新辦公室。
+We anticipate strong demand.聽我們預期需求強勁。
+The class will commence next week.聽課程下週開始。
+小提醒：不要直接選字典第一個意思，要代回原句，看句子通不通。
+小測（5 題，含 2 題聽力）
+1. 「commence」是什麼意思？
+開始
+因此
+提升
+刺激的
+2. 哪一個字的意思是「維持」？
+commence
+maintain
+closest in meaning
+assist
+3. 填空：The firm will _____ a new office.（公司將取得一間新辦公室。）
+acquire
+maintain
+demonstrate
+closest in meaning
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+enhance
+anticipate
+closest in meaning
+commence
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+指稱在前一行很清楚。
+公司將取得一間新辦公室。
+我們預期需求強勁。
+課程下週開始。
+對答案
+我完成這堂了
+第 94 堂Part 7 句子插入題已完成
+這堂學會：會判斷新句子放哪一格最通順。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+insert聽插入
+position聽位置
+sentence聽句子
+following聽接下來的
+previous聽先前的
+logical聽合邏輯的
+reference聽指稱
+transition聽轉折
+例句
+In which position does the sentence belong?聽這個句子屬於哪個位置？
+The next sentence gives more details.聽下一句提供更多細節。
+The reference is clear in the previous line.聽指稱在前一行很清楚。
+小提醒：插入題要看代名詞和連接詞：句子開頭是 However 或 This，前面一定有它要接的內容。
+小測（5 題，含 2 題聽力）
+1. 「sentence」是什麼意思？
+費用
+句子
+升級
+登機證
+2. 哪一個字的意思是「指稱」？
+insert
+reference
+logical
+transition
+3. 填空：The next _____ gives more details.（下一句提供更多細節。）
+insert
+previous
+sentence
+position
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+insert
+reference
+following
+previous
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+指稱在前一行很清楚。
+公司五月會推出新產品。
+下一句提供更多細節。
+這個句子屬於哪個位置？
+對答案
+我完成這堂了
+第 95 堂Part 3 說話者意圖題已完成
+這堂學會：會聽出對方話裡的意思。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+imply聽暗示
+hesitate聽猶豫
+concerned聽擔心的
+reluctant聽不情願的
+assure聽向…保證
+apologize聽道歉
+reassure聽使安心
+appreciate聽感謝
+例句
+She apologized for the delay.聽她為延誤道歉。
+He seems concerned about the cost.聽他似乎擔心費用。
+We appreciate your patience.聽感謝您的耐心。
+小提醒：題目問「說這句話是什麼意思」，答案常是話外之音，不是字面意思。
+小測（5 題，含 2 題聽力）
+1. 「apologize」是什麼意思？
+道歉
+一…就
+修理
+原則
+2. 哪一個字的意思是「猶豫」？
+reluctant
+apologize
+appreciate
+hesitate
+3. 填空：We _____ your patience.（感謝您的耐心。）
+appreciate
+reassure
+concerned
+imply
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+assure
+apologize
+reluctant
+concerned
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+很多人喜歡它，例如我姊姊每週都買。
+她為延誤道歉。
+感謝您的耐心。
+他似乎擔心費用。
+對答案
+我完成這堂了
+第 96 堂Part 3 與 Part 4 預測題型已完成
+這堂學會：會在聽之前先預測答案的方向。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+skim聽快速瀏覽
+predict聽預測
+keyword聽關鍵字
+distractor聽干擾選項
+paraphrase聽換句話說
+transition聽轉換
+speaker聽說話者
+purpose聽目的
+例句
+Skim the questions first.聽先快速瀏覽題目。
+Watch out for the distractor.聽小心干擾選項。
+What is the purpose of the call?聽這通電話的目的是什麼？
+小提醒：播放前後都有短暫的空檔，把握空檔先瞄題目和選項，預測會聽到什麼詞。
+小測（5 題，含 2 題聽力）
+1. 「skim」是什麼意思？
+指稱
+流利的
+向…保證
+快速瀏覽
+2. 哪一個字的意思是「換句話說」？
+transition
+purpose
+speaker
+paraphrase
+3. 填空：_____ the questions first.（先快速瀏覽題目。）
+Transition
+Distractor
+Skim
+Predict
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+keyword
+speaker
+purpose
+paraphrase
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+這通電話的目的是什麼？
+先快速瀏覽題目。
+小心干擾選項。
+我對這份工作有興趣。
+對答案
+我完成這堂了
+第 97 堂Part 2 聽力陷阱已完成
+這堂學會：會避開相似音與重複字陷阱。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+weather聽天氣
+whether聽是否
+its聽它的
+it's聽它是
+hear聽聽見
+here聽這裡
+write聽寫
+right聽對的
+例句
+I don't know whether he will come.聽我不知道他會不會來。
+We can hear the music from here.聽我們在這裡聽得到音樂。
+The weather is nice today.聽今天天氣很好。
+小提醒：常見的應考建議：選項如果跟問句用同一個字，要特別小心是不是陷阱；聽到相似發音的字也要小心。
+小測（5 題，含 2 題聽力）
+1. 「it's」是什麼意思？
+它是
+利潤
+兩者皆非
+預期
+2. 哪一個字的意思是「對的」？
+whether
+right
+write
+here
+3. 填空：We can _____ the music from here.（我們在這裡聽得到音樂。）
+whether
+weather
+hear
+it's
+4. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+今天天氣很好。
+他負責預算。
+我們在這裡聽得到音樂。
+我不知道他會不會來。
+對答案
+我完成這堂了
+第 98 堂時間分配與作答策略已完成
+這堂學會：會規劃整份考卷的時間。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+strategy聽策略
+accuracy聽準確度
+review聽複習
+guess聽猜
+skip聽跳過
+pace聽步調
+focus聽專注
+limit聽限制
+例句
+Do not spend too much time on one question.聽不要在一題花太多時間。
+It is better to guess than leave it blank.聽猜一個答案比空白好。
+Keep a steady pace.聽保持穩定的步調。
+小提醒：常見建議：Part 5 和 6 加起來控制在 20 分鐘內，留足時間給 Part 7。（這是常見做法，不是官方規定）
+小測（5 題，含 2 題聽力）
+1. 「focus」是什麼意思？
+專注
+目標
+句子
+向…保證
+2. 哪一個字的意思是「複習」？
+limit
+review
+accuracy
+guess
+3. 填空：Keep a steady _____.（保持穩定的步調。）
+pace
+guess
+strategy
+limit
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+skip
+review
+accuracy
+strategy
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+保持穩定的步調。
+他付出相當大的努力。
+猜一個答案比空白好。
+不要在一題花太多時間。
+對答案
+我完成這堂了
+第 99 堂錯題本與複習法已完成
+這堂學會：會用錯題本把弱點變成分數。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+mistake聽錯誤
+weakness聽弱點
+improve聽進步
+record聽記錄
+practice聽練習
+repeat聽重複
+progress聽進展
+goal聽目標
+例句
+Write down your mistakes.聽把你的錯誤寫下來。
+Practice a little every day.聽每天練習一點。
+Set a clear goal.聽設定一個清楚的目標。
+小提醒：錯題本只記三件事：題目、為什麼錯、下次怎麼避免。一週回頭看一次。
+小測（5 題，含 2 題聽力）
+1. 「weakness」是什麼意思？
+令人驚訝的
+弱點
+體貼的
+插入
+2. 哪一個字的意思是「重複」？
+repeat
+goal
+improve
+mistake
+3. 填空：Write down your _____.（把你的錯誤寫下來。）
+mistaken
+mistaking
+mistakes
+mistake
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+progress
+weakness
+goal
+record
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+很多人喜歡它，例如我姊姊每週都買。
+設定一個清楚的目標。
+每天練習一點。
+把你的錯誤寫下來。
+對答案
+我完成這堂了
+第 100 堂結業：多益 800 的下一步已完成
+這堂學會：回顧整套課程，規劃自己的練習計畫。
+3 分鐘看單字，按「聽」跟著唸
+3 分鐘看例句，大聲唸兩次
+3 分鐘做小測
+1 分鐘不看畫面，說出三個今天學到的字
+單字（8 個）
+certificate聽證書
+vocabulary聽字彙
+grammar聽文法
+listening聽聽力
+fluent聽流利的
+confident聽有自信的
+achieve聽達成
+continue聽繼續
+例句
+I want to achieve a higher score.聽我想達到更高的分數。
+Listening practice is important.聽聽力練習很重要。
+Keep studying and stay confident.聽繼續學習，並保持自信。
+小提醒：這套課程幫你建立基礎與題型感。要到 800，還需要大量的聽力、閱讀與整份模擬考練習。
+小測（5 題，含 2 題聽力）
+1. 「fluent」是什麼意思？
+流利的
+安裝
+達成
+繼續
+2. 哪一個字的意思是「證書」？
+confident
+grammar
+certificate
+continue
+3. 填空：_____ practice is important.（聽力練習很重要。）
+Grammar
+Listening
+Certificate
+Fluent
+4. 聽一聽，你聽到哪一個字？
+播放可以多聽幾次
+vocabulary
+grammar
+continue
+confident
+5. 聽一聽，這句話是什麼意思？
+播放可以多聽幾次
+我想達到更高的分數。
+繼續學習，並保持自信。
+先快速瀏覽題目。
+聽力練習很重要。
+對答案
+我完成這堂了
+← 第 4 級
+課程總覽 →
 
 ---
 
@@ -953,6 +6136,9 @@ https://www.hunglun.com/tools/training
 用最簡單的應用程式，了解 Vibe Coding 的邏輯
 歷次研習講義
 現場講課用的是短連結，方便直接唸給學員：新的在最上面。
+2026/11/12
+敏惠護理專科學校 AI 研習
+hunglun.com/go/1112
 2026/11/10
 敏惠護理專科學校 資安通識
 hunglun.com/go/1110
