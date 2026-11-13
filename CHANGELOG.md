@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.27（2026-11-13）
+
+服務項目頁（`services.html`）四個分類標題上方各加一張白底單色等角線稿（`assets/images/cat-google|dev|hardware|enterprise.webp`），解決標籤卡拿掉圖示後畫面太單調的問題。做法對標 Linear、Notion：圖放在區塊層級當主視覺，不放進每張卡，線條只用站上深藍 `#1E3A5F`，風格四張一致。樣式 `.cat-fig` 淺色用 `mix-blend-mode: multiply` 讓白底融進背景，深色模式反相轉成淺藍線條。圖由 Gemini 帳號 A 生成，已逐張看過、沒有浮水印。`style.css` 版號升到 138。
+
 ## v1.39.26（2026-11-13）
 
 新增三篇知識文章，內容都取自 Google 官方說明頁：親師座談用 Google 日曆預約時間表（`calendar-appointment-schedule`）、Classroom 家長電子郵件摘要（`classroom-guardian-summary`）、用 Google 協作平台做班級網站（`google-sites-class-website`）。官方沒寫的做法一律標明是我們的實務建議。登記：sitemap、教學專區索引、主題頁 `topic/web`（16 變 18）與 `topic/classroom`（10 變 11）、`llms.txt`、llms-full、搜尋索引、專屬 og 圖。搜尋索引與 llms-full 順便補上 v1.39.25 英文一堂一頁的網址（上一版提交時被我的暫存版蓋掉）。
