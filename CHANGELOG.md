@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.34（2026-11-16）
+
+Gemini 認證的說法改正：不是另開備考研習，而是「研習最後一堂課協助學員現場考取 Gemini 認證（教育家、教職員、大學生）」。更新 `/google`、`/about`、`/services`、`/services/google-workspace` 與結構化資料，取代 v1.39.33 的「備考研習」。
+
 ## v1.39.33（2026-11-16）
 
 「Google 認證培訓」的說明補上 Google 官方 Gemini 認證（教育家、教職員、大學生，官方免費報名），寫成「Gemini 認證備考研習」：`/google` 方案介紹清單（文字連到 `/knowledge/gemini-certification`）與該頁結構化資料、`/about` 講師說明、`/services` 與 `/services/google-workspace` 的說明句。資料依 Google 官方 Gemini Certifications FAQ（2026-11-16 核對）。
