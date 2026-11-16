@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.28（2026-11-16）
+
+首頁導覽輪播的「服務項目」卡片標題改成「解決方案」（`index.html`），其他頁面不動。
+
 ## v1.39.27（2026-11-13）
 
 服務項目頁（`services.html`）四個分類標題上方各加一張白底單色等角線稿（`assets/images/cat-google|dev|hardware|enterprise.webp`），解決標籤卡拿掉圖示後畫面太單調的問題。做法對標 Linear、Notion：圖放在區塊層級當主視覺，不放進每張卡，線條只用站上深藍 `#1E3A5F`，風格四張一致。樣式 `.cat-fig` 淺色用 `mix-blend-mode: multiply` 讓白底融進背景，深色模式反相轉成淺藍線條。圖由 Gemini 帳號 A 生成，已逐張看過、沒有浮水印。`style.css` 版號升到 138。
