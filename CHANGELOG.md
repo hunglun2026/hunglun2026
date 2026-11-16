@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.40.6（2026-11-16）
+
+修正 v1.40.5 的標題小瑕疵：`chromebook`、`gemini`、`wordwall` 三篇標題裡原本多出一個「｜」副標（加上品牌後變兩個），改成逗號或把「2026」放前面，並讓「Wordwall 是什麼？」維持在標題開頭（搜尋比對最重要的位置）。
+
 ## v1.40.5（2026-11-16）
 
 為提升點閱率，改 7 篇「排名在前 4、曝光不低、點閱率偏低」文章的 title 與 description（Steve 指示現在就改，不等 11/23 到 12/07 觀察期）：`chromebook-drawbacks`、`chromebook`、`gemini`、`thinglink`、`wordwall`、`edpuzzle`、`school-account-after-graduation`。作法是標題從單純「是什麼？怎麼用」改成帶具體資訊（數字、版本限制、結論、年份）。順手修 `chromebook` 的 `og:title` 與 `<title>` 不一致（原本一個寫 ASUS 機型比較、一個寫 Chromebook 是什麼）。改前基準（GSC 近 3 個月，2026-11-16）：chromebook 曝光 2,207、點閱率 0.6%、排名 4.8；chromebook 缺點 445、4.0%、排名 3.0；thinglink 884、3.8%、排名 3.1；wordwall是什麼 274、2.2%、排名 3.0；edpuzzle 1,446、0.3%、排名 3.9；學校帳號畢業後 265、2.6%、排名 4.3；gemini 教育版 701、6.8%、排名 4.2。
