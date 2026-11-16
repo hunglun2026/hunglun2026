@@ -715,3 +715,8 @@ a.card:hover,a.card:hover *{text-decoration: none}
 :is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ul,:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ol{padding: 16px 16px 16px 34px}
 }
 :root[data-theme="dark"]{--g-blue: #8AB4F8;--g-red: #F28B82;--g-yellow: #FDD663;--g-green: #81C995}
+
+/* 舊版型文章：每個章節各放在自己的 section／wrap 裡，大標題是 h2.section-title，補上同樣的色條（v1.39.39） */
+main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title:not(.kn-sub-title){position: relative;margin: 56px 0 20px;padding: 6px 0 6px 18px;font-size: 1.65rem;font-weight: 600;line-height: 1.4;text-align: left;border-left: 6px solid var(--g-blue);border-radius: 2px}
+main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title + :is(p,.section-sub){line-height: 1.95}
+@media (max-width: 640px){main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title:not(.kn-sub-title){margin: 44px 0 16px;padding-left: 14px;font-size: 1.4rem}}
