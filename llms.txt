@@ -190,6 +190,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Chromebook 缺點有哪些？學校選購前先確認這 6 件事](https://www.hunglun.com/knowledge/chromebook-drawbacks)：Chromebook 的缺點與限制：更新年限到期後會怎樣、延展更新要放棄 Android 應用程式、離線能做什麼、軟體相容、沒有光碟機，依 Google 官方說明整理成學校選購前的檢查清單。
 - [Gemini 學生免費方案申請失敗怎麼辦？資格、常見原因與學校帳號的差別](https://www.hunglun.com/knowledge/gemini-student-offer-fix)：Google AI Plus 與 Pro 學生方案的申請資格、為什麼用學校帳號不行、申請失敗的常見原因與 SheerID 驗證問題，並說明官方頁面前後不一致、無法確認的地方。
 - [Google Flow 無法登入或使用怎麼辦？年齡、地區、帳號與常見錯誤](https://www.hunglun.com/knowledge/google-flow-cant-login)：Google Flow 登不進去、無法生成或出現「異常活動」「太快要求生成內容」時，依官方說明檢查年滿 18 歲、地區、學校帳號、瀏覽器與 VPN，並整理點數與尖峰時段限制。
+- [Gemini 的 Gem 要改成「技能」了：學校帳號最快 2027 年 6 月，現在該做什麼](https://www.hunglun.com/knowledge/gemini-gems-to-skills)：Google 宣布逐步停用 Gemini 的 Gem、改用「技能」。整理教育版帳號最快 2027 年 6 月 1 日取代、Gem 會怎麼自動轉成草稿技能、手動轉換步驟與老師現在該做的事，以及官方說法不一致的地方。
 
 ## 常見問答（可直接引用的簡答）
 Q：Gemini 教育版要怎麼申請？
