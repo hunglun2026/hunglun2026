@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.35（2026-11-16）
+
+新增 7 篇 Google 教學文章，選題依據台灣 Google 搜尋建議，內容逐項對照 Google 官方說明頁（2026-11-16 核對），官方沒寫或前後不一致的地方文中標「無法確認」：Classroom 作業無法上傳或繳交（`classroom-submit-problems`）、Google 表單報名表設定（`google-forms-registration`）、Gemini 做簡報的兩種做法與中文限制（`gemini-make-slides`）、Gemini 認證報名到領證流程（`gemini-certification-process`）、Chromebook 缺點與選購前確認事項（`chromebook-drawbacks`）、Gemini 學生方案申請失敗處理（`gemini-student-offer-fix`）、Google Flow 無法登入或使用（`google-flow-cant-login`）。已登記教學資源索引、主題頁、sitemap、llms、搜尋索引與分享圖。新增 `sitemap/new-article.py`（依規格檔產生文章並登記，規格放 `sitemap/articles/`）。
+
 ## v1.39.34（2026-11-16）
 
 Gemini 認證的說法改正：不是另開備考研習，而是「研習最後一堂課協助學員現場考取 Gemini 認證（教育家、教職員、大學生）」。更新 `/google`、`/about`、`/services`、`/services/google-workspace` 與結構化資料，取代 v1.39.33 的「備考研習」。

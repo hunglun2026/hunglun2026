@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head><script>try{if(!sessionStorage.getItem("plseen")){sessionStorage.setItem("plseen","1");document.documentElement.classList.add("pl-on")}}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
+<link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=95" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=139">
+<title>Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限｜鴻綸科技</title>
+<meta name="description" content="用 Google 表單做報名表與問卷：建立步驟、限制每人只能回覆一次、收集電子郵件、設定截止日與回覆數上限自動關閉，以及 2026 年 9 月起的資料與回覆限制。">
+<link rel="canonical" href="https://www.hunglun.com/knowledge/google-forms-registration">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限｜鴻綸科技">
+<meta property="og:description" content="建立、發布、限制回覆次數、自動關閉與回覆上限，一次看完報名表的設定重點。">
+<meta property="og:url" content="https://www.hunglun.com/knowledge/google-forms-registration">
+<meta property="og:image" content="https://www.hunglun.com/assets/og/knowledge-google-forms-registration.png?v=5">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限｜鴻綸科技">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限｜鴻綸科技">
+<meta name="twitter:description" content="建立、發布、限制回覆次數、自動關閉與回覆上限，一次看完報名表的設定重點。">
+<meta name="twitter:image" content="https://www.hunglun.com/assets/og/knowledge-google-forms-registration.png?v=5">
+<meta name="twitter:image:alt" content="Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限｜鴻綸科技">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.hunglun.com/"},
+    {"@type": "ListItem", "position": 2, "name": "教學資源", "item": "https://www.hunglun.com/knowledge"},
+    {"@type": "ListItem", "position": 3, "name": "數位學習軟體與網站", "item": "https://www.hunglun.com/knowledge/topic/web"},
+    {"@type": "ListItem", "position": 4, "name": "Google 表單報名表設定", "item": "https://www.hunglun.com/knowledge/google-forms-registration"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Google 表單可以限制每個人只填一次嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。在表單頂端「設定」，點「回覆」旁的向下箭頭，開啟「僅限回覆 1 次」。作答者必須登入 Google 帳戶才能填寫；要知道是誰填的，還要開啟「收集電子郵件地址」。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Google 表單可以設定幾月幾日自動關閉嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。2026 年 1 月起，表單擁有者與編輯者可以在發布後，於「接受回應」下方設定截止日期時間，或設定達到指定回覆數後自動關閉。這項功能預設是關閉的。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "設了人數上限，為什麼報名人數還是超過？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官方說明，如果多人同時送出回覆，系統會忽略回覆數量限制並接受所有同時提交的內容，所以實際人數可能略多於上限。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Google 表單有回覆數量上限嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "依官方說明，自 2026 年 9 月起，每份表單總儲存空間上限 1 GB（不含使用者上傳的檔案），最多可接收 50 萬則回覆。一般校內活動與班級問卷很少達到。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "沒有 Google 帳戶的家長可以填表單嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一旦開了「僅限回覆 1 次」，作答者必須登入 Google 帳戶。沒開的話，能不能填要看發布時的「一般存取權」設定與學校的共用政策，官方頁面沒有逐一列出各種情況，建議發布前用另一個帳戶實際測試。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限",
+  "description": "用 Google 表單做報名表與問卷：建立步驟、限制每人只能回覆一次、收集電子郵件、設定截止日與回覆數上限自動關閉，以及 2026 年 9 月起的資料與回覆限制。",
+  "image": "https://www.hunglun.com/assets/og/knowledge-google-forms-registration.png",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "author": {
+    "@type": "Person",
+    "name": "鴻綸科技 Steve",
+    "jobTitle": "Google 認證講師",
+    "worksFor": {
+      "@id": "https://www.hunglun.com/#organization"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.hunglun.com/#organization",
+    "name": "鴻綸科技股份有限公司",
+    "url": "https://www.hunglun.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.hunglun.com/assets/hunglun-logo-dark.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.hunglun.com/knowledge/google-forms-registration"
+  },
+  "inLanguage": "zh-Hant-TW",
+  "isAccessibleForFree": true
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/"><span class="brand-logo" role="img" aria-label="鴻綸科技 Hunglun Technology"></span></a>
+    <div class="header-visit-counter" title="累計瀏覽人次">👀 <span id="visitCount">--</span></div>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+            <nav class="main-nav" aria-label="主選單">
+      <a href="/about">關於我們</a>
+      <div class="nav-group">
+        <button type="button" class="nav-group-label" aria-haspopup="true" aria-expanded="false">解決方案</button>
+        <div class="nav-sub">
+          <a href="/google">Google 解決方案</a>
+          <a href="/services">教育解決方案</a>
+          <a href="/enterprise">企業解決方案</a>
+        </div>
+      </div>
+      <a href="/software">數位學習軟體導入</a>
+      <a href="/knowledge" class="active">教學資源</a>
+      <a href="/insights">AI 最新消息</a>
+      <a href="/tools/games">學習專區</a>
+      <a href="/tools" class="mobile-tools-link">資源分享</a>
+      <a href="/contact" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <div class="nav-tools">
+        <a href="/tools" class="nav-tools-trigger">資源分享</a>
+      </div>
+      <a href="/contact" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<div class="page-head">
+  <div class="wrap">
+    <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/knowledge">教學資源</a> ／ <a href="/knowledge/topic/web">數位學習軟體與網站</a> ／ Google 表單報名表設定</nav>
+    <h1>Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限</h1>
+    <p>校內活動報名、家長意願調查、研習簽到，最常用的工具就是 Google 表單。這篇照官方說明整理做法，重點放在老師最常問的三件事：怎麼限制每人只能填一次、怎麼讓表單自動關閉、回覆太多會怎樣。</p>
+    <p class="kb-audience" style="margin-top:14px;font-size:0.9rem;color:var(--muted);"><strong>這篇適合：</strong>要辦報名、問卷或簽到的老師與行政人員。</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap prose">
+    <div class="kb-quick" data-quick-answer>
+      <h2>重點先看</h2>
+      <ul>
+        <li><strong>怎麼限制每人只能回覆一次？</strong>在表單頂端「設定」，點「回覆」旁的向下箭頭，開啟「僅限回覆 1 次」。作答者必須登入自己的 Google 帳戶才能填寫。</li>
+        <li><strong>表單可以自動關閉嗎？</strong>可以。2026 年 1 月起，表單擁有者與編輯者可以設定截止日期時間，或設定達到指定回覆數就自動關閉。預設是關閉的，要在發布後自己開啟。</li>
+        <li><strong>報名人數有上限怎麼辦？</strong>在「接受回應」下方選「設定截止日或回覆限制」，選「達到指定回覆數之後」並輸入人數。官方提醒：如果多人同時送出，系統會忽略數量限制，全部接受。</li>
+        <li><strong>表單回覆太多會有問題嗎？</strong>官方說明自 2026 年 9 月起，每份表單總儲存空間上限 1 GB（不含使用者上傳的檔案），最多接收 50 萬則回覆。一般班級或校內活動不會碰到。</li>
+      </ul>
+    </div>
+
+    <h2>一、建立與發布</h2>
+    <p>依官方「如何使用 Google 表單」，建立方式有三種：</p>
+    <ul>
+      <li>到 forms.google.com，點「空白表單」。</li>
+      <li>在 Google 試算表選「工具」，點「建立新表單」，這樣回覆會自動存進同一份試算表的新工作表。</li>
+      <li>在 Google 雲端硬碟點「新增」，選「Google 表單」。</li>
+    </ul>
+    <p>表單建好之後，<strong>必須先發布，作答者才能存取</strong>。點右上角「發布」，要指定誰能回覆就點「管理」；也可以在「一般存取權」下方開給「任何知道連結的使用者」。發布後右上角會顯示「已發布」。</p>
+    <p>取得連結的方式：按「預覽」再「複製作答者連結」，或發布後按「已發布」再「複製作答者連結」。發布後還可以勾選「縮短網址」複製短連結，貼到 LINE 或公告很方便。</p>
+
+    <h2>二、限制每人只能回覆一次</h2>
+    <p>報名表最怕同一個人重複填。官方做法：</p>
+    <ol>
+      <li>開啟表單，點頂端「設定」。</li>
+      <li>點「回覆」旁的向下箭頭。</li>
+      <li>開啟「僅限回覆 1 次」。</li>
+    </ol>
+    <p>官方特別提醒：<strong>使用者必須登入自己的 Google 帳戶才能填寫</strong>。而且除非你同時開啟「收集電子郵件地址」，否則系統不會記錄作答者的使用者名稱。也就是說，只開「僅限回覆 1 次」，你知道有人填了，但不一定知道是誰。</p>
+
+    <h2>三、收集電子郵件與回條</h2>
+    <p>在「設定」的「回覆」底下，「收集電子郵件地址」有兩種：</p>
+    <ul>
+      <li><strong>已驗證：</strong>系統收集驗證過的 Google 帳戶電子郵件，作答者會在每一頁看到確認訊息，知道自己的帳戶資訊會隨回覆送出。</li>
+      <li><strong>由作答者手動輸入：</strong>讓作答者自己輸入電子郵件地址。官方沒有說明這個選項能否與「僅限回覆 1 次」並用，要用之前請自己實際測試。</li>
+    </ul>
+    <p>開啟收集電子郵件之後，可以在「傳送表單回覆副本給作答者」選「要求即傳送」或「一律」，作答者就會收到回條。官方提到，垃圾郵件篩選器可能讓作答者沒收到回條。</p>
+
+    <h2>四、自動關閉：截止日與回覆數上限</h2>
+    <p>以前表單要手動關閉。依 Google Workspace 更新公告，2026 年 1 月 12 日起可以自動關閉，所有 Workspace 客戶、個人訂閱與個人 Google 帳戶都能用，管理員沒有相關控制項。設定方式（表單要先發布）：</p>
+    <ol>
+      <li>點右上角「已發布」。</li>
+      <li>在「接受回應」下方點「設定截止日或回覆限制」。</li>
+      <li>要設截止日：在「指定日期」點「選擇日期和時間」，選好按「確定」。</li>
+      <li>要設人數上限：選「達到指定回覆數之後」，輸入上限。如果表單已經有回覆，輸入的數字必須大於目前的回覆數。</li>
+      <li>按「儲存」。</li>
+    </ol>
+    <p>三個細節：</p>
+    <ul>
+      <li>如果多人同時送出，系統會忽略數量限制，<strong>全部接受</strong>，所以名額很緊的活動，實際人數可能比上限多幾位。</li>
+      <li>表單關閉後，作答者會看到「這份表單已不再接受回覆」，你可以自訂這則訊息，例如「報名已額滿，謝謝」。</li>
+      <li>要手動停止隨時可以：點「已發布」，關閉「接受回應」。未發布的表單無法接受回覆。</li>
+    </ul>
+
+    <h2>五、回覆太多會怎樣：2026 年 9 月起的新限制</h2>
+    <p>官方回覆管理頁寫明，自 2026 年 9 月起：</p>
+    <ul>
+      <li><strong>資料上限：</strong>每份表單總儲存空間 1 GB，計算範圍是表單檔案與回覆資料，不含使用者上傳的檔案。</li>
+      <li><strong>回覆上限：</strong>每份表單最多接收 50 萬則回覆。要繼續收，擁有者可以先下載並刪除現有回覆；官方建議先停用回覆功能，再下載與刪除，以免刪掉下載之後才收到的新回覆。</li>
+    </ul>
+    <p>另外官方列了幾個「量大時會失靈」的門檻：回覆超過 5 萬則可能找不到回覆摘要、超過 10 萬則可能無法與試算表同步、超過 1 萬則可能無法在表單裡看個別回覆。校內報名與問卷很少到這個規模，大規模的全校調查要先把這些門檻放在心裡，並記得下載 CSV 備份。</p>
+
+    <h2>六、報名表的實務檢查清單</h2>
+    <p>以下是我們整理的實務建議，不是官方規定：</p>
+    <ul>
+      <li>發布前先用「預覽」自己填一次，確認必填題與順序。</li>
+      <li>對象是校內師生：開「僅限回覆 1 次」並收集已驗證的電子郵件，之後對名單最方便。</li>
+      <li>對象含家長或校外人士：開「僅限回覆 1 次」會要求登入 Google 帳戶，家長不一定有，這種情況改用手動輸入電子郵件，並在題目內加一題確認身分。</li>
+      <li>有名額的活動：同時設截止日與人數上限，並在表單說明寫清楚「額滿後以候補名單處理」。</li>
+      <li>活動結束後關閉「接受回應」，把回覆下載成 CSV 或存成試算表留底。</li>
+    </ul>
+
+
+    <p>官方原文：<a href="https://support.google.com/docs/answer/6281888?hl=zh-Hant" target="_blank" rel="noopener">Google 表單說明：如何使用 Google 表單</a>、<a href="https://support.google.com/docs/answer/2839588?hl=zh-Hant" target="_blank" rel="noopener">發布表單並與作答者共用</a>、<a href="https://support.google.com/docs/answer/139706?hl=zh-Hant" target="_blank" rel="noopener">查看及管理表單回覆</a>、<a href="https://workspaceupdates.googleblog.com/2026/01/forms-stop-collecting-responses.html" target="_blank" rel="noopener">Google Workspace 更新：自動停止接受回覆</a>。介面與功能會隨 Google 更新調整，實際以畫面與官方說明為準。</p>
+    <div class="share-box">
+      <p class="share-box-lead">💡 這篇對其他老師也有幫助嗎？</p>
+      <p class="share-box-text">歡迎複製下面這段文字，分享到貴校的教師群組：</p>
+      <button type="button" class="fc-copy" data-copy="夥伴們！這篇《Google 表單報名表設定》整理得很清楚，推薦大家看一下：https://www.hunglun.com/knowledge/google-forms-registration" data-label="複製分享文字">複製分享文字</button>
+    </div>
+
+    <h2>常見問題</h2>
+    <details class="faq-item">
+      <summary>Google 表單可以限制每個人只填一次嗎？</summary>
+      <div class="faq-a">可以。在表單頂端「設定」，點「回覆」旁的向下箭頭，開啟「僅限回覆 1 次」。作答者必須登入 Google 帳戶才能填寫；要知道是誰填的，還要開啟「收集電子郵件地址」。</div>
+    </details>
+    <details class="faq-item">
+      <summary>Google 表單可以設定幾月幾日自動關閉嗎？</summary>
+      <div class="faq-a">可以。2026 年 1 月起，表單擁有者與編輯者可以在發布後，於「接受回應」下方設定截止日期時間，或設定達到指定回覆數後自動關閉。這項功能預設是關閉的。</div>
+    </details>
+    <details class="faq-item">
+      <summary>設了人數上限，為什麼報名人數還是超過？</summary>
+      <div class="faq-a">官方說明，如果多人同時送出回覆，系統會忽略回覆數量限制並接受所有同時提交的內容，所以實際人數可能略多於上限。</div>
+    </details>
+    <details class="faq-item">
+      <summary>Google 表單有回覆數量上限嗎？</summary>
+      <div class="faq-a">依官方說明，自 2026 年 9 月起，每份表單總儲存空間上限 1 GB（不含使用者上傳的檔案），最多可接收 50 萬則回覆。一般校內活動與班級問卷很少達到。</div>
+    </details>
+    <details class="faq-item">
+      <summary>沒有 Google 帳戶的家長可以填表單嗎？</summary>
+      <div class="faq-a">一旦開了「僅限回覆 1 次」，作答者必須登入 Google 帳戶。沒開的話，能不能填要看發布時的「一般存取權」設定與學校的共用政策，官方頁面沒有逐一列出各種情況，建議發布前用另一個帳戶實際測試。</div>
+    </details>
+
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-11-16">2026 年 11 月 16 日</time>（功能與限制以 Google 當期官方說明為準）</p>
+
+    <h2>延伸閱讀</h2>
+    <ul>
+      <li><a href="/knowledge/ai-forms-survey">AI 怎麼幫忙處理校內表單與問卷 →</a></li>
+      <li><a href="/knowledge/calendar-appointment-schedule">親師座談怎麼讓家長自己選時段 →</a></li>
+      <li><a href="/knowledge/data-inventory">學校導入雲端服務的個資盤點清單 →</a></li>
+      <li><a href="/knowledge">教學資源總覽 →</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:820px;">
+    <div class="svc-cta" data-hl-kb-cta>
+      <h2 style="margin-top:0;">學校想導入或需要教師研習？</h2>
+      <p>鴻綸科技是 Google for Education Professional Development Partner，可以依貴校現況安排教師研習與帳號規劃。</p>
+      <!--email_off--><a class="btn btn-primary" href="mailto:gfeh@hunglun.com?subject=%E8%A9%A2%E5%95%8FGoogle%E8%A1%A8%E5%96%AE%E8%88%87%E6%A0%A1%E5%8B%99%E6%B5%81%E7%A8%8B%E5%B0%8E%E5%85%A5&body=%EF%BC%88%E4%BE%86%E8%87%AA%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E5%AE%98%E7%B6%B2%E6%96%87%E7%AB%A0%EF%BC%9AGoogle%20%E8%A1%A8%E5%96%AE%E6%80%8E%E9%BA%BC%E5%81%9A%E5%A0%B1%E5%90%8D%E8%A1%A8%EF%BC%9F%E9%99%90%E5%88%B6%E6%AF%8F%E4%BA%BA%E4%B8%80%E6%AC%A1%E3%80%81%E8%87%AA%E5%8B%95%E9%97%9C%E9%96%89%E8%88%87%E5%9B%9E%E8%A6%86%E4%B8%8A%E9%99%90%EF%BC%89%0A">寄信詢問</a><!--/email_off-->
+      <a class="btn" href="tel:+88666371192">來電 06-6371192</a>
+      <a class="btn" href="/services/campus-training">看校園研習方案 →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <span class="footer-logo-img" role="img" aria-label="鴻綸科技"></span>
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul class="footer-nav">
+          <li><a href="/about">關於我們</a></li>
+          <li><a href="/google">Google 解決方案</a></li>
+          <li><a href="/services">教育解決方案</a></li>
+          <li><a href="/enterprise">企業解決方案</a></li>
+          <li><a href="/services#cases">成功案例</a></li>
+          <li><a href="/software">數位學習軟體導入</a></li>
+          <li><a href="/knowledge">教學資源</a></li>
+          <li><a href="/insights">AI 最新消息</a></li>
+          <li><a href="/tools/games">學習專區</a></li>
+          <li><a href="/tools">資源分享</a></li>
+          <li><a href="/faq">常見問題</a></li>
+          <li><a href="/privacy">隱私權政策</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>聯絡方式</h2>
+        <ul class="footer-contact">
+          <li><a href="tel:+88666371192"><span class="fc-key">電話</span><span class="fc-val">06-6371192<em>週一至週五 08:30–17:30</em></span></a></li>
+          <!--email_off--><li class="fc-has-copy"><a href="mailto:gfeh@hunglun.com"><span class="fc-key">信箱</span><span class="fc-val">gfeh@hunglun.com<em>傳真 06-6371112</em></span></a><button type="button" class="fc-copy" data-copy="gfeh@hunglun.com" data-label="複製信箱" aria-label="複製信箱地址 gfeh@hunglun.com">複製信箱</button></li><!--/email_off-->
+          <li class="fc-has-copy"><a href="https://lin.ee/zo6euCb" target="_blank" rel="noopener"><span class="fc-key">LINE</span><span class="fc-val">@gdm6961p<em>電腦版請在 LINE 搜尋 ID 加入</em></span></a><button type="button" class="fc-copy" data-copy="@gdm6961p" data-label="複製 ID" aria-label="複製 ID，LINE 官方帳號 @gdm6961p">複製 ID</button></li>
+          <li><a href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener"><span class="fc-key">粉絲頁</span><span class="fc-val">Facebook<em>鴻綸科技</em></span></a></li>
+          <li><a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" target="_blank" rel="noopener"><span class="fc-key">地址</span><span class="fc-val">台南市新營區綠川路10號<em>開啟 Google 地圖</em></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.39.35</span></div>  </div>
+</footer>
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://lin.ee/zo6euCb" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號 @gdm6961p" title="LINE 官方帳號（電腦版請搜尋 ID：@gdm6961p）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img width="160" height="160" src="/assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
+  <a class="fab-form" href="/contact#contactForm" aria-label="填寫線上詢問表單" title="填寫線上詢問表單"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=gfeh@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 gfeh@hunglun.com（開啟 Gmail）" title="寄信給 gfeh@hunglun.com"><img width="88" height="66" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></a>
+</div>
+
+
+<script src="/assets/main.js?v=35"></script>
+<script src="/assets/wordwrap.js?v=2"></script>
+</body>
+</html>

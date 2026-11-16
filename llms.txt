@@ -183,6 +183,13 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [用 Google 協作平台做班級網站：發布、限制與公開怎麼選](https://www.hunglun.com/knowledge/google-sites-class-website)：用 Google 協作平台（Sites）做班級或社團網站，發布步驟、共用權限「限制」與「公開」差在哪、搜尋引擎設定，以及學校放學生資料前要先想的事。
 - [Canva 教育版怎麼申請？老師資格、驗證步驟與失敗處理](https://www.hunglun.com/knowledge/canva-education-apply)：對符合資格的 K-12 在職教師免費；用學校信箱最快，沒有就上傳含姓名、學校名稱、教學職位的文件，官方說 48 小時內審核。
 - [Canva for Education 串 Google Classroom：從帳號信任到派作業](https://www.hunglun.com/knowledge/canva-classroom)：要通兩端。管理員端：在「應用程式 › 網頁與行動應用程式」加入 Canva、完成 SAML 單一登入設定（把 Google 的 SSO 網址、實體 ID、憑證貼進 Canva），在「使用者存取權」對全機構或特定機構單位/群組開啟，Canva 帳號 email 網域要對應學校主要 Google 網域；若限制第三方應用程式存取 Google 資料，要把 Canva 列入允許清單。老師端：在 Canva 設計裡選發布 › Google Classroom，第一次要「連結 Google Classroom」，再「指派到 Google Classroom」選課程與作業類型。學生端：從 Classroom 點 Canva 連結，Canva 自動建立各自的副本，完成後選「提交到 Google Classroom」，提交後鎖定只有老師看得到，可取消提交再改。未成年學生可能被第三方應用程式授權限制擋在同意畫面，全班派作業前先用測試帳號跑一次。Canva for Education 對符合資格的 K-12 在職教師免費、需通過教師身分驗證。
+- [Classroom 作業無法上傳或繳交怎麼辦？學生與老師的排除步驟](https://www.hunglun.com/knowledge/classroom-submit-problems)：Classroom 繳交按鈕按不下去、顯示「無法附加檔案」時，學生和老師各自可以試的方法，附官方列出的替代做法、遲交判定與取消繳交的規則。
+- [Google 表單怎麼做報名表？限制每人一次、自動關閉與回覆上限](https://www.hunglun.com/knowledge/google-forms-registration)：用 Google 表單做報名表與問卷：建立步驟、限制每人只能回覆一次、收集電子郵件、設定截止日與回覆數上限自動關閉，以及 2026 年 9 月起的資料與回覆限制。
+- [Gemini 做簡報可以編輯嗎？兩種做法、匯出與中文限制](https://www.hunglun.com/knowledge/gemini-make-slides)：用 Gemini 做簡報有兩條路：Gemini 應用程式的 Canvas 匯出到 Google 簡報，或在 Google 簡報側邊面板生成。整理能不能編輯、中文支援與匯出卡住時的檢查。
+- [Gemini 認證報名到領證書：進不去考試、收不到證書怎麼辦](https://www.hunglun.com/knowledge/gemini-certification-process)：Gemini 認證教育家、教職員、大學生三種認證的報名流程，加上官方 FAQ 列出的進不去考試、收不到證書、14 天與 2 小時期限、重考等待與管理員追蹤方式。
+- [Chromebook 缺點有哪些？學校選購前先確認這 6 件事](https://www.hunglun.com/knowledge/chromebook-drawbacks)：Chromebook 的缺點與限制：更新年限到期後會怎樣、延展更新要放棄 Android 應用程式、離線能做什麼、軟體相容、沒有光碟機，依 Google 官方說明整理成學校選購前的檢查清單。
+- [Gemini 學生免費方案申請失敗怎麼辦？資格、常見原因與學校帳號的差別](https://www.hunglun.com/knowledge/gemini-student-offer-fix)：Google AI Plus 與 Pro 學生方案的申請資格、為什麼用學校帳號不行、申請失敗的常見原因與 SheerID 驗證問題，並說明官方頁面前後不一致、無法確認的地方。
+- [Google Flow 無法登入或使用怎麼辦？年齡、地區、帳號與常見錯誤](https://www.hunglun.com/knowledge/google-flow-cant-login)：Google Flow 登不進去、無法生成或出現「異常活動」「太快要求生成內容」時，依官方說明檢查年滿 18 歲、地區、學校帳號、瀏覽器與 VPN，並整理點數與尖峰時段限制。
 
 ## 常見問答（可直接引用的簡答）
 Q：Gemini 教育版要怎麼申請？

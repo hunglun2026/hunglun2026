@@ -138,12 +138,12 @@
   <url><loc>https://www.hunglun.com/privacy</loc><lastmod>2026-10-29</lastmod><priority>0.3</priority></url>
   <url><loc>https://www.hunglun.com/faq</loc><lastmod>2026-10-25</lastmod><priority>0.7</priority></url>
 <url><loc>https://www.hunglun.com/knowledge</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/google-ai</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/gemini</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/web</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/classroom</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/hardware</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.hunglun.com/knowledge/topic/compliance</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/google-ai</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/gemini</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/web</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/classroom</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/hardware</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.hunglun.com/knowledge/topic/compliance</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/insights</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/insights/google-pics</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/knowledge/ai-grading-tools</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
@@ -296,4 +296,11 @@
   <url><loc>https://www.hunglun.com/services/seo-aeo-geo</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/services/line-oa</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://www.hunglun.com/enterprise</loc><lastmod>2026-10-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://www.hunglun.com/knowledge/classroom-submit-problems</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.hunglun.com/knowledge/google-forms-registration</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.hunglun.com/knowledge/gemini-make-slides</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.hunglun.com/knowledge/gemini-certification-process</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.hunglun.com/knowledge/chromebook-drawbacks</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.hunglun.com/knowledge/gemini-student-offer-fix</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.hunglun.com/knowledge/google-flow-cant-login</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
 </urlset>
