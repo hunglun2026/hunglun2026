@@ -375,12 +375,12 @@ Teaching and Learning 與 Education Plus 有什麼差別？
 
 https://www.hunglun.com/services
 
-首頁 ／ 解決方案
-解決方案
+首頁 ／ 教育解決方案
+教育解決方案
 從 Google AI Pro for Education 授權導入到教育方案整合，一次規劃到位。
 解決方案
 成功案例
-解決方案分類
+教育解決方案分類
 依重要性分成四類，共 13 項服務。
 Google 授權與培訓
 系統開發與自動化
@@ -21253,7 +21253,7 @@ SEO／AEO／GEO 搜尋引擎最佳化服務
 
 https://www.hunglun.com/services/google-ai-pro
 
-解決方案 ／ Google AI Pro for Education 授權導入
+教育解決方案 ／ Google AI Pro for Education 授權導入
 Google AI Pro for Education 授權導入
 Gemini Pro 教育版帳號開通、導入規劃與教師研習，由 Google 官方授權夥伴交付。
 重點先看
@@ -21342,7 +21342,7 @@ Google AI 企業級授權導入 →
 
 https://www.hunglun.com/services/ai-pro-quote
 
-解決方案 ／ Google AI Pro for Education 校園授權報價
+教育解決方案 ／ Google AI Pro for Education 校園授權報價
 Google AI Pro for Education 校園授權報價
 告訴我們貴校的規模與預計使用人數，由 Google 官方授權夥伴回覆授權試算與導入建議。上班時間通常一個工作天內回覆。
 重點先看
@@ -21442,7 +21442,7 @@ Google AI 企業級授權導入 →
 
 https://www.hunglun.com/services/enterprise-ai
 
-解決方案 ／ Google AI 企業級授權導入
+教育解決方案 ／ Google AI 企業級授權導入
 Google AI 企業級授權導入
 Gemini Enterprise 與 Google Workspace 企業版授權導入，協助企業把 AI 用在實際業務流程上。
 重點先看
@@ -21492,7 +21492,7 @@ Google Workspace for Education 導入與認證培訓 →
 
 https://www.hunglun.com/services/google-workspace
 
-解決方案 ／ Google Workspace for Education 導入與認證培訓
+教育解決方案 ／ Google Workspace for Education 導入與認證培訓
 Google Workspace for Education 導入與認證培訓
 網域導入、管理主控台設定，以及 Google 認證教育家 Level 1／2、網域管理、認證訓練講師培訓。
 重點先看
@@ -21564,7 +21564,7 @@ Google 認證教育家 Level 1／2 與認證講師指南 →
 
 https://www.hunglun.com/services/google-partner
 
-解決方案 ／ Google for Education 合作夥伴
+教育解決方案 ／ Google for Education 合作夥伴
 Google for Education 合作夥伴
 台灣官方授權的教育合作發展夥伴，名列 Google 官方全球名冊。從授權導入、教師研習到設備建置，一個窗口承接。
 重點先看
@@ -21622,7 +21622,7 @@ Google for Education 指南：認證夥伴計畫與申請流程 →
 
 https://www.hunglun.com/services/campus-training
 
-解決方案 ／ Google AI 校園研習
+教育解決方案 ／ Google AI 校園研習
 Google AI 校園研習
 針對 K-12（國小、國中、高中職）與大學端的教師、行政人員與學生，規劃 Google AI 研習課程，由 Google 認證講師到校授課。
 重點先看
@@ -21716,7 +21716,7 @@ Chromebook 與智慧教室建置 →
 
 https://www.hunglun.com/services/chromebook
 
-解決方案 ／ Chromebook 與智慧教室建置
+教育解決方案 ／ Chromebook 與智慧教室建置
 Chromebook 與智慧教室建置
 ASUS Chromebook 採購、載具管理授權（CEU）、智慧教室與校園網路規劃建置。
 重點先看
@@ -21798,7 +21798,7 @@ ChromeOS 教育升級版（CEU）型錄 →
 
 https://www.hunglun.com/services/ceu
 
-解決方案 ／ ChromeOS 教育升級版（CEU）型錄
+教育解決方案 ／ ChromeOS 教育升級版（CEU）型錄
 ChromeOS 教育升級版（CEU）型錄
 學校要在 Google 管理控制台集中管理 Chromebook 或 ChromeOS Flex 電腦，每台裝置需要一份 CEU。
 重點先看
@@ -21850,7 +21850,7 @@ ChromeOS Flex 舊電腦升級與 CEU 授權導入 →
 
 https://www.hunglun.com/services/chromeos-flex
 
-解決方案 ／ ChromeOS Flex 舊電腦升級與 CEU 授權導入
+教育解決方案 ／ ChromeOS Flex 舊電腦升級與 CEU 授權導入
 ChromeOS Flex 舊電腦升級服務：比買新機便宜的延壽方案
 學校或公司裡那些跑得越來越慢、快被淘汰的舊電腦，不用整批換新機，改裝成跟 Chromebook 一樣的「ChromeOS Flex」系統，加上管理授權，就能繼續正常上課、辦公，是採購全新 Chromebook 之外，成本較低的一個選項。這是需要付費的服務（評估、安裝、授權都算在內），不是免費升級。
 重點先看
@@ -21917,7 +21917,7 @@ Google Workspace for Education 導入與認證培訓 →
 
 https://www.hunglun.com/services/procurement
 
-解決方案 ／ 標案設備採購（台灣銀行共同供應契約）
+教育解決方案 ／ 標案設備採購（台灣銀行共同供應契約）
 標案設備採購（台灣銀行共同供應契約）
 學校與機關口中的「台銀標」，指的就是台灣銀行共同供應契約。我們以此契約供應電腦主機、顯示器、平板電腦、專業繪圖卡、數位相機與電腦軟體，站上可直接查詢契約品項、廠牌型號與決標單價。
 重點先看
@@ -21970,7 +21970,7 @@ AI 應用與客製工具開發 →
 
 https://www.hunglun.com/services/procurement/desktop
 
-解決方案 ／ 標案設備採購 ／ 個人電腦之主機
+教育解決方案 ／ 標案設備採購 ／ 個人電腦之主機
 個人電腦之主機
 台銀標（台灣銀行共同供應契約）項下的商用桌上型主機，依文書、教學或繪圖需求配置不同等級。
 以 ASUS 商用桌機為主，依文書、教學或繪圖需求配不同等級的 CPU 與記憶體，可加購三年到府保固。是行政辦公室與電腦教室最常整批汰換的品項。
@@ -22065,7 +22065,7 @@ Chromebook 與智慧教室建置 →
 
 https://www.hunglun.com/services/procurement/monitor
 
-解決方案 ／ 標案設備採購 ／ 個人電腦之顯示器
+教育解決方案 ／ 標案設備採購 ／ 個人電腦之顯示器
 個人電腦之顯示器
 23.8 吋到 27 吋的護眼型液晶顯示器，教室與辦公室最常見的搭配。
 23.8 吋到 27 吋的護眼型液晶顯示器，教室與辦公室最常見的搭配。多數機種具備低藍光與不閃屏，長時間使用的行政與教學環境適用。
@@ -22194,7 +22194,7 @@ https://www.hunglun.com/services/procurement/monitor
 
 https://www.hunglun.com/services/procurement/tablet
 
-解決方案 ／ 標案設備採購 ／ 平板電腦
+教育解決方案 ／ 標案設備採購 ／ 平板電腦
 平板電腦
 行動教學與行政巡檢用，可搭配載具管理方案一起導入。
 行動教學與行政巡檢用，可搭配載具管理方案一起導入。數量一多，管理方式會比機器規格更影響實際使用成效。
@@ -22241,7 +22241,7 @@ Chromebook 選購指南與載具管理授權 →
 
 https://www.hunglun.com/services/procurement/gpu
 
-解決方案 ／ 標案設備採購 ／ 顯示卡
+教育解決方案 ／ 標案設備採購 ／ 顯示卡
 顯示卡
 專業繪圖卡，設計、3D 與 AI 運算課程用得到。
 專業繪圖卡，設計、3D 與 AI 運算課程用得到。與一般消費卡的差別在驅動穩定度與專業軟體的相容認證。
@@ -22296,7 +22296,7 @@ AI 應用與客製工具開發 →
 
 https://www.hunglun.com/services/procurement/camera
 
-解決方案 ／ 標案設備採購 ／ 彩色數位相機及攝影機
+教育解決方案 ／ 標案設備採購 ／ 彩色數位相機及攝影機
 彩色數位相機及攝影機
 活動紀錄與教學影片拍攝，含相機、攝影機與相關配件。
 活動紀錄與教學影片拍攝用，含相機、攝影機與相關配件。多數單位真正缺的其實是腳架、記憶卡與收音設備這些配件。
@@ -22361,7 +22361,7 @@ https://www.hunglun.com/services/procurement/camera
 
 https://www.hunglun.com/services/procurement/software
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體
 電腦軟體
 作業系統、文書、防毒、虛擬化與繪圖軟體授權，教育版與商用版適用對象不同。
 作業系統、文書、防毒、虛擬化與繪圖軟體授權。教育版與商用版適用對象不同，我們會先確認學校適用哪一種再報價。
@@ -22452,7 +22452,7 @@ PDF、文書處理與行政流程相關的軟體授權。
 
 https://www.hunglun.com/services/procurement/software/sw-cad
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 繪圖軟體
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 繪圖軟體
 繪圖軟體
 Adobe、Autodesk 等設計與工程繪圖軟體授權，含教育版與電腦教室整批授權。
 設計、工程與影音課程用的繪圖軟體授權。教育版與商用版的適用對象、可安裝範圍都不同，電腦教室整批授權與個人授權的計價方式也不一樣，請購前先確認單位屬性與實際使用人數。
@@ -22538,7 +22538,7 @@ Adobe、Autodesk 等設計與工程繪圖軟體授權，含教育版與電腦教
 
 https://www.hunglun.com/services/procurement/software/sw-virtual
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 虛擬軟體
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 虛擬軟體
 虛擬軟體
 虛擬化平台與應用程式虛擬化授權，多以年訂閱計價。
 伺服器虛擬化與應用程式虛擬化的平台授權。多數以年訂閱計價，且常依實體主機的核心數或節點數計算，估價前要先確認硬體規格。
@@ -22618,7 +22618,7 @@ Chromebook 與智慧教室建置 →
 
 https://www.hunglun.com/services/procurement/software/sw-iam
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：身分識別與存取管理
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：身分識別與存取管理
 資安：身分識別與存取管理
 帳號身分識別、單一登入與權限控管相關的資安軟體授權。
 處理「誰可以存取什麼」的資安軟體：身分識別、單一登入、特權帳號管理與 API 安全。授權多以使用者數或裝置數計價，導入前要先盤點帳號規模。
@@ -22697,7 +22697,7 @@ Google 管理主控台：機構單位與帳號管理 →
 
 https://www.hunglun.com/services/procurement/software/sw-network
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：網路安全
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：網路安全
 資安：網路安全
 防火牆、流量分析與網路層防護的資安產品授權，品項數最多的一類。
 網路層的資安防護：防火牆、入侵防禦、流量分析與頻寬管理。這是軟體類裡品項最多的一類，同一產品常依效能等級與授權年限分成多個項次，選型前建議先確認網路架構與對外頻寬。
@@ -22914,7 +22914,7 @@ https://www.hunglun.com/services/procurement/software/sw-network
 
 https://www.hunglun.com/services/procurement/software/sw-endpoint
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：端點安全
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：端點安全
 資安：端點安全
 電腦與行動裝置的端點防護、EDR 與裝置管控授權。
 保護電腦與行動裝置本身的防護軟體：防毒、端點偵測與回應（EDR）、裝置管控。多以裝置數計價並設有最低採購數量，數量門檻要先看清楚。
@@ -23029,7 +23029,7 @@ Google 管理主控台校園設定指南 →
 
 https://www.hunglun.com/services/procurement/software/sw-message
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：訊息安全
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：訊息安全
 資安：訊息安全
 郵件與訊息通道的威脅防護、過濾與稽核授權。
 郵件與訊息通道的安全防護：垃圾信與釣魚信過濾、附件威脅分析、往來紀錄稽核。多以信箱數或使用者數計價。
@@ -23083,7 +23083,7 @@ https://www.hunglun.com/services/procurement/software/sw-message
 
 https://www.hunglun.com/services/procurement/software/sw-web
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：主機或網站安全
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：主機或網站安全
 資安：主機或網站安全
 網站防護、CDN 加速與主機層防禦的資安服務授權。
 對外網站與主機的防護：網站應用程式防火牆、分散式阻斷服務防護、虛擬排隊與內容加速。單價區間很大，依流量與防護等級差異明顯。
@@ -23142,7 +23142,7 @@ https://www.hunglun.com/services/procurement/software/sw-web
 
 https://www.hunglun.com/services/procurement/software/sw-vuln
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：安全管理與弱點評估
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：安全管理與弱點評估
 資安：安全管理與弱點評估
 弱點掃描、資安鑑識與集中式安全管理平台授權。
 找出問題與集中管理的工具：弱點掃描、滲透測試平台、資安事件管理與鑑識調查。多數單位是為了因應資安稽核或法規要求而導入。
@@ -23230,7 +23230,7 @@ https://www.hunglun.com/services/procurement/software/sw-vuln
 
 https://www.hunglun.com/services/procurement/software/sw-file
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：檔案安全管理
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資安：檔案安全管理
 資安：檔案安全管理
 檔案加密、外洩防護與文件權限控管授權。
 針對檔案本身的保護：加密、外洩防護與文件權限控管，讓文件離開單位後仍受控。品項數不多，但單價較高。
@@ -23280,7 +23280,7 @@ https://www.hunglun.com/services/procurement/software/sw-file
 
 https://www.hunglun.com/services/procurement/software/sw-ai
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 人工智慧與數據應用
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 人工智慧與數據應用
 人工智慧與數據應用
 生成式 AI 平台、知識管理與數據分析工具授權。
 生成式 AI 與數據應用平台：企業內部知識管理、資料分析與 AI 助理。這一類近年才進契約，若要導入建議先確認資料放在哪裡、誰能存取。
@@ -23351,7 +23351,7 @@ AI 入門百科：生成式 AI 與大型語言模型 →
 
 https://www.hunglun.com/services/procurement/software/sw-microsoft
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 微軟軟體
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 微軟軟體
 微軟軟體
 Microsoft 各項產品授權，含 Dynamics 365 與伺服器端授權。
 Microsoft 的各類產品授權。同一產品常有依使用者、依裝置、依核心數等不同計價方式，且訂閱與永久授權的長期成本差異大，建議以三到五年為期比較。
@@ -23455,7 +23455,7 @@ Google Workspace for Education 導入 →
 
 https://www.hunglun.com/services/procurement/software/sw-oss
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 自由軟體暨開發工具
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 自由軟體暨開發工具
 自由軟體暨開發工具
 開源軟體的商用訂閱與支援服務，以及開發工具授權。
 開源軟體的商用訂閱與技術支援，以及開發用的工具授權。軟體本身雖然開源，契約買的是原廠支援與更新服務，這點常被誤解。
@@ -23552,7 +23552,7 @@ AI 應用與客製工具開發 →
 
 https://www.hunglun.com/services/procurement/software/sw-db
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資料庫暨備份工具
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 資料庫暨備份工具
 資料庫暨備份工具
 資料庫授權與備份、還原、災難復原軟體。
 資料庫授權與備份還原工具。備份軟體多依保護的容量或機器台數計價，估算前先確認實際資料量與保留天數。
@@ -23677,7 +23677,7 @@ https://www.hunglun.com/services/procurement/software/sw-db
 
 https://www.hunglun.com/services/procurement/software/sw-admin
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 行政管理軟體工具
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 行政管理軟體工具
 行政管理軟體工具
 PDF、文書處理與行政流程相關的軟體授權。
 日常行政會用到的軟體：PDF 編輯、文書處理與流程表單工具。多以人數為單位包裝授權，採購前先確認實際需要幾個使用者。
@@ -23755,7 +23755,7 @@ PDF、文書處理與行政流程相關的軟體授權。
 
 https://www.hunglun.com/services/procurement/software/sw-elearning
 
-解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 數位學習及知識管理
+教育解決方案 ／ 標案設備採購 ／ 電腦軟體 ／ 數位學習及知識管理
 數位學習及知識管理
 數位學習平台、教學工具與知識管理系統授權。
 數位學習平台與教學工具授權。這一類多有最低採購數量門檻，且教育版有適用資格限制，學校請購前先確認符合條件。
@@ -23839,7 +23839,7 @@ Google AI 校園研習 →
 
 https://www.hunglun.com/services/ai-development
 
-解決方案 ／ AI 應用與客製工具開發
+教育解決方案 ／ AI 應用與客製工具開發
 AI 應用與客製工具開發
 依實際工作流程開發專屬 AI 工具：文件辨識、資料自動化、查詢系統、報表產出。
 重點先看
@@ -23887,7 +23887,7 @@ AI 基礎知識與校園導入須知 →
 
 https://www.hunglun.com/services/open-data
 
-解決方案 ／ 公開資料查詢系統開發
+教育解決方案 ／ 公開資料查詢系統開發
 公開資料查詢系統開發
 把公開資料變成好查、好用、自動更新的網頁查詢系統。
 重點先看
@@ -23932,7 +23932,7 @@ https://www.hunglun.com/services/open-data
 
 https://www.hunglun.com/services/campus-admin
 
-解決方案 ／ 校園行政自動化
+教育解決方案 ／ 校園行政自動化
 校園行政自動化
 回條辨識統計、成果報告照片排版、名單比對等校園日常行政的自動化工具。
 重點先看
@@ -23978,7 +23978,7 @@ Google 管理主控台校園設定指南 →
 
 https://www.hunglun.com/services/member-system
 
-解決方案 ／ 客製會員與管理系統
+教育解決方案 ／ 客製會員與管理系統
 客製會員與管理系統
 會員集點、QR Code、後台管理系統，雲端部署免維護伺服器。
 重點先看
@@ -24022,7 +24022,7 @@ QR Code 應用：掃碼集點、掃碼核銷。
 
 https://www.hunglun.com/services/brand-website
 
-解決方案 ／ 品牌形象官網建置
+教育解決方案 ／ 品牌形象官網建置
 品牌形象官網建置
 從品牌識別、視覺設計到網站架設一手包辦，手機電腦都好用的高效能官網。
 重點先看
@@ -24094,7 +24094,7 @@ SEO／AEO／GEO 搜尋引擎最佳化 →
 
 https://www.hunglun.com/services/seo-aeo-geo
 
-解決方案 ／ SEO／AEO／GEO 搜尋引擎最佳化
+教育解決方案 ／ SEO／AEO／GEO 搜尋引擎最佳化
 SEO／AEO／GEO 搜尋引擎最佳化
 不只做傳統 SEO，也最佳化 AI 助理引用與生成式搜尋推薦。
 重點先看
@@ -24142,7 +24142,7 @@ SEO（Search Engine Optimization）是傳統搜尋引擎排名最佳化，讓網
 
 https://www.hunglun.com/services/line-oa
 
-解決方案 ／ 官方 LINE 帳號設計
+教育解決方案 ／ 官方 LINE 帳號設計
 官方 LINE 帳號設計
 圖文選單設計、歡迎訊息與自動回覆規劃，讓客戶打開對話就找得到功能。
 重點先看
@@ -24188,8 +24188,8 @@ LINE 官方帳號經營知識 →
 
 https://www.hunglun.com/enterprise
 
-首頁 ／ 企業與公部門數位方案
-企業與公部門數位方案
+首頁 ／ 企業與公部門解決方案
+企業與公部門解決方案
 Google 雲端與 Gemini 導入、客製系統、自動化整合與品牌官網，由登記立案的公司長期維護。
 Google 雲端與 Gemini
 客製系統與自動化
