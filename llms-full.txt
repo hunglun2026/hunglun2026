@@ -14033,7 +14033,7 @@ ChromeOS Flex 舊電腦升級
 
 ---
 
-## 學校 Google 帳號畢業後還能用嗎？資料轉移與刪除｜鴻綸科技
+## 學校 Google 帳號畢業後還能用嗎？由學校決定，資料這樣轉走｜鴻綸科技
 
 https://www.hunglun.com/knowledge/school-account-after-graduation
 
@@ -15357,7 +15357,7 @@ Google Meet 在校園怎麼用：線上研習的出席報告怎麼開 →
 
 ---
 
-## Edpuzzle 是什麼？互動影片教學怎麼用、和 Classroom 怎麼串｜鴻綸科技
+## Edpuzzle 是什麼？互動影片教學、串 Classroom 免註冊、免費版上限｜鴻綸科技
 
 https://www.hunglun.com/knowledge/edpuzzle
 
@@ -15438,7 +15438,7 @@ Edpuzzle 的 AI 功能可以做什麼？
 
 ---
 
-## ThingLink 是什麼？360 度互動教材怎麼做、校園授權怎麼算｜鴻綸科技
+## ThingLink 是什麼？360 度互動教材做法與校園授權怎麼算｜鴻綸科技
 
 https://www.hunglun.com/knowledge/thinglink
 
@@ -15603,7 +15603,7 @@ Google 認證教育家 Level 1 難嗎？
 
 ---
 
-## Chromebook 是什麼？跟一般筆電差在哪、學校怎麼選｜鴻綸科技
+## Chromebook 是什麼？和筆電差在哪、學校怎麼選｜機型與更新年限｜鴻綸科技
 
 https://www.hunglun.com/knowledge/chromebook
 
@@ -16636,7 +16636,7 @@ Google Workspace for Education 導入服務
 
 ---
 
-## Gemini 教育版怎麼申請？開通步驟、教育帳號、教師免費資格與管理設定｜鴻綸科技
+## Gemini 教育版怎麼申請？開通步驟、教育帳號、老師免費資格｜2026｜鴻綸科技
 
 https://www.hunglun.com/knowledge/gemini
 
@@ -19673,7 +19673,7 @@ Google Classroom 完全指南 →
 
 ---
 
-## Wordwall 是什麼？免費版、教育版（付費版）差在哪、怎麼選｜鴻綸科技
+## Wordwall 是什麼？免費版限制、教育版差在哪、怎麼買｜台灣代理｜鴻綸科技
 
 https://www.hunglun.com/knowledge/wordwall
 
@@ -24235,12 +24235,12 @@ Google 認證教育家 Level 1 怎麼準備 →
 
 ---
 
-## Chromebook 缺點有哪些？學校選購前先確認這 6 件事｜鴻綸科技
+## Chromebook 缺點 6 件事：更新年限、離線、軟體相容，學校買前先看｜鴻綸科技
 
 https://www.hunglun.com/knowledge/chromebook-drawbacks
 
 教學資源 ／ 設備選型與採購 ／ Chromebook 缺點與選購前確認事項
-Chromebook 缺點有哪些？學校選購前先確認這 6 件事
+Chromebook 缺點 6 件事：更新年限、離線、軟體相容，學校買前先看
 要買幾十台、上百台的學校，比個人更需要知道缺點。好處大家都會講，這篇只看官方文件有寫、而且會影響採購決策的限制，並把官方沒寫的地方標清楚。
 這篇適合：要評估 Chromebook 的資訊組、採購承辦與老師。
 重點先看
@@ -24308,7 +24308,9 @@ Chromebook 是什麼？跟一般筆電差在哪 →
 教學資源總覽 →
 學校想導入或需要教師研習？
 鴻綸科技是 Google for Education Professional Development Partner，可以依貴校現況安排教師研習與帳號規劃。
-聯絡我們
+寄信詢問
+來電 06-6371192
+看校園研習方案 →
 
 ---
 

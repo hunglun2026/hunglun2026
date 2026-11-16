@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.40.5（2026-11-16）
+
+為提升點閱率，改 7 篇「排名在前 4、曝光不低、點閱率偏低」文章的 title 與 description（Steve 指示現在就改，不等 11/23 到 12/07 觀察期）：`chromebook-drawbacks`、`chromebook`、`gemini`、`thinglink`、`wordwall`、`edpuzzle`、`school-account-after-graduation`。作法是標題從單純「是什麼？怎麼用」改成帶具體資訊（數字、版本限制、結論、年份）。順手修 `chromebook` 的 `og:title` 與 `<title>` 不一致（原本一個寫 ASUS 機型比較、一個寫 Chromebook 是什麼）。改前基準（GSC 近 3 個月，2026-11-16）：chromebook 曝光 2,207、點閱率 0.6%、排名 4.8；chromebook 缺點 445、4.0%、排名 3.0；thinglink 884、3.8%、排名 3.1；wordwall是什麼 274、2.2%、排名 3.0；edpuzzle 1,446、0.3%、排名 3.9；學校帳號畢業後 265、2.6%、排名 4.3；gemini 教育版 701、6.8%、排名 4.2。
+
 ## v1.40.4（2026-11-16）
 
 `/knowledge/google`（Google for Education 是什麼、版本差異）補上官方資料來源：Google for Education 版本比較頁與 Workspace 管理員說明頁，兩個網址皆回 200。兩頁列出的版本不完全相同（公開頁只列 Education Fundamentals 與 Education Plus，管理員說明頁 2026-11-12 更新的比較表仍有 Education Standard 欄），來源旁已註明「以 Google 當期公告為準」。本頁內文只寫基礎版 Fundamentals 與進階版 Plus 等付費方案，沒有寫 Standard，與兩頁都不衝突，內文不需修改。
