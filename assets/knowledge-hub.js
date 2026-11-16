@@ -7,7 +7,6 @@
   var list = document.getElementById('knResultsList');
   var title = document.getElementById('knResultsTitle');
   var clear = document.getElementById('knClear');
-  var toggle = document.getElementById('knToggle');
   var MAX = 40;
 
   function esc(s) {
@@ -21,7 +20,7 @@
     var t = a.querySelector('.kn-t').textContent.replace(/\s*新$/, '').trim();
     var d = a.getAttribute('data-d') || '';
     var tm = a.querySelector('time');
-    return { href: a.getAttribute('href'), t: t, d: d, date: tm ? tm.textContent : '', s: (t + ' ' + d).toLowerCase() };
+    return { href: a.getAttribute('href'), t: t, d: d, date: tm ? tm.textContent : '', c: (a.parentNode.className || ''), g: (a.closest('.kn-block') ? a.closest('.kn-block').querySelector('.kn-block-title a').textContent : ''), s: (t + ' ' + d).toLowerCase() };
   });
 
   function run() {
@@ -49,7 +48,7 @@
     }
     title.textContent = '找到 ' + hit.length + ' 篇' + (hit.length > MAX ? '（顯示前 ' + MAX + ' 篇）' : '');
     list.innerHTML = hit.slice(0, MAX).map(function (r) {
-      return '<li><a class="kn-row" href="' + esc(r.href) + '"><span class="kn-text"><span class="kn-t">' + esc(r.t) +
+      return '<li class="' + esc(r.c) + '"><a class="kn-row" href="' + esc(r.href) + '"><span class="kn-text"><span class="kn-t">' + (r.g ? '<span class="kn-tag">' + esc(r.g) + '</span>' : '') + esc(r.t) +
         '</span><span class="kn-d">' + esc(r.d) + '</span></span><time class="kn-date">' + esc(r.date) + '</time></a></li>';
     }).join('');
   }
@@ -60,14 +59,6 @@
   });
   if (clear) clear.addEventListener('click', function () { q.value = ''; run(); q.focus(); });
 
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var folds = [].slice.call(document.querySelectorAll('#all .kn-fold'));
-      var open = folds.some(function (d) { return !d.open; });
-      folds.forEach(function (d) { d.open = open; });
-      toggle.textContent = open ? '全部收合' : '全部展開';
-    });
-  }
 
   // 支援 /knowledge?q=關鍵字（站內搜尋或外部連結可以直接帶入）
   try {

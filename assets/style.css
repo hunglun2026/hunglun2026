@@ -646,18 +646,6 @@ a.card:hover,a.card:hover *{text-decoration: none}
 .kn-new{display: inline-block;margin-left: 6px;padding: 1px 8px;font-size: .72rem;font-weight: 600;line-height: 1.6;color: var(--accent);border: 1px solid var(--accent);border-radius: 999px;vertical-align: 2px}
 @media (max-width: 560px){.kn-row{grid-template-columns: 1fr;gap: 2px;padding: 12px 2px}.kn-row .kn-date{margin-top: 2px}}
 .kn-count{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
-.kn-toggle{margin-left: 12px;padding: 4px 12px;font: inherit;font-size: .85rem;color: var(--accent);background: none;border: 1px solid var(--accent);border-radius: 999px;cursor: pointer}
-.kn-fold{border-top: 1px solid var(--line)}
-.kn-fold:last-of-type{border-bottom: 1px solid var(--line)}
-.kn-fold summary{display: flex;align-items: center;justify-content: space-between;gap: 12px;min-height: 56px;padding: 12px 4px;font-size: 1.05rem;font-weight: 500;color: var(--text);cursor: pointer;list-style: none}
-.kn-fold summary::-webkit-details-marker{display: none}
-.kn-fold summary::after{content: "＋";color: var(--accent);font-weight: 400}
-.kn-fold[open] summary::after{content: "－"}
-.kn-fold summary > span{margin-left: auto;font-size: .85rem;font-weight: 400;color: var(--muted-faint)}
-.kn-fold-body{padding: 0 4px 18px}
-.kn-sub{margin: 18px 0 4px;font-size: .95rem;font-weight: 600;color: var(--accent)}
-.kn-sub > span{font-weight: 400;color: var(--muted-faint)}
-.kn-fold-more{margin-top: 12px;font-size: .9rem}
 .kn-sub-title{display: flex;align-items: baseline;gap: 10px;margin-bottom: 4px;font-size: 1.35rem;line-height: 1.4;scroll-margin-top: 90px}
 .kn-sub-title > span{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
 .kn-topic-group .section-sub{margin: 0 0 6px;text-align: left}
@@ -669,3 +657,37 @@ a.card:hover,a.card:hover *{text-decoration: none}
 @media (max-width: 640px){.kn-tabs{flex-wrap: nowrap;justify-content: flex-start;overflow-x: auto;-webkit-overflow-scrolling: touch;scrollbar-width: none;margin: 0 -16px;padding: 0 16px 4px}
 .kn-tabs::-webkit-scrollbar{display: none}
 }
+
+/* 教學資源分類顏色（v1.39.37）：每個主題一個色，用在分頁鈕、卡片、條列左邊線與分類標籤；深色模式改用較亮的同色系 */
+.kn-c-google-ai{--kc: #1a73e8}
+.kn-c-gemini{--kc: #7b3fe4}
+.kn-c-classroom{--kc: #0b8043}
+.kn-c-web{--kc: #b45309}
+.kn-c-hardware{--kc: #0e7490}
+.kn-c-compliance{--kc: #c5221f}
+:root[data-theme="dark"] .kn-c-google-ai{--kc: #8ab4f8}
+:root[data-theme="dark"] .kn-c-gemini{--kc: #c3a6ff}
+:root[data-theme="dark"] .kn-c-classroom{--kc: #81c995}
+:root[data-theme="dark"] .kn-c-web{--kc: #fdd663}
+:root[data-theme="dark"] .kn-c-hardware{--kc: #67d1e8}
+:root[data-theme="dark"] .kn-c-compliance{--kc: #f28b82}
+.kn-tabs a[class*="kn-c-"]::before,.kn-jump a[class*="kn-c-"]::before{content: "";width: 10px;height: 10px;border-radius: 50%;background: var(--kc);flex-shrink: 0}
+.kn-jump a[class*="kn-c-"]{display: inline-flex;align-items: center;gap: 6px}
+.kn-tabs a[class*="kn-c-"][aria-current="page"],.kn-jump a[class*="kn-c-"]:hover{color: var(--kc);border-color: var(--kc);border-style: solid}
+.kn-tabs a[class*="kn-c-"]:hover{border-color: var(--kc)}
+.kn-card[class*="kn-c-"]{border-top: 4px solid var(--kc)}
+.kn-card[class*="kn-c-"]:hover{border-color: var(--kc);border-top-color: var(--kc);box-shadow: 0 12px 28px -14px color-mix(in srgb,var(--kc) 45%,transparent)}
+.kn-card[class*="kn-c-"] h3 a{color: var(--kc)}
+.kn-card[class*="kn-c-"] .kn-more{color: var(--kc)}
+.kn-list li[class*="kn-c-"]{border-left: 4px solid var(--kc)}
+.kn-list li[class*="kn-c-"] .kn-row{padding-left: 14px}
+.kn-list li[class*="kn-c-"] .kn-row:hover{background: color-mix(in srgb,var(--kc) 8%,var(--bg-soft));padding-left: 18px}
+.kn-list li[class*="kn-c-"] .kn-row:hover .kn-text > .kn-t{color: var(--kc)}
+.kn-tag{display: inline-block;margin-right: 8px;padding: 1px 9px;font-size: .74rem;font-weight: 500;line-height: 1.7;color: var(--kc);background: color-mix(in srgb,var(--kc) 10%,transparent);border-radius: 999px;vertical-align: 1px}
+.kn-block{margin-top: 34px}
+.kn-block-title{display: flex;align-items: baseline;gap: 10px;padding-bottom: 8px;font-size: 1.35rem;line-height: 1.4;border-bottom: 3px solid var(--kc);scroll-margin-top: 90px}
+.kn-block-title a{color: var(--kc);text-decoration: none}
+.kn-block-title span{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
+.kn-sub{margin: 22px 0 4px;padding-left: 10px;font-size: 1rem;font-weight: 600;color: var(--text);border-left: 4px solid var(--kc)}
+.kn-sub > span{font-weight: 400;color: var(--muted-faint)}
+.kn-block .kn-list{margin-top: 6px}
