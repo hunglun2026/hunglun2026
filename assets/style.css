@@ -664,14 +664,14 @@ h2.kn-sub-title[data-sb]{padding: 6px 0 6px 18px}
 .kn-c-gemini{--kc: #EA4335;--kt: #C5221F}
 .kn-c-classroom{--kc: #34A853;--kt: #188038}
 .kn-c-web{--kc: #FBBC04;--kt: #B06000}
-.kn-c-hardware{--kc: #1967D2;--kt: #174EA6}
-.kn-c-compliance{--kc: #B31412;--kt: #A50E0E}
+.kn-c-hardware{--kc: #4285F4;--kt: #1A73E8}
+.kn-c-compliance{--kc: #FBBC04;--kt: #B06000}
 :root[data-theme="dark"] .kn-c-google-ai{--kc: #8AB4F8;--kt: #8AB4F8}
 :root[data-theme="dark"] .kn-c-gemini{--kc: #F28B82;--kt: #F28B82}
 :root[data-theme="dark"] .kn-c-classroom{--kc: #81C995;--kt: #81C995}
 :root[data-theme="dark"] .kn-c-web{--kc: #FDD663;--kt: #FDD663}
-:root[data-theme="dark"] .kn-c-hardware{--kc: #669DF6;--kt: #669DF6}
-:root[data-theme="dark"] .kn-c-compliance{--kc: #EE675C;--kt: #EE675C}
+:root[data-theme="dark"] .kn-c-hardware{--kc: #8AB4F8;--kt: #8AB4F8}
+:root[data-theme="dark"] .kn-c-compliance{--kc: #FDD663;--kt: #FDD663}
 .kn-tabs a[class*="kn-c-"]::before,.kn-jump a[class*="kn-c-"]::before{content: "";width: 10px;height: 10px;border-radius: 50%;background: var(--kc);flex-shrink: 0}
 .kn-jump a[class*="kn-c-"]{display: inline-flex;align-items: center;gap: 6px}
 .kn-tabs a[class*="kn-c-"][aria-current="page"],.kn-jump a[class*="kn-c-"]:hover{color: var(--kt);border-color: var(--kc);border-style: solid}
@@ -724,12 +724,12 @@ h2.kn-sub-title[data-sb]{padding: 6px 0 6px 18px}
 .kn-s2{--kc: #EA4335;--kt: #C5221F}
 .kn-s3{--kc: #FBBC04;--kt: #B06000}
 .kn-s4{--kc: #34A853;--kt: #188038}
-.kn-s5{--kc: #1967D2;--kt: #174EA6}
+.kn-s5{--kc: #5F6368;--kt: #3C4043}
 :root[data-theme="dark"] .kn-s1{--kc: #8AB4F8;--kt: #8AB4F8}
 :root[data-theme="dark"] .kn-s2{--kc: #F28B82;--kt: #F28B82}
 :root[data-theme="dark"] .kn-s3{--kc: #FDD663;--kt: #FDD663}
 :root[data-theme="dark"] .kn-s4{--kc: #81C995;--kt: #81C995}
-:root[data-theme="dark"] .kn-s5{--kc: #669DF6;--kt: #669DF6}
+:root[data-theme="dark"] .kn-s5{--kc: #BDC1C6;--kt: #BDC1C6}
 .kn-start-list li[class^="kn-s"] a{border-top: 4px solid var(--kc)}
 .kn-start-list li[class^="kn-s"] a::before{color: var(--kt);border-color: var(--kc);background: color-mix(in srgb,var(--kc) 12%,transparent)}
 .kn-start-list li[class^="kn-s"] a:hover{border-color: var(--kc);border-top-color: var(--kc);box-shadow: 0 12px 28px -14px color-mix(in srgb,var(--kc) 45%,transparent)}
