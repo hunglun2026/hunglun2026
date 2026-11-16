@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.40.4（2026-11-16）
+
+`/knowledge/google`（Google for Education 是什麼、版本差異）補上官方資料來源：Google for Education 版本比較頁與 Workspace 管理員說明頁，兩個網址皆回 200。兩頁列出的版本不完全相同（公開頁只列 Education Fundamentals 與 Education Plus，管理員說明頁 2026-11-12 更新的比較表仍有 Education Standard 欄），來源旁已註明「以 Google 當期公告為準」。本頁內文只寫基礎版 Fundamentals 與進階版 Plus 等付費方案，沒有寫 Standard，與兩頁都不衝突，內文不需修改。
+
 ## v1.40.3（2026-11-16）
 
 31 篇 Google 產品教學文章補上「官方資料來源」（每篇 1 到 2 個 Google 官方說明頁連結，放在「重點先看」下方）：Gemini 基礎與管理 8 篇、Gemini Notebook 系列 10 篇、Classroom 與 Meet 7 篇、帳號管理與 Flow／Vids 6 篇。作法：4 個子代理分組查證，我用 curl 逐一驗證 44 個網址皆回 200，並對照文章論點。有官方來源的文章從 14 篇增為 45 篇（共 118 篇）。官方沒寫的說法如實標示：`gemini-notebook-faq` 的「掃描 PDF 讀不到」「十分鐘沒變化」註明為實務經驗。刻意沒掛的：`google`（兩個官方頁對版本數量互相矛盾，待決定）、他牌軟體文、鴻綸自有系統文、法規與採購文。`sitemap/add-official-sources.py` 改為可讀 `official-sources-1116.json` 逐篇指定來源。
