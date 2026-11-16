@@ -660,17 +660,17 @@ a.card:hover,a.card:hover *{text-decoration: none}
 
 /* 教學資源分類顏色（v1.39.37）：每個主題一個色，用在分頁鈕、卡片、條列左邊線與分類標籤；深色模式改用較亮的同色系 */
 .kn-c-google-ai{--kc: #4285F4;--kt: #1A73E8}
-.kn-c-gemini{--kc: #A142F4;--kt: #8430CE}
+.kn-c-gemini{--kc: #EA4335;--kt: #C5221F}
 .kn-c-classroom{--kc: #34A853;--kt: #188038}
 .kn-c-web{--kc: #FBBC04;--kt: #B06000}
-.kn-c-hardware{--kc: #24C1E0;--kt: #0B7285}
-.kn-c-compliance{--kc: #EA4335;--kt: #C5221F}
+.kn-c-hardware{--kc: #1967D2;--kt: #174EA6}
+.kn-c-compliance{--kc: #B31412;--kt: #A50E0E}
 :root[data-theme="dark"] .kn-c-google-ai{--kc: #8AB4F8;--kt: #8AB4F8}
-:root[data-theme="dark"] .kn-c-gemini{--kc: #C58AF9;--kt: #C58AF9}
+:root[data-theme="dark"] .kn-c-gemini{--kc: #F28B82;--kt: #F28B82}
 :root[data-theme="dark"] .kn-c-classroom{--kc: #81C995;--kt: #81C995}
 :root[data-theme="dark"] .kn-c-web{--kc: #FDD663;--kt: #FDD663}
-:root[data-theme="dark"] .kn-c-hardware{--kc: #78D9EC;--kt: #78D9EC}
-:root[data-theme="dark"] .kn-c-compliance{--kc: #F28B82;--kt: #F28B82}
+:root[data-theme="dark"] .kn-c-hardware{--kc: #669DF6;--kt: #669DF6}
+:root[data-theme="dark"] .kn-c-compliance{--kc: #EE675C;--kt: #EE675C}
 .kn-tabs a[class*="kn-c-"]::before,.kn-jump a[class*="kn-c-"]::before{content: "";width: 10px;height: 10px;border-radius: 50%;background: var(--kc);flex-shrink: 0}
 .kn-jump a[class*="kn-c-"]{display: inline-flex;align-items: center;gap: 6px}
 .kn-tabs a[class*="kn-c-"][aria-current="page"],.kn-jump a[class*="kn-c-"]:hover{color: var(--kt);border-color: var(--kc);border-style: solid}
@@ -717,6 +717,28 @@ a.card:hover,a.card:hover *{text-decoration: none}
 :root[data-theme="dark"]{--g-blue: #8AB4F8;--g-red: #F28B82;--g-yellow: #FDD663;--g-green: #81C995}
 
 /* 舊版型文章：每個章節各放在自己的 section／wrap 裡，大標題是 h2.section-title，補上同樣的色條（v1.39.39） */
-main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title:not(.kn-sub-title){position: relative;margin: 56px 0 20px;padding: 6px 0 6px 18px;font-size: 1.65rem;font-weight: 600;line-height: 1.4;text-align: left;border-left: 6px solid var(--g-blue);border-radius: 2px}
+main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title:not(.kn-sub-title){position: relative;margin: 56px 0 20px;padding: 6px 0 6px 18px;font-size: 1.65rem;font-weight: 600;line-height: 1.4;text-align: left;border-left: 6px solid var(--sb,var(--g-blue));border-radius: 2px}
 main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title + :is(p,.section-sub){line-height: 1.95}
 @media (max-width: 640px){main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title:not(.kn-sub-title){margin: 44px 0 16px;padding-left: 14px;font-size: 1.4rem}}
+
+/* 新手先看卡片依分類上色（v1.39.40） */
+.kn-start-list li[class*="kn-c-"] a{border-top: 4px solid var(--kc)}
+.kn-start-list li[class*="kn-c-"] a::before{color: var(--kt);border-color: var(--kc);background: color-mix(in srgb,var(--kc) 12%,transparent)}
+.kn-start-list li[class*="kn-c-"] a:hover{border-color: var(--kc);border-top-color: var(--kc);box-shadow: 0 12px 28px -14px color-mix(in srgb,var(--kc) 45%,transparent)}
+
+/* 全站章節標題色條（v1.39.40）：內容頁每個章節的大標題加 Google 色標記，依章節順序輪流用藍、紅、黃、綠。靠左的標題用左側色條，置中的標題用下方色線；首頁除外 */
+body:not(.landing) main > :is(section,div).section{--sb: var(--g-blue)}
+body:not(.landing) main > :is(section,div).section:nth-child(4n+2){--sb: var(--g-red)}
+body:not(.landing) main > :is(section,div).section:nth-child(4n+3){--sb: var(--g-yellow)}
+body:not(.landing) main > :is(section,div).section:nth-child(4n){--sb: var(--g-green)}
+body:not(.landing) main > :is(section,div).section h2.section-title:not(.kn-sub-title){font-weight: 600}
+body:not(.landing) main > :is(section,div).section > .wrap:not([style*="text-align:center"],[style*="text-align: center"],.svc-group) > h2.section-title:not(.kn-sub-title){margin: 8px 0 20px;padding: 6px 0 6px 18px;font-size: 1.65rem;line-height: 1.4;text-align: left;border-left: 6px solid var(--sb);border-radius: 2px}
+body:not(.landing) main > :is(section,div).section > .wrap:not([style*="text-align:center"],[style*="text-align: center"],.svc-group) > h2.section-title + .section-sub{text-align: left}
+body:not(.landing) main > :is(section,div).section .svc-group > h2.section-title,body:not(.landing) main > :is(section,div).section > .wrap[style*="text-align:center"] > h2.section-title,body:not(.landing) main > :is(section,div).section > .wrap[style*="text-align: center"] > h2.section-title{display: table;margin-left: auto;margin-right: auto;padding: 0 4px 10px;font-size: 1.65rem;border-left: 0;border-bottom: 5px solid var(--sb);border-radius: 0}
+@media (max-width: 640px){body:not(.landing) main > :is(section,div).section > .wrap:not([style*="text-align:center"],[style*="text-align: center"],.svc-group) > h2.section-title:not(.kn-sub-title){padding-left: 14px;font-size: 1.4rem}}
+
+/* 教學資源總覽頁自己的章節標題也套色條（v1.39.40）：新手先看藍、依主題找紅、最新上線黃、全部文章綠 */
+#knMain > .section > .wrap > h2.section-title{margin: 8px 0 12px;padding: 6px 0 6px 18px;font-size: 1.65rem;font-weight: 600;line-height: 1.4;border-left: 6px solid var(--g-blue);border-radius: 2px}
+#knMain > .section:nth-child(2) > .wrap > h2.section-title{border-left-color: var(--g-red)}
+#knMain > .section:nth-child(3) > .wrap > h2.section-title{border-left-color: var(--g-yellow)}
+#knMain > .section:nth-child(4) > .wrap > h2.section-title{border-left-color: var(--g-green)}
