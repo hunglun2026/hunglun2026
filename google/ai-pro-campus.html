@@ -61,7 +61,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "dateModified": "2026-11-05",
+  "dateModified": "2026-11-16",
   "@id": "https://www.hunglun.com/google/ai-pro-campus#webpage",
   "url": "https://www.hunglun.com/google/ai-pro-campus",
   "name": "智慧校園：Google AI Pro for Education 導入說明",
@@ -102,7 +102,7 @@
     {
       "@type": "Question",
       "name": "Google AI Pro for Education 基礎版跟進階版差在哪？",
-      "acceptedAnswer": { "@type": "Answer", "text": "免費的教育基礎版也有 Gemini，差別不在「有沒有 AI」，而在模型等級與使用額度。以 Token 數為例，基礎版 32,000 個、進階版 1,000,000 個；Deep Research 基礎版每月 5 份、進階版每天 20 份；圖像生成與 Gemini Omni 影片生成的額度進階版也明顯更高，且進階版才能優先體驗新功能。Gemini Notebook、Gem、Google Vids 這些功能基礎版都有，只是額度較低，進階版的筆記本數、來源數與每日對話查詢次數都大幅提高。" }
+      "acceptedAnswer": { "@type": "Answer", "text": "免費的教育基礎版也有 Gemini，差別不在「有沒有 AI」，而在模型等級與使用額度。以 Token 數為例，基礎版 32,000 個、進階版 1,000,000 個；Deep Research 基礎版每月 5 份、進階版每天 20 份；圖像生成（Nano Banana 2）基礎版每天 20 張、進階版每天 100 張；Gemini Omni 影片生成只有進階版可用，每天 3 部；進階版還享有優先存取權，但限 18 歲以上使用者。Gemini Notebook、Gem、Google Vids 這些功能基礎版都有，只是額度較低，進階版的額度大幅提高。" }
     },
     {
       "@type": "Question",
@@ -163,7 +163,7 @@
       <h2>重點先看</h2>
       <ul>
         <li><strong>學校用 Google AI Pro for Education，資料會被拿去訓練模型嗎？</strong>不會。教育版的資料不會用於訓練 Google 的 AI 模型，校方可由管理主控台控制資料存取與保留；個人版預設則會用於改進模型。</li>
-        <li><strong>免費教育基礎版跟進階版差在哪？</strong>差在模型等級與使用額度：Token 數 32,000 對 1,000,000，Deep Research 每月 5 份對每天 20 份，進階版另有影片生成與優先體驗新功能。</li>
+        <li><strong>免費教育基礎版跟進階版差在哪？</strong>差在模型等級與使用額度：Token 數 32,000 對 1,000,000，Deep Research 每月 5 份對每天 20 份，圖像生成每天 20 張對 100 張，進階版另有 Omni 影片生成（每天 3 部）與優先存取權；進階版限 18 歲以上使用者。</li>
         <li><strong>授權怎麼計價？</strong>以實際使用人數計算，1U 為 1 位使用者，依授權數分級距；各級距單價請洽鴻綸科技索取正式報價。購買 50U 以上加贈 Education Plus 授權 50U。</li>
         <li><strong>Gemini Notebook 就是 NotebookLM 嗎？</strong>是。Google 於 2026 年 7 月 16 日把 NotebookLM 更名為 Gemini Notebook，功能相同，學校端不需重新開通。</li>
       </ul>
@@ -191,20 +191,24 @@
     </div>
 
     <h2>三、基礎版與進階版的差異</h2>
-    <p>免費的教育基礎版也有 Gemini，所以「有沒有 AI」不是重點，差別在<strong>模型等級與使用額度</strong>。</p>
+    <p>免費的教育基礎版也有 Gemini，所以「有沒有 AI」不是重點，差別在<strong>模型等級與使用額度</strong>。下表數字取自 Google 官方說明頁，2026 年 11 月 16 日逐項核對。</p>
     <div class="spec-table-wrap">
       <table class="spec-table">
         <thead><tr><th>項目</th><th>Google AI 教育基礎版</th><th>Google AI Pro for Education（進階版）</th></tr></thead>
         <tbody>
-          <tr><td>Token 數<br><span style="font-size:0.85em;">（一個中文字約 2 個 Token）</span></td><td>32,000 個</td><td>1,000,000 個</td></tr>
+          <tr><td>使用者年齡</td><td>所有年齡<br><span style="font-size:0.85em;">（部分功能限 18 歲以上）</span></td><td>限 18 歲以上</td></tr>
+          <tr><td>脈絡長度<br><span style="font-size:0.85em;">（一個中文字約 2 個 Token）</span></td><td>32,000 個 Token</td><td>1,000,000 個 Token</td></tr>
+          <tr><td>思考型模型</td><td>每天 300 個提示詞</td><td>每天 300 個提示詞<br><span style="font-size:0.85em;">（享有優先存取權）</span></td></tr>
           <tr><td>Deep Research</td><td>5 份／月</td><td>20 份／天</td></tr>
-          <tr><td>圖像生成<br><span style="font-size:0.85em;">（Nano Banana 2）</span></td><td>100 張／天<span class="nowrap">（其他模型）</span><br>3 張／天<span class="nowrap">（Pro 模型）</span></td><td>1,000 張／天<span class="nowrap">（其他模型）</span><br>100 張／天<span class="nowrap">（Pro 模型）</span></td></tr>
-          <tr><td>Gemini Omni 影片生成</td><td>無</td><td>10 部／天<br><span style="font-size:0.85em;">（Omni 3 部＋Google <span class="nowrap">Flow 7 部）</span></span></td></tr>
-          <tr><td>優先體驗新功能</td><td>無</td><td>有</td></tr>
-          <tr><td>Gemini Notebook、Gem、Google Vids</td><td>有（額度較低）</td><td>有（額度大幅提高）</td></tr>
+          <tr><td>圖像生成與編輯<br><span style="font-size:0.85em;">（Nano Banana 2）</span></td><td>20 張／天</td><td>100 張／天</td></tr>
+          <tr><td>再次生成圖像<br><span style="font-size:0.85em;">（Nano Banana Pro）</span></td><td>3 張／天</td><td>100 張／天</td></tr>
+          <tr><td>Gemini Omni 影片生成</td><td>無</td><td>3 部／天</td></tr>
+          <tr><td>音樂生成</td><td>30 秒曲目 10 首／天<br>完整曲目 5 首／天</td><td>30 秒曲目 50 首／天<br>完整曲目 20 首／天</td></tr>
+          <tr><td>Gemini Notebook</td><td>標準額度</td><td>大幅提高</td></tr>
         </tbody>
       </table>
     </div>
+    <p style="font-size:0.88rem;">資料來源：Google「透過公司或學校 Google 帳戶使用 Gemini 系列應用程式（教育）」說明頁，以及 Google Workspace 管理說明「Google AI Pro for Education」（2026 年 11 月 10 日更新）。Google 表示用量限制會動態調整，圖像生成變動尤其頻繁，實際額度以管理主控台與官方說明頁為準。進階版享有優先存取權，基礎版在用量高峰時可能較早達到上限。Google Flow 並非進階版專屬，Education Standard、Education Plus 與進階版都可使用，每日提供 50 個 AI 點數。</p>
 
     <h2>四、Gemini Notebook：專屬 AI 知識庫</h2>
     <p>把校內講義、法規、會議紀錄、論文匯入當作知識來源，AI 只依這些來源作答並標註出處，也就是<strong>拒絕幻覺的 RAG 技術</strong>，適合「答案必須有依據」的校務與教學情境。匯入後可以：</p>
@@ -307,7 +311,7 @@
     </details>
     <details class="faq-item reveal">
       <summary>Google AI Pro for Education 基礎版跟進階版差在哪？</summary>
-      <div class="faq-a">免費的教育基礎版也有 Gemini，差別不在「有沒有 AI」，而在模型等級與使用額度。以 Token 數為例，基礎版 32,000 個、進階版 1,000,000 個；Deep Research 基礎版每月 5 份、進階版每天 20 份；圖像生成與 Gemini Omni 影片生成的額度進階版也明顯更高，且進階版才能優先體驗新功能。Gemini Notebook、Gem、Google Vids 這些功能基礎版都有，只是額度較低，進階版的筆記本數、來源數與每日對話查詢次數都大幅提高。</div>
+      <div class="faq-a">免費的教育基礎版也有 Gemini，差別不在「有沒有 AI」，而在模型等級與使用額度。以 Token 數為例，基礎版 32,000 個、進階版 1,000,000 個；Deep Research 基礎版每月 5 份、進階版每天 20 份；圖像生成（Nano Banana 2）基礎版每天 20 張、進階版每天 100 張；Gemini Omni 影片生成只有進階版可用，每天 3 部；進階版還享有優先存取權，但限 18 歲以上使用者。Gemini Notebook、Gem、Google Vids 這些功能基礎版都有，只是額度較低，進階版的額度大幅提高。</div>
     </details>
     <details class="faq-item reveal">
       <summary>Teaching and Learning 與 Education Plus 有什麼差別？</summary>
@@ -353,7 +357,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.39.29</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.39.30</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
