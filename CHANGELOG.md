@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.39.33（2026-11-16）
+
+「Google 認證培訓」的說明補上 Google 官方 Gemini 認證（教育家、教職員、大學生，官方免費報名），寫成「Gemini 認證備考研習」：`/google` 方案介紹清單（文字連到 `/knowledge/gemini-certification`）與該頁結構化資料、`/about` 講師說明、`/services` 與 `/services/google-workspace` 的說明句。資料依 Google 官方 Gemini Certifications FAQ（2026-11-16 核對）。
+
 ## v1.39.32（2026-11-16）
 
 解決方案卡片補上圖：`/google`（9 張）、`/services`（13 張）、`/enterprise`（7 張）的服務卡片，標籤下方各加一張白底單色等角線稿，共 19 張不重複的圖（同一個服務在不同頁面共用同一張）。風格沿用服務項目頁的分類線稿（深藍 #1E3A5F、白底、4:3），由 Gemini 帳號 A 生成並逐張看過，沒有浮水印。圖檔 `assets/images/card-<服務>.webp`（寬 500，共 244 KB）；樣式 `.card-thumb` 淺色用 multiply 融進卡片底色，深色反相轉淺藍；`style.css` 版號升到 139。`sitemap/add-card-thumbs.py` 負責轉檔與插入，`--check` 可檢查缺圖。免費工具與客戶案例那幾張 `<article>` 卡片不是解決方案，沒有配圖。

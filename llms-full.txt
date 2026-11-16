@@ -137,7 +137,7 @@ for Education 授權導入
 官方資歷與師資陣容
 Google for Education Professional Development Partner：2017 年起為官方授權在台教育合作發展夥伴，2019 年專業化夥伴、2026 年高等教育專業發展夥伴。
 教育部國中小行動教育推動計畫指定廠商：長期參與全國各縣市行動學習計畫推動。
-Google 官方認證國際講師培訓中心：五位認證講師、兩位認證網域管理員，可承接 Google 認證教育家 Level 1／2、網域管理與訓練講師培訓。
+Google 官方認證國際講師培訓中心：五位認證講師、兩位認證網域管理員，可承接 Google 認證教育家 Level 1／2、Gemini 認證備考研習、網域管理與訓練講師培訓。
 台灣銀行共同供應契約：機關學校可依契約向我們採購設備。
 Google for Education 合作夥伴資格總覽：官方資格年表、師資編制、承接範圍與採購方式整理在這一頁。
 公司內部的 Google 認證講師培訓中心
@@ -226,7 +226,7 @@ Google for Education 產品家族
 Google Workspace for Education：專為學校設計的雲端協作服務，Classroom、Meet、雲端硬碟、表單全部包含在內。
 Chromebook：專為教學設計的雲端載具，開機快、好管理，搭配 CEU 可全校集中控管。
 Gemini／Google AI Pro for Education：新型態 AI 教學助手，備課、出題、批改與行政都用得上。
-Google 認證培訓：認證教育家 Level 1／2、網域管理與訓練講師培訓，由本公司認證講師授課。
+Google 認證培訓：認證教育家 Level 1／2、Gemini 認證（教育家、教職員、大學生）備考研習、網域管理與訓練講師培訓，由本公司認證講師授課。
 完整導入諮詢：從現況盤點、方案規劃到建置與售後，同一組人負責到底。
 看 Google for Education 導入方案 →
 導入流程
@@ -392,7 +392,7 @@ Google AI Pro for Education 授權導入
 Gemini Pro 教育版帳號開通、導入規劃與教師研習，由 Google 官方授權夥伴交付。
 了解更多 →
 Google Workspace for Education 導入與認證培訓
-網域導入、管理主控台設定，以及 Google 認證教育家 Level 1／2、網域管理、認證訓練講師培訓。
+網域導入、管理主控台設定，以及 Google 認證教育家 Level 1／2、Gemini 認證備考研習、網域管理、認證訓練講師培訓。
 了解更多 →
 Google AI 校園研習
 K-12 與大學端的 Google AI 研習課程，教師、行政與學生分場設計，由認證講師到校授課。
@@ -987,7 +987,7 @@ https://www.hunglun.com/tools/english
 想讓學校或公司一起學？
 鴻綸科技提供教育訓練與學習工具規劃，可以依你的單位需要調整內容。
 聯絡我們
-看教育方案
+看教育解決方案
 ← 資源分享
 校園小工具 →
 
@@ -21494,7 +21494,7 @@ https://www.hunglun.com/services/google-workspace
 
 教育解決方案 ／ Google Workspace for Education 導入與認證培訓
 Google Workspace for Education 導入與認證培訓
-網域導入、管理主控台設定，以及 Google 認證教育家 Level 1／2、網域管理、認證訓練講師培訓。
+網域導入、管理主控台設定，以及 Google 認證教育家 Level 1／2、Gemini 認證備考研習、網域管理、認證訓練講師培訓。
 重點先看
 鴻綸科技提供哪些 Google Workspace for Education 服務？提供導入服務（網域建置與管理主控台設定、校園數位轉型顧問）與認證培訓三軌，自 2017 年起為 Google 官方授權在台教育合作發展夥伴。
 學校要用哪一個版本？只需要帳號、Classroom、雲端硬碟與 Meet 的基本協作，免費的 Education Fundamentals 通常就夠。要原創性報告與更完整的教學工具，才需要升級。
