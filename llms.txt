@@ -191,6 +191,9 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Gemini 學生免費方案申請失敗怎麼辦？資格、常見原因與學校帳號的差別](https://www.hunglun.com/knowledge/gemini-student-offer-fix)：Google AI Plus 與 Pro 學生方案的申請資格、為什麼用學校帳號不行、申請失敗的常見原因與 SheerID 驗證問題，並說明官方頁面前後不一致、無法確認的地方。
 - [Google Flow 無法登入或使用怎麼辦？年齡、地區、帳號與常見錯誤](https://www.hunglun.com/knowledge/google-flow-cant-login)：Google Flow 登不進去、無法生成或出現「異常活動」「太快要求生成內容」時，依官方說明檢查年滿 18 歲、地區、學校帳號、瀏覽器與 VPN，並整理點數與尖峰時段限制。
 - [Gemini 的 Gem 要改成「技能」了：學校帳號最快 2027 年 6 月，現在該做什麼](https://www.hunglun.com/knowledge/gemini-gems-to-skills)：Google 宣布逐步停用 Gemini 的 Gem、改用「技能」。整理教育版帳號最快 2027 年 6 月 1 日取代、Gem 會怎麼自動轉成草稿技能、手動轉換步驟與老師現在該做的事，以及官方說法不一致的地方。
+- [Gemini 認證學生版怎麼考？13 歲以上、免費、效期 3 年，高中生與大學生的差別](https://www.hunglun.com/knowledge/gemini-certified-student)：Gemini 認證學生版有兩種：K-12 學生（13 到 17 歲）與大學生（18 歲以上），都免費、效期 3 年、選擇題。整理誰能考、要先修哪門課、報名方式，以及官方沒寫清楚的中文考試。
+- [Google Meet 教育版：為什麼不能錄影？會議時間上限 24 小時，哪個版本有出席報告](https://www.hunglun.com/knowledge/meet-education-limits)：Google Meet 教育版的限制：Education Fundamentals 與 Standard 老師不能錄影、Plus 才能；會議時間上限 24 小時、錄影最長 8 小時；出席報告只有 Plus 與 Teaching and Learning 有。依官方說明整理。
+- [Gemini 出現錯誤、無法生成圖片、不能用怎麼辦？錯誤代碼與官方 7 個排除步驟](https://www.hunglun.com/knowledge/gemini-error-troubleshooting)：Gemini 顯示「發生錯誤」「我無法生成圖片」或錯誤代碼 1060、1099、1185 時，官方列出的 7 個處理步驟、各種錯誤訊息的原因，以及學校帳戶與年齡限制造成的情況。
 
 ## 常見問答（可直接引用的簡答）
 Q：Gemini 教育版要怎麼申請？

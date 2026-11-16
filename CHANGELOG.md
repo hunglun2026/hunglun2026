@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.40.8（2026-11-16）
+
+新增 3 篇 Google 教學文章，依台灣搜尋建議選題，官方來源逐一驗證皆回 200：`gemini-certified-student`（Gemini 認證學生版：K-12 學生 13 歲起、大學生 18 歲以上、免費、效期 3 年）、`meet-education-limits`（Google Meet 教育版：Fundamentals 與 Standard 不能錄影、會議上限 24 小時、錄影最長 8 小時、出席報告）、`gemini-error-troubleshooting`（Gemini 錯誤代碼與官方 7 個排除步驟）。寫作時同時最佳化三層：AEO（標題含問句或具體結果、「重點先看」第一句即答案、FAQ 用搜尋者問法 5 題）、GEO（正文有具體數字與日期，每篇 2 到 3 個 Google 官方來源，官方沒寫處明寫「無法確認」）、SEO（核心詞放標題前段、描述 88 字以上、分享圖、Article／FAQPage／BreadcrumbList 結構化資料）。另補內部連結網：10 個舊文章的「相關閱讀」或「延伸閱讀」加入新文章連結，涵蓋 `gemini-certification`、`gemini-certification-process`、`gemini-student-safety`、`meet`、`gemini-faq-limits`、`gemini-basics`、`gemini-teaching-prompts`、`gemini-notebook-teacher-prep`。刻意不引用的數字：Meet 各版本參與者人數上限（官方比較表欄位解析擠在一起無法確認）；並標出官方頁並列矛盾處：Meet 錄製頁對 Education Plus 學生帳戶可否錄影的兩句說法。
+
 ## v1.40.7（2026-11-16）
 
 新增 `/knowledge/gemini-gems-to-skills`（Gemini 的 Gem 要改成技能了：學校帳號最快 2027 年 6 月，現在該做什麼）。起因：做選題時發現 Google 官方宣布逐步以「技能」取代 Gem，教育版最快 2027 年 6 月 1 日起無法再使用 Gem，若照搜尋建議寫「Gem 怎麼設定」會誤導讀者。文章整理官方時程、Gem 自動轉成草稿技能的方式、手動轉換步驟與管理員建議，並如實標示官方說法不一致處：個人帳戶頁（11/17 轉唯讀、12/17 消失）與管理員頁（11/09 更新，11/17 仍可使用、未提 12/17）對不上，無法確認個人帳戶實際日期。三處舊文加註：`google/ai-pro-campus` 的「五、Gem」一節後加提醒、`classroom-guide` 的 Gem 說明加一句與連結；`classroom-homepage`（只描述首頁畫面現況）與 `gemini-certification`（引述官方考試指南）不改。實際提到 Gem 功能的頁面只有 7 頁，先前估的 51 篇是關鍵字誤比對到 Gemini。
