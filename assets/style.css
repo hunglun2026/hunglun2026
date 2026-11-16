@@ -610,8 +610,8 @@ a.card:hover,a.card:hover *{text-decoration: none}
 .kn-tabs a{flex: 0 0 auto}
 .kn-tabs a:hover{color: var(--text);border-color: var(--accent)}
 .kn-tabs a[aria-current="page"]{color: var(--accent);border-color: var(--accent);background: var(--card-hover);font-weight: 600}
-.kn-tabs a span{font-size: .82rem;color: var(--muted-faint)}
-.kn-tabs a[aria-current="page"] span{color: var(--accent)}
+.kn-tabs a > span{font-size: .82rem;color: var(--muted-faint)}
+.kn-tabs a[aria-current="page"] > span{color: var(--accent)}
 .kn-search{max-width: 640px;margin: 22px auto 0}
 .kn-search input{width: 100%;min-height: 52px;padding: 12px 20px;font: inherit;font-size: 1rem;color: var(--text);background: var(--card);border: 1px solid var(--line);border-radius: 999px;outline: none;transition: border-color .2s,box-shadow .2s}
 .kn-search input:focus{border-color: var(--accent);box-shadow: 0 0 0 3px var(--glow)}
@@ -647,6 +647,7 @@ a.card:hover,a.card:hover *{text-decoration: none}
 @media (max-width: 560px){.kn-row{grid-template-columns: 1fr;gap: 2px;padding: 12px 2px}.kn-row .kn-date{margin-top: 2px}}
 .kn-count{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
 .kn-sub-title{display: flex;align-items: baseline;gap: 10px;margin-bottom: 4px;font-size: 1.35rem;line-height: 1.4;scroll-margin-top: 90px}
+h2.kn-sub-title[data-sb]{padding: 6px 0 6px 18px}
 .kn-sub-title > span{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
 .kn-topic-group .section-sub{margin: 0 0 6px;text-align: left}
 .kn-jump{display: flex;flex-wrap: wrap;justify-content: center;gap: 8px;margin-top: 14px}
@@ -687,7 +688,7 @@ a.card:hover,a.card:hover *{text-decoration: none}
 .kn-block{margin-top: 34px}
 .kn-block-title{display: flex;align-items: baseline;gap: 10px;padding-bottom: 8px;font-size: 1.35rem;line-height: 1.4;border-bottom: 3px solid var(--kc);scroll-margin-top: 90px}
 .kn-block-title a{color: var(--kt);text-decoration: none}
-.kn-block-title span{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
+.kn-block-title > span{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
 .kn-sub{margin: 22px 0 4px;padding-left: 10px;font-size: 1rem;font-weight: 600;color: var(--text);border-left: 4px solid var(--kc)}
 .kn-sub > span{font-weight: 400;color: var(--muted-faint)}
 .kn-block .kn-list{margin-top: 6px}
@@ -696,10 +697,7 @@ a.card:hover,a.card:hover *{text-decoration: none}
 :root{--g-blue: #4285F4;--g-red: #EA4335;--g-yellow: #FBBC04;--g-green: #34A853}
 .prose:is(:has(> .kb-quick),.kb-layers){max-width: 800px}
 :is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > p,:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ul,:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ol{line-height: 1.95;margin-bottom: 26px}
-:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > h2{position: relative;margin: 72px 0 22px;padding: 6px 0 6px 18px;font-size: 1.65rem;font-weight: 600;line-height: 1.4;border-left: 6px solid var(--g-blue);border-radius: 2px}
-:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > h2:nth-of-type(4n+2){border-left-color: var(--g-red)}
-:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > h2:nth-of-type(4n+3){border-left-color: var(--g-yellow)}
-:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > h2:nth-of-type(4n){border-left-color: var(--g-green)}
+:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > h2{position: relative;margin: 72px 0 22px;font-size: 1.65rem}
 :is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > h3{margin: 40px 0 14px;padding-bottom: 8px;font-size: 1.2rem;font-weight: 600;border-bottom: 1px solid var(--line)}
 :is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ul,:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ol{padding: 20px 24px 20px 44px;background: var(--bg-soft);border: 1px solid var(--line);border-radius: 12px}
 :is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ul > li:last-child,:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > ol > li:last-child{margin-bottom: 0}
@@ -716,29 +714,31 @@ a.card:hover,a.card:hover *{text-decoration: none}
 }
 :root[data-theme="dark"]{--g-blue: #8AB4F8;--g-red: #F28B82;--g-yellow: #FDD663;--g-green: #81C995}
 
-/* 舊版型文章：每個章節各放在自己的 section／wrap 裡，大標題是 h2.section-title，補上同樣的色條（v1.39.39） */
-main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title:not(.kn-sub-title){position: relative;margin: 56px 0 20px;padding: 6px 0 6px 18px;font-size: 1.65rem;font-weight: 600;line-height: 1.4;text-align: left;border-left: 6px solid var(--sb,var(--g-blue));border-radius: 2px}
-main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title + :is(p,.section-sub){line-height: 1.95}
-@media (max-width: 640px){main:has(.kb-quick) :is(.section,section):not(.alt) > .wrap > h2.section-title:not(.kn-sub-title){margin: 44px 0 16px;padding-left: 14px;font-size: 1.4rem}}
-
 /* 新手先看卡片依分類上色（v1.39.40） */
 .kn-start-list li[class*="kn-c-"] a{border-top: 4px solid var(--kc)}
 .kn-start-list li[class*="kn-c-"] a::before{color: var(--kt);border-color: var(--kc);background: color-mix(in srgb,var(--kc) 12%,transparent)}
 .kn-start-list li[class*="kn-c-"] a:hover{border-color: var(--kc);border-top-color: var(--kc);box-shadow: 0 12px 28px -14px color-mix(in srgb,var(--kc) 45%,transparent)}
 
-/* 全站章節標題色條（v1.39.40）：內容頁每個章節的大標題加 Google 色標記，依章節順序輪流用藍、紅、黃、綠。靠左的標題用左側色條，置中的標題用下方色線；首頁除外 */
-body:not(.landing) main > :is(section,div).section{--sb: var(--g-blue)}
-body:not(.landing) main > :is(section,div).section:nth-child(4n+2){--sb: var(--g-red)}
-body:not(.landing) main > :is(section,div).section:nth-child(4n+3){--sb: var(--g-yellow)}
-body:not(.landing) main > :is(section,div).section:nth-child(4n){--sb: var(--g-green)}
-body:not(.landing) main > :is(section,div).section h2.section-title:not(.kn-sub-title){font-weight: 600}
-body:not(.landing) main > :is(section,div).section > .wrap:not([style*="text-align:center"],[style*="text-align: center"],.svc-group) > h2.section-title:not(.kn-sub-title){margin: 8px 0 20px;padding: 6px 0 6px 18px;font-size: 1.65rem;line-height: 1.4;text-align: left;border-left: 6px solid var(--sb);border-radius: 2px}
-body:not(.landing) main > :is(section,div).section > .wrap:not([style*="text-align:center"],[style*="text-align: center"],.svc-group) > h2.section-title + .section-sub{text-align: left}
-body:not(.landing) main > :is(section,div).section .svc-group > h2.section-title,body:not(.landing) main > :is(section,div).section > .wrap[style*="text-align:center"] > h2.section-title,body:not(.landing) main > :is(section,div).section > .wrap[style*="text-align: center"] > h2.section-title{display: table;margin-left: auto;margin-right: auto;padding: 0 4px 10px;font-size: 1.65rem;border-left: 0;border-bottom: 5px solid var(--sb);border-radius: 0}
-@media (max-width: 640px){body:not(.landing) main > :is(section,div).section > .wrap:not([style*="text-align:center"],[style*="text-align: center"],.svc-group) > h2.section-title:not(.kn-sub-title){padding-left: 14px;font-size: 1.4rem}}
+/* 新手先看：顏色跟閱讀順序走，5 張各一色，不重複（v1.40.0） */
+.kn-s1{--kc: #4285F4;--kt: #1A73E8}
+.kn-s2{--kc: #EA4335;--kt: #C5221F}
+.kn-s3{--kc: #FBBC04;--kt: #B06000}
+.kn-s4{--kc: #34A853;--kt: #188038}
+.kn-s5{--kc: #1967D2;--kt: #174EA6}
+:root[data-theme="dark"] .kn-s1{--kc: #8AB4F8;--kt: #8AB4F8}
+:root[data-theme="dark"] .kn-s2{--kc: #F28B82;--kt: #F28B82}
+:root[data-theme="dark"] .kn-s3{--kc: #FDD663;--kt: #FDD663}
+:root[data-theme="dark"] .kn-s4{--kc: #81C995;--kt: #81C995}
+:root[data-theme="dark"] .kn-s5{--kc: #669DF6;--kt: #669DF6}
+.kn-start-list li[class^="kn-s"] a{border-top: 4px solid var(--kc)}
+.kn-start-list li[class^="kn-s"] a::before{color: var(--kt);border-color: var(--kc);background: color-mix(in srgb,var(--kc) 12%,transparent)}
+.kn-start-list li[class^="kn-s"] a:hover{border-color: var(--kc);border-top-color: var(--kc);box-shadow: 0 12px 28px -14px color-mix(in srgb,var(--kc) 45%,transparent)}
 
-/* 教學資源總覽頁自己的章節標題也套色條（v1.39.40）：新手先看藍、依主題找紅、最新上線黃、全部文章綠 */
-#knMain > .section > .wrap > h2.section-title{margin: 8px 0 12px;padding: 6px 0 6px 18px;font-size: 1.65rem;font-weight: 600;line-height: 1.4;border-left: 6px solid var(--g-blue);border-radius: 2px}
-#knMain > .section:nth-child(2) > .wrap > h2.section-title{border-left-color: var(--g-red)}
-#knMain > .section:nth-child(3) > .wrap > h2.section-title{border-left-color: var(--g-yellow)}
-#knMain > .section:nth-child(4) > .wrap > h2.section-title{border-left-color: var(--g-green)}
+/* 全站章節標題色標記（v1.40.0）：由 sectionbar.js 在每個內容頁大標題加 data-sb（0 到 3）與 data-sb-center，這裡負責畫出來 */
+h2[data-sb]{--sb: var(--g-blue);font-weight: 600;line-height: 1.4}
+h2[data-sb="1"]{--sb: var(--g-red)}
+h2[data-sb="2"]{--sb: var(--g-yellow)}
+h2[data-sb="3"]{--sb: var(--g-green)}
+h2[data-sb]:not([data-sb-center]){padding: 6px 0 6px 18px;border-left: 6px solid var(--sb);border-radius: 2px;text-align: left}
+h2[data-sb][data-sb-center]{display: table;margin-left: auto;margin-right: auto;padding: 0 4px 10px;border-bottom: 5px solid var(--sb)}
+@media (max-width: 640px){h2[data-sb]:not([data-sb-center]){padding-left: 14px}}
