@@ -603,3 +603,69 @@ a.card:hover,a.card:hover *{text-decoration: none}
 @media (max-width: 860px){.footer-grid{grid-template-columns: 1fr}
 .footer-nav{column-gap: 24px;justify-items: start}
 }
+
+/* 教學資源總覽與分類頁（v1.39.36）：搜尋、新手先看、主題卡片、摺疊全部文章、小分組；分頁列樣式從各頁內嵌搬進來 */
+.kn-tabs{display: flex;flex-wrap: wrap;justify-content: center;gap: 8px}
+.kn-tabs a{display: inline-flex;align-items: center;gap: 6px;white-space: nowrap;min-height: 44px;padding: 10px 18px;font-size: 1rem;line-height: 1.2;color: var(--muted);background: var(--card);border: 1px solid var(--line);border-radius: 999px;text-decoration: none;transition: color .2s,border-color .2s,background .2s}
+.kn-tabs a{flex: 0 0 auto}
+.kn-tabs a:hover{color: var(--text);border-color: var(--accent)}
+.kn-tabs a[aria-current="page"]{color: var(--accent);border-color: var(--accent);background: var(--card-hover);font-weight: 600}
+.kn-tabs a span{font-size: .82rem;color: var(--muted-faint)}
+.kn-tabs a[aria-current="page"] span{color: var(--accent)}
+.kn-search{max-width: 640px;margin: 22px auto 0}
+.kn-search input{width: 100%;min-height: 52px;padding: 12px 20px;font: inherit;font-size: 1rem;color: var(--text);background: var(--card);border: 1px solid var(--line);border-radius: 999px;outline: none;transition: border-color .2s,box-shadow .2s}
+.kn-search input:focus{border-color: var(--accent);box-shadow: 0 0 0 3px var(--glow)}
+.kn-dl{margin-top: 14px;font-size: .92rem}
+.kn-who{color: var(--muted);font-size: .9rem;margin-top: 6px}
+.kn-start-list{list-style: none;counter-reset: kn;display: grid;grid-template-columns: repeat(auto-fit,minmax(260px,1fr));gap: 14px;margin-top: 8px}
+.kn-start-list li{counter-increment: kn}
+.kn-start-list a{display: block;height: 100%;padding: 18px 20px 18px 56px;position: relative;color: inherit;text-decoration: none;background: var(--card);border: 1px solid var(--line);border-radius: 12px;transition: border-color .2s,box-shadow .2s}
+.kn-start-list a::before{content: counter(kn);position: absolute;left: 18px;top: 16px;width: 28px;height: 28px;display: grid;place-items: center;font-size: .9rem;font-weight: 600;color: var(--accent);border: 1px solid var(--accent);border-radius: 50%}
+.kn-start-list a:hover{border-color: var(--accent);box-shadow: 0 12px 28px -14px var(--glow)}
+.kn-start-list strong{display: block;font-size: 1rem;line-height: 1.45;color: var(--text)}
+.kn-start-list a > span{display: block;margin-top: 4px;font-size: .85rem;line-height: 1.6;color: var(--muted)}
+.kn-cards{display: grid;grid-template-columns: repeat(3,1fr);gap: 18px;margin-top: 8px}
+@media (max-width: 900px){.kn-cards{grid-template-columns: repeat(2,1fr)}}
+@media (max-width: 600px){.kn-cards{grid-template-columns: 1fr}}
+.kn-card{display: flex;flex-direction: column;padding: 24px;background: var(--card);border: 1px solid var(--line);border-radius: 12px;transition: border-color .2s,box-shadow .2s}
+.kn-card:hover{border-color: var(--accent);box-shadow: 0 12px 28px -14px var(--glow)}
+.kn-card h3{font-size: 1.15rem;line-height: 1.4}
+.kn-card h3 a{color: var(--text);text-decoration: none}
+.kn-card .kn-who{margin: 6px 0 12px}
+.kn-card ul{list-style: none;margin: 0 0 16px;padding: 0;border-top: 1px solid var(--line)}
+.kn-card li{border-bottom: 1px solid var(--line)}
+.kn-card li a{display: block;padding: 10px 0;font-size: .92rem;line-height: 1.5;color: var(--text);text-decoration: none}
+.kn-card li a:hover{color: var(--accent)}
+.kn-more{margin-top: auto;font-size: .92rem;font-weight: 500;color: var(--accent);text-decoration: none}
+.kn-more:hover{text-decoration: underline}
+.kn-row{display: grid;grid-template-columns: 1fr auto;align-items: center;gap: 16px;padding: 13px 4px;min-height: 56px;color: inherit;text-decoration: none;transition: background .2s,padding-left .2s}
+.kn-row:hover{background: var(--bg-soft);padding-left: 10px;text-decoration: none !important}
+.kn-row .kn-text > .kn-t{display: block;color: var(--text);font-size: 1rem;line-height: 1.5}
+.kn-row:hover .kn-text > .kn-t{color: var(--accent)}
+.kn-row .kn-text > .kn-d{display: block;color: var(--muted);font-size: .85rem;line-height: 1.6;margin-top: 2px}
+.kn-new{display: inline-block;margin-left: 6px;padding: 1px 8px;font-size: .72rem;font-weight: 600;line-height: 1.6;color: var(--accent);border: 1px solid var(--accent);border-radius: 999px;vertical-align: 2px}
+@media (max-width: 560px){.kn-row{grid-template-columns: 1fr;gap: 2px;padding: 12px 2px}.kn-row .kn-date{margin-top: 2px}}
+.kn-count{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
+.kn-toggle{margin-left: 12px;padding: 4px 12px;font: inherit;font-size: .85rem;color: var(--accent);background: none;border: 1px solid var(--accent);border-radius: 999px;cursor: pointer}
+.kn-fold{border-top: 1px solid var(--line)}
+.kn-fold:last-of-type{border-bottom: 1px solid var(--line)}
+.kn-fold summary{display: flex;align-items: center;justify-content: space-between;gap: 12px;min-height: 56px;padding: 12px 4px;font-size: 1.05rem;font-weight: 500;color: var(--text);cursor: pointer;list-style: none}
+.kn-fold summary::-webkit-details-marker{display: none}
+.kn-fold summary::after{content: "＋";color: var(--accent);font-weight: 400}
+.kn-fold[open] summary::after{content: "－"}
+.kn-fold summary > span{margin-left: auto;font-size: .85rem;font-weight: 400;color: var(--muted-faint)}
+.kn-fold-body{padding: 0 4px 18px}
+.kn-sub{margin: 18px 0 4px;font-size: .95rem;font-weight: 600;color: var(--accent)}
+.kn-sub > span{font-weight: 400;color: var(--muted-faint)}
+.kn-fold-more{margin-top: 12px;font-size: .9rem}
+.kn-sub-title{display: flex;align-items: baseline;gap: 10px;margin-bottom: 4px;font-size: 1.35rem;line-height: 1.4;scroll-margin-top: 90px}
+.kn-sub-title > span{font-size: .9rem;font-weight: 400;color: var(--muted-faint)}
+.kn-topic-group .section-sub{margin: 0 0 6px;text-align: left}
+.kn-jump{display: flex;flex-wrap: wrap;justify-content: center;gap: 8px;margin-top: 14px}
+.kn-jump a{padding: 6px 14px;font-size: .9rem;color: var(--muted);border: 1px dashed var(--line);border-radius: 999px;text-decoration: none}
+.kn-jump a:hover{color: var(--accent);border-color: var(--accent)}
+.kn-jump a > span{color: var(--muted-faint);font-size: .8rem}
+.kn-results[hidden],#knMain[hidden]{display: none}
+@media (max-width: 640px){.kn-tabs{flex-wrap: nowrap;justify-content: flex-start;overflow-x: auto;-webkit-overflow-scrolling: touch;scrollbar-width: none;margin: 0 -16px;padding: 0 16px 4px}
+.kn-tabs::-webkit-scrollbar{display: none}
+}
