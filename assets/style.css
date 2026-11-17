@@ -742,3 +742,8 @@ h2[data-sb="3"]{--sb: var(--g-green)}
 h2[data-sb]:not([data-sb-center]){padding: 6px 0 6px 18px;border-left: 6px solid var(--sb);border-radius: 2px;text-align: left}
 h2[data-sb][data-sb-center]{display: table;margin-left: auto;margin-right: auto;padding: 0 4px 10px;border-bottom: 5px solid var(--sb)}
 @media (max-width: 640px){h2[data-sb]:not([data-sb-center]){padding-left: 14px}}
+
+/* 公開工具頁頂部的返回官網條（階段二，2026-11-17） */
+.back-home-bar{background: var(--bg-soft);border-bottom: 1px solid var(--line);font-size: 0.85rem;line-height: 1;text-align: left}
+.back-home-bar a{display: inline-block;padding: 11px max(16px,4vw);color: var(--muted)}
+.back-home-bar a:hover{color: var(--accent);text-decoration: none}

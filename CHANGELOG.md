@@ -3,6 +3,18 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.41.0（2026-11-17）
+
+階段二「首頁與導覽列商業純化」。所有頁面網址一律不變，免費工具、學習專區、藥品查詢、行政工具的網址都沒動。
+- 主選單從 10 項精簡成 5 項：關於我們、解決方案（Google 授權、校園研習、設備採購、企業方案）、成功案例、工具與教學資源（學習專區、藥品查詢、行政小工具、教學資源、AI 最新消息、全部工具總覽），右側深色按鈕「線上諮詢」。309 頁同步，沿用 `sitemap/restructure-nav-v2.py`，連結全寫在 HTML 裡。`/software`、`/services` 改由頁尾與首頁服務區連到，被連頁數不變。
+- 首頁拿掉「關於我們、解決方案、成功案例、常見問題、聯絡我們」捲動巡覽（跟選單與頁尾重複）。
+- 首頁「我們的服務」15 項由四個收合區改成四個頁籤，預設顯示 Google 授權與培訓，四個面板內容都在 HTML，沒有 JavaScript 時全部顯示，支援鍵盤方向鍵。
+- 首頁「客製化工具」與「學習專區」收進頁尾上方的「鴻綸數位實驗室」橫幅，16 個工具放在預設收合的區塊裡。
+- 公開工具頁（學習專區、行政工具、校園工具、資料查詢、寄信工具、英文課共 125 頁）頂部加「← 返回鴻綸科技官網」。有密碼的商用工具與研習講義不加。
+- `llms.txt` 的藥品與動物用藥查詢補上教學輔助與客製開發實績的定位說明。
+- 實測：首頁整頁高度桌面縮短 47%（7408 到 3928 像素）、手機縮短 37%（8034 到 5095 像素），無橫向溢出、無 JavaScript 錯誤。
+- 版號：style.css v159、landing.css v46、landing.js v18。
+
 ## v1.40.8（2026-11-16）
 
 新增 3 篇 Google 教學文章，依台灣搜尋建議選題，官方來源逐一驗證皆回 200：`gemini-certified-student`（Gemini 認證學生版：K-12 學生 13 歲起、大學生 18 歲以上、免費、效期 3 年）、`meet-education-limits`（Google Meet 教育版：Fundamentals 與 Standard 不能錄影、會議上限 24 小時、錄影最長 8 小時、出席報告）、`gemini-error-troubleshooting`（Gemini 錯誤代碼與官方 7 個排除步驟）。寫作時同時最佳化三層：AEO（標題含問句或具體結果、「重點先看」第一句即答案、FAQ 用搜尋者問法 5 題）、GEO（正文有具體數字與日期，每篇 2 到 3 個 Google 官方來源，官方沒寫處明寫「無法確認」）、SEO（核心詞放標題前段、描述 88 字以上、分享圖、Article／FAQPage／BreadcrumbList 結構化資料）。另補內部連結網：10 個舊文章的「相關閱讀」或「延伸閱讀」加入新文章連結，涵蓋 `gemini-certification`、`gemini-certification-process`、`gemini-student-safety`、`meet`、`gemini-faq-limits`、`gemini-basics`、`gemini-teaching-prompts`、`gemini-notebook-teacher-prep`。刻意不引用的數字：Meet 各版本參與者人數上限（官方比較表欄位解析擠在一起無法確認）；並標出官方頁並列矛盾處：Meet 錄製頁對 Education Plus 學生帳戶可否錄影的兩句說法。

@@ -142,3 +142,30 @@ html.lenis{scroll-behavior: auto}
 @media (min-width:601px){.l-learn-row{max-width:600px;margin-left:auto;margin-right:auto;column-gap:6px}}
 @media (min-width:601px) and (max-width:640px){.l-learn-tile{width:100px}}
 .l-faq-wrap{max-width: 720px;margin: 0;text-align: left}
+/* 階段二（2026-11-17）：服務區頁籤 */
+.l-svc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.l-svc-tab{font:inherit;font-size:.95rem;cursor:pointer;min-height:44px;padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted);transition:background .2s ease,color .2s ease,border-color .2s ease}
+.l-svc-tab:hover{border-color:var(--accent);color:var(--text)}
+.l-svc-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.l-svc-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.l-svc-panel[hidden]{display:none}
+.l-svc-panel-d{color:var(--muted);font-size:.95rem;margin-top:22px}
+.l-svc-panel .l-services-grid{margin-top:14px}
+@media (max-width:600px){.l-svc-tabs{gap:6px;margin-top:18px}.l-svc-tab{flex:1 1 calc(50% - 6px);padding:8px 10px;font-size:.88rem;line-height:1.3}}
+@media (prefers-reduced-motion:reduce){.l-svc-tab{transition:none}}
+/* 階段二：頁尾上方「鴻綸數位實驗室」橫幅與收合的工具矩陣 */
+.l-lab{max-width:1080px;margin:0 auto;padding:24px 6vw 48px}
+.l-lab-banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px}
+.l-lab-text{flex:1 1 360px}
+.l-lab-text h2{font-size:clamp(1.15rem,2.4vw,1.4rem);font-weight:700;line-height:1.4;margin:0 0 8px}
+.l-lab-text p{color:var(--muted);font-size:.95rem;margin:0}
+.l-lab-cta{display:flex;flex-wrap:wrap;gap:10px}
+.l-lab-cta .btn{min-height:44px}
+.l-lab-all{margin-top:14px}
+.l-lab-all>summary{cursor:pointer;display:inline-block;padding:10px 4px;color:var(--accent);font-size:.95rem;list-style:none}
+.l-lab-all>summary::-webkit-details-marker{display:none}
+.l-lab-all>summary::after{content:"▾";display:inline-block;margin-left:6px;transition:transform .2s ease}
+.l-lab-all[open]>summary::after{transform:rotate(180deg)}
+.l-lab-all>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.l-lab-more{margin-top:18px;text-align:center}
+@media (max-width:600px){.l-lab{padding:16px 4vw 36px}.l-lab-banner{padding:18px 16px}}
