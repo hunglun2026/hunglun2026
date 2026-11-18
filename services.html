@@ -490,13 +490,12 @@
 
 <section class="section svc-tab-panel" id="tab-cases" hidden>
   <style>
-    .cs-stats{display:grid;grid-template-columns:repeat(5,1fr);margin:8px 0 8px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+    .cs-stats{display:grid;grid-template-columns:repeat(4,1fr);margin:8px 0 8px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
     .cs-stat{padding:22px 18px;border-left:1px solid var(--line)}
     .cs-stat:first-child{border-left:0}
     .cs-stat b{display:block;font-size:2rem;line-height:1.1;font-weight:600;color:var(--accent);letter-spacing:0}
     .cs-stat b small{font-size:1rem;font-weight:500;margin-left:2px}
     .cs-stat span{display:block;margin-top:8px;font-size:0.86rem;color:var(--muted);line-height:1.5}
-    #projects .grid{grid-template-columns:repeat(2,1fr)}
     #credentials + .wrap.prose{margin-top:56px}
     .cs-lead{max-width:760px;margin-bottom:28px;color:var(--text-body)}
     .cs-timeline{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
@@ -529,8 +528,7 @@
       .cs-stat{border-left:0;border-top:1px solid var(--line)}
       .cs-stat:nth-child(-n+2){border-top:0}
       .cs-stat:nth-child(even){border-left:1px solid var(--line)}
-      .cs-stat:last-child{grid-column:1 / -1;border-left:0}
-      .cs-cases,.cs-creds,#projects .grid{grid-template-columns:1fr}
+      .cs-cases,.cs-creds{grid-template-columns:1fr}
       .cs-timeline li{grid-template-columns:1fr;gap:4px;padding:14px 18px}
     }
   </style>
@@ -542,61 +540,6 @@
       <div class="cs-stat"><b>2017<small>年</small></b><span>起為 Google 官方授權在台教育合作發展夥伴</span></div>
       <div class="cs-stat"><b>5<small>位</small></b><span>Google 認證講師，另有 2 位認證網域管理員</span></div>
       <div class="cs-stat"><b>916<small>筆</small></b><span>共同供應契約品項，站上可查詢比對</span></div>
-      <div class="cs-stat"><b>4<small>套</small></b><span>已上線、可直接體驗的教育行政工具</span></div>
-    </div>
-  </div>
-
-  <div class="wrap" id="projects">
-    <h2 class="section-title" style="margin-top:46px;">已上線的作品</h2>
-    <p class="section-sub reveal" style="margin-bottom:24px;">這是<strong>取得同意可以公開</strong>的部分：自主開發的教育行政工具，每一項都已正式上線、實際運作中，點「前往體驗」可以直接使用。</p>
-    <div class="grid">
-      <article class="card reveal" data-tag="許可證查詢">
-        <div class="card-body">
-          <h3><a href="https://med.hunglun.com/" target="_blank" rel="noopener">藥品許可證外觀查詢系統</a></h3>
-          <div class="tagline">看外觀找藥・查仿單 PDF</div>
-          <p>整合三大公開資料集，超過 22,000 筆藥品許可證，依外觀（形狀、顏色）、成分、藥名即時查詢，可直接開啟仿單 PDF。資料每日自動同步。</p>
-          <div class="tags"><span class="tag">AI 輔助開發</span><span class="tag">公開資料</span><span class="tag">Cloudflare</span></div>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://med.hunglun.com/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal" data-tag="許可證查詢">
-        <div class="card-body">
-          <h3><a href="https://vet.hunglun.com/" target="_blank" rel="noopener">動物用藥許可證查詢</a></h3>
-          <div class="tagline">免驗證碼・即打即搜</div>
-          <p>動物用藥資料近萬筆，免驗證碼即時全文搜尋，依對象動物、劑型、有效狀態篩選，比官方系統更快更好用。每週自動更新。</p>
-          <div class="tags"><span class="tag">公開資料</span><span class="tag">即時搜尋</span><span class="tag">自動更新</span></div>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://vet.hunglun.com/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal" data-tag="回條辨識">
-        <div class="card-body">
-          <h3><a href="https://slip.hunglun.com/" target="_blank" rel="noopener">學生回條 AI 辨識系統</a></h3>
-          <div class="tagline">拍照上傳・自動統計・匯出 Excel</div>
-          <p>AI 視覺辨識批次讀取家長同意書回條，自動判讀班級、座號、姓名與勾選結果，比對名單後一鍵匯出 Excel，大幅節省導師人工登記時間。</p>
-          <div class="tags"><span class="tag">AI 視覺辨識</span><span class="tag">校園行政</span><span class="tag">Excel 匯出</span></div>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://slip.hunglun.com/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card reveal" data-tag="文件工具">
-        <div class="card-body">
-          <h3><a href="https://photo.hunglun.com/" target="_blank" rel="noopener">校園照片 Word 填入工具</a></h3>
-          <div class="tagline">所見即所得・照片自動排版</div>
-          <p>在瀏覽器直接預覽 Word 成果報告，點格子、點照片即完成填入；照片自動置中、尺寸統一，支援存檔後二次編輯。檔案全程在本機處理，不上傳雲端。</p>
-          <div class="tags"><span class="tag">校園行政</span><span class="tag">Word 自動化</span><span class="tag">本機處理</span></div>
-          <div class="card-actions">
-            <a class="btn btn-primary btn-sm" href="https://photo.hunglun.com/" target="_blank" rel="noopener">前往體驗</a>
-          </div>
-        </div>
-      </article>
     </div>
   </div>
 
@@ -769,7 +712,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.1</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.2</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
