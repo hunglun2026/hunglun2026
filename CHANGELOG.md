@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.41.6（2026-11-18）
+
+「成功案例」從 /services 的分頁拆成獨立頁 /cases（標題、麵包屑、結構化資料都是成功案例）；/services 只留解決方案。全站主選單與內文的 `/services#cases` 等連結改指 /cases；舊網址由 services.html 的小段 JS 轉過去；刪除 `_redirects` 的 `/cases /services#cases`（會與新頁互相轉圈）；sitemap、llms.txt、llms-full.txt、search-index.json 同步。
+
 ## v1.41.5（2026-11-18）
 
 成功案例分頁的客戶委託案例改成統一版型：左側客戶名稱、標籤與連結，右側「客戶、我們做了什麼、交付內容」。內容只用可查證的事實（頁數、功能、位置），不放未經證實的成果數字。

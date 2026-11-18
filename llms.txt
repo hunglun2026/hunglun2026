@@ -50,8 +50,8 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 關於我們：https://www.hunglun.com/about
 - Google 解決方案（Google AI Pro for Education 授權導入、Google Workspace for Education 導入與認證培訓、Google AI 校園研習、Chromebook 與智慧教室建置、Google AI 企業級授權導入，含導入流程說明）：https://www.hunglun.com/google
 - 智慧校園：Google AI Pro for Education 導入說明（到校簡報的網頁版：教育版資安與合規承諾；基礎版與進階版額度比較：Token 32,000 對 1,000,000、Deep Research 每月 5 份對每天 20 份、Nano Banana 2 生圖、Gemini Omni 影片每天 10 部；Gemini Notebook 筆記本／來源／查詢與每日生成額度比較；Gem、Google Vids、Help me write／organize；授權級距與贈送服務；Teaching and Learning 對 Education Plus 的會議人數與儲存空間差異。單價不公開，請洽詢報價）：https://www.hunglun.com/google/ai-pro-campus
-- 服務項目（三個分頁：解決方案／成功案例／網站效果 Live Demo）：https://www.hunglun.com/services
-- 成功案例（客戶委託案例：伊登森活 Idun Beauty SPA、喜翻親子感統遊戲空間、會員集點系統；另有近期研習場次與可查證資格）：https://www.hunglun.com/services#cases
+- 教育解決方案（服務項目分四類）：https://www.hunglun.com/services
+- 成功案例（客戶委託案例：伊登森活 Idun Beauty SPA、喜翻親子感統遊戲空間、會員集點系統；另有近期研習場次與可查證資格）：https://www.hunglun.com/cases
 - 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分四區：八個主題探險網站〔動物、植物、兩棲、故宮、海洋、昆蟲、古蹟、土石流〕、大學自學〔普通物理〕、闖關遊戲〔邊玩邊變強、動物園守護戰〕、課堂即時測驗〔刻度，老師出題、學生線上作答用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
 - 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習專區／資料查詢網站全部免費）：https://www.hunglun.com/tools
   - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、行政效率工具 https://www.hunglun.com/tools/admin、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、校園小工具 https://www.hunglun.com/tools/campus、學習專區 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
@@ -102,7 +102,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 標案設備採購・台灣銀行共同供應契約（機關學校可依契約採購，站內收錄 916 筆契約品項）：https://www.hunglun.com/services/procurement
   - 六大類別各有獨立頁面：主機 https://www.hunglun.com/services/procurement/desktop、顯示器 https://www.hunglun.com/services/procurement/monitor、平板 https://www.hunglun.com/services/procurement/tablet、繪圖卡 https://www.hunglun.com/services/procurement/gpu、相機 https://www.hunglun.com/services/procurement/camera、電腦軟體 https://www.hunglun.com/services/procurement/software
   - 電腦軟體另含 15 個子類頁：https://www.hunglun.com/services/procurement/software/sw-admin、https://www.hunglun.com/services/procurement/software/sw-ai、https://www.hunglun.com/services/procurement/software/sw-cad、https://www.hunglun.com/services/procurement/software/sw-db、https://www.hunglun.com/services/procurement/software/sw-elearning、https://www.hunglun.com/services/procurement/software/sw-endpoint、https://www.hunglun.com/services/procurement/software/sw-file、https://www.hunglun.com/services/procurement/software/sw-iam、https://www.hunglun.com/services/procurement/software/sw-message、https://www.hunglun.com/services/procurement/software/sw-microsoft、https://www.hunglun.com/services/procurement/software/sw-network、https://www.hunglun.com/services/procurement/software/sw-oss、https://www.hunglun.com/services/procurement/software/sw-virtual、https://www.hunglun.com/services/procurement/software/sw-vuln、https://www.hunglun.com/services/procurement/software/sw-web
-- 導入實績與常見情境（服務項目頁的「成功案例」分頁；六種最常見的學校導入情境與標準做法：Google Workspace 網域治理、Chromebook 行動學習佈建、智慧情境教室與計畫規劃書、教師研習與認證、校園行政自動化、共同供應契約採購支援。服務範圍以台中以南各縣市為主，涵蓋國小、國中、高中職與大專院校。**基於商業機密與客戶保密，不公開個別合作學校名稱**，改以第三方可查證的資格佐證）：https://www.hunglun.com/services#cases
+- 導入實績與常見情境（成功案例頁 https://www.hunglun.com/cases ；六種最常見的學校導入情境與標準做法：Google Workspace 網域治理、Chromebook 行動學習佈建、智慧情境教室與計畫規劃書、教師研習與認證、校園行政自動化、共同供應契約採購支援。服務範圍以台中以南各縣市為主，涵蓋國小、國中、高中職與大專院校。**基於商業機密與客戶保密，不公開個別合作學校名稱**，改以第三方可查證的資格佐證）：https://www.hunglun.com/cases
 - 聯絡我們：https://www.hunglun.com/contact
 
 ## 教學資源分類頁（每頁皆為獨立問答式內容，含 Article 與 FAQPage 結構化資料）
