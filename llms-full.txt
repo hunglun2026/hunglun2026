@@ -367,7 +367,7 @@ Teaching and Learning 與 Education Plus 有什麼差別？
 
 ---
 
-## 服務項目｜Google AI Pro for Education 授權｜鴻綸科技
+## 教育方案與服務項目｜Google AI Pro for Education 授權｜鴻綸科技
 
 https://www.hunglun.com/services
 
@@ -507,7 +507,7 @@ Google 認證教育家與認證講師指南 →
 
 ---
 
-## 成功案例｜協助醫專、科技大學、職業學校規劃 AI 智慧教室｜鴻綸科技
+## 成功案例｜AI 智慧教室規劃與設備，醫專、科技大學、職業學校｜鴻綸科技
 
 https://www.hunglun.com/cases
 
@@ -614,13 +614,13 @@ Intune 派送說明
 
 ---
 
-## 教師小幫手｜回條辨識、照片填入 Word、互動式評量｜鴻綸科技
+## 教師小幫手｜免費 AI 出題工具、回條辨識、照片填入 Word｜鴻綸科技
 
 https://www.hunglun.com/tools/campus
 
 首頁 ／ 資源分享 ／ 教師小幫手
 教師小幫手
-老師與班導日常會用到的免費小工具：回條辨識、照片填入 Word、互動式評量、藥品與動物用藥查詢。
+老師與班導日常會用到的免費 AI 小工具：AI 出題與線上作答、回條辨識、照片填入 Word、藥品與動物用藥查詢。
 研習專區
 商用工具
 教師小幫手
@@ -753,7 +753,7 @@ https://www.hunglun.com/tools/photo-word
 
 ---
 
-## 學習專區｜免費學習遊戲、主題探險網站與課堂即時測驗｜鴻綸科技
+## 學習專區｜免費學習遊戲平台、國小英文與主題探險網站｜鴻綸科技
 
 https://www.hunglun.com/tools/games
 
@@ -871,7 +871,7 @@ AI 出題・線上作答・自動評分・即時看進度
 
 ---
 
-## 資料查詢網站｜藥品許可證、動物用藥｜鴻綸科技
+## 藥品許可證查詢系統｜藥品外觀查詢、動物用藥查詢｜鴻綸科技
 
 https://www.hunglun.com/tools/data-search
 
@@ -11964,7 +11964,7 @@ AEO（Answer Engine Optimization）是讓網站內容能直接被搜尋引擎或
 
 ---
 
-## 教學資源｜Google 授權・AI 教學・設備採購｜鴻綸科技
+## 教學資源｜Gemini 教學手冊、Google Classroom 教學與設備採購｜鴻綸科技
 
 https://www.hunglun.com/knowledge
 
@@ -21251,7 +21251,7 @@ Google for Education 指南：認證夥伴計畫與申請流程 →
 
 ---
 
-## 學校 AI 教師研習｜Google 認證講師到校，K-12 與大學端｜鴻綸科技
+## 教師 AI 研習｜學校到校，Google 認證講師，K-12 與大學端｜鴻綸科技
 
 https://www.hunglun.com/services/campus-training
 
