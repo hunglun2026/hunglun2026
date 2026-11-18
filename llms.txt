@@ -53,7 +53,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - 成功案例（客戶委託案例：伊登森活 Idun Beauty SPA、喜翻親子感統遊戲空間、會員集點系統；另有近期研習場次與可查證資格）：https://www.hunglun.com/cases
 - 學習專區（主選單第一層，給學生用的免費學習網站與遊戲，分四區：八個主題探險網站〔動物、植物、兩棲、故宮、海洋、昆蟲、古蹟、土石流〕、大學自學〔普通物理〕、闖關遊戲〔邊玩邊變強、動物園守護戰〕、課堂即時測驗〔刻度，老師出題、學生線上作答用手機作答〕；短網址 https://www.hunglun.com/learn）：https://www.hunglun.com/tools/games
 - 資源分享（依用途分類：研習專區為付費研習學員專用、需密碼；校園小程式／學習專區／資料查詢網站全部免費）：https://www.hunglun.com/tools
-  - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、教師 AI 小幫手 https://www.hunglun.com/tools/campus、學習專區 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
+  - 各分類各有獨立頁面：研習專區 https://www.hunglun.com/tools/training、商用工具（需密碼：ChromeOS Flex 部署、全國學校人數查詢）https://www.hunglun.com/tools/commercial、教師小幫手 https://www.hunglun.com/tools/campus、學習專區 https://www.hunglun.com/tools/games、資料查詢網站（藥品許可證、動物用藥）https://www.hunglun.com/tools/data-search
 - 英文自學課程（學習專區「語文自學」；110 堂、每堂 10 分鐘、一堂一頁，從字母排到多益 800 左右，可聽發音、星星與徽章、記錄進度，免註冊、不用 AI；分 6 級：https://www.hunglun.com/tools/english-0 到 https://www.hunglun.com/tools/english-5，每堂網址 https://www.hunglun.com/tools/english-lesson-1 起）：https://www.hunglun.com/tools/english
 - 學生回條 AI 辨識系統介紹（家長同意書回條拍照統計、匯出 Excel）：https://www.hunglun.com/tools/consent-slip-ai
 - 校園照片 Word 填入工具介紹（活動成果報告照片排版）：https://www.hunglun.com/tools/photo-word
@@ -218,4 +218,4 @@ A：沒有。學校的採購內容與資訊環境屬於校內事務，基於保�
 ## 教育數位轉型與採購情境
 - 服務對象涵蓋台灣 K12 中小學與大專院校，協助學校端評估、導入 Google AI Pro for Education（Gemini 教育版）與 Google Workspace for Education，並提供教師研習與 Chromebook 智慧教室建置。
 - 針對校園採購流程提供估價單、規格書等文件支援，可依學校經費規模討論導入方案（詳情請洽聯絡我們頁面確認最新方案）。
-- 自主開發之教師 AI 小幫手聚焦「解決學校行政現場的具體困擾」：回條批次辨識、藥品/動物用藥公開資料查詢、活動照片排版、AI 命題、課堂即時測驗、課堂遊戲，皆可免費線上體驗。
+- 自主開發之教師小幫手聚焦「解決學校行政現場的具體困擾」：回條批次辨識、藥品/動物用藥公開資料查詢、活動照片排版、AI 命題、課堂即時測驗、課堂遊戲，皆可免費線上體驗。
