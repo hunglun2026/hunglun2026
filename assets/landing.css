@@ -169,3 +169,12 @@ html.lenis{scroll-behavior: auto}
 .l-lab-all>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 .l-lab-more{margin-top:18px;text-align:center}
 @media (max-width:600px){.l-lab{padding:16px 4vw 36px}.l-lab-banner{padding:18px 16px}}
+
+/* 巡覽加質感（2026-11-18）：場景編號與進度條 */
+.tour-zoom-count{position:absolute;left:clamp(28px,5vw,64px);top:calc(6vh + 22px);z-index:3;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.08em;text-shadow:0 1px 10px rgba(0,0,0,.45);display:flex;align-items:baseline;gap:8px}
+.tour-zoom-count b{font-size:1.6rem;font-weight:600}
+.tour-zoom-count span{font-size:.85rem;opacity:.75}
+.tour-zoom-bar{position:absolute;left:5vw;right:5vw;bottom:calc(3vh - 2px);height:3px;border-radius:3px;background:var(--line);z-index:3;overflow:hidden}
+.tour-zoom-bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:3px}
+@media (max-width:860px){.tour-zoom-count{left:20px;top:calc(9vh + 16px)}.tour-zoom-count b{font-size:1.25rem}.tour-zoom-bar{left:3vw;right:3vw}}
+@media (prefers-reduced-motion:reduce){.tour-zoom-count,.tour-zoom-bar{display:none}}

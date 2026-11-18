@@ -28,7 +28,7 @@
 <link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=95" crossorigin>
 <link rel="stylesheet" href="/assets/style.css?v=159">
-<link rel="stylesheet" href="/assets/landing.css?v=46">
+<link rel="stylesheet" href="/assets/landing.css?v=47">
 <noscript><style>.l-svc-panel[hidden]{display:block}.l-svc-tabs{display:none}</style></noscript>
 <script type="application/ld+json">
 {
@@ -314,6 +314,57 @@
   </div>
 </section>
 
+<!-- 5 景全站巡覽：全螢幕照片 zoom-through（捲動時鏡頭穿越畫面飛進下一景，文字跟著飄過） -->
+<section class="tour-zoom" id="tourZoom" style="height:320vh;">
+  <div class="tour-zoom-sticky">
+    <div class="tour-zoom-panel" data-i="0">
+      <img fetchpriority="high" width="1017" height="572" src="/assets/images/tour-real-about.webp" alt="高雄女中電腦教室的教師研習現場，講師在三塊大螢幕前講解，老師們在電腦前實作" decoding="async" srcset="/assets/images/tour-real-about-480.webp 480w, /assets/images/tour-real-about-768.webp 768w, /assets/images/tour-real-about.webp 1017w" sizes="(max-width: 700px) 377px, 1270px">
+      <div class="tour-zoom-text">
+        <h2>關於我們</h2>
+        <p>認證沿革與服務理念</p>
+        <a class="btn btn-primary" href="/about">前往頁面 →</a>
+      </div>
+    </div>
+    <div class="tour-zoom-panel" data-i="1">
+      <img width="1017" height="572" src="/assets/images/tour-real-services.webp" alt="台南聖功女中電腦教室的教師研習現場，老師們在電腦前實作，前方投影出研習用的短網址" loading="lazy" decoding="async" srcset="/assets/images/tour-real-services-480.webp 480w, /assets/images/tour-real-services-768.webp 768w, /assets/images/tour-real-services.webp 1017w" sizes="(max-width: 700px) 377px, 1270px">
+      <div class="tour-zoom-text">
+        <h2>解決方案</h2>
+        <p>服務類別介紹</p>
+        <a class="btn btn-primary" href="/services">前往頁面 →</a>
+      </div>
+    </div>
+    <div class="tour-zoom-panel" data-i="2">
+      <img width="1017" height="572" src="/assets/images/tour-real-projects.webp" alt="樹人醫護管理專科學校電腦教室的教師研習現場，講師於前方大螢幕講解" loading="lazy" decoding="async" srcset="/assets/images/tour-real-projects-480.webp 480w, /assets/images/tour-real-projects-768.webp 768w, /assets/images/tour-real-projects.webp 1017w" sizes="(max-width: 700px) 377px, 1270px">
+      <div class="tour-zoom-text">
+        <h2>成功案例</h2>
+        <p>客製工具與實際案例</p>
+        <a class="btn btn-primary" href="/services#projects">前往頁面 →</a>
+      </div>
+    </div>
+    <div class="tour-zoom-panel" data-i="3">
+      <img width="1017" height="572" src="/assets/images/tour-new-faq.webp" alt="示意圖：現代電腦教室裡，老師們在研習中兩兩討論、操作電腦" loading="lazy" decoding="async" srcset="/assets/images/tour-new-faq-480.webp 480w, /assets/images/tour-new-faq-768.webp 768w, /assets/images/tour-new-faq.webp 1017w" sizes="(max-width: 700px) 377px, 1270px"><span class="ai-note">為保護隱私，此為示意圖</span>
+      <div class="tour-zoom-text">
+        <h2>常見問題</h2>
+        <p>Q&amp;A</p>
+        <a class="btn btn-primary" href="/faq">前往頁面 →</a>
+      </div>
+    </div>
+    <div class="tour-zoom-panel" data-i="4">
+      <img width="1382" height="867" src="/assets/images/tour-contact.webp?v=2" alt="鴻綸科技股份有限公司台南新營店面外觀" loading="lazy" decoding="async" srcset="/assets/images/tour-contact-480.webp?v=2 480w, /assets/images/tour-contact-768.webp?v=2 768w, /assets/images/tour-contact-1024.webp?v=2 1024w, /assets/images/tour-contact.webp?v=2 1382w" sizes="(max-width: 700px) 377px, 1270px">
+      <div class="tour-zoom-text">
+        <h2>聯絡我們</h2>
+        <p>聯繫方式、地址與服務範圍</p>
+        <a class="btn btn-primary" href="/contact">前往頁面 →</a>
+      </div>
+    </div>
+    <div class="tour-zoom-count" aria-hidden="true"><b id="tzNum">01</b><span>/ 05</span></div>
+    <div class="tour-zoom-bar" aria-hidden="true"><i id="tzBar"></i></div>
+    <div class="l-dots tour-zoom-dots">
+      <span class="l-dot active"></span><span class="l-dot"></span><span class="l-dot"></span><span class="l-dot"></span><span class="l-dot"></span>
+    </div>
+  </div>
+</section>
+
 <!-- 服務圖示牆：四類服務用頁籤切換，預設顯示第一類；四個面板內容都寫在 HTML 裡（hidden 切換，不靠 JS 載入） -->
 <section class="l-services" id="services">
   <h2 class="l-reveal">我們的服務</h2>
@@ -519,7 +570,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.0</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.1</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -535,6 +586,6 @@
 <script src="/assets/sectionbar.js?v=1" defer></script>
 <script src="/assets/wordwrap.js?v=2"></script>
 <script src="/assets/lenis.min.js?v=1"></script>
-<script src="/assets/landing.js?v=18"></script>
+<script src="/assets/landing.js?v=19"></script>
 </body>
 </html>
