@@ -591,9 +591,12 @@ a.card:hover,a.card:hover *{text-decoration: none}
 .nav-group:hover .nav-sub,.nav-group:focus-within .nav-sub,.nav-group.open .nav-sub{display: block}
 @media (max-width: 1600px) and (min-width: 1281px){.nav-group-label{padding: 8px 7px;font-size: 0.88rem}
 }
-@media (max-width: 1280px){.nav-group-label{display: block;padding: 8px 7px;font-weight: 400;color: var(--text);cursor: default;pointer-events: none}
-.nav-group-label::after{content: none}
-.nav-sub{display: block;position: static;min-width: 0;border: 0;padding: 0}
+@media (max-width: 1280px){.nav-group{width: 100%}
+.nav-group-label{display: block;width: 100%;padding: 10px 7px;font-weight: 400;color: var(--text);cursor: pointer}
+.nav-group-label.active{color: var(--accent)}
+.nav-sub{display: none;position: static;min-width: 0;border: 0;padding: 0 0 6px}
+.nav-group:hover .nav-sub,.nav-group:focus-within .nav-sub{display: none}
+.nav-group.open .nav-sub{display: block}
 .nav-sub a{padding: 8px 7px}
 }
 
