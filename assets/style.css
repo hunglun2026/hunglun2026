@@ -750,3 +750,11 @@ h2[data-sb][data-sb-center]{display: table;margin-left: auto;margin-right: auto;
 .back-home-bar{background: var(--bg-soft);border-bottom: 1px solid var(--line);font-size: 0.85rem;line-height: 1;text-align: left}
 .back-home-bar a{display: inline-block;padding: 11px max(16px,4vw);color: var(--muted)}
 .back-home-bar a:hover{color: var(--accent);text-decoration: none}
+/* 文章中段入口（sitemap/add-article-cta.py 產生）：文件流內、不遮內文；LINE 綠用深色讓白字對比夠 */
+.hl-cta{margin: 32px 0;padding: 20px 22px;border: 1px solid var(--line);border-left: 3px solid var(--accent);background: var(--card);box-sizing: border-box;max-width: 100%;overflow-wrap: anywhere}
+.hl-cta-title{margin: 0;font-weight: 500;font-size: 1.02rem;color: var(--text)}
+.hl-cta-text{margin: 6px 0 0;font-size: 0.92rem;line-height: 1.8;color: var(--muted)}
+.hl-cta-actions{display: flex;flex-wrap: wrap;gap: 10px;margin-top: 14px}
+.hl-cta-actions .btn{margin: 0}
+.btn.hl-cta-line,.svc-cta .btn.hl-cta-line{background: #067a38;color: #fff}
+@media (max-width: 640px){.hl-cta{padding: 16px}.hl-cta-actions{flex-direction: column}.hl-cta-actions .btn{width: 100%;max-width: none;text-align: center;box-sizing: border-box}}

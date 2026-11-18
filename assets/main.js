@@ -187,17 +187,24 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   if(!a||!window.matchMedia("(hover: hover) and (pointer: fine)").matches)return;
   var id="@gdm6961p",pop=null;
   function close(){if(pop){pop.remove();pop=null}}
-  a.addEventListener("click",function(e){
-    e.preventDefault();
-    if(pop)return close();
+  function open(){
     pop=document.createElement("div");
     pop.className="fab-pop";
     pop.innerHTML='<b></b><button type="button" class="fc-copy" data-label="複製 ID">複製 ID</button><small>電腦版請在 LINE 搜尋 ID 加入</small><a href="'+a.href+'" target="_blank" rel="noopener">或用手機開啟</a>';
     pop.querySelector("b").textContent=id;
     pop.querySelector(".fc-copy").setAttribute("data-copy",id);
     document.querySelector(".contact-fab").appendChild(pop);
+  }
+  a.addEventListener("click",function(e){
+    e.preventDefault();
+    if(pop)return close();
+    open();
   });
-  document.addEventListener("click",function(e){if(pop&&!e.target.closest(".fab-pop")&&!e.target.closest(".fab-line"))close()});
+  // 文章內的 LINE 鈕（.hl-cta-line）：電腦版同樣彈出 ID 卡片，手機照舊直接開 LINE
+  document.querySelectorAll(".hl-cta-line").forEach(function(b){
+    b.addEventListener("click",function(e){e.preventDefault();if(!pop)open()});
+  });
+  document.addEventListener("click",function(e){if(pop&&!e.target.closest(".fab-pop")&&!e.target.closest(".fab-line")&&!e.target.closest(".hl-cta-line"))close()});
   document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 })();
 
@@ -226,6 +233,10 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     var h=a.getAttribute("href")||"";
     if(a.classList.contains("fab-line")||/lin\.ee|line\.me/.test(h))return"line_click";
     if(a.classList.contains("fab-form"))return"form_click";
+    if(a.closest("[data-hl-cta],[data-hl-kb-cta]")){
+      if(/^\/contact/.test(h))return"form_click";
+      if(/^\/(services|tools)\//.test(h))return"service_cta_click";
+    }
     if(/facebook\.com\/hungluntechnology/.test(h))return"facebook_click";
     if(/google\.[a-z.]+\/maps|maps\.app\.goo\.gl/.test(h))return"map_click";
     if(/^mailto:|mail\.google\.com/.test(h))return"email_click";
@@ -234,6 +245,9 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   }
   function placementFor(el){
     if(el.closest(".contact-fab"))return"fab";
+    var c=el.closest("[data-hl-cta]");
+    if(c)return c.getAttribute("data-hl-cta")==="mid"?"article_mid":"article_end";
+    if(el.closest("[data-hl-kb-cta]"))return"article_end";
     if(el.closest(".site-footer"))return"footer";
     return"content";
   }
@@ -241,7 +255,7 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
     if(!e.target||!e.target.closest||typeof window.gtag!=="function")return;
     var name=eventFor(e.target);
     if(!name)return;
-    window.gtag("event",name,{placement:placementFor(e.target),device:mouse?"mouse":"touch",page_path:location.pathname});
+    window.gtag("event",name,{placement:placementFor(e.target),device:mouse?"mouse":"touch",page_path:location.pathname,target_path:((e.target.closest("a")||{}).getAttribute?e.target.closest("a").getAttribute("href"):"")||""});
   },true);
 })();
 (function(){var gs=document.querySelectorAll(".nav-group");if(!gs.length)return;function closeAll(){gs.forEach(function(g){g.classList.remove("open");var b=g.querySelector(".nav-group-label");b&&b.setAttribute("aria-expanded","false")})}gs.forEach(function(g){var b=g.querySelector(".nav-group-label");b&&b.addEventListener("click",function(e){e.stopPropagation();var o=!g.classList.contains("open");closeAll(),o&&(g.classList.add("open"),b.setAttribute("aria-expanded","true"))})}),document.addEventListener("click",closeAll),document.addEventListener("keydown",function(e){"Escape"===e.key&&closeAll()})})();

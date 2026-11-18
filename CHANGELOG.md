@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.0（2026-11-19）
+
+依與 GeminiA 討論轉化率與反向連結 5 輪的結論，先做站上能直接完成的部分：點擊前十名的 9 篇知識庫文章（授權評估 4 篇、教師認證與備課 5 篇）在第 3 個 `<h2>` 前加一個「中段入口」（標題、一句話、服務頁鈕、LINE 鈕，文件流內不遮內文），文末原有 CTA 的「聯絡我們」改帶 `?topic=aipro／training` 並加「加官方 LINE 詢問」鈕。電腦版點文章內的 LINE 鈕會跟右下角浮動鈕一樣彈出 ID 卡片（lin.ee 在電腦上開不了對話）。GA4 沿用既有事件：`line_click`、`form_click` 的 placement 新增 `article_mid`／`article_end`，新增 `service_cta_click`，並帶 `target_path`。不動這 9 頁的 `<title>` 與 `<h1>`（排名 4 到 6 名，先不碰）。批次腳本 `sitemap/add-article-cta.py`（可重跑）。`style.css` v162、`main.js` v37。討論紀錄與後續 8 週排程見 `文件/2026-11-19-轉化率與反向連結計畫.md`。
+
 ## v1.42.14（2026-11-18）
 
 主選單右側按鈕「線上諮詢」改為「聯絡我們」（含手機選單內的連結）；「教學資源」下拉新增「研習專區」（連到 `/tools/training`，進去仍需密碼）。修正 iPhone 上 `/contact` 要左右拉的問題：iOS Safari 遇到「、」後接 `.nowrap` 行內元素不會換行，整頁被撐到 530px；`.nowrap` 改為行內區塊後可在區塊之間換行（用 WebKit 在 393px 寬重現並驗證，530px 變 393px）。`style.css` v161。選單由 `sitemap/restructure-nav-v3.py` 產生。
