@@ -182,6 +182,78 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "你們服務哪些地區與學制？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "服務範圍以台中以南各縣市為主，客戶涵蓋國小、國中、高中職與大專院校，另有政府機關與企業客戶。公司自 2013 年創立、2017 年起為 Google 官方授權在台教育合作發展夥伴，中南部各縣市都有長期合作的學校。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼不公開合作學校的名稱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "學校的採購內容與資訊環境屬於校內事務，我們不會因為合作過就把校名整理出來對外公開，這是保護客戶隱私的基本做法。洽談階段若需要參考，我們可以在會談中說明同類型、同規模的導入經驗，但公開頁面上不會出現任何一所學校的名字。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "那我怎麼判斷你們是不是真的做過？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看可以獨立查證的部分：鴻綸科技名列 Google 官方全球高等教育專業發展夥伴名冊，在 Google Cloud 合作夥伴體系中專業領域認定為 Education，是教育部國中小行動教育推動計畫指定廠商與台灣銀行共同供應契約供應商，教育訓練中心具備五位 Google 認證講師與兩位認證網域管理員。這些都是第三方機構認定、可以自行查核的資格，也不需要拿別人的名字來背書。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "可以先小規模試辦再決定嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，而且我們通常建議這樣做。Chromebook 提供學校單位免費借用評估；研習可以先辦一場小組共備看老師的反應；行政工具可以先拿一個班或一項業務試跑。先確認這件事在貴校真的會被用起來，再談規模。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "導入之後就沒人管了嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "研習後會留下提問管道，網域與載具管理的設定我們會整理成可交接的規則文件，因為學校承辦人異動頻繁，只交付設定而不交付規則，下一任接手就等於重來。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我們的狀況跟上面六種都不太一樣，還能問嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。這六種是最常被找上的情境，不是服務範圍的全部。把貴校現在的狀況與想解決的問題說給我們聽，如果不是我們擅長的領域，我們會直說。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "鴻綸科技常見學校導入情境",
+  "numberOfItems": 6,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "全校導入 Google Workspace，帳號與網域要有人管" },
+    { "@type": "ListItem", "position": 2, "name": "要推行動學習，載具買了之後沒人管得動" },
+    { "@type": "ListItem", "position": 3, "name": "智慧情境教室要申請計畫，需要規劃書與設備清單" },
+    { "@type": "ListItem", "position": 4, "name": "工具導入了，老師不敢用、也不知道找誰問" },
+    { "@type": "ListItem", "position": 5, "name": "行政重複性工作吃掉太多時間" },
+    { "@type": "ListItem", "position": 6, "name": "要走共同供應契約採購，但不確定品項與文件" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
@@ -400,6 +472,168 @@
 </section>
 
 
+<section class="section" id="scale-sec">
+  <style>
+    .cs-stats{display:grid;grid-template-columns:repeat(4,1fr);margin:8px 0 8px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+    .cs-stat{padding:22px 18px;border-left:1px solid var(--line)}
+    .cs-stat:first-child{border-left:0}
+    .cs-stat b{display:block;font-size:2rem;line-height:1.1;font-weight:600;color:var(--accent);letter-spacing:0}
+    .cs-stat b small{font-size:1rem;font-weight:500;margin-left:2px}
+    .cs-stat span{display:block;margin-top:8px;font-size:0.86rem;color:var(--muted);line-height:1.5}
+    #credentials + .wrap.prose{margin-top:56px}
+    .cs-lead{max-width:760px;margin-bottom:28px;color:var(--text-body)}
+    .cs-cases{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .cs-case{display:flex;flex-direction:column;padding:26px 26px 22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+    .cs-num{font-size:0.8rem;font-weight:600;letter-spacing:0.08em;color:var(--accent)}
+    .cs-case h3{margin:6px 0 12px;font-size:1.12rem;line-height:1.5}
+    .cs-case p{font-size:0.95rem;line-height:1.75;margin:0 0 12px;color:var(--text-body)}
+    .cs-case .cs-k{display:block;font-size:0.8rem;font-weight:600;color:var(--muted);margin-bottom:2px}
+    .cs-deliver{margin-top:auto;padding:12px 16px;border-left:3px solid var(--accent);background:var(--bg-soft)}
+    .cs-deliver p{margin:0;font-weight:500;color:var(--text)}
+    .cs-case details{margin:0 0 14px}
+    .cs-case summary{cursor:pointer;font-size:0.92rem;font-weight:600;color:var(--accent);padding:4px 0}
+    .cs-case details p{margin-top:8px}
+    .cs-creds{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;list-style:none;margin:0;padding:0}
+    .cs-creds li{padding:20px 22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);line-height:1.7}
+    .cs-creds li strong{display:block;margin-bottom:6px;color:var(--text)}
+    .cs-creds li span{font-size:0.92rem;color:var(--muted)}
+    .cs-note{margin-top:28px;padding:20px 24px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);background:var(--bg-soft)}
+    .cs-note h3{margin:0 0 8px;font-size:1rem}
+    .cs-note p{margin:0 0 8px;font-size:0.94rem;color:var(--text-body)}
+    .cs-note p:last-child{margin-bottom:0}
+    @media (max-width:900px){
+      .cs-stats{grid-template-columns:repeat(2,1fr)}
+      .cs-stat{border-left:0;border-top:1px solid var(--line)}
+      .cs-stat:nth-child(-n+2){border-top:0}
+      .cs-stat:nth-child(even){border-left:1px solid var(--line)}
+      .cs-cases,.cs-creds{grid-template-columns:1fr}
+        }
+  </style>
+
+  <div class="wrap">
+    <h2 class="section-title reveal" id="scale" style="margin-top:46px;">服務規模與導入情境</h2>
+    <p class="cs-lead reveal">鴻綸科技自 2013 年創立，服務全台各級學校、政府機關與企業，其中以學校為主。<strong>客戶以台中以南各縣市為主，涵蓋國小、國中、高中職與大專院校</strong>，中南部各縣市都有長期合作的學校。</p>
+    <div class="cs-stats reveal">
+      <div class="cs-stat"><b>2013<small>年</small></b><span>公司創立</span></div>
+      <div class="cs-stat"><b>2017<small>年</small></b><span>起為 Google 官方授權在台教育合作發展夥伴</span></div>
+      <div class="cs-stat"><b>5<small>位</small></b><span>Google 認證講師，另有 2 位認證網域管理員</span></div>
+      <div class="cs-stat"><b>916<small>筆</small></b><span>共同供應契約品項，站上可查詢比對</span></div>
+    </div>
+  </div>
+
+  <div class="wrap" id="scenarios">
+    <h2 class="section-title" style="margin-top:46px;">六種最常見的導入情境</h2>
+    <p class="section-sub reveal" style="margin-bottom:24px;">我們最常被學校找去處理的六種狀況，以及各自的做法。</p>
+    <div class="cs-cases">
+      <article class="cs-case reveal">
+        <span class="cs-num">情境 1</span>
+        <h3>全校導入 Google Workspace，帳號與網域要有人管</h3>
+        <p><span class="cs-k">學校端的狀況</span>學校已經有網域，但帳號散亂、組織架構沒分、共用政策沒設，畢業生帳號留著沒處理。多數學校卡在「開通容易、治理沒人做」。</p>
+        <details><summary>我們的做法</summary><p>從網域規劃、組織架構、安全性與共用政策設定開始，把既有帳號歸位，並把畢業與到職離職的處理流程定下來。訓練中心有兩位 Google 認證網域管理員，管理端的設定不必外包給不熟教育情境的廠商。</p></details>
+        <div class="cs-deliver"><p><span class="cs-k">交付的東西</span>一份可交接的網域管理規則，而不是只有一次性的設定。</p></div>
+      </article>
+
+      <article class="cs-case reveal">
+        <span class="cs-num">情境 2</span>
+        <h3>要推行動學習，載具買了之後沒人管得動</h3>
+        <p><span class="cs-k">學校端的狀況</span>Chromebook 發下去才發現：政策不能統一套用、學生亂裝擴充功能、同時上線就卡網路。這三件事幾乎每一所推行動學習的學校都會遇到。</p>
+        <details><summary>我們的做法</summary><p>載具、管理授權與網路環境一起規劃：Chrome Education Upgrade（CEU）做政策、應用程式與上網規則的集中管理，並依同時上線人數評估無線網路與電力配套。導入前學校可免費借機評估。</p></details>
+        <div class="cs-deliver"><p><span class="cs-k">交付的東西</span>載具、管理與網路是同一套規劃，不是三個廠商各做各的。</p></div>
+      </article>
+
+      <article class="cs-case reveal">
+        <span class="cs-num">情境 3</span>
+        <h3>智慧情境教室要申請計畫，需要規劃書與設備清單</h3>
+        <p><span class="cs-k">學校端的狀況</span>計畫要送件，但學校端很難自己把平台、系統、載具與空間整合成一份說得通的規劃。</p>
+        <details><summary>我們的做法</summary><p>我們的標準組成是 Thinglink VR360 環景編輯平台、V-Scene Learning 情境式學習系統、融合實境教學系統（IR）、互動式電子白板或觸控大屏、廣播教學系統與行動載具，並提供含設計圖與規劃書的整體規劃，可直接提交核備。AR／VR／MR／XR 等創新學習計畫我們長期參與。</p></details>
+        <div class="cs-deliver"><p><span class="cs-k">交付的東西</span>可以送件的規劃書與設備清單，不是一張報價單。</p></div>
+      </article>
+
+      <article class="cs-case reveal">
+        <span class="cs-num">情境 4</span>
+        <h3>工具導入了，老師不敢用、也不知道找誰問</h3>
+        <p><span class="cs-k">學校端的狀況</span>這是導入之後最常見的真實狀況，也是我們認為認證與設備都比不上的關鍵：導入之後老師敢不敢用、有問題找不找得到人。</p>
+        <details><summary>我們的做法</summary><p>由本公司教育訓練中心的五位 Google 認證講師到校授課，課程模組含 Gemini 備課、AI 出題與評量、Gemini Notebook、行政減負、AI 素養與學術倫理、認證考照衝刺。研習後留下提問管道，開課前先做行前確認（網路、載具、投影與帳號權限）。</p></details>
+        <div class="cs-deliver"><p><span class="cs-k">交付的東西</span>老師手上有能立刻照做的流程，以及研習後仍找得到的人。</p></div>
+      </article>
+
+      <article class="cs-case reveal">
+        <span class="cs-num">情境 5</span>
+        <h3>行政重複性工作吃掉太多時間</h3>
+        <p><span class="cs-k">學校端的狀況</span>回條要一份份核對、成果報告照片要一格格貼、跨檔案名單要人工比對，這些工作花時間卻沒有成就感，而且長期沒有好工具。</p>
+        <details><summary>我們的做法</summary><p>把這類流程做成「打開瀏覽器就能用」的工具：AI 視覺辨識回條並比對名單匯出 Excel、活動照片自動填入 Word 表格圖片格、跨檔案名單勾稽。涉及學生個資的部分依實際情境評估處理位置，能在本機完成的就不上傳雲端。</p></details>
+        <div class="cs-deliver"><p><span class="cs-k">交付的東西</span>原本要一整個下午的工作，變成拍照上傳與抽查確認。</p></div>
+      </article>
+
+      <article class="cs-case reveal">
+        <span class="cs-num">情境 6</span>
+        <h3>要走共同供應契約採購，但不確定品項與文件</h3>
+        <p><span class="cs-k">學校端的狀況</span>承辦人換手頻繁，規格怎麼寫、對應哪個契約項目、要備哪些文件，常常得重新摸索一次。</p>
+        <details><summary>我們的做法</summary><p>我們是台灣銀行共同供應契約供應商，也是教育部國中小行動教育推動計畫指定廠商。站上收錄了 916 筆契約品項供查詢比對，實際採購時協助對項目、備齊請購文件。</p></details>
+        <div class="cs-deliver"><p><span class="cs-k">交付的東西</span>規格與品項對得上契約，請購文件一次備齊。</p></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap" id="credentials">
+    <h2 class="section-title" style="margin-top:46px;">可獨立查證的資格</h2>
+    <p class="section-sub reveal" style="margin-bottom:20px;">這些是第三方機構認定、可以自行查核的資格，不必靠別人的校名來證明。</p>
+    <ul class="cs-creds reveal">
+      <li><strong>Google for Education Professional Development Partner</strong><span>2017 年起為官方授權在台教育合作發展夥伴，2019 年專業化夥伴，2026 年高等教育專業發展夥伴並名列 Google 官方全球名冊。</span></li>
+      <li><strong>Google Cloud Partner</strong><span>專業領域認定為 Education。</span></li>
+      <li><strong>教育部國中小行動教育推動計畫指定廠商</strong><span>長期參與全國各縣市行動學習計畫推動。</span></li>
+      <li><strong>台灣銀行共同供應契約供應商</strong><span>機關學校可依契約採購。</span></li>
+      <li><strong>Google 官方認證國際講師培訓中心</strong><span>五位認證講師、兩位認證網域管理員。</span></li>
+      <li><strong>課堂花絮</strong><span>2017 年至今累計數十場研習、成果展與 Google 教育活動，收錄其中留有影像紀錄的場次。<a href="/events">看課堂花絮</a></span></li>
+    </ul>
+
+    <div class="cs-note">
+      <h3>為什麼這裡沒有學校名稱</h3>
+      <p>一所學校買了什麼、網路怎麼架、帳號怎麼管，都是校內的事，不該因為跟我們合作過就被整理出來放在網路上。所以這裡寫的是<strong>情境</strong>而不是客戶，一樣能讓你判斷我們有沒有處理過你正在面對的問題，但不會讓任何一所學校被指名。</p>
+      <p>需要參考時，我們可以在洽談中說明同類型、同規模的導入經驗。</p>
+    </div>
+  </div>
+
+  <div class="wrap prose">
+
+    <h2>延伸閱讀</h2>
+    <ul>
+      <li><a href="/knowledge/procurement">學校資訊設備採購指南 →</a></li>
+      <li><a href="/knowledge/workspace-editions">Google Workspace 教育版版本比較與授權變更 →</a></li>
+      <li><a href="/services/campus-training">Google AI 校園研習服務 →</a></li>
+      <li><a href="/knowledge/google-certification">Google 認證教育家與認證講師指南 →</a></li>
+      <li><a href="/knowledge/edtech-software">數位學習軟體怎麼選：Edpuzzle、Thinglink、Kami 等六套工具的定位 →</a></li>
+    </ul>
+
+    <h2>常見問題</h2>
+    <details class="faq-item">
+      <summary>你們服務哪些地區與學制？</summary>
+      <div class="faq-a">服務範圍以台中以南各縣市為主，客戶涵蓋國小、國中、高中職與大專院校，另有政府機關與企業客戶。公司自 2013 年創立、2017 年起為 Google 官方授權在台教育合作發展夥伴，中南部各縣市都有長期合作的學校。</div>
+    </details>
+    <details class="faq-item">
+      <summary>為什麼不公開合作學校的名稱？</summary>
+      <div class="faq-a">學校的採購內容與資訊環境屬於校內事務，我們不會因為合作過就把校名整理出來對外公開，這是保護客戶隱私的基本做法。洽談階段若需要參考，我們可以在會談中說明同類型、同規模的導入經驗，但公開頁面上不會出現任何一所學校的名字。</div>
+    </details>
+    <details class="faq-item">
+      <summary>那我怎麼判斷你們是不是真的做過？</summary>
+      <div class="faq-a">看可以獨立查證的部分：鴻綸科技名列 Google 官方全球高等教育專業發展夥伴名冊，在 Google Cloud 合作夥伴體系中專業領域認定為 Education，是教育部國中小行動教育推動計畫指定廠商與台灣銀行共同供應契約供應商，教育訓練中心具備五位 Google 認證講師與兩位認證網域管理員。這些都是第三方機構認定、可以自行查核的資格，也不需要拿別人的名字來背書。</div>
+    </details>
+    <details class="faq-item">
+      <summary>可以先小規模試辦再決定嗎？</summary>
+      <div class="faq-a">可以，而且我們通常建議這樣做。Chromebook 提供學校單位免費借用評估；研習可以先辦一場小組共備看老師的反應；行政工具可以先拿一個班或一項業務試跑。先確認這件事在貴校真的會被用起來，再談規模。</div>
+    </details>
+    <details class="faq-item">
+      <summary>導入之後就沒人管了嗎？</summary>
+      <div class="faq-a">研習後會留下提問管道，網域與載具管理的設定我們會整理成可交接的規則文件，因為學校承辦人異動頻繁，只交付設定而不交付規則，下一任接手就等於重來。</div>
+    </details>
+    <details class="faq-item">
+      <summary>我們的狀況跟上面六種都不太一樣，還能問嗎？</summary>
+      <div class="faq-a">可以。這六種是最常被找上的情境，不是服務範圍的全部。把貴校現在的狀況與想解決的問題說給我們聽，如果不是我們擅長的領域，我們會直說。</div>
+    </details>
+
+  </div>
+</section>
+
 <section class="section alt">
   <div class="wrap" style="text-align:center;">
     <h2 class="section-title reveal">想了解報價或討論需求？</h2>
@@ -445,7 +679,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.7</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.8</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -465,7 +699,7 @@
   // 成功案例已獨立成 /cases；舊網址 /services#cases 等錨點自動轉過去
   var h = location.hash;
   if (h === '#effects' || h === '#tab-effects') { location.replace('/enterprise#effects'); return; }
-  var m = {'#cases':'/cases','#tab-cases':'/cases','#projects':'/cases#projects','#recent':'/cases#recent','#scenarios':'/cases#scenarios','#credentials':'/cases#credentials'};
+  var m = {'#cases':'/cases','#tab-cases':'/cases','#projects':'/cases#projects','#recent':'/cases#recent'};
   if (m[h]) location.replace(m[h]);
 })();
 </script>
