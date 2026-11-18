@@ -48,8 +48,8 @@ h1,h2,h3,h4,summary,td,th,.crumbs,nav[aria-label="麵包屑"],.series-index,.kn-
 nav[aria-label="麵包屑"] a{white-space: nowrap}
 /* 程式碼：英數用等寬字，中文接回 Noto Sans TC（預設等寬字沒有中文，會退回細明體） */
 code,kbd,samp{font-family: ui-monospace,Consolas,"SF Mono",Menlo,"Noto Sans TC","PingFang TC",monospace;font-size: 0.92em}
-/* 把幾個字綁在同一行（避免最後一行只剩一兩個字） */
-.nowrap{white-space: nowrap}
+/* 把幾個字綁在同一行（避免最後一行只剩一兩個字）。inline-block：iOS Safari 對「、」後接 nowrap 行內元素不會換行，會把整頁撐寬需左右拉（/contact 實測 530px），改成行內區塊就能在區塊之間換行 */
+.nowrap{white-space: nowrap;display: inline-block}
 img{max-width: 100%;height: auto}
 a{color: var(--accent);text-decoration: none}
 a:hover{text-decoration: underline}
