@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.41.7（2026-11-18）
+
+成功案例頁的「近期研習場次」更新到 2026-11-12：補敏惠護專（11/10、11/12）、高雄女中、長榮大學、北港高中、臺南商職、南光高中、吳鳳科大（9/16、9/30）、樹人醫專；7 月前的場次收進「更早的 2026 年場次」，並加課堂花絮連結。場次名稱來源是已公開的 /tools/training 與 /events。
+
 ## v1.41.6（2026-11-18）
 
 「成功案例」從 /services 的分頁拆成獨立頁 /cases（標題、麵包屑、結構化資料都是成功案例）；/services 只留解決方案。全站主選單與內文的 `/services#cases` 等連結改指 /cases；舊網址由 services.html 的小段 JS 轉過去；刪除 `_redirects` 的 `/cases /services#cases`（會與新頁互相轉圈）；sitemap、llms.txt、llms-full.txt、search-index.json 同步。
