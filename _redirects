@@ -51,11 +51,14 @@ https://hunglun.com/* https://www.hunglun.com/:splat 301
 # 2026-11-18：/cases 改為獨立的「成功案例」頁（先前併入 /services 分頁的做法取消，規則必須刪掉，否則會轉圈）
 # 舊網址 /services#cases 等錨點由 services.html 內的小段 JS 轉到 /cases
 
-# 寄信工具 2026-08-28 從「公司專屬」改為對合作學校公開，搬到 /tools/mail。
+# 寄信小幫手（未完成品）2026-11-18 下架，連同只剩它一個工具的「行政效率工具」分類一起拿掉，舊網址一律回 /tools。
+/tools/mail /tools 301
+/tools/admin /tools 301
+# 寄信工具原本 2026-08-28 從「公司專屬」改為對合作學校公開，搬到 /tools/mail。
 # ⚠ Pages 的 _redirects 只在「找不到檔案」時才套用，所以 internal/mail.html 一定要刪掉，
 #   留著的話這條永遠不會生效。
-/internal/mail /tools/mail 301
-/internal/mail.html /tools/mail 301
+/internal/mail /tools 301
+/internal/mail.html /tools 301
 
 # Mobile Guardian 2026-09-06 停止代理，知識庫頁與 /software 區塊已移除。
 # 舊網址（已被索引）轉到 Chromebook 知識庫頁，避免 404

@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-# 2026-08-28：/internal/ 已清空（寄信工具改為公開的 /tools/mail），
+# 2026-08-28：/internal/ 已清空（寄信工具原本改為公開的 /tools/mail，2026-11-18 已下架），
 # 這裡不再擋，讓 /internal/mail 的 301 轉址被爬得到。
 # _headers 裡 /internal/* 的 noindex 保留著，以後若又放內部頁會自動生效。
 
