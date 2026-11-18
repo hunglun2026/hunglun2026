@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.1（2026-11-19）
+
+v1.43.0 的中段入口與文末 LINE 鈕擴大到其餘知識庫文章（共 105 頁），依主題頁分類對應四種入口：授權評估（連 `/services/google-workspace`）、教師研習（`/services/campus-training`）、數位學習軟體（`/software`）、設備採購（`/services/procurement`），資安與個資類連網域導入設定服務。文末「聯絡我們」依類別帶 `?topic=`；`/contact` 的主題預選新增 `procurement`、`software`。文案只用站上已有的服務說明。不動任何文章的 `<title>` 與 `<h1>`。
+
 ## v1.43.0（2026-11-19）
 
 依與 GeminiA 討論轉化率與反向連結 5 輪的結論，先做站上能直接完成的部分：點擊前十名的 9 篇知識庫文章（授權評估 4 篇、教師認證與備課 5 篇）在第 3 個 `<h2>` 前加一個「中段入口」（標題、一句話、服務頁鈕、LINE 鈕，文件流內不遮內文），文末原有 CTA 的「聯絡我們」改帶 `?topic=aipro／training` 並加「加官方 LINE 詢問」鈕。電腦版點文章內的 LINE 鈕會跟右下角浮動鈕一樣彈出 ID 卡片（lin.ee 在電腦上開不了對話）。GA4 沿用既有事件：`line_click`、`form_click` 的 placement 新增 `article_mid`／`article_end`，新增 `service_cta_click`，並帶 `target_path`。不動這 9 頁的 `<title>` 與 `<h1>`（排名 4 到 6 名，先不碰）。批次腳本 `sitemap/add-article-cta.py`（可重跑）。`style.css` v162、`main.js` v37。討論紀錄與後續 8 週排程見 `文件/2026-11-19-轉化率與反向連結計畫.md`。

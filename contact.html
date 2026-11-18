@@ -397,7 +397,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.0</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.1</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -420,7 +420,7 @@
   if (!form) return;
   /* ?topic=training 之類的短代號預選詢問主題（從研習頁、文章連來時少選一步） */
   try {
-    var topicMap = { training: 'Google 認證培訓／校園研習', aipro: 'Google AI Pro for Education（Gemini）', workspace: 'Google Workspace for Education 授權／版本升級' };
+    var topicMap = { training: 'Google 認證培訓／校園研習', aipro: 'Google AI Pro for Education（Gemini）', workspace: 'Google Workspace for Education 授權／版本升級', procurement: '台銀共同供應契約採購', software: '其他數位學習軟體' };
     var want = topicMap[new URLSearchParams(location.search).get('topic')];
     if (want) form.topic.value = want;
   } catch (e) {}
