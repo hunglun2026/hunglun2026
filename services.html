@@ -496,6 +496,7 @@
     .cs-stat b{display:block;font-size:2rem;line-height:1.1;font-weight:600;color:var(--accent);letter-spacing:0}
     .cs-stat b small{font-size:1rem;font-weight:500;margin-left:2px}
     .cs-stat span{display:block;margin-top:8px;font-size:0.86rem;color:var(--muted);line-height:1.5}
+    #projects .grid{grid-template-columns:repeat(3,1fr)}
     #credentials + .wrap.prose{margin-top:56px}
     .cs-lead{max-width:760px;margin-bottom:28px;color:var(--text-body)}
     .cs-timeline{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
@@ -528,7 +529,7 @@
       .cs-stat{border-left:0;border-top:1px solid var(--line)}
       .cs-stat:nth-child(-n+2){border-top:0}
       .cs-stat:nth-child(even){border-left:1px solid var(--line)}
-      .cs-cases,.cs-creds{grid-template-columns:1fr}
+      .cs-cases,.cs-creds,#projects .grid{grid-template-columns:1fr}
       .cs-timeline li{grid-template-columns:1fr;gap:4px;padding:14px 18px}
     }
   </style>
@@ -540,6 +541,46 @@
       <div class="cs-stat"><b>2017<small>年</small></b><span>起為 Google 官方授權在台教育合作發展夥伴</span></div>
       <div class="cs-stat"><b>5<small>位</small></b><span>Google 認證講師，另有 2 位認證網域管理員</span></div>
       <div class="cs-stat"><b>916<small>筆</small></b><span>共同供應契約品項，站上可查詢比對</span></div>
+    </div>
+  </div>
+
+  <div class="wrap" id="projects">
+    <h2 class="section-title" style="margin-top:46px;">客戶委託案例</h2>
+    <p class="section-sub reveal" style="margin-bottom:24px;">以下是<strong>取得客戶同意公開</strong>的案例，可以直接點開看實際成果。學校類客戶因隱私不列校名，見下方說明。</p>
+    <div class="grid">
+
+      <article class="card reveal" data-tag="客戶案例">
+        <div class="card-body">
+          <h3>會員集點系統</h3>
+          <div class="tagline">QR Code 集點・雲端後台</div>
+          <p>為店家客製的會員集點系統：消費累點、QR Code 出示、點數兌換與完整後台管理，四種角色權限。雲端部署、免維護伺服器。</p>
+          <div class="tags"><span class="tag">客製系統</span><span class="tag">會員管理</span><span class="tag">Cloudflare D1</span></div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-tag="客戶案例">
+        <div class="card-body">
+          <h3><a href="https://idun10.pages.dev/" target="_blank" rel="noopener">伊登森活 Idun Beauty SPA</a></h3>
+          <div class="tagline">台南東區美容 SPA 官方網站</div>
+          <p>為客戶製作的美容 SPA 官方網站：空間介紹、服務項目、成果展示、方案價目、月費會員與門市地址，8 個獨立頁面各自有完整 SEO 標籤與結構化資料。</p>
+          <div class="tags"><span class="tag">客製網站</span><span class="tag">SEO/AEO</span><span class="tag">Cloudflare Pages</span></div>
+          <div class="card-actions">
+            <a class="btn btn-primary btn-sm" href="https://idun10.pages.dev/" target="_blank" rel="noopener">前往體驗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-tag="客戶案例">
+        <div class="card-body">
+          <h3><a href="https://xifun.tonpair.com/" target="_blank" rel="noopener">喜翻親子感統遊戲空間</a></h3>
+          <div class="tagline">台南新營親子遊戲空間官方網站</div>
+          <p>為親子遊戲空間製作的官方網站：課程介紹、課堂花絮、聯絡與交通，加上近 30 篇職能治療師撰寫的家長學堂文章，全站約 40 頁各自有完整 SEO 標籤與結構化資料。</p>
+          <div class="tags"><span class="tag">客製網站</span><span class="tag">SEO/AEO</span><span class="tag">內容規劃</span></div>
+          <div class="card-actions">
+            <a class="btn btn-primary btn-sm" href="https://xifun.tonpair.com/" target="_blank" rel="noopener">前往體驗</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 
@@ -712,7 +753,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.2</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.41.3</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
