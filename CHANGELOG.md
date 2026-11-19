@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.5（2026-11-19）
+
+企業頁（/enterprise）拿掉「客戶委託案例」（只剩會員集點一張）與「網站互動效果範例」兩個區塊，連同頁內目錄連結、案例結構化資料與 effects.css／effects.js 載入；`/services#effects` 舊錨點改轉到 /enterprise。
+
 ## v1.43.4（2026-11-19）
 
 全站「解決方案」下拉選單補上「CEU 教育升級版授權」，連到 /services/ceu 型錄頁。
