@@ -36,10 +36,11 @@
 .tr-topics a { font-weight: 600; }
 /* 歷次研習講義：時間軸清單，新到舊。之後每辦一場就在 .tr-log 最上面加一個 .tr-log-item。 */
 .tr-log { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-.tr-log-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); }
+.tr-log-item { border: 1px solid var(--line); border-radius: var(--radius); }
+.tr-log-link { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 14px 16px; color: inherit; text-decoration: none; }
+.tr-log-link:hover .tr-log-unit, .tr-log-link:focus-visible .tr-log-unit { color: var(--accent); text-decoration: underline; }
 .tr-log-date { font-weight: 600; color: var(--accent); min-width: 92px; }
 .tr-log-unit { color: var(--muted); font-size: .88rem; }
-.tr-log-item a { margin-left: auto; white-space: nowrap; }
 </style>
 <script type="application/ld+json">
 {
@@ -207,53 +208,62 @@
 <section class="section" id="log">
   <div class="wrap">
     <h2 class="section-title reveal">歷次研習講義</h2>
-    <p class="section-sub reveal">現場講課用的是短連結，方便直接唸給學員：新的在最上面。</p>
+    <p class="section-sub reveal">點日期或研習名稱就能開啟當場講義：新的在最上面。</p>
     <div class="wrap prose" style="max-width:920px;padding:0;">
       <ul class="tr-log">
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/11/12</span>
-          <span class="tr-log-unit">敏惠護理專科學校 AI 研習</span>
-          <a href="https://www.hunglun.com/go/1112" target="_blank" rel="noopener">hunglun.com/go/1112</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/1112" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/11/12</span>
+            <span class="tr-log-unit">敏惠護理專科學校 AI 研習</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/11/10</span>
-          <span class="tr-log-unit">敏惠護理專科學校 資安通識</span>
-          <a href="https://www.hunglun.com/go/1110" target="_blank" rel="noopener">hunglun.com/go/1110</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/1110" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/11/10</span>
+            <span class="tr-log-unit">敏惠護理專科學校 資安通識</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/11/02、11/07</span>
-          <span class="tr-log-unit">高雄女子高級中學 AI 研習</span>
-          <a href="https://www.hunglun.com/go/1102" target="_blank" rel="noopener">hunglun.com/go/1102</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/1102" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/11/02、11/07</span>
+            <span class="tr-log-unit">高雄女子高級中學 AI 研習</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/10/20</span>
-          <span class="tr-log-unit">長榮大學 AI 研習</span>
-          <a href="https://www.hunglun.com/go/1020" target="_blank" rel="noopener">hunglun.com/go/1020</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/1020" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/10/20</span>
+            <span class="tr-log-unit">長榮大學 AI 研習</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/10/15</span>
-          <span class="tr-log-unit">國立北港高級中學 AI 研習</span>
-          <a href="https://www.hunglun.com/go/1015" target="_blank" rel="noopener">hunglun.com/go/1015</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/1015" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/10/15</span>
+            <span class="tr-log-unit">國立北港高級中學 AI 研習</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/10/13</span>
-          <span class="tr-log-unit">國立臺南高級商業職業學校 AI 研習</span>
-          <a href="https://www.hunglun.com/go/1013" target="_blank" rel="noopener">hunglun.com/go/1013</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/1013" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/10/13</span>
+            <span class="tr-log-unit">國立臺南高級商業職業學校 AI 研習</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/10/12</span>
-          <span class="tr-log-unit">南光高級中學 AI 研習</span>
-          <a href="https://www.hunglun.com/go/1012" target="_blank" rel="noopener">hunglun.com/go/1012</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/1012" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/10/12</span>
+            <span class="tr-log-unit">南光高級中學 AI 研習</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/09/30</span>
-          <span class="tr-log-unit">吳鳳科技大學 AI 研習</span>
-          <a href="https://www.hunglun.com/go/0930" target="_blank" rel="noopener">hunglun.com/go/0930</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/0930" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/09/30</span>
+            <span class="tr-log-unit">吳鳳科技大學 AI 研習</span>
+          </a>
         </li>
         <li class="tr-log-item">
-          <span class="tr-log-date">2026/09/16</span>
-          <span class="tr-log-unit">吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）</span>
-          <a href="https://www.hunglun.com/go/0916" target="_blank" rel="noopener">hunglun.com/go/0916</a>
+          <a class="tr-log-link" href="https://www.hunglun.com/go/0916" target="_blank" rel="noopener">
+            <span class="tr-log-date">2026/09/16</span>
+            <span class="tr-log-unit">吳鳳科技大學 AI 研習：用白話文寫程式（Vibe Coding）</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -352,7 +362,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.7</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.8</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
