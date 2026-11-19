@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.7（2026-11-19）
+
+「解決方案」下拉選單的「Chrome 載具管理 MDM」改為「Chromebook 載具管理 MDM」。
+
 ## v1.43.6（2026-11-19）
 
 「解決方案」下拉選單的「CEU 教育升級版授權」改名為「Chrome 載具管理 MDM」（連結不變，仍到 /services/ceu）。
