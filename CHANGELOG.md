@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.3（2026-11-19）
+
+企業頁（/enterprise）拿掉與企業方案不相關的店家網站案例（伊登森活、喜翻親子感統遊戲空間），只留會員集點系統；同步移除頁內結構化資料、`llms.txt`，並重產 `llms-full.txt`。
+
 ## v1.43.2（2026-11-19）
 
 解決方案補回主力產品入口：全站「解決方案」下拉選單新增「T&L・Education Plus 授權」（連到 Workspace 頁）與「代理數位學習軟體」（連到 /software）；教育解決方案頁把兩張卡片標題與說明改為明確寫出 T&L、Education Plus 與代理軟體。腳本 `sitemap/add-solution-nav-items.py`（可重複執行）。
