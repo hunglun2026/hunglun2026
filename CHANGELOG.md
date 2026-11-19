@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.2（2026-11-19）
+
+解決方案補回主力產品入口：全站「解決方案」下拉選單新增「T&L・Education Plus 授權」（連到 Workspace 頁）與「代理數位學習軟體」（連到 /software）；教育解決方案頁把兩張卡片標題與說明改為明確寫出 T&L、Education Plus 與代理軟體。腳本 `sitemap/add-solution-nav-items.py`（可重複執行）。
+
 ## v1.43.1（2026-11-19）
 
 v1.43.0 的中段入口與文末 LINE 鈕擴大到其餘知識庫文章（共 105 頁），依主題頁分類對應四種入口：授權評估（連 `/services/google-workspace`）、教師研習（`/services/campus-training`）、數位學習軟體（`/software`）、設備採購（`/services/procurement`），資安與個資類連網域導入設定服務。文末「聯絡我們」依類別帶 `?topic=`；`/contact` 的主題預選新增 `procurement`、`software`。文案只用站上已有的服務說明。不動任何文章的 `<title>` 與 `<h1>`。
