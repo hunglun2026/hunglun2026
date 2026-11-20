@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.10（2026-11-20）
+
+搜尋排名分流：`/services/google-ai-pro` 與 `/google/ai-pro-campus` 原本標題都以「Google AI Pro for Education」開頭，和主文章 `/knowledge/google-ai-pro-for-education` 搶同一批關鍵字（GSC 顯示服務頁在該字排 7.0 名、曝光 967）。服務頁改為「學校導入 Google AI Pro：授權開通與教師研習服務」，簡報頁改為「智慧校園導入簡報」，讓「是什麼」類查詢集中到主文章；簡報頁補一條連到主文章的站內連結。
+
 ## v1.43.9（2026-11-20）
 
 `/landing`（廣告落地頁，保留）的「網站效果」入口原指向已拿掉的 /enterprise#effects，改連特效展示館 demo.hunglun.com（新分頁開啟），數量字樣由 8 種改為 40 種。
