@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.11（2026-11-20）
+
+依搜尋需求補內容缺口：Google 自動完成與 GSC 都有人搜「padlet 教育版 費用」「wordwall 教育版 價格」，但 `/knowledge/padlet`、`/knowledge/wordwall` 全文沒有「費用」字樣（台灣搜尋結果該字我們排第 5）。兩頁各補一題「費用怎麼算」FAQ（頁面與 FAQPage 結構化資料同步），只寫已確認事實，單價標明以原廠當期公告為準。
+
 ## v1.43.10（2026-11-20）
 
 搜尋排名分流：`/services/google-ai-pro` 與 `/google/ai-pro-campus` 原本標題都以「Google AI Pro for Education」開頭，和主文章 `/knowledge/google-ai-pro-for-education` 搶同一批關鍵字（GSC 顯示服務頁在該字排 7.0 名、曝光 967）。服務頁改為「學校導入 Google AI Pro：授權開通與教師研習服務」，簡報頁改為「智慧校園導入簡報」，讓「是什麼」類查詢集中到主文章；簡報頁補一條連到主文章的站內連結。
