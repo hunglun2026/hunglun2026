@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.13（2026-11-20）
+
+補「gemini 教育版 費用」缺口：台灣搜尋前九名沒有我們。依 Google 官方 AI Pro for Education 方案頁，`/knowledge/gemini` 與 `/knowledge/google-ai-pro-for-education-cost` 各補一題 FAQ（頁面與 FAQPage 結構化資料同步）：Gemini for Education 隨 Workspace 教育版內含不另收費；AI Pro 加購牌價每人每月 24 美元（月繳）、20 美元（年約），僅限 18 歲以上；台灣實際採購以夥伴報價為準。
+
 ## v1.43.12（2026-11-20）
 
 研習專區新增 /go/1121 嘉義市私立東吳高級工業家事職業學校 Google AI Pro 研習（2026/11/21），列在歷次研習講義最上方；頁面名稱「研習紀錄與講義專區」改為「研習講義專區」（標題、麵包屑、分頁籤、結構化資料、llms.txt 同步）。
