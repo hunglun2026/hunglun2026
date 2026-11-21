@@ -3,6 +3,18 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.18（2026-11-21）
+
+教學資源新增 9 篇 2026 年 11 月新功能文章，並更新 1 篇。選題依據是 Google Workspace Updates 11 月公告日期加上台灣 Google 搜尋建議，只寫官方頁有寫的內容，公告沒寫的（例如 Nano Banana 2.1 額度）如實標明沒寫。
+
+- Classroom：`classroom-guided-learning`（引導式學習派到作業）、`meet-share-presentation`（Meet 分享簡報與新的檔案連結功能）
+- Gemini 教育版與 Notebook：`gemini-skills-sharing`（技能分享與加入檔案）、`nano-banana-2-google-pics`（Nano Banana 2.1）、`gemini-notebook-interactive-site`（Notebook 互動網站）
+- Google 與 AI 導入：`workspace-studio`（Studio 管理員設定）、`apps-script-gemini`（Apps Script 的 Gemini）
+- 資安與個資法遵：`classroom-audit-log-columns`（稽核記錄新欄位）、`drive-gemini-data-classification`（Drive 自動資料分類）
+- 更新舊文：`google-vids-education-limits` 補「素材區」段落與 FAQ
+
+每篇都放進原有分類的既有小分組，沒有新增選單或分組。
+
 ## v1.43.17（2026-11-21）
 
 站內連結補強（不動版面）：站內被連次數最少的高流量文章（padlet 1 條、ai-literacy-certification 2 條、gemini-flow-howto 5 條），在 7 篇相關文章既有的「延伸閱讀」清單最後各補 1 條連結：wordwall、kahoot、thinglink、edpuzzle 連到 padlet；gemini-certification-process、gemini-certified-student 連到 ai-literacy-certification；gemini-make-slides 連到 gemini-flow-howto。三種寬度斷行檢查通過。

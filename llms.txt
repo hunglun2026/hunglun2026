@@ -190,6 +190,15 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Gemini 認證學生版怎麼考？13 歲以上、免費、效期 3 年，高中生與大學生的差別](https://www.hunglun.com/knowledge/gemini-certified-student)：Gemini 認證學生版有兩種：K-12 學生（13 到 17 歲）與大學生（18 歲以上），都免費、效期 3 年、選擇題。整理誰能考、要先修哪門課、報名方式，以及官方沒寫清楚的中文考試。
 - [Google Meet 教育版：為什麼不能錄影？會議時間上限 24 小時，哪個版本有出席報告](https://www.hunglun.com/knowledge/meet-education-limits)：Google Meet 教育版的限制：Education Fundamentals 與 Standard 老師不能錄影、Plus 才能；會議時間上限 24 小時、錄影最長 8 小時；出席報告只有 Plus 與 Teaching and Learning 有。依官方說明整理。
 - [Gemini 出現錯誤、無法生成圖片、不能用怎麼辦？錯誤代碼與官方 7 個排除步驟](https://www.hunglun.com/knowledge/gemini-error-troubleshooting)：Gemini 顯示「發生錯誤」「我無法生成圖片」或錯誤代碼 1060、1099、1185 時，官方列出的 7 個處理步驟、各種錯誤訊息的原因，以及學校帳戶與年齡限制造成的情況。
+- [Gemini 引導式學習是什麼？老師怎麼派到 Classroom 作業](https://www.hunglun.com/knowledge/classroom-guided-learning)：Google 11 月起讓老師把 Gemini 引導式學習加進 Classroom 作業：學生不能亂開新對話、老師看得到洞察摘要與聊天紀錄。整理適用版本、管理員要開的設定與學校該先確認的事。
+- [Google Workspace Studio 是什麼？學校管理員要先設定什麼](https://www.hunglun.com/knowledge/workspace-studio)：Google Workspace Studio 讓人用白話描述就做出自動化流程。整理它是什麼、教育版哪些版本可用、11 月新增的協作步驟與資料區域設定、流程數量上限，以及管理員導入前的檢查。
+- [用白話文寫 Apps Script：Gemini 幫老師做自動化](https://www.hunglun.com/knowledge/apps-script-gemini)：Google 11 月讓 Gemini 進入 Apps Script：用白話描述需求，Gemini 幫你寫程式。整理入口在哪、怎麼一步步用、哪些版本能用（教育版限 AI Pro for Education），以及老師試用的注意事項。
+- [Gemini 技能怎麼用？怎麼分享給同事、怎麼加入檔案](https://www.hunglun.com/knowledge/gemini-skills-sharing)：Gemini 技能是可重複使用的自訂指令。11 月新增分享給他人、加入 Drive、Notebook、相片檔案。整理怎麼建立、怎麼叫用、怎麼分享、檔案與管理員設定的限制，以及老師的使用建議。
+- [Google Meet 怎麼分享簡報？畫面、聲音與新的檔案連結功能](https://www.hunglun.com/knowledge/meet-share-presentation)：Google Meet 分享簡報的步驟：分頁、視窗或整個畫面怎麼選、聲音怎麼一起分享、直接在 Meet 控制投影片。另整理 11 月新增的檔案連結分享功能與權限注意事項。
+- [Nano Banana 2.1 是什麼？Google Pics 升級了什麼、誰能用](https://www.hunglun.com/knowledge/nano-banana-2-google-pics)：Google Pics 11 月升級到 Nano Banana 2.1：畫質更真實、編輯更精準、文字更清楚。整理官方寫明的改進、教育版哪個授權能用、管理員能怎麼關，以及公告沒寫的額度與年齡限制。
+- [Gemini Notebook 做互動網站：怎麼用、誰能用、學校注意什麼](https://www.hunglun.com/knowledge/gemini-notebook-interactive-site)：Gemini Notebook 11 月新增把筆記與資料變成互動網站，例如互動週期表、歷史時間軸。整理官方寫明的操作、18 歲以上限制、管理員控制範圍，以及學校與老師的使用提醒。
+- [Classroom 稽核記錄新增兩欄位：資訊組長怎麼用來追查](https://www.hunglun.com/knowledge/classroom-audit-log-columns)：Google 11 月在 Classroom 稽核記錄新增「應用程式名稱」與「使用者裝置 ID」兩個欄位。整理怎麼顯示、能追查什麼、哪些教育版可用，以及資訊組長處理異常操作的實務做法。
+- [Drive 的 Gemini 自動分類檔案：學校個資盤點能怎麼用](https://www.hunglun.com/knowledge/drive-gemini-data-classification)：Google Drive 的 Gemini 資料分類正式推出：用白話描述規則，讓 Gemini 自動替檔案貼標籤。整理管理員設定步驟、教育版可用授權（限 AI Pro for Education）、限制，以及學校個資盤點的用法。
 
 ## 常見問答（可直接引用的簡答）
 Q：Gemini 教育版要怎麼申請？
