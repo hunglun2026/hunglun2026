@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.16（2026-11-21）
+
+- `/knowledge/padlet` 新增「Padlet 在課堂怎麼用？五種常見做法」：台灣搜尋「padlet是什麼」前三名都是教學應用頁，本頁原本偏採購說明，缺課堂用法。
+- 斷行補修：英文課列表標題（`/tools/english-1` 至 `-5`，68 個）、英文課徽章說明、知識庫首頁兩個推薦標題、`classroom-troubleshooting` 資料來源、`google-partner` 的「成功案例」，用 `.nowrap` 綁住尾端避免孤字或斷詞。全站三種寬度橫向溢出 0 處。
+
 ## v1.43.15（2026-11-20）
 
 全站斷行檢查與修正。`check-linebreak.py` 一度回報 967 處，查證後多數是誤報：綁字用的 `.nowrap`（inline-block）被當成獨立區塊，只量到段落前兩個字；已修檢查器。修正後剩 137 處真問題，主因是句子結尾是連結時（`…</a>。`），inline-block 讓句號可以單獨掉到下一行。`.nowrap` 改為 `display: inline`（仍不可斷行），全站 style.css 版號升到 v163。複查全站三種寬度剩 23 處，皆為原本就有的 `/tools/english*` 孤字與少數行沒填滿。

@@ -444,7 +444,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.15</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.16</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>
@@ -560,7 +560,9 @@
         li.innerHTML = '<span class="en-bi" aria-hidden="true"></span><span><strong></strong><small></small></span>';
         li.querySelector('.en-bi').textContent = got ? '★' : '☆';
         li.querySelector('strong').textContent = b.name;
-        li.querySelector('small').textContent = got ? b.desc : '未解鎖：' + b.desc;
+        (function(){var t = got ? b.desc : '未解鎖：' + b.desc, sm = li.querySelector('small'), m = t.match(/全部 \d+ 堂$/);
+          if (!m) { sm.textContent = t; return; }
+          sm.textContent = t.slice(0, m.index); var sp = document.createElement('span'); sp.style.whiteSpace = 'nowrap'; sp.textContent = m[0]; sm.appendChild(sp); })();
         wall.appendChild(li);
       });
     }
