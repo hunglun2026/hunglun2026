@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.17（2026-11-21）
+
+站內連結補強（不動版面）：站內被連次數最少的高流量文章（padlet 1 條、ai-literacy-certification 2 條、gemini-flow-howto 5 條），在 7 篇相關文章既有的「延伸閱讀」清單最後各補 1 條連結：wordwall、kahoot、thinglink、edpuzzle 連到 padlet；gemini-certification-process、gemini-certified-student 連到 ai-literacy-certification；gemini-make-slides 連到 gemini-flow-howto。三種寬度斷行檢查通過。
+
 ## v1.43.16（2026-11-21）
 
 - `/knowledge/padlet` 新增「Padlet 在課堂怎麼用？五種常見做法」：台灣搜尋「padlet是什麼」前三名都是教學應用頁，本頁原本偏採購說明，缺課堂用法。
