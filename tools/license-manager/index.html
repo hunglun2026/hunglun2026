@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>鴻綸教育授權管理系統</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--sub:#6b7280;--line:#e5e7eb;--pri:#1d4ed8;--pri-d:#1e40af;--ok:#047857;--warn:#b45309;--err:#b91c1c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}
+header{background:#0f172a;color:#fff;padding:18px 20px}
+header h1{margin:0;font-size:20px;font-weight:700}
+header p{margin:2px 0 0;font-size:13px;color:#cbd5e1}
+main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+.steps{display:flex;gap:8px;margin:0 0 16px;padding:0;list-style:none;flex-wrap:wrap}
+.steps li{flex:1;min-width:120px;padding:8px 10px;border-radius:8px;background:#e5e7eb;color:var(--sub);font-size:14px;text-align:center}
+.steps li.on{background:var(--pri);color:#fff;font-weight:700}
+.steps li.done{background:#d1fae5;color:var(--ok)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+h2{margin:0 0 6px;font-size:18px}
+.hint{color:var(--sub);font-size:14px;margin:0 0 14px}
+label{display:block;font-weight:700;margin:14px 0 4px}
+select,input[type=text],input[type=number],textarea{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:130px;resize:vertical}
+button{font:inherit;padding:10px 18px;border-radius:8px;border:1px solid var(--pri);background:var(--pri);color:#fff;cursor:pointer;font-weight:700}
+button:hover{background:var(--pri-d)}
+button.ghost{background:#fff;color:var(--pri)}
+button.danger{background:var(--err);border-color:var(--err)}
+button:disabled{opacity:.5;cursor:not-allowed}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;font-size:13px;font-weight:700}
+.p-add{background:#dbeafe;color:#1e40af}.p-remove{background:#fee2e2;color:#991b1b}.p-skip{background:#e5e7eb;color:#4b5563}.p-error{background:#fde68a;color:#92400e}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}
+th{background:#f1f5f9;position:sticky;top:0}
+.box{max-height:360px;overflow:auto;border:1px solid var(--line);border-radius:8px}
+.msg{padding:10px 12px;border-radius:8px;margin:10px 0;font-size:14px}
+.msg.warn{background:#fef3c7;color:#92400e}.msg.err{background:#fee2e2;color:#991b1b}.msg.ok{background:#d1fae5;color:#065f46}.msg.info{background:#dbeafe;color:#1e3a8a}
+.sum{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.sum div{background:#f1f5f9;border-radius:8px;padding:8px 14px;font-weight:700}
+.log{font:13px/1.7 ui-monospace,Consolas,monospace;background:#0f172a;color:#e2e8f0;border-radius:8px;padding:12px;max-height:300px;overflow:auto;white-space:pre-wrap}
+.hidden{display:none}
+dialog{border:none;border-radius:12px;padding:22px;max-width:440px;width:92%;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(15,23,42,.55)}
+dialog h3{margin:0 0 8px}
+small{color:var(--sub)}
+</style>
+</head>
+<body>
+<header>
+  <p style="margin:0 0 6px;font-size:13px"><a href="/tools/commercial" style="color:#cbd5e1">← 回商用工具</a></p>
+  <h1>鴻綸教育授權管理系統</h1>
+  <p>用你自己的管理員帳號登入，資料只在你的瀏覽器與 Google 之間往來，不經過任何其他伺服器</p>
+</header>
+<main>
+  <ol class="steps" id="steps">
+    <li data-s="1">1 登入與選授權</li><li data-s="2">2 填名單</li><li data-s="3">3 預演確認</li><li data-s="4">4 執行結果</li>
+  </ol>
+
+  <section class="card" id="s1">
+    <h2>步驟 1：登入並選擇授權</h2>
+    <p class="hint">需要具備「授權管理」權限的管理員帳號。我們不會要求密碼，登入視窗是 Google 自己的。</p>
+    <label for="sku">要管理哪一種授權</label>
+    <select id="sku"></select>
+    <label for="avail">目前可用授權數（選填）<small>　後台「帳單 > 訂閱」可以看到，填了會幫你防呆</small></label>
+    <input type="number" id="avail" min="0" placeholder="例如 10">
+    <label for="domain">學校網域<small>　登入後會自動帶入</small></label>
+    <input type="text" id="domain" placeholder="例如 school.edu.tw">
+    <div class="row">
+      <button id="btnLogin">用 Google 管理員帳號登入</button>
+      <button id="btnDemo" class="ghost">先用示範資料練習（不連 Google）</button>
+    </div>
+    <div id="s1msg"></div>
+  </section>
+
+  <section class="card hidden" id="s2">
+    <h2>步驟 2：貼上名單</h2>
+    <p class="hint">直接貼電子郵件即可，用換行、空白或逗號分隔都可以（可以從 Excel 整欄貼上）。<b>名單以外的人完全不會被動到。</b></p>
+    <label for="addList">這次要有授權的人</label>
+    <textarea id="addList" placeholder="teacher1@school.edu.tw&#10;teacher2@school.edu.tw"></textarea>
+    <label for="revList">要收回授權的人（例如上次那一批）</label>
+    <textarea id="revList" placeholder="old1@school.edu.tw&#10;old2@school.edu.tw"></textarea>
+    <label for="keepList">永遠不要動的人（選填）</label>
+    <textarea id="keepList" style="min-height:70px" placeholder="校長、主任等固定要有授權的人"></textarea>
+    <div id="s2msg"></div>
+    <div class="row"><button id="btnPlan">下一步：預演</button><button class="ghost" id="back2">上一步</button></div>
+  </section>
+
+  <section class="card hidden" id="s3">
+    <h2>步驟 3：預演（還沒有改任何東西）</h2>
+    <p class="hint">確認下面的清單正確，才按「執行」。順序是先收回、再指派。</p>
+    <div class="sum" id="sum"></div>
+    <div id="s3msg"></div>
+    <div class="box"><table><thead><tr><th>動作</th><th>帳號</th><th>說明</th></tr></thead><tbody id="planRows"></tbody></table></div>
+    <div class="row"><button id="btnRun" class="danger">執行</button><button class="ghost" id="back3">回上一步修改</button></div>
+  </section>
+
+  <section class="card hidden" id="s4">
+    <h2>步驟 4：執行結果</h2>
+    <div id="s4msg"></div>
+    <div class="log" id="log"></div>
+    <div class="row"><button class="ghost" id="btnCopy">複製紀錄</button><button id="btnAgain">再做一批</button></div>
+  </section>
+</main>
+
+<dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

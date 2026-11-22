@@ -37,7 +37,8 @@ import { clientKey, isLocked, recordFailure, clearFailures } from './_ratelimit.
 // 都放在這底下，之後再加新檔案不用記得回來改這裡。
 const TOOL_GROUPS = [
   { paths: ['/tools/ceu'], envVar: 'CEU_TOOLS_PASSWORD', cookieName: 'hlt_ceu_auth', cookiePath: '/tools/ceu', rlScope: 'ceu' },
-  { paths: ['/tools/flex-deploy', '/tools/flex-deploy-intune', '/tools/flex-swap', '/tools/flex-enroll', '/tools/downloads'], envVar: 'INTERNAL_TOOLS_PASSWORD', cookieName: 'hlt_tools_auth', cookiePath: '/tools', rlScope: 'tools' },
+  { paths: ['/tools/license-manager'], envVar: 'LICENSE_TOOLS_PASSWORD', cookieName: 'hlt_license_auth', cookiePath: '/tools/license-manager', rlScope: 'license' },
+  { paths: ['/tools/flex-deploy','/tools/flex-deploy-intune', '/tools/flex-swap', '/tools/flex-enroll', '/tools/downloads'], envVar: 'INTERNAL_TOOLS_PASSWORD', cookieName: 'hlt_tools_auth', cookiePath: '/tools', rlScope: 'tools' },
 ];
 const MAX_AGE = 60 * 15; // 15 分鐘
 
