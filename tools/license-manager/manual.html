@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>鴻綸教育授權管理系統 使用說明書</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--sub:#6b7280;--line:#e5e7eb;--pri:#1d4ed8;--ok:#047857;--warn:#b45309;--err:#b91c1c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 "Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}
+header{background:#0f172a;color:#fff;padding:18px 20px}
+header h1{margin:0;font-size:20px}
+header p{margin:4px 0 0;color:#cbd5e1;font-size:14px}
+header a{color:#cbd5e1}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:18px}
+nav.toc ol{margin:6px 0 0;padding-left:22px;columns:2;column-gap:28px}
+@media (max-width:640px){nav.toc ol{columns:1}}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:16px}
+h2{margin:0 0 10px;font-size:19px}
+h3{margin:18px 0 6px;font-size:16px}
+p{margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:10px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+.box{border-radius:10px;padding:10px 14px;margin:12px 0;font-size:15px}
+.note{background:#eff6ff;border:1px solid #bfdbfe}
+.warn{background:#fffbeb;border:1px solid #fde68a}
+.bad{background:#fef2f2;border:1px solid #fecaca}
+code,pre{font-family:Consolas,"Noto Sans TC",monospace;background:#f1f5f9;border-radius:6px}
+code{padding:1px 5px;font-size:14px}
+pre{padding:10px 14px;overflow-x:auto;font-size:14px;line-height:1.6}
+ol.steps{padding-left:22px}
+ol.steps li{margin:6px 0}
+.pill{display:inline-block;border-radius:999px;padding:0 9px;font-size:13px;font-weight:600}
+.p-add{background:#d1fae5;color:#065f46}.p-remove{background:#fee2e2;color:#991b1b}.p-skip{background:#e5e7eb;color:#374151}.p-error{background:#fef3c7;color:#92400e}
+footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
+@media print{header{background:#fff;color:#000}header a,header p{color:#000}body{background:#fff}section{break-inside:avoid;border-color:#ccc}}
+</style>
+</head>
+<body>
+<header>
+  <p style="margin:0 0 6px;font-size:13px"><a href="/tools/license-manager/">← 回授權管理系統</a>　<a href="/tools/commercial">商用工具</a></p>
+  <h1>鴻綸教育授權管理系統 使用說明書</h1>
+  <p>批次啟用模組、席次調整模組｜版本日期 2026-11-22</p>
+</header>
+<div class="wrap">
+
+<nav class="toc" aria-label="目錄"><strong>目錄</strong>
+<ol>
+  <li><a href="#what">這個系統做什麼</a></li>
+  <li><a href="#before">開始前要準備什麼</a></li>
+  <li><a href="#steps">四個步驟操作</a></li>
+  <li><a href="#lists">三份名單怎麼填</a></li>
+  <li><a href="#monthly">每月換人的標準做法</a></li>
+  <li><a href="#preview">預演表怎麼看</a></li>
+  <li><a href="#errors">出現訊息怎麼辦</a></li>
+  <li><a href="#safety">安全與隱私</a></li>
+  <li><a href="#limits">限制與尚未確認的事</a></li>
+  <li><a href="#faq">常見問題</a></li>
+</ol></nav>
+
+<section id="what">
+  <h2>1. 這個系統做什麼</h2>
+  <p>在 Google 管理控制台裡，要把授權（例如 Google AI Pro for Education）一位一位指派給老師，或一位一位收回，名單多的時候很花時間。這個系統讓管理員貼上電子郵件名單，一次完成。</p>
+  <table>
+    <tr><th style="width:26%">模組</th><th>做什麼</th></tr>
+    <tr><td>批次啟用模組</td><td>貼上一批帳號，一次指派授權。</td></tr>
+    <tr><td>席次調整模組</td><td>同一次操作裡先收回舊的一批、再指派新的一批，授權數量固定時用來換人。</td></tr>
+  </table>
+  <p>授權是<strong>依帳號</strong>指派，不看帳號在哪個組織單位，跨組織單位的帳號放在同一份名單即可。</p>
+  <div class="box note">這個系統<strong>不是全自動</strong>：每次調整都要由管理員登入、貼名單、按執行，全程約 1 分鐘。系統不會自己在背景定期換人。</div>
+  <h3>可以管理的授權</h3>
+  <table>
+    <tr><th>下拉選單名稱</th><th>備註</th></tr>
+    <tr><td>Google AI Pro for Education</td><td>已用真實後台測過指派、收回、換人。</td></tr>
+    <tr><td>Education Plus</td><td>已用真實後台測過指派、收回、換人。</td></tr>
+    <tr><td>Education Plus (Staff)</td><td>已用真實後台測過指派、收回。</td></tr>
+    <tr><td>Teaching and Learning Upgrade</td><td>程式支援；測試時所在網域沒有可用數，沒有測到實際指派。</td></tr>
+  </table>
+  <p>Google Workspace for Education Fundamentals、Gmail Only、封存使用者這三種授權是基礎授權，改錯會影響帳號能不能用，系統<strong>不提供也不接受</strong>。</p>
+</section>
+
+<section id="before">
+  <h2>2. 開始前要準備什麼</h2>
+  <ol class="steps">
+    <li><strong>一個管理員帳號</strong>：要能在 Google 管理控制台指派授權、並讀取使用者清單。是否一定要超級管理員，我們<strong>尚未實測</strong>；若登入後出現「沒有權限」，請改用超級管理員帳號，或請學校資訊人員協助。</li>
+    <li><strong>要調整的名單</strong>：電子郵件，一行一個，可以直接從 Excel 整欄貼上。</li>
+    <li><strong>授權的可用數</strong>（選填）：到管理控制台「帳單 &gt; 訂閱」可以看到。填了之後，預演時會幫你檢查夠不夠用。</li>
+    <li><strong>瀏覽器</strong>：Chrome、Edge 皆可。登入視窗是 Google 自己的視窗，要允許瀏覽器跳出視窗。</li>
+  </ol>
+</section>
+
+<section id="steps">
+  <h2>3. 四個步驟操作</h2>
+  <h3>步驟 1　登入並選擇授權</h3>
+  <ol class="steps">
+    <li>在「要管理哪一種授權」選你要調整的授權。</li>
+    <li>（選填）填「目前可用授權數」。</li>
+    <li>按「<strong>用 Google 管理員帳號登入</strong>」，在跳出的 Google 視窗選你的管理員帳號，再按「繼續」。系統不會要你的密碼，密碼只會輸入在 Google 自己的視窗。</li>
+    <li>登入成功後，「學校網域」會自動帶入（取你信箱＠後面那段），並直接進到步驟 2。</li>
+  </ol>
+  <p>想先練習不連 Google，可以按「先用示範資料練習」，裡面是假的帳號，不會動到任何真實資料。</p>
+
+  <h3>步驟 2　填名單</h3>
+  <p>有三個框：「這次要有授權的人」「要收回授權的人」「永遠不要動的人（選填）」。意思見下一節。填好按「下一步：預演」。</p>
+
+  <h3>步驟 3　預演確認（這一步不會改到任何資料）</h3>
+  <p>系統讀取目前後台狀況，列出每一位帳號「將會發生什麼」。上方有收回、指派、跳過、出錯的統計。確認無誤後按「執行」，會再跳出一次確認視窗，按「確定執行」才會真的動手。</p>
+  <ul>
+    <li>名單有找不到的帳號，或額度不足時，「執行」鍵會鎖住，要回上一步修正。</li>
+    <li>一次最多異動 <strong>30 位</strong>，超過會直接中止，避免貼錯名單造成大範圍異動。人數多時請分批做。</li>
+  </ul>
+
+  <h3>步驟 4　執行結果</h3>
+  <p>畫面會逐筆顯示成功或失敗，全部做完後，系統會<strong>再向後台查一次</strong>，核對指派的人確實有授權、收回的人確實沒了，顯示「驗證：後台目前持有者與名單一致」才算完成。完成後可按「複製紀錄」留存，按「再做一批」回到步驟 2。</p>
+  <div class="box warn">執行中請不要關閉分頁。若中途關掉，已完成的不會復原，重新操作一次即可，已經有授權的帳號會被自動跳過，不會重複指派。</div>
+</section>
+
+<section id="lists">
+  <h2>4. 三份名單怎麼填</h2>
+  <table>
+    <tr><th style="width:28%">名單</th><th>意思</th><th>什麼時候填</th></tr>
+    <tr><td>這次要有授權的人</td><td>沒有授權的會被指派，已經有的跳過。</td><td>要啟用新的一批時</td></tr>
+    <tr><td>要收回授權的人</td><td>目前有授權的會被收回，本來就沒有的不處理。</td><td>換人時填上一批；單純要拔除也填這裡</td></tr>
+    <tr><td>永遠不要動的人</td><td>這份名單裡的人無論出現在哪裡都不會被異動。</td><td>校長、主任這類無論如何要保留授權的帳號</td></tr>
+  </table>
+  <p>填寫格式：用換行、空白、逗號、分號隔開都可以，大小寫不拘，重複的會自動合併。</p>
+  <pre>teacher1@school.edu.tw
+teacher2@school.edu.tw
+teacher3@school.edu.tw</pre>
+  <div class="box note">名單以外的人完全不會被動到。同一個帳號不能同時出現在「要有」與「要收回」兩份名單，會被擋下。</div>
+</section>
+
+<section id="monthly">
+  <h2>5. 每月換人的標準做法</h2>
+  <p>情境：授權固定 10 個席次，這個月給 A 組 10 人，下個月換 B 組 10 人。</p>
+  <ol class="steps">
+    <li>到月初，登入系統，選授權。</li>
+    <li>「這次要有授權的人」貼 B 組 10 人；「要收回授權的人」貼 A 組 10 人。</li>
+    <li>填上「目前可用授權數」（通常是 0，因為席次都在 A 組手上）。</li>
+    <li>預演確認「收回 10、指派 10」，按執行。</li>
+    <li>等待結果出現「後台目前持有者與名單一致」。</li>
+  </ol>
+  <p>系統固定<strong>先收回、再指派</strong>。剛收回的席次，Google 後台有時要幾秒才會釋出，這段時間指派會被回報「授權數量不足」。系統遇到這種情況會自動等待後重試（依序等 5、10、20、40、60 秒），不需要人處理，畫面會顯示「剛收回的位子還沒釋出，N 秒後重試」。</p>
+  <div class="box warn">請留意 Google 對授權調度的使用規範。建議用在教師異動、離職、學期或專案調整席次這類情形；是否允許高頻率輪替使用，<strong>我們尚未向 Google 官方確認</strong>，請以 Google 官方條款為準。</div>
+</section>
+
+<section id="preview">
+  <h2>6. 預演表怎麼看</h2>
+  <table>
+    <tr><th style="width:14%">動作</th><th style="width:30%">原因欄</th><th>說明</th></tr>
+    <tr><td><span class="pill p-remove">收回</span></td><td>目前有此授權</td><td>執行時會收回。</td></tr>
+    <tr><td><span class="pill p-add">指派</span></td><td>沒有此授權</td><td>執行時會指派。</td></tr>
+    <tr><td><span class="pill p-skip">跳過</span></td><td>已有此授權</td><td>已經有了，不動。</td></tr>
+    <tr><td><span class="pill p-skip">跳過</span></td><td>在保留名單，不異動</td><td>你放在「永遠不要動的人」。</td></tr>
+    <tr><td><span class="pill p-skip">跳過</span></td><td>已停權</td><td>停權帳號不指派也不收回。</td></tr>
+    <tr><td><span class="pill p-skip">跳過</span></td><td>封存使用者，不能指派一般授權</td><td>封存使用者要用專用授權，本系統不處理。</td></tr>
+    <tr><td><span class="pill p-error">出錯</span></td><td>目錄裡找不到這個使用者</td><td>多半是信箱打錯、或不屬於這個網域。回上一步修正。</td></tr>
+  </table>
+</section>
+
+<section id="errors">
+  <h2>7. 出現訊息怎麼辦</h2>
+  <table>
+    <tr><th style="width:34%">訊息</th><th>原因與處理</th></tr>
+    <tr><td>這個網站還沒設定登入用的用戶端 ID</td><td>系統端設定問題，請聯絡鴻綸科技。</td></tr>
+    <tr><td>登入沒有完成（access_denied 等）</td><td>你在 Google 視窗按了取消，或你的帳號不在可使用的網域內。目前登入限定鴻綸管理的網域（見第 9 節）。</td></tr>
+    <tr><td>這個帳號沒有權限</td><td>該帳號沒有指派授權或讀取使用者的管理員權限，請改用有權限的帳號。</td></tr>
+    <tr><td>額度不足／There aren't enough available licenses</td><td>後台這種授權沒有空位，或沒有購買。到「帳單 &gt; 訂閱」確認可用數；換人情況下系統會自動等待，等不到才會停手。</td></tr>
+    <tr><td>預演要收回的人比預期多／少</td><td>預演只是讀後台現況，請先核對名單；確定後再執行。</td></tr>
+    <tr><td>驗證失敗：某某應該有授權但沒有</td><td>Google 後台寫入後的查詢有時會延遲，系統已自動重查 5 次；仍失敗請稍後重新預演一次，看實際狀況。</td></tr>
+    <tr><td>要異動 N 位，超過上限 30</td><td>分批做，每批 30 位以內。</td></tr>
+  </table>
+</section>
+
+<section id="safety">
+  <h2>8. 安全與隱私</h2>
+  <ul>
+    <li><strong>資料不經過鴻綸伺服器</strong>：登入後，瀏覽器直接向 Google 的授權 API 與使用者目錄 API 讀寫，名單、帳號與登入憑證都只在你的瀏覽器裡。</li>
+    <li><strong>不要你的密碼</strong>：登入視窗是 Google 的，我們看不到密碼。</li>
+    <li><strong>要求的 Google 權限只有兩項</strong>：「查看及管理網域的 Google Workspace 授權」與「查看網域使用者的資訊」（唯讀）。系統不會讀信件、雲端硬碟或其他資料。</li>
+    <li><strong>可隨時撤銷</strong>：到 Google 帳戶的「第三方存取權」可移除這個應用程式的授權。</li>
+    <li><strong>每次異動前都先預演</strong>，執行前再確認一次，執行後再核對後台。</li>
+    <li>這個頁面本身有密碼保護，輸入後 15 分鐘內有效。</li>
+  </ul>
+</section>
+
+<section id="limits">
+  <h2>9. 限制與尚未確認的事</h2>
+  <ul>
+    <li><strong>登入網域限制</strong>：目前登入用的 Google 應用程式尚未通過 Google 的驗證，依 Google 說明，通過前只有鴻綸組織內的使用者能登入。要開放給其他學校的管理員，需要先完成 Google 的應用程式驗證，或為該校另外建立專用設定，這部分尚未完成。</li>
+    <li><strong>管理員最低權限</strong>：尚未實測「不是超級管理員、只有授權管理權限」的帳號能否使用。</li>
+    <li><strong>授權生效時間</strong>：系統指派後，使用者實際開始能用功能的時間，我們沒有量測過，請以 Google 為準。</li>
+    <li><strong>不是自動排程</strong>：需管理員手動操作，沒有背景自動換人。</li>
+    <li><strong>Teaching and Learning Upgrade、Plus 額外學生授權、Gemini Education Premium</strong>：測試網域沒有可用數，這三種未能實測到成功指派。</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>10. 常見問題</h2>
+  <h3>Q：按了執行後可以復原嗎？</h3>
+  <p>沒有一鍵復原，但可以反向操作：剛才指派的人貼到「要收回」，收回的人貼到「要有授權」再做一次。</p>
+  <h3>Q：可以一次處理幾百位嗎？</h3>
+  <p>單次上限 30 位。人數更多請分批，或到管理控制台用官方的「大量更新使用者」上傳 CSV（官方 CSV 只能增加授權，不能收回）。</p>
+  <h3>Q：名單裡有人其實已經有授權，會被重複指派嗎？</h3>
+  <p>不會，預演會標「已有此授權」並跳過。</p>
+  <h3>Q：帳號被停權的人怎麼辦？</h3>
+  <p>停權帳號會被跳過，不指派也不收回。</p>
+  <h3>Q：登入視窗沒跳出來？</h3>
+  <p>瀏覽器可能擋了跳出視窗，點網址列右側的提示，選「一律允許」後再按一次登入。</p>
+  <h3>Q：怎麼確認真的改好了？</h3>
+  <p>執行後系統會自動核對。你也可以到管理控制台「帳單 &gt; 訂閱」，點該授權的「指派授權的使用者」確認名單。</p>
+  <h3>Q：有問題要找誰？</h3>
+  <p>鴻綸科技 06-6371192（週一至週五 08:30–17:30），或寄信到 gfeh@hunglun.com。</p>
+</section>
+
+<footer>鴻綸科技股份有限公司　鴻綸教育授權管理系統使用說明書　2026-11-22</footer>
+</div>
+</body>
+</html>
