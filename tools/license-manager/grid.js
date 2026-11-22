@@ -1,7 +1,7 @@
 // 步驟 2 的名單表格（像 Excel 一格一格）與匯入（上傳檔案、Google 試算表、貼上多筆）。
 // 純邏輯在 logic.js，讀檔在 sheet.js，這裡只管畫面。
-import { ACTION_LABEL, MAX_CHANGES, normalizeAction, cleanEmail, listsFromRows, parsePasted, detectTable, rowsFromTable } from "./logic.js";
-import { openFile, googleSheetSource, demoSheetSource, pickBestTab } from "./sheet.js";
+import { ACTION_LABEL, MAX_CHANGES, normalizeAction, cleanEmail, listsFromRows, parsePasted, detectTable, rowsFromTable } from "./logic.js?v=20261123a";
+import { openFile, googleSheetSource, demoSheetSource, pickBestTab } from "./sheet.js?v=20261123a";
 
 const $ = (id) => document.getElementById(id);
 const el = (tag, props = {}, ...kids) => { const e = Object.assign(document.createElement(tag), props); kids.forEach((k) => e.append(k)); return e; };

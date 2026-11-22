@@ -1,8 +1,8 @@
 // 畫面與流程：四步一頁。邏輯在 logic.js，與 Google 溝通在 api.js。
-import { SKUS, MAX_CHANGES, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js";
-import { createGrid } from "./grid.js";
-import { realApi, demoApi } from "./api.js";
-import { CLIENT_ID } from "./config.js";
+import { SKUS, MAX_CHANGES, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js?v=20261123a";
+import { createGrid } from "./grid.js?v=20261123a";
+import { realApi, demoApi } from "./api.js?v=20261123a";
+import { CLIENT_ID } from "./config.js?v=20261123a";
 
 const $ = (id) => document.getElementById(id);
 const SCOPES = "openid email https://www.googleapis.com/auth/apps.licensing https://www.googleapis.com/auth/admin.directory.user.readonly";

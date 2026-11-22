@@ -1,5 +1,5 @@
 // 與 Google 溝通：真實版（用管理員自己的登入 token 直接打 REST API）與示範版（記憶體假資料，可練習、可離線測試）。
-import { classify } from "./logic.js";
+import { classify } from "./logic.js?v=20261123a";
 
 const DIR = "https://admin.googleapis.com/admin/directory/v1/users";
 const LIC = "https://licensing.googleapis.com/apps/licensing/v1";
