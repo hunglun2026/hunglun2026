@@ -59,3 +59,9 @@
 /internal/*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-store
+
+# ── 授權管理系統：Google 登入彈窗要把結果傳回本頁，COOP 必須是 same-origin-allow-popups ──
+/tools/license-manager/*
+  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cache-Control: no-store
