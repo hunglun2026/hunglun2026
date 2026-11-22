@@ -44,12 +44,36 @@ th{background:#f1f5f9;position:sticky;top:0}
 dialog{border:none;border-radius:12px;padding:22px;max-width:440px;width:92%;box-shadow:0 20px 50px rgba(0,0,0,.3)}
 dialog::backdrop{background:rgba(15,23,42,.55)}
 dialog h3{margin:0 0 8px}
+
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.toolbar button{padding:7px 12px;font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0;min-height:28px}
+.chip{background:#f1f5f9;border-radius:99px;padding:2px 12px;font-size:13px;font-weight:700}
+.chip.bad{background:#fee2e2;color:#991b1b}
+.gridbox{max-height:430px;overflow:auto;border:1px solid #94a3b8;border-radius:8px;background:#fff}
+.gridbox.drop{outline:3px dashed var(--pri);outline-offset:-3px;background:#eff6ff}
+table.grid{border-collapse:separate;border-spacing:0;table-layout:fixed;min-width:520px}
+table.grid th,table.grid td{border-right:1px solid #cbd5e1;border-bottom:1px solid #cbd5e1;padding:0}
+table.grid th{background:#e2e8f0;padding:7px 10px;text-align:left;position:sticky;top:0;z-index:2;font-size:13px}
+table.grid td.idx,table.grid th.idx{position:sticky;left:0;z-index:1;width:46px;text-align:center;background:#f1f5f9;color:var(--sub);font-size:13px}
+table.grid th.idx{z-index:3}
+table.grid tbody tr:nth-child(even) td:not(.idx){background:#f8fafc}
+table.grid input,table.grid select{width:100%;border:0;border-radius:0;background:transparent;padding:8px 10px;font:inherit;font-size:14px}
+table.grid input:focus,table.grid select:focus{outline:2px solid var(--pri);outline-offset:-2px;background:#fff}
+table.grid input.bad{background:#fee2e2;color:#991b1b}
+table.grid td.act,table.grid th.act{width:44px;text-align:center}
+button.x{padding:2px 8px;background:transparent;border:0;color:#94a3b8;font-size:20px;line-height:1}
+button.x:hover{color:var(--err);background:transparent}
+dialog.wide{max-width:600px}
+dialog textarea{min-height:160px}
+dialog .f{margin:10px 0 0}
+dialog .f label{margin:0 0 3px;font-size:14px}
 small{color:var(--sub)}
 </style>
 </head>
 <body>
 <header>
-  <p style="margin:0 0 6px;font-size:13px"><a href="/tools/commercial" style="color:#cbd5e1">← 回商用工具</a>　<a href="/tools/license-manager/manual.html" style="color:#cbd5e1" target="_blank" rel="noopener">使用說明書</a></p>
+  <p id="siteLinks" class="hidden" style="margin:0 0 6px;font-size:13px"><a href="/tools/commercial" style="color:#cbd5e1">← 回商用工具</a>　<a href="manual.html" style="color:#cbd5e1" target="_blank" rel="noopener">使用說明書</a></p>
   <h1>鴻綸教育授權管理系統</h1>
   <p>用你自己的管理員帳號登入，資料只在你的瀏覽器與 Google 之間往來，不經過任何其他伺服器</p>
 </header>
@@ -75,14 +99,24 @@ small{color:var(--sub)}
   </section>
 
   <section class="card hidden" id="s2">
-    <h2>步驟 2：貼上名單</h2>
-    <p class="hint">直接貼電子郵件即可，用換行、空白或逗號分隔都可以（可以從 Excel 整欄貼上）。<b>名單以外的人完全不會被動到。</b></p>
-    <label for="addList">這次要有授權的人</label>
-    <textarea id="addList" placeholder="teacher1@school.edu.tw&#10;teacher2@school.edu.tw"></textarea>
-    <label for="revList">要收回授權的人（例如上次那一批）</label>
-    <textarea id="revList" placeholder="old1@school.edu.tw&#10;old2@school.edu.tw"></textarea>
-    <label for="keepList">永遠不要動的人（選填）</label>
-    <textarea id="keepList" style="min-height:70px" placeholder="校長、主任等固定要有授權的人"></textarea>
+    <h2>步驟 2：填名單</h2>
+    <p class="hint">每一列一個帳號，選它要「指派、收回、保留不動」。可以直接在格子裡打字、從 Excel 貼上多列，或上傳檔案讓系統自動辨識。<b>名單以外的人完全不會被動到。</b></p>
+    <div class="toolbar">
+      <button class="ghost" id="gFile" type="button">上傳檔案（CSV、Excel）</button>
+      <button class="ghost" id="gSheet" type="button">匯入 Google 試算表</button>
+      <button class="ghost" id="gPaste" type="button">貼上多筆</button>
+      <button class="ghost" id="gAdd" type="button">＋ 新增一列</button>
+      <button class="ghost" id="gClear" type="button">清空</button>
+    </div>
+    <input type="file" id="fileIn" accept=".csv,.tsv,.txt,.xlsx,.xls" hidden>
+    <div class="chips" id="gSum"></div>
+    <div class="gridbox" id="gridBox">
+      <table class="grid">
+        <thead><tr><th class="idx">#</th><th>電子郵件</th><th style="width:150px">動作</th><th class="act"></th></tr></thead>
+        <tbody id="gBody"></tbody>
+      </table>
+    </div>
+    <p class="hint" style="margin-top:8px">小技巧：把檔案直接拖到表格上就能匯入；在信箱格按 Enter 跳到下一列；上傳後系統會自動找出「信箱欄」和「動作欄」，你可以在確認視窗改。</p>
     <div id="s2msg"></div>
     <div class="row"><button id="btnPlan">下一步：預演</button><button class="ghost" id="back2">上一步</button></div>
   </section>
@@ -105,6 +139,27 @@ small{color:var(--sub)}
 </main>
 
 <dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
+
+
+<dialog id="pasteDlg"><h3>貼上多筆</h3><p class="hint">一行一個帳號，可以從 Excel 整欄貼上。若同一行後面有「指派、收回、保留」字樣，會自動採用。</p>
+  <textarea id="pasteText" placeholder="teacher1@school.edu.tw&#10;teacher2@school.edu.tw 收回"></textarea>
+  <div class="f"><label for="pasteAct">沒有寫動作的人，要：</label><select id="pasteAct"><option value="add">指派</option><option value="revoke">收回</option><option value="keep">保留不動</option></select></div>
+  <div class="row" style="justify-content:flex-end"><button class="ghost" id="pasteNo">取消</button><button id="pasteYes">加入表格</button></div></dialog>
+
+<dialog id="sheetDlg"><h3>匯入 Google 試算表</h3><p class="hint">貼上試算表的網址。系統會暫時請求「讀取試算表」的唯讀權限，只讀這一份，不會修改它。</p>
+  <input type="text" id="sheetUrl" placeholder="https://docs.google.com/spreadsheets/d/…">
+  <div id="sheetMsg"></div>
+  <div class="row" style="justify-content:flex-end"><button class="ghost" id="sheetNo">取消</button><button id="sheetYes">讀取</button></div></dialog>
+
+<dialog id="impDlg" class="wide"><h3 id="impTitle"></h3>
+  <div id="impInfo" class="msg info"></div>
+  <div class="f hidden" id="impTabRow"><label for="impTab">分頁</label><select id="impTab"></select></div>
+  <div class="f"><label for="impEmail">哪一欄是電子郵件</label><select id="impEmail"></select></div>
+  <div class="f"><label for="impAction">哪一欄是動作（指派、收回、保留）</label><select id="impAction"></select></div>
+  <div class="f" id="impDefaultRow"><label for="impDefault">沒有動作的人，要：</label><select id="impDefault"><option value="add">指派</option><option value="revoke">收回</option><option value="keep">保留不動</option></select></div>
+  <div class="f"><label for="impMode">匯入方式</label><select id="impMode"><option value="append">加到目前表格（相同信箱更新動作）</option><option value="replace">取代目前整張表格</option></select></div>
+  <div class="f"><label>預覽</label><div class="box" style="max-height:170px"><table><tbody id="impPrev"></tbody></table></div></div>
+  <div class="row" style="justify-content:flex-end"><button class="ghost" id="impNo">取消</button><button id="impYes">匯入</button></div></dialog>
 
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script type="module" src="app.js"></script>

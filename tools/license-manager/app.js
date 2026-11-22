@@ -1,10 +1,12 @@
 // 畫面與流程：四步一頁。邏輯在 logic.js，與 Google 溝通在 api.js。
-import { SKUS, parseEmails, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js";
+import { SKUS, MAX_CHANGES, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js";
+import { createGrid } from "./grid.js";
 import { realApi, demoApi } from "./api.js";
 import { CLIENT_ID } from "./config.js";
 
 const $ = (id) => document.getElementById(id);
 const SCOPES = "openid email https://www.googleapis.com/auth/apps.licensing https://www.googleapis.com/auth/admin.directory.user.readonly";
+const SHEETS_SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly";
 const OP_LABEL = { add: "指派", remove: "收回", skip: "跳過", error: "出錯" };
 const state = { api: null, token: "", plan: null, lists: null };
 
@@ -25,6 +27,21 @@ function show(n) {
   window.scrollTo(0, 0);
 }
 const sku = () => SKUS[$("sku").value];
+
+// ---- 名單表格（步驟 2） ----
+// 讀取試算表的權限只在使用者按「匯入 Google 試算表」時才額外請求（漸進授權），平常登入只要授權管理與讀取使用者
+function getSheetsToken() {
+  return new Promise((resolve, reject) => {
+    if (!CLIENT_ID || !window.google?.accounts) return reject(new Error("請先在步驟 1 用 Google 登入"));
+    google.accounts.oauth2.initTokenClient({
+      client_id: CLIENT_ID, scope: SHEETS_SCOPE,
+      callback: (r) => (r.error ? reject(new Error(`沒有取得讀取試算表的權限（${r.error}）`)) : resolve(r.access_token)),
+      error_callback: () => reject(new Error("授權視窗被關閉或被瀏覽器擋住")),
+    }).requestAccessToken();
+  });
+}
+const grid = createGrid({ notify: (kind, text) => msg("s2msg", kind, text), askConfirm: ask, getSheetsToken, isDemo: () => state.api?.mode === "demo" });
+if (/(^|\.)hunglun\.com$/.test(location.hostname)) $("siteLinks").classList.remove("hidden");
 
 // ---- 步驟 1 ----
 for (const [k, v] of Object.entries(SKUS)) $("sku").add(new Option(v.name, k));
@@ -53,9 +70,7 @@ $("btnLogin").onclick = startReal;
 $("btnDemo").onclick = () => {
   state.api = demoApi();
   $("avail").value = 0; // 示範：後台目前沒有空位，要靠收回的位子換人
-  $("addList").value = "d@demo.school.tw\ne@demo.school.tw\nf@demo.school.tw\nn@demo.school.tw";
-  $("revList").value = "a@demo.school.tw\nb@demo.school.tw\nc@demo.school.tw";
-  $("keepList").value = "keep@demo.school.tw";
+  grid.setRows([...["d", "e", "f", "n"].map((n) => ({ email: `${n}@demo.school.tw`, action: "add" })), ...["a", "b", "c"].map((n) => ({ email: `${n}@demo.school.tw`, action: "revoke" })), { email: "keep@demo.school.tw", action: "keep" }]);
   show(2); msg("s2msg", "info", "這是示範資料，不會連到 Google，也不會改到任何真實帳號。名單已先填好，可以直接往下走一遍。");
 };
 $("sku").onchange = () => { if (state.api?.mode === "real") state.api = realApi(state.token, $("domain").value.trim(), sku()); };
@@ -63,13 +78,14 @@ $("sku").onchange = () => { if (state.api?.mode === "real") state.api = realApi(
 // ---- 步驟 2 → 3 ----
 $("back2").onclick = () => show(1);
 $("btnPlan").onclick = async () => {
-  const lists = { add: parseEmails($("addList").value), revoke: parseEmails($("revList").value), keep: parseEmails($("keepList").value) };
-  if (!lists.add.length && !lists.revoke.length) return msg("s2msg", "err", "兩份名單都是空的，至少要填一份。");
+  const lists = grid.getLists();
+  if (lists.invalid) return msg("s2msg", "err", `有 ${lists.invalid} 列不是有效的電子郵件（紅色格子），請修正或刪除後再繼續。`);
+  if (!lists.add.length && !lists.revoke.length) return msg("s2msg", "err", "表格裡沒有要指派或收回的人，請至少填一位。");
   $("btnPlan").disabled = true; msg("s2msg", "info", "正在讀取目前的使用者與授權狀況…");
   try {
     const [users, holders] = await Promise.all([state.api.listUsers(), state.api.listHolders()]);
     state.lists = lists;
-    state.plan = planRotation({ ...lists, users, holders });
+    state.plan = planRotation({ add: lists.add, revoke: lists.revoke, keep: lists.keep, users, holders });
     renderPlan(); show(3);
   } catch (e) {
     msg("s2msg", "err", e.kind === "forbidden" ? "這個帳號沒有權限（需要「授權管理」與讀取使用者的管理員權限）：" + e.message : "讀取失敗：" + e.message);
@@ -86,7 +102,7 @@ function renderPlan() {
     tr.insertCell().appendChild(pill); tr.insertCell().textContent = a.email; tr.insertCell().textContent = a.reason;
   }
   const quota = checkAvailable(actions, $("avail").value);
-  const problems = [...warnings, ...(quota ? [`額度不足：${quota}`] : []), ...(c.error ? ["名單有找不到的人，請回上一步修正"] : [])];
+  const problems = [...warnings, ...(quota ? [`額度不足：${quota}`] : []), ...(c.error ? ["名單有找不到的人，請回上一步修正"] : []), ...(c.add + c.remove > MAX_CHANGES ? [`要異動 ${c.add + c.remove} 位，超過單次上限 ${MAX_CHANGES}，請回上一步分批`] : [])];
   msg("s3msg", problems.length ? "err" : "ok", problems.length ? problems.join("；") : "預演沒有問題。");
   $("btnRun").disabled = problems.length > 0 || c.add + c.remove === 0;
   if (!problems.length && c.add + c.remove === 0) msg("s3msg", "info", "沒有需要異動的項目，目前狀態已經符合名單。");
@@ -115,5 +131,5 @@ $("btnRun").onclick = async () => {
   else msg("s4msg", "err", "有項目沒有完成，請看下方紀錄；可以回到步驟 2 修正後再跑一次（已完成的不會重複異動）。");
 };
 $("btnCopy").onclick = () => navigator.clipboard?.writeText($("log").textContent);
-$("btnAgain").onclick = () => { $("addList").value = $("revList").value = ""; show(2); };
+$("btnAgain").onclick = () => { grid.clear(); show(2); };
 show(1);

@@ -9,6 +9,7 @@ export const SKUS = {
 };
 // Fundamentals、Gmail Only、封存使用者 SKU 受保護，網頁不提供也不接受
 
+export const MAX_CHANGES = 30; // 單次最多異動幾位
 export const QUOTA_RETRY_WAITS = [5, 10, 20, 40, 60]; // 剛收回的位子要幾秒才釋出（2026-11-22 實測）
 
 export function parseEmails(text) {
@@ -85,7 +86,7 @@ export function verifyAfter(actions, holdersNow) {
 }
 
 // 執行：api = {addLicense(email), removeLicense(email)}；回傳 {ok, failed, stopped, rows}
-export async function execute(actions, api, { maxChanges = 30, sleep = (s) => new Promise((r) => setTimeout(r, s * 1000)), onRow = () => {}, onWait = () => {} } = {}) {
+export async function execute(actions, api, { maxChanges = MAX_CHANGES, sleep = (s) => new Promise((r) => setTimeout(r, s * 1000)), onRow = () => {}, onWait = () => {} } = {}) {
   const todo = actions.filter((a) => a.op === "add" || a.op === "remove");
   if (todo.length > maxChanges) throw new Error(`要異動 ${todo.length} 位，超過上限 ${maxChanges}，已中止`);
   const result = { ok: 0, failed: 0, stopped: "", rows: [] };
@@ -111,4 +112,148 @@ export async function execute(actions, api, { maxChanges = 30, sleep = (s) => ne
     if (result.stopped) break;
   }
   return result;
+}
+
+// ================= 名單表格與匯入辨識（純邏輯） =================
+export const EMAIL_RE = /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/;
+export const ACTION_LABEL = { add: "指派", revoke: "收回", keep: "保留不動" };
+
+const ADD_WORDS = ["指派", "新增", "增加", "啟用", "開通", "授權", "給", "add", "assign", "enable", "grant", "v", "✓", "✔"];
+const REVOKE_WORDS = ["收回", "移除", "撤銷", "取消", "拔除", "刪除", "停用", "remove", "revoke", "delete", "unassign"];
+const KEEP_WORDS = ["保留", "不動", "不變", "例外", "跳過", "keep", "skip", "protect", "protected"];
+
+// 把格子裡的文字轉成動作；看不懂就回 null（例如後台匯出檔的 Status 欄 ACTIVE/SUSPENDED）
+export function normalizeAction(value) {
+  const v = String(value ?? "").trim().toLowerCase();
+  if (!v) return null;
+  if (ADD_WORDS.includes(v)) return "add";
+  if (REVOKE_WORDS.includes(v)) return "revoke";
+  if (KEEP_WORDS.includes(v)) return "keep";
+  return null;
+}
+
+export function isEmail(value) { return EMAIL_RE.test(String(value ?? "").trim()); }
+
+// 從「Name <a@b.com>」或「a@b.com」取出信箱，不是信箱就回 ""
+export function cleanEmail(value) {
+  const s = String(value ?? "").trim();
+  const m = s.match(/<([^<>\s]+@[^<>\s]+)>/);
+  const e = (m ? m[1] : s).toLowerCase();
+  return EMAIL_RE.test(e) ? e : "";
+}
+
+// CSV／TSV 解析：支援引號、逗號內換行、BOM，分隔符號自動判斷（逗號、tab、分號）
+export function parseCsv(text) {
+  let s = String(text ?? "").replace(/^﻿/, "");
+  const first = s.split(/\r?\n/, 1)[0] || "";
+  const count = (ch) => first.split(ch).length - 1;
+  const delim = [["\t", count("\t")], [",", count(",")], [";", count(";")]].sort((a, b) => b[1] - a[1])[0][1] > 0
+    ? [["\t", count("\t")], [",", count(",")], [";", count(";")]].sort((a, b) => b[1] - a[1])[0][0] : ",";
+  const rows = []; let row = [], cell = "", q = false;
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (q) {
+      if (c === '"') { if (s[i + 1] === '"') { cell += '"'; i++; } else q = false; } else cell += c;
+    } else if (c === '"') q = true;
+    else if (c === delim) { row.push(cell); cell = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && s[i + 1] === "\n") i++; row.push(cell); rows.push(row); row = []; cell = ""; }
+    else cell += c;
+  }
+  if (cell !== "" || row.length) { row.push(cell); rows.push(row); }
+  return rows.filter((r) => r.some((x) => String(x).trim() !== ""));
+}
+
+// 自動辨識：哪一欄是信箱、哪一欄是動作、標題列在哪。rows2d 是二維陣列（CSV、Excel、試算表都先轉成它）。
+export function detectTable(rows2d) {
+  const rows = (rows2d || []).map((r) => (r || []).map((c) => (c == null ? "" : String(c))));
+  const ncols = rows.reduce((m, r) => Math.max(m, r.length), 0);
+  const emailCount = Array(ncols).fill(0);
+  let firstDataRow = -1;
+  rows.forEach((r, ri) => r.forEach((c, ci) => { if (cleanEmail(c)) { emailCount[ci]++; if (firstDataRow < 0) firstDataRow = ri; } }));
+  const best = Math.max(0, ...emailCount);
+  if (best === 0) return { ok: false, headers: [], emailCol: -1, actionCol: -1, headerRow: -1, dataStart: 0, emailTotal: 0, rows };
+  const headerHint = /e-?mail|信箱|帳號|電子郵件|mail/i;
+  let emailCol = emailCount.indexOf(best);
+  // 數量相同時，標題像信箱的優先
+  const topCols = emailCount.map((n, i) => [n, i]).filter(([n]) => n === best).map(([, i]) => i);
+  if (topCols.length > 1 && firstDataRow > 0) {
+    const hr = rows[firstDataRow - 1] || [];
+    const hit = topCols.find((i) => headerHint.test(hr[i] || ""));
+    if (hit !== undefined) emailCol = hit;
+  }
+  // 標題列：第一筆資料列之前最近的非空列（沒有就是無標題）
+  let headerRow = -1;
+  for (let i = firstDataRow - 1; i >= 0; i--) { if (rows[i].some((c) => c.trim())) { headerRow = i; break; } }
+  const dataStart = firstDataRow;
+  const headers = Array.from({ length: ncols }, (_, i) => (headerRow >= 0 && rows[headerRow][i]?.trim()) || `第 ${i + 1} 欄`);
+  const data = rows.slice(dataStart);
+  const actionHint = /動作|操作|action|處理|異動|指派|授權動作/i;
+  let actionCol = -1, bestScore = 0;
+  for (let ci = 0; ci < ncols; ci++) {
+    if (ci === emailCol) continue;
+    const vals = data.map((r) => (r[ci] || "").trim()).filter(Boolean);
+    if (!vals.length) continue;
+    const recognized = vals.filter((v) => normalizeAction(v)).length / vals.length;
+    let score = recognized >= 0.6 ? 5 : 0;
+    if (score && actionHint.test(headers[ci])) score += 3;
+    if (score > bestScore) { bestScore = score; actionCol = ci; }
+  }
+  return { ok: true, headers, emailCol, actionCol, headerRow, dataStart, emailTotal: best, rows };
+}
+
+// 依使用者確認的欄位，把表格轉成 [{email, action}]。沒有動作欄、或該格看不懂時，用 defaultAction。
+export function rowsFromTable(table, { emailCol, actionCol = -1, defaultAction = "add" }) {
+  const out = [], seen = new Map(); let skipped = 0, dups = 0, unknownAction = 0;
+  for (const r of table.rows.slice(table.dataStart)) {
+    const email = cleanEmail(r[emailCol]);
+    if (!email) { if ((r[emailCol] || "").trim()) skipped++; continue; }
+    let action = defaultAction;
+    if (actionCol >= 0 && (r[actionCol] || "").trim()) {
+      const a = normalizeAction(r[actionCol]);
+      if (a) action = a; else unknownAction++;
+    }
+    if (seen.has(email)) { dups++; out[seen.get(email)].action = action; continue; }
+    seen.set(email, out.length); out.push({ email, action });
+  }
+  return { rows: out, skipped, dups, unknownAction };
+}
+
+// 貼上的文字（一行一筆，信箱與動作可用 tab 或逗號隔開）轉成列
+export function parsePasted(text, defaultAction = "add") {
+  const lines = String(text ?? "").split(/\r?\n/).filter((l) => l.trim());
+  const out = [], seen = new Set();
+  for (const line of lines) {
+    const cells = line.split(/[\s,;，；]+/).filter((x) => x !== "");
+    let email = "", action = defaultAction;
+    for (const c of cells) { const e = cleanEmail(c); if (e && !email) email = e; else { const a = normalizeAction(c); if (a) action = a; } }
+    if (email && !seen.has(email)) { seen.add(email); out.push({ email, action }); }
+  }
+  return out;
+}
+
+// 表格列 -> 三份名單；回傳 {add, revoke, keep, invalid}。同一信箱重複出現時，後面的列蓋掉前面的。
+export function listsFromRows(rows) {
+  const final = new Map(); let invalid = 0;
+  for (const r of rows) {
+    const raw = String(r.email ?? "").trim();
+    if (!raw) continue;
+    const e = cleanEmail(raw);
+    if (!e) { invalid++; continue; }
+    final.set(e, r.action);
+  }
+  const lists = { add: [], revoke: [], keep: [], invalid };
+  for (const [e, a] of final) lists[a === "revoke" ? "revoke" : a === "keep" ? "keep" : "add"].push(e);
+  return lists;
+}
+
+// 位元組轉文字：先試 UTF-8，失敗就用 Big5（台灣 Excel 另存的 CSV 常是 Big5）
+export function decodeText(bytes) {
+  try { return new TextDecoder("utf-8", { fatal: true }).decode(bytes); }
+  catch { try { return new TextDecoder("big5").decode(bytes); } catch { return new TextDecoder("utf-8").decode(bytes); } }
+}
+
+export function sheetIdFromUrl(url) {
+  const m = String(url || "").match(/\/spreadsheets\/d\/([a-zA-Z0-9_-]{20,})/) || String(url || "").match(/^([a-zA-Z0-9_-]{30,})$/);
+  const g = String(url || "").match(/[#&?]gid=(\d+)/);
+  return m ? { id: m[1], gid: g ? g[1] : "" } : null;
 }

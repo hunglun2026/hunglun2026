@@ -43,7 +43,7 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
 <header>
   <p style="margin:0 0 6px;font-size:13px"><a href="/tools/license-manager/">← 回授權管理系統</a>　<a href="/tools/commercial">商用工具</a></p>
   <h1>鴻綸教育授權管理系統 使用說明書</h1>
-  <p>批次啟用模組、席次調整模組｜版本日期 2026-11-22</p>
+  <p>批次啟用模組、席次調整模組｜版本日期 2026-11-23</p>
 </header>
 <div class="wrap">
 
@@ -52,7 +52,7 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
   <li><a href="#what">這個系統做什麼</a></li>
   <li><a href="#before">開始前要準備什麼</a></li>
   <li><a href="#steps">四個步驟操作</a></li>
-  <li><a href="#lists">三份名單怎麼填</a></li>
+  <li><a href="#lists">名單表格與上傳檔案</a></li>
   <li><a href="#monthly">每月換人的標準做法</a></li>
   <li><a href="#preview">預演表怎麼看</a></li>
   <li><a href="#errors">出現訊息怎麼辦</a></li>
@@ -103,13 +103,19 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
   </ol>
   <p>想先練習不連 Google，可以按「先用示範資料練習」，裡面是假的帳號，不會動到任何真實資料。</p>
 
-  <h3>步驟 2　填名單</h3>
-  <p>有三個框：「這次要有授權的人」「要收回授權的人」「永遠不要動的人（選填）」。意思見下一節。填好按「下一步：預演」。</p>
+  <h3>步驟 2　填名單（表格）</h3>
+  <p>名單是一張像 Excel 的表格，每一列一個帳號，右邊選這個帳號要「指派、收回、保留不動」。三種填法可以混用：</p>
+  <ol class="steps">
+    <li><strong>直接打字或貼上</strong>：在「電子郵件」格子裡打字；從 Excel 複製多列貼進任一格，會自動拆成多列。</li>
+    <li><strong>上傳檔案</strong>：按「上傳檔案（CSV、Excel）」，或把檔案直接拖到表格上。系統會自動辨識，細節見第 4 節。</li>
+    <li><strong>匯入 Google 試算表</strong>：按「匯入 Google 試算表」，貼上試算表網址。</li>
+  </ol>
+  <p>表格上方的標籤會即時顯示「指派幾位、收回幾位、保留不動幾位」，有格式錯誤的列會變紅色。填好按「下一步：預演」。</p>
 
   <h3>步驟 3　預演確認（這一步不會改到任何資料）</h3>
   <p>系統讀取目前後台狀況，列出每一位帳號「將會發生什麼」。上方有收回、指派、跳過、出錯的統計。確認無誤後按「執行」，會再跳出一次確認視窗，按「確定執行」才會真的動手。</p>
   <ul>
-    <li>名單有找不到的帳號，或額度不足時，「執行」鍵會鎖住，要回上一步修正。</li>
+    <li>名單有找不到的帳號、額度不足、或超過單次上限時，「執行」鍵會鎖住，要回上一步修正。</li>
     <li>一次最多異動 <strong>30 位</strong>，超過會直接中止，避免貼錯名單造成大範圍異動。人數多時請分批做。</li>
   </ul>
 
@@ -119,18 +125,34 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
 </section>
 
 <section id="lists">
-  <h2>4. 三份名單怎麼填</h2>
+  <h2>4. 名單表格與上傳檔案</h2>
+  <h3>三種動作的意思</h3>
   <table>
-    <tr><th style="width:28%">名單</th><th>意思</th><th>什麼時候填</th></tr>
-    <tr><td>這次要有授權的人</td><td>沒有授權的會被指派，已經有的跳過。</td><td>要啟用新的一批時</td></tr>
-    <tr><td>要收回授權的人</td><td>目前有授權的會被收回，本來就沒有的不處理。</td><td>換人時填上一批；單純要拔除也填這裡</td></tr>
-    <tr><td>永遠不要動的人</td><td>這份名單裡的人無論出現在哪裡都不會被異動。</td><td>校長、主任這類無論如何要保留授權的帳號</td></tr>
+    <tr><th style="width:22%">動作</th><th>意思</th><th>什麼時候選</th></tr>
+    <tr><td>指派</td><td>沒有授權的會被指派，已經有的跳過。</td><td>要啟用新的一批時</td></tr>
+    <tr><td>收回</td><td>目前有授權的會被收回，本來就沒有的不處理。</td><td>換人時填上一批；單純要拔除也選這個</td></tr>
+    <tr><td>保留不動</td><td>無論如何都不會被異動。</td><td>校長、主任這類無論如何要保留授權的帳號</td></tr>
   </table>
-  <p>填寫格式：用換行、空白、逗號、分號隔開都可以，大小寫不拘，重複的會自動合併。</p>
-  <pre>teacher1@school.edu.tw
-teacher2@school.edu.tw
-teacher3@school.edu.tw</pre>
-  <div class="box note">名單以外的人完全不會被動到。同一個帳號不能同時出現在「要有」與「要收回」兩份名單，會被擋下。</div>
+  <div class="box note">名單以外的人完全不會被動到。同一個帳號出現在多列時，以最後一列的動作為準。</div>
+
+  <h3>支援哪些檔案</h3>
+  <table>
+    <tr><th style="width:26%">來源</th><th>說明</th></tr>
+    <tr><td>CSV（.csv）</td><td>UTF-8 或 Big5（Excel 在台灣另存的 CSV 常是 Big5）都能自動判斷，不會變亂碼。分隔符號用逗號、tab、分號皆可。</td></tr>
+    <tr><td>Excel（.xlsx）</td><td>有多個分頁時，自動選「電子郵件最多」的那一頁，你也可以在確認視窗換分頁。舊版 .xls 請先另存為 .xlsx 或 CSV。</td></tr>
+    <tr><td>Google 試算表</td><td>貼上網址即可。網址帶有分頁編號（gid）時用該分頁，沒有就自動挑電子郵件最多的分頁。第一次使用會請你允許「讀取試算表」的唯讀權限，只讀你貼的那一份，不會修改。你登入的帳號要有那份試算表的檢視權限。</td></tr>
+    <tr><td>貼上多筆</td><td>一行一個帳號，行尾可以接「指派、收回、保留」。</td></tr>
+  </table>
+
+  <h3>系統怎麼自動辨識</h3>
+  <ul>
+    <li><strong>找電子郵件欄</strong>：掃描每一欄，電子郵件最多的那一欄就是。標題寫「信箱、帳號、Email」會優先。</li>
+    <li><strong>找標題列</strong>：第一筆電子郵件上面最近的一列非空白列，就是標題；標題上方的大標題、空白列會略過。</li>
+    <li><strong>找動作欄</strong>：某一欄的內容大多是「指派、新增、啟用、V」「收回、移除、撤銷」「保留、不動」這類字，就當作動作欄，並逐格轉換。</li>
+    <li><strong>Google 後台匯出的使用者 CSV</strong>：只有電子郵件，沒有動作欄（它的 Status 欄是帳號狀態，不是動作），所以確認視窗會要你選「這批人要指派、收回或保留」。</li>
+    <li>看不懂的動作字樣、不是電子郵件的格子、重複的信箱，會在確認視窗用文字告訴你處理了幾筆。</li>
+  </ul>
+  <p>辨識完會先跳出<strong>確認視窗</strong>，顯示辨識到幾位、各幾位指派／收回／保留，以及前幾列預覽。欄位若認錯，可以用下拉選單改選，預覽會即時更新。確認後可選「加到目前表格」或「取代整張表格」。<strong>匯入只是填進表格，不會改到 Google 後台</strong>，後面還有預演和確認。</p>
 </section>
 
 <section id="monthly">
@@ -138,7 +160,7 @@ teacher3@school.edu.tw</pre>
   <p>情境：授權固定 10 個席次，這個月給 A 組 10 人，下個月換 B 組 10 人。</p>
   <ol class="steps">
     <li>到月初，登入系統，選授權。</li>
-    <li>「這次要有授權的人」貼 B 組 10 人；「要收回授權的人」貼 A 組 10 人。</li>
+    <li>在表格裡把 B 組 10 人設成「指派」、A 組 10 人設成「收回」（可以用一份 Excel 同時寫好兩組與動作欄，一次上傳）。</li>
     <li>填上「目前可用授權數」（通常是 0，因為席次都在 A 組手上）。</li>
     <li>預演確認「收回 10、指派 10」，按執行。</li>
     <li>等待結果出現「後台目前持有者與名單一致」。</li>
@@ -154,7 +176,7 @@ teacher3@school.edu.tw</pre>
     <tr><td><span class="pill p-remove">收回</span></td><td>目前有此授權</td><td>執行時會收回。</td></tr>
     <tr><td><span class="pill p-add">指派</span></td><td>沒有此授權</td><td>執行時會指派。</td></tr>
     <tr><td><span class="pill p-skip">跳過</span></td><td>已有此授權</td><td>已經有了，不動。</td></tr>
-    <tr><td><span class="pill p-skip">跳過</span></td><td>在保留名單，不異動</td><td>你放在「永遠不要動的人」。</td></tr>
+    <tr><td><span class="pill p-skip">跳過</span></td><td>在保留名單，不異動</td><td>你在表格裡把它設成「保留不動」。</td></tr>
     <tr><td><span class="pill p-skip">跳過</span></td><td>已停權</td><td>停權帳號不指派也不收回。</td></tr>
     <tr><td><span class="pill p-skip">跳過</span></td><td>封存使用者，不能指派一般授權</td><td>封存使用者要用專用授權，本系統不處理。</td></tr>
     <tr><td><span class="pill p-error">出錯</span></td><td>目錄裡找不到這個使用者</td><td>多半是信箱打錯、或不屬於這個網域。回上一步修正。</td></tr>
@@ -171,7 +193,10 @@ teacher3@school.edu.tw</pre>
     <tr><td>額度不足／There aren't enough available licenses</td><td>後台這種授權沒有空位，或沒有購買。到「帳單 &gt; 訂閱」確認可用數；換人情況下系統會自動等待，等不到才會停手。</td></tr>
     <tr><td>預演要收回的人比預期多／少</td><td>預演只是讀後台現況，請先核對名單；確定後再執行。</td></tr>
     <tr><td>驗證失敗：某某應該有授權但沒有</td><td>Google 後台寫入後的查詢有時會延遲，系統已自動重查 5 次；仍失敗請稍後重新預演一次，看實際狀況。</td></tr>
-    <tr><td>要異動 N 位，超過上限 30</td><td>分批做，每批 30 位以內。</td></tr>
+    <tr><td>要異動 N 位，超過上限 30</td><td>分批做，每批 30 位以內。表格上方的標籤也會提早提醒。</td></tr>
+    <tr><td>有 N 列不是有效的電子郵件</td><td>表格裡紅色的格子，修正或刪掉那一列。</td></tr>
+    <tr><td>這一頁找不到任何電子郵件</td><td>檔案裡沒有電子郵件，或換一個分頁試試。</td></tr>
+    <tr><td>找不到這份試算表／沒有檢視權限</td><td>確認網址完整，並且你登入的帳號能開啟那份試算表。</td></tr>
   </table>
 </section>
 
@@ -180,7 +205,8 @@ teacher3@school.edu.tw</pre>
   <ul>
     <li><strong>資料不經過鴻綸伺服器</strong>：登入後，瀏覽器直接向 Google 的授權 API 與使用者目錄 API 讀寫，名單、帳號與登入憑證都只在你的瀏覽器裡。</li>
     <li><strong>不要你的密碼</strong>：登入視窗是 Google 的，我們看不到密碼。</li>
-    <li><strong>要求的 Google 權限只有兩項</strong>：「查看及管理網域的 Google Workspace 授權」與「查看網域使用者的資訊」（唯讀）。系統不會讀信件、雲端硬碟或其他資料。</li>
+    <li><strong>登入時要求的 Google 權限只有兩項</strong>：「查看及管理網域的 Google Workspace 授權」與「查看網域使用者的資訊」（唯讀）。系統不會讀信件、雲端硬碟或其他資料。</li>
+    <li><strong>只有按「匯入 Google 試算表」時才多要一項</strong>：「查看試算表」（唯讀），而且只讀你貼上網址的那一份。上傳檔案（CSV、Excel）則完全在你的瀏覽器裡讀取，檔案不會傳到任何伺服器。</li>
     <li><strong>可隨時撤銷</strong>：到 Google 帳戶的「第三方存取權」可移除這個應用程式的授權。</li>
     <li><strong>每次異動前都先預演</strong>，執行前再確認一次，執行後再核對後台。</li>
     <li>這個頁面本身有密碼保護，輸入後 15 分鐘內有效。</li>
@@ -193,6 +219,7 @@ teacher3@school.edu.tw</pre>
     <li><strong>登入網域限制</strong>：目前登入用的 Google 應用程式尚未通過 Google 的驗證，依 Google 說明，通過前只有鴻綸組織內的使用者能登入。要開放給其他學校的管理員，需要先完成 Google 的應用程式驗證，或為該校另外建立專用設定，這部分尚未完成。</li>
     <li><strong>管理員最低權限</strong>：尚未實測「不是超級管理員、只有授權管理權限」的帳號能否使用。</li>
     <li><strong>授權生效時間</strong>：系統指派後，使用者實際開始能用功能的時間，我們沒有量測過，請以 Google 為準。</li>
+    <li><strong>匯入的資料格式</strong>：只支援 CSV 與 .xlsx，舊版 .xls 要先另存；系統無法辨識的欄位內容，需要你在確認視窗手動選欄位。</li>
     <li><strong>不是自動排程</strong>：需管理員手動操作，沒有背景自動換人。</li>
     <li><strong>Teaching and Learning Upgrade、Plus 額外學生授權、Gemini Education Premium</strong>：測試網域沒有可用數，這三種未能實測到成功指派。</li>
   </ul>
@@ -202,10 +229,16 @@ teacher3@school.edu.tw</pre>
   <h2>10. 常見問題</h2>
   <h3>Q：按了執行後可以復原嗎？</h3>
   <p>沒有一鍵復原，但可以反向操作：剛才指派的人貼到「要收回」，收回的人貼到「要有授權」再做一次。</p>
+  <h3>Q：我的檔案欄位順序、標題都不一樣，也能用嗎？</h3>
+  <p>可以。系統是看內容找電子郵件欄，不看欄位順序或標題文字；認錯時在確認視窗改選欄位即可。</p>
+  <h3>Q：Excel 裡的名單有合併儲存格、很多說明文字？</h3>
+  <p>說明文字會被略過，只取電子郵件。合併儲存格請先取消合併，避免電子郵件欄位被拆散。</p>
   <h3>Q：可以一次處理幾百位嗎？</h3>
   <p>單次上限 30 位。人數更多請分批，或到管理控制台用官方的「大量更新使用者」上傳 CSV（官方 CSV 只能增加授權，不能收回）。</p>
   <h3>Q：名單裡有人其實已經有授權，會被重複指派嗎？</h3>
   <p>不會，預演會標「已有此授權」並跳過。</p>
+  <h3>Q：上傳後表格列數很多，超過 30 位？</h3>
+  <p>匯入沒有限制，但「執行」單次最多 30 位。超過時表格上方標籤會提醒，請刪掉一部分、分批執行。</p>
   <h3>Q：帳號被停權的人怎麼辦？</h3>
   <p>停權帳號會被跳過，不指派也不收回。</p>
   <h3>Q：登入視窗沒跳出來？</h3>
@@ -216,7 +249,7 @@ teacher3@school.edu.tw</pre>
   <p>鴻綸科技 06-6371192（週一至週五 08:30–17:30），或寄信到 gfeh@hunglun.com。</p>
 </section>
 
-<footer>鴻綸科技股份有限公司　鴻綸教育授權管理系統使用說明書　2026-11-22</footer>
+<footer>鴻綸科技股份有限公司　鴻綸教育授權管理系統使用說明書　2026-11-23</footer>
 </div>
 </body>
 </html>
