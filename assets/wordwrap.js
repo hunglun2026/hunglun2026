@@ -32,9 +32,10 @@
   });
   var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n,list=[];
   while((n=w.nextNode())){if(HAN.test(n.nodeValue)&&!n.parentElement.closest(SKIP))list.push(n);}
-  // 逐片處理（2026-11-23）：原本一次同步做完整頁，手機上卡住主執行緒約 0.3 秒（TBT）。
-  // 改成每片最多 8ms，片與片之間把控制權還給瀏覽器；結果與原本逐位元組相同，
-  // 最後才一次套上 keep-all（跟原本同一個時間點），處理中的畫面和未處理時一樣，不會閃。
+  // 分區塊處理（2026-11-23）：原本一次同步插完整頁斷點、再對整個 main 套 keep-all，
+  // 手機上卡住主執行緒約 0.3 到 0.5 秒（TBT）。改成「一個頂層區塊一桶」：桶內每片最多 8ms，
+  // 桶做完就替該區塊套 keep-all，桶與桶之間等一個畫面更新，讓排版也分散開。
+  // 斷點位置與最終樣式跟原本完全相同（最後才替 main 本身補 class，子層計算值已相同不會再重排）。
   function one(n){
     var s=n.nodeValue,frag=null,last=0;
     for(var g of seg.segment(s)){
@@ -49,21 +50,40 @@
     frag.appendChild(document.createTextNode(s.slice(last)));
     n.parentNode.replaceChild(frag,n);
   }
-  function finish(){
-    var st=document.createElement("style");
-    // 內文不用 pretty：它為了不留短尾行會把整個詞推到下一行，keep-all 下一行就空出一大塊；尾段防孤字交給 main.js 的 .nowrap
-    st.textContent=".wb-root{word-break:keep-all;overflow-wrap:break-word}.wb-root :is(p,li,dd,figcaption,.faq-a,.kn-d,.section-sub){text-wrap:wrap}";
-    document.head.appendChild(st);
-    root.classList.add("wb-root");
-    document.documentElement.setAttribute("data-wb-done","1");
+  var buckets=[],byEl=new Map();
+  list.forEach(function(n){
+    var el=n.parentElement;
+    while(el&&el.parentElement!==root)el=el.parentElement;
+    var key=(el&&el!==root)?el:root;
+    if(!byEl.has(key)){byEl.set(key,[]);buckets.push(key);}
+    byEl.get(key).push(n);
+  });
+  // 沒有文字的頂層區塊也要套 class（內文以外的 .section-sub 之類規則才會一致）
+  Array.prototype.forEach.call(root.children,function(c){if(!byEl.has(c)){byEl.set(c,[]);buckets.push(c);}});
+  var CSS=".wb-root{word-break:keep-all;overflow-wrap:break-word}.wb-root :is(p,li,dd,figcaption,.faq-a,.kn-d,.section-sub){text-wrap:wrap}";
+  // 內文不用 pretty：它為了不留短尾行會把整個詞推到下一行，keep-all 下一行就空出一大塊；尾段防孤字交給 main.js 的 .nowrap
+  var st=document.createElement("style");st.textContent=CSS;document.head.appendChild(st);
+  function pause(fn){
+    var d=false;function go(){if(d)return;d=true;fn();}
+    if(window.requestAnimationFrame)requestAnimationFrame(go);
+    setTimeout(go,60);  // 分頁在背景時 rAF 不會觸發，保底
   }
-  var at=0;
-  (function slice(){
-    var t0=performance.now();
-    while(at<list.length){
-      one(list[at++]);
-      if(performance.now()-t0>8){setTimeout(slice,0);return;}
+  var bi=0;
+  (function nextBucket(){
+    if(bi>=buckets.length){
+      root.classList.add("wb-root");
+      document.documentElement.setAttribute("data-wb-done","1");
+      return;
     }
-    finish();
+    var key=buckets[bi++],nodes=byEl.get(key),at=0;
+    (function slice(){
+      var t0=performance.now();
+      while(at<nodes.length){
+        one(nodes[at++]);
+        if(performance.now()-t0>8){setTimeout(slice,0);return;}
+      }
+      if(key!==root)key.classList.add("wb-root");
+      pause(nextBucket);
+    })();
   })();
 })();

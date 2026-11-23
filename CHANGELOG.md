@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.33（2026-11-23）
+
+wordwrap.js 改成按頂層區塊分桶處理：每區塊插完斷點就套 keep-all，區塊間等一個畫面更新，讓排版工作分散（v1.43.32 只拆了插斷點，最後仍一次整頁重排，線上量不到改善）。9 頁手機與桌面比對，HTML 與計算樣式與舊版一致。wordwrap.js v4。
+
+
 ## v1.43.32（2026-11-23）
 
 手機載入速度：wordwrap.js 中文斷詞改成分片處理（每片 8 毫秒，原本一次卡住主執行緒約 0.3 秒），最後結果與原本逐位元組相同（9 頁手機與桌面 DOM 比對）；52 頁結構化資料（WebPage、AboutPage、ContactPage、CollectionPage）補 description；21 條已被 Google 搬家的外部連結換成最終網址。
