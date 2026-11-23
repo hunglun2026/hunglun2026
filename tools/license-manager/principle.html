@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>鴻綸教育授權管理系統 運作原理</title>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=98" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=45">
+<link rel="stylesheet" href="brand/brand.css">
+<style>
+:root{--bg:#F8F9FA;--card:#fff;--text:#1f2937;--sub:#5F6368;--line:#e5e7eb;--brand:#1A73E8;--brand2:#E8F0FE;--ok:#1E8E3E;--okbg:#E6F4EA;--warn:#B06000;--warnbg:#FEF7E0;--bad:#D93025;--badbg:#FCE8E6;--term:#F1F3F4;--termtext:#1f2937;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 "Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}
+main{max-width:900px;margin:0 auto;padding:28px 16px 40px}
+.gbar{height:4px;background:linear-gradient(90deg,#1A73E8 25%,#EA4335 25% 50%,#FBBC04 50% 75%,#34A853 75%)}
+.hl-header{height:auto;min-height:4.5rem;padding:.6rem 1.25rem}
+.hl-header-title{font-size:1.1rem}
+.hl-footer{max-width:900px;margin:0 auto 40px;padding:2rem 16px 0}
+@media print{.hl-header{display:none}}
+h1{font-size:1.8rem;margin:0 0 6px}
+h2{font-size:1.3rem;margin:44px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line);position:relative}
+h2::after{content:'';position:absolute;left:0;bottom:-2px;width:96px;height:2px;background:linear-gradient(90deg,#1A73E8 25%,#EA4335 25% 50%,#FBBC04 50% 75%,#34A853 75%)}
+h3{font-size:1.06rem;margin:24px 0 6px}
+.lead{color:var(--sub);margin:0 0 18px}
+a{color:var(--brand)}
+nav{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 18px;margin:16px 0}
+nav ol{margin:6px 0 0;padding-left:1.4em;columns:2}
+@media (max-width:600px){nav ol{columns:1}}
+.box{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:10px 14px;margin:14px 0}
+.box.tip{background:var(--okbg);border-color:var(--ok)}
+.box.warn{background:var(--warnbg);border-color:var(--warn)}
+.box.bad{background:var(--badbg);border-color:var(--bad)}
+.box b:first-child{display:block;margin-bottom:2px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:12px 0;background:var(--card)}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--brand2)}
+code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:.92em}
+pre{background:var(--term);color:var(--termtext);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:8px;padding:12px 14px;overflow:auto;font:13.5px/1.6 Consolas,"Noto Sans Mono",monospace;margin:12px 0}
+pre .c{color:#5F6368}
+.tag{display:inline-block;font-size:.78rem;border-radius:999px;padding:0 9px;margin-right:4px;border:1px solid}
+.t-real{color:var(--ok);border-color:var(--ok)}
+.t-calc{color:var(--warn);border-color:var(--warn)}
+.t-unk{color:var(--bad);border-color:var(--bad)}
+.sub{color:var(--sub);font-size:.92rem}
+
+/* 圖解：用 HTML 與 CSS 畫，不用圖片檔 */
+.fig{background:var(--card);border:1px solid var(--line);box-shadow:0 1px 2px rgba(0,0,0,.05);border-radius:16px;padding:18px 16px;margin:16px 0}
+.fig .cap{color:var(--sub);font-size:.88rem;margin-top:10px;text-align:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.node{border:2px solid var(--brand);background:var(--brand2);border-radius:10px;padding:8px 12px;text-align:center;font-weight:600}
+.node small{display:block;font-weight:400;color:var(--sub);font-size:.82rem}
+.node.g{border-color:var(--ok);background:var(--okbg)}
+.node.y{border-color:var(--warn);background:var(--warnbg)}
+.node.r{border-color:var(--bad);background:var(--badbg)}
+.arrow{text-align:center;color:var(--sub);line-height:1.2;padding:3px 0;font-size:1.1rem}
+.arrow span{display:block;font-size:.78rem}
+.flow{display:flex;flex-direction:column;gap:0;max-width:640px;margin:0 auto}
+.step{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg)}
+.step i{font-style:normal;background:var(--brand);color:#fff;border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-weight:700}
+.step.new{border-color:var(--ok);background:var(--okbg)}
+.step b{display:block}
+.step .sub{margin:0}
+.badge-new{background:var(--ok);color:#fff;border-radius:6px;font-size:.72rem;padding:0 7px;margin-left:6px;vertical-align:middle}
+.bef{display:grid;grid-template-columns:1fr 96px 1fr;gap:8px;align-items:center}
+@media (max-width:640px){.bef{grid-template-columns:1fr}.bef .mid{transform:rotate(90deg)}}
+.bef .mid{text-align:center;font-size:1.4rem;color:var(--sub)}
+.list{list-style:none;margin:6px 0 0;padding:0;font-size:.92rem}
+.list li{padding:2px 0}
+.on::before{content:"● ";color:var(--ok)}
+.off::before{content:"○ ";color:var(--sub)}
+.lock::before{content:"◆ ";color:var(--warn)}
+figure{margin:16px 0}
+figure img{max-width:100%;border:1px solid var(--line);border-radius:10px;display:block}
+figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:700px){.shots{grid-template-columns:1fr}}
+@media print{body{background:#fff;color:#000}nav{display:none}h2{break-after:avoid}.box,table,.fig,figure,pre{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="gbar"></div>
+<header class="hl-header">
+  <div class="hl-header-left">
+    <div class="hl-logo-icon">
+      <svg viewBox="0 0 100 100" style="width:1.75rem;height:1.75rem;position:relative;z-index:1" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="42" stroke-opacity="0.3" stroke-dasharray="12 8"/><ellipse cx="50" cy="50" rx="42" ry="14" stroke-opacity="0.8" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="42" ry="14" stroke-opacity="0.8" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="12" fill="currentColor" stroke="none"/><circle cx="20" cy="20" r="6" fill="currentColor" stroke="none"/><circle cx="80" cy="80" r="6" fill="currentColor" stroke="none"/><circle cx="80" cy="20" r="6" fill="currentColor" stroke="none"/><circle cx="20" cy="80" r="6" fill="currentColor" stroke="none"/></svg>
+    </div>
+    <div class="hl-header-title"><span>鴻綸教育授權管理系統</span><span class="hl-header-divider">|</span><span style="color:var(--hl-text-secondary)">運作原理</span><span class="hl-header-divider">|</span><span class="hl-header-credit">Created by Steve (Nov 2026)</span></div>
+  </div>
+</header>
+<main>
+<h1>鴻綸教育授權管理系統 運作原理</h1>
+<p class="lead">為什麼這樣運作：網頁版怎麼動到後台、輪替六步驟、為什麼不會改錯人、速度的限制。</p>
+<p class="sub">要實際操作：<a href="guide.html">操作說明書</a>　｜　<a href="manual.html">完整使用說明書</a>　｜　<a href="./">回授權管理系統</a></p>
+<nav><b>目錄</b><ol><li><a href="#why">網頁版怎麼動到後台</a></li><li><a href="#flow">輪替六步驟</a></li><li><a href="#example">舉例：換一批人</a></li><li><a href="#safe">安全機制：為什麼不會改錯人</a></li><li><a href="#speed">速度與限制</a></li></ol></nav>
+<h2 id="why">1. 網頁版怎麼動到後台</h2>
+<p>後台那些「勾選使用者、按指派授權」的按鈕，背後其實都是呼叫 Google 提供的授權 API。網頁版做的是同一件事：你登入後，瀏覽器直接用你的身分呼叫這組 API，所以改到的和後台是同一份資料。</p>
+<div class="fig">
+<div class="two">
+<div><div class="node">管理員用手點<small>登入後台，勾選、按鈕</small></div><div class="arrow">↓<span>瀏覽器送出請求</span></div></div>
+<div><div class="node g">用網頁版<small>用你的 Google 登入，名單填在表格</small></div><div class="arrow">↓<span>瀏覽器送出同一種請求</span></div></div>
+</div>
+<div class="node y">Google 的授權 API（Licensing API）<small>只認「誰、做什麼、有沒有被允許」</small></div>
+<div class="arrow">↓</div>
+<div class="node">後台的授權資料<small>後台畫面與網頁版看到的是同一份</small></div>
+<div class="cap">兩條路最後改到同一份資料，差別只在名單是手點還是整批貼上。</div>
+</div>
+<div class="box tip"><b>資料不經過鴻綸的伺服器</b>登入視窗是 Google 自己的，我們拿不到密碼；請求從你的瀏覽器直接送到 Google。權限只有你登入的帳號本來就有的部分，登出或關閉分頁就結束。</div>
+<h2 id="flow">2. 輪替六步驟</h2>
+<div class="fig"><div class="flow">
+<div class="step"><i>1</i><div><b>你填名單</b><p class="sub">每個人一列，動作是指派、收回或保留不動。</p></div></div><div class="arrow">↓</div>
+<div class="step"><i>2</i><div><b>唯讀查三樣東西</b><p class="sub">全部使用者（有沒有停權、封存）、這個授權現在誰持有、你填的可用額度。</p></div></div><div class="arrow">↓</div>
+<div class="step"><i>3</i><div><b>算差異（預演）</b><p class="sub">收回：名單要收回、現在還持有。指派：名單要指派、現在還沒有。跳過：停權、封存、保留不動、本來就一致。</p></div></div><div class="arrow">↓</div>
+<div class="step"><i>4</i><div><b>安全檢查</b><p class="sub">額度夠不夠、名單有沒有找不到的人、異動數有沒有超過上限。任一項不過，「執行」會被鎖住。</p></div></div><div class="arrow">↓</div>
+<div class="step"><i>5</i><div><b>你確認後，先收回、再指派</b><p class="sub">收回的位子要先空出來。每一筆都顯示結果。</p></div></div><div class="arrow">↓</div>
+<div class="step"><i>6</i><div><b>再查一次後台驗證</b><p class="sub">只看這次動過的人：指派的要有、收回的不能有。</p></div></div>
+</div><div class="cap">前四步只讀，不會改任何東西；你按下「執行」才會走到第 5 步。</div></div>
+<h3>為什麼「先收回、再指派」還要等？</h3>
+<p>剛收回的位子，要過幾秒才會釋出給別人。這時馬上指派，Google 會回「額度不足」。所以這一輪有收回過的話，遇到額度不足會等 5、10、20、40、60 秒再試；這一輪沒收回過，就是真的不夠，不用等，直接停手。</p>
+<h3>為什麼驗證要重試？</h3>
+<p>剛寫完馬上查持有者，有時會看到舊資料（Google 的資料要幾秒才同步）。所以驗證會等 3、6、12、24 秒再查，不會把「還沒更新」誤判成失敗。</p>
+<h2 id="example">3. 舉例：換一批人</h2>
+<p>名單：a、b 要收回，c、d 要指派，keep 保留不動。後台現在持有者是 a、b、keep。預演會列出：</p>
+<table><tr><th>動作</th><th>帳號</th><th>說明</th></tr>
+<tr><td>收回</td><td>a@demo.school.tw</td><td>目前有此授權</td></tr><tr><td>收回</td><td>b@demo.school.tw</td><td>目前有此授權</td></tr>
+<tr><td>指派</td><td>c@demo.school.tw</td><td>沒有此授權</td></tr><tr><td>指派</td><td>d@demo.school.tw</td><td>沒有此授權</td></tr></table>
+<ul><li><code>keep</code> 設為「保留不動」，<b>完全不碰</b>。</li>
+<li>執行完再做一次同樣的名單：什麼都不會變，因為已經一致。同一份名單重複做，結果都一樣，所以不會把人收錯。</li></ul>
+<h2 id="safe">4. 安全機制：為什麼不會改錯人</h2>
+<table><tr><th>安全機制</th><th>防的是什麼</th></tr>
+<tr><td>先預演、確認後才執行</td><td>手滑直接改到真實帳號</td></tr>
+<tr><td>名單以外的人完全不碰</td><td>誤收回固定要有授權的人</td></tr>
+<tr><td>「保留不動」</td><td>例外的人永遠不被動</td></tr>
+<tr><td>同一人不能同時出現在「收回」和「指派」</td><td>名單矛盾，不知道該怎麼做</td></tr>
+<tr><td>額度不足，「執行」被鎖住</td><td>收回了卻指派不了，變成大家都沒有</td></tr>
+<tr><td>單次異動人數上限</td><td>名單寫錯，一次動上百人</td></tr>
+<tr><td>Fundamentals、Gmail Only、封存使用者的授權不能動</td><td>免費基底被收回，帳號就失去服務</td></tr>
+<tr><td>遇到權限或額度錯誤就停手</td><td>後面的人一定也失敗，重複送出只會被限速</td></tr>
+<tr><td>執行後再驗證</td><td>「回報成功」不等於真的成功</td></tr></table>
+<h2 id="speed">5. 速度與限制</h2>
+<table><tr><th>項目</th><th>數字</th></tr>
+<tr><td>每人耗時</td><td>約 1.3 到 1.8 秒（一位一位送）</td></tr>
+<tr><td>剛收回的位子釋出</td><td>要幾秒，網頁版會自動等待重試</td></tr>
+<tr><td>每分鐘配額</td><td>超過會回「Queries per minute」，要等一下再試（實際配額數字 Google 沒公開）</td></tr>
+<tr><td>一次要異動的人數</td><td>有上限，超過會被擋下；人多時請分次做</td></tr>
+<tr><td>自動授權的授權</td><td>組織單位設了自動授權的，後台與網頁版都不能個別收回</td></tr></table>
+<p><b>為什麼不能更快：</b>瓶頸在 Google 處理每筆請求的時間，同時送很多筆反而會被擋（回 503）。要省時間，最有效的是名單只放真的要換的人；已經一致的人不會被送出去。</p>
+</main>
+<div class="hl-footer">
+  <div class="hl-logo-lockup" style="margin:0 auto 1.5rem;max-width:24rem"><img src="brand/logo-light.png" alt="鴻綸科技 x Google for Education Professional Development Partner" class="hl-logo-light" style="max-width:100%"></div>
+  <p class="hl-footer-title">© 2026 鴻綸科技股份有限公司. All Rights Reserved.</p>
+  <p class="hl-footer-sub">Hunglun Technology Co., Ltd.</p>
+  <p class="hl-footer-legal">本說明書之文字內容、圖解及視覺設計均受著作權法與智慧財產權保護。<br>未經本公司正式書面授權，嚴禁進行任何形式之重製、改作、散布、公開傳輸或商業營利行為，違者將依法追究相關法律責任。</p>
+</div>
+</body>
+</html>

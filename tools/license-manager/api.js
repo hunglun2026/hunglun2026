@@ -1,9 +1,8 @@
 // 與 Google 溝通：真實版（用管理員自己的登入 token 直接打 REST API）與示範版（記憶體假資料，可練習、可離線測試）。
-import { classify } from "./logic.js?v=20261123a";
+import { classify } from "./logic.js";
 
 const DIR = "https://admin.googleapis.com/admin/directory/v1/users";
 const LIC = "https://licensing.googleapis.com/apps/licensing/v1";
-
 async function call(token, url, init = {}, retries = 4) {
   for (let i = 0; i <= retries; i++) {
     const res = await fetch(url, { ...init, headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } });
@@ -32,7 +31,7 @@ export function realApi(token, domain, { product, sku }) {
     async listHolders() {
       const out = new Set(); let pt = "";
       do {
-        const r = await call(token, `${base}/users?customerId=${encodeURIComponent(domain)}&maxResults=1000${pt ? `&pageToken=${pt}` : ""}`);
+        const r = await call(token, `${base}/users?customerId=${encodeURIComponent(domain)}&maxResults=100${pt ? `&pageToken=${pt}` : ""}`);
         for (const i of r.items || []) out.add(i.userId.toLowerCase());
         pt = r.nextPageToken || "";
       } while (pt);

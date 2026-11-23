@@ -23,6 +23,7 @@ export function parseEmails(text) {
 
 export function classify(status, message) {
   const m = (message || "").toLowerCase();
+  if (/rate ?limit|too many requests|user rate/i.test(message || "") || status === 429) return "transient"; // Directory API 超過頻率限制會回 403 rateLimitExceeded，要重試不是沒權限
   if (status === 403) return "forbidden";
   if (status === 404) return "not_found";
   if (status === 409 || m.includes("already")) return "already";
@@ -89,7 +90,7 @@ export function verifyAfter(actions, holdersNow) {
 export async function execute(actions, api, { maxChanges = MAX_CHANGES, sleep = (s) => new Promise((r) => setTimeout(r, s * 1000)), onRow = () => {}, onWait = () => {} } = {}) {
   const todo = actions.filter((a) => a.op === "add" || a.op === "remove");
   if (todo.length > maxChanges) throw new Error(`要異動 ${todo.length} 位，超過上限 ${maxChanges}，已中止`);
-  const result = { ok: 0, failed: 0, stopped: "", rows: [] };
+  const result = { ok: 0, failed: 0, already: 0, stopped: "", rows: [] };
   let removedAny = false;
   for (const a of todo) {
     const row = { time: new Date().toLocaleTimeString("zh-TW", { hour12: false }), email: a.email, op: a.op };
@@ -100,6 +101,10 @@ export async function execute(actions, api, { maxChanges = MAX_CHANGES, sleep = 
         row.result = "ok"; result.ok++; removedAny = removedAny || a.op === "remove";
         break;
       } catch (e) {
+        if (a.op === "add" && e.kind === "already") { // 後台已是目標狀態（列表還沒追上時常見）：算成功，不算失敗
+          row.result = "ok"; row.note = "已有授權"; result.ok++; result.already++;
+          break;
+        }
         if (e.kind === "quota" && waits.length) {
           const w = waits.shift(); onWait(a.email, w); await sleep(w); continue;
         }

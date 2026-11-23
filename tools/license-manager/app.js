@@ -1,14 +1,15 @@
 // 畫面與流程：四步一頁。邏輯在 logic.js，與 Google 溝通在 api.js。
-import { SKUS, MAX_CHANGES, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js?v=20261123a";
-import { createGrid } from "./grid.js?v=20261123a";
-import { realApi, demoApi } from "./api.js?v=20261123a";
-import { CLIENT_ID } from "./config.js?v=20261123a";
+import { SKUS, MAX_CHANGES, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js?v=20261123b";
+import { createGrid } from "./grid.js?v=20261123b";
+import { downloadXlsx } from "./export.js?v=20261123b";
+import { realApi, demoApi } from "./api.js?v=20261123b";
+import { CLIENT_ID } from "./config.js?v=20261123b";
 
 const $ = (id) => document.getElementById(id);
 const SCOPES = "openid email https://www.googleapis.com/auth/apps.licensing https://www.googleapis.com/auth/admin.directory.user.readonly";
 const SHEETS_SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly";
 const OP_LABEL = { add: "指派", remove: "收回", skip: "跳過", error: "出錯" };
-const state = { api: null, token: "", plan: null, lists: null };
+const state = { api: null, token: "", plan: null, lists: null, rows: [] };
 
 // ---- 自己做的對話框（不用瀏覽器內建 confirm） ----
 function ask(title, body, yes = "確定", danger = false) {
@@ -113,10 +114,10 @@ $("back3").onclick = () => show(2);
 $("btnRun").onclick = async () => {
   const c = counts(state.plan.actions);
   if (!(await ask("確定要執行嗎？", `即將收回 ${c.remove} 位、指派 ${c.add} 位的授權，這會直接改到後台。`, "確定執行", true))) return;
-  show(4); const log = $("log"); log.textContent = ""; msg("s4msg", "info", "執行中，請不要關閉這個分頁…");
+  show(4); state.rows = []; const log = $("log"); log.textContent = ""; msg("s4msg", "info", "執行中，請不要關閉這個分頁…");
   const line = (t) => { log.textContent += t + "\n"; log.scrollTop = log.scrollHeight; };
   const result = await execute(state.plan.actions, state.api, {
-    onRow: (r) => line(`${r.time}  ${OP_LABEL[r.op]}  ${r.email}  ${r.result === "ok" ? "成功" : "失敗（" + r.kind + "）" + (r.message || "")}`),
+    onRow: (r) => { state.rows.push(r); line(`${r.time}  ${OP_LABEL[r.op]}  ${r.email}  ${r.result === "ok" ? "成功" : "失敗（" + r.kind + "）" + (r.message || "")}`); },
     onWait: (e, w) => line(`      剛收回的位子還沒釋出，${w} 秒後重試 ${e}`),
   }).catch((e) => ({ ok: 0, failed: 1, stopped: e.message, rows: [] }));
   line(`\n完成：成功 ${result.ok}、失敗 ${result.failed}${result.stopped ? "，已停手：" + result.stopped : ""}`);
@@ -130,6 +131,7 @@ $("btnRun").onclick = async () => {
   if (!problems.length && !result.failed) { line("驗證：後台目前持有者與名單一致。"); msg("s4msg", "ok", "完成，後台狀態已和名單一致。"); }
   else msg("s4msg", "err", "有項目沒有完成，請看下方紀錄；可以回到步驟 2 修正後再跑一次（已完成的不會重複異動）。");
 };
+$("btnXlsx").onclick = () => downloadXlsx(`授權調整結果-${new Date().toISOString().slice(0, 10)}.xlsx`, ["時間", "動作", "帳號", "結果", "說明"], state.rows.map((r) => [r.time, OP_LABEL[r.op], r.email, r.result === "ok" ? "成功" : "失敗", r.result === "ok" ? "" : `${r.kind || ""} ${r.message || ""}`.trim()]), [12, 8, 34, 8, 50]).catch((e) => msg("s4msg", "err", e.message));
 $("btnCopy").onclick = () => navigator.clipboard?.writeText($("log").textContent);
 $("btnAgain").onclick = () => { grid.clear(); show(2); };
 show(1);

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>鴻綸教育授權管理系統 操作說明書</title>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=98" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=45">
+<link rel="stylesheet" href="brand/brand.css">
+<style>
+:root{--bg:#F8F9FA;--card:#fff;--text:#1f2937;--sub:#5F6368;--line:#e5e7eb;--brand:#1A73E8;--brand2:#E8F0FE;--ok:#1E8E3E;--okbg:#E6F4EA;--warn:#B06000;--warnbg:#FEF7E0;--bad:#D93025;--badbg:#FCE8E6;--term:#F1F3F4;--termtext:#1f2937;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 "Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}
+main{max-width:900px;margin:0 auto;padding:28px 16px 40px}
+.gbar{height:4px;background:linear-gradient(90deg,#1A73E8 25%,#EA4335 25% 50%,#FBBC04 50% 75%,#34A853 75%)}
+.hl-header{height:auto;min-height:4.5rem;padding:.6rem 1.25rem}
+.hl-header-title{font-size:1.1rem}
+.hl-footer{max-width:900px;margin:0 auto 40px;padding:2rem 16px 0}
+@media print{.hl-header{display:none}}
+h1{font-size:1.8rem;margin:0 0 6px}
+h2{font-size:1.3rem;margin:44px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line);position:relative}
+h2::after{content:'';position:absolute;left:0;bottom:-2px;width:96px;height:2px;background:linear-gradient(90deg,#1A73E8 25%,#EA4335 25% 50%,#FBBC04 50% 75%,#34A853 75%)}
+h3{font-size:1.06rem;margin:24px 0 6px}
+.lead{color:var(--sub);margin:0 0 18px}
+a{color:var(--brand)}
+nav{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 18px;margin:16px 0}
+nav ol{margin:6px 0 0;padding-left:1.4em;columns:2}
+@media (max-width:600px){nav ol{columns:1}}
+.box{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:10px 14px;margin:14px 0}
+.box.tip{background:var(--okbg);border-color:var(--ok)}
+.box.warn{background:var(--warnbg);border-color:var(--warn)}
+.box.bad{background:var(--badbg);border-color:var(--bad)}
+.box b:first-child{display:block;margin-bottom:2px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;margin:12px 0;background:var(--card)}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--brand2)}
+code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:.92em}
+pre{background:var(--term);color:var(--termtext);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:8px;padding:12px 14px;overflow:auto;font:13.5px/1.6 Consolas,"Noto Sans Mono",monospace;margin:12px 0}
+pre .c{color:#5F6368}
+.tag{display:inline-block;font-size:.78rem;border-radius:999px;padding:0 9px;margin-right:4px;border:1px solid}
+.t-real{color:var(--ok);border-color:var(--ok)}
+.t-calc{color:var(--warn);border-color:var(--warn)}
+.t-unk{color:var(--bad);border-color:var(--bad)}
+.sub{color:var(--sub);font-size:.92rem}
+
+/* 圖解：用 HTML 與 CSS 畫，不用圖片檔 */
+.fig{background:var(--card);border:1px solid var(--line);box-shadow:0 1px 2px rgba(0,0,0,.05);border-radius:16px;padding:18px 16px;margin:16px 0}
+.fig .cap{color:var(--sub);font-size:.88rem;margin-top:10px;text-align:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.node{border:2px solid var(--brand);background:var(--brand2);border-radius:10px;padding:8px 12px;text-align:center;font-weight:600}
+.node small{display:block;font-weight:400;color:var(--sub);font-size:.82rem}
+.node.g{border-color:var(--ok);background:var(--okbg)}
+.node.y{border-color:var(--warn);background:var(--warnbg)}
+.node.r{border-color:var(--bad);background:var(--badbg)}
+.arrow{text-align:center;color:var(--sub);line-height:1.2;padding:3px 0;font-size:1.1rem}
+.arrow span{display:block;font-size:.78rem}
+.flow{display:flex;flex-direction:column;gap:0;max-width:640px;margin:0 auto}
+.step{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg)}
+.step i{font-style:normal;background:var(--brand);color:#fff;border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-weight:700}
+.step.new{border-color:var(--ok);background:var(--okbg)}
+.step b{display:block}
+.step .sub{margin:0}
+.badge-new{background:var(--ok);color:#fff;border-radius:6px;font-size:.72rem;padding:0 7px;margin-left:6px;vertical-align:middle}
+.bef{display:grid;grid-template-columns:1fr 96px 1fr;gap:8px;align-items:center}
+@media (max-width:640px){.bef{grid-template-columns:1fr}.bef .mid{transform:rotate(90deg)}}
+.bef .mid{text-align:center;font-size:1.4rem;color:var(--sub)}
+.list{list-style:none;margin:6px 0 0;padding:0;font-size:.92rem}
+.list li{padding:2px 0}
+.on::before{content:"● ";color:var(--ok)}
+.off::before{content:"○ ";color:var(--sub)}
+.lock::before{content:"◆ ";color:var(--warn)}
+figure{margin:16px 0}
+figure img{max-width:100%;border:1px solid var(--line);border-radius:10px;display:block}
+figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:700px){.shots{grid-template-columns:1fr}}
+@media print{body{background:#fff;color:#000}nav{display:none}h2{break-after:avoid}.box,table,.fig,figure,pre{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="gbar"></div>
+<header class="hl-header">
+  <div class="hl-header-left">
+    <div class="hl-logo-icon">
+      <svg viewBox="0 0 100 100" style="width:1.75rem;height:1.75rem;position:relative;z-index:1" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="42" stroke-opacity="0.3" stroke-dasharray="12 8"/><ellipse cx="50" cy="50" rx="42" ry="14" stroke-opacity="0.8" transform="rotate(45 50 50)"/><ellipse cx="50" cy="50" rx="42" ry="14" stroke-opacity="0.8" transform="rotate(-45 50 50)"/><circle cx="50" cy="50" r="12" fill="currentColor" stroke="none"/><circle cx="20" cy="20" r="6" fill="currentColor" stroke="none"/><circle cx="80" cy="80" r="6" fill="currentColor" stroke="none"/><circle cx="80" cy="20" r="6" fill="currentColor" stroke="none"/><circle cx="20" cy="80" r="6" fill="currentColor" stroke="none"/></svg>
+    </div>
+    <div class="hl-header-title"><span>鴻綸教育授權管理系統</span><span class="hl-header-divider">|</span><span style="color:var(--hl-text-secondary)">操作說明書</span><span class="hl-header-divider">|</span><span class="hl-header-credit">Created by Steve (Nov 2026)</span></div>
+  </div>
+</header>
+<main>
+<h1>鴻綸教育授權管理系統 操作說明書</h1>
+<p class="lead">怎麼操作：四個步驟，把每月要換的人指派或收回。</p>
+<p class="sub">想了解背後怎麼運作：<a href="principle.html">運作原理</a>　｜　<a href="manual.html">完整使用說明書</a>　｜　<a href="./">回授權管理系統</a></p>
+<nav><b>目錄</b><ol><li><a href="#one">一頁看懂</a></li><li><a href="#prep">需要哪些資料、填在哪裡</a></li><li><a href="#web">網頁版操作（圖文）</a></li><li><a href="#faq">排錯與常見問題</a></li></ol></nav>
+<h2 id="one">1. 一頁看懂</h2>
+<div class="fig">
+<div class="bef">
+<div>
+<div class="node y">十一月<small>AI Pro 名額 2 位，全部用完</small></div>
+<ul class="list"><li class="on">A 老師</li><li class="on">B 老師</li><li class="lock">保留帳號（不動）</li><li class="off">C 老師（沒有）</li><li class="off">D 老師（沒有）</li></ul>
+</div>
+<div class="mid">→<br><small class="sub">十二月初<br>自動換人</small></div>
+<div>
+<div class="node g">十二月<small>同樣 2 位名額，換一批人</small></div>
+<ul class="list"><li class="off">A 老師（收回）</li><li class="off">B 老師（收回）</li><li class="lock">保留帳號（不動）</li><li class="on">C 老師（指派）</li><li class="on">D 老師（指派）</li></ul>
+</div>
+</div>
+<div class="cap">名額只有幾位時，用輪替讓更多老師輪流用到。名單由學校決定，程式只照名單做。</div>
+</div>
+<p>你要準備的只有一份名單：誰要指派、誰要收回。程式先算出「要收回誰、要指派誰」給你看（預演），你確認後才真的動後台。重複跑也不會出事，因為已經一致就什麼都不做。</p>
+
+
+
+<h2 id="prep">2. 需要哪些資料、填在哪裡</h2>
+<p>用網頁版，不用裝任何東西，也不用交出密碼或金鑰：用管理員自己的 Google 帳號登入，資料只在你的瀏覽器與 Google 之間往來。</p>
+<table>
+<tr><th>資料</th><th>去哪裡找</th><th>填在哪</th><th>必填？</th></tr>
+<tr><td>管理員 Google 帳號</td><td>要有「授權管理」權限</td><td>步驟 1 按「用 Google 管理員帳號登入」，在 Google 自己的視窗登入（我們不收密碼）</td><td>必填</td></tr>
+<tr><td>要管理哪一種授權</td><td>自己決定，例如 Google AI Pro</td><td>步驟 1「要管理哪一種授權」下拉選單</td><td>必填</td></tr>
+<tr><td>目前可用授權數</td><td>後台「帳單 > 訂閱」，看該授權的「可用」</td><td>步驟 1「目前可用授權數」。填了額度不夠會整批擋下</td><td>選填，建議填</td></tr>
+<tr><td>學校網域</td><td>例如 school.edu.tw</td><td>步驟 1「學校網域」，登入後會自動帶入</td><td>自動帶入</td></tr>
+<tr><td>輪替名單：每個人的信箱與動作</td><td>學校提供的名單</td><td>步驟 2 表格。每列一個信箱，動作選「指派、收回、保留不動」。可手打、整欄貼上、上傳 CSV 或 Excel、匯入 Google 試算表</td><td>必填</td></tr>
+</table>
+<div class="box tip"><b>名單檔的辨識</b>上傳 CSV、Excel 後，系統會自動找「信箱欄」與「動作欄」，匯入前會跳出預覽讓你確認；沒有動作欄的人，可以統一選指派或收回。</div>
+<div class="box"><b>填完先預演</b>先看預演結果，確認要收回與指派的人沒錯，才按「執行」。</div>
+<h2 id="web">3. 網頁版操作（圖文）</h2>
+<p>不會用命令列的學校管理員，用網頁版就好。下面的畫面是「示範模式」：不連 Google、用假資料，可以放心練習。四個步驟走完就是一次輪替。</p>
+
+<figure><img src="img/step1.webp" alt="步驟1 登入與選授權">
+<figcaption><b>步驟 1：登入與選授權。</b>選要輪替的授權、填可用額度（後台訂閱頁看得到），再用管理員帳號登入。想先練習就按下方的「先用示範資料練習」。</figcaption></figure>
+
+<figure><img src="img/step2.webp" alt="步驟2 名單表格">
+<figcaption><b>步驟 2：填名單。</b>每一列是一個信箱加一個動作：指派、收回、保留不動。可以上傳 CSV、Excel，匯入 Google 試算表，或整欄貼上。紅色格子代表信箱格式不對。</figcaption></figure>
+
+<figure><img src="img/step3.webp" alt="步驟3 預演">
+<figcaption><b>步驟 3：預演（還沒改任何東西）。</b>上方四格是統計。綠色條代表沒有問題，下面逐筆列出會做什麼。「跳過」一列是已停權的帳號，程式不會碰。有問題時這裡會變紅並鎖住「執行」。</figcaption></figure>
+
+<div class="shots">
+<figure><img src="img/step4a.webp" alt="執行前確認">
+<figcaption><b>按「執行」會再問一次</b>，寫明要收回、指派幾位。這是自己做的對話框，不是瀏覽器內建的。</figcaption></figure>
+<figure><img src="img/step4b.webp" alt="執行紀錄與驗證">
+<figcaption><b>步驟 4：執行結果。</b>黑底是逐筆紀錄；「剛收回的位子還沒釋出，5 秒後重試」就是為了等位子釋出。最後一行「驗證」是再查一次後台的結果。</figcaption></figure>
+</div>
+<p class="sub">圖中的帳號都是 demo.school.tw 的假資料。「下載結果（Excel）」可存成表格留底。</p>
+
+
+
+<h2 id="faq">4. 排錯與常見問題</h2>
+<table>
+<tr><th>看到什麼</th><th>原因</th><th>處理</th></tr>
+<tr><td>額度不足</td><td>收回後可用數仍不夠指派</td><td>在後台補買額度，或減少這次指派的人數</td></tr>
+<tr><td>名單有找不到的人</td><td>信箱打錯，或帳號已刪</td><td>回上一步修正；什麼都還沒改</td></tr>
+<tr><td>表格裡有紅色格子</td><td>不是有效的電子郵件</td><td>修正或刪除那一列</td></tr>
+<tr><td>沒有權限</td><td>登入的帳號沒有授權管理或讀取使用者的權限</td><td>改用具備權限的管理員帳號登入</td></tr>
+<tr><td>驗證失敗：某人應該有授權但沒有</td><td>Google 的列表還沒更新，或真的沒成功</td><td>等一會兒回步驟 2 再跑一次，已完成的人不會重複異動</td></tr>
+<tr><td>Auto License un-assignment is not allowed</td><td>那個授權是組織單位自動指派的，無法收回</td><td>要在後台改該單位的自動授權設定</td></tr>
+</table>
+<div class="box"><b>官方寫「收回後 24 小時才能重新指派」</b>實測 Plus 收回後立刻指派沒被擋，但不同授權是否一樣無法確認，正式操作前建議先用少數帳號試一次。</div>
+<p class="sub">需要協助：鴻綸科技 06-6371192（週一至週五 08:30–17:30），或寄信到 gfeh@hunglun.com。想了解背後怎麼運作，請看<a href="principle.html">運作原理</a>。</p>
+</main>
+<div class="hl-footer">
+  <div class="hl-logo-lockup" style="margin:0 auto 1.5rem;max-width:24rem"><img src="brand/logo-light.png" alt="鴻綸科技 x Google for Education Professional Development Partner" class="hl-logo-light" style="max-width:100%"></div>
+  <p class="hl-footer-title">© 2026 鴻綸科技股份有限公司. All Rights Reserved.</p>
+  <p class="hl-footer-sub">Hunglun Technology Co., Ltd.</p>
+  <p class="hl-footer-legal">本說明書之文字內容、圖解及視覺設計均受著作權法與智慧財產權保護。<br>未經本公司正式書面授權，嚴禁進行任何形式之重製、改作、散布、公開傳輸或商業營利行為，違者將依法追究相關法律責任。</p>
+</div>
+</body>
+</html>
