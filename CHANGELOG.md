@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.24（2026-11-23）
+
+教師小幫手分類頁：「藥品與動物用藥許可證查詢」拆成兩張卡，藥品（med.hunglun.com）與動物用藥（vet.hunglun.com）各自連到自己的網站。
+
+
 ## v1.43.23（2026-11-23）
 
 手機載入速度：GA（gtag.js 約 178KB）改成頁面載完後才下載，不再跟首屏搶頻寬，載入前的事件排進 dataLayer 不會掉；服務頁 LCP 分類圖移除 lazy、加 fetchpriority=high；main.js v38。
