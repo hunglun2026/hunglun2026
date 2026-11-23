@@ -636,6 +636,8 @@ Google Workspace for Education 授權批次啟用・席次調整
 管理員用自己的 Google 帳號登入，貼上名單就能批次指派、收回 Google AI Pro for Education、Education Plus 等授權，也可以換人。先預演、確認後才執行，執行後自動核對後台結果。資料只在管理員的瀏覽器與 Google 之間往來，不經過鴻綸伺服器。目前僅限鴻綸網域管理員登入使用，內部同事使用，需輸入密碼。
 進入工具
 使用說明書
+操作說明書
+運作原理
 全國學校人數查詢
 各校人數・推廣名單・AI Pro 導入試算
 整合公開統計資料，4,200 多所國小、國中、高中職與大專的學生人數、班級數與歷年變化，附地圖與未來推估。另有 Google AI Pro for Education 推廣名單與導入試算，可估算各校授權數並產生提案。內部同事使用，需輸入密碼。
@@ -1494,7 +1496,7 @@ Chromebook 缺點有哪些：學校選購前先確認這 6 件事 新更新年�
 Classroom 稽核記錄新欄位：應用程式名稱與裝置 ID 新兩個新欄位預設隱藏，要從「管理欄位」加入，用來追查是哪個應用程式、哪台裝置做了操作。2026/11/21
 Drive 的 Gemini 資料分類：設定步驟與學校可用範圍 新管理員用白話描述分類規則，Gemini 自動替符合的檔案貼標籤；教育版限 AI Pro for Education。2026/11/21
 這些文章不寫會過期的價格與法規金額，改寫判斷原則與檢查清單；牽涉 Google 產品版本與授權的部分，以官方最新公告為準並附出處連結，每篇文末標示最後更新日期。
-想看最新的變動與判讀？AI 最新消息寫的是當下發生的事對學校代表什麼；上面這些是系統性的實務指南。
+想看最新的變動與判讀？最新消息寫的是當下發生的事對學校代表什麼；上面這些是系統性的實務指南。
 
 ---
 
@@ -1770,14 +1772,16 @@ Drive 的 Gemini 資料分類：設定步驟與學校可用範圍 新管理員�
 
 ---
 
-## AI 最新消息：Google 教育方案與 AI 導入的變動判讀｜鴻綸科技
+## 最新消息：Google 教育方案與 AI 導入的變動判讀｜鴻綸科技
 
 https://www.hunglun.com/insights
 
-首頁 ／ AI 最新消息
-AI 最新消息
-Google 教育方案、AI 導入與校園數位政策的變動，以及這些變動對台灣學校的實際意義。不轉述新聞，只寫學校真正需要知道的判讀與下一步。
+首頁 ／ 最新消息
+最新消息
+Google 教育方案、AI 導入與校園數位政策的變動，加上近期很多學校遇到的帳號與信件問題，以及這些對台灣學校的實際意義。不轉述新聞，只寫學校真正需要知道的判讀與下一步。
 觀察文章列表
+寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學近期很多學校遇到：寄給 Gmail 收件人被退回、錯誤碼 550 5.7.40。多半是網域 DNS 設定跑掉，一步一步補好。
+2026/11/23
 「一句話做出你的 App」這句廣告詞，只說對了 30%第一版真的變快，但資安、除錯、上架、維護都沒包含。附 Veracode 與 Stack Overflow 數據，以及校園怎麼用才安全。
 2026/11/06
 Google 學生帳號 Gemini 與 Search 改預設關閉11/3 Google 宣布 K-12 學生帳號的 Gemini 與搜尋，學校管理員開啟前一律關閉。生效日與台灣是否適用，官方都沒寫。
@@ -1814,7 +1818,7 @@ Gemini 圖片的浮水印可以關了：官方設定就能做到，但標註的�
 
 https://www.hunglun.com/insights/google-pics
 
-AI 最新消息 ／ Google Pics 上線
+最新消息 ／ Google Pics 上線
 Google Pics 上線：AI 生圖修圖進了 Docs 和 Slides，而且預設是開的
 9 月 1 日推出，底層是 Nano Banana 影像模型。獨立網站 pics.new 之外，也直接接在 Docs 與 Slides 裡。適用方案包含 Google AI Pro for Education，預設為開啟，學校要主動決定各組織單位開不開。
 重點先看
@@ -3756,7 +3760,7 @@ Google for Education、Workspace 基礎版/進階版差異。
 
 https://www.hunglun.com/insights/classroom-rubric-generation
 
-AI 最新消息 ／ Classroom 評分量表生成
+最新消息 ／ Classroom 評分量表生成
 Classroom 能自動生成評分量表了：省的是打字，不是判斷
 8 月 5 日起 3 天內全面上線，連免費的 Fundamentals 版都有。這功能省下的是打草稿的時間，評分標準要訂得準不準，還是得靠老師自己把關。
 ← 上一篇：Canva for Education 串接
@@ -3813,7 +3817,7 @@ Gemini 生成的評分量表可以直接拿來用嗎？
 
 https://www.hunglun.com/insights/classroom-context-aware-access
 
-AI 最新消息 ／ Classroom 情境感知存取
+最新消息 ／ Classroom 情境感知存取
 Classroom 也能設定情境感知存取了，但多數學校不用急著鎖
 8 月 26 日公告，僅 Education Plus 可用。這是一項資安存取控制功能，不是教學功能，重點不是「有沒有開」，而是「用哪種邏輯開」。
 ← 上一篇：評分量表自動生成
@@ -3874,7 +3878,7 @@ Google 於 2026 年 8 月 26 日在 Workspace Updates 公告這項功能，目�
 
 https://www.hunglun.com/insights/gemini-image-watermark
 
-AI 最新消息 ／ Gemini 圖片浮水印
+最新消息 ／ Gemini 圖片浮水印
 Gemini 圖片的浮水印可以關了：官方設定就能做到，但標註的責任回到人身上
 不用再找去浮水印工具。8 月 14 日起，Gemini 設定裡新增了「媒體浮水印」開關，要不要那個印，自己決定。真正值得學校注意的是沒被關掉的那一層。
 重點先看
@@ -3947,7 +3951,7 @@ Gemini 圖片浮水印開關什麼時候上線？
 
 https://www.hunglun.com/insights/gemini-classroom-all-ages
 
-AI 最新消息 ／ Gemini 開放所有年齡
+最新消息 ／ Gemini 開放所有年齡
 學校可能沒發現：Classroom 的 Gemini 已經對所有年齡學生開啟了
 8 月 10 日生效，行動版 8 月 17 日跟上。重點不是這項功能好不好，而是管理主控台的預設值是「開啟」。沒有做任何決定的學校，決定已經生效了。
 2026 年 11 月 4 日更新：Google 11 月 3 日宣布，K-12 學生帳號的 Gemini、Gemini Notebook、Classroom 裡的 Gemini 與搜尋，之後改為學校管理員開啟前一律關閉，生效日官方未寫。下文是公告當時的狀況，保留原樣；新規定請看 Google 學生帳號 Gemini 與 Search 改預設關閉。
@@ -4007,7 +4011,7 @@ Classroom 的 Gemini 對所有年齡開放，什麼時候生效？
 
 https://www.hunglun.com/insights/gemini-notebook-expert-intelligence
 
-AI 最新消息 ／ Gemini Notebook Expert Intelligence
+最新消息 ／ Gemini Notebook Expert Intelligence
 Gemini Notebook 新增 Expert Intelligence：買的電子書能直接餵給 AI 讀
 8 月 27 日上線，先開放 Google Play Books，超過 10 萬本主要出版社的電子書可用。重點不是又多一個來源類型，而是 Google 這次只認「使用者真的買過」的內容，這條線正好接住師生最常問的著作權疑慮。
 重點先看
@@ -4056,7 +4060,7 @@ Google 表示這是跨產品的長期方向，Play Books 只是第一步，後�
 
 https://www.hunglun.com/insights/ai-app-one-sentence-ad
 
-AI 最新消息 ／ 一句話做出 App
+最新消息 ／ 一句話做出 App
 「一句話做出你的 App」這句廣告詞，只說對了 30%
 近來不少 AI 工具的宣傳，主打「一句話做出你的 App」。我們的看法是：這句話只說對了從零到第一版，第一版之後才開始花力氣的那一大段，廣告沒有說。
 重點先看
@@ -4110,7 +4114,7 @@ AI 最新消息 ／ 一句話做出 App
 
 https://www.hunglun.com/insights/k12-ai-off-by-default
 
-AI 最新消息 ／ 學生帳號預設關閉
+最新消息 ／ 學生帳號預設關閉
 Google 學生帳號 Gemini 與 Search 改預設關閉
 11 月 3 日 Google 宣布，K-12 學生帳號的 Gemini 與搜尋要等學校管理員開啟才會出現。但生效日和台灣是否適用，官方都還沒寫，這篇把「確定的」和「無法確認的」分開寫。
 重點先看
@@ -4166,7 +4170,7 @@ Search 的引導式學習本月先在美國部分學校試辦，之後依老師�
 
 https://www.hunglun.com/insights/gemini-student-hub
 
-AI 最新消息 ／ Gemini 學生專區
+最新消息 ／ Gemini 學生專區
 Gemini 學生專區開放教育版：沒有獨立開關
 10 月 1 日起，所有年齡的教育版使用者都看得到。重點不是新入口有多少功能，而是它跟著 Gemini 應用程式的設定走，學校沒有另一個開關可以單獨處理。
 2026 年 11 月 4 日更新：Google 11 月 3 日宣布，K-12 學生帳號的 Gemini、Gemini Notebook、Classroom 裡的 Gemini 與搜尋，之後改為學校管理員開啟前一律關閉，生效日官方未寫。下文是公告當時的狀況，保留原樣；新規定請看 Google 學生帳號 Gemini 與 Search 改預設關閉。
@@ -4221,7 +4225,7 @@ Gemini 學生專區現在學校帳號能用嗎？
 
 https://www.hunglun.com/insights/gemini-personal-account-model-changes
 
-AI 最新消息 ／ Gemini 個人帳號模型調整
+最新消息 ／ Gemini 個人帳號模型調整
 Gemini 免費帳號只剩 Flash-Lite：老師學生改用學校帳號
 Google 公告，10 月 9 日起沒有訂閱 AI 方案的個人帳號，在 Gemini App 只能用最輕量的 Flash-Lite。這次調整只針對個人帳號，學校的教育版帳號另有規定。學校不用加買什麼，該做的是確認師生登入的是學校帳號。
 重點先看
@@ -4275,7 +4279,7 @@ Pro 模型次數不夠用的老師，可以評估 Google AI Pro for Education；
 
 https://www.hunglun.com/insights/gemini-4-argon
 
-AI 最新消息 ／ Gemini 4 Argon 發表
+最新消息 ／ Gemini 4 Argon 發表
 Gemini 4 Argon 可以用了嗎？開放時程與方案整理
 Google 9 月 30 日發表新一代前沿模型，數字很漂亮。9 月 30 日的公告只開給受信任的網路防禦者，10 月 13 日起 Gemini App 已開放給 Google AI Pro 與 Ultra 訂閱者，教育版官方沒有說明。學校不用急，我們把能確認的整理給你。
 2026 年 10 月 16 日更新：Gemini 官方更新日誌記載，10 月 13 日起 Gemini 4 Argon 在 Gemini App 開放給 Google AI Pro 與 Google AI Ultra 訂閱者。下方 9 月 30 日公告的內容保留原樣，教育版帳號、免費版與老師該不該自費升級，請看 Gemini 4 Argon 老師能用嗎。
@@ -4337,7 +4341,7 @@ Gemini 4 Argon 跟前一代差在哪？
 
 https://www.hunglun.com/insights/moe-ai-guidelines-115
 
-AI 最新消息 ／ 教育部 115 年數位與 AI 指引
+最新消息 ／ 教育部 115 年數位與 AI 指引
 教育部 115 年數位與 AI 指引出爐：學校這學期先做這三件事
 三份指引寫給老師、校長、家長，三份手冊寫給國小、國中、高中學生。文件不難找，難的是這學期要先拿哪一份、交給誰。
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 25 日
@@ -4395,7 +4399,7 @@ AI之學習應用手冊（高中版）高中學生AI 運作原理、資訊判讀
 
 https://www.hunglun.com/insights/gemini-notebook-study-tools-update
 
-AI 最新消息 ／ Gemini Notebook 返校季更新
+最新消息 ／ Gemini Notebook 返校季更新
 Gemini Notebook 返校季更新：語音對話、錄音機等五項
 9 月 15 日一次公告五項更新，主打返校季的自主學習情境。重點不是功能多，而是最受矚目的語音對話功能，先給付費訂閱者用，教育版帳號目前完全沒有時程。
 作者：鴻綸科技 Steve｜最後更新：2026 年 9 月 18 日
