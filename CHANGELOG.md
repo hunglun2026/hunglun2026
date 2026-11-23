@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.32（2026-11-23）
+
+手機載入速度：wordwrap.js 中文斷詞改成分片處理（每片 8 毫秒，原本一次卡住主執行緒約 0.3 秒），最後結果與原本逐位元組相同（9 頁手機與桌面 DOM 比對）；52 頁結構化資料（WebPage、AboutPage、ContactPage、CollectionPage）補 description；21 條已被 Google 搬家的外部連結換成最終網址。
+
+
 ## v1.43.31（2026-11-23）
 
 無障礙對比修正：知識庫列表分類標籤的藍、綠、橘字加深到對比 4.5 以上，文章「重點先看」標題的 Google 藍在淺色底下加深（原本 3.3）。style.css v166。

@@ -32,7 +32,10 @@
   });
   var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n,list=[];
   while((n=w.nextNode())){if(HAN.test(n.nodeValue)&&!n.parentElement.closest(SKIP))list.push(n);}
-  list.forEach(function(n){
+  // 逐片處理（2026-11-23）：原本一次同步做完整頁，手機上卡住主執行緒約 0.3 秒（TBT）。
+  // 改成每片最多 8ms，片與片之間把控制權還給瀏覽器；結果與原本逐位元組相同，
+  // 最後才一次套上 keep-all（跟原本同一個時間點），處理中的畫面和未處理時一樣，不會閃。
+  function one(n){
     var s=n.nodeValue,frag=null,last=0;
     for(var g of seg.segment(s)){
       var i=g.index;
@@ -45,10 +48,22 @@
     if(!frag)return;
     frag.appendChild(document.createTextNode(s.slice(last)));
     n.parentNode.replaceChild(frag,n);
-  });
-  var st=document.createElement("style");
-  // 內文不用 pretty：它為了不留短尾行會把整個詞推到下一行，keep-all 下一行就空出一大塊；尾段防孤字交給 main.js 的 .nowrap
-  st.textContent=".wb-root{word-break:keep-all;overflow-wrap:break-word}.wb-root :is(p,li,dd,figcaption,.faq-a,.kn-d,.section-sub){text-wrap:wrap}";
-  document.head.appendChild(st);
-  root.classList.add("wb-root");
+  }
+  function finish(){
+    var st=document.createElement("style");
+    // 內文不用 pretty：它為了不留短尾行會把整個詞推到下一行，keep-all 下一行就空出一大塊；尾段防孤字交給 main.js 的 .nowrap
+    st.textContent=".wb-root{word-break:keep-all;overflow-wrap:break-word}.wb-root :is(p,li,dd,figcaption,.faq-a,.kn-d,.section-sub){text-wrap:wrap}";
+    document.head.appendChild(st);
+    root.classList.add("wb-root");
+    document.documentElement.setAttribute("data-wb-done","1");
+  }
+  var at=0;
+  (function slice(){
+    var t0=performance.now();
+    while(at<list.length){
+      one(list[at++]);
+      if(performance.now()-t0>8){setTimeout(slice,0);return;}
+    }
+    finish();
+  })();
 })();
