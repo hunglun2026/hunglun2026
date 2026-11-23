@@ -32,10 +32,10 @@ nav ol{margin:6px 0 0;padding-left:1.4em;columns:2}
 .box.warn{background:var(--warnbg);border-color:var(--warn)}
 .box.bad{background:var(--badbg);border-color:var(--bad)}
 .box b:first-child{display:block;margin-bottom:2px}
-table{border-collapse:collapse;width:100%;font-size:.92rem;margin:12px 0;background:var(--card)}
-th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+table{border-collapse:collapse;width:100%;table-layout:auto;font-size:.92rem;margin:12px 0;background:var(--card)}
+th,td{overflow-wrap:anywhere;border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
 th{background:var(--brand2)}
-code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:.92em}
+code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:.92em;overflow-wrap:anywhere;word-break:break-all}
 pre{background:var(--term);color:var(--termtext);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:8px;padding:12px 14px;overflow:auto;font:13.5px/1.6 Consolas,"Noto Sans Mono",monospace;margin:12px 0}
 pre .c{color:#5F6368}
 .tag{display:inline-block;font-size:.78rem;border-radius:999px;padding:0 9px;margin-right:4px;border:1px solid}
@@ -77,6 +77,7 @@ figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
 .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media (max-width:700px){.shots{grid-template-columns:1fr}}
 @media print{body{background:#fff;color:#000}nav{display:none}h2{break-after:avoid}.box,table,.fig,figure,pre{break-inside:avoid}}
+.box table{table-layout:fixed}a{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
