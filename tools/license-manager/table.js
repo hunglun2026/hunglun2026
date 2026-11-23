@@ -1,7 +1,7 @@
 // 通用的可編輯表格（像 Excel）＋匯入設定視窗。欄位由 fields 決定，批次新增帳號、批次轉移 OU 共用。
-import { detectTable } from "./logic.js?v=20261123b";
-import { guessColumns } from "./accounts_logic.js?v=20261123b";
-import { openFile, googleSheetSource, demoSheetSource, pickBestTab } from "./sheet.js?v=20261123b";
+import { detectTable } from "./logic.js?v=20261123c";
+import { guessColumns } from "./accounts_logic.js?v=20261123c";
+import { openFile, googleSheetSource, demoSheetSource, pickBestTab } from "./sheet.js?v=20261123c";
 
 const el = (tag, props = {}, ...kids) => { const e = Object.assign(document.createElement(tag), props); kids.forEach((k) => e.append(k)); return e; };
 const cell = (v) => (v == null ? "" : String(v).trim());

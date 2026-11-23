@@ -1,5 +1,5 @@
 // 批次新增帳號、批次轉移組織單位的純邏輯：不碰網路、不碰畫面，瀏覽器與 node 都能跑。
-import { cleanEmail } from "./logic.js?v=20261123b";
+import { cleanEmail } from "./logic.js?v=20261123c";
 
 // 要在後台建立的欄位（對照後台 CSV 範本：名字、姓氏、電子郵件地址、密碼、機構單位路徑、下次登入須變更密碼）
 export const CREATE_FIELDS = [

@@ -1,7 +1,7 @@
 // 步驟 2 的名單表格（像 Excel 一格一格）與匯入（上傳檔案、Google 試算表、貼上多筆）。
 // 純邏輯在 logic.js，讀檔在 sheet.js，這裡只管畫面。
-import { ACTION_LABEL, MAX_CHANGES, normalizeAction, cleanEmail, listsFromRows, parsePasted, detectTable, rowsFromTable } from "./logic.js?v=20261123b";
-import { openFile, googleSheetSource, demoSheetSource, pickBestTab } from "./sheet.js?v=20261123b";
+import { ACTION_LABEL, MAX_CHANGES, normalizeAction, cleanEmail, listsFromRows, parsePasted, detectTable, rowsFromTable } from "./logic.js?v=20261123c";
+import { openFile, googleSheetSource, demoSheetSource, pickBestTab } from "./sheet.js?v=20261123c";
 
 const $ = (id) => document.getElementById(id);
 const el = (tag, props = {}, ...kids) => { const e = Object.assign(document.createElement(tag), props); kids.forEach((k) => e.append(k)); return e; };
@@ -15,9 +15,9 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo }) {
 
   function updateSum() {
     const l = listsFromRows(rows), n = l.add.length + l.revoke.length;
-    const parts = [`指派 ${l.add.length}`, `收回 ${l.revoke.length}`, `保留不動 ${l.keep.length}`];
+    const parts = [["add", `指派 ${l.add.length}`], ["revoke", `收回 ${l.revoke.length}`], ["keep", `保留不動 ${l.keep.length}`]];
     $("gSum").innerHTML = "";
-    parts.forEach((p) => $("gSum").append(el("span", { className: "chip", textContent: p })));
+    parts.forEach(([k, p]) => $("gSum").append(el("span", { className: `chip c-${k}`, textContent: p })));
     if (l.invalid) $("gSum").append(el("span", { className: "chip bad", textContent: `格式錯誤 ${l.invalid}` }));
     if (n > MAX_CHANGES) $("gSum").append(el("span", { className: "chip bad", textContent: `要異動 ${n} 位，單次上限 ${MAX_CHANGES}，請分批` }));
   }
@@ -45,7 +45,8 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo }) {
     inp.addEventListener("keydown", (ev) => { if (ev.key === "Enter") { ev.preventDefault(); body.rows[i + 1]?.querySelector("input")?.focus(); } });
     const sel = el("select", { ariaLabel: `第 ${i + 1} 列動作` });
     for (const [k, v] of Object.entries(ACTION_LABEL)) sel.add(new Option(v, k));
-    sel.value = r.action; sel.addEventListener("change", () => { r.action = sel.value; updateSum(); });
+    const tint = () => { sel.className = `a-${sel.value}`; };
+    sel.value = r.action; tint(); sel.addEventListener("change", () => { r.action = sel.value; tint(); updateSum(); });
     const del = el("button", { className: "x", type: "button", title: "刪除這一列", ariaLabel: `刪除第 ${i + 1} 列`, textContent: "×" });
     del.addEventListener("click", () => { rows.splice(i, 1); trimBlanks(); render(); });
     tr.append(el("td", {}, inp), el("td", {}, sel), el("td", { className: "act" }, del));

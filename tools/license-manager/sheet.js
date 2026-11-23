@@ -1,6 +1,6 @@
 // 讀「來源」：CSV、Excel（.xlsx）、Google 試算表，統一轉成二維陣列交給 logic.js 辨識。
 // 來源物件：{ label, tabs: [分頁名], preferTab, load(tab) -> rows2d }
-import { parseCsv, decodeText, detectTable, sheetIdFromUrl } from "./logic.js?v=20261123b";
+import { parseCsv, decodeText, detectTable, sheetIdFromUrl } from "./logic.js?v=20261123c";
 
 const XLSX_LIB = "https://cdn.jsdelivr.net/npm/read-excel-file@5.8.5/bundle/read-excel-file.min.js";
 let libPromise = null;
