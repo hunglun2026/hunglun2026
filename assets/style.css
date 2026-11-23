@@ -666,12 +666,12 @@ h2.kn-sub-title[data-sb]{padding: 6px 0 6px 18px}
 }
 
 /* 教學資源分類顏色（v1.39.37）：每個主題一個色，用在分頁鈕、卡片、條列左邊線與分類標籤；深色模式改用較亮的同色系 */
-.kn-c-google-ai{--kc: #4285F4;--kt: #1A73E8}
+.kn-c-google-ai{--kc: #4285F4;--kt: #1558B0}
 .kn-c-gemini{--kc: #EA4335;--kt: #C5221F}
-.kn-c-classroom{--kc: #34A853;--kt: #188038}
-.kn-c-web{--kc: #FBBC04;--kt: #B06000}
-.kn-c-hardware{--kc: #4285F4;--kt: #1A73E8}
-.kn-c-compliance{--kc: #FBBC04;--kt: #B06000}
+.kn-c-classroom{--kc: #34A853;--kt: #137333}
+.kn-c-web{--kc: #FBBC04;--kt: #8A4B00}
+.kn-c-hardware{--kc: #4285F4;--kt: #1558B0}
+.kn-c-compliance{--kc: #FBBC04;--kt: #8A4B00}
 :root[data-theme="dark"] .kn-c-google-ai{--kc: #8AB4F8;--kt: #8AB4F8}
 :root[data-theme="dark"] .kn-c-gemini{--kc: #F28B82;--kt: #F28B82}
 :root[data-theme="dark"] .kn-c-classroom{--kc: #81C995;--kt: #81C995}
@@ -713,6 +713,7 @@ h2.kn-sub-title[data-sb]{padding: 6px 0 6px 18px}
 :is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) .spec-table-wrap{margin: 8px 0 30px}
 .kb-quick{margin: 26px 0 8px !important;padding: 20px 24px !important;border-left-width: 6px !important;border-left-color: var(--g-blue) !important;border-radius: 12px !important}
 .kb-quick h2{margin: 0 0 10px !important;padding: 0 !important;border: 0 !important;font-size: 1.15rem !important;font-weight: 600 !important;color: var(--g-blue)}
+:root:not([data-theme="dark"]) .kb-quick h2{color: #185ABC}  /* 淺色底下 Google 藍對比只有 3.3，加深到 6 */
 .kb-quick li{line-height: 1.85}
 :is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > .share-box{margin-top: 48px}
 @media (max-width: 640px){:is(.prose,.wrap):is(:has(> .kb-quick),.kb-layers) > h2{margin: 52px 0 18px;padding-left: 14px;font-size: 1.4rem}

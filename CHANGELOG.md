@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.31（2026-11-23）
+
+無障礙對比修正：知識庫列表分類標籤的藍、綠、橘字加深到對比 4.5 以上，文章「重點先看」標題的 Google 藍在淺色底下加深（原本 3.3）。style.css v166。
+
+
 ## v1.43.30（2026-11-23）
 
 AI 爬蟲視角健檢後修正：隱私權政策等 3 頁正文 email 補上 email_off（原本被 Cloudflare 改成亂碼，爬蟲讀不到）；教育部選購名單已失效的 sdc.org.tw 連結改指名單總頁；15 頁 description 補到 80 到 160 字；/tools/data-search 標題與頁面一致、/tools/commercial 標題補長；首頁重複的「常見問題」h2 改名；「調性」改「風格」；robots.txt 明列 GrokBot、xAI-Bot。
