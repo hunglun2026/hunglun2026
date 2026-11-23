@@ -32,7 +32,7 @@ Google 官方授權的教育合作夥伴
 成功案例
 客製工具與實際案例
 前往頁面 →
-常見問題
+常見問題解答
 Q&A
 前往頁面 →
 聯絡我們
@@ -609,7 +609,7 @@ AI 研習完整講義與歷次場次紀錄，付費研習的學員憑密碼閱�
 
 ---
 
-## 商用工具｜鴻綸科技
+## 商用工具｜ChromeOS Flex 部署、全國學校人數查詢｜鴻綸科技
 
 https://www.hunglun.com/tools/commercial
 
@@ -898,7 +898,7 @@ AI 出題・線上作答・自動評分・即時看進度
 
 ---
 
-## 藥品許可證查詢系統｜藥品外觀查詢、動物用藥查詢｜鴻綸科技
+## 資料查詢網站｜藥品許可證查詢、藥品外觀查詢、動物用藥查詢｜鴻綸科技
 
 https://www.hunglun.com/tools/data-search
 
@@ -4088,7 +4088,7 @@ AI 最新消息 ／ 一句話做出 App
 先講清楚用途再動手。一句話裡至少寫明誰用、放什麼資料、用在哪個場合。
 不要把真實學生資料放進試做版本。試做時用假資料，確定沒問題再談正式使用。
 要讓很多人用的，找人看過。即使不是工程師，也請懂資訊的同事確認登入與資料存放的做法。
-資料來源：Veracode 2025 GenAI Code Security Report 新聞稿（2025 年 7 月）；Stack Overflow 2025 Developer Survey：AI；科技新報：Apple 擋下 Vibe Coding 工具上架（2026-03-23）；Upsilon IT：Vibe Coding Limitations；數位時代：Gemini Canvas 新功能。文中「一句話做出你的 App」是對近期 AI 開發工具宣傳調性的概括，不是引用單一廣告。「30%」是我們的個人觀點，不是研究數字。查證日期：2026 年 11 月 6 日。
+資料來源：Veracode 2025 GenAI Code Security Report 新聞稿（2025 年 7 月）；Stack Overflow 2025 Developer Survey：AI；科技新報：Apple 擋下 Vibe Coding 工具上架（2026-03-23）；Upsilon IT：Vibe Coding Limitations；數位時代：Gemini Canvas 新功能。文中「一句話做出你的 App」是對近期 AI 開發工具宣傳風格的概括，不是引用單一廣告。「30%」是我們的個人觀點，不是研究數字。查證日期：2026 年 11 月 6 日。
 想讓老師安全地用 AI 做課堂工具？
 我們是 Google for Education 專業發展夥伴，可以安排教師研習：從 Gemini Canvas 做出第一版，到資料與帳號的基本把關，一次講清楚。
 看校園研習服務

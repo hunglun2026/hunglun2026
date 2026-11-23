@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.30（2026-11-23）
+
+AI 爬蟲視角健檢後修正：隱私權政策等 3 頁正文 email 補上 email_off（原本被 Cloudflare 改成亂碼，爬蟲讀不到）；教育部選購名單已失效的 sdc.org.tw 連結改指名單總頁；15 頁 description 補到 80 到 160 字；/tools/data-search 標題與頁面一致、/tools/commercial 標題補長；首頁重複的「常見問題」h2 改名；「調性」改「風格」；robots.txt 明列 GrokBot、xAI-Bot。
+
+
 ## v1.43.29（2026-11-23）
 
 主選單「解決方案」第 2 項「Google AI Pro 授權導入」改名「Google 解決方案」（與 /google 頁面標題一致，該頁涵蓋 AI Pro、Workspace、Chromebook、研習）；/services 標題拿掉「Google AI Pro for Education 授權」，改為「教育方案與服務項目｜授權導入・AI 研習・設備採購」，避免與 /google 搶同一批搜尋詞。

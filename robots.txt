@@ -43,6 +43,12 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: GrokBot
+Allow: /
+
+User-agent: xAI-Bot
+Allow: /
+
 User-agent: Applebot
 Allow: /
 
