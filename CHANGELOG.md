@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.29（2026-11-23）
+
+主選單「解決方案」第 2 項「Google AI Pro 授權導入」改名「Google 解決方案」（與 /google 頁面標題一致，該頁涵蓋 AI Pro、Workspace、Chromebook、研習）；/services 標題拿掉「Google AI Pro for Education 授權」，改為「教育方案與服務項目｜授權導入・AI 研習・設備採購」，避免與 /google 搶同一批搜尋詞。
+
+
 ## v1.43.28（2026-11-23）
 
 主選單「解決方案」下拉補回「教育解決方案」總覽入口（/services，排在最前面），並把全站 200 頁的下拉統一成同一份（/google 等頁原本停在舊的 4 項版本）。
