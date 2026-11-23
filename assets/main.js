@@ -219,10 +219,16 @@ const themeToggle=document.getElementById("themeToggle");function syncThemeIcon(
   window.gtag=function(){window.dataLayer.push(arguments)};
   window.gtag("js",new Date());
   window.gtag("config",GA_ID);
-  var s=document.createElement("script");
-  s.async=true;
-  s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(GA_ID);
-  document.head.appendChild(s);
+  // 等頁面載完再下載 gtag.js（約 178KB），不跟首屏的字型、圖片搶頻寬；
+  // 載入前的 gtag() 呼叫已排進 dataLayer，gtag.js 載入後會一次補送，資料不會掉
+  function loadGtag(){
+    var s=document.createElement("script");
+    s.async=true;
+    s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(GA_ID);
+    document.head.appendChild(s);
+  }
+  if(document.readyState==="complete")loadGtag();
+  else window.addEventListener("load",function(){setTimeout(loadGtag,0)});
 
   var mouse=window.matchMedia&&window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   function eventFor(el){
