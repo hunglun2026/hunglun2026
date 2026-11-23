@@ -124,6 +124,10 @@ figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
 <tr><td>輪替名單：每個人的信箱與動作</td><td>學校提供的名單</td><td>步驟 2 表格。每列一個信箱，動作選「指派、收回、保留不動」。可手打、整欄貼上、上傳 CSV 或 Excel、匯入 Google 試算表</td><td>必填</td></tr>
 </table>
 <div class="box tip"><b>名單檔的辨識</b>上傳 CSV、Excel 後，系統會自動找「信箱欄」與「動作欄」，匯入前會跳出預覽讓你確認；沒有動作欄的人，可以統一選指派或收回。</div>
+<div class="box warn"><b>登入時被擋下，或看到應用程式未獲允許？</b>
+多半是學校後台限制了第三方應用程式。請超級管理員到「安全性 > 存取權與資料控管 > API 控制項 > 應用程式存取權控管」（<a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">admin.google.com/ac/owl/list?tab=configuredApps</a>），把本系統的 OAuth 用戶端 ID 加入並設為「受信任」：
+<p><code>348775138342-os11fv6lb0ko57gr1nt6l0fkbn9nl0eq.apps.googleusercontent.com</code></p>
+<p class="sub">這個 ID 是公開資訊，不是密鑰。網頁版用的權限只有授權管理與讀取使用者；管理員隨時可以在同一頁移除。</p></div>
 <div class="box"><b>填完先預演</b>先看預演結果，確認要收回與指派的人沒錯，才按「執行」。</div>
 <h2 id="web">3. 網頁版操作（圖文）</h2>
 <p>不會用命令列的學校管理員，用網頁版就好。下面的畫面是「示範模式」：不連 Google、用假資料，可以放心練習。四個步驟走完就是一次輪替。</p>
