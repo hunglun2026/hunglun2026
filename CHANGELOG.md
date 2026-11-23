@@ -3,6 +3,11 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.25（2026-11-23）
+
+英文自學課程（117 頁）獨立成子網域 english.hunglun.com：舊網址 /tools/english* 逐條 301 到新網址（/、/level-N、/lesson-N），官網不再收錄這些頁，學習專區的卡片改連新網站；sitemap、llms.txt、llms-full.txt、search-index.json 同步移除。學習進度存在瀏覽器 localStorage，換網域不會跟著走。
+
+
 ## v1.43.24（2026-11-23）
 
 教師小幫手分類頁：「藥品與動物用藥許可證查詢」拆成兩張卡，藥品（med.hunglun.com）與動物用藥（vet.hunglun.com）各自連到自己的網站。
