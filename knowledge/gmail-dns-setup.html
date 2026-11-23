@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head><script>try{if(!sessionStorage.getItem("plseen")){sessionStorage.setItem("plseen","1");document.documentElement.classList.add("pl-on")}}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('hunglun-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://huglun2026-visits.hunglun2026.workers.dev" crossorigin>
+<link rel="dns-prefetch" href="https://huglun2026-visits.hunglun2026.workers.dev">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=98" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=166">
+<title>寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技</title>
+<meta name="description" content="學校信箱寄到 Gmail 被退回、錯誤碼 550 5.7.40？多半是網域 DNS 的 MX、SPF、DKIM 設定跑掉。用管理後台截圖，一步一步補好，附給網管的申請信範本。">
+<link rel="canonical" href="https://www.hunglun.com/knowledge/gmail-dns-setup">
+<meta property="og:type" content="article">
+<meta property="og:title" content="寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技">
+<meta property="og:description" content="Gmail 退信 550 5.7.40 怎麼辦：從管理後台看電子郵件設定狀態，補 MX、SPF、DKIM，附申請信範本。">
+<meta property="og:url" content="https://www.hunglun.com/knowledge/gmail-dns-setup">
+<meta property="og:image" content="https://www.hunglun.com/assets/og/knowledge-gmail-dns-setup.png?v=5">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技">
+<meta name="twitter:description" content="Gmail 退信 550 5.7.40 怎麼辦：從管理後台看電子郵件設定狀態，補 MX、SPF、DKIM，附申請信範本。">
+<meta name="twitter:image" content="https://www.hunglun.com/assets/og/knowledge-gmail-dns-setup.png?v=5">
+<meta name="twitter:image:alt" content="寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.hunglun.com/"},
+    {"@type": "ListItem", "position": 2, "name": "教學資源", "item": "https://www.hunglun.com/knowledge"},
+    {"@type": "ListItem", "position": 3, "name": "Google 與 AI 導入", "item": "https://www.hunglun.com/knowledge/topic/google-ai"},
+    {"@type": "ListItem", "position": 4, "name": "Gmail 退信與 DNS 設定", "item": "https://www.hunglun.com/knowledge/gmail-dns-setup"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "退信代碼 550 5.7.40 是什麼意思？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gmail 擋下這封信，因為信上的寄件人網域（From）跟 SPF 或 DKIM 驗證通過的網域對不上。常見原因是網域的 SPF、DKIM 記錄遺失或沒啟用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼學校的信箱會突然被 Gmail 退信？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gmail 要求寄來的信 SPF 或 DKIM 至少通過一項，而且網域要一致。網域註冊搬家、DNS 換主機或管理者異動時，這些記錄可能不見或被改掉，通常要到管理後台的「電子郵件設定狀態」檢查。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MX、SPF、DKIM 要補的順序是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "後台的做法是先補 MX 並完成驗證，再補 DKIM。SPF 是一筆 TXT，可以同一輪一起處理。DMARC 建議最後再加，而且先用 p=none。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "DNS 不是學校自己管，怎麼辦？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "由學校網管或資訊組長向管理 DNS 的單位提出申請，把 MX、SPF、DKIM 三筆內容交給對方。文章第六節有可以直接複製的申請信。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "設定後多久會生效？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "管理後台的電子郵件設定狀態頁寫變更最多需要 72 小時，Google 的 DKIM 說明寫最多 48 小時。實際常在幾分鐘到數小時內，可用公開 DNS 查詢確認。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學",
+  "description": "學校信箱寄到 Gmail 被退回、錯誤碼 550 5.7.40？多半是網域 DNS 的 MX、SPF、DKIM 設定跑掉。用管理後台截圖，一步一步補好，附給網管的申請信範本。",
+  "image": "https://www.hunglun.com/assets/og/knowledge-gmail-dns-setup.png",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "name": "鴻綸科技 Steve",
+    "jobTitle": "Google 認證講師",
+    "worksFor": {
+      "@id": "https://www.hunglun.com/#organization"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.hunglun.com/#organization",
+    "name": "鴻綸科技股份有限公司",
+    "url": "https://www.hunglun.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.hunglun.com/assets/hunglun-logo-dark.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.hunglun.com/knowledge/gmail-dns-setup"
+  },
+  "inLanguage": "zh-Hant-TW",
+  "isAccessibleForFree": true
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/"><span class="brand-logo" role="img" aria-label="鴻綸科技 Hunglun Technology"></span></a>
+    <div class="header-visit-counter" title="累計瀏覽人次">👀 <span id="visitCount">--</span></div>
+    <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false">☰</button>
+            <nav class="main-nav" aria-label="主選單">
+      <a href="/about">關於我們</a>
+      <div class="nav-group">
+        <button type="button" class="nav-group-label" aria-haspopup="true" aria-expanded="false">解決方案</button>
+        <div class="nav-sub">
+          <a href="/services">教育解決方案</a>
+          <a href="/google">Google 解決方案</a>
+          <a href="/services/google-workspace">T&amp;L・Education Plus 授權</a>
+          <a href="/software">代理數位學習軟體</a>
+          <a href="/services/ceu">Chromebook 載具管理 MDM</a>
+          <a href="/services/campus-training">學校 AI 研習</a>
+          <a href="/services/procurement">設備採購與共同供應契約</a>
+          <a href="/enterprise">企業數位方案</a>
+        </div>
+      </div>
+      <a href="/cases">成功案例</a>
+      <a href="/tools/campus">教師小幫手</a>
+      <a href="/tools/games">學習專區</a>
+      <div class="nav-group">
+        <button type="button" class="nav-group-label active" aria-haspopup="true" aria-expanded="false">教學資源</button>
+        <div class="nav-sub">
+          <a href="/knowledge" class="active">教學資源知識庫</a>
+          <a href="/insights">AI 最新消息</a>
+          <a href="/tools/training">研習專區</a>
+          <a href="/tools">全部工具</a>
+        </div>
+      </div>
+      <a href="/contact" class="mobile-contact-link">聯絡我們</a>
+    </nav>
+      <a href="/contact" class="nav-contact-cta">聯絡我們</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="切換深色/淺色模式" title="切換深色/淺色模式">🌙</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<div class="page-head">
+  <div class="wrap">
+    <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/knowledge">教學資源</a> ／ <a href="/knowledge/topic/google-ai">Google 與 AI 導入</a> ／ Gmail 退信與 DNS 設定</nav>
+    <h1>寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學</h1>
+    <p>學校的信寄到 Gmail 信箱被退回，退信寫著 550 5.7.40？多半是網域的 DNS 設定跑掉了。Google 管理後台的「電子郵件設定狀態」會顯示 MX、SPF、DKIM 不正確。這篇用後台截圖，一步一步帶你補好。</p>
+    <p class="kb-audience" style="margin-top:14px;font-size:0.9rem;color:var(--muted);"><strong>這篇適合：</strong>學校資訊組與負責管理 Google Workspace for Education 的老師，以及需要請市網、教育局或廠商代為修改 DNS 的人。</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap prose">
+    <div class="kb-quick" data-quick-answer>
+      <h2>重點先看</h2>
+      <ul>
+        <li><strong>遇到的情況：</strong>寄到 Gmail 的信被退回，錯誤碼 550 5.7.40，意思是寄件人網域跟 SPF、DKIM 驗證的網域對不上。</li>
+        <li><strong>先看哪裡：</strong>管理後台「帳戶 → 網域 → 管理網域」的「電子郵件設定狀態」，看 MX、SPF、DKIM 哪一項不是正常。</li>
+        <li><strong>要補三種記錄：</strong>MX（收信）、SPF 和 DKIM（寄信證明）。每一項都是先在後台複製，再貼到 DNS 主機。</li>
+        <li><strong>多久生效：</strong>後台狀態頁寫最多 72 小時，DKIM 的官方說明寫最多 48 小時。</li>
+      </ul>
+    </div>
+
+    <h2>一、為什麼會被退信</h2>
+    <p>寄給 Gmail 信箱的信，會收到「郵件已遭封鎖」的通知。真正的原因寫在最下面那行，代碼是 <code>550 5.7.40</code>。</p>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-bounce.webp"
+           srcset="/assets/images/gmail-dns-bounce-480.webp 480w, /assets/images/gmail-dns-bounce-768.webp 768w, /assets/images/gmail-dns-bounce.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="513" loading="lazy" decoding="async" style="filter:none;"
+           alt="Gmail 退信畫面：郵件已遭封鎖，伺服器回應 550 5.7.40，From 標頭與 SPF 或 DKIM 的網域不一致">
+      <figcaption style="text-align:left;">退信通知（收件人信箱已遮蔽）。白話意思：信上寫的寄件人網域，跟實際寄信的驗證網域對不上，Gmail 不收。</figcaption>
+    </figure>
+
+    <p>Gmail 現在要求寄來的信，SPF 或 DKIM 至少要通過一項，而且驗證的網域要和寄件人網域一致。網域的 DNS 設定跑掉或遺失，這些寄信證明就不完整。網域註冊搬家、DNS 換主機的時候，都可能發生。</p>
+    <ul>
+      <li><strong>MX：</strong>收信要送到哪台伺服器。</li>
+      <li><strong>SPF：</strong>網域公布的「代寄名單」，Gmail 用它確認寄信的伺服器可信。</li>
+      <li><strong>DKIM：</strong>每封信上的數位簽章，Gmail 用網域公布的公鑰檢查。</li>
+      <li><strong>DMARC：</strong>要求 SPF、DKIM 要和寄件人網域一致，並規定不一致時怎麼處理。</li>
+      <li><strong>TXT 記錄：</strong>DNS 裡存文字的欄位，SPF、DKIM、DMARC 都放在這裡。</li>
+    </ul>
+
+    <h2>二、先看狀態</h2>
+    <p>這一段只看，不改任何設定。用超級管理員帳號登入 <a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a>，左側選單依序點：</p>
+    <p><strong>帳戶 → 網域 → 管理網域</strong></p>
+    <p>網域清單裡，「電子郵件設定狀態」欄如果出現紅色的提醒標籤，寫著請採取行動，就是有記錄需要處理。按進去。</p>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-nav.webp"
+           srcset="/assets/images/gmail-dns-nav-480.webp 480w, /assets/images/gmail-dns-nav-768.webp 768w, /assets/images/gmail-dns-nav.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="左側選單依序點帳戶、網域、管理網域，網域清單的電子郵件設定狀態欄顯示紅色的請採取行動標籤">
+      <figcaption style="text-align:left;">圖上的 Step 3、4、5 是點選順序，Step 6 框起來的是「電子郵件設定狀態」欄。</figcaption>
+    </figure>
+
+    <p>進入後會列出 MX、SPF、DKIM 三列，每列有<strong>建議值</strong>、<strong>目前的值</strong>和<strong>狀態</strong>。圖中三列都不是正常（MX「不正確」、SPF「找不到」、DKIM「不正確」），就要照下面補。頁面上寫「變更最多需要 72 小時才會生效」。</p>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-status.webp"
+           srcset="/assets/images/gmail-dns-status-480.webp 480w, /assets/images/gmail-dns-status-768.webp 768w, /assets/images/gmail-dns-status.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="電子郵件設定狀態頁：MX 不正確、SPF 找不到、DKIM 不正確，MX 列右側有啟用 Gmail 連結">
+      <figcaption style="text-align:left;">電子郵件設定狀態頁。「建議值」欄就是要貼到 DNS 的內容。截圖是我們自己的示範網域。</figcaption>
+    </figure>
+
+    <h2>三、補 MX（收信）</h2>
+    <p>Google 管理後台現在給的是單一一筆 <code>smtp.google.com</code>，用來取代舊的五筆。</p>
+    <div class="callout-box">
+      <p><strong>動 MX 之前先看：</strong>要在 DNS 主機<strong>先刪掉舊的 MX，再貼新的</strong>，兩個動作要連續做完，中間收信會短暫異常。建議放學後或假日做，TTL 設成最低值，做完立刻回後台確認。如果 DNS 不是你們自己管，請對方照第六節的申請信一次改好。</p>
+    </div>
+    <p><strong>1. 按 MX 那一列右邊的「啟用 Gmail」</strong>，選「設定 MX 記錄」，按「下一步」。</p>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-mx-option.webp"
+           srcset="/assets/images/gmail-dns-mx-option-480.webp 480w, /assets/images/gmail-dns-mx-option-768.webp 768w, /assets/images/gmail-dns-mx-option.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="啟用 Gmail 視窗，選設定 MX 記錄後按下一步">
+      <figcaption style="text-align:left;">選第一項「設定 MX 記錄」。第二項「略過 MX 記錄設定」是給信件另外轉送處理的網域，一般學校不選。</figcaption>
+    </figure>
+
+    <p><strong>2. 按「繼續」，往下滑到最底按「繼續啟用」。</strong></p>
+    <p><strong>3. 網域代管商選「其他」</strong>，再按「繼續」。學校的 DNS 主機基本上由學校或上級單位自己管理，所以一律選「其他」。</p>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-host-other.webp"
+           srcset="/assets/images/gmail-dns-host-other-480.webp 480w, /assets/images/gmail-dns-host-other-768.webp 768w, /assets/images/gmail-dns-host-other.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="設定 Gmail 來收發電子郵件，網域代管商選其他">
+      <figcaption style="text-align:left;">下拉選單選「其他」。</figcaption>
+    </figure>
+
+    <p><strong>4. 複製 MX 的名稱、優先順序、指向，貼到 DNS 主機。</strong>存留時間（TTL）設成最低可能值。到 DNS 主機：</p>
+    <ul>
+      <li>先<strong>刪除</strong>這個網域原本的 MX 記錄</li>
+      <li>再新增一筆：優先順序 <code>1</code>，指向 <code>smtp.google.com</code>（DNS 介面要求的話，結尾補半形句號 <code>smtp.google.com.</code>）</li>
+    </ul>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-mx-values.webp"
+           srcset="/assets/images/gmail-dns-mx-values-480.webp 480w, /assets/images/gmail-dns-mx-values-768.webp 768w, /assets/images/gmail-dns-mx-values.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="新增 Gmail 啟用代碼：MX 記錄名稱、優先順序 1、指向 SMTP.GOOGLE.COM">
+      <figcaption style="text-align:left;">後台給的 MX 記錄。名稱欄只寫網域前面那段（示範網域是 gedu.demo），DNS 主機要求完整名稱就補上完整網域。</figcaption>
+    </figure>
+
+    <p><strong>5. 貼完之後，回到這個畫面勾選並按「確認」。</strong></p>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-confirm.webp"
+           srcset="/assets/images/gmail-dns-confirm-480.webp 480w, /assets/images/gmail-dns-confirm-768.webp 768w, /assets/images/gmail-dns-confirm.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="畫面底部勾選在網域代管商網站更新驗證碼後請返回這裡確認，按確認">
+      <figcaption style="text-align:left;">DNS 主機那邊貼好、存好之後，再回來勾選並按「確認」。</figcaption>
+    </figure>
+
+    <p><strong>6. 等驗證跑完。</strong>畫面會顯示「正在等待網域擁有權通過驗證」，這段期間<strong>不要關閉頁面</strong>，可能要幾分鐘。畫面跑完就表示 MX 驗證完成。</p>
+
+    <h2>四、補 SPF（寄信證明）</h2>
+    <p>狀態頁的 SPF 那一列，右邊有「其他資訊」連結可以看 Google 的說明。SPF 是在<strong>網域根部</strong>加一筆 TXT 記錄，值用狀態頁「建議值」欄的內容：</p>
+    <table>
+      <thead><tr><th>完整名稱</th><th>類型</th><th>值</th></tr></thead>
+      <tbody><tr><td><code>school.edu.tw</code>（換成你們的網域）</td><td>TXT</td><td><code>v=spf1 include:_spf.google.com ~all</code></td></tr></tbody>
+    </table>
+    <div class="callout-box">
+      <p><strong>SPF 一個網域只能有一筆。</strong>已經有 SPF 的話，改那一筆，不要再加第二筆。如果學校還有別的系統用這個網域寄信（網站表單、公文系統），要把它們的 <code>include:</code> 一起寫進同一筆，不然那些信會被判定不合格。</p>
+    </div>
+
+    <h2>五、補 DKIM（簽章）</h2>
+    <p>MX 驗證完回到狀態頁，按 DKIM 那一列右邊的「驗證電子郵件」，再按「設定 DKIM」。</p>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-dkim-dialog.webp"
+           srcset="/assets/images/gmail-dns-dkim-dialog-480.webp 480w, /assets/images/gmail-dns-dkim-dialog-768.webp 768w, /assets/images/gmail-dns-dkim-dialog.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="驗證電子郵件視窗，說明建立 TXT 記錄後按設定 DKIM">
+      <figcaption style="text-align:left;">視窗說明要建立 TXT 記錄，主機名稱和值用資料列裡的內容。</figcaption>
+    </figure>
+
+    <p>進到 DKIM 頁，灰色框裡有兩樣東西：主機名稱 <code>google._domainkey</code>，和 TXT 記錄值 <code>v=DKIM1; k=rsa; p=…</code>（一長串）。兩個都複製，到 DNS 主機新增一筆 TXT：</p>
+    <table>
+      <thead><tr><th>完整名稱</th><th>類型</th><th>值</th></tr></thead>
+      <tbody><tr><td><code>google._domainkey.school.edu.tw</code>（換成你們的網域）</td><td>TXT</td><td>後台灰色框裡那一整串，<strong>一個字都不能少</strong></td></tr></tbody>
+    </table>
+
+    <figure class="prose-figure">
+      <img src="/assets/images/gmail-dns-dkim-page.webp"
+           srcset="/assets/images/gmail-dns-dkim-page-480.webp 480w, /assets/images/gmail-dns-dkim-page-768.webp 768w, /assets/images/gmail-dns-dkim-page.webp 1200w"
+           sizes="(max-width: 820px) 100vw, 780px"
+           width="1200" height="675" loading="lazy" decoding="async" style="filter:none;"
+           alt="驗證電子郵件頁：DNS 主機名稱與 TXT 記錄值，下方有開始驗證按鈕">
+      <figcaption style="text-align:left;">DKIM 頁。金鑰內容已遮蔽，請使用你們自己畫面上的值，不要抄這張圖。</figcaption>
+    </figure>
+
+    <p><strong>DNS 生效後，按「開始驗證」。</strong>Google 的說明寫 DKIM 最多要 48 小時才會開始運作，所以記錄加好、用第八節的方法查得到之後再按。按了若顯示找不到，過一段時間再按一次。</p>
+    <div class="callout-box">
+      <p><strong>灰色框已經有一組金鑰時：</strong>不要按「產生新記錄」，那可能換成新的一組，DNS 上舊的就對不上了。先確認 DNS 上的值跟灰色框是同一串，一樣就直接按「開始驗證」。</p>
+    </div>
+
+    <h2>六、DNS 不是自己管：給網管的申請信</h2>
+    <p>很多學校的 DNS 由教育局、市網中心或廠商管理，要由學校網管或資訊組長向對方申請。下面這份可以直接複製（把 school.edu.tw 換成貴校網域，DKIM 的值貼上後台產生的整串；申請管道依各單位的實際流程）：</p>
+    <pre style="white-space:pre-wrap;overflow-x:auto;font-size:0.86rem;line-height:1.7;background:var(--surface,#f5f5f5);border:1px solid var(--line);padding:14px 16px;border-radius:var(--radius);">主旨：申請調整 school.edu.tw 的 Google 郵件 DNS 記錄（MX、SPF、DKIM）
+
+您好，
+
+本校 school.edu.tw 使用 Google Workspace 收發信。目前寄到 Gmail 的信會被退回（錯誤碼 550 5.7.40），Google 管理後台的電子郵件設定狀態也顯示記錄不正確。麻煩協助調整以下記錄：
+
+1. MX（請先刪除 school.edu.tw 原有的 MX，再新增這一筆，TTL 請設最低）
+   名稱：school.edu.tw
+   優先順序：1
+   指向：smtp.google.com.
+
+2. SPF（若已存在請修改，不要新增第二筆）
+   名稱：school.edu.tw
+   類型：TXT
+   值：v=spf1 include:_spf.google.com ~all
+
+3. DKIM
+   名稱：google._domainkey.school.edu.tw
+   類型：TXT
+   值：（貼上管理後台產生的 v=DKIM1; k=rsa; p=… 整串）
+
+備註：
+- 名稱若需寫成區域內的短寫法，請依貴單位格式轉換。
+- 麻煩在放學後或假日處理，MX 的刪除與新增請連續完成。
+- 完成後請回覆，本校會到後台按「開始驗證」。
+
+謝謝您的協助。
+
+學校：
+聯絡人：
+電話：</pre>
+    <button type="button" class="fc-copy" data-copy="主旨：申請調整 school.edu.tw 的 Google 郵件 DNS 記錄（MX、SPF、DKIM）&#10;&#10;您好，&#10;&#10;本校 school.edu.tw 使用 Google Workspace 收發信。目前寄到 Gmail 的信會被退回（錯誤碼 550 5.7.40），Google 管理後台的電子郵件設定狀態也顯示記錄不正確。麻煩協助調整以下記錄：&#10;&#10;1. MX（請先刪除 school.edu.tw 原有的 MX，再新增這一筆，TTL 請設最低）&#10;   名稱：school.edu.tw&#10;   優先順序：1&#10;   指向：smtp.google.com.&#10;&#10;2. SPF（若已存在請修改，不要新增第二筆）&#10;   名稱：school.edu.tw&#10;   類型：TXT&#10;   值：v=spf1 include:_spf.google.com ~all&#10;&#10;3. DKIM&#10;   名稱：google._domainkey.school.edu.tw&#10;   類型：TXT&#10;   值：（貼上管理後台產生的 v=DKIM1; k=rsa; p=… 整串）&#10;&#10;備註：&#10;- 名稱若需寫成區域內的短寫法，請依貴單位格式轉換。&#10;- 麻煩在放學後或假日處理，MX 的刪除與新增請連續完成。&#10;- 完成後請回覆，本校會到後台按「開始驗證」。&#10;&#10;謝謝您的協助。&#10;&#10;學校：&#10;聯絡人：&#10;電話：" data-label="複製申請信">複製申請信</button>
+
+    <h2>七、DMARC：最後再加，而且先寬鬆</h2>
+    <p>DMARC 是更上一層的規則。Google 建議 SPF、DKIM 穩定運作 48 小時之後再加，起手先用「只觀察、不處理」：</p>
+    <table>
+      <thead><tr><th>完整名稱</th><th>類型</th><th>值</th></tr></thead>
+      <tbody><tr><td><code>_dmarc.school.edu.tw</code></td><td>TXT</td><td><code>v=DMARC1; p=none;</code></td></tr></tbody>
+    </table>
+    <p><code>p=none</code> 的意思是驗證不過的信照常送達，只做記錄，不會誤擋正常信。如果你們的 DNS 上已經有 <code>p=quarantine</code> 或 <code>p=reject</code>，驗證不過的信會進垃圾信或被退回。學校若還有其他系統用同一個網域寄信，確定 SPF、DKIM 都正常之前，建議先改成 <code>p=none</code>。</p>
+
+    <h2>八、怎麼確認修好了</h2>
+    <ul>
+      <li><strong>後台：</strong>回到「管理網域 → 電子郵件設定狀態」，MX、SPF、DKIM 都變成正常，DKIM 頁的狀態不再是「不驗證電子郵件」。最多等 72 小時。</li>
+      <li><strong>用 Google 公開 DNS 查：</strong>網址格式是 <code>https://dns.google/resolve?name=你的網域&amp;type=MX</code>。SPF、DMARC 把 type 改成 TXT，DKIM 的 name 改成 <code>google._domainkey.你的網域</code>。結果有 <code>Answer</code> 就是加好了，<code>"Status": 3</code> 是還查不到。</li>
+      <li><strong>寄測試信：</strong>用學校帳號寄到任一 Gmail，打開信，點右上角的三個點選單，選「顯示原始郵件」，上方 SPF、DKIM、DMARC 都要是 <code>PASS</code>。退信不再出現就修好了。</li>
+    </ul>
+    <p><strong>還沒好的時候：</strong>退信還在，通常是後台沒按「開始驗證」，或 DNS 上的 DKIM 值跟後台不是同一串。DKIM 查不到，多半是長字串貼錯或被截斷，請管 DNS 的人把實際輸入的值貼給你對照。收不到信，先確認 MX 刪了沒補，或指向打錯。
+
+
+    <p>官方原文：<a href="https://knowledge.workspace.google.com/admin/security/set-up-dkim" target="_blank" rel="noopener">Google Workspace 說明：設定 DKIM</a>、<a href="https://knowledge.workspace.google.com/admin/security/set-up-spf" target="_blank" rel="noopener">設定 SPF</a>、<a href="https://knowledge.workspace.google.com/admin/security/set-up-dmarc" target="_blank" rel="noopener">設定 DMARC</a>。介面與功能會隨 Google 更新調整，實際以畫面與官方說明為準。</p>
+    <div class="share-box">
+      <p class="share-box-lead">💡 這篇對其他老師也有幫助嗎？</p>
+      <p class="share-box-text">歡迎複製下面這段文字，分享到貴校的教師群組：</p>
+      <button type="button" class="fc-copy" data-copy="夥伴們！這篇《Gmail 退信與 DNS 設定》整理得很清楚，推薦大家看一下：https://www.hunglun.com/knowledge/gmail-dns-setup" data-label="複製分享文字">複製分享文字</button>
+    </div>
+
+    <h2>常見問題</h2>
+    <details class="faq-item">
+      <summary>退信代碼 550 5.7.40 是什麼意思？</summary>
+      <div class="faq-a">Gmail 擋下這封信，因為信上的寄件人網域（From）跟 SPF 或 DKIM 驗證通過的網域對不上。常見原因是網域的 SPF、DKIM 記錄遺失或沒啟用。</div>
+    </details>
+    <details class="faq-item">
+      <summary>為什麼學校的信箱會突然被 Gmail 退信？</summary>
+      <div class="faq-a">Gmail 要求寄來的信 SPF 或 DKIM 至少通過一項，而且網域要一致。網域註冊搬家、DNS 換主機或管理者異動時，這些記錄可能不見或被改掉，通常要到管理後台的「電子郵件設定狀態」檢查。</div>
+    </details>
+    <details class="faq-item">
+      <summary>MX、SPF、DKIM 要補的順序是什麼？</summary>
+      <div class="faq-a">後台的做法是先補 MX 並完成驗證，再補 DKIM。SPF 是一筆 TXT，可以同一輪一起處理。DMARC 建議最後再加，而且先用 p=none。</div>
+    </details>
+    <details class="faq-item">
+      <summary>DNS 不是學校自己管，怎麼辦？</summary>
+      <div class="faq-a">由學校網管或資訊組長向管理 DNS 的單位提出申請，把 MX、SPF、DKIM 三筆內容交給對方。文章第六節有可以直接複製的申請信。</div>
+    </details>
+    <details class="faq-item">
+      <summary>設定後多久會生效？</summary>
+      <div class="faq-a">管理後台的電子郵件設定狀態頁寫變更最多需要 72 小時，Google 的 DKIM 說明寫最多 48 小時。實際常在幾分鐘到數小時內，可用公開 DNS 查詢確認。</div>
+    </details>
+
+    <p style="color:var(--muted-faint);font-size:0.8rem;margin-top:8px;">作者：鴻綸科技 Steve｜最後更新：<time datetime="2026-11-23">2026 年 11 月 23 日</time>（功能與限制以 Google 當期官方說明為準）</p>
+
+    <h2>延伸閱讀</h2>
+    <ul>
+      <li><a href="/knowledge/google-admin">Google 管理主控台校園設定指南：OU、群組、Chrome 政策 →</a></li>
+      <li><a href="/knowledge/account-lifecycle">學校 Google 帳號管理 SOP：新生建檔、畢業轉出與停權 →</a></li>
+      <li><a href="/knowledge/two-step-verification">學校怎麼強制兩步驟驗證（2SV）？排除學生與防鎖死 →</a></li>
+      <li><a href="/knowledge">教學資源總覽 →</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:820px;">
+    <div class="svc-cta" data-hl-kb-cta>
+      <h2 style="margin-top:0;">學校想導入或需要教師研習？</h2>
+      <p>鴻綸科技是 Google for Education Professional Development Partner，可以依貴校現況安排教師研習與帳號規劃。</p>
+      <!--email_off--><a class="btn btn-primary" href="mailto:gfeh@hunglun.com?subject=%E8%A9%A2%E5%95%8F%E5%AD%B8%E6%A0%A1%20Gmail%20DNS%20%E8%A8%AD%E5%AE%9A&body=%EF%BC%88%E4%BE%86%E8%87%AA%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E5%AE%98%E7%B6%B2%E6%96%87%E7%AB%A0%EF%BC%9A%E5%AF%84%E5%88%B0%20Gmail%20%E8%A2%AB%E9%80%80%E4%BF%A1%EF%BC%9F%E5%AD%B8%E6%A0%A1%E7%B6%B2%E5%9F%9F%E8%A3%9C%E8%A8%AD%20MX%E3%80%81SPF%E3%80%81DKIM%20%E6%95%99%E5%AD%B8%EF%BC%89%0A">寄信詢問</a><!--/email_off-->
+      <a class="btn" href="tel:+88666371192">來電 06-6371192</a>
+      <a class="btn" href="/services/campus-training">看校園研習方案 →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <span class="footer-logo-img" role="img" aria-label="鴻綸科技"></span>
+        <p>鴻綸科技股份有限公司<br>台南市新營區綠川路10號<br>週一至週五 08:30–17:30</p>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul class="footer-nav">
+          <li><a href="/about">關於我們</a></li>
+          <li><a href="/google">Google 解決方案</a></li>
+          <li><a href="/services">教育解決方案</a></li>
+          <li><a href="/enterprise">企業解決方案</a></li>
+          <li><a href="/cases">成功案例</a></li>
+          <li><a href="/software">數位學習軟體導入</a></li>
+          <li><a href="/knowledge">教學資源</a></li>
+          <li><a href="/insights">AI 最新消息</a></li>
+          <li><a href="/tools/games">學習專區</a></li>
+          <li><a href="/tools">資源分享</a></li>
+          <li><a href="/faq">常見問題</a></li>
+          <li><a href="/privacy">隱私權政策</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>聯絡方式</h2>
+        <ul class="footer-contact">
+          <li><a href="tel:+88666371192"><span class="fc-key">電話</span><span class="fc-val">06-6371192<em>週一至週五 08:30–17:30</em></span></a></li>
+          <!--email_off--><li class="fc-has-copy"><a href="mailto:gfeh@hunglun.com"><span class="fc-key">信箱</span><span class="fc-val">gfeh@hunglun.com<em>傳真 06-6371112</em></span></a><button type="button" class="fc-copy" data-copy="gfeh@hunglun.com" data-label="複製信箱" aria-label="複製信箱地址 gfeh@hunglun.com">複製信箱</button></li><!--/email_off-->
+          <li class="fc-has-copy"><a href="https://lin.ee/zo6euCb" target="_blank" rel="noopener"><span class="fc-key">LINE</span><span class="fc-val">@gdm6961p<em>電腦版請在 LINE 搜尋 ID 加入</em></span></a><button type="button" class="fc-copy" data-copy="@gdm6961p" data-label="複製 ID" aria-label="複製 ID，LINE 官方帳號 @gdm6961p">複製 ID</button></li>
+          <li><a href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener"><span class="fc-key">粉絲頁</span><span class="fc-val">Facebook<em>鴻綸科技</em></span></a></li>
+          <li><a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" target="_blank" rel="noopener"><span class="fc-key">地址</span><span class="fc-val">台南市新營區綠川路10號<em>開啟 Google 地圖</em></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.35</span></div>  </div>
+</footer>
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-fb" href="https://www.facebook.com/hungluntechnology" target="_blank" rel="noopener" aria-label="鴻綸科技 Facebook 粉絲頁" title="Facebook 粉絲頁"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+  <a class="fab-line" href="https://lin.ee/zo6euCb" target="_blank" rel="noopener" aria-label="鴻綸科技 LINE 官方帳號 @gdm6961p" title="LINE 官方帳號（電腦版請搜尋 ID：@gdm6961p）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+  <a href="https://www.google.com.tw/maps/place/%E9%B4%BB%E7%B6%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@23.3093251,120.3220502,17z/data=!4m5!3m4!1s0x346e85e863de224f:0x93c5d03a04347242!8m2!3d23.310542!4d120.323917?hl=zh-TW" class="fab-map" target="_blank" rel="noopener" aria-label="鴻綸科技 Google Map 地圖位置" title="Google Map 地圖"><img width="160" height="160" src="/assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
+  <a class="fab-form" href="/contact#contactForm" aria-label="填寫線上詢問表單" title="填寫線上詢問表單"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></a>
+  <a class="fab-mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=gfeh@hunglun.com" target="_blank" rel="noopener" aria-label="寄信給 gfeh@hunglun.com（開啟 Gmail）" title="寄信給 gfeh@hunglun.com"><img width="88" height="66" src="/assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></a>
+</div>
+
+
+<script src="/assets/main.js?v=38"></script>
+<script src="/assets/sectionbar.js?v=1" defer></script>
+<script src="/assets/wordwrap.js?v=5"></script>
+</body>
+</html>

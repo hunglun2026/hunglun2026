@@ -1293,7 +1293,7 @@ https://www.hunglun.com/knowledge
 
 首頁 ／ 教學資源
 教學資源
-116 篇學校端實際被問到的問題。先搜尋，或從下面挑你的情境。
+117 篇學校端實際被問到的問題。先搜尋，或從下面挑你的情境。
 搜尋教學資源
 免費下載：Gemini 備課與校務提示詞 30 組 →
 搜尋結果
@@ -1312,7 +1312,7 @@ Google 與 AI 導入
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂
 Workspace 教育版版本比較
 學校 Google 帳號怎麼申請
-看全部 38 篇 →
+看全部 39 篇 →
 Gemini 教育版與 Notebook
 適合：要用 Gemini 備課、出題、做簡報的老師。
 Gemini 怎麼用？從打開到第一次提問
@@ -1344,6 +1344,7 @@ Chromebook 選購指南
 校園資安事件通報與處理流程
 看全部 6 篇 →
 最新上線
+Google 與 AI 導入寄到 Gmail 被退信：補設 MX、SPF、DKIM 新退信代碼 550 5.7.40 的原因，和後台截圖的逐步設定教學。2026/11/23
 Google 與 AI 導入Google Workspace Studio：自動化流程與管理員設定 新用白話描述做出自動化流程，11 月新增協作步驟與資料區域設定，管理員導入前要先看的限制。2026/11/21
 Google 與 AI 導入Apps Script 的 Gemini：用白話文做出自動化 新在試算表或 Apps Script 編輯器按 Ask Gemini，用白話描述需求，逐段檢視程式碼再採用。2026/11/21
 Gemini 教育版與 NotebookGemini Notebook 互動網站：做法與學校注意事項 新在 Notebook 聊天輸入需求，產生互動週期表、時間軸或儀表板；公告寫明限 18 歲以上使用。2026/11/21
@@ -1351,12 +1352,11 @@ Gemini 教育版與 NotebookGemini 技能：建立、分享與加入檔案 新�
 Gemini 教育版與 NotebookNano Banana 2.1：Google Pics 升級與教育版可用範圍 新畫質、編輯精準度與文字呈現的改進、哪些授權能用，以及公告沒寫明的額度。2026/11/21
 Google ClassroomGemini 引導式學習：派到 Classroom 作業的做法與前提 新11 月起老師可把引導式學習加進作業，學生端會鎖在同一個學習模式，老師看得到洞察摘要與聊天紀錄。2026/11/21
 Google ClassroomGoogle Meet 分享簡報：畫面、聲音與檔案連結 新分頁、視窗、整個畫面怎麼選、聲音怎麼分享，以及 11 月新增的一鍵分享檔案連結。2026/11/21
-資安與個資法遵Classroom 稽核記錄新欄位：應用程式名稱與裝置 ID 新兩個新欄位預設隱藏，要從「管理欄位」加入，用來追查是哪個應用程式、哪台裝置做了操作。2026/11/21
-全部文章 116
+全部文章 117
 依主題分段，顏色對應上面的主題卡片。
-Google 與 AI 導入 38Gemini 教育版與 Notebook 30Google Classroom 15數位學習軟體與網站 19設備選型與採購 8資安與個資法遵 6
-Google 與 AI 導入 38
-Google 帳號與管理 9
+Google 與 AI 導入 39Gemini 教育版與 Notebook 30Google Classroom 15數位學習軟體與網站 19設備選型與採購 8資安與個資法遵 6
+Google 與 AI 導入 39
+Google 帳號與管理 10
 Google for Education 指南Google for Education、Workspace 基礎版/進階版差異。2026/08/04
 學校 Google 帳號怎麼申請官方資格條件、不符資格的機構清單、四個申請步驟、網域驗證卡關與 Gemini 開通位置。2026/08/27
 Workspace 教育版版本比較四個方案怎麼選、2025–2026 授權變更與續約重點。2026/08/04
@@ -1366,6 +1366,7 @@ Google 管理主控台設定指南OU 與群組怎麼分、帳號大量匯入、C
 學校雲端硬碟空間不足怎麼辦100TB 共用池怎麼運作、怎麼監控用量、清理與升級怎麼選。2026/08/31
 學校怎麼強制開啟兩步驟驗證先允許再強制、只對教職員套用、管理員防鎖死自救。2026/09/06
 Google Meet 在校園怎麼用遠距教學、線上親師會、線上研習三種情境的管理設定：主持人管控、等候室、出席報告。2026/08/30
+寄到 Gmail 被退信：補設 MX、SPF、DKIM 新退信代碼 550 5.7.40 的原因，和後台截圖的逐步設定教學。2026/11/23
 Google AI Pro for Education 方案 6
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂加購在 Workspace 教育版上的 AI 方案，功能、適用對象與評估前要確認的事。2026/10/02
 Google AI Pro for Education 費用怎麼算？學校採購前先看這些影響總額的四個因素、年約與月繳，以及編預算清單。2026/10/02
@@ -1503,17 +1504,17 @@ https://www.hunglun.com/knowledge/topic/google-ai
 
 首頁 ／ 教學資源 ／ Google 與 AI 導入
 Google 與 AI 導入
-授權方案怎麼選、AI 怎麼真的用在教學與行政上。共 38 篇，每篇都是獨立網址，方便查找與分享。
+授權方案怎麼選、AI 怎麼真的用在教學與行政上。共 39 篇，每篇都是獨立網址，方便查找與分享。
 適合：資訊組、主任，要評估授權、帳號與研習的學校。
-全部 116
-Google 與 AI 導入 38
+全部 117
+Google 與 AI 導入 39
 Gemini 教育版與 Notebook 30
 Google Classroom 15
 數位學習軟體與網站 19
 設備選型與採購 8
 資安與個資法遵 6
-Google 帳號與管理 9Google AI Pro for Education 方案 6AI 教學與備課 11行政自動化與教師研習 7Google 與 AI 認證 5
-Google 帳號與管理 9
+Google 帳號與管理 10Google AI Pro for Education 方案 6AI 教學與備課 11行政自動化與教師研習 7Google 與 AI 認證 5
+Google 帳號與管理 10
 學校帳號怎麼申請、管理、保護與回收。
 Google for Education 指南Google for Education、Workspace 基礎版/進階版差異。2026/08/04
 學校 Google 帳號怎麼申請官方資格條件、不符資格的機構清單、四個申請步驟、網域驗證卡關與 Gemini 開通位置。2026/08/27
@@ -1524,6 +1525,7 @@ Google 管理主控台設定指南OU 與群組怎麼分、帳號大量匯入、C
 學校雲端硬碟空間不足怎麼辦100TB 共用池怎麼運作、怎麼監控用量、清理與升級怎麼選。2026/08/31
 學校怎麼強制開啟兩步驟驗證先允許再強制、只對教職員套用、管理員防鎖死自救。2026/09/06
 Google Meet 在校園怎麼用遠距教學、線上親師會、線上研習三種情境的管理設定：主持人管控、等候室、出席報告。2026/08/30
+寄到 Gmail 被退信：補設 MX、SPF、DKIM 新退信代碼 550 5.7.40 的原因，和後台截圖的逐步設定教學。2026/11/23
 Google AI Pro for Education 方案 6
 方案內容、費用、與 Workspace 的差別，以及老師能不能免費用。
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂加購在 Workspace 教育版上的 AI 方案，功能、適用對象與評估前要確認的事。2026/10/02
@@ -1574,8 +1576,8 @@ https://www.hunglun.com/knowledge/topic/gemini
 Gemini 教育版與 Gemini Notebook
 Gemini 教育版怎麼開通與使用，以及 Gemini Notebook 的完整教學系列。共 30 篇，每篇都是獨立網址，方便查找與分享。
 適合：要用 Gemini 備課、出題、做簡報的老師。
-全部 116
-Google 與 AI 導入 38
+全部 117
+Google 與 AI 導入 39
 Gemini 教育版與 Notebook 30
 Google Classroom 15
 數位學習軟體與網站 19
@@ -1631,8 +1633,8 @@ https://www.hunglun.com/knowledge/topic/classroom
 Google Classroom 教學
 從建立課程到成績結算，Classroom 在校園實際會用到的功能與卡關排除。共 15 篇，每篇都是獨立網址，方便查找與分享。
 適合：老師與管理員，要用 Classroom 開課、派作業、排除問題。
-全部 116
-Google 與 AI 導入 38
+全部 117
+Google 與 AI 導入 39
 Gemini 教育版與 Notebook 30
 Google Classroom 15
 數位學習軟體與網站 19
@@ -1671,8 +1673,8 @@ https://www.hunglun.com/knowledge/topic/web
 數位學習軟體與網站工具
 校園常用的數位學習軟體怎麼選，以及網站與系統相關的實務知識。共 19 篇，每篇都是獨立網址，方便查找與分享。
 適合：要挑課堂工具、做表單或網站的老師與行政。
-全部 116
-Google 與 AI 導入 38
+全部 117
+Google 與 AI 導入 39
 Gemini 教育版與 Notebook 30
 Google Classroom 15
 數位學習軟體與網站 19
@@ -1717,8 +1719,8 @@ https://www.hunglun.com/knowledge/topic/hardware
 校園資訊設備選型與採購
 Chromebook、電腦與校園設備怎麼選、怎麼走採購流程。共 8 篇，每篇都是獨立網址，方便查找與分享。
 適合：要做設備或 AI 軟體採購的承辦人。
-全部 116
-Google 與 AI 導入 38
+全部 117
+Google 與 AI 導入 39
 Gemini 教育版與 Notebook 30
 Google Classroom 15
 數位學習軟體與網站 19
@@ -1750,8 +1752,8 @@ https://www.hunglun.com/knowledge/topic/compliance
 校園資安與個資法遵
 個資盤點、資安事件處理與校園法遵要求。共 6 篇，每篇都是獨立網址，方便查找與分享。
 適合：資訊組與校安人員，要處理個資與資安事件。
-全部 116
-Google 與 AI 導入 38
+全部 117
+Google 與 AI 導入 39
 Gemini 教育版與 Notebook 30
 Google Classroom 15
 數位學習軟體與網站 19
@@ -15193,6 +15195,129 @@ Drive 資料分類什麼時候推出？
 學校導入雲端服務的個資盤點清單 →
 校園資安事件通報與處理流程：發現後第一步該找誰 →
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂 →
+教學資源總覽 →
+學校想導入或需要教師研習？
+鴻綸科技是 Google for Education Professional Development Partner，可以依貴校現況安排教師研習與帳號規劃。
+寄信詢問
+來電 06-6371192
+看校園研習方案 →
+
+---
+
+## 寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技
+
+https://www.hunglun.com/knowledge/gmail-dns-setup
+
+教學資源 ／ Google 與 AI 導入 ／ Gmail 退信與 DNS 設定
+寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學
+學校的信寄到 Gmail 信箱被退回，退信寫著 550 5.7.40？多半是網域的 DNS 設定跑掉了。Google 管理後台的「電子郵件設定狀態」會顯示 MX、SPF、DKIM 不正確。這篇用後台截圖，一步一步帶你補好。
+這篇適合：學校資訊組與負責管理 Google Workspace for Education 的老師，以及需要請市網、教育局或廠商代為修改 DNS 的人。
+重點先看
+遇到的情況：寄到 Gmail 的信被退回，錯誤碼 550 5.7.40，意思是寄件人網域跟 SPF、DKIM 驗證的網域對不上。
+先看哪裡：管理後台「帳戶 → 網域 → 管理網域」的「電子郵件設定狀態」，看 MX、SPF、DKIM 哪一項不是正常。
+要補三種記錄：MX（收信）、SPF 和 DKIM（寄信證明）。每一項都是先在後台複製，再貼到 DNS 主機。
+多久生效：後台狀態頁寫最多 72 小時，DKIM 的官方說明寫最多 48 小時。
+一、為什麼會被退信
+寄給 Gmail 信箱的信，會收到「郵件已遭封鎖」的通知。真正的原因寫在最下面那行，代碼是 550 5.7.40。
+退信通知（收件人信箱已遮蔽）。白話意思：信上寫的寄件人網域，跟實際寄信的驗證網域對不上，Gmail 不收。
+Gmail 現在要求寄來的信，SPF 或 DKIM 至少要通過一項，而且驗證的網域要和寄件人網域一致。網域的 DNS 設定跑掉或遺失，這些寄信證明就不完整。網域註冊搬家、DNS 換主機的時候，都可能發生。
+MX：收信要送到哪台伺服器。
+SPF：網域公布的「代寄名單」，Gmail 用它確認寄信的伺服器可信。
+DKIM：每封信上的數位簽章，Gmail 用網域公布的公鑰檢查。
+DMARC：要求 SPF、DKIM 要和寄件人網域一致，並規定不一致時怎麼處理。
+TXT 記錄：DNS 裡存文字的欄位，SPF、DKIM、DMARC 都放在這裡。
+二、先看狀態
+這一段只看，不改任何設定。用超級管理員帳號登入 admin.google.com，左側選單依序點：
+帳戶 → 網域 → 管理網域
+網域清單裡，「電子郵件設定狀態」欄如果出現紅色的提醒標籤，寫著請採取行動，就是有記錄需要處理。按進去。
+圖上的 Step 3、4、5 是點選順序，Step 6 框起來的是「電子郵件設定狀態」欄。
+進入後會列出 MX、SPF、DKIM 三列，每列有建議值、目前的值和狀態。圖中三列都不是正常（MX「不正確」、SPF「找不到」、DKIM「不正確」），就要照下面補。頁面上寫「變更最多需要 72 小時才會生效」。
+電子郵件設定狀態頁。「建議值」欄就是要貼到 DNS 的內容。截圖是我們自己的示範網域。
+三、補 MX（收信）
+Google 管理後台現在給的是單一一筆 smtp.google.com，用來取代舊的五筆。
+動 MX 之前先看：要在 DNS 主機先刪掉舊的 MX，再貼新的，兩個動作要連續做完，中間收信會短暫異常。建議放學後或假日做，TTL 設成最低值，做完立刻回後台確認。如果 DNS 不是你們自己管，請對方照第六節的申請信一次改好。
+1. 按 MX 那一列右邊的「啟用 Gmail」，選「設定 MX 記錄」，按「下一步」。
+選第一項「設定 MX 記錄」。第二項「略過 MX 記錄設定」是給信件另外轉送處理的網域，一般學校不選。
+2. 按「繼續」，往下滑到最底按「繼續啟用」。
+3. 網域代管商選「其他」，再按「繼續」。學校的 DNS 主機基本上由學校或上級單位自己管理，所以一律選「其他」。
+下拉選單選「其他」。
+4. 複製 MX 的名稱、優先順序、指向，貼到 DNS 主機。存留時間（TTL）設成最低可能值。到 DNS 主機：
+先刪除這個網域原本的 MX 記錄
+再新增一筆：優先順序 1，指向 smtp.google.com（DNS 介面要求的話，結尾補半形句號 smtp.google.com.）
+後台給的 MX 記錄。名稱欄只寫網域前面那段（示範網域是 gedu.demo），DNS 主機要求完整名稱就補上完整網域。
+5. 貼完之後，回到這個畫面勾選並按「確認」。
+DNS 主機那邊貼好、存好之後，再回來勾選並按「確認」。
+6. 等驗證跑完。畫面會顯示「正在等待網域擁有權通過驗證」，這段期間不要關閉頁面，可能要幾分鐘。畫面跑完就表示 MX 驗證完成。
+四、補 SPF（寄信證明）
+狀態頁的 SPF 那一列，右邊有「其他資訊」連結可以看 Google 的說明。SPF 是在網域根部加一筆 TXT 記錄，值用狀態頁「建議值」欄的內容：
+完整名稱類型值
+school.edu.tw（換成你們的網域）TXTv=spf1 include:_spf.google.com ~all
+SPF 一個網域只能有一筆。已經有 SPF 的話，改那一筆，不要再加第二筆。如果學校還有別的系統用這個網域寄信（網站表單、公文系統），要把它們的 include: 一起寫進同一筆，不然那些信會被判定不合格。
+五、補 DKIM（簽章）
+MX 驗證完回到狀態頁，按 DKIM 那一列右邊的「驗證電子郵件」，再按「設定 DKIM」。
+視窗說明要建立 TXT 記錄，主機名稱和值用資料列裡的內容。
+進到 DKIM 頁，灰色框裡有兩樣東西：主機名稱 google._domainkey，和 TXT 記錄值 v=DKIM1; k=rsa; p=…（一長串）。兩個都複製，到 DNS 主機新增一筆 TXT：
+完整名稱類型值
+google._domainkey.school.edu.tw（換成你們的網域）TXT後台灰色框裡那一整串，一個字都不能少
+DKIM 頁。金鑰內容已遮蔽，請使用你們自己畫面上的值，不要抄這張圖。
+DNS 生效後，按「開始驗證」。Google 的說明寫 DKIM 最多要 48 小時才會開始運作，所以記錄加好、用第八節的方法查得到之後再按。按了若顯示找不到，過一段時間再按一次。
+灰色框已經有一組金鑰時：不要按「產生新記錄」，那可能換成新的一組，DNS 上舊的就對不上了。先確認 DNS 上的值跟灰色框是同一串，一樣就直接按「開始驗證」。
+六、DNS 不是自己管：給網管的申請信
+很多學校的 DNS 由教育局、市網中心或廠商管理，要由學校網管或資訊組長向對方申請。下面這份可以直接複製（把 school.edu.tw 換成貴校網域，DKIM 的值貼上後台產生的整串；申請管道依各單位的實際流程）：
+主旨：申請調整 school.edu.tw 的 Google 郵件 DNS 記錄（MX、SPF、DKIM）
+您好，
+本校 school.edu.tw 使用 Google Workspace 收發信。目前寄到 Gmail 的信會被退回（錯誤碼 550 5.7.40），Google 管理後台的電子郵件設定狀態也顯示記錄不正確。麻煩協助調整以下記錄：
+1. MX（請先刪除 school.edu.tw 原有的 MX，再新增這一筆，TTL 請設最低）
+名稱：school.edu.tw
+優先順序：1
+指向：smtp.google.com.
+2. SPF（若已存在請修改，不要新增第二筆）
+名稱：school.edu.tw
+類型：TXT
+值：v=spf1 include:_spf.google.com ~all
+3. DKIM
+名稱：google._domainkey.school.edu.tw
+類型：TXT
+值：（貼上管理後台產生的 v=DKIM1; k=rsa; p=… 整串）
+備註：
+- 名稱若需寫成區域內的短寫法，請依貴單位格式轉換。
+- 麻煩在放學後或假日處理，MX 的刪除與新增請連續完成。
+- 完成後請回覆，本校會到後台按「開始驗證」。
+謝謝您的協助。
+學校：
+聯絡人：
+電話：
+複製申請信
+七、DMARC：最後再加，而且先寬鬆
+DMARC 是更上一層的規則。Google 建議 SPF、DKIM 穩定運作 48 小時之後再加，起手先用「只觀察、不處理」：
+完整名稱類型值
+_dmarc.school.edu.twTXTv=DMARC1; p=none;
+p=none 的意思是驗證不過的信照常送達，只做記錄，不會誤擋正常信。如果你們的 DNS 上已經有 p=quarantine 或 p=reject，驗證不過的信會進垃圾信或被退回。學校若還有其他系統用同一個網域寄信，確定 SPF、DKIM 都正常之前，建議先改成 p=none。
+八、怎麼確認修好了
+後台：回到「管理網域 → 電子郵件設定狀態」，MX、SPF、DKIM 都變成正常，DKIM 頁的狀態不再是「不驗證電子郵件」。最多等 72 小時。
+用 Google 公開 DNS 查：網址格式是 https://dns.google/resolve?name=你的網域&type=MX。SPF、DMARC 把 type 改成 TXT，DKIM 的 name 改成 google._domainkey.你的網域。結果有 Answer 就是加好了，"Status": 3 是還查不到。
+寄測試信：用學校帳號寄到任一 Gmail，打開信，點右上角的三個點選單，選「顯示原始郵件」，上方 SPF、DKIM、DMARC 都要是 PASS。退信不再出現就修好了。
+還沒好的時候：退信還在，通常是後台沒按「開始驗證」，或 DNS 上的 DKIM 值跟後台不是同一串。DKIM 查不到，多半是長字串貼錯或被截斷，請管 DNS 的人把實際輸入的值貼給你對照。收不到信，先確認 MX 刪了沒補，或指向打錯。
+官方原文：Google Workspace 說明：設定 DKIM、設定 SPF、設定 DMARC。介面與功能會隨 Google 更新調整，實際以畫面與官方說明為準。
+💡 這篇對其他老師也有幫助嗎？
+歡迎複製下面這段文字，分享到貴校的教師群組：
+複製分享文字
+常見問題
+退信代碼 550 5.7.40 是什麼意思？
+Gmail 擋下這封信，因為信上的寄件人網域（From）跟 SPF 或 DKIM 驗證通過的網域對不上。常見原因是網域的 SPF、DKIM 記錄遺失或沒啟用。
+為什麼學校的信箱會突然被 Gmail 退信？
+Gmail 要求寄來的信 SPF 或 DKIM 至少通過一項，而且網域要一致。網域註冊搬家、DNS 換主機或管理者異動時，這些記錄可能不見或被改掉，通常要到管理後台的「電子郵件設定狀態」檢查。
+MX、SPF、DKIM 要補的順序是什麼？
+後台的做法是先補 MX 並完成驗證，再補 DKIM。SPF 是一筆 TXT，可以同一輪一起處理。DMARC 建議最後再加，而且先用 p=none。
+DNS 不是學校自己管，怎麼辦？
+由學校網管或資訊組長向管理 DNS 的單位提出申請，把 MX、SPF、DKIM 三筆內容交給對方。文章第六節有可以直接複製的申請信。
+設定後多久會生效？
+管理後台的電子郵件設定狀態頁寫變更最多需要 72 小時，Google 的 DKIM 說明寫最多 48 小時。實際常在幾分鐘到數小時內，可用公開 DNS 查詢確認。
+作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 23 日（功能與限制以 Google 當期官方說明為準）
+延伸閱讀
+Google 管理主控台校園設定指南：OU、群組、Chrome 政策 →
+學校 Google 帳號管理 SOP：新生建檔、畢業轉出與停權 →
+學校怎麼強制兩步驟驗證（2SV）？排除學生與防鎖死 →
 教學資源總覽 →
 學校想導入或需要教師研習？
 鴻綸科技是 Google for Education Professional Development Partner，可以依貴校現況安排教師研習與帳號規劃。
