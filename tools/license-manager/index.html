@@ -79,13 +79,22 @@
         </div>
         <div class="c">
           <div class="t"><span class="n">5</span>登入若出現「應用程式遭封鎖」</div>
-          <p>請超級管理員打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（安全性 &gt; API 控制項），點圖中紅框 2 的「設定新的應用程式」，用下面的 OAuth 用戶端 ID 搜尋，找到後把存取權設為「信任」。沒被封鎖就不用做這步。</p>
+          <p>只有登入時被擋下、看到「應用程式遭封鎖」或「此應用程式遭到封鎖」，才需要做這一步，由學校的<b>超級管理員</b>操作。沒被擋就跳過。</p>
+          <ol style="margin:0;padding-left:20px;font-size:.9rem;line-height:1.7">
+            <li>打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（路徑：安全性 &gt; API 控制項 &gt; 應用程式存取權控管）。</li>
+            <li>按下方圖中紅框 2 的「<b>設定新的應用程式</b>」。</li>
+            <li>在「搜尋應用程式」框，貼上<b>下面那串用戶端 ID</b>（可按「複製用戶端 ID」），按右邊的「搜尋」。</li>
+            <li>搜尋結果出現「鴻綸科技教育授權管理」，選它，按「選取」。</li>
+            <li>依畫面往下：「範圍」步驟全部勾選；「Google 資料存取權」步驟選「<b>受信任</b>」；最後「檢閱」按「完成」。</li>
+            <li>回到登入頁，重新按「用 Google 管理員帳號登入」。</li>
+          </ol>
+          <p class="sub" style="margin:0">搜尋框旁的 Android、iOS、網路是類型篩選，不用選。若搜尋不到，請先用你自己的帳號登入一次（被擋也沒關係）再回來搜尋。</p>
         </div>
         <div class="c wide">
           <img src="img/step1-apps.webp" alt="管理控制台「應用程式存取權控管」頁面，紅框標出「設定新的應用程式」" width="1200" height="471" loading="lazy">
           <code id="preCid">333075117030-1vfeqevnvvh9e7st431s924dvpk3msof.apps.googleusercontent.com</code>
           <button type="button" class="ghost copy" id="preCopy">複製用戶端 ID</button>
-          <p class="sub" style="margin:0">紅框 1 是這一頁的位置（安全性 &gt; API 控制項 &gt; 應用程式存取權控管）。上圖為管理控制台實際畫面，「設定新的應用程式」之後的搜尋與「信任」選項，我們尚未在學校實測，以畫面實際名稱為準。</p>
+          <p class="sub" style="margin:0">紅框 1 是這一頁的位置，紅框 2 是入口。上圖與「設定新的應用程式」的第一個畫面為管理控制台實際畫面；之後「範圍」、「受信任」的選項名稱，我們尚未在學校實測，以你看到的畫面為準。</p>
         </div>
       </div>
       <p class="sub" style="margin:12px 0 0">第一次登入會出現「Google 尚未驗證這個應用程式」，請按「進階」再按「前往（不安全）」繼續；若出現「存取權遭拒」，是因為你的信箱還沒被加入測試名單，請聯絡鴻綸申請。登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。詳細說明請看上方「使用說明書」。</p>
