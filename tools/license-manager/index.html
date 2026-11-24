@@ -23,6 +23,16 @@
   <section class="card" id="s1">
     <h2>步驟 1：登入並選擇授權</h2>
     <p class="hint">需要具備「授權管理」權限的管理員帳號。我們不會要求密碼，登入視窗是 Google 自己的。</p>
+    <details class="box" open style="padding:10px 14px;margin:0 0 14px">
+      <summary><b>學校要先做的事（第一次使用前，約 3 分鐘）</b></summary>
+      <ol>
+        <li><b>準備一個管理員帳號</b>：要能在 Google 管理控制台指派授權、讀取使用者清單，建議直接用超級管理員。登入網址：<a href="https://admin.google.com" target="_blank" rel="noopener">https://admin.google.com</a></li>
+        <li><b>查目前可用授權數</b>：在管理控制台左側選「帳單 &gt; 訂閱」，看要管理的那一種授權還剩幾個，填在下面「目前可用授權數」，額度不夠時系統會幫你擋下。</li>
+        <li><b>允許瀏覽器跳出視窗</b>：登入視窗是 Google 自己的視窗，網址列若出現被擋的提示，選「一律允許」。</li>
+        <li><b>登入時若出現「應用程式遭封鎖」</b>：請超級管理員到 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（路徑：安全性 &gt; 存取權與資料控管 &gt; API 控制項），把我們的 OAuth 用戶端 ID 設為「信任」：<code>348775138342-os11fv6lb0ko57gr1nt6l0fkbn9nl0eq.apps.googleusercontent.com</code>。這一步我們尚未在學校實測，遇到才做。</li>
+      </ol>
+      <p class="hint">登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。不需要 GCP，也不需要網域全域委派。詳細說明請看上方「使用說明書」。</p>
+    </details>
     <label for="sku">要管理哪一種授權</label>
     <select id="sku"></select>
     <label for="avail">目前可用授權數（選填）<small>　後台「帳單 > 訂閱」可以看到，填了會幫你防呆</small></label>
