@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>鴻綸教育授權管理系統</title>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=98" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css?v=45">
-<link rel="stylesheet" href="style.css?v=20261123c">
+<link rel="stylesheet" href="style.css?v=20261124c">
 </head>
 <body>
 <header>
@@ -23,16 +23,67 @@
   <section class="card" id="s1">
     <h2>步驟 1：登入並選擇授權</h2>
     <p class="hint">需要具備「授權管理」權限的管理員帳號。我們不會要求密碼，登入視窗是 Google 自己的。</p>
-    <details class="box" open style="padding:10px 14px;margin:0 0 14px">
-      <summary><b>學校要先做的事（第一次使用前，約 3 分鐘）</b></summary>
-      <ol>
-        <li><b>準備一個管理員帳號</b>：要能在 Google 管理控制台指派授權、讀取使用者清單，建議直接用超級管理員。登入網址：<a href="https://admin.google.com" target="_blank" rel="noopener">https://admin.google.com</a></li>
-        <li><b>查目前可用授權數</b>：在管理控制台左側選「帳單 &gt; 訂閱」，看要管理的那一種授權還剩幾個，填在下面「目前可用授權數」，額度不夠時系統會幫你擋下。</li>
-        <li><b>允許瀏覽器跳出視窗</b>：登入視窗是 Google 自己的視窗，網址列若出現被擋的提示，選「一律允許」。</li>
-        <li><b>登入時若出現「應用程式遭封鎖」</b>：請超級管理員到 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（路徑：安全性 &gt; 存取權與資料控管 &gt; API 控制項），把我們的 OAuth 用戶端 ID 設為「信任」：<code>348775138342-os11fv6lb0ko57gr1nt6l0fkbn9nl0eq.apps.googleusercontent.com</code>。這一步我們尚未在學校實測，遇到才做。</li>
-      </ol>
-      <p class="hint">登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。不需要 GCP，也不需要網域全域委派。詳細說明請看上方「使用說明書」。</p>
-    </details>
+    <div class="pre" id="pre">
+      <style>
+        .pre{margin:4px 0 20px;padding:16px;border:1px solid #cfd8ea;border-radius:12px;background:#f4f7fd}
+        .pre h3{margin:0 0 2px;font-size:1.05rem}
+        .pre .sub{margin:0 0 14px;font-size:.85rem;color:#52607a}
+        .pre .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+        .pre .c{background:#fff;border:1px solid #dbe3f3;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+        .pre .c.wide{grid-column:1/-1}
+        .pre .t{display:flex;align-items:center;gap:8px;font-weight:700}
+        .pre .n{flex:none;width:24px;height:24px;border-radius:50%;background:#1d4ed8;color:#fff;font-size:.85rem;display:inline-flex;align-items:center;justify-content:center}
+        .pre p{margin:0;font-size:.9rem;line-height:1.6}
+        .pre .vis{border:1px dashed #b8c4de;border-radius:8px;padding:10px;background:#fafbff;font-size:.82rem;color:#33415c;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+        .pre .chip{background:#e8eefc;border-radius:999px;padding:3px 10px;font-weight:600;color:#1d3a8a}
+        .pre .arrow{color:#6b7a99}
+        .pre .tag{font-size:.72rem;color:#6b7a99;margin-left:auto}
+        .pre .row{display:flex;justify-content:space-between;width:100%;padding:4px 8px;background:#fff;border:1px solid #e1e7f5;border-radius:6px}
+        .pre .bar{display:flex;align-items:center;gap:8px;width:100%;padding:5px 10px;background:#fff;border:1px solid #d3dbec;border-radius:999px}
+        .pre .bar .blk{margin-left:auto;padding:1px 8px;border:2px solid #dc2626;border-radius:6px;color:#dc2626;font-weight:700}
+        .pre img{width:100%;height:auto;border:1px solid #d3dbec;border-radius:8px}
+        .pre code{word-break:break-all;font-size:.8rem}
+        .pre .copy{align-self:flex-start;padding:4px 12px;font-size:.82rem;cursor:pointer}
+      </style>
+      <h3>學校要先做的事</h3>
+      <p class="sub">第一次使用前做一次，約 3 分鐘。用網頁版不需要 GCP，也不需要網域全域委派。</p>
+      <div class="grid">
+        <div class="c">
+          <div class="t"><span class="n">1</span>準備管理員帳號</div>
+          <p>要能指派授權、讀取使用者清單，建議直接用超級管理員。</p>
+          <div class="vis"><span class="chip">超級管理員</span><span class="arrow">→</span><a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a><span class="tag">示意</span></div>
+        </div>
+        <div class="c">
+          <div class="t"><span class="n">2</span>查目前可用授權數</div>
+          <p>管理控制台左側選「帳單 &gt; 訂閱」，看要管理的授權還剩幾個，填在下面的欄位，額度不夠系統會擋下。</p>
+          <div class="vis"><span class="chip">帳單</span><span class="arrow">›</span><span class="chip">訂閱</span>
+            <div class="row"><span>Google AI Pro for Education</span><b>可用 10</b></div><span class="tag">示意，數字不是真的</span></div>
+        </div>
+        <div class="c">
+          <div class="t"><span class="n">3</span>允許瀏覽器跳出視窗</div>
+          <p>登入視窗是 Google 自己的視窗。網址列若出現被擋的提示，選「一律允許」。</p>
+          <div class="vis"><div class="bar"><span>🔒 hunglun.com</span><span class="blk">🚫 已封鎖跳出視窗</span></div><span class="tag">示意</span></div>
+        </div>
+        <div class="c">
+          <div class="t"><span class="n">4</span>登入若出現「應用程式遭封鎖」</div>
+          <p>請超級管理員打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（安全性 &gt; API 控制項），點紅框的「設定新的應用程式」，用下面的 OAuth 用戶端 ID 搜尋，找到後把存取權設為「信任」。沒被封鎖就不用做這步。</p>
+        </div>
+        <div class="c wide">
+          <img src="img/step1-apps.webp" alt="管理控制台「應用程式存取權控管」頁面，紅框標出「設定新的應用程式」" width="1200" height="471" loading="lazy">
+          <code id="preCid">348775138342-os11fv6lb0ko57gr1nt6l0fkbn9nl0eq.apps.googleusercontent.com</code>
+          <button type="button" class="ghost copy" id="preCopy">複製用戶端 ID</button>
+          <p class="sub" style="margin:0">上圖為管理控制台實際畫面。「設定新的應用程式」之後的搜尋與「信任」選項，我們尚未在學校實測，以畫面實際名稱為準。</p>
+        </div>
+      </div>
+      <p class="sub" style="margin:12px 0 0">登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。詳細說明請看上方「使用說明書」。</p>
+      <script>
+        (function(){var b=document.getElementById('preCopy');if(!b)return;b.addEventListener('click',function(){
+          var t=document.getElementById('preCid').textContent;
+          try{navigator.clipboard.writeText(t).then(function(){b.textContent='已複製';setTimeout(function(){b.textContent='複製用戶端 ID';},1500);},function(){b.textContent='請手動選取複製';});}
+          catch(e){b.textContent='請手動選取複製';}
+        });})();
+      </script>
+    </div>
     <label for="sku">要管理哪一種授權</label>
     <select id="sku"></select>
     <label for="avail">目前可用授權數（選填）<small>　後台「帳單 > 訂閱」可以看到，填了會幫你防呆</small></label>

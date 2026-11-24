@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.39（2026-11-24）
+
+依老師搜尋方向新增三篇教學資源文章：〈Classroom 學生常見操作：加入課程、退出課程、改名字、登出一次看懂〉（`/knowledge/classroom-student-faq`，Classroom 主題）、〈Gemini Notebook 生成簡報：步驟、大綱檢查、修改與匯出 PPTX／PDF〉（`/knowledge/gemini-notebook-slides`，Gemini 主題）、〈AI 批改作文怎麼做？用 Gemini 建評分標準、寫評語，分數由老師定〉（`/knowledge/ai-essay-grading-gemini`，Google 與 AI 導入主題）。前兩篇的步驟與限制都對照 Google 官方說明頁原文，作文篇的提示詞範本標明為實務建議。教學資源由 117 篇變 120 篇；sitemap、llms.txt、llms-full、搜尋索引與分享圖同步。
+
 ## v1.43.38（2026-11-23）
 
 授權管理系統顏色統一：指派綠、收回紅、跳過灰、出錯琥珀，套用在名單、預演統計與列、執行紀錄；資源版本號 ?v=20261123c，說明書截圖同步更新；操作說明書加上「登入被擋下時，管理員到哪個網址加入用戶端 ID」。

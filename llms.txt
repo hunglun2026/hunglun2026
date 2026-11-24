@@ -200,6 +200,9 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Classroom 稽核記錄新增兩欄位：資訊組長怎麼用來追查](https://www.hunglun.com/knowledge/classroom-audit-log-columns)：Google 11 月在 Classroom 稽核記錄新增「應用程式名稱」與「使用者裝置 ID」兩個欄位。整理怎麼顯示、能追查什麼、哪些教育版可用，以及資訊組長處理異常操作的實務做法。
 - [Drive 的 Gemini 自動分類檔案：學校個資盤點能怎麼用](https://www.hunglun.com/knowledge/drive-gemini-data-classification)：Google Drive 的 Gemini 資料分類正式推出：用白話描述規則，讓 Gemini 自動替檔案貼標籤。整理管理員設定步驟、教育版可用授權（限 AI Pro for Education）、限制，以及學校個資盤點的用法。
 - [寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學](https://www.hunglun.com/knowledge/gmail-dns-setup)：學校信箱寄到 Gmail 被退回、錯誤碼 550 5.7.40？多半是網域 DNS 的 MX、SPF、DKIM 設定跑掉。用管理後台截圖，一步一步補好，附給網管的申請信範本。
+- [Classroom 學生常見操作：加入課程、退出課程、改名字、登出一次看懂](https://www.hunglun.com/knowledge/classroom-student-faq)：學生最常問的 Classroom 問題一次整理：課程代碼怎麼輸入、代碼無效怎麼辦、怎麼退出課程、為什麼改不了名字、怎麼登出，附電腦、iPhone、Android 步驟，全部依 Google 官方說明核對。
+- [Gemini Notebook 生成簡報：步驟、大綱檢查、修改與匯出 PPTX／PDF](https://www.hunglun.com/knowledge/gemini-notebook-slides)：Gemini Notebook（原 NotebookLM）可以用筆記本的來源生成簡報。整理官方步驟、先檢查大綱的做法、怎麼修改投影片、匯出 PDF 與 PowerPoint，以及 18 歲限制和學校帳戶不能公開分享的規定。
+- [AI 批改作文怎麼做？用 Gemini 建評分標準、寫評語，分數由老師定](https://www.hunglun.com/knowledge/ai-essay-grading-gemini)：老師想用 AI 批改中文或英文作文，可以讓 Gemini 先依評分標準寫評語、標出問題，分數由老師決定。整理官方 Gem 指令的四個要素、可直接複製的提示詞範本、批改流程，以及隱私與手寫作文的注意事項。
 
 ## 常見問答（可直接引用的簡答）
 Q：Gemini 教育版要怎麼申請？
