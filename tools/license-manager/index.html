@@ -81,20 +81,36 @@
           <div class="t"><span class="n">5</span>登入若出現「應用程式遭封鎖」</div>
           <p>只有登入時被擋下、看到「應用程式遭封鎖」或「此應用程式遭到封鎖」，才需要做這一步，由學校的<b>超級管理員</b>操作。沒被擋就跳過。</p>
           <ol style="margin:0;padding-left:20px;font-size:.9rem;line-height:1.7">
-            <li>打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（路徑：安全性 &gt; API 控制項 &gt; 應用程式存取權控管）。</li>
-            <li>按下方圖中紅框 2 的「<b>設定新的應用程式</b>」。</li>
-            <li>在「搜尋應用程式」框，貼上<b>下面那串用戶端 ID</b>（可按「複製用戶端 ID」），按右邊的「搜尋」。</li>
-            <li>搜尋結果出現「鴻綸科技教育授權管理」，選它，按「選取」。</li>
-            <li>依畫面往下：「範圍」步驟全部勾選；「Google 資料存取權」步驟選「<b>受信任</b>」；最後「檢閱」按「完成」。</li>
+            <li>打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（路徑：安全性 &gt; API 控制項 &gt; 應用程式存取權控管），按下方圖中紅框 2 的「<b>設定新的應用程式</b>」。</li>
+            <li><b>搜尋應用程式</b>：貼上下面那串用戶端 ID（可按「複製用戶端 ID」），按「搜尋」，在結果點「<b>鴻綸科技教育授權管理</b>」。（第一張圖）</li>
+            <li><b>範圍</b>：什麼都不用改，維持預設「你學校網域中的所有使用者」，按「繼續」。（第二張圖）</li>
+            <li><b>Google 資料存取權</b>：選第一個「<b>可信任</b>」，其他選項與核取方塊都不用勾，按「繼續」。（第三張圖）</li>
+            <li><b>檢閱</b>：確認應用程式是「鴻綸科技教育授權管理」、存取權是「可信任」，按「<b>完成</b>」。（第四張圖）</li>
             <li>回到登入頁，重新按「用 Google 管理員帳號登入」。</li>
           </ol>
-          <p class="sub" style="margin:0">搜尋框旁的 Android、iOS、網路是類型篩選，不用選。若搜尋不到，請先用你自己的帳號登入一次（被擋也沒關係）再回來搜尋。</p>
+          <p class="sub" style="margin:0">搜尋框下方的 Android、iOS、網路是類型篩選，不用選。若搜尋不到，請先用你自己的帳號登入一次（被擋也沒關係）再回來搜尋。</p>
         </div>
         <div class="c wide">
           <img src="img/step1-apps.webp" alt="管理控制台「應用程式存取權控管」頁面，紅框標出「設定新的應用程式」" width="1200" height="471" loading="lazy">
           <code id="preCid">333075117030-1vfeqevnvvh9e7st431s924dvpk3msof.apps.googleusercontent.com</code>
           <button type="button" class="ghost copy" id="preCopy">複製用戶端 ID</button>
-          <p class="sub" style="margin:0">紅框 1 是這一頁的位置，紅框 2 是入口。上圖與「設定新的應用程式」的第一個畫面為管理控制台實際畫面；之後「範圍」、「受信任」的選項名稱，我們尚未在學校實測，以你看到的畫面為準。</p>
+          <p class="sub" style="margin:0">紅框 1 是這一頁的位置，紅框 2 是入口。下面四張圖是按下入口後的實際畫面（管理控制台實際畫面，已遮掉網域名稱）。這些畫面我們已實際走到「檢閱」，但還沒在別的學校按「完成」測試，若你看到的名稱不同，以畫面為準。</p>
+        </div>
+        <div class="c wide">
+          <img src="img/trust1-search.webp" alt="設定新的應用程式第一步：搜尋用戶端 ID，紅框標出搜尋框、搜尋鈕與搜尋結果" width="1100" height="464" loading="lazy">
+          <p class="sub" style="margin:0"><b>第一步 搜尋應用程式。</b>紅框 1 貼上用戶端 ID，紅框 2 按「搜尋」，紅框 3 點搜尋到的「鴻綸科技教育授權管理」。</p>
+        </div>
+        <div class="c wide">
+          <img src="img/trust2-scope.webp" alt="設定新的應用程式第二步：範圍，維持預設的整個網域，紅框標出選項與繼續鈕" width="1100" height="433" loading="lazy">
+          <p class="sub" style="margin:0"><b>第二步 範圍。</b>紅框 1 維持預設（網域中的所有使用者），紅框 2 按「繼續」。</p>
+        </div>
+        <div class="c wide">
+          <img src="img/trust3-access.webp" alt="設定新的應用程式第三步：Google 資料存取權，紅框標出可信任選項與繼續鈕" width="1100" height="706" loading="lazy">
+          <p class="sub" style="margin:0"><b>第三步 Google 資料存取權。</b>紅框 1 選「可信任」，紅框 2 按「繼續」。</p>
+        </div>
+        <div class="c wide">
+          <img src="img/trust4-review.webp" alt="設定新的應用程式第四步：檢閱，紅框標出可信任與完成鈕" width="1100" height="696" loading="lazy">
+          <p class="sub" style="margin:0"><b>第四步 檢閱。</b>紅框 1 確認是「可信任」，紅框 2 按「完成」，這間學校就信任了。圖中學校網域已遮掉，你會看到自己學校的網域。</p>
         </div>
       </div>
       <p class="sub" style="margin:12px 0 0">第一次登入會出現「Google 尚未驗證這個應用程式」，請按「進階」再按「前往（不安全）」繼續；若出現「存取權遭拒」，是因為你的信箱還沒被加入測試名單，請聯絡鴻綸申請。登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。詳細說明請看上方「使用說明書」。</p>
