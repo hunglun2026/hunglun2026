@@ -22,7 +22,7 @@
 
   <section class="card" id="s0">
     <h2>步驟 1：先設定（第一次使用才需要）</h2>
-    <p class="hint">做完下面四件事，再按最下面的按鈕往下走。以前做過、登入都順利的話，直接按「下一步」就好。</p>
+    <p class="hint">做完下面五件事，再按最下面的按鈕往下走。以前做過、登入都順利的話，直接按「下一步」就好。</p>
     <div class="pre" id="pre">
       <style>
         .pre{margin:4px 0 20px;padding:16px;border:1px solid #cfd8ea;border-radius:12px;background:#f4f7fd}
@@ -46,28 +46,38 @@
         .pre .copy{align-self:flex-start;padding:4px 12px;font-size:.82rem;cursor:pointer}
       </style>
       <h3>學校要先做的事</h3>
-      <p class="sub">第一次使用前做一次，約 3 分鐘。用網頁版不需要 GCP，也不需要網域全域委派。</p>
+      <p class="sub">第一次使用前做一次，申請約 1 個工作天，其餘約 3 分鐘。用網頁版不需要 GCP，也不需要網域全域委派。</p>
       <div class="grid">
         <div class="c wide">
-          <div class="t"><span class="n">1</span>準備管理員帳號</div>
+          <div class="t"><span class="n">1</span>先向鴻綸申請加入測試名單（第一次才需要）</div>
+          <p>這個系統目前是「測試版」，只有鴻綸加入名單的 Google 信箱才能登入。沒加入的話，登入時會看到「存取權遭拒」。</p>
+          <ol style="margin:0;padding-left:20px;font-size:.9rem;line-height:1.7">
+            <li>到 <a href="/contact" target="_blank" rel="noopener">鴻綸聯絡頁</a> 留言，內容寫：<b>學校名稱、你的姓名，以及你要用來登入的 Google 管理員信箱</b>。</li>
+            <li>鴻綸確認後，會把你的信箱加入測試名單，並回覆你，通常 1 個工作天內完成。</li>
+            <li>收到回覆後，再做下面的步驟。</li>
+          </ol>
+          <p class="sub" style="margin:0">信箱要填你<b>實際登入</b>的那一個，打錯或換帳號登入都會被擋。一次最多開放 100 位，名單由鴻綸管理，你不用自己操作。</p>
+        </div>
+        <div class="c wide">
+          <div class="t"><span class="n">2</span>準備管理員帳號</div>
           <p>要能指派授權、讀取使用者清單，建議直接用超級管理員。</p>
           <div class="vis"><span class="chip">超級管理員</span><span class="arrow">→</span><a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a></div>
           <img src="img/step1-home.webp" alt="登入成功後的管理控制台首頁，上方有 Admin 標誌與組織名稱" width="1200" height="159" loading="lazy">
           <p class="sub" style="margin:0">紅框 1 是你的組織名稱。登入後看到這個畫面，就表示登入成功。</p>
         </div>
         <div class="c wide">
-          <div class="t"><span class="n">2</span>查目前可用授權數</div>
+          <div class="t"><span class="n">3</span>查目前可用授權數</div>
           <p>管理控制台左側選「帳單 &gt; 訂閱」，看要管理的授權還剩幾個，填在下面的欄位，額度不夠系統會擋下。</p>
           <img src="img/step1-billing.webp" alt="管理控制台左側「帳單 &gt; 訂閱」，紅框標出訂閱頁裡 Google AI Pro 的已指派授權數與可用授權數" width="1200" height="277" loading="lazy">
           <p class="sub" style="margin:0">紅框 1 是左側「帳單 &gt; 訂閱」。紅框 2 的「可用授權數」就是要填在下面欄位的數字。（已省略付款資訊）</p>
         </div>
         <div class="c">
-          <div class="t"><span class="n">3</span>允許瀏覽器跳出視窗</div>
+          <div class="t"><span class="n">4</span>允許瀏覽器跳出視窗</div>
           <p>登入視窗是 Google 自己的視窗。網址列若出現被擋的提示，選「一律允許」。</p>
           <div class="vis"><div class="bar"><span>🔒 hunglun.com</span><span class="blk">已封鎖跳出視窗</span></div><span class="tag">示意</span></div>
         </div>
         <div class="c">
-          <div class="t"><span class="n">4</span>登入若出現「應用程式遭封鎖」</div>
+          <div class="t"><span class="n">5</span>登入若出現「應用程式遭封鎖」</div>
           <p>請超級管理員打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（安全性 &gt; API 控制項），點圖中紅框 2 的「設定新的應用程式」，用下面的 OAuth 用戶端 ID 搜尋，找到後把存取權設為「信任」。沒被封鎖就不用做這步。</p>
         </div>
         <div class="c wide">

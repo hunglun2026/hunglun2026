@@ -62,6 +62,7 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
   <li><a href="#limits">限制與尚未確認的事</a></li>
   <li><a href="#faq">常見問題</a></li>
   <li><a href="#accounts">帳號批次作業（新增帳號、轉移組織單位）</a></li>
+  <li><a href="#admin">給鴻綸管理者：加入測試名單</a></li>
 </ol></nav>
 
 <section id="what">
@@ -88,6 +89,7 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
 <section id="before">
   <h2>2. 開始前要準備什麼</h2>
   <ol class="steps">
+    <li><strong>鴻綸加入測試名單</strong>：目前是測試版，要先到<a href="/contact">聯絡頁</a>申請，鴻綸把你的登入信箱加入名單後才能登入。</li>
     <li><strong>一個管理員帳號</strong>：要能在 Google 管理控制台指派授權、並讀取使用者清單。是否一定要超級管理員，我們<strong>尚未實測</strong>；若登入後出現「沒有權限」，請改用超級管理員帳號，或請學校資訊人員協助。</li>
     <li><strong>要調整的名單</strong>：電子郵件，一行一個，可以直接從 Excel 整欄貼上。</li>
     <li><strong>授權的可用數</strong>（選填）：到管理控制台「帳單 &gt; 訂閱」可以看到。填了之後，預演時會幫你檢查夠不夠用。</li>
@@ -99,6 +101,7 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
   <h2>3. 五個步驟操作</h2>
   <h3>步驟 1　先設定（第一次使用才需要）</h3>
   <ol class="steps">
+    <li><strong>先向鴻綸申請加入測試名單</strong>：到 <a href="/contact">鴻綸聯絡頁</a> 留言，寫明學校名稱、姓名與要用來登入的 Google 管理員信箱。鴻綸加入後會回覆你，通常 1 個工作天內。沒加入就登入，會看到「存取權遭拒」。</li>
     <li><strong>準備管理員帳號</strong>：要能指派授權、讀取使用者清單，建議直接用超級管理員。登入網址是 <a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a>。</li>
     <li><strong>查目前可用授權數</strong>：管理控制台左側選「帳單 &gt; 訂閱」，記下要管理的那一種授權還剩幾個，步驟 2 會用到。</li>
     <li><strong>允許瀏覽器跳出視窗</strong>：登入視窗是 Google 自己的視窗，網址列若出現被擋的提示，選「一律允許」。</li>
@@ -301,6 +304,19 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
     <li>不會自動建立組織單位、不會刪除或停權帳號、不會改密碼。</li>
     <li>執行時最多 4 筆同時進行，遇到 Google 的頻率限制會自動等待重試。</li>
   </ul>
+</section>
+
+<section id="admin">
+  <h2>12. 給鴻綸管理者：怎麼把老師加入測試名單</h2>
+  <p>老師透過聯絡頁申請後，由鴻綸管理者（用 shen@gfeh.org 登入 Google Cloud）加入。每位老師約 1 分鐘。</p>
+  <ol class="steps">
+    <li>打開 <a href="https://console.cloud.google.com/auth/audience?project=gen-lang-client-0128706770" target="_blank" rel="noopener">https://console.cloud.google.com/auth/audience?project=gen-lang-client-0128706770</a>。左上角專案要顯示「littlelunkey」。</li>
+    <li>畫面中段「測試使用者」按「<strong>Add users</strong>」。</li>
+    <li>貼上老師的 Google 信箱（一次可貼多個，按 Enter 分隔），按「儲存」。</li>
+    <li>確認上方人數增加（上限 100 位），再回覆老師。</li>
+    <li>若老師學校後台封鎖第三方程式，請他們的超級管理員到 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>，用戶端 ID <code>333075117030-1vfeqevnvvh9e7st431s924dvpk3msof.apps.googleusercontent.com</code> 設為「信任」。</li>
+  </ol>
+  <div class="box warn">測試使用者超過 100 位就不能再加，要走 Google 驗證才能開放更多人。移除老師時，在同一頁的名單刪除該信箱即可。</div>
 </section>
 
 <footer>鴻綸科技股份有限公司　鴻綸教育授權管理系統使用說明書　2026-11-23</footer>
