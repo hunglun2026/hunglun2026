@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.40（2026-11-24）
+
+新增教學資源文章〈Google Workspace for Education 是什麼？包含哪些服務、哪些機構符合資格〉（`/knowledge/workspace-for-education-intro`，Google 與 AI 導入主題，內容依官方英文說明頁中譯整理，付費版本不列清單、以 Google 當期公告為準）。同日把〈Classroom 學生常見操作〉改為〈Classroom 登入與學生常見操作〉，新增「第一次登入」章節（電腦與手機步驟都對照官方登入說明頁），原本的缺口題「Classroom 登入」不另開重複文章。教學資源由 120 篇變 121 篇；sitemap、llms.txt、llms-full、搜尋索引與分享圖同步。
+
 ## v1.43.39（2026-11-24）
 
 依老師搜尋方向新增三篇教學資源文章：〈Classroom 學生常見操作：加入課程、退出課程、改名字、登出一次看懂〉（`/knowledge/classroom-student-faq`，Classroom 主題）、〈Gemini Notebook 生成簡報：步驟、大綱檢查、修改與匯出 PPTX／PDF〉（`/knowledge/gemini-notebook-slides`，Gemini 主題）、〈AI 批改作文怎麼做？用 Gemini 建評分標準、寫評語，分數由老師定〉（`/knowledge/ai-essay-grading-gemini`，Google 與 AI 導入主題）。前兩篇的步驟與限制都對照 Google 官方說明頁原文，作文篇的提示詞範本標明為實務建議。教學資源由 117 篇變 120 篇；sitemap、llms.txt、llms-full、搜尋索引與分享圖同步。

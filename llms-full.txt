@@ -1295,7 +1295,7 @@ https://www.hunglun.com/knowledge
 
 首頁 ／ 教學資源
 教學資源
-120 篇學校端實際被問到的問題。先搜尋，或從下面挑你的情境。
+121 篇學校端實際被問到的問題。先搜尋，或從下面挑你的情境。
 搜尋教學資源
 免費下載：Gemini 備課與校務提示詞 30 組 →
 搜尋結果
@@ -1314,7 +1314,7 @@ Google 與 AI 導入
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂
 Workspace 教育版版本比較
 學校 Google 帳號怎麼申請
-看全部 40 篇 →
+看全部 41 篇 →
 Gemini 教育版與 Notebook
 適合：要用 Gemini 備課、出題、做簡報的老師。
 Gemini 怎麼用？從打開到第一次提問
@@ -1346,19 +1346,19 @@ Chromebook 選購指南
 校園資安事件通報與處理流程
 看全部 6 篇 →
 最新上線
+Google 與 AI 導入Google Workspace for Education 是什麼 新核心服務清單、誰符合資格、年齡限制與管理員能控制的事。2026/11/24
 Google 與 AI 導入AI 批改作文怎麼做 新用 Gemini 依評分標準寫作文評語，附提示詞範本與老師該自己判斷的地方。2026/11/24
 Gemini 教育版與 NotebookGemini Notebook 生成簡報 新從來源生成簡報、先檢查大綱、修改與匯出 PPTX／PDF，附年齡與分享限制。2026/11/24
-Google ClassroomClassroom 學生常見操作 新課程代碼、退出課程、改名字、登出的步驟，以及代碼無效、找不到退出鈕的原因。2026/11/24
+Google ClassroomClassroom 登入與學生常見操作 新登入、課程代碼、退出課程、改名字、登出的步驟，以及代碼無效、找不到退出鈕的原因。2026/11/24
 Google 與 AI 導入寄到 Gmail 被退信：補設 MX、SPF、DKIM 新退信代碼 550 5.7.40 的原因，和後台截圖的逐步設定教學。2026/11/23
 Google 與 AI 導入Google Workspace Studio：自動化流程與管理員設定 新用白話描述做出自動化流程，11 月新增協作步驟與資料區域設定，管理員導入前要先看的限制。2026/11/21
 Google 與 AI 導入Apps Script 的 Gemini：用白話文做出自動化 新在試算表或 Apps Script 編輯器按 Ask Gemini，用白話描述需求，逐段檢視程式碼再採用。2026/11/21
 Gemini 教育版與 NotebookGemini Notebook 互動網站：做法與學校注意事項 新在 Notebook 聊天輸入需求，產生互動週期表、時間軸或儀表板；公告寫明限 18 歲以上使用。2026/11/21
-Gemini 教育版與 NotebookGemini 技能：建立、分享與加入檔案 新技能是可重複使用的自訂指令，11 月起可分享給他人並加入 Drive 與 Notebook 檔案。2026/11/21
-全部文章 120
+全部文章 121
 依主題分段，顏色對應上面的主題卡片。
-Google 與 AI 導入 40Gemini 教育版與 Notebook 31Google Classroom 16數位學習軟體與網站 19設備選型與採購 8資安與個資法遵 6
-Google 與 AI 導入 40
-Google 帳號與管理 10
+Google 與 AI 導入 41Gemini 教育版與 Notebook 31Google Classroom 16數位學習軟體與網站 19設備選型與採購 8資安與個資法遵 6
+Google 與 AI 導入 41
+Google 帳號與管理 11
 Google for Education 指南Google for Education、Workspace 基礎版/進階版差異。2026/08/04
 學校 Google 帳號怎麼申請官方資格條件、不符資格的機構清單、四個申請步驟、網域驗證卡關與 Gemini 開通位置。2026/08/27
 Workspace 教育版版本比較四個方案怎麼選、2025–2026 授權變更與續約重點。2026/08/04
@@ -1369,6 +1369,7 @@ Google 管理主控台設定指南OU 與群組怎麼分、帳號大量匯入、C
 學校怎麼強制開啟兩步驟驗證先允許再強制、只對教職員套用、管理員防鎖死自救。2026/09/06
 Google Meet 在校園怎麼用遠距教學、線上親師會、線上研習三種情境的管理設定：主持人管控、等候室、出席報告。2026/08/30
 寄到 Gmail 被退信：補設 MX、SPF、DKIM 新退信代碼 550 5.7.40 的原因，和後台截圖的逐步設定教學。2026/11/23
+Google Workspace for Education 是什麼 新核心服務清單、誰符合資格、年齡限制與管理員能控制的事。2026/11/24
 Google AI Pro for Education 方案 6
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂加購在 Workspace 教育版上的 AI 方案，功能、適用對象與評估前要確認的事。2026/10/02
 Google AI Pro for Education 費用怎麼算？學校採購前先看這些影響總額的四個因素、年約與月繳，以及編預算清單。2026/10/02
@@ -1456,7 +1457,7 @@ Classroom 作業無法上傳或繳交 新按鈕無法使用、無法附加檔案
 Google Meet 教育版：不能錄影、時間上限與出席報告 新哪個教育版本能錄影、會議上限 24 小時、錄影最長 8 小時，以及出席報告只有哪些版本有。2026/11/16
 Gemini 引導式學習：派到 Classroom 作業的做法與前提 新11 月起老師可把引導式學習加進作業，學生端會鎖在同一個學習模式，老師看得到洞察摘要與聊天紀錄。2026/11/21
 Google Meet 分享簡報：畫面、聲音與檔案連結 新分頁、視窗、整個畫面怎麼選、聲音怎麼分享，以及 11 月新增的一鍵分享檔案連結。2026/11/21
-Classroom 學生常見操作 新課程代碼、退出課程、改名字、登出的步驟，以及代碼無效、找不到退出鈕的原因。2026/11/24
+Classroom 登入與學生常見操作 新登入、課程代碼、退出課程、改名字、登出的步驟，以及代碼無效、找不到退出鈕的原因。2026/11/24
 數位學習軟體與網站 19
 數位學習軟體 10
 數位學習軟體怎麼選Edpuzzle、Thinglink、Kami、Padlet、Wordwall、Kahoot! 定位與適用情境。2026/08/05
@@ -1509,17 +1510,17 @@ https://www.hunglun.com/knowledge/topic/google-ai
 
 首頁 ／ 教學資源 ／ Google 與 AI 導入
 Google 與 AI 導入
-授權方案怎麼選、AI 怎麼真的用在教學與行政上。共 40 篇，每篇都是獨立網址，方便查找與分享。
+授權方案怎麼選、AI 怎麼真的用在教學與行政上。共 41 篇，每篇都是獨立網址，方便查找與分享。
 適合：資訊組、主任，要評估授權、帳號與研習的學校。
-全部 120
-Google 與 AI 導入 40
+全部 121
+Google 與 AI 導入 41
 Gemini 教育版與 Notebook 31
 Google Classroom 16
 數位學習軟體與網站 19
 設備選型與採購 8
 資安與個資法遵 6
-Google 帳號與管理 10Google AI Pro for Education 方案 6AI 教學與備課 12行政自動化與教師研習 7Google 與 AI 認證 5
-Google 帳號與管理 10
+Google 帳號與管理 11Google AI Pro for Education 方案 6AI 教學與備課 12行政自動化與教師研習 7Google 與 AI 認證 5
+Google 帳號與管理 11
 學校帳號怎麼申請、管理、保護與回收。
 Google for Education 指南Google for Education、Workspace 基礎版/進階版差異。2026/08/04
 學校 Google 帳號怎麼申請官方資格條件、不符資格的機構清單、四個申請步驟、網域驗證卡關與 Gemini 開通位置。2026/08/27
@@ -1531,6 +1532,7 @@ Google 管理主控台設定指南OU 與群組怎麼分、帳號大量匯入、C
 學校怎麼強制開啟兩步驟驗證先允許再強制、只對教職員套用、管理員防鎖死自救。2026/09/06
 Google Meet 在校園怎麼用遠距教學、線上親師會、線上研習三種情境的管理設定：主持人管控、等候室、出席報告。2026/08/30
 寄到 Gmail 被退信：補設 MX、SPF、DKIM 新退信代碼 550 5.7.40 的原因，和後台截圖的逐步設定教學。2026/11/23
+Google Workspace for Education 是什麼 新核心服務清單、誰符合資格、年齡限制與管理員能控制的事。2026/11/24
 Google AI Pro for Education 方案 6
 方案內容、費用、與 Workspace 的差別，以及老師能不能免費用。
 Google AI Pro for Education 是什麼？學校方案與功能一次看懂加購在 Workspace 教育版上的 AI 方案，功能、適用對象與評估前要確認的事。2026/10/02
@@ -1582,8 +1584,8 @@ https://www.hunglun.com/knowledge/topic/gemini
 Gemini 教育版與 Gemini Notebook
 Gemini 教育版怎麼開通與使用，以及 Gemini Notebook 的完整教學系列。共 31 篇，每篇都是獨立網址，方便查找與分享。
 適合：要用 Gemini 備課、出題、做簡報的老師。
-全部 120
-Google 與 AI 導入 40
+全部 121
+Google 與 AI 導入 41
 Gemini 教育版與 Notebook 31
 Google Classroom 16
 數位學習軟體與網站 19
@@ -1640,8 +1642,8 @@ https://www.hunglun.com/knowledge/topic/classroom
 Google Classroom 教學
 從建立課程到成績結算，Classroom 在校園實際會用到的功能與卡關排除。共 16 篇，每篇都是獨立網址，方便查找與分享。
 適合：老師與管理員，要用 Classroom 開課、派作業、排除問題。
-全部 120
-Google 與 AI 導入 40
+全部 121
+Google 與 AI 導入 41
 Gemini 教育版與 Notebook 31
 Google Classroom 16
 數位學習軟體與網站 19
@@ -1667,7 +1669,7 @@ Classroom 作業無法上傳或繳交 新按鈕無法使用、無法附加檔案
 Google Meet 教育版：不能錄影、時間上限與出席報告 新哪個教育版本能錄影、會議上限 24 小時、錄影最長 8 小時，以及出席報告只有哪些版本有。2026/11/16
 Gemini 引導式學習：派到 Classroom 作業的做法與前提 新11 月起老師可把引導式學習加進作業，學生端會鎖在同一個學習模式，老師看得到洞察摘要與聊天紀錄。2026/11/21
 Google Meet 分享簡報：畫面、聲音與檔案連結 新分頁、視窗、整個畫面怎麼選、聲音怎麼分享，以及 11 月新增的一鍵分享檔案連結。2026/11/21
-Classroom 學生常見操作 新課程代碼、退出課程、改名字、登出的步驟，以及代碼無效、找不到退出鈕的原因。2026/11/24
+Classroom 登入與學生常見操作 新登入、課程代碼、退出課程、改名字、登出的步驟，以及代碼無效、找不到退出鈕的原因。2026/11/24
 找不到想問的問題？
 可以回教學資源總覽用搜尋找，或直接看常見問題、與我們聯繫。學校端的導入評估、授權盤點或研習規劃，我們可以到校說明。
 
@@ -1681,8 +1683,8 @@ https://www.hunglun.com/knowledge/topic/web
 數位學習軟體與網站工具
 校園常用的數位學習軟體怎麼選，以及網站與系統相關的實務知識。共 19 篇，每篇都是獨立網址，方便查找與分享。
 適合：要挑課堂工具、做表單或網站的老師與行政。
-全部 120
-Google 與 AI 導入 40
+全部 121
+Google 與 AI 導入 41
 Gemini 教育版與 Notebook 31
 Google Classroom 16
 數位學習軟體與網站 19
@@ -1727,8 +1729,8 @@ https://www.hunglun.com/knowledge/topic/hardware
 校園資訊設備選型與採購
 Chromebook、電腦與校園設備怎麼選、怎麼走採購流程。共 8 篇，每篇都是獨立網址，方便查找與分享。
 適合：要做設備或 AI 軟體採購的承辦人。
-全部 120
-Google 與 AI 導入 40
+全部 121
+Google 與 AI 導入 41
 Gemini 教育版與 Notebook 31
 Google Classroom 16
 數位學習軟體與網站 19
@@ -1760,8 +1762,8 @@ https://www.hunglun.com/knowledge/topic/compliance
 校園資安與個資法遵
 個資盤點、資安事件處理與校園法遵要求。共 6 篇，每篇都是獨立網址，方便查找與分享。
 適合：資訊組與校安人員，要處理個資與資安事件。
-全部 120
-Google 與 AI 導入 40
+全部 121
+Google 與 AI 導入 41
 Gemini 教育版與 Notebook 31
 Google Classroom 16
 數位學習軟體與網站 19
@@ -15337,15 +15339,16 @@ Google 管理主控台校園設定指南：OU、群組、Chrome 政策 →
 
 ---
 
-## Classroom 學生常見操作：加入課程、退出課程、改名字、登出一次看懂｜鴻綸科技
+## Classroom 登入與學生常見操作：加入課程、退出課程、改名字、登出一次看懂｜鴻綸科技
 
 https://www.hunglun.com/knowledge/classroom-student-faq
 
-教學資源 ／ Google Classroom ／ Classroom 學生常見操作
-Classroom 學生常見操作：加入課程、退出課程、改名字、登出一次看懂
+教學資源 ／ Google Classroom ／ Classroom 登入與學生常見操作
+Classroom 登入與學生常見操作：加入課程、退出課程、改名字、登出一次看懂
 老師和學校最常接到的 Classroom 問題，其實多半來自學生端：代碼輸入了還是進不去、想退出課程找不到按鈕、名字寫錯改不了。這篇把官方說明頁的答案整理在一起，學生看得懂，老師也可以直接轉給全班。
 這篇適合：第一次使用 Classroom 的學生與家長，以及常被學生問操作的老師、學校資訊組。
 重點先看
+第一次登入要注意什麼？要連上穩定的網路，輸入 Classroom 帳戶的電子郵件與密碼。用學校帳戶登入會多一步選「我是學生」或「我是老師」；用個人 Google 帳戶就不會看到這個選項。
 課程代碼輸入了卻進不去？官方列了三項檢查：登入的是不是正確的帳戶、代碼是不是 6 到 8 個英數字元且沒有空格與特殊符號、輸入時大小寫有沒有對。三項都沒問題仍進不去，請通知老師，可能是技術問題。
 想退出課程，卻找不到「取消報名」？要學校管理員先啟用取消報名的選項，學生才能退出課程；已封存的課程也無法取消報名，要請老師先取消封存。
 名字寫錯了，可以自己改嗎？不行。官方說明，Classroom 裡不能直接改名字，要改用於所有 Google 服務的名稱，得聯絡學校的 Google Workspace 管理員。
@@ -15356,7 +15359,23 @@ Classroom 登入時，官方說明列了三種帳戶，用錯帳戶是「進不�
 個人 Google 帳戶：自己或家長設定的帳戶，格式像 you@example.com，官方的用途是在校外使用，例如在家自學。
 Google Workspace 帳戶：機構管理員設定的帳戶，格式像 you@yourorganization.com。
 老師叫你加入課程時，用的是哪一種帳戶，就要用同一種登入。同一台電腦如果登入了好幾個帳戶，加入課程前先看右上角的個人資料相片，確認是對的那一個。
-二、用課程代碼加入課程
+二、第一次登入 Classroom 怎麼做
+官方的提醒是：登入時必須連上穩定的網際網路連線。已經知道網址的話，直接前往 classroom.google.com。
+電腦（首次登入）：
+前往 classroom.google.com，點「前往 Classroom」。
+輸入 Classroom 帳戶的電子郵件地址，點「下一步」。
+輸入密碼，點「下一步」。
+如果出現歡迎訊息，詳閱後點「接受」。
+如果用的是 Google Workspace for Education 帳戶，點「我是學生」或「我是老師」。
+點「開始使用」。
+手機或平板（iPhone、iPad、Android）：先在裝置上安裝 Classroom 應用程式，開啟後輕觸「開始使用」「新增其他帳戶」，輸入電子郵件與密碼，每一步都輕觸「下一步」。出現歡迎訊息時輕觸「接受」；Android 還會請你詳閱《服務條款》和《隱私權政策》並輕觸「我同意」。使用學校的 Education Fundamentals 帳戶時，會多一步選「我是學生」或「我是老師」。
+官方註明：以個人 Google 帳戶登入，就不會看到「我是學生」「我是老師」的選項。所以如果你在學校登入時沒有看到這一步，先檢查是不是用了個人帳戶。
+登入不了怎麼辦？官方這份登入說明沒有列出逐項的錯誤排除，以下是我們整理的檢查順序，不是官方步驟：
+確認電子郵件地址完整，學校帳戶通常是 名稱@學校網域，不是 gmail.com。
+確認網路穩定，換一個網路再試一次。
+確認用的是老師指定的那一種帳戶，家裡電腦常常自動帶入個人帳戶。
+以上都沒問題，請老師或學校資訊組確認帳戶有沒有被停用、密碼要不要重設。
+三、用課程代碼加入課程
 官方列出三種加入方式：老師傳課程連結、給課程代碼、寄電子郵件邀請。這裡講最常用的課程代碼。
 電腦：
 前往 classroom.google.com，確認登入的是正確的帳戶。需要切換時，點右上角的個人資料相片。
@@ -15367,14 +15386,14 @@ iPhone、iPad、Android：開啟 Classroom 應用程式，確認登入正確的�
 兩個容易誤會的地方，官方都有寫明：
 加入課程時只需要輸入一次代碼，加入之後不用再輸入。
 只要在一部裝置上加入課程，就等於在所有裝置上都加入了。
-三、課程代碼無效、進不去怎麼辦
+四、課程代碼無效、進不去怎麼辦
 依官方說明，依序檢查：
 帳戶對不對。用錯帳戶登入，是代碼被判定無效的第一個原因。
 長度和字元。代碼由 6 到 8 個英數字元組成，不含空格與特殊符號。從訊息複製貼上時，前後多帶一個空格就會出錯。
 大小寫。輸入要完全一致，包括大寫字母。
 三項都沒問題還是不行，官方的建議是聯絡老師，因為可能出現技術問題。
 忘了或弄丟代碼怎麼辦？如果還沒加入課程，向老師索取最直接。老師也可能用電子郵件寄過，記得連垃圾郵件資料夾一起找。
-四、退出課程（取消報名）
+五、退出課程（取消報名）
 電腦：
 前往 classroom.google.com 並登入。
 在課程資訊卡上點「更多」圖示。
@@ -15385,17 +15404,17 @@ Android：在課程資訊卡上輕觸「更多」圖示，選「取消報名」�
 要管理員先開放。學校管理員啟用取消報名的選項後，學生才能退出課程。看不到這個選項，通常是學校沒有開放。
 已封存的課程不能取消報名。要請老師先取消封存，學生才能退出。
 退出後：課程會從你的 Classroom 移除，你的課程檔案會留在 Google 雲端硬碟。想再加入，要重新取得代碼、連結或邀請。
-五、為什麼名字改不了
+六、為什麼名字改不了
 官方的答案很直接：不能在 Classroom 裡直接改名字。Classroom 只能自己換個人資料相片，檔案要是 .jpg、.jpeg 或 .png，大小上限 5 MB。
 要改名字，得聯絡學校的 Google Workspace 管理員。管理員改完，新名字會出現在訊息、共用的文件、日曆邀請和校內可搜尋的目錄。但電子郵件地址和登入用的名稱不會跟著變。
 官方另外說明，Classroom 目前只適用於受管理的環境，只有 Google Workspace 管理員能控管使用者帳戶，所以學生不能自己改。這點對學校的意義是：學生報名時名字登記錯，要有人負責幫忙通知管理員，不然全班的點名單和成績單上就一直是錯的名字。
-六、登出與切換帳戶
+七、登出與切換帳戶
 電腦登出：前往 classroom.google.com，點右上方的個人資料相片或帳戶圖片，選「登出」。官方特別提醒：一旦登出，會自動登出裝置上所有 Google Workspace 產品，所以在共用電腦上，登出後信箱、雲端硬碟也會一起登出，這是正常的，不是壞掉。
 Android 登出：輕觸左上方的「選單」圖示，在名稱和電子郵件地址旁輕觸向下箭頭，依序選「管理帳戶」「Google」，再輕觸右上方「更多」圖示，選「移除帳戶」並確認。官方說明帳戶不會因此被刪除，仍可在其他裝置上使用。
 只想換帳戶：電腦在頂端點個人資料圖片或姓名縮寫，選取要用的帳戶就好，不需要先登出。
-七、家長常問：我可以登入孩子的 Classroom 看作業嗎？
+八、家長常問：我可以登入孩子的 Classroom 看作業嗎？
 官方說明，依隱私權法，家長和監護人不能存取 Classroom 和學生的作業，只能在老師許可的情況下收到電子郵件摘要。想看孩子的作業進度，請向老師確認有沒有開啟監護人摘要，不要借用孩子的帳戶登入。
-八、老師可以先做的預防
+九、老師可以先做的預防
 以下是我們整理的實務建議，不是官方規定：
 開學第一週，在黑板或訊息串寫清楚「請用學校帳戶登入」，並示範一次帳戶切換。
 課程代碼用手寫或截圖發給學生時，避免容易混淆的字母，例如大寫 I 與小寫 l，學生輸入錯誤的比例會下降。
@@ -15421,6 +15440,7 @@ Classroom 登出會影響其他 Google 服務嗎？
 Classroom 作業無法上傳或繳交怎麼辦 →
 Classroom 監護人電子郵件摘要怎麼設定 →
 Classroom 常見卡關與版本功能比較 →
+Google Workspace for Education 是什麼 →
 Google Classroom 基本操作 →
 教學資源總覽 →
 學校想導入或需要教師研習？
@@ -15592,6 +15612,87 @@ AI 批改作業工具怎麼選：學校評估前先看這 6 件事 →
 Classroom 能自動生成評分量表了 →
 用 Gemini 備課：教案、簡報實際生成教學 →
 OCR 是什麼？AI 文件辨識準確率與校園表單應用 →
+教學資源總覽 →
+學校想導入或需要教師研習？
+鴻綸科技是 Google for Education Professional Development Partner，可以依貴校現況安排教師研習與帳號規劃。
+寄信詢問
+來電 06-6371192
+看校園研習方案 →
+
+---
+
+## Google Workspace for Education 是什麼？包含哪些服務、哪些機構符合資格｜鴻綸科技
+
+https://www.hunglun.com/knowledge/workspace-for-education-intro
+
+教學資源 ／ Google 與 AI 導入 ／ Google Workspace for Education 是什麼
+Google Workspace for Education 是什麼？包含哪些服務、哪些機構符合資格
+老師常聽到「學校帳號」「教育版帳號」「Workspace」，但這幾個詞指的是同一套東西。這篇依 Google 官方說明頁，講清楚 Google Workspace for Education 是什麼、裡面有哪些服務、哪些機構可以申請，以及管理員實際能控制哪些事。
+這篇適合：剛接手學校帳號管理的老師與資訊組，以及想弄懂「學校帳號跟個人帳號差在哪」的老師與家長。
+重點先看
+它到底是什麼？官方的說法是一套提供給學校與大學的 Google 工具，用來保護學習環境、提升教學成效。學生與老師登入的學校帳號，就是在這個網域底下建立的。
+要付費嗎？官方說明，Education Fundamentals 對所有符合資格的機構免費。另有付費方案與加購項目，實際可訂購的版本以 Google 當期公告為準。
+包含哪些服務？官方列出的核心服務有 Gmail、Calendar、Classroom、Assignments、Contacts、Drive、Docs、Forms、Groups、Sheets、Sites、Slides、Chat、Meet、Vault、Chrome Sync、Gemini for Education 和 Gemini Notebook。
+補習班、語言學校能申請嗎？官方列出的不符資格機構包含語言學校與營利性教育公司。要申請的機構必須是政府認可、正式立案授課的學校，高等教育機構要能授予學位。
+一、它是什麼：學校用的 Google 工具組合
+官方概覽頁的定義是：Google Workspace for Education 是一套 Google 工具，協助學校與大學保護學習環境、提升教學成效、為學生做好未來的準備。我們日常說的「學校帳號」「教育版帳號」，指的就是這個網域底下建立的帳號。
+官方把它分成三個層級：
+方案（Editions）：授權給整個網域，包含 Gmail、Docs、Classroom、Slides、雲端硬碟等一整套為教學設計的工具。
+加購項目（Add-ons）：建立在方案之上，讓網域裡特定的使用者多一些功能。官方註明：要先有一個現有的 Workspace 方案，才能買加購項目。
+授權（Licenses）：不同類型的授權有不同功能，用來更細地管理使用者。
+二、要付費嗎？
+官方說明：Education Fundamentals 對所有符合資格的機構免費，提供 Google Docs、Classroom、Meet、Gmail、Forms、Chat 等應用程式。另外有付費方案，加上儲存空間、AppSheet、Colab 等加購項目。
+付費方案的名稱與台灣實際可訂購的版本，會隨 Google 公告調整，官方英文頁的方案列表有時會落後於通路現況。要確認學校現在能訂購什麼，請看我們另一篇 Google Workspace 教育版：教育部選購名單序號、方案比較與授權變更，或向授權夥伴確認。
+三、核心服務有哪些
+官方把服務分成三類，差別在「受哪份條款管」，這對學校評估資料與隱私很重要：
+核心服務（Core Services）：Gmail、Calendar、Classroom、Assignments、Contacts、Drive、Docs、Forms、Groups、Sheets、Sites、Slides、Chat、Meet、Vault、Chrome Sync、Gemini for Education、Gemini Notebook。受 Google Workspace for Education 服務條款規範。
+其他 Workspace 服務：例如 AppSheet 和 Read Along，同樣在教育版服務條款之下。
+額外服務（Additional Services）：例如 YouTube、Google 地圖、Applied Digital Skills，原本是為一般消費者設計，學校管理員允許用於教育用途時，教育版帳號才能使用。大多數額外服務適用的是 Google 一般服務條款與隱私權政策。
+簡單說，Classroom、Gmail、雲端硬碟這些是核心服務；YouTube 這類是管理員決定要不要開給學生的額外服務。
+四、哪些機構符合資格
+官方資格頁列出的條件：
+K–12 學校與授予學位的高等教育機構，必須是政府認可、正式立案、向學生授課的學校；高等教育機構必須授予學位。
+機構必須有一個與學校相關的運作中網站。
+提出申請的人必須是該機構的一員。
+如果機構除了學校，還有不符資格的業務（例如政府、非營利或企業），要為學校另外設一個獨立網域，才能申請 Education Fundamentals。
+官方也明說：不是學校的組織，即使提供服務給學生，也不符合資格。官方列出的例子有社區中心的教育課程、企業出資的訓練中心、員工教育計畫、提供輔導或教練服務的企業或非營利組織、考試公司、營利性教育公司、職業訓練、語言學校、大規模線上開放課程、博物館、公共圖書館等。
+以下是我們的判讀，不是官方說法：台灣的補習班、安親班，依官方這份清單的類別，較接近「營利性教育公司」或「語言學校」，可能不符資格。Google 保留判定資格的權利，實際結果以審核為準。申請流程見 學校 Google 帳號怎麼申請。
+另外，官方說明，核准一個網域代表核准一個「租戶」（tenant），這個租戶只應管理單一群體，任何使用者都不應同時屬於多個租戶。
+五、管理員能控制什麼
+官方的說明是：學校網域的管理員決定使用者可以使用哪些 Google 服務。這也是為什麼同一個學校的老師、學生，看得到的功能有時不一樣。
+依年齡控制：管理員可以依年齡設定部分服務的存取。如果管理員沒有標示哪些使用者已滿 18 歲，國中小與高中的使用者預設都視為未滿 18 歲，部分服務會受限，有些服務直接無法使用。高等教育機構沒有預設的年齡限制，但管理員必須標示未滿 18 歲的使用者。
+未成年使用者的同意：管理員必須取得或提供使用者同意。學校取得適當同意後，使用者可以不受年齡限制使用部分額外服務。
+沒有「開／關」的服務：沒有開關選項的服務，對未標示已滿 18 歲的使用者一律是「受限」，而且改不了。
+這點對老師很實用：看到功能「只有部分人能用」，先問資訊組學生帳號有沒有被標成 18 歲以上。例如 Classroom 的 Gemini 評分量表和 Gemini Notebook 的簡報功能，官方都註明限 18 歲以上使用者。
+六、隱私：官方的承諾與該注意的地方
+官方說明，K–12 學校使用者的任何個人資訊（或與 Google 帳戶相關的任何資訊），Google 都不會拿來投放廣告。核心服務是在學校與 Google 簽訂的 Workspace for Education 協議下提供，協議包含雲端資料處理附加條款。
+要注意的是：上面第三段的「額外服務」不在這個保護範圍內，學校開放 YouTube 之類的服務前，要先確認適用的是哪份條款。
+七、跟個人 Google 帳號有什麼不一樣
+以下是我們整理的重點，不是官方比較表：
+誰管：學校帳號由學校管理員建立與管理，包含啟用哪些服務、重設密碼、依年齡設定限制；個人帳號由使用者自己管。
+誰改得了名字：學校帳號的名字要由管理員改，學生自己改不了，詳見 Classroom 學生常見操作。
+學生畢業或離校：學校帳號會跟著學校的帳號生命週期走，建議學校事先訂好規則，見 學校 Google 帳號管理 SOP。
+官方原文：Google Workspace for Education overview（Google Workspace 說明中心，英文）、Qualifications for Google Workspace for Education、Service categories available to Google Workspace for Education Users。介面與功能會隨 Google 更新調整，實際以畫面與官方說明為準。
+💡 這篇對其他老師也有幫助嗎？
+歡迎複製下面這段文字，分享到貴校的教師群組：
+複製分享文字
+常見問題
+Google Workspace for Education 是什麼？
+是 Google 提供給學校與大學的工具組合，包含 Gmail、雲端硬碟、Classroom、Meet、Gemini 等服務。學生與老師用的學校帳號，就是在這個網域底下建立的。官方分成方案、加購項目、授權三個層級。
+Google Workspace for Education 要錢嗎？
+官方說明 Education Fundamentals 對所有符合資格的機構免費，另有付費方案與加購項目。實際可訂購的版本與名稱以 Google 當期公告為準，可向授權夥伴確認。
+哪些機構可以申請 Google Workspace for Education？
+政府認可、正式立案、向學生授課的 K–12 學校，以及授予學位的高等教育機構，而且要有與學校相關的運作中網站。不是學校的組織，即使提供服務給學生，也不符合資格。
+Workspace for Education 的核心服務有哪些？
+官方列出 Gmail、Calendar、Classroom、Assignments、Contacts、Drive、Docs、Forms、Groups、Sheets、Sites、Slides、Chat、Meet、Vault、Chrome Sync、Gemini for Education 和 Gemini Notebook。YouTube、Google 地圖等屬於額外服務，要管理員允許才能用。
+為什麼學生有些功能用不了？
+學校管理員決定使用者能用哪些服務。官方說明，管理員沒有標示使用者已滿 18 歲時，國中小與高中的使用者預設視為未滿 18 歲，部分服務會受限。先問資訊組學生帳號的年齡設定。
+作者：鴻綸科技 Steve｜最後更新：2026 年 11 月 24 日（功能與限制以 Google 當期官方說明為準）
+延伸閱讀
+學校 Google 帳號怎麼申請？Workspace 教育版資格與流程 →
+Google Workspace 教育版：教育部選購名單序號、方案比較與授權變更 →
+Google AI Pro for Education 與 Workspace 教育版差在哪 →
+學校 Google 帳號管理 SOP：新生建檔、畢業轉出與停權 →
 教學資源總覽 →
 學校想導入或需要教師研習？
 鴻綸科技是 Google for Education Professional Development Partner，可以依貴校現況安排教師研習與帳號規劃。
