@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>班級秩序登記表｜教師小幫手｜鴻綸科技</title>
+<meta name="description" content="風紀線上登記班級秩序、送出後鎖定，導師後台看週統計與月結算，登記項目可自訂。資料存在導師自己的 Google 試算表。">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=45">
+<style>
+  :root {
+    --primary: #1e3a5f;
+    --primary-light: #2c5282;
+    --accent: #d97706;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --warn: #d97706;
+    --warn-bg: #fffbeb;
+    --success: #059669;
+    --success-bg: #ecfdf5;
+    --info: #0284c7;
+    --info-bg: #f0f9ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Microsoft JhengHei", "PingFang TC", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 12px;
+  }
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    padding: 16px 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .header h1 { font-size: 1.32rem; font-weight: 700; letter-spacing: 0.5px; }
+  .header p { font-size: 0.84rem; opacity: 0.9; margin-top: 2px; }
+  .sync-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35);
+    cursor: pointer;
+  }
+  .sync-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #94a3b8;
+  }
+  .sync-dot.online { background: #34d399; box-shadow: 0 0 6px #34d399; }
+  .sync-dot.syncing { background: #fbbf24; animation: pulse 1s infinite; }
+  .sync-dot.error { background: #f87171; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  /* Rules Strip */
+  .rules-bar {
+    background: #f1f5f9;
+    border-bottom: 1px solid var(--border);
+    padding: 9px 20px;
+    font-size: 0.84rem;
+    color: #334155;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .rules-bar strong { color: var(--primary); }
+  .rule-pill {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.81rem;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    background: #f8fafc;
+    border-bottom: 2px solid var(--border);
+    padding: 0 16px;
+    gap: 6px;
+    overflow-x: auto;
+  }
+  .tab-btn {
+    padding: 11px 16px;
+    border: none;
+    background: none;
+    font-size: 0.93rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { color: var(--primary); }
+  .tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    background: #fff;
+  }
+
+  .tab-content { display: none; padding: 18px 20px; }
+  .tab-content.active { display: block; }
+
+  /* Controls */
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    background: #f8fafc;
+    padding: 11px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .toolbar-group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  label { font-size: 0.88rem; font-weight: 600; color: #334155; }
+  input[type="date"], input[type="month"], input[type="week"], input[type="text"], input[type="number"], input[type="url"] {
+    padding: 6px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    background: #fff;
+  }
+  .btn {
+    padding: 7px 13px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-success { background: var(--success); color: #fff; }
+  .btn-warn { background: var(--accent); color: #fff; }
+  .btn-danger { background: var(--danger); color: #fff; }
+  .btn-outline { background: #fff; color: var(--text); border: 1px solid #cbd5e1; }
+  .btn:hover { opacity: 0.92; }
+
+  /* Tables */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    min-width: 820px;
+  }
+  th {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    padding: 9px 7px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  td {
+    padding: 7px 6px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    vertical-align: middle;
+  }
+  tr:nth-child(even) td { background: #f8fafc; }
+  tr:hover td { background: #f1f5f9; }
+
+  .chk-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1.5px solid #cbd5e1;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: transparent;
+    transition: all 0.15s;
+  }
+  .chk-btn.checked {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: #fff;
+  }
+  .remind-btn {
+    padding: 3px 8px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #475569;
+  }
+  .remind-btn.has-remind {
+    background: var(--warn-bg);
+    border-color: var(--warn);
+    color: #b45309;
+    font-weight: 700;
+  }
+  .note-input {
+    width: 100%;
+    min-width: 115px;
+    padding: 4px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+  .badge-zero { background: var(--success-bg); color: var(--success); }
+  .badge-low { background: #e0f2fe; color: #0369a1; }
+  .badge-mid { background: var(--warn-bg); color: #b45309; }
+  .badge-high { background: var(--danger-bg); color: var(--danger); }
+  .code-pill {
+    display: inline-block;
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin: 1px;
+  }
+  .ok-dot {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 0.82rem;
+  }
+  .no-rec {
+    color: #cbd5e1;
+    font-size: 0.8rem;
+  }
+
+  /* KPI Grid */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .kpi-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 14px;
+    border-left: 4px solid var(--primary);
+  }
+  .kpi-title { font-size: 0.81rem; color: var(--muted); }
+  .kpi-val { font-size: 1.38rem; font-weight: 700; color: var(--text); margin-top: 2px; }
+
+  /* Legend Box in Weekly */
+  .weekly-legend {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 9px 14px;
+    margin-bottom: 12px;
+    font-size: 0.84rem;
+    color: #78350f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  /* Setup Boxes */
+  .setup-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 15px 16px;
+    margin-bottom: 16px;
+  }
+  .setup-card.highlight {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+  }
+  .setup-card h3 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .step-list { padding-left: 20px; font-size: 0.88rem; color: #1e293b; }
+  .step-list li { margin-bottom: 5px; }
+  .code-box {
+    width: 100%;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.8rem;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    margin-top: 8px;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1e293b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    z-index: 999;
+  }
+  .toast.show { opacity: 1; }
+
+  /* ===== 引導式畫面（一步一頁） ===== */
+  .tabs { display: none; }
+  .backbar { display: none; align-items: center; gap: 12px; padding: 10px 20px; background: #f1f5f9; border-bottom: 1px solid var(--border); }
+  .backbar.show { display: flex; }
+  .back-title { font-weight: 700; color: var(--primary); }
+  .wiz { max-width: 760px; margin: 0 auto; padding: 6px 4px 26px; }
+  .wiz h2 { font-size: 1.28rem; color: var(--primary); margin-bottom: 6px; }
+  .wiz .lead { color: var(--muted); margin-bottom: 14px; font-size: 0.95rem; line-height: 1.6; }
+  .wiz .steps-text { margin: 0 0 14px 1.2em; line-height: 1.9; font-size: 0.98rem; }
+  .wiz .tip { background: var(--info-bg); border: 1px solid #bae6fd; border-radius: 8px; padding: 9px 12px; font-size: 0.88rem; color: #075985; margin: 10px 0; line-height: 1.6; }
+  .wiz .tip.warn { background: var(--warn-bg); border-color: #fde68a; color: #92400e; }
+  .dots { display: flex; justify-content: center; gap: 8px 14px; margin: 4px 0 16px; flex-wrap: wrap; }
+  .dot { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--muted); background: none; border: none; padding: 0; font-family: inherit; }
+  .dot i { width: 26px; height: 26px; border-radius: 50%; background: #e2e8f0; color: #64748b; display: inline-flex; align-items: center; justify-content: center; font-style: normal; font-weight: 700; }
+  .dot.on i { background: var(--primary); color: #fff; }
+  .dot.done i { background: var(--success); color: #fff; }
+  .dot.on { color: var(--primary); font-weight: 700; }
+  button.dot { cursor: pointer; }
+  .wiz-nav { display: flex; justify-content: space-between; gap: 10px; margin-top: 22px; }
+  .wiz-nav .spacer { flex: 1; }
+  .btn-big { padding: 13px 20px; font-size: 1.05rem; border-radius: 10px; }
+  .btn-block { display: block; width: 100%; text-align: center; text-decoration: none; }
+  .field { margin: 12px 0; }
+  .field label { display: block; font-weight: 700; margin-bottom: 5px; }
+  .field input[type=text], .field input[type=date], .field input[type=url], .field input[type=password] { width: 100%; padding: 10px 12px; font-size: 1rem; border: 1px solid #cbd5e1; border-radius: 8px; }
+  .stu-list { display: flex; flex-direction: column; gap: 8px; }
+  .stu-row { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; padding: 12px 14px; background: #fff; border: 1px solid var(--border); border-radius: 10px; font-size: 1rem; cursor: pointer; font-family: inherit; }
+  .stu-row:hover { border-color: var(--primary); }
+  .stu-row.has { border-color: #fca5a5; background: var(--danger-bg); }
+  .stu-row .no { font-weight: 700; color: var(--muted); width: 2.2em; }
+  .stu-row .nm { font-weight: 700; flex: 0 0 5.5em; }
+  .stu-row .tags { flex: 1; display: flex; gap: 4px; flex-wrap: wrap; }
+  .tag { background: var(--danger); color: #fff; border-radius: 12px; padding: 1px 9px; font-size: 0.82rem; font-weight: 700; }
+  .tag.remind { background: var(--warn); }
+  .tag.note { background: #64748b; }
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 10px 0 18px; }
+  .menu-card { text-align: left; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 16px; cursor: pointer; display: flex; flex-direction: column; gap: 4px; font-size: 1rem; font-family: inherit; }
+  .menu-card b { font-size: 1.08rem; color: var(--primary); }
+  .menu-card span { color: var(--muted); font-size: 0.88rem; }
+  .menu-card:hover { border-color: var(--primary); background: #f8fafc; }
+  .status-table { width: 100%; border-collapse: collapse; font-size: 0.93rem; margin-bottom: 8px; }
+  .status-table td, .status-table th { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  .status-table tr.today td { background: #fefce8; font-weight: 700; }
+  .summary-row { padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; font-size: 0.97rem; }
+  .sheet-overlay { position: fixed; inset: 0; background: rgba(15,23,42,0.55); z-index: 99990; display: none; align-items: flex-end; justify-content: center; }
+  .sheet-overlay.open { display: flex; }
+  .sheet { background: #fff; width: 100%; max-width: 560px; border-radius: 16px 16px 0 0; padding: 18px 18px 22px; max-height: 92vh; overflow: auto; }
+  .sheet h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--primary); }
+  .vio-grid { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 12px; }
+  .vio-btn { text-align: left; padding: 13px 14px; border-radius: 10px; border: 2px solid #cbd5e1; background: #fff; font-size: 1.02rem; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .vio-btn.on { background: var(--danger); border-color: var(--danger); color: #fff; }
+  .vio-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .sheet .remind-btn { width: 100%; padding: 12px; margin-bottom: 10px; font-size: 1rem; }
+  .sheet .note-input { width: 100%; padding: 10px; margin-bottom: 12px; font-size: 1rem; }
+  .wiz details { margin: 10px 0; }
+  .wiz details summary { cursor: pointer; color: var(--muted); font-size: 0.9rem; }
+  .big-actions { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
+  .big-actions .desc { color: var(--muted); font-size: 0.88rem; margin-top: -4px; }
+
+  /* 身分：風紀只看到登記畫面，導師看到全部 */
+  body.role-cadre .teacher-only { display: none !important; }
+  body.role-teacher .cadre-only { display: none !important; }
+  .header-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .submit-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 10px 14px; margin: 0 0 12px; border-radius: 8px; background: #fef9c3; border: 1px solid #fde047; font-weight: 600; font-size: 0.92rem; }
+  .submit-bar.locked { background: #dcfce7; border-color: #86efac; }
+  .chk-btn:disabled, .remind-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .note-input:disabled, #daily-cadre:disabled { background: #f1f5f9; cursor: not-allowed; }
+  .dlg-overlay { position: fixed; inset: 0; background: rgba(15,23,42,0.55); display: flex; align-items: center; justify-content: center; z-index: 100000; }
+  .dlg { background: #fff; border-radius: 12px; padding: 20px 22px; max-width: 420px; width: calc(100% - 32px); box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+  .dlg p { margin: 0 0 14px; line-height: 1.6; color: #0f172a; white-space: pre-wrap; }
+  .dlg input { width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 14px; font-size: 1rem; box-sizing: border-box; }
+  .dlg-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .container { box-shadow: none; border: none; max-width: 100%; }
+    .tabs, .toolbar, .setup-card, .no-print { display: none !important; }
+    .tab-content.active { display: block !important; padding: 0; }
+    table { font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div>
+      <h1 id="app-title">班級秩序登記表</h1>
+      <p>每日登記・週統計・月結算・Google 試算表同步</p>
+    </div>
+    <div class="header-right">
+      <div class="sync-pill" onclick="manualSyncFromCloud()" title="點擊立即從 Google 試算表重新同步最新資料">
+        <span id="sync-dot" class="sync-dot"></span>
+        <span id="sync-text">尚未設定雲端網址（本機模式）</span>
+      </div>
+      <a id="site-back" class="btn btn-outline" href="/tools/campus" style="display:none; text-decoration:none;">← 教師小幫手</a>
+      <button id="role-btn" class="btn btn-outline" onclick="onRoleButton()">🔐 導師後台</button>
+    </div>
+  </div>
+
+  <div class="backbar" id="backbar">
+    <button class="btn btn-outline" onclick="showScreen('home')">← 回導師後台首頁</button>
+    <span class="back-title" id="back-title"></span>
+  </div>
+
+  <!-- 導師後台首頁 -->
+  <div id="tab-home" class="tab-content">
+    <div class="wiz">
+      <h2>導師後台</h2>
+      <p class="lead">先看風紀這幾天有沒有送出，再選要做什麼。</p>
+      <div id="home-status"></div>
+      <div id="share-card" class="tip" style="display:none;">
+        <strong>📎 風紀登記連結</strong>：把這個連結傳給風紀，打開就能登記，不用貼任何東西、也不用登入。
+        <div class="field"><input type="text" id="share-url" readonly onclick="this.select()"></div>
+        <button class="btn btn-primary btn-block" onclick="copyShareUrl()">📋 複製風紀登記連結</button>
+      </div>
+      <div class="menu-grid">
+        <button class="menu-card" onclick="dailyAsTeacher()"><b>📝 每日登記</b><span>查看或修改某一天，已送出的日子也能改、能解鎖</span></button>
+        <button class="menu-card" onclick="showScreen('weekly')"><b>📅 每週統計</b><span>每人本週次數、輔導提醒、導師備註</span></button>
+        <button class="menu-card" onclick="showScreen('monthly')"><b>📊 每月結算</b><span>月結算輔導建議、銷點、服務完成</span></button>
+        <button class="menu-card" onclick="showScreen('rules')"><b>⚙️ 登記項目與規則</b><span>改成自己的登記項目、公約、處理規則</span></button>
+        <button class="menu-card" onclick="showScreen('roster')"><b>👥 名冊設定</b><span>新增、修改同學的座號與姓名</span></button>
+        <button class="menu-card" onclick="setupStep = 1; showScreen('cloud')"><b>☁️ 雲端連線設定</b><span>第一次使用：一步一步建好試算表與後端</span></button>
+        <button class="menu-card" onclick="showScreen('backup')"><b>🧰 備份與測試資料</b><span>匯出、還原備份，載入範例資料試玩</span></button>
+        <button class="menu-card" onclick="changePin()"><b>🔑 更改導師密碼</b><span>需要先輸入舊密碼</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 還沒完成設定時的歡迎頁：導師／風紀分流 -->
+  <div id="tab-cadreurl" class="tab-content">
+    <div class="wiz">
+      <h2>班級秩序登記</h2>
+      <p class="lead">這個登記表還沒有完成設定。請選您的身分：</p>
+      <div class="menu-grid">
+        <button class="menu-card" onclick="enterTeacherMode()"><b>🧑&#8205;🏫 我是導師，第一次設定</b><span>約 10 分鐘，一步一步帶您做，只要做一次</span></button>
+        <div class="menu-card" style="cursor:default;"><b>🙋 我是風紀</b><span>導師還沒設定好。請導師先完成設定，再把「登記連結」傳給您，打開連結就能直接登記。</span></div>
+      </div>
+      <p class="lead" style="margin-top:14px; font-size:0.86rem;">🔒 登記的資料只存在導師自己的 Google 試算表，工具提供者不經手任何學生資料。</p>
+      <p style="margin-top:12px; font-size:0.88rem;"><a href="#" onclick="startLocalTrial(); return false;">先不設定，直接試玩（資料只存在這次開啟，關掉就沒了）</a></p>
+    </div>
+  </div>
+
+  <!-- 每日登記：三步 -->
+  <div id="tab-daily" class="tab-content active">
+    <div class="wiz">
+      <div class="dots" id="daily-dots"></div>
+
+      <section id="dstep-1">
+        <h2>第 1 步：哪一天、誰負責？</h2>
+        <p class="lead">確認日期和負責幹部，再按「開始登記」。</p>
+        <div class="rules-bar" id="daily-rules-bar" style="border:1px solid var(--border); border-radius:8px; margin-bottom:12px;"></div>
+        <div class="field">
+          <label for="daily-date">登記日期 <span id="daily-weekday" style="color:var(--primary);"></span></label>
+          <input type="date" id="daily-date" onchange="dailyDateChanged()">
+          <div class="toolbar-group" style="margin-top:8px;">
+            <button class="btn btn-outline" onclick="changeDate(-1)">◀ 前一天</button>
+            <button class="btn btn-outline" onclick="setToday()">今天</button>
+            <button class="btn btn-outline" onclick="changeDate(1)">後一天 ▶</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="daily-cadre">負責幹部</label>
+          <input type="text" id="daily-cadre" placeholder="輸入幹部姓名" onchange="saveDailyMeta()">
+        </div>
+        <div id="dstep1-note"></div>
+      </section>
+
+      <section id="dstep-2">
+        <h2>第 2 步：登記違規</h2>
+        <p class="lead">點一位同學，選他的違規。先口頭提醒 1 次，未改善再登記。沒有違規的同學不用點。</p>
+        <div class="stu-list" id="stu-list"></div>
+        <p id="stu-count" class="lead" style="margin-top:12px;"></p>
+      </section>
+
+      <section id="dstep-3">
+        <h2>第 3 步：確認並送出</h2>
+        <div id="submit-bar" class="submit-bar"><span id="submit-status"></span></div>
+        <div id="day-summary"></div>
+        <div class="big-actions">
+          <button id="btn-submit-day" class="btn btn-success btn-big btn-block" onclick="submitDay()">📤 送出今日登記</button>
+          <button id="btn-unlock-day" class="btn btn-warn btn-big btn-block teacher-only" onclick="unlockDay()">🔓 解除鎖定（讓風紀重新登記）</button>
+        </div>
+      </section>
+
+      <div class="wiz-nav">
+        <button id="d-prev" class="btn btn-outline btn-big" onclick="dailyPrev()">← 上一步</button>
+        <span class="spacer"></span>
+        <button id="d-next" class="btn btn-primary btn-big" onclick="dailyNext()">開始登記 →</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="sheet-overlay" class="sheet-overlay" onclick="if (event.target === this) closeStudent()"><div class="sheet" id="sheet"></div></div>
+
+  <!-- TAB 2: WEEKLY -->
+  <div id="tab-weekly" class="tab-content">
+    <div class="toolbar">
+      <div class="toolbar-group">
+        <label for="weekly-anchor-date">選擇該週任一天：</label>
+        <input type="date" id="weekly-anchor-date" onchange="renderWeeklyTable()">
+        <span id="weekly-range-label" style="font-weight:700; color:var(--primary); background:#e0f2fe; padding:4px 10px; border-radius:6px; font-size:0.88rem;"></span>
+      </div>
+      <div class="toolbar-group">
+        <button class="btn btn-outline" onclick="changeWeek(-7)">◀ 上一週</button>
+        <button class="btn btn-outline" onclick="setThisWeek()">本週</button>
+        <button class="btn btn-outline" onclick="changeWeek(7)">下一週 ▶</button>
+        <button class="btn btn-success" onclick="exportWeeklyCSV()">📥 匯出週統計 (CSV)</button>
+        <button class="btn btn-outline" onclick="window.print()">🖨️ 列印週統計表</button>
+      </div>
+    </div>
+
+    <div class="weekly-legend">
+      <div id="weekly-legend-codes"></div>
+      <div id="weekly-legend-rules"></div>
+    </div>
+
+    <div class="kpi-grid" id="weekly-kpis"></div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:48px;">座號</th>
+            <th style="width:82px;">姓名</th>
+            <th id="wk-th-0">星期一</th>
+            <th id="wk-th-1">星期二</th>
+            <th id="wk-th-2">星期三</th>
+            <th id="wk-th-3">星期四</th>
+            <th id="wk-th-4">星期五</th>
+            <th style="width:78px; background:#b45309;">週累計次數</th>
+            <th style="width:155px;">本週輔導提醒</th>
+            <th>本週輔導處理 / 導師備註</th>
+          </tr>
+        </thead>
+        <tbody id="weekly-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TAB 3: MONTHLY -->
+  <div id="tab-monthly" class="tab-content">
+    <div class="toolbar">
+      <div class="toolbar-group">
+        <label for="summary-month">結算月份：</label>
+        <input type="month" id="summary-month" onchange="renderMonthlyTable()">
+        <label style="margin-left:8px;">需處理門檻：</label>
+        <input type="number" id="threshold-service" value="3" min="1" max="20" style="width:55px;" onchange="saveSettings(); renderMonthlyTable();"> 次
+        <label style="margin-left:6px;">進階處理門檻：</label>
+        <input type="number" id="threshold-counsel" value="5" min="2" max="30" style="width:55px;" onchange="saveSettings(); renderMonthlyTable();"> 次
+      </div>
+      <div class="toolbar-group">
+        <button class="btn btn-primary" onclick="manualSyncFromCloud()">🔄 從試算表更新</button>
+        <button class="btn btn-success" onclick="exportCSV()">📥 匯出月結算 (CSV)</button>
+        <button class="btn btn-outline" onclick="window.print()">🖨️ 列印月結算表</button>
+      </div>
+    </div>
+
+    <div class="kpi-grid" id="monthly-kpis"></div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>座號</th>
+            <th>姓名</th>
+            <th class="month-sum-th">原始累計</th>
+            <th>銷點抵銷</th>
+            <th>淨違規數</th>
+            <th>月結算輔導建議</th>
+            <th>服務完成</th>
+            <th>導師月結評語</th>
+          </tr>
+        </thead>
+        <tbody id="monthly-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 雲端連線設定精靈：五步 -->
+  <div id="tab-cloud" class="tab-content">
+    <div class="wiz">
+      <div class="dots" id="setup-dots"></div>
+
+      <section id="sstep-1">
+        <h2>第 1 步：建一份新的試算表</h2>
+        <p class="lead">資料會存在這份試算表裡。請用您自己的 Google 帳號。</p>
+        <div class="big-actions">
+          <a class="btn btn-primary btn-big btn-block" href="https://sheets.new" target="_blank" rel="noopener">📄 打開新的空白試算表（新分頁）</a>
+        </div>
+        <ol class="steps-text">
+          <li>試算表打開後，左上角「未命名的試算表」點一下，改名成<strong>「班級秩序登記資料庫」</strong>，按 Enter。</li>
+          <li>這個分頁先留著，做完回來按「下一步」。</li>
+        </ol>
+      </section>
+
+      <section id="sstep-2">
+        <h2>第 2 步：貼上後端程式碼</h2>
+        <p class="lead">後端是住在試算表裡的小程式，負責收資料。</p>
+        <ol class="steps-text">
+          <li>在試算表上方選單點「<strong>擴充功能</strong>」→「<strong>Apps Script</strong>」，會開一個新分頁。</li>
+          <li>在編輯器裡按 <strong>Ctrl+A</strong> 全選，再按 <strong>Delete</strong> 刪掉原本的文字。</li>
+          <li>按下面的大按鈕複製程式碼。</li>
+          <li>回到編輯器按 <strong>Ctrl+V</strong> 貼上，再按 <strong>Ctrl+S</strong> 儲存（跳出專案名稱就填「早修登記後端」）。</li>
+        </ol>
+        <div class="big-actions">
+          <button class="btn btn-primary btn-big btn-block" onclick="copyGasCode()">📋 複製後端程式碼</button>
+        </div>
+        <details>
+          <summary>按鈕沒反應？展開程式碼，自己全選複製</summary>
+          <textarea id="gas-code-display" class="code-box" rows="8" readonly></textarea>
+        </details>
+      </section>
+
+      <section id="sstep-3">
+        <h2>第 3 步：部署成網頁應用程式</h2>
+        <ol class="steps-text">
+          <li>Apps Script 右上角藍色「<strong>部署</strong>」→「<strong>新增部署作業</strong>」。</li>
+          <li>點「選取類型」旁的齒輪，選「<strong>網頁應用程式</strong>」。</li>
+          <li>「執行身分」選<strong>我</strong>；「誰可以存取」選<strong>所有人</strong>。</li>
+          <li>按「部署」。第一次會要求授權：「授權存取」→ 選您的帳號 → 若出現「Google 尚未驗證這個應用程式」，點左下「進階」→「前往（專案名稱）（不安全）」→「允許」。</li>
+          <li>出現「網頁應用程式網址」後，按它下面的「<strong>複製</strong>」。</li>
+        </ol>
+        <div class="tip">這是您自己剛建的程式，只會讀寫您這一份試算表，授權可以放心。</div>
+        <div class="tip warn">如果「誰可以存取」找不到「所有人」，通常是學校的 Google 帳號被網管限制。請改用個人 Gmail 帳號從第 1 步重做，或請學校資訊組協助。</div>
+      </section>
+
+      <section id="sstep-4">
+        <h2>第 4 步：貼上網址並測試連線</h2>
+        <p class="lead">把第 3 步複製的網址（以 https://script.google.com/ 開頭、/exec 結尾）貼在下面。</p>
+        <div class="field">
+          <input type="url" id="gas-url-input" placeholder="https://script.google.com/macros/s/....../exec">
+        </div>
+        <div class="big-actions">
+          <button class="btn btn-primary btn-big btn-block" onclick="saveGasUrl()">💾 儲存網址並測試連線</button>
+          <button class="btn btn-outline btn-block" onclick="clearGasUrl()">清除網址</button>
+        </div>
+        <div id="connection-msg" style="margin-top:6px; font-size:0.92rem; font-weight:600;"></div>
+      </section>
+
+      <section id="sstep-5">
+        <h2>第 5 步：把網址鎖進這個畫面</h2>
+        <p class="lead">Canvas 關掉再打開，會忘記剛貼的網址（Canvas 的限制，不是壞掉）。所以要把網址「寫進」這個 Canvas 的程式碼，之後風紀打開才會自動連線。<strong>只要做一次。</strong></p>
+        <div id="bind-done" class="tip" style="display:none;">✅ 網址已經鎖進這個畫面了，這一步完成。請按「下一步」。</div>
+        <div id="bind-todo">
+          <h3 style="margin:6px 0;">做法：請 Gemini 幫您改這一行（最簡單）</h3>
+          <ol class="steps-text">
+            <li>按下面的大按鈕，複製「要貼給 Gemini 的那句話」。</li>
+            <li>貼到這個 Canvas 下方的對話輸入框（「問問 Gemini」那一格），按送出。</li>
+            <li>等約半分鐘，Gemini 說改好了、畫面重新載入，就完成。</li>
+            <li>重新載入後，按右上角「<strong>導師後台</strong>」，第一次會請您設定導師密碼，就大功告成。</li>
+          </ol>
+          <div class="big-actions">
+            <button class="btn btn-primary btn-big btn-block" onclick="copyBindPrompt()">📋 複製要貼給 Gemini 的那句話</button>
+          </div>
+          <div class="tip warn">如果畫面出現「發生錯誤」和「<strong>修正錯誤</strong>」按鈕，<strong>請不要按</strong>。那個按鈕會叫 Gemini 自己改程式，可能改壞。</div>
+          <details>
+            <summary>找不到對話輸入框，或 Gemini 沒改成功？展開看另外兩種做法</summary>
+            <div class="tip" style="margin-top:8px;">
+              <strong>做法二：自己改程式碼</strong>
+              <ol class="steps-text">
+                <li>按下面的按鈕，複製要貼的那一行。</li>
+                <li>到 Canvas 右上角，把「預覽」切到「<strong>程式碼</strong>」。</li>
+                <li>按 <strong>Ctrl+F</strong> 搜尋 <strong>EMBEDDED&#95;GAS&#95;URL</strong>，第一個結果就是程式最上面那一行：<code>const EMBEDDED&#95;GAS&#95;URL = &quot;&quot;;</code></li>
+                <li>把那一整行選起來，按 <strong>Ctrl+V</strong> 貼上取代，再切回「預覽」。</li>
+              </ol>
+              <div class="big-actions"><button class="btn btn-outline btn-block" onclick="copyBoundLine()">📋 複製要貼進程式碼的那一行</button></div>
+            </div>
+            <div class="tip warn">
+              <strong>做法三：請 Steve 幫您綁定</strong>
+              <div class="big-actions" style="margin-top:8px;"><button class="btn btn-outline btn-block" onclick="copyGasUrl()">📋 複製雲端網址（用 LINE 傳給 Steve）</button></div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="sstep-link">
+        <h2>第 6 步：把登記連結傳給風紀</h2>
+        <p class="lead">這個連結已經帶著您的雲端網址。風紀第一次打開時會問「是導師傳給您的嗎？」，按確定，這台裝置就會記住，之後直接用。<strong>請先確定第 5 步的導師密碼設好了，再傳。</strong></p>
+        <div class="field"><input type="text" id="site-link" readonly onclick="this.select()"></div>
+        <div class="big-actions">
+          <button class="btn btn-primary btn-big btn-block" onclick="copySiteLink()">📋 複製風紀登記連結</button>
+          <p class="desc">用 LINE 傳給風紀即可。風紀換一台裝置，要再打開一次這個連結。</p>
+        </div>
+      </section>
+
+      <section id="sstep-6">
+        <h2>第 6 步：設定導師密碼</h2>
+        <p class="lead" id="setup-pin-status"></p>
+        <div class="big-actions">
+          <button id="setup-pin-btn" class="btn btn-primary btn-big btn-block" onclick="setupPasswordStep()">🔐 設定導師密碼</button>
+          <p class="desc">設好密碼後，把<strong>這個 Canvas 的分享連結</strong>（Canvas 右上角的分享按鈕）用 LINE 傳給風紀。風紀打開就是登記畫面，不用貼任何東西。</p>
+        </div>
+      </section>
+
+      <div class="wiz-nav">
+        <button id="s-prev" class="btn btn-outline btn-big" onclick="setupPrev()">← 上一步</button>
+        <span class="spacer"></span>
+        <button id="s-next" class="btn btn-primary btn-big" onclick="setupNext()">下一步 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 名冊設定 -->
+  <!-- 登記項目與規則：每位老師的班規不同，在這裡自己改 -->
+  <div id="tab-rules" class="tab-content">
+    <div class="wiz">
+      <h2>登記項目與規則</h2>
+      <p class="lead">每位老師的班規不同，這裡可以改成您自己的。儲存後，風紀馬上看到新的項目；統計表和試算表的欄位也會跟著變。</p>
+      <div class="field"><label for="rules-items">登記項目（每行一項，最多 10 項）</label><textarea id="rules-items" rows="6" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.95rem;"></textarea></div>
+      <div class="tip warn">已經登記過資料之後，請<strong>只修改文字，不要調整順序或刪除項目</strong>，否則舊資料的項目會對不上。要增加項目，請加在最後面。</div>
+      <div class="field"><label for="rules-rules">公約（每行一條，風紀登記前會看到，可留空）</label><textarea id="rules-rules" rows="5" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.95rem;"></textarea></div>
+      <div class="field"><label for="rules-week">每週處理規則（每行「次數,處理方式」，一週累計滿幾次要怎麼處理）</label><textarea id="rules-week" rows="5" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.95rem;" placeholder="例如：3,班級服務"></textarea></div>
+      <div class="field"><label for="rules-weeknote">每週說明補充（選填，會顯示在週統計）</label><input type="text" id="rules-weeknote"></div>
+      <div class="field"><label>每月結算的處理用詞</label>
+        <input type="text" id="rules-m-counsel" placeholder="達進階處理門檻" style="margin-bottom:6px;">
+        <input type="text" id="rules-m-service" placeholder="達需處理門檻" style="margin-bottom:6px;">
+        <input type="text" id="rules-m-mild" placeholder="有違規但未達門檻">
+        <p class="lead" style="margin-top:6px; font-size:0.85rem;">次數門檻在「每月結算」頁上方設定。</p>
+      </div>
+      <div class="big-actions">
+        <button class="btn btn-primary btn-big btn-block" onclick="saveRulesPage()">儲存</button>
+        <button class="btn btn-outline btn-block" onclick="resetRulesPage()">還原成範例（早修五項）</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-roster" class="tab-content">
+    <div class="wiz">
+      <h2>名冊設定</h2>
+      <div class="field"><label for="class-name">班級名稱（會顯示在畫面最上面）</label><input type="text" id="class-name" placeholder="例如：七年八班"></div>
+      <p class="lead">名冊每行一位，格式「座號,姓名」，例如 01,王小明。改完按儲存，會同步上傳試算表。</p>
+      <textarea id="roster-editor" rows="14" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:8px; font-family:monospace; font-size:0.95rem;"></textarea>
+      <div style="margin-top:12px;"><button class="btn btn-primary btn-big btn-block" onclick="saveRoster()">儲存名冊變更</button></div>
+    </div>
+  </div>
+
+  <!-- 備份與測試資料 -->
+  <div id="tab-backup" class="tab-content">
+    <div class="wiz">
+      <h2>備份與測試資料</h2>
+      <p class="lead">建議每個月匯出一次備份存在自己的電腦。</p>
+      <div class="big-actions">
+        <button class="btn btn-outline btn-big btn-block" onclick="exportJSON()">📤 匯出備份檔 (.json)</button>
+        <label class="btn btn-outline btn-big btn-block" style="cursor:pointer;">📥 匯入還原備份
+          <input type="file" accept=".json" style="display:none;" onchange="importJSON(event)">
+        </label>
+        <button class="btn btn-warn btn-big btn-block" onclick="loadDemoData()">✨ 載入本週範例資料（試玩用）</button>
+        <p class="desc">範例資料會混進目前的紀錄，試玩完可以按下面的清空。</p>
+        <button class="btn btn-danger btn-big btn-block" onclick="clearAllData()">🗑️ 清空所有登記資料</button>
+        <p class="desc">會清空所有登記、週月備註與送出鎖，連試算表上的資料也會一起清掉，無法復原。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// 出錯時把真正的錯誤訊息顯示在畫面下方（Canvas 只會顯示「執行程式碼時發生問題」，看不出原因）
+function showFatalError(msg) {
+  let box = document.getElementById("fatal-error-box");
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "fatal-error-box";
+    box.style.cssText = "position:fixed;left:8px;right:8px;bottom:8px;z-index:99999;background:#7f1d1d;color:#fff;padding:10px 14px;border-radius:8px;font-size:13px;line-height:1.5;white-space:pre-wrap;word-break:break-all;";
+    document.body.appendChild(box);
+  }
+  box.textContent = "程式錯誤：" + msg + "\n（請把這段文字截圖或複製給 Steve）";
+}
+window.addEventListener("error", e => showFatalError(e.message + "（第 " + (e.lineno || "?") + " 行，" + String(e.filename || "").slice(-40) + "）"));
+window.addEventListener("unhandledrejection", e => showFatalError("未處理的非同步錯誤：" + (e.reason && e.reason.message || e.reason)));
+
+const EMBEDDED_GAS_URL = "";
+const IS_SITE = true;     // 官網版：建置時改成 true（連結自帶網址、瀏覽器記得住）
+const IS_HOSTED = false;   // 一包版（網頁由老師自己的 Apps Script 提供）時，由後端改成 true
+
+const GAS_BACKEND_SCRIPT = `// ==========================================
+// 班級秩序登記系統 - Google Apps Script 後端（v3：一筆資料一列）
+// 自動建立分頁：
+// 1. 「資料庫」：A 欄＝資料鍵、B 欄＝內容。網頁只送「有變動的那幾列」，兩台裝置不會互相覆蓋。
+// 2. 「每日明細總表」：自動展開成人類可讀的每日違規紀錄，方便導師直接檢視！
+// ==========================================
+
+var DB_SHEET = "資料庫";
+
+// 導師密碼不用改程式碼：部署後在登記系統按「導師後台」，第一次會請您設定密碼。
+// 密碼只存「雜湊值」（無法還原成原文），放在指令碼屬性，不會出現在試算表裡。
+function pinHash_(pin) {
+  var raw = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, "morning-study-78:" + String(pin));
+  return raw.map(function(b) {
+    var v = (b < 0 ? b + 256 : b).toString(16);
+    return v.length === 1 ? "0" + v : v;
+  }).join("");
+}
+
+function getPinHash_() {
+  return PropertiesService.getScriptProperties().getProperty("TEACHER_PIN_HASH") || "";
+}
+
+function pinUnset_() {
+  return getPinHash_() === "";
+}
+
+// 防亂猜：有輸入密碼卻錯，累計 5 次就鎖 10 分鐘（鎖定期間連正確密碼也先不通過）
+function pinLocked_() {
+  return Number(CacheService.getScriptCache().get("pinfail") || 0) >= 5;
+}
+
+function pinOk_(pin) {
+  if (pinUnset_() || pinLocked_()) return false;
+  var cache = CacheService.getScriptCache();
+  if (pinHash_(pin) === getPinHash_()) {
+    cache.remove("pinfail");
+    return true;
+  }
+  if (String(pin || "") !== "") {
+    cache.put("pinfail", String(Number(cache.get("pinfail") || 0) + 1), 600);
+  }
+  return false;
+}
+
+function reply_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+function doGet(e) {
+  // 「一包版」才有 APP_B64（整個登記網頁）：直接打開這個網址就是登記系統；網頁自己讀寫資料時才會帶 ?api=1
+  if (typeof APP_B64 !== "undefined" && !(e && e.parameter && e.parameter.api === "1")) {
+    return servePage_();
+  }
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var flat = readDb_(ss);
+  var known = 0;
+  Object.keys(flat).forEach(function(k) { if (k.indexOf("meta|") !== 0) known++; });
+
+  var result = {
+    status: "ok",
+    hasData: known > 0,
+    flat: flat,
+    serverTime: new Date().toISOString()
+  };
+
+  return ContentService
+    .createTextOutput(JSON.stringify(result))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function servePage_() {
+  var html = Utilities.newBlob(Utilities.base64Decode(APP_B64.join(""))).getDataAsString("UTF-8");
+  var url = ScriptApp.getService().getUrl();
+  // 學校（網域）帳號會得到 /a/網域/macros/... 的網址，沒登入的風紀不一定打得開，一律轉成一般版網址
+  var mi = url.indexOf("/macros/");
+  if (url.indexOf("/a/") > -1 && url.indexOf("/a/") < mi) url = "https://script.google.com" + url.slice(mi);
+  // 把自己的網址寫進網頁，並標記為「一包版」：不用貼網址、不用綁定
+  html = html.replace('const EMBEDDED_GAS_URL = "";', 'const EMBEDDED_GAS_URL = "' + url + '";');
+  html = html.replace("const IS_HOSTED = false;", "const IS_HOSTED = true;");
+  return HtmlService.createHtmlOutput(html)
+    .setTitle("班級秩序登記表")
+    .addMetaTag("viewport", "width=device-width, initial-scale=1");
+}
+
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.tryLock(10000);
+  try {
+    var payload = JSON.parse(e.postData.contents);
+    if (payload.action === "checkpin") {
+      var okNow = pinOk_(payload.pin);
+      return reply_({ status: "ok", pinOk: okNow, pinUnset: pinUnset_(), locked: pinLocked_() });
+    }
+    if (payload.action === "setpin") {
+      // 還沒有密碼：第一個設定的人就是導師；已有密碼：要輸入舊密碼才能改
+      var newPin = String(payload.newPin || "");
+      if (newPin.length < 6) return reply_({ status: "error", code: "short", message: "密碼至少 6 碼" });
+      if (!pinUnset_() && !pinOk_(payload.pin)) return reply_({ status: "error", code: "forbidden", message: pinLocked_() ? "猜錯太多次，請 10 分鐘後再試" : "舊密碼不正確" });
+      PropertiesService.getScriptProperties().setProperty("TEACHER_PIN_HASH", pinHash_(newPin));
+      return reply_({ status: "ok" });
+    }
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var flat = readDb_(ss);
+
+    var setMap = payload.set || {};
+    var delList = payload.del || [];
+
+    // 權限檢查（一定要在這裡擋，網頁上的限制使用者改得動）：
+    // 沒有導師密碼的人，只能「改尚未送出的日子」和「新增送出鎖」，其他一律拒絕。
+    if (!pinOk_(payload.pin)) {
+      var bad = [];
+      var lockedDates = [];
+      Object.keys(setMap).concat(delList).forEach(function(k) {
+        var p = k.split("|");
+        if (p[0] === "d") {
+          if (flat["l|" + p[1] + "|@lock"] !== undefined) { bad.push(k); lockedDates.push(p[1]); }
+        } else if (p[0] === "l") {
+          if (delList.indexOf(k) >= 0 || (flat[k] !== undefined && flat[k] !== String(setMap[k]))) { bad.push(k); lockedDates.push(p[1]); }
+        } else {
+          bad.push(k);
+        }
+      });
+      if (bad.length > 0) {
+        return reply_({ status: "error", code: "forbidden", message: "沒有權限或該日已送出鎖定", keys: bad, lockedDates: lockedDates });
+      }
+    }
+
+    Object.keys(setMap).forEach(function(k) { flat[k] = String(setMap[k]); });
+    delList.forEach(function(k) { delete flat[k]; });
+    flat["meta|updated"] = Utilities.formatDate(new Date(), "Asia/Taipei", "yyyy-MM-dd HH:mm:ss");
+
+    writeDb_(ss, flat);
+    syncReadableSheet_(ss, flat);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: "ok", savedAt: new Date().toISOString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: "error", message: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function getOrCreateSheet_(ss, name) {
+  var sheet = ss.getSheetByName(name);
+  if (!sheet) {
+    sheet = ss.insertSheet(name);
+  }
+  return sheet;
+}
+
+function readDb_(ss) {
+  var sheet = getOrCreateSheet_(ss, DB_SHEET);
+  var last = sheet.getLastRow();
+  var flat = {};
+  if (last >= 1) {
+    var vals = sheet.getRange(1, 1, last, 2).getValues();
+    vals.forEach(function(r) {
+      if (r[0]) flat[String(r[0])] = String(r[1]);
+    });
+  }
+  return flat;
+}
+
+function writeDb_(ss, flat) {
+  var sheet = getOrCreateSheet_(ss, DB_SHEET);
+  var rows = Object.keys(flat).sort().map(function(k) { return [k, flat[k]]; });
+  sheet.clearContents();
+  if (rows.length > 0) {
+    sheet.getRange(1, 1, rows.length, 2).setValues(rows);
+  }
+}
+
+function syncReadableSheet_(ss, flat) {
+  var sheet = getOrCreateSheet_(ss, "每日明細總表");
+  var rosterMap = {};
+  try {
+    (JSON.parse(flat["roster"] || "[]")).forEach(function(st) { rosterMap[st.id] = st.name; });
+  } catch (err) {}
+
+  var lockAt = {};
+  Object.keys(flat).forEach(function(k) {
+    var p = k.split("|");
+    if (p[0] === "l" && p.length === 3) {
+      try { lockAt[p[1]] = JSON.parse(flat[k]).at || "已送出"; } catch (err) { lockAt[p[1]] = "已送出"; }
+    }
+  });
+
+  var days = {};
+  Object.keys(flat).forEach(function(k) {
+    var p = k.split("|");
+    if (p[0] !== "d" || p.length !== 3) return;
+    if (!days[p[1]]) days[p[1]] = { cadre: "", students: {} };
+    try {
+      if (p[2] === "@cadre") days[p[1]].cadre = JSON.parse(flat[k]);
+      else days[p[1]].students[p[2]] = JSON.parse(flat[k]);
+    } catch (err) {}
+  });
+
+  var items = ["未速交聯絡簿", "7:40後吃早餐", "擅自走動離座", "交談發出噪音", "未看書做無關的事"];
+  try {
+    var cfg = JSON.parse(flat["settings"] || "{}");
+    if (cfg.items && cfg.items.length) items = cfg.items;
+  } catch (err) {}
+
+  var rows = [["日期", "負責幹部", "座號", "姓名"].concat(items).concat(["當日違規合計", "口頭提醒次數", "幹部備註", "風紀送出時間"])];
+  Object.keys(days).sort().reverse().forEach(function(dateStr) {
+    var dayRec = days[dateStr];
+    Object.keys(dayRec.students).sort().forEach(function(sid) {
+      var s = dayRec.students[sid];
+      var v = s.v || [];
+      var marks = [];
+      var sum = 0;
+      for (var q = 0; q < items.length; q++) {
+        var on = v[q] === 1;
+        if (on) sum++;
+        marks.push(on ? "✓" : "");
+      }
+      if (sum > 0 || (s.remind || 0) > 0 || (s.note && s.note.trim() !== "")) {
+        rows.push([dateStr, dayRec.cadre || "", sid, rosterMap[sid] || ""].concat(marks).concat([sum, s.remind || 0, s.note || "", lockAt[dateStr] || "尚未送出"]));
+      }
+    });
+  });
+
+  sheet.clearContents();
+  sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
+  sheet.getRange(1, 1, 1, rows[0].length).setFontWeight("bold").setBackground("#1e3a5f").setFontColor("#ffffff");
+}`;
+
+const DEFAULT_ROSTER = [
+  { id: "01", name: "同學01" }, { id: "02", name: "同學02" }, { id: "03", name: "同學03" }, { id: "04", name: "同學04" }, { id: "05", name: "同學05" }, { id: "06", name: "同學06" }, { id: "07", name: "同學07" }, { id: "08", name: "同學08" }, { id: "09", name: "同學09" }, { id: "10", name: "同學10" }, { id: "11", name: "同學11" }, { id: "12", name: "同學12" }, { id: "13", name: "同學13" }, { id: "14", name: "同學14" }, { id: "15", name: "同學15" }, { id: "16", name: "同學16" }, { id: "17", name: "同學17" }, { id: "18", name: "同學18" }, { id: "19", name: "同學19" }, { id: "20", name: "同學20" }, { id: "21", name: "同學21" }, { id: "22", name: "同學22" }, { id: "23", name: "同學23" }, { id: "24", name: "同學24" }, { id: "25", name: "同學25" }
+];
+
+const STORAGE_KEY = "class708_morning_study_gsheet_v3";
+const GAS_URL_KEY = "class708_gas_webapp_url";
+
+// ===== 導師可自訂：登記項目、公約、每週處理規則、月結用詞（預設＝早修五項） =====
+const CIRC_ALL = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"];
+const DEFAULT_ITEMS = ["未速交／排好聯絡簿", "7:40 後吃早餐", "擅自走動／離座", "交談／發出噪音", "未看書／做無關的事"];
+const DEFAULT_RULES = ["進教室速交聯絡簿依座號排好", "7:30 開始安靜看書・勿擅自走動或交談", "早餐盡可能在家吃完・7:40 後禁止吃早餐", "先口頭提醒 1 次，未改善再登記"];
+const DEFAULT_WEEK_RULES = [{ min: 5, text: "愛校服務＋反思單／電訪" }, { min: 3, text: "執行 1 次班級愛校服務" }, { min: 2, text: "導師約談／聯絡簿提醒" }, { min: 1, text: "觀察提醒" }];
+const DEFAULT_WEEK_NOTE = "連續 5 日零違規可申請銷點 1 次";
+const DEFAULT_MONTH_TEXTS = { counsel: "愛校服務＋反思單／電訪", service: "需執行班級愛校服務", mild: "導師口頭提醒／聯絡簿告知" };
+const cfg = () => (appData && appData.settings) || {};
+function getItems() { const a = cfg().items; return (Array.isArray(a) && a.length) ? a : DEFAULT_ITEMS; }
+function getRules() { const a = cfg().rules; return Array.isArray(a) ? a : DEFAULT_RULES; }
+function getWeekRules() { const a = cfg().weekRules; return (Array.isArray(a) ? a : DEFAULT_WEEK_RULES).slice().sort((x, y) => y.min - x.min); }
+function getWeekNote() { const n = cfg().weekNote; return typeof n === "string" ? n : DEFAULT_WEEK_NOTE; }
+function getMonthTexts() { return { ...DEFAULT_MONTH_TEXTS, ...(cfg().monthTexts || {}) }; }
+function zeroV() { return new Array(getItems().length).fill(0); }
+function vSum(v) { const n = getItems().length; let t = 0; for (let i = 0; i < n; i++) if (v && v[i] === 1) t++; return t; }   // 只算目前有的項目
+function itemTag(i) { return CIRC_ALL[i] + getItems()[i]; }
+function filePrefix() { const c = (cfg().className || "").trim(); return (c || "班級") + "_"; }
+function weekAdvice(sum) {
+  const rules = getWeekRules();
+  const classes = ["badge-high", "badge-mid", "badge-low"];
+  for (let k = 0; k < rules.length; k++) {
+    if (sum >= rules[k].min) {
+      const t = escapeHtml(rules[k].text);
+      return { text: rules[k].text, html: k < 3 ? `<span class="badge ${classes[k]}">${t}</span>` : `<span style="color:#64748b; font-size:0.8rem;">${t}</span>` };
+    }
+  }
+  return { text: "表現優良", html: `<span class="badge badge-zero">🌟 本週表現優良</span>` };
+}
+function weekAlertMin() { const r = getWeekRules(); return r.length >= 2 ? r[r.length - 2].min : (r.length ? r[0].min : 2); }
+
+let appData = {
+  roster: DEFAULT_ROSTER,
+  records: {},
+  weeklyMeta: {},   // { "YYYY-MM-DD(Mon)": { "01": { note: "" } } }
+  monthlyMeta: {},  // { "YYYY-MM": { "01": { offset: 0, done: false, comment: "" } } }
+  locks: {},        // { "YYYY-MM-DD": { at: "送出時間" } }，有鎖的日子風紀不能再改
+  settings: { serviceThreshold: 3, counselThreshold: 5, className: "" }
+};
+
+let pushTimer = null;
+
+function getGasUrl() {
+  return (localStorage.getItem(GAS_URL_KEY) || EMBEDDED_GAS_URL || "").trim();
+}
+
+function setSyncStatus(state, text) {
+  const dot = document.getElementById("sync-dot");
+  const label = document.getElementById("sync-text");
+  dot.className = "sync-dot " + state;
+  label.textContent = text;
+}
+
+// ==========================================
+// 雲端同步（v3）：三方合併，一筆資料一列
+// 「flat」＝把 appData 攤平成 { 資料鍵: JSON 字串 }：
+//   d|日期|座號（某天某位學生）、d|日期|@cadre（當天負責幹部）、
+//   w|週鍵|座號、m|月份|座號（週／月備註與銷點）、roster、settings
+// 「snapshot」＝這台上次跟雲端對過的樣子。本機現況跟它比，差異就是「還沒送出的修改」。
+// ==========================================
+const SNAP_KEY = "class708_cloud_snapshot_v3";
+const EMPTY_DATA = () => ({ roster: DEFAULT_ROSTER, records: {}, weeklyMeta: {}, monthlyMeta: {}, locks: {}, settings: { serviceThreshold: 3, counselThreshold: 5, className: "" } });
+let role = "cadre";       // "cadre"＝風紀登記畫面；"teacher"＝導師後台
+let teacherPin = "";      // 導師密碼只放記憶體，重新整理就要再輸入
+// 真的通過密碼驗證的導師。第一次設定時（還沒有網址）可以不用密碼進設定頁，但那時同步一律當風紀處理
+const teacherAuthed = () => role === "teacher" && !!teacherPin;
+let snapshot = null;      // null＝這台還沒跟雲端對過
+let pushing = false;
+let pushAgain = false;
+
+function flatten(data) {
+  const f = {};
+  Object.entries(data.records || {}).forEach(([date, day]) => {
+    if (day.cadre) f["d|" + date + "|@cadre"] = JSON.stringify(day.cadre);
+    Object.entries(day.students || {}).forEach(([sid, s]) => { f["d|" + date + "|" + sid] = JSON.stringify(s); });
+  });
+  Object.entries(data.weeklyMeta || {}).forEach(([wk, o]) => {
+    Object.entries(o || {}).forEach(([sid, m]) => { f["w|" + wk + "|" + sid] = JSON.stringify(m); });
+  });
+  Object.entries(data.monthlyMeta || {}).forEach(([mo, o]) => {
+    Object.entries(o || {}).forEach(([sid, m]) => { f["m|" + mo + "|" + sid] = JSON.stringify(m); });
+  });
+  Object.entries(data.locks || {}).forEach(([date, l]) => { f["l|" + date + "|@lock"] = JSON.stringify(l); });
+  f["roster"] = JSON.stringify(data.roster || DEFAULT_ROSTER);
+  f["settings"] = JSON.stringify(data.settings || EMPTY_DATA().settings);
+  return f;
+}
+
+function unflatten(f) {
+  const data = EMPTY_DATA();
+  Object.entries(f).forEach(([k, val]) => {
+    const p = k.split("|");
+    try {
+      if (k === "roster") data.roster = JSON.parse(val);
+      else if (k === "settings") data.settings = JSON.parse(val);
+      else if (p.length === 3 && p[0] === "d") {
+        if (!data.records[p[1]]) data.records[p[1]] = { cadre: "", students: {} };
+        if (p[2] === "@cadre") data.records[p[1]].cadre = JSON.parse(val);
+        else data.records[p[1]].students[p[2]] = JSON.parse(val);
+      } else if (p.length === 3 && p[0] === "l") {
+        data.locks[p[1]] = JSON.parse(val);
+      } else if (p.length === 3 && p[0] === "w") {
+        if (!data.weeklyMeta[p[1]]) data.weeklyMeta[p[1]] = {};
+        data.weeklyMeta[p[1]][p[2]] = JSON.parse(val);
+      } else if (p.length === 3 && p[0] === "m") {
+        if (!data.monthlyMeta[p[1]]) data.monthlyMeta[p[1]] = {};
+        data.monthlyMeta[p[1]][p[2]] = JSON.parse(val);
+      }
+    } catch (e) { console.error("略過壞掉的資料列", k, e); }
+  });
+  if (!Array.isArray(data.roster) || data.roster.length === 0) data.roster = DEFAULT_ROSTER;
+  return data;
+}
+
+// 只留我們認得的資料鍵（後端的 meta|updated 之類不參與比對）
+function keepKnownKeys(f) {
+  const out = {};
+  Object.keys(f || {}).forEach(k => {
+    if (k === "roster" || k === "settings" || /^[dwml]\|[^|]+\|[^|]+$/.test(k)) out[k] = String(f[k]);
+  });
+  return out;
+}
+
+// 以雲端為底，疊上「本機還沒送出的修改」
+function mergeFlat(cloud, local, snap, isTeacher) {
+  const out = { ...cloud };
+  new Set([...Object.keys(local), ...Object.keys(snap)]).forEach(k => {
+    if (local[k] === snap[k]) return;                       // 本機沒動過，以雲端為準
+    if (!isTeacher) {                                       // 風紀只能改「尚未送出的日子」，其他以雲端為準
+      const p = k.split("|");
+      if (p[0] !== "d" && p[0] !== "l") return;
+      if (p[0] === "d" && cloud["l|" + p[1] + "|@lock"] !== undefined) return;
+      if (p[0] === "l" && cloud[k] !== undefined && cloud[k] !== local[k]) return;
+    }
+    if (local[k] === undefined) delete out[k]; else out[k] = local[k];
+  });
+  return out;
+}
+
+function computePatch() {
+  const cur = flatten(appData);
+  const snap = snapshot || flatten(EMPTY_DATA());
+  const set = {}, del = [];
+  const allowed = (k) => teacherAuthed() || /^[dl]\|/.test(k);   // 風紀只會送日紀錄與送出鎖
+  Object.keys(cur).forEach(k => { if (allowed(k) && cur[k] !== snap[k]) set[k] = cur[k]; });
+  Object.keys(snap).forEach(k => { if (allowed(k) && cur[k] === undefined) del.push(k); });
+  const patch = { set, del };
+  if (teacherAuthed()) patch.pin = teacherPin;
+  return patch;
+}
+
+function loadLocalState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      appData = { ...appData, ...parsed };
+      if (!appData.roster || appData.roster.length === 0) appData.roster = DEFAULT_ROSTER;
+      if (!appData.weeklyMeta) appData.weeklyMeta = {};
+      if (!appData.monthlyMeta) appData.monthlyMeta = {};
+      if (!appData.locks) appData.locks = {};
+    }
+    const snapRaw = localStorage.getItem(SNAP_KEY);
+    if (snapRaw) snapshot = JSON.parse(snapRaw);
+  } catch (e) {
+    console.error("Local load error", e);
+  }
+}
+
+function saveLocalState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+    if (snapshot) localStorage.setItem(SNAP_KEY, JSON.stringify(snapshot));
+    else localStorage.removeItem(SNAP_KEY);
+  } catch (e) {}
+}
+
+function scheduleCloudPush() {
+  saveLocalState();
+  const url = getGasUrl();
+  if (!url) return;
+  setSyncStatus("syncing", "準備上傳雲端...");
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(() => {
+    pushToCloud(false);
+  }, 1200);
+}
+
+function nowHHMM() {
+  const now = new Date();
+  return String(now.getHours()).padStart(2, "0") + ":" + String(now.getMinutes()).padStart(2, "0");
+}
+
+async function pushToCloud(showNotify = false) {
+  saveLocalState();
+  const url = getGasUrl();
+  if (!url) {
+    if (showNotify) showToast("💾 已儲存在本機瀏覽器（尚未設定試算表網址）");
+    return;
+  }
+  if (pushing) { pushAgain = true; return; }
+  const patch = computePatch();
+  if (Object.keys(patch.set).length === 0 && patch.del.length === 0) {
+    setSyncStatus("online", `已同步試算表（${nowHHMM()}）`);
+    if (showNotify) showToast("☁️ 已是最新，沒有需要上傳的修改");
+    return;
+  }
+  pushing = true;
+  let rejected = null;
+  setSyncStatus("syncing", "正在上傳至 Google 試算表...");
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(patch)
+    });
+    const json = await res.json();
+    if (json.status === "ok") {
+      const base = { ...(snapshot || flatten(EMPTY_DATA())) };      // 只把「剛送出的」記成已對過
+      Object.entries(patch.set).forEach(([k, v]) => { base[k] = v; });
+      patch.del.forEach(k => { delete base[k]; });
+      snapshot = base;
+      saveLocalState();
+      setSyncStatus("online", `已同步試算表（${nowHHMM()}）`);
+      if (showNotify) showToast("☁️ 已成功儲存並同步至 Google 試算表！");
+    } else if (json.code === "forbidden") {
+      rejected = json;                                  // 後端拒絕（已送出鎖定或沒有權限），下面處理
+    } else {
+      throw new Error(json.message || "寫入失敗");
+    }
+  } catch (err) {
+    console.error("Push error:", err);
+    setSyncStatus("error", "雲端同步失敗（已暫存本機，連線後會自動補送）");
+    if (showNotify) showToast("⚠️ 雲端同步失敗，請檢查網址或網路連線");
+  } finally {
+    pushing = false;
+    if (pushAgain) { pushAgain = false; scheduleCloudPush(); }
+  }
+  if (rejected) await handleRejectedPush(rejected);
+}
+
+// 後端拒絕了這次上傳：該日已被鎖定，或導師密碼不對／被改過。把本機被拒絕的修改丟掉，改回雲端的樣子。
+async function handleRejectedPush(r) {
+  const dates = [...new Set(r.lockedDates || [])];
+  if (role === "teacher" && dates.length === 0) {
+    leaveTeacherMode();
+    showToast("❌ 導師密碼不正確或已更改，已退出導師後台，請重新登入");
+  } else if (dates.length > 0) {
+    showToast("🔒 " + dates.join("、") + " 已送出鎖定，剛剛的修改沒有存入。要修改請找導師");
+  } else {
+    showToast("⚠️ 沒有權限，修改沒有存入");
+  }
+  await pullFromCloud(false);
+}
+
+async function pullFromCloud(showNotify = false) {
+  const url = getGasUrl();
+  if (!url) {
+    setSyncStatus("", "尚未設定雲端網址（本機模式）");
+    return false;
+  }
+  setSyncStatus("syncing", "正在從 Google 試算表讀取最新資料...");
+  try {
+    const res = await fetch(url + "?api=1&t=" + Date.now());
+    const json = await res.json();
+    if (json.status !== "ok") throw new Error("讀取失敗");
+    if (json.data !== undefined && json.flat === undefined) {
+      setSyncStatus("error", "後端程式碼是舊版，請重新複製貼上並重新部署");
+      if (showNotify) showToast("❌ Apps Script 後端還是舊版，請到設定頁重新複製程式碼並更新部署");
+      return false;
+    }
+    const cloud = json.hasData ? keepKnownKeys(json.flat) : {};
+    const local = flatten(appData);
+    const snap = snapshot || flatten(EMPTY_DATA());
+    // 雲端空的：本機全部都算「還沒送出」，下面會整批補送
+    appData = unflatten(json.hasData ? mergeFlat(cloud, local, snap, teacherAuthed()) : local);
+    snapshot = cloud;
+    saveLocalState();
+    renderRosterEditor();
+    renderDailyTable();
+    renderWeeklyTable();
+    renderMonthlyTable();
+    if (curScreen === "home") renderHomeStatus();
+    await pushToCloud(false);                      // 把本機還沒送出的修改補上去
+    setSyncStatus("online", `已同步試算表（${nowHHMM()}）`);
+    if (showNotify) showToast("🔄 已從 Google 試算表載入最新紀錄！");
+    return true;
+  } catch (err) {
+    console.error("Pull error:", err);
+    setSyncStatus("error", "無法連線試算表（請檢查部署權限）");
+    if (showNotify) showToast("❌ 無法讀取試算表，請確認部署權限設為「所有人」");
+    return false;
+  }
+}
+
+function manualSyncFromCloud() {
+  if (!getGasUrl()) {
+    showToast("ℹ️ 請先至「☁️ Google 試算表連線與協作平台設定」貼上網址");
+    return;
+  }
+  pullFromCloud(true);
+}
+
+async function saveGasUrl(inputId = "gas-url-input", msgId = "connection-msg") {
+  const val = document.getElementById(inputId).value.trim();
+  const msgEl = document.getElementById(msgId);
+  document.getElementById("gas-url-input").value = val;
+  if (!val.startsWith("https://script.google.com/")) {
+    msgEl.style.color = "var(--danger)";
+    msgEl.textContent = "❌ 網址格式不正確，請貼上以 https://script.google.com/ 開頭的網頁應用程式網址。";
+    return;
+  }
+  if (val !== getGasUrl()) snapshot = null;   // 換了一份試算表，之前對過的紀錄不能拿來比
+  localStorage.setItem(GAS_URL_KEY, val);
+  msgEl.style.color = "var(--warn)";
+  msgEl.textContent = "⏳ 正在測試與 Google 試算表連線...";
+  const ok = await pullFromCloud(false);
+  if (ok) {
+    msgEl.style.color = "var(--success)";
+    msgEl.textContent = "✅ 連線成功！已與您的 Google 試算表雙向同步。";
+    updateCadreUrlCard();
+    if (role === "teacher" && !teacherPin) {          // 第一次設定：接著進第 5 步設密碼
+      setupStep = (IS_SITE || !EMBEDDED_GAS_URL) ? 5 : 6;
+      renderSetup();
+      showToast(IS_SITE ? "✅ 連線成功！下一步：設定導師密碼" : (EMBEDDED_GAS_URL ? "✅ 連線成功！最後一步：設定導師密碼" : "✅ 連線成功！下一步：把網址鎖進這個畫面"));
+    } else {
+      showToast("✅ 試算表連線測試成功！");
+    }
+  } else {
+    msgEl.style.color = "var(--danger)";
+    msgEl.textContent = "❌ 連線失敗！請確認 Apps Script 部署時「誰可以存取」已選為「所有人 (Anyone)」。";
+  }
+}
+
+function clearGasUrl() {
+  localStorage.removeItem(GAS_URL_KEY);
+  snapshot = null;
+  saveLocalState();
+  document.getElementById("gas-url-input").value = "";
+  document.getElementById("connection-msg").textContent = "";
+  updateCadreUrlCard();
+  setSyncStatus("", "尚未設定雲端網址（本機模式）");
+  showToast("已清除雲端網址設定");
+}
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2600);
+}
+
+function formatDateYMD(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+function getTodayStr() {
+  return formatDateYMD(new Date());
+}
+
+// Get Monday..Friday date strings for a given anchor YYYY-MM-DD
+function getWeekDates(anchorDateStr) {
+  const d = new Date(anchorDateStr + "T00:00:00");
+  const day = d.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+  const diffToMon = (day === 0 ? -6 : 1 - day);
+  const mon = new Date(d);
+  mon.setDate(d.getDate() + diffToMon);
+  const dates = [];
+  for (let i = 0; i < 5; i++) {
+    const cur = new Date(mon);
+    cur.setDate(mon.getDate() + i);
+    dates.push(formatDateYMD(cur));
+  }
+  return dates;
+}
+
+function setToday() {
+  document.getElementById("daily-date").value = getTodayStr();
+  renderDailyTable();
+}
+
+function changeDate(delta) {
+  const input = document.getElementById("daily-date");
+  const cur = new Date((input.value || getTodayStr()) + "T00:00:00");
+  cur.setDate(cur.getDate() + delta);
+  input.value = formatDateYMD(cur);
+  renderDailyTable();
+}
+
+function setThisWeek() {
+  document.getElementById("weekly-anchor-date").value = getTodayStr();
+  renderWeeklyTable();
+}
+
+function changeWeek(deltaDays) {
+  const input = document.getElementById("weekly-anchor-date");
+  const cur = new Date((input.value || getTodayStr()) + "T00:00:00");
+  cur.setDate(cur.getDate() + deltaDays);
+  input.value = formatDateYMD(cur);
+  renderWeeklyTable();
+}
+
+function ensureDayRecord(dateStr) {
+  if (!appData.records[dateStr]) {
+    appData.records[dateStr] = { cadre: "", students: {} };
+  }
+  return appData.records[dateStr];
+}
+
+function ensureStudentDay(dateStr, sid) {
+  const dayRec = ensureDayRecord(dateStr);
+  if (!dayRec.students[sid]) {
+    dayRec.students[sid] = { v: zeroV(), remind: 0, note: "" };
+  }
+  return dayRec.students[sid];
+}
+
+function getWeeklyRawCount(anchorDateStr, sid) {
+  const weekDates = getWeekDates(anchorDateStr);
+  let total = 0;
+  weekDates.forEach(dStr => {
+    const dayRec = appData.records[dStr];
+    if (dayRec && dayRec.students && dayRec.students[sid]) {
+      const v = dayRec.students[sid].v || zeroV();
+      total += vSum(v);
+    }
+  });
+  return total;
+}
+
+function getMonthlyRawCount(monthPrefix, sid) {
+  let total = 0;
+  for (const [dateStr, dayRec] of Object.entries(appData.records)) {
+    if (dateStr.startsWith(monthPrefix) && dayRec.students && dayRec.students[sid]) {
+      const v = dayRec.students[sid].v || zeroV();
+      total += vSum(v);
+    }
+  }
+  return total;
+}
+
+// ==========================================
+// 引導式畫面：一次只顯示一件事
+// ==========================================
+const CIRC = CIRC_ALL;
+const vioLabels = () => getItems().map((t, i) => CIRC_ALL[i] + " " + t);
+const SCREEN_TITLES = { home: "導師後台", daily: "每日登記", weekly: "每週統計", monthly: "每月結算", cloud: "雲端連線設定", roster: "名冊設定", rules: "登記項目與規則", backup: "備份與測試資料" };
+const $id = (x) => document.getElementById(x);
+let curScreen = "daily";   // 目前顯示哪一頁
+let dStep = 1;             // 每日登記走到第幾步（1～3）
+let openSid = null;        // 目前打開哪位同學的登記小視窗
+let setupStep = 1;         // 雲端連線設定精靈走到第幾步（1～5）
+let localTrial = false;    // 風紀選「先不連線，直接試用」
+
+function needCadreUrl() { return role === "cadre" && !getGasUrl() && !localTrial; }
+
+function showScreen(name) {
+  if (role === "cadre" && name !== "daily" && name !== "cadreurl") name = "daily";    // 風紀只能到這兩頁
+  curScreen = name;
+  document.querySelectorAll(".tab-content").forEach(c => c.classList.toggle("active", c.id === "tab-" + name));
+  $id("backbar").classList.toggle("show", role === "teacher" && name !== "home");
+  $id("back-title").textContent = SCREEN_TITLES[name] || "";
+  if (name === "home") renderHomeStatus();
+  else if (name === "daily") renderDailyTable();
+  else if (name === "weekly") renderWeeklyTable();
+  else if (name === "monthly") renderMonthlyTable();
+  else if (name === "cloud") renderSetup();
+  else if (name === "roster") renderRosterEditor();
+  else if (name === "rules") renderRulesPage();
+  window.scrollTo(0, 0);
+}
+
+function updateCadreUrlCard() {
+  if (role !== "cadre") return;
+  if (needCadreUrl()) showScreen("cadreurl");
+  else if (curScreen === "cadreurl") showScreen("daily");
+}
+
+function startLocalTrial() { localTrial = true; showScreen("daily"); }
+
+function applyRole() {
+  document.body.classList.toggle("role-cadre", role === "cadre");
+  document.body.classList.toggle("role-teacher", role === "teacher");
+  $id("role-btn").textContent = role === "teacher" ? "🚪 退出導師後台" : "🔐 導師後台";
+  openSid = null;
+  dStep = 1;
+  if (role === "cadre") showScreen(needCadreUrl() ? "cadreurl" : "daily");
+  else showScreen("home");
+}
+
+function renderDots(el, labels, cur, clickFn) {
+  el.innerHTML = labels.map((t, i) => {
+    const n = i + 1, cls = n === cur ? "on" : (n < cur ? "done" : "");
+    const inner = `<i>${n < cur ? "✓" : n}</i>${t}`;
+    return clickFn ? `<button class="dot ${cls}" onclick="${clickFn}(${n})">${inner}</button>` : `<span class="dot ${cls}">${inner}</span>`;
+  }).join("");
+}
+
+function lastCadre() { try { return localStorage.getItem("class708_last_cadre") || ""; } catch (e) { return ""; } }
+
+function dailyDateChanged() { dStep = 1; renderDailyTable(); }
+
+function dailyAsTeacher() { dStep = 1; showScreen("daily"); }
+
+function dailyNext() {
+  const dateStr = $id("daily-date").value;
+  if (dStep === 1) {
+    if (isDayLocked(dateStr) && role === "cadre") dStep = 3;                // 已送出：風紀只能看摘要
+    else {
+      if (!$id("daily-cadre").value.trim()) { showToast("請先填「負責幹部」姓名"); $id("daily-cadre").focus(); return; }
+      saveDailyMeta();
+      dStep = 2;
+    }
+  } else if (dStep === 2) dStep = 3;
+  renderDailyTable();
+}
+
+function dailyPrev() {
+  const dateStr = $id("daily-date").value;
+  if (dStep === 3) dStep = (isDayLocked(dateStr) && role === "cadre") ? 1 : 2;
+  else if (dStep === 2) dStep = 1;
+  renderDailyTable();
+}
+
+function studentSummaryParts(s) {
+  const marks = (s.v || []).slice(0, getItems().length).map((x, i) => x === 1 ? CIRC[i] : "").filter(Boolean);
+  return { marks, remind: s.remind || 0, note: (s.note || "").trim() };
+}
+
+function renderDailyTable() {
+  const dateInput = $id("daily-date");
+  if (role === "cadre") {                       // 風紀只能登記「今天起往前 6 天內」
+    const minD = new Date();
+    minD.setDate(minD.getDate() - 6);
+    const maxStr = getTodayStr(), minStr = formatDateYMD(minD);
+    dateInput.max = maxStr;
+    dateInput.min = minStr;
+    if (dateInput.value > maxStr) dateInput.value = maxStr;
+    if (dateInput.value && dateInput.value < minStr) dateInput.value = minStr;
+  } else {
+    dateInput.removeAttribute("max");
+    dateInput.removeAttribute("min");
+  }
+  const dateStr = dateInput.value || getTodayStr();
+  if (!dateInput.value) dateInput.value = dateStr;
+  const editable = canEditDay(dateStr);
+  const dObj = new Date(dateStr + "T00:00:00");
+  const weekdays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+  $id("daily-weekday").textContent = isNaN(dObj) ? "" : `（${weekdays[dObj.getDay()]}）`;
+
+  const dayRec = ensureDayRecord(dateStr);
+  const cadreInput = $id("daily-cadre");
+  cadreInput.value = dayRec.cadre || lastCadre();       // 沿用上次的幹部姓名，省得每天重打
+  cadreInput.disabled = !editable;
+
+  [1, 2, 3].forEach(n => { $id("dstep-" + n).style.display = (n === dStep) ? "block" : "none"; });
+  renderDots($id("daily-dots"), ["日期與幹部", "登記違規", "確認送出"], dStep);
+  $id("d-prev").style.visibility = dStep === 1 ? "hidden" : "visible";
+  $id("d-next").style.display = dStep === 3 ? "none" : "";
+  $id("d-next").textContent = dStep === 1 ? ((!editable && role === "cadre") ? "查看送出摘要 →" : "開始登記 →") : "下一步：確認送出 →";
+  $id("dstep1-note").innerHTML = (!editable || isDayLocked(dateStr))
+    ? `<div class="tip">✅ 這天已於 ${escapeHtml(appData.locks[dateStr].at)} 送出。${role === "cadre" ? "不能再修改，如有錯誤請找導師。" : "導師可以修改。"}</div>` : "";
+
+  if (dStep === 2) renderStudentList(dayRec);
+  if (dStep === 3) renderDaySummary(dayRec);
+  renderRulesBar();
+  updateSubmitBar(dateStr);
+  renderStudentSheet();
+}
+
+function renderStudentList(dayRec) {
+  let marked = 0;
+  $id("stu-list").innerHTML = appData.roster.map(st => {
+    const s = dayRec.students[st.id];
+    const p = s ? studentSummaryParts(s) : { marks: [], remind: 0, note: "" };
+    const has = p.marks.length > 0 || p.remind > 0 || p.note;
+    if (has) marked++;
+    const tags = p.marks.map(m => `<span class="tag">${m}</span>`).join("")
+      + (p.remind > 0 ? `<span class="tag remind">提醒 ${p.remind}</span>` : "")
+      + (p.note ? `<span class="tag note">${escapeHtml(p.note.slice(0, 10))}</span>` : "");
+    return `<button class="stu-row ${has ? "has" : ""}" onclick="openStudent('${st.id}')"><span class="no">${st.id}</span><span class="nm">${escapeHtml(st.name)}</span><span class="tags">${tags}</span></button>`;
+  }).join("");
+  $id("stu-count").textContent = marked === 0 ? "目前沒有登記任何同學。" : `目前已登記 ${marked} 位同學。`;
+}
+
+function renderDaySummary(dayRec) {
+  const rows = appData.roster.map(st => {
+    const s = dayRec.students[st.id];
+    if (!s) return "";
+    const p = studentSummaryParts(s);
+    if (!p.marks.length && !p.remind && !p.note) return "";
+    const parts = [p.marks.join(" ")].filter(Boolean);
+    if (p.remind) parts.push(`口頭提醒 ${p.remind} 次`);
+    if (p.note) parts.push(`備註：${escapeHtml(p.note)}`);
+    return `<div class="summary-row"><strong>${st.id} ${escapeHtml(st.name)}</strong>　${parts.join("｜")}</div>`;
+  }).filter(Boolean);
+  $id("day-summary").innerHTML = (rows.length ? `<p class="lead">這天共有 ${rows.length} 位同學有登記：</p>` + rows.join("") : `<div class="summary-row">這天沒有登記任何違規（全班零違規）。</div>`);
+}
+
+// ── 點同學跳出的登記小視窗 ──
+function openStudent(sid) { openSid = sid; renderStudentSheet(); }
+function closeStudent() { openSid = null; renderDailyTable(); }
+
+function renderStudentSheet() {
+  const ov = $id("sheet-overlay");
+  if (!openSid) { ov.classList.remove("open"); return; }
+  const dateStr = $id("daily-date").value;
+  const st = appData.roster.find(x => x.id === openSid);
+  if (!st) { openSid = null; ov.classList.remove("open"); return; }
+  const s = (ensureDayRecord(dateStr).students[openSid]) || { v: zeroV(), remind: 0, note: "" };
+  const editable = canEditDay(dateStr);
+  const dis = editable ? "" : "disabled";
+  $id("sheet").innerHTML =
+    `<h3>${st.id} ${escapeHtml(st.name)}</h3>` +
+    `<div class="vio-grid">${vioLabels().map((l, i) => `<button class="vio-btn ${s.v[i] === 1 ? "on" : ""}" ${dis} onclick="toggleViolation('${st.id}', ${i})">${s.v[i] === 1 ? "✔ " : ""}${l}</button>`).join("")}</div>` +
+    `<button class="remind-btn ${s.remind > 0 ? "has-remind" : ""}" ${dis} onclick="cycleRemind('${st.id}')">${s.remind > 0 ? `已口頭提醒 ${s.remind} 次（再點加 1，滿 3 次再點歸零）` : "＋ 記一次口頭提醒"}</button>` +
+    `<input type="text" class="note-input" ${dis} value="${escapeHtml(s.note || "")}" placeholder="備註：時間或狀況（例如 07:45 講話）" onchange="updateNote('${st.id}', this.value)">` +
+    (editable ? "" : `<p class="lead">這天已送出，不能修改。</p>`) +
+    `<button class="btn btn-primary btn-big btn-block" onclick="closeStudent()">完成</button>`;
+  ov.classList.add("open");
+}
+
+// ── 導師後台首頁：最近幾天風紀有沒有送出 ──
+function copyShareUrl() {
+  const u = $id("share-url").value;
+  navigator.clipboard.writeText(u)
+    .then(() => showToast("📋 已複製風紀登記連結，可以貼到 LINE"))
+    .catch(() => {
+      const el = $id("share-url");
+      el.focus(); el.select();
+      let done = false;
+      try { done = document.execCommand("copy"); } catch (e) {}
+      showToast(done ? "📋 已複製風紀登記連結，可以貼到 LINE" : "已選取連結，請按 Ctrl+C 複製");
+    });
+}
+
+function renderHomeStatus() {
+  $id("share-card").style.display = IS_HOSTED ? "block" : "none";
+  if (IS_HOSTED) $id("share-url").value = EMBEDDED_GAS_URL;
+  const rows = [];
+  const d = new Date();
+  for (let i = 0; i < 14 && rows.length < 7; i++, d.setDate(d.getDate() - 1)) {
+    if (d.getDay() === 0 || d.getDay() === 6) continue;
+    const ds = formatDateYMD(d);
+    const day = appData.records[ds];
+    const n = day ? Object.values(day.students || {}).filter(s => { const p = studentSummaryParts(s); return p.marks.length || p.remind || p.note; }).length : 0;
+    const lk = appData.locks && appData.locks[ds];
+    const status = lk ? `✅ 已送出（${escapeHtml(lk.at)}）` : (n > 0 ? "📝 登記中，尚未送出" : "－ 沒有登記");
+    rows.push(`<tr class="${i === 0 ? "today" : ""}"><td>${ds.slice(5).replace("-", "/")}（${["日", "一", "二", "三", "四", "五", "六"][d.getDay()]}）</td><td>${status}</td><td>${n} 人</td></tr>`);
+  }
+  $id("home-status").innerHTML = `<table class="status-table"><thead><tr><th>日期</th><th>風紀送出狀況</th><th>有登記</th></tr></thead><tbody>${rows.join("")}</tbody></table>`;
+}
+
+// ── 雲端連線設定精靈 ──
+const SETUP_LABELS = IS_SITE ? ["建試算表", "貼程式碼", "部署", "貼網址", "設密碼", "傳給風紀"] : ["建試算表", "貼程式碼", "部署", "貼網址", "鎖進畫面", "設密碼"];
+// 官網版：第 5 步顯示「設密碼」區塊、第 6 步顯示「傳給風紀」區塊
+const stepSection = (n) => IS_SITE ? (n === 5 ? "sstep-6" : (n === 6 ? "sstep-link" : "sstep-" + n)) : "sstep-" + n;
+function setupGoto(n) { setupStep = n; renderSetup(); }
+function setupPrev() { if (setupStep > 1) setupStep--; renderSetup(); }
+function setupNext() {
+  if (setupStep < 6) { setupStep++; renderSetup(); return; }
+  if (!teacherAuthed()) { showToast("請先設定導師密碼"); return; }
+  showScreen("home");
+}
+
+function renderSetup() {
+  ["sstep-1", "sstep-2", "sstep-3", "sstep-4", "sstep-5", "sstep-6", "sstep-link"].forEach(id => { $id(id).style.display = "none"; });
+  $id(stepSection(setupStep)).style.display = "block";
+  if (IS_SITE) $id("site-link").value = buildSiteLink();
+  renderDots($id("setup-dots"), SETUP_LABELS, setupStep, "setupGoto");
+  $id("s-prev").style.visibility = setupStep === 1 ? "hidden" : "visible";
+  $id("s-next").textContent = setupStep === 6 ? "完成，回導師後台 →" : "下一步 →";
+  const msg = $id("connection-msg");
+  if (getGasUrl() && !msg.textContent) { msg.style.color = "var(--muted)"; msg.textContent = "目前已儲存一組網址。要換新的，貼上後再按儲存。"; }
+  $id("bind-done").style.display = EMBEDDED_GAS_URL ? "block" : "none";
+  $id("bind-todo").style.display = EMBEDDED_GAS_URL ? "none" : "block";
+  const authed = teacherAuthed();
+  $id("setup-pin-status").textContent = !getGasUrl() ? "請先完成第 4 步連線。"
+    : (authed ? (IS_SITE ? "✅ 已用導師密碼登入。按「下一步」取得風紀登記連結。" : "✅ 已用導師密碼登入。把這個 Canvas 的分享連結傳給風紀就完成了。") : "按下面的按鈕設定（或輸入）導師密碼。第一次會請您設定，至少 6 碼。");
+  $id("setup-pin-btn").textContent = authed ? "🔑 更改導師密碼" : "🔐 設定／輸入導師密碼";
+}
+
+function setupPasswordStep() {
+  if (!getGasUrl()) { showToast("請先完成第 4 步連線"); return; }
+  if (teacherAuthed()) changePin(); else enterTeacherMode();
+}
+
+// 要貼給 Gemini 的那句話（已在拋棄式 Canvas 實測：只改這一行，其餘逐字相同）
+function buildBindPrompt(url) {
+  return "請修改這個 Canvas 的程式碼，只做一件事：\n"
+    + "找到程式碼裡「從行首開始寫」的這一行：\n"
+    + 'const EMBEDDED_GAS_URL = "";\n'
+    + "把它改成：\n"
+    + 'const EMBEDDED_GAS_URL = "' + url + '";\n'
+    + "除了這一行，其他所有程式碼都不要動：不要重新排版、不要刪減、不要加註解、不要改任何文字。改完直接更新 Canvas，不用解釋。";
+}
+
+function copyBindPrompt() {
+  const u = getGasUrl();
+  if (!u) { showToast("還沒有網址，請先回第 4 步連線"); return; }
+  const text = buildBindPrompt(u);
+  const fallback = () => askConfirm("請手動複製下面這段話，貼到對話輸入框送出：\n\n" + text);
+  navigator.clipboard.writeText(text)
+    .then(() => showToast("📋 已複製！請貼到下方對話輸入框，按送出"))
+    .catch(fallback);
+}
+
+// 官網版：風紀登記連結＝這個頁面網址 ＋ #gas=<導師的雲端網址>
+function buildSiteLink() {
+  const u = getGasUrl();
+  return u ? (location.origin + location.pathname + "#gas=" + encodeURIComponent(u)) : "";
+}
+
+function copySiteLink() {
+  const el = $id("site-link");
+  if (!el.value) { showToast("還沒有網址，請先回第 4 步連線"); return; }
+  navigator.clipboard.writeText(el.value)
+    .then(() => showToast("📋 已複製風紀登記連結，可以貼到 LINE"))
+    .catch(() => {
+      el.focus(); el.select();
+      let done = false;
+      try { done = document.execCommand("copy"); } catch (e) {}
+      showToast(done ? "📋 已複製風紀登記連結，可以貼到 LINE" : "已選取連結，請按 Ctrl+C 複製");
+    });
+}
+
+// 風紀打開帶 #gas= 的連結：確認後記住這個網址（只接受 Google 的 /macros/s/…/exec 網址）
+async function adoptLinkUrl() {
+  const h = location.hash || "";
+  if (h.indexOf("#gas=") !== 0) return;
+  let u = "";
+  try { u = decodeURIComponent(h.slice(5)); } catch (e) { return; }
+  try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+  const okFmt = u.startsWith("https://script.google.com/") && u.indexOf("/macros/s/") > 0 && u.endsWith("/exec") && u.length < 400;
+  if (!okFmt) { showToast("❌ 連結裡的網址格式不正確，請向導師重新索取連結"); return; }
+  if (u === getGasUrl()) return;
+  const tail = u.slice(-14, -5);
+  if (!(await askConfirm("這個連結要連到導師的雲端資料（網址結尾 …" + tail + "）。\n是導師傳給您的嗎？"))) return;
+  try { localStorage.setItem(GAS_URL_KEY, u); } catch (e) {}
+  snapshot = null;
+  saveLocalState();
+  role = "cadre"; teacherPin = "";
+  applyRole();
+  await pullFromCloud(false);
+}
+
+function copyBoundLine() {
+  const u = getGasUrl();
+  if (!u) { showToast("還沒有網址，請先連線"); return; }
+  const line = `const EMBEDDED_GAS_URL = "${u}";`;
+  navigator.clipboard.writeText(line)
+    .then(() => showToast("📋 已複製，請貼進 Canvas「程式碼」裡取代原本那一行"))
+    .catch(() => askConfirm("請手動複製這一行，貼進 Canvas「程式碼」取代原本的 EMBEDDED_GAS_URL 那行：\n" + line));
+}
+
+function copyGasUrl() {
+  const u = getGasUrl();
+  if (!u) { showToast("還沒有網址，請先完成第 4 步"); return; }
+  navigator.clipboard.writeText(u)
+    .then(() => showToast("📋 已複製雲端網址，可以貼到 LINE 傳給風紀"))
+    .catch(() => askConfirm("請手動複製這串網址：\n" + u));
+}
+
+async function enterTeacherMode() {
+  const fromSetup = curScreen === "cloud";
+  if (!getGasUrl()) {                      // 還沒連雲端：先進後台，照精靈一步一步做
+    role = "teacher"; teacherPin = "";
+    applyRole();
+    setupStep = 1;
+    showScreen("cloud");
+    showToast("ℹ️ 尚未連線雲端：請照步驟一步一步做");
+    return;
+  }
+  try {
+    const r0 = await checkPinRemote("");
+    let pin;
+    if (r0.pinUnset) {                     // 第一次：由導師自己設定密碼，不用改程式碼
+      pin = await askNewPin("第一次使用，請設定導師密碼（至少 6 碼）。\n之後進導師後台都要輸入，請記好。");
+      if (pin === null) return;
+      const s = await postAction({ action: "setpin", newPin: pin });
+      if (s.status !== "ok") { showToast("❌ " + (s.message || "設定密碼失敗")); return; }
+      showToast("✅ 導師密碼已設定");
+    } else {
+      if (r0.locked) { showToast("🔒 密碼猜錯太多次，已暫停 10 分鐘，請稍後再試"); return; }
+      pin = await askText("請輸入導師密碼", true);
+      if (pin === null) return;
+      const r = await checkPinRemote(pin);
+      if (!r.pinOk) { showToast(r.locked ? "🔒 密碼猜錯太多次，已暫停 10 分鐘，請稍後再試" : "❌ 導師密碼不正確"); return; }
+    }
+    role = "teacher"; teacherPin = pin;
+    applyRole();
+    if (fromSetup) { setupStep = 6; showScreen("cloud"); }   // 官網版第 6 步＝傳給風紀；其他版本第 6 步＝設密碼
+    await pullFromCloud(false);
+  } catch (e) {
+    showToast("❌ 無法連線雲端，請檢查網路與網址");
+  }
+}
+
+
+// 已送出鎖定的日子，風紀不能改（畫面按鈕已停用，這裡再擋一次；真正的把關在後端）
+function guardEdit(dateStr) {
+  if (canEditDay(dateStr)) return true;
+  showToast("🔒 這天已送出鎖定，要修改請找導師");
+  renderDailyTable();
+  return false;
+}
+
+function toggleViolation(sid, idx) {
+  const dateStr = document.getElementById("daily-date").value;
+  if (!guardEdit(dateStr)) return;
+  const sRec = ensureStudentDay(dateStr, sid);
+  sRec.v[idx] = sRec.v[idx] === 1 ? 0 : 1;
+  scheduleCloudPush();
+  renderDailyTable();
+}
+
+function cycleRemind(sid) {
+  const dateStr = document.getElementById("daily-date").value;
+  if (!guardEdit(dateStr)) return;
+  const sRec = ensureStudentDay(dateStr, sid);
+  sRec.remind = ((sRec.remind || 0) + 1) % 4;
+  scheduleCloudPush();
+  renderDailyTable();
+}
+
+function updateNote(sid, val) {
+  const dateStr = document.getElementById("daily-date").value;
+  if (!guardEdit(dateStr)) return;
+  const sRec = ensureStudentDay(dateStr, sid);
+  sRec.note = val.trim();
+  scheduleCloudPush();
+}
+
+function saveDailyMeta() {
+  const dateStr = document.getElementById("daily-date").value;
+  if (!guardEdit(dateStr)) return;
+  const dayRec = ensureDayRecord(dateStr);
+  dayRec.cadre = document.getElementById("daily-cadre").value.trim();
+  try { if (dayRec.cadre) localStorage.setItem("class708_last_cadre", dayRec.cadre); } catch (e) {}
+  scheduleCloudPush();
+}
+
+// ==========================================
+// WEEKLY SUMMARY RENDER & ACTIONS
+// ==========================================
+function ensureWeeklyStudentMeta(weekKey, sid) {
+  if (!appData.weeklyMeta[weekKey]) appData.weeklyMeta[weekKey] = {};
+  if (!appData.weeklyMeta[weekKey][sid]) {
+    appData.weeklyMeta[weekKey][sid] = { note: "" };
+  }
+  return appData.weeklyMeta[weekKey][sid];
+}
+
+function renderWeeklyTable() {
+  const anchorStr = document.getElementById("weekly-anchor-date").value || getTodayStr();
+  const weekDates = getWeekDates(anchorStr);
+  const weekKey = weekDates[0]; // Monday YYYY-MM-DD
+  const dayNames = ["星期一", "星期二", "星期三", "星期四", "星期五"];
+
+  document.getElementById("weekly-range-label").textContent =
+    `統計區間：${weekDates[0].slice(5).replace("-","/")}（一） ～ ${weekDates[4].slice(5).replace("-","/")}（五）`;
+
+  weekDates.forEach((dStr, idx) => {
+    const mmdd = dStr.slice(5).replace("-", "/");
+    document.getElementById(`wk-th-${idx}`).innerHTML = `${dayNames[idx]}<br><span style="font-weight:400; font-size:0.78rem;">(${mmdd})</span>`;
+  });
+
+  $id("weekly-legend-codes").innerHTML = "<strong>📖 項目對照：</strong> " + getItems().map((t, i) => escapeHtml(itemTag(i))).join("　");
+  const wrs = getWeekRules(), wnote = getWeekNote();
+  $id("weekly-legend-rules").innerHTML = "<strong>⚖️ 週提醒門檻：</strong> " + wrs.map(r => `滿 ${r.min} 次${escapeHtml(r.text)}`).join("｜") + (wnote ? (wrs.length ? "｜" : "") + escapeHtml(wnote) : "");
+
+  const tbody = document.getElementById("weekly-tbody");
+  tbody.innerHTML = "";
+
+  const codeLabels = getItems().map((t, i) => itemTag(i));
+  let weekTotalViolations = 0;
+  let weekZeroCount = 0;
+  let weekAlertCount = 0; // >= 2
+  let activeDaysCount = weekDates.filter(d => appData.records[d]).length;
+
+  appData.roster.forEach(st => {
+    let weekSum = 0;
+    let dayCellsHtml = "";
+
+    weekDates.forEach(dStr => {
+      const dayRec = appData.records[dStr];
+      if (!dayRec) {
+        dayCellsHtml += `<td><span class="no-rec">—</span></td>`;
+        return;
+      }
+      const sRec = dayRec.students ? dayRec.students[st.id] : null;
+      const v = (sRec && sRec.v) ? sRec.v : zeroV();
+      const daySum = vSum(v);
+      weekSum += daySum;
+
+      if (daySum === 0) {
+        const remindTag = (sRec && sRec.remind > 0) ? ` <span style="color:#d97706; font-size:0.75rem;">(提${sRec.remind})</span>` : "";
+        dayCellsHtml += `<td><span class="ok-dot">✓</span>${remindTag}</td>`;
+      } else {
+        let pills = "";
+        for (let i = 0; i < codeLabels.length; i++) {
+          if (v[i] === 1) {
+            pills += `<span class="code-pill" title="${sRec.note || ''}">${codeLabels[i]}</span>`;
+          }
+        }
+        dayCellsHtml += `<td>${pills}</td>`;
+      }
+    });
+
+    weekTotalViolations += weekSum;
+    if (weekSum === 0) weekZeroCount++;
+    if (weekSum >= weekAlertMin()) weekAlertCount++;
+
+    const adviceHtml = weekAdvice(weekSum).html;
+
+    const wMeta = ensureWeeklyStudentMeta(weekKey, st.id);
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td><strong>${st.id}</strong></td>
+      <td><strong>${st.name}</strong></td>
+      ${dayCellsHtml}
+      <td style="background:#fffbeb;"><strong style="font-size:1rem; color:${weekSum >= 3 ? 'var(--danger)' : (weekSum > 0 ? 'var(--warn)' : 'var(--success)')};">${weekSum}</strong></td>
+      <td>${adviceHtml}</td>
+      <td><input type="text" class="note-input" value="${escapeHtml(wMeta.note || '')}" placeholder="填寫本週處理紀錄..." onchange="updateWeeklyNote('${weekKey}', '${st.id}', this.value)"></td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById("weekly-kpis").innerHTML = `
+    <div class="kpi-card">
+      <div class="kpi-title">📅 本週已登記天數</div>
+      <div class="kpi-val">${activeDaysCount} / 5 天</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--success);">
+      <div class="kpi-title">🌟 本週零違規人數</div>
+      <div class="kpi-val" style="color:var(--success);">${weekZeroCount} / ${appData.roster.length} 人</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--warn);">
+      <div class="kpi-title">💬 達處理門檻（≥${weekAlertMin()}次）</div>
+      <div class="kpi-val" style="color:var(--warn);">${weekAlertCount} 人</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--danger);">
+      <div class="kpi-title">📊 本週全班違規總人次</div>
+      <div class="kpi-val" style="color:var(--danger);">${weekTotalViolations} 次</div>
+    </div>
+  `;
+}
+
+function updateWeeklyNote(weekKey, sid, val) {
+  const wMeta = ensureWeeklyStudentMeta(weekKey, sid);
+  wMeta.note = val.trim();
+  scheduleCloudPush();
+}
+
+function exportWeeklyCSV() {
+  const anchorStr = document.getElementById("weekly-anchor-date").value || getTodayStr();
+  const weekDates = getWeekDates(anchorStr);
+  const weekKey = weekDates[0];
+  const codeLabels = getItems().map((t, i) => itemTag(i));
+
+  let csv = `\uFEFF座號,姓名,星期一(${weekDates[0]}),星期二(${weekDates[1]}),星期三(${weekDates[2]}),星期四(${weekDates[3]}),星期五(${weekDates[4]}),週累計次數,本週輔導提醒,本週處理備註\n`;
+
+  appData.roster.forEach(st => {
+    let weekSum = 0;
+    const dayStrs = weekDates.map(dStr => {
+      const dayRec = appData.records[dStr];
+      if (!dayRec) return "未登記";
+      const sRec = dayRec.students ? dayRec.students[st.id] : null;
+      const v = (sRec && sRec.v) ? sRec.v : zeroV();
+      const daySum = vSum(v);
+      weekSum += daySum;
+      if (daySum === 0) return "優良";
+      const items = [];
+      for (let i = 0; i < codeLabels.length; i++) if (v[i] === 1) items.push(codeLabels[i]);
+      return items.join(" ");
+    });
+
+    const advice = weekAdvice(weekSum).text;
+
+    const wMeta = ensureWeeklyStudentMeta(weekKey, st.id);
+    const row = [
+      st.id, st.name, ...dayStrs, weekSum, advice, `"${(wMeta.note || "").replace(/"/g, '""')}"`
+    ];
+    csv += row.join(",") + "\n";
+  });
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${filePrefix()}秩序週統計報表_${weekDates[0]}至${weekDates[4]}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ==========================================
+// MONTHLY SUMMARY RENDER & ACTIONS
+// ==========================================
+function saveSettings() {
+  appData.settings.serviceThreshold = parseInt(document.getElementById("threshold-service").value) || 3;
+  appData.settings.counselThreshold = parseInt(document.getElementById("threshold-counsel").value) || 5;
+  scheduleCloudPush();
+}
+
+function ensureMonthlyStudentMeta(monthStr, sid) {
+  if (!appData.monthlyMeta[monthStr]) appData.monthlyMeta[monthStr] = {};
+  if (!appData.monthlyMeta[monthStr][sid]) {
+    appData.monthlyMeta[monthStr][sid] = { offset: 0, done: false, comment: "" };
+  }
+  return appData.monthlyMeta[monthStr][sid];
+}
+
+function renderMonthlyTable() {
+  const monthStr = document.getElementById("summary-month").value || getTodayStr().slice(0, 7);
+  const sThresh = appData.settings.serviceThreshold || 3;
+  const cThresh = appData.settings.counselThreshold || 5;
+  document.getElementById("threshold-service").value = sThresh;
+  document.getElementById("threshold-counsel").value = cThresh;
+
+  const headRow = document.querySelector("#tab-monthly thead tr");
+  headRow.querySelectorAll(".month-item-th").forEach(e => e.remove());
+  const sumTh = headRow.querySelector(".month-sum-th");
+  getItems().forEach((t, i) => { const th = document.createElement("th"); th.className = "month-item-th"; th.textContent = itemTag(i); headRow.insertBefore(th, sumTh); });
+  const mtx = getMonthTexts();
+
+  const tbody = document.getElementById("monthly-tbody");
+  tbody.innerHTML = "";
+
+  let totalViolations = 0;
+  let zeroCount = 0;
+  let serviceNeeded = 0;
+  let recordedDays = Object.keys(appData.records).filter(d => d.startsWith(monthStr)).length;
+
+  appData.roster.forEach(st => {
+    const counts = zeroV();
+    for (const [dateStr, dayRec] of Object.entries(appData.records)) {
+      if (dateStr.startsWith(monthStr) && dayRec.students && dayRec.students[st.id]) {
+        const v = dayRec.students[st.id].v || zeroV();
+        for (let i = 0; i < counts.length; i++) counts[i] += (v[i] === 1 ? 1 : 0);
+      }
+    }
+    const rawSum = counts.reduce((a, b) => a + b, 0);
+    const mMeta = ensureMonthlyStudentMeta(monthStr, st.id);
+    const offset = mMeta.offset || 0;
+    const netSum = Math.max(0, rawSum - offset);
+
+    totalViolations += netSum;
+    if (netSum === 0) zeroCount++;
+    if (netSum >= sThresh) serviceNeeded++;
+
+    let statusHtml = `<span class="badge badge-zero">🌟 表現優良（公開表揚）</span>`;
+    if (netSum >= cThresh) {
+      statusHtml = `<span class="badge badge-high">🚨 ${escapeHtml(mtx.counsel)}</span>`;
+    } else if (netSum >= sThresh) {
+      statusHtml = `<span class="badge badge-mid">🧹 ${escapeHtml(mtx.service)}</span>`;
+    } else if (netSum > 0) {
+      statusHtml = `<span class="badge badge-low">💬 ${escapeHtml(mtx.mild)}</span>`;
+    }
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td><strong>${st.id}</strong></td>
+      <td><strong>${st.name}</strong></td>
+      ${counts.map(c => `<td>${c}</td>`).join("")}
+      <td><strong>${rawSum}</strong></td>
+      <td>
+        <button class="btn btn-outline" style="padding:2px 6px;" onclick="adjustOffset('${st.id}', -1)">-</button>
+        <span style="margin:0 4px; font-weight:700; color:var(--success);">${offset}</span>
+        <button class="btn btn-outline" style="padding:2px 6px;" onclick="adjustOffset('${st.id}', 1)">+</button>
+      </td>
+      <td><strong style="font-size:1rem; color:${netSum >= sThresh ? 'var(--danger)' : 'var(--text)'};">${netSum}</strong></td>
+      <td>${statusHtml}</td>
+      <td>
+        <input type="checkbox" ${mMeta.done ? 'checked' : ''} onchange="toggleServiceDone('${st.id}', this.checked)" style="width:18px; height:18px; cursor:pointer;">
+      </td>
+      <td>
+        <input type="text" class="note-input" value="${escapeHtml(mMeta.comment || '')}" placeholder="輸入月結評語..." onchange="updateMonthlyComment('${st.id}', this.value)">
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById("monthly-kpis").innerHTML = `
+    <div class="kpi-card">
+      <div class="kpi-title">📅 本月已登記天數</div>
+      <div class="kpi-val">${recordedDays} 天</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--success);">
+      <div class="kpi-title">🌟 全月零違規人數</div>
+      <div class="kpi-val" style="color:var(--success);">${zeroCount} / ${appData.roster.length} 人</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--warn);">
+      <div class="kpi-title">🧹 達需處理門檻（≥${sThresh}次）</div>
+      <div class="kpi-val" style="color:var(--warn);">${serviceNeeded} 人</div>
+    </div>
+    <div class="kpi-card" style="border-left-color:var(--danger);">
+      <div class="kpi-title">📊 全班淨違規總人次</div>
+      <div class="kpi-val" style="color:var(--danger);">${totalViolations} 次</div>
+    </div>
+  `;
+}
+
+function adjustOffset(sid, delta) {
+  const monthStr = document.getElementById("summary-month").value;
+  const mMeta = ensureMonthlyStudentMeta(monthStr, sid);
+  mMeta.offset = Math.max(0, (mMeta.offset || 0) + delta);
+  scheduleCloudPush();
+  renderMonthlyTable();
+}
+
+function toggleServiceDone(sid, checked) {
+  const monthStr = document.getElementById("summary-month").value;
+  const mMeta = ensureMonthlyStudentMeta(monthStr, sid);
+  mMeta.done = checked;
+  scheduleCloudPush();
+}
+
+function updateMonthlyComment(sid, val) {
+  const monthStr = document.getElementById("summary-month").value;
+  const mMeta = ensureMonthlyStudentMeta(monthStr, sid);
+  mMeta.comment = val.trim();
+  scheduleCloudPush();
+}
+
+function exportCSV() {
+  const monthStr = document.getElementById("summary-month").value;
+  const sThresh = appData.settings.serviceThreshold || 3;
+  const cThresh = appData.settings.counselThreshold || 5;
+  const mtx = getMonthTexts();
+  let csv = "\uFEFF座號,姓名," + getItems().map(t => `"${t.replace(/"/g, '""')}"`).join(",") + ",原始累計,銷點抵銷,淨違規數,輔導評估,服務完成,導師月結評語\n";
+
+  appData.roster.forEach(st => {
+    const counts = zeroV();
+    for (const [dateStr, dayRec] of Object.entries(appData.records)) {
+      if (dateStr.startsWith(monthStr) && dayRec.students && dayRec.students[st.id]) {
+        const v = dayRec.students[st.id].v || zeroV();
+        for (let i = 0; i < counts.length; i++) counts[i] += (v[i] === 1 ? 1 : 0);
+      }
+    }
+    const rawSum = counts.reduce((a, b) => a + b, 0);
+    const mMeta = ensureMonthlyStudentMeta(monthStr, st.id);
+    const netSum = Math.max(0, rawSum - (mMeta.offset || 0));
+    let status = "表現優良";
+    if (netSum >= cThresh) status = mtx.counsel;
+    else if (netSum >= sThresh) status = mtx.service;
+    else if (netSum > 0) status = mtx.mild;
+
+    const row = [
+      st.id, st.name, ...counts, rawSum, mMeta.offset || 0, netSum,
+      status, mMeta.done ? "已完成" : "", `"${(mMeta.comment || "").replace(/"/g, '""')}"`
+    ];
+    csv += row.join(",") + "\n";
+  });
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${filePrefix()}秩序月結算報表_${monthStr}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function copyGasCode() {
+  navigator.clipboard.writeText(GAS_BACKEND_SCRIPT).then(() => {
+    showToast("📋 已複製 Apps Script 程式碼！請貼入試算表指令碼編輯器");
+  }).catch(() => {
+    const det = document.querySelector("#sstep-2 details");
+    if (det) det.open = true;                    // 文字框在收合區裡，要先展開才選得到
+    document.getElementById("gas-code-display").select();
+    document.execCommand("copy");
+    showToast("📋 已複製 Apps Script 程式碼！");
+  });
+}
+
+function copyBoundEmbedCode() {
+  const currentUrl = getGasUrl();
+  let fullHtml = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+  if (currentUrl) {
+    fullHtml = fullHtml.replace(
+      /const EMBEDDED_GAS_URL = ".*?";/,
+      `const EMBEDDED_GAS_URL = "${currentUrl}";`
+    );
+  }
+  navigator.clipboard.writeText(fullHtml).then(() => {
+    if (currentUrl) {
+      showToast("📋 已複製【已綁定試算表網址】的完整內嵌碼！可直接貼入 Google 協作平台");
+    } else {
+      showToast("📋 已複製內嵌碼（提醒：您尚未在步驟一填入試算表網址）");
+    }
+  }).catch(() => {
+    showToast("⚠️ 複製失敗，請改用下載 HTML 檔案方式");
+  });
+}
+
+function exportJSON() {
+  const blob = new Blob([JSON.stringify(appData, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${filePrefix()}秩序資料備份_${getTodayStr()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importJSON(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (imported && imported.roster && imported.records) {
+        appData = imported;
+        if (!appData.weeklyMeta) appData.weeklyMeta = {};
+        if (!appData.monthlyMeta) appData.monthlyMeta = {};
+        if (!appData.locks) appData.locks = {};
+        scheduleCloudPush();
+        renderRosterEditor();
+        renderDailyTable();
+        renderWeeklyTable();
+        renderMonthlyTable();
+        showToast("✅ 備份資料已還原並同步！");
+      } else {
+        showToast("❌ 檔案格式不符");
+      }
+    } catch (err) {
+      showToast("❌ 讀取 JSON 失敗");
+    }
+  };
+  reader.readAsText(file);
+}
+
+function renderTitle() {
+  const cn = ((appData.settings && appData.settings.className) || "").trim();
+  const t = (cn ? cn + " " : "") + "班級秩序登記表";
+  document.getElementById("app-title").textContent = t;
+  document.title = t;
+}
+
+function renderRulesBar() {
+  const el = $id("daily-rules-bar");
+  const rules = getRules();
+  el.style.display = rules.length ? "" : "none";
+  el.innerHTML = "<strong>📌 公約：</strong>" + rules.map((r, i) => `<span class="rule-pill">${i + 1}. ${escapeHtml(r)}</span>`).join("");
+}
+
+function renderRulesPage() {
+  $id("rules-items").value = getItems().join("\n");
+  $id("rules-rules").value = getRules().join("\n");
+  $id("rules-week").value = getWeekRules().map(r => r.min + "," + r.text).join("\n");
+  $id("rules-weeknote").value = getWeekNote();
+  const mt = getMonthTexts();
+  $id("rules-m-counsel").value = mt.counsel;
+  $id("rules-m-service").value = mt.service;
+  $id("rules-m-mild").value = mt.mild;
+}
+
+function refreshAfterRules() {
+  renderDailyTable();
+  renderWeeklyTable();
+  renderMonthlyTable();
+}
+
+function saveRulesPage() {
+  const lines = (id) => $id(id).value.split("\n").map(l => l.trim()).filter(Boolean);
+  const items = lines("rules-items");
+  if (items.length < 1 || items.length > 10) { showToast("登記項目要 1 到 10 項，每行一項"); return; }
+  const weekRules = [];
+  for (const l of lines("rules-week")) {
+    const m = l.match(/^(\d+)\s*[,，]\s*(.+)$/);
+    if (!m) { showToast("每週處理規則格式不對：「" + l + "」。要寫成「次數,處理方式」，例如 3,班級服務"); return; }
+    weekRules.push({ min: parseInt(m[1], 10), text: m[2].trim() });
+  }
+  if (!appData.settings) appData.settings = {};
+  Object.assign(appData.settings, {
+    items, rules: lines("rules-rules"), weekRules, weekNote: $id("rules-weeknote").value.trim(),
+    monthTexts: {
+      counsel: $id("rules-m-counsel").value.trim() || DEFAULT_MONTH_TEXTS.counsel,
+      service: $id("rules-m-service").value.trim() || DEFAULT_MONTH_TEXTS.service,
+      mild: $id("rules-m-mild").value.trim() || DEFAULT_MONTH_TEXTS.mild
+    }
+  });
+  scheduleCloudPush();
+  refreshAfterRules();
+  showToast("✅ 登記項目與規則已儲存並同步！");
+}
+
+async function resetRulesPage() {
+  if (!(await askConfirm("要把登記項目、公約和處理規則還原成範例（早修五項）嗎？\n已登記的資料不會被刪除。"))) return;
+  ["items", "rules", "weekRules", "weekNote", "monthTexts"].forEach(k => { delete appData.settings[k]; });
+  scheduleCloudPush();
+  renderRulesPage();
+  refreshAfterRules();
+  showToast("已還原成範例");
+}
+
+function renderRosterEditor() {
+  document.getElementById("roster-editor").value = appData.roster.map(s => `${s.id},${s.name}`).join("\n");
+  document.getElementById("class-name").value = (appData.settings && appData.settings.className) || "";
+  renderTitle();
+}
+
+function saveRoster() {
+  const lines = document.getElementById("roster-editor").value.split("\n").map(l => l.trim()).filter(Boolean);
+  const newRoster = [];
+  lines.forEach(line => {
+    const parts = line.split(/[,，\t]/);
+    if (parts.length >= 2) {
+      newRoster.push({ id: parts[0].trim().padStart(2, "0"), name: parts[1].trim() });
+    }
+  });
+  if (!appData.settings) appData.settings = {};
+  appData.settings.className = document.getElementById("class-name").value.trim();
+  if (newRoster.length === 0) {
+    scheduleCloudPush();
+    renderTitle();
+    showToast("✅ 班級名稱已更新並同步！");
+  }
+  if (newRoster.length > 0) {
+    appData.roster = newRoster;
+    renderTitle();
+    scheduleCloudPush();
+    renderDailyTable();
+    renderWeeklyTable();
+    renderMonthlyTable();
+    showToast("✅ 班級名冊已更新並同步！");
+  }
+}
+
+function loadDemoData() {
+  const today = getTodayStr();
+  const weekDates = getWeekDates(today);
+  const d1 = weekDates[0]; // Mon
+  const d2 = weekDates[2]; // Wed
+  const d3 = today;
+
+  appData.records[d1] = {
+    cadre: "王小明",
+    students: {
+      "04": { v: [1, 0, 0, 1, 0], remind: 1, note: "7:34 聯絡簿未依座號放且聊天" },
+      "08": { v: [0, 1, 0, 0, 0], remind: 1, note: "7:43 還在喝豆漿" }
+    }
+  };
+  appData.records[d2] = {
+    cadre: "王小明",
+    students: {
+      "04": { v: [0, 0, 1, 0, 0], remind: 2, note: "擅自走去後方找同學" },
+      "15": { v: [0, 0, 0, 0, 1], remind: 1, note: "早修趴睡未看書" }
+    }
+  };
+  if (!appData.records[d3]) appData.records[d3] = { cadre: "李小華", students: {} };
+  appData.records[d3].cadre = "李小華";
+  appData.records[d3].students["04"] = { v: [0, 1, 0, 0, 0], remind: 1, note: "7:42 吃麵包（本週累計4次）" };
+
+  scheduleCloudPush();
+  renderDailyTable();
+  renderWeeklyTable();
+  renderMonthlyTable();
+  showToast("✨ 已載入本週範例測試資料！");
+}
+
+async function clearAllData() {
+  if (await askConfirm("確定要清空所有登記與週／月統計資料嗎？此動作無法復原。", true)) {
+    appData.records = {};
+    appData.weeklyMeta = {};
+    appData.monthlyMeta = {};
+    appData.locks = {};
+    scheduleCloudPush();
+    renderDailyTable();
+    renderWeeklyTable();
+    renderMonthlyTable();
+    showToast("🗑️ 已清空全部紀錄");
+  }
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+// ==========================================
+// 身分（風紀／導師）、送出鎖定、對話框
+// ==========================================
+function isDayLocked(dateStr) { return !!(appData.locks && appData.locks[dateStr]); }
+function canEditDay(dateStr) { return role === "teacher" || !isDayLocked(dateStr); }
+
+// 自製對話框（不用瀏覽器內建的 confirm／prompt，Canvas 裡常被擋、長相也跟網站無關）
+function showDialog(message, { withInput = false, password = false, danger = false, okText = "確定" } = {}) {
+  return new Promise(resolve => {
+    const ov = document.createElement("div");
+    ov.className = "dlg-overlay";
+    ov.innerHTML = `<div class="dlg"><p></p>${withInput ? `<input type="${password ? "password" : "text"}" autocomplete="off">` : ""}<div class="dlg-actions"><button class="btn btn-outline" data-r="0">取消</button><button class="btn ${danger ? "btn-danger" : "btn-primary"}" data-r="1">${okText}</button></div></div>`;
+    ov.querySelector("p").textContent = message;
+    const input = ov.querySelector("input");
+    const done = (ok) => { ov.remove(); resolve(ok ? (withInput ? input.value : true) : (withInput ? null : false)); };
+    ov.addEventListener("click", e => {
+      const r = e.target.getAttribute && e.target.getAttribute("data-r");
+      if (r === "0" || r === "1") done(r === "1");
+    });
+    if (input) input.addEventListener("keydown", e => { if (e.key === "Enter") done(true); });
+    document.body.appendChild(ov);
+    if (input) input.focus();
+  });
+}
+const askConfirm = (message, danger = false) => showDialog(message, { danger });
+const askText = (message, password = false) => showDialog(message, { withInput: true, password });
+
+function nowStamp() { return formatDateYMD(new Date()) + " " + nowHHMM(); }
+
+function updateSubmitBar(dateStr) {
+  const bar = document.getElementById("submit-bar");
+  const locked = isDayLocked(dateStr);
+  const status = document.getElementById("submit-status");
+  bar.classList.toggle("locked", locked);
+  if (locked) {
+    status.textContent = role === "teacher"
+      ? `✅ ${appData.locks[dateStr].at} 已送出。導師可以直接修改；下面有「解除鎖定」可以讓風紀重新登記`
+      : `✅ ${appData.locks[dateStr].at} 已送出，不能再修改。如有錯誤請找導師`;
+  } else {
+    status.textContent = "⏳ 尚未送出：確認無誤後請按下面的「送出」，送出後就不能再修改";
+  }
+  document.getElementById("btn-submit-day").style.display = locked ? "none" : "";
+  document.getElementById("btn-unlock-day").style.display = (locked && role === "teacher") ? "" : "none";
+}
+
+async function postAction(obj) {
+  const res = await fetch(getGasUrl(), {
+    method: "POST",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(obj)
+  });
+  return await res.json();
+}
+const checkPinRemote = (pin) => postAction({ action: "checkpin", pin });
+
+// 問新密碼兩次並檢查；回傳新密碼，取消或不合格回傳 null
+async function askNewPin(firstMsg) {
+  const p1 = await askText(firstMsg, true);
+  if (p1 === null) return null;
+  if (p1.length < 6) { showToast("❌ 密碼至少 6 碼"); return null; }
+  const p2 = await askText("請再輸入一次密碼確認", true);
+  if (p2 === null) return null;
+  if (p1 !== p2) { showToast("❌ 兩次輸入的密碼不一樣，請重來"); return null; }
+  return p1;
+}
+
+async function changePin() {
+  if (!teacherAuthed()) { showToast("請先用密碼進入導師後台"); return; }
+  const np = await askNewPin("請輸入新的導師密碼（至少 6 碼）");
+  if (np === null) return;
+  try {
+    const r = await postAction({ action: "setpin", pin: teacherPin, newPin: np });
+    if (r.status === "ok") { teacherPin = np; showToast("✅ 導師密碼已更改"); }
+    else showToast("❌ " + (r.message || "更改失敗"));
+  } catch (e) { showToast("❌ 無法連線雲端，密碼沒有更改"); }
+}
+
+
+function leaveTeacherMode() {
+  role = "cadre"; teacherPin = "";
+  applyRole();
+}
+
+function onRoleButton() {
+  if (role === "teacher") leaveTeacherMode(); else enterTeacherMode();
+}
+
+async function submitDay() {
+  const date = document.getElementById("daily-date").value;
+  if (isDayLocked(date)) return;
+  const dayRec = ensureDayRecord(date);
+  dayRec.cadre = document.getElementById("daily-cadre").value.trim();
+  if (!dayRec.cadre) {
+    showToast("請先填「負責幹部」姓名再送出");
+    document.getElementById("daily-cadre").focus();
+    return;
+  }
+  if (!(await askConfirm(`確定送出 ${date} 的早修登記嗎？\n送出後風紀就不能再修改，要改只能請導師處理。`))) return;
+  appData.locks[date] = { at: nowStamp() };
+  renderDailyTable();
+  await pushToCloud(false);
+  const online = document.getElementById("sync-dot").classList.contains("online");
+  showToast(online ? "✅ 已送出並上傳，今天的登記完成" : "✅ 已送出；目前沒連上雲端，連線後會自動上傳");
+}
+
+async function unlockDay() {
+  const date = document.getElementById("daily-date").value;
+  if (!isDayLocked(date)) return;
+  if (!(await askConfirm(`解除 ${date} 的鎖定後，風紀可以重新修改這一天。確定嗎？`))) return;
+  delete appData.locks[date];
+  renderDailyTable();
+  await pushToCloud(true);
+}
+
+// Init
+loadLocalState();
+const todayStr = getTodayStr();
+document.getElementById("daily-date").value = todayStr;
+document.getElementById("weekly-anchor-date").value = todayStr;
+document.getElementById("summary-month").value = todayStr.slice(0, 7);
+document.getElementById("gas-code-display").value = GAS_BACKEND_SCRIPT;
+document.getElementById("gas-url-input").value = getGasUrl();
+applyRole();
+if (IS_SITE) document.getElementById("site-back").style.display = "";
+
+if (getGasUrl()) {
+  pullFromCloud(false);
+}
+adoptLinkUrl();
+window.addEventListener("hashchange", adoptLinkUrl);   // 已經開著這頁、又點了帶網址的連結
+</script>
+</body>
+</html>
