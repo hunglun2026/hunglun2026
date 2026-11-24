@@ -92,7 +92,7 @@ figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
 </header>
 <main>
 <h1>鴻綸教育授權管理系統 操作說明書</h1>
-<p class="lead">怎麼操作：四個步驟，把每月要換的人指派或收回。</p>
+<p class="lead">怎麼操作：五個步驟，把每月要換的人指派或收回。</p>
 <p class="sub">想了解背後怎麼運作：<a href="principle.html">運作原理</a>　｜　<a href="manual.html">完整使用說明書</a>　｜　<a href="./">回授權管理系統</a></p>
 <nav><b>目錄</b><ol><li><a href="#one">一頁看懂</a></li><li><a href="#prep">需要哪些資料、填在哪裡</a></li><li><a href="#web">網頁版操作（圖文）</a></li><li><a href="#faq">排錯與常見問題</a></li></ol></nav>
 <h2 id="one">1. 一頁看懂</h2>
@@ -118,11 +118,11 @@ figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
 <p>用網頁版，不用裝任何東西，也不用交出密碼或金鑰：用管理員自己的 Google 帳號登入，資料只在你的瀏覽器與 Google 之間往來。</p>
 <table>
 <tr><th>資料</th><th>去哪裡找</th><th>填在哪</th><th>必填？</th></tr>
-<tr><td>管理員 Google 帳號</td><td>要有「授權管理」權限</td><td>步驟 1 按「用 Google 管理員帳號登入」，在 Google 自己的視窗登入（我們不收密碼）</td><td>必填</td></tr>
-<tr><td>要管理哪一種授權</td><td>自己決定，例如 Google AI Pro</td><td>步驟 1「要管理哪一種授權」下拉選單</td><td>必填</td></tr>
-<tr><td>目前可用授權數</td><td>後台「帳單 > 訂閱」，看該授權的「可用」</td><td>步驟 1「目前可用授權數」。填了額度不夠會整批擋下</td><td>選填，建議填</td></tr>
-<tr><td>學校網域</td><td>例如 school.edu.tw</td><td>步驟 1「學校網域」，登入後會自動帶入</td><td>自動帶入</td></tr>
-<tr><td>輪替名單：每個人的信箱與動作</td><td>學校提供的名單</td><td>步驟 2 表格。每列一個信箱，動作選「指派、收回、保留不動」。可手打、整欄貼上、上傳 CSV 或 Excel、匯入 Google 試算表</td><td>必填</td></tr>
+<tr><td>管理員 Google 帳號</td><td>要有「授權管理」權限</td><td>步驟 2 按「用 Google 管理員帳號登入」，在 Google 自己的視窗登入（我們不收密碼）</td><td>必填</td></tr>
+<tr><td>要管理哪一種授權</td><td>自己決定，例如 Google AI Pro</td><td>步驟 2「要管理哪一種授權」下拉選單</td><td>必填</td></tr>
+<tr><td>目前可用授權數</td><td>後台「帳單 > 訂閱」，看該授權的「可用」</td><td>步驟 2「目前可用授權數」。填了額度不夠會整批擋下</td><td>選填，建議填</td></tr>
+<tr><td>學校網域</td><td>例如 school.edu.tw</td><td>步驟 2「學校網域」，登入後會自動帶入</td><td>自動帶入</td></tr>
+<tr><td>輪替名單：每個人的信箱與動作</td><td>學校提供的名單</td><td>步驟 3 表格。每列一個信箱，動作選「指派、收回、保留不動」。可手打、整欄貼上、上傳 CSV 或 Excel、匯入 Google 試算表</td><td>必填</td></tr>
 </table>
 <div class="box tip"><b>名單檔的辨識</b>上傳 CSV、Excel 後，系統會自動找「信箱欄」與「動作欄」，匯入前會跳出預覽讓你確認；沒有動作欄的人，可以統一選指派或收回。</div>
 <div class="box warn"><b>登入時被擋下，或看到應用程式未獲允許？</b>
@@ -131,22 +131,25 @@ figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
 <p class="sub">這個 ID 是公開資訊，不是密鑰。網頁版用的權限只有授權管理與讀取使用者；管理員隨時可以在同一頁移除。</p></div>
 <div class="box"><b>填完先預演</b>先看預演結果，確認要收回與指派的人沒錯，才按「執行」。</div>
 <h2 id="web">3. 網頁版操作（圖文）</h2>
-<p>不會用命令列的學校管理員，用網頁版就好。下面的畫面是「示範模式」：不連 Google、用假資料，可以放心練習。四個步驟走完就是一次輪替。</p>
+<p>不會用命令列的學校管理員，用網頁版就好。下面的畫面是「示範模式」：不連 Google、用假資料，可以放心練習。五個步驟走完就是一次輪替。</p>
 
-<figure><img src="img/step1.webp" alt="步驟1 登入與選授權">
-<figcaption><b>步驟 1：登入與選授權。</b>選要輪替的授權、填可用額度（後台訂閱頁看得到），再用管理員帳號登入。想先練習就按下方的「先用示範資料練習」。</figcaption></figure>
+<figure><img src="img/step0.webp" alt="步驟1 先設定">
+<figcaption><b>步驟 1：先設定（第一次使用才需要）。</b>照四張卡片做：準備管理員帳號、查可用授權數、允許跳出視窗、登入若被封鎖就到後台信任應用程式。圖中的後台截圖是實際畫面，紅框是重點。做完按最下面的「我做好了，下一步：登入」。</figcaption></figure>
 
-<figure><img src="img/step2.webp" alt="步驟2 名單表格">
-<figcaption><b>步驟 2：填名單。</b>每一列是一個信箱加一個動作：指派、收回、保留不動。可以上傳 CSV、Excel，匯入 Google 試算表，或整欄貼上。紅色格子代表信箱格式不對。</figcaption></figure>
+<figure><img src="img/step1.webp" alt="步驟2 登入與選授權">
+<figcaption><b>步驟 2：登入與選授權。</b>選要輪替的授權、填可用額度（後台訂閱頁看得到），再用管理員帳號登入。想先練習就按下方的「先用示範資料練習」。</figcaption></figure>
 
-<figure><img src="img/step3.webp" alt="步驟3 預演">
-<figcaption><b>步驟 3：預演（還沒改任何東西）。</b>上方四格是統計。綠色條代表沒有問題，下面逐筆列出會做什麼。「跳過」一列是已停權的帳號，程式不會碰。有問題時這裡會變紅並鎖住「執行」。</figcaption></figure>
+<figure><img src="img/step2.webp" alt="步驟3 名單表格">
+<figcaption><b>步驟 3：填名單。</b>每一列是一個信箱加一個動作：指派、收回、保留不動。可以上傳 CSV、Excel，匯入 Google 試算表，或整欄貼上。紅色格子代表信箱格式不對。</figcaption></figure>
+
+<figure><img src="img/step3.webp" alt="步驟4 預演">
+<figcaption><b>步驟 4：預演（還沒改任何東西）。</b>上方四格是統計。綠色條代表沒有問題，下面逐筆列出會做什麼。「跳過」一列是已停權的帳號，程式不會碰。有問題時這裡會變紅並鎖住「執行」。</figcaption></figure>
 
 <div class="shots">
 <figure><img src="img/step4a.webp" alt="執行前確認">
 <figcaption><b>按「執行」會再問一次</b>，寫明要收回、指派幾位。這是自己做的對話框，不是瀏覽器內建的。</figcaption></figure>
 <figure><img src="img/step4b.webp" alt="執行紀錄與驗證">
-<figcaption><b>步驟 4：執行結果。</b>黑底是逐筆紀錄；「剛收回的位子還沒釋出，5 秒後重試」就是為了等位子釋出。最後一行「驗證」是再查一次後台的結果。</figcaption></figure>
+<figcaption><b>步驟 5：執行結果。</b>黑底是逐筆紀錄；「剛收回的位子還沒釋出，5 秒後重試」就是為了等位子釋出。最後一行「驗證」是再查一次後台的結果。</figcaption></figure>
 </div>
 <p class="sub">圖中的帳號都是 demo.school.tw 的假資料。「下載結果（Excel）」可存成表格留底。</p>
 
@@ -159,7 +162,7 @@ figcaption{color:var(--sub);font-size:.88rem;margin-top:6px}
 <tr><td>名單有找不到的人</td><td>信箱打錯，或帳號已刪</td><td>回上一步修正；什麼都還沒改</td></tr>
 <tr><td>表格裡有紅色格子</td><td>不是有效的電子郵件</td><td>修正或刪除那一列</td></tr>
 <tr><td>沒有權限</td><td>登入的帳號沒有授權管理或讀取使用者的權限</td><td>改用具備權限的管理員帳號登入</td></tr>
-<tr><td>驗證失敗：某人應該有授權但沒有</td><td>Google 的列表還沒更新，或真的沒成功</td><td>等一會兒回步驟 2 再跑一次，已完成的人不會重複異動</td></tr>
+<tr><td>驗證失敗：某人應該有授權但沒有</td><td>Google 的列表還沒更新，或真的沒成功</td><td>等一會兒回步驟 3 再跑一次，已完成的人不會重複異動</td></tr>
 <tr><td>Auto License un-assignment is not allowed</td><td>那個授權是組織單位自動指派的，無法收回</td><td>要在後台改該單位的自動授權設定</td></tr>
 </table>
 <div class="box"><b>官方寫「收回後 24 小時才能重新指派」</b>實測 Plus 收回後立刻指派沒被擋，但不同授權是否一樣無法確認，正式操作前建議先用少數帳號試一次。</div>

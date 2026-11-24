@@ -23,17 +23,17 @@ function ask(title, body, yes = "確定", danger = false) {
 }
 function msg(id, kind, text) { $(id).innerHTML = text ? `<div class="msg ${kind}"></div>` : ""; if (text) $(id).firstChild.textContent = text; }
 function show(n) {
-  for (let i = 1; i <= 4; i++) $("s" + i).classList.toggle("hidden", i !== n);
+  for (let i = 0; i <= 4; i++) $("s" + i).classList.toggle("hidden", i !== n);
   document.querySelectorAll("#steps li").forEach((li) => { const s = +li.dataset.s; li.className = s === n ? "on" : s < n ? "done" : ""; });
   window.scrollTo(0, 0);
 }
 const sku = () => SKUS[$("sku").value];
 
-// ---- 名單表格（步驟 2） ----
+// ---- 名單表格（步驟 3） ----
 // 讀取試算表的權限只在使用者按「匯入 Google 試算表」時才額外請求（漸進授權），平常登入只要授權管理與讀取使用者
 function getSheetsToken() {
   return new Promise((resolve, reject) => {
-    if (!CLIENT_ID || !window.google?.accounts) return reject(new Error("請先在步驟 1 用 Google 登入"));
+    if (!CLIENT_ID || !window.google?.accounts) return reject(new Error("請先在步驟 2 用 Google 登入"));
     google.accounts.oauth2.initTokenClient({
       client_id: CLIENT_ID, scope: SHEETS_SCOPE,
       callback: (r) => (r.error ? reject(new Error(`沒有取得讀取試算表的權限（${r.error}）`)) : resolve(r.access_token)),
@@ -44,7 +44,7 @@ function getSheetsToken() {
 const grid = createGrid({ notify: (kind, text) => msg("s2msg", kind, text), askConfirm: ask, getSheetsToken, isDemo: () => state.api?.mode === "demo" });
 if (/(^|\.)hunglun\.com$/.test(location.hostname)) $("siteLinks").classList.remove("hidden");
 
-// ---- 步驟 1 ----
+// ---- 步驟 2：登入（步驟 1 是先設定，只有說明，沒有程式） ----
 for (const [k, v] of Object.entries(SKUS)) $("sku").add(new Option(v.name, k));
 
 function startReal() {
@@ -76,7 +76,7 @@ $("btnDemo").onclick = () => {
 };
 $("sku").onchange = () => { if (state.api?.mode === "real") state.api = realApi(state.token, $("domain").value.trim(), sku()); };
 
-// ---- 步驟 2 → 3 ----
+// ---- 步驟 3 → 4 ----
 $("back2").onclick = () => show(1);
 $("btnPlan").onclick = async () => {
   const lists = grid.getLists();
@@ -110,7 +110,7 @@ function renderPlan() {
 }
 $("back3").onclick = () => show(2);
 
-// ---- 步驟 4 ----
+// ---- 步驟 5 ----
 $("btnRun").onclick = async () => {
   const c = counts(state.plan.actions);
   if (!(await ask("確定要執行嗎？", `即將收回 ${c.remove} 位、指派 ${c.add} 位的授權，這會直接改到後台。`, "確定執行", true))) return;
@@ -129,9 +129,11 @@ $("btnRun").onclick = async () => {
   }
   problems.forEach((p) => line("驗證失敗：" + p, "l-fail"));
   if (!problems.length && !result.failed) { line("驗證：後台目前持有者與名單一致。", "l-ok"); msg("s4msg", "ok", "完成，後台狀態已和名單一致。"); }
-  else msg("s4msg", "err", "有項目沒有完成，請看下方紀錄；可以回到步驟 2 修正後再跑一次（已完成的不會重複異動）。");
+  else msg("s4msg", "err", "有項目沒有完成，請看下方紀錄；可以回到步驟 3 修正後再跑一次（已完成的不會重複異動）。");
 };
 $("btnXlsx").onclick = () => downloadXlsx(`授權調整結果-${new Date().toISOString().slice(0, 10)}.xlsx`, ["時間", "動作", "帳號", "結果", "說明"], state.rows.map((r) => [r.time, OP_LABEL[r.op], r.email, r.result === "ok" ? "成功" : "失敗", r.result === "ok" ? "" : `${r.kind || ""} ${r.message || ""}`.trim()]), [12, 8, 34, 8, 50]).catch((e) => msg("s4msg", "err", e.message));
 $("btnCopy").onclick = () => navigator.clipboard?.writeText($("log").textContent);
 $("btnAgain").onclick = () => { grid.clear(); show(2); };
-show(1);
+$("btnPreOk").onclick = () => show(1);
+$("back1").onclick = () => show(0);
+show(0);

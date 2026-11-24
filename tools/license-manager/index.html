@@ -17,12 +17,12 @@
 </header>
 <main>
   <ol class="steps" id="steps">
-    <li data-s="1">1 登入與選授權</li><li data-s="2">2 填名單</li><li data-s="3">3 預演確認</li><li data-s="4">4 執行結果</li>
+    <li data-s="0">1 先設定</li><li data-s="1">2 登入與選授權</li><li data-s="2">3 填名單</li><li data-s="3">4 預演確認</li><li data-s="4">5 執行結果</li>
   </ol>
 
-  <section class="card" id="s1">
-    <h2>步驟 1：登入並選擇授權</h2>
-    <p class="hint">需要具備「授權管理」權限的管理員帳號。我們不會要求密碼，登入視窗是 Google 自己的。</p>
+  <section class="card" id="s0">
+    <h2>步驟 1：先設定（第一次使用才需要）</h2>
+    <p class="hint">做完下面四件事，再按最下面的按鈕往下走。以前做過、登入都順利的話，直接按「下一步」就好。</p>
     <div class="pre" id="pre">
       <style>
         .pre{margin:4px 0 20px;padding:16px;border:1px solid #cfd8ea;border-radius:12px;background:#f4f7fd}
@@ -86,6 +86,14 @@
         });})();
       </script>
     </div>
+    <div class="row">
+      <button id="btnPreOk">我做好了，下一步：登入</button>
+    </div>
+  </section>
+
+  <section class="card hidden" id="s1">
+    <h2>步驟 2：登入並選擇授權</h2>
+    <p class="hint">需要具備「授權管理」權限的管理員帳號。我們不會要求密碼，登入視窗是 Google 自己的。</p>
     <label for="sku">要管理哪一種授權</label>
     <select id="sku"></select>
     <label for="avail">目前可用授權數（選填）<small>　後台「帳單 > 訂閱」可以看到，填了會幫你防呆</small></label>
@@ -95,12 +103,13 @@
     <div class="row">
       <button id="btnLogin">用 Google 管理員帳號登入</button>
       <button id="btnDemo" class="ghost">先用示範資料練習（不連 Google）</button>
+      <button id="back1" class="ghost">回到步驟 1</button>
     </div>
     <div id="s1msg"></div>
   </section>
 
   <section class="card hidden" id="s2">
-    <h2>步驟 2：填名單</h2>
+    <h2>步驟 3：填名單</h2>
     <p class="hint">每一列一個帳號，選它要「指派、收回、保留不動」。可以直接在格子裡打字、從 Excel 貼上多列，或上傳檔案讓系統自動辨識。<b>名單以外的人完全不會被動到。</b></p>
     <div class="toolbar">
       <button class="ghost" id="gFile" type="button">上傳檔案（CSV、Excel）</button>
@@ -123,7 +132,7 @@
   </section>
 
   <section class="card hidden" id="s3">
-    <h2>步驟 3：預演（還沒有改任何東西）</h2>
+    <h2>步驟 4：預演（還沒有改任何東西）</h2>
     <p class="hint">確認下面的清單正確，才按「執行」。順序是先收回、再指派。</p>
     <div class="sum" id="sum"></div>
     <div id="s3msg"></div>
@@ -132,7 +141,7 @@
   </section>
 
   <section class="card hidden" id="s4">
-    <h2>步驟 4：執行結果</h2>
+    <h2>步驟 5：執行結果</h2>
     <div id="s4msg"></div>
     <div class="log" id="log"></div>
     <div class="row"><button class="ghost" id="btnCopy">複製紀錄</button><button class="ghost" id="btnXlsx">下載結果（Excel）</button><button id="btnAgain">再做一批</button></div>
@@ -163,6 +172,6 @@
   <div class="row" style="justify-content:flex-end"><button class="ghost" id="impNo">取消</button><button id="impYes">匯入</button></div></dialog>
 
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script type="module" src="app.js?v=20261123c"></script>
+<script type="module" src="app.js?v=20261124d"></script>
 </body>
 </html>
