@@ -72,12 +72,12 @@
         </div>
         <div class="c wide">
           <img src="img/step1-apps.webp" alt="管理控制台「應用程式存取權控管」頁面，紅框標出「設定新的應用程式」" width="1200" height="471" loading="lazy">
-          <code id="preCid">348775138342-os11fv6lb0ko57gr1nt6l0fkbn9nl0eq.apps.googleusercontent.com</code>
+          <code id="preCid">333075117030-1vfeqevnvvh9e7st431s924dvpk3msof.apps.googleusercontent.com</code>
           <button type="button" class="ghost copy" id="preCopy">複製用戶端 ID</button>
           <p class="sub" style="margin:0">紅框 1 是這一頁的位置（安全性 &gt; API 控制項 &gt; 應用程式存取權控管）。上圖為管理控制台實際畫面，「設定新的應用程式」之後的搜尋與「信任」選項，我們尚未在學校實測，以畫面實際名稱為準。</p>
         </div>
       </div>
-      <p class="sub" style="margin:12px 0 0">登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。詳細說明請看上方「使用說明書」。</p>
+      <p class="sub" style="margin:12px 0 0">第一次登入會出現「Google 尚未驗證這個應用程式」，請按「進階」再按「前往（不安全）」繼續；若出現「存取權遭拒」，是因為你的信箱還沒被加入測試名單，請聯絡鴻綸申請。登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。詳細說明請看上方「使用說明書」。</p>
       <script>
         (function(){var b=document.getElementById('preCopy');if(!b)return;b.addEventListener('click',function(){
           var t=document.getElementById('preCid').textContent;
@@ -172,6 +172,6 @@
   <div class="row" style="justify-content:flex-end"><button class="ghost" id="impNo">取消</button><button id="impYes">匯入</button></div></dialog>
 
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script type="module" src="app.js?v=20261124d"></script>
+<script type="module" src="app.js?v=20261124e"></script>
 </body>
 </html>

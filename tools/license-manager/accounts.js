@@ -3,7 +3,7 @@ import { CREATE_FIELDS, MOVE_FIELDS, planCreate, planMove, countOps, runPool, no
 import { dirApi, demoDirApi, ACCOUNT_SCOPES } from "./accounts_api.js?v=20261123c";
 import { createTable } from "./table.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
-import { CLIENT_ID } from "./config.js?v=20261123c";
+import { CLIENT_ID } from "./config.js?v=20261124e";
 
 const $ = (id) => document.getElementById(id);
 const SCOPES = "openid email " + ACCOUNT_SCOPES;
