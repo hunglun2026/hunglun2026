@@ -48,31 +48,33 @@
       <h3>學校要先做的事</h3>
       <p class="sub">第一次使用前做一次，約 3 分鐘。用網頁版不需要 GCP，也不需要網域全域委派。</p>
       <div class="grid">
-        <div class="c">
+        <div class="c wide">
           <div class="t"><span class="n">1</span>準備管理員帳號</div>
           <p>要能指派授權、讀取使用者清單，建議直接用超級管理員。</p>
-          <div class="vis"><span class="chip">超級管理員</span><span class="arrow">→</span><a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a><span class="tag">示意</span></div>
+          <div class="vis"><span class="chip">超級管理員</span><span class="arrow">→</span><a href="https://admin.google.com" target="_blank" rel="noopener">admin.google.com</a></div>
+          <img src="img/step1-home.webp" alt="登入成功後的管理控制台首頁，上方有 Admin 標誌與組織名稱" width="1200" height="159" loading="lazy">
+          <p class="sub" style="margin:0">紅框 1 是你的組織名稱。登入後看到這個畫面，就表示登入成功。</p>
         </div>
-        <div class="c">
+        <div class="c wide">
           <div class="t"><span class="n">2</span>查目前可用授權數</div>
           <p>管理控制台左側選「帳單 &gt; 訂閱」，看要管理的授權還剩幾個，填在下面的欄位，額度不夠系統會擋下。</p>
-          <div class="vis"><span class="chip">帳單</span><span class="arrow">›</span><span class="chip">訂閱</span>
-            <div class="row"><span>Google AI Pro for Education</span><b>可用 10</b></div><span class="tag">示意，數字不是真的</span></div>
+          <img src="img/step1-billing.webp" alt="管理控制台左側「帳單 &gt; 訂閱」，紅框標出訂閱頁裡 Google AI Pro 的已指派授權數與可用授權數" width="1200" height="277" loading="lazy">
+          <p class="sub" style="margin:0">紅框 1 是左側「帳單 &gt; 訂閱」。紅框 2 的「可用授權數」就是要填在下面欄位的數字。（已省略付款資訊）</p>
         </div>
         <div class="c">
           <div class="t"><span class="n">3</span>允許瀏覽器跳出視窗</div>
           <p>登入視窗是 Google 自己的視窗。網址列若出現被擋的提示，選「一律允許」。</p>
-          <div class="vis"><div class="bar"><span>🔒 hunglun.com</span><span class="blk">🚫 已封鎖跳出視窗</span></div><span class="tag">示意</span></div>
+          <div class="vis"><div class="bar"><span>🔒 hunglun.com</span><span class="blk">已封鎖跳出視窗</span></div><span class="tag">示意</span></div>
         </div>
         <div class="c">
           <div class="t"><span class="n">4</span>登入若出現「應用程式遭封鎖」</div>
-          <p>請超級管理員打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（安全性 &gt; API 控制項），點紅框的「設定新的應用程式」，用下面的 OAuth 用戶端 ID 搜尋，找到後把存取權設為「信任」。沒被封鎖就不用做這步。</p>
+          <p>請超級管理員打開 <a href="https://admin.google.com/ac/owl/list?tab=configuredApps" target="_blank" rel="noopener">應用程式存取權控管</a>（安全性 &gt; API 控制項），點圖中紅框 2 的「設定新的應用程式」，用下面的 OAuth 用戶端 ID 搜尋，找到後把存取權設為「信任」。沒被封鎖就不用做這步。</p>
         </div>
         <div class="c wide">
           <img src="img/step1-apps.webp" alt="管理控制台「應用程式存取權控管」頁面，紅框標出「設定新的應用程式」" width="1200" height="471" loading="lazy">
           <code id="preCid">348775138342-os11fv6lb0ko57gr1nt6l0fkbn9nl0eq.apps.googleusercontent.com</code>
           <button type="button" class="ghost copy" id="preCopy">複製用戶端 ID</button>
-          <p class="sub" style="margin:0">上圖為管理控制台實際畫面。「設定新的應用程式」之後的搜尋與「信任」選項，我們尚未在學校實測，以畫面實際名稱為準。</p>
+          <p class="sub" style="margin:0">紅框 1 是這一頁的位置（安全性 &gt; API 控制項 &gt; 應用程式存取權控管）。上圖為管理控制台實際畫面，「設定新的應用程式」之後的搜尋與「信任」選項，我們尚未在學校實測，以畫面實際名稱為準。</p>
         </div>
       </div>
       <p class="sub" style="margin:12px 0 0">登入時 Google 只會問兩項權限：查看及管理網域的 Google Workspace 授權、查看網域使用者資訊（唯讀）。詳細說明請看上方「使用說明書」。</p>
