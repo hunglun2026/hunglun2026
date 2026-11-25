@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>鴻綸 Chromebook 轉移</title>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v=45">
+<link rel="stylesheet" href="style.css?v=20261125a">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+<header>
+  <h1>鴻綸 Chromebook 轉移</h1>
+  <p>把一批已綁定的 Chromebook 從一個組織單位搬到另一個。用你自己的管理員帳號登入，資料只在你的瀏覽器與 Google 之間往來</p>
+</header>
+<main>
+  <ol class="steps" id="steps">
+    <li data-s="0">1 登入</li><li data-s="1">2 填名單</li><li data-s="2">3 預演確認</li><li data-s="3">4 執行</li><li data-s="4">5 結果與還原</li>
+  </ol>
+
+  <section class="card" id="s0">
+    <h2>步驟 1：登入</h2>
+    <p class="hint">要用有「管理 Chromebook 裝置」權限的管理員帳號，建議超級管理員。登入視窗是 Google 自己的，我們不會拿到密碼。若登入時顯示「存取權遭拒」，是你的信箱還沒加進測試名單，請先聯絡鴻綸。</p>
+    <div class="row"><button id="btnLogin">用 Google 管理員帳號登入</button><button id="btnDemo" class="ghost">先用示範資料練習（不連 Google）</button></div>
+    <div id="m0"></div>
+  </section>
+
+  <section class="card hidden" id="s1">
+    <h2>步驟 2：填名單</h2>
+    <p class="hint">名單要有 Chromebook 的「序號」，目標組織單位可以每台各填一個，也可以不填、改用下面的「統一目標」整批搬過去。也可以直接上傳上一次下載的「搬移紀錄」，把它們搬回原本的位置。</p>
+    <div class="tabs" id="tabs"><button data-t="paste" class="on">手動貼上</button><button data-t="file">上傳 Excel／CSV</button><button data-t="sheet">Google 試算表</button></div>
+    <div id="t-paste">
+      <div class="f"><label for="pasteBox">每行一台：序號，或「序號 [Tab 或逗號] 目標組織單位」</label><textarea id="pasteBox" placeholder="CB1000001&#10;CB1000002,/待報廢"></textarea></div>
+      <button id="btnPaste">讀取貼上的名單</button>
+    </div>
+    <div id="t-file" class="hidden"><div class="f"><label for="fileIn">選擇 .xlsx 或 .csv 檔</label><input type="file" id="fileIn" accept=".xlsx,.csv,.tsv,.txt"></div></div>
+    <div id="t-sheet" class="hidden">
+      <div class="f"><label for="sheetUrl">貼上試算表網址（要用你登入的帳號開得起來）</label><input type="text" id="sheetUrl" placeholder="https://docs.google.com/spreadsheets/d/…"></div>
+      <button id="btnSheet">讀取這份試算表</button>
+    </div>
+    <div id="tabPick" class="f hidden"><label for="tabSel">這份檔案有多個分頁，要用哪一頁</label><select id="tabSel"></select></div>
+    <div id="m1"></div>
+    <div id="colBox" class="hidden">
+      <div class="row">
+        <div class="f" style="flex:1;min-width:200px"><label for="serialSel">序號在哪一欄</label><select id="serialSel"></select></div>
+        <div class="f" style="flex:1;min-width:200px"><label for="ouSel">目標組織單位在哪一欄</label><select id="ouSel"></select></div>
+      </div>
+      <div class="f"><label for="defOu">統一目標（名單沒填目標的 Chromebook，都搬到這裡）</label><input type="text" id="defOu" list="ouList" placeholder="例：/待報廢；不需要就留空"></div>
+      <datalist id="ouList"></datalist>
+      <div class="tw" id="preview"></div>
+    </div>
+    <div class="row"><button class="ghost" id="back1">上一步</button><button id="btnPlan" disabled>下一步：預演</button></div>
+  </section>
+
+  <section class="card hidden" id="s2">
+    <h2>步驟 3：預演確認（還沒改到任何裝置）</h2>
+    <p class="hint">下面是照名單算出來的結果。只要有一台有問題，整批都不會執行：序號找不到、已經在目標、裝置已停用或取消佈建、序號重複、目標組織單位不存在，都算有問題。</p>
+    <div class="sum" id="sum"></div>
+    <div class="tw"><table><thead><tr><th>動作</th><th>序號</th><th>原本</th><th>目標</th><th>說明</th></tr></thead><tbody id="planRows"></tbody></table></div>
+    <div class="f"><label for="maxIn">這次最多搬幾台（安全上限，超過會擋下）</label><input type="number" id="maxIn" min="1" max="3000" value="500"></div>
+    <div id="m2"></div>
+    <div class="row"><button class="ghost" id="back2">上一步</button><button id="btnProblems" class="ghost hidden">下載問題清單 .xlsx</button><button id="btnRun" class="danger" disabled>確認，開始執行</button></div>
+  </section>
+
+  <section class="card hidden" id="s3">
+    <h2>步驟 4：執行中</h2>
+    <p class="hint">每 50 台為一批，做完一批回報一次。請不要關閉或重新整理這個分頁。</p>
+    <div class="bar"><i id="barFill"></i></div>
+    <div id="m3"></div>
+    <pre id="log"></pre>
+    <div class="row"><button id="btnStop" class="ghost">停止（做完手上這批就停）</button></div>
+  </section>
+
+  <section class="card hidden" id="s4">
+    <h2>步驟 5：結果與還原</h2>
+    <div class="sum" id="sum4"></div>
+    <div id="m4"></div>
+    <p class="hint">「搬移紀錄」記下了每台搬動前的組織單位。搬錯了就按「用搬移紀錄還原」，或存下來之後從步驟 2 上傳，工具會自動認出它並搬回原位。紀錄裡有序號，請自己妥善保管。</p>
+    <div class="row">
+      <button id="btnResult" class="ghost">下載結果 .xlsx</button>
+      <button id="btnRecord" class="ghost">下載搬移紀錄 .xlsx</button>
+      <button id="btnUndo" class="danger">用搬移紀錄還原這次搬移</button>
+      <button id="btnAgain">再做一批</button>
+    </div>
+  </section>
+</main>
+<dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
+<script type="module" src="app.js?v=20261125a"></script>
+</body>
+</html>

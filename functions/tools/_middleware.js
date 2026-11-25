@@ -38,6 +38,8 @@ import { clientKey, isLocked, recordFailure, clearFailures } from './_ratelimit.
 const TOOL_GROUPS = [
   { paths: ['/tools/ceu'], envVar: 'CEU_TOOLS_PASSWORD', cookieName: 'hlt_ceu_auth', cookiePath: '/tools/ceu', rlScope: 'ceu' },
   { paths: ['/tools/license-manager'], envVar: 'LICENSE_TOOLS_PASSWORD', cookieName: 'hlt_license_auth', cookiePath: '/tools/license-manager', rlScope: 'license' },
+  { paths: ['/tools/account-mover'], envVar: 'LICENSE_TOOLS_PASSWORD', cookieName: 'hlt_account_mover_auth', cookiePath: '/tools/account-mover', rlScope: 'account-mover' },
+  { paths: ['/tools/chromebook-mover'], envVar: 'LICENSE_TOOLS_PASSWORD', cookieName: 'hlt_chromebook_mover_auth', cookiePath: '/tools/chromebook-mover', rlScope: 'chromebook-mover' },
   { paths: ['/tools/flex-deploy','/tools/flex-deploy-intune', '/tools/flex-swap', '/tools/flex-enroll', '/tools/downloads'], envVar: 'INTERNAL_TOOLS_PASSWORD', cookieName: 'hlt_tools_auth', cookiePath: '/tools', rlScope: 'tools' },
 ];
 const MAX_AGE = 60 * 15; // 15 分鐘

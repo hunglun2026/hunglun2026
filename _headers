@@ -65,3 +65,13 @@
   ! Cross-Origin-Opener-Policy
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   Cache-Control: no-store
+
+# ── 帳號轉移、Chromebook 轉移：同授權管理，Google 登入彈窗需要 same-origin-allow-popups ──
+/tools/account-mover/*
+  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cache-Control: no-store
+/tools/chromebook-mover/*
+  ! Cross-Origin-Opener-Policy
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cache-Control: no-store
