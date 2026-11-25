@@ -2,10 +2,10 @@
 // 規則與 Python 版 gadmin_license/rotate.py、plan.py 一致（改一邊要同步改另一邊，tests/logic.test.mjs 逐項比對）。
 
 export const SKUS = {
-  "ai-pro": { product: "101047", sku: "1010470004", name: "Google AI Pro for Education" },
-  "teaching-learning": { product: "101037", sku: "1010370001", name: "Teaching and Learning Upgrade" },
-  "plus": { product: "101031", sku: "1010310008", name: "Education Plus" },
-  "plus-staff": { product: "101031", sku: "1010310009", name: "Education Plus (Staff)" },
+  "ai-pro": { product: "101047", sku: "1010470004", name: "Google AI Pro for Education", short: "AI Pro" },
+  "teaching-learning": { product: "101037", sku: "1010370001", name: "Teaching and Learning Upgrade", short: "T&L" },
+  "plus": { product: "101031", sku: "1010310008", name: "Education Plus", short: "Plus" },
+  "plus-staff": { product: "101031", sku: "1010310009", name: "Education Plus (Staff)", short: "Plus (Staff)" },
 };
 // Fundamentals、Gmail Only、封存使用者 SKU 受保護，網頁不提供也不接受
 
@@ -118,6 +118,12 @@ export async function execute(actions, api, { maxChanges = DEFAULT_MAX, sleep = 
     if (result.stopped) break;
   }
   return result;
+}
+
+// 某個信箱目前持有哪幾種（本工具管理的四種）授權，回傳短名稱陣列；held：{授權代號: Set(信箱)}
+export function licensesOf(email, held) {
+  const e = String(email || "").trim().toLowerCase();
+  return Object.keys(SKUS).filter((k) => held?.[k]?.has(e)).map((k) => SKUS[k].short);
 }
 
 // ================= 一次多種授權（2026-11-25）=================

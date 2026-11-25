@@ -31,7 +31,7 @@ export function realApi(token, domain, { product, sku }) {
     async listHolders() {
       const out = new Set(); let pt = "";
       do {
-        const r = await call(token, `${base}/users?customerId=${encodeURIComponent(domain)}&maxResults=100${pt ? `&pageToken=${pt}` : ""}`);
+        const r = await call(token, `${base}/users?customerId=${encodeURIComponent(domain)}&maxResults=1000${pt ? `&pageToken=${pt}` : ""}`);
         for (const i of r.items || []) out.add(i.userId.toLowerCase());
         pt = r.nextPageToken || "";
       } while (pt);
@@ -43,9 +43,9 @@ export function realApi(token, domain, { product, sku }) {
 }
 
 // 示範版：模擬「收回後位子要幾秒才釋出」與額度上限，讓畫面能完整練習。
-export function demoApi({ seats = 4, releaseDelayMs = 1500 } = {}) {
+export function demoApi({ seats = 4, releaseDelayMs = 1500, heldBy = null } = {}) {
   const users = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n"].map((n) => ({ email: `${n}@demo.school.tw`, suspended: n === "n", archived: false }));
-  const holders = new Set(["a@demo.school.tw", "b@demo.school.tw", "c@demo.school.tw", "keep@demo.school.tw"]);
+  const holders = new Set(heldBy || ["a@demo.school.tw", "b@demo.school.tw", "c@demo.school.tw", "keep@demo.school.tw"]); // heldBy：讓每種授權的示範持有者不同
   users.push({ email: "keep@demo.school.tw", suspended: false, archived: false });
   const pendingRelease = []; // 收回後延遲才算空出
   return {

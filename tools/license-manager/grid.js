@@ -7,7 +7,7 @@ const $ = (id) => document.getElementById(id);
 const el = (tag, props = {}, ...kids) => { const e = Object.assign(document.createElement(tag), props); kids.forEach((k) => e.append(k)); return e; };
 const blank = () => ({ email: "", action: "add" });
 
-export function createGrid({ notify, askConfirm, getSheetsToken, isDemo }) {
+export function createGrid({ notify, askConfirm, getSheetsToken, isDemo, licenseText = () => null }) {
   let rows = [blank()];
   const body = $("gBody");
 
@@ -28,8 +28,17 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo }) {
     const inp = el("input", { type: "text", value: r.email, placeholder: i === 0 ? "teacher@school.edu.tw" : "", autocomplete: "off", spellcheck: false, ariaLabel: `第 ${i + 1} 列電子郵件` });
     const mark = () => inp.classList.toggle("bad", !!inp.value.trim() && !cleanEmail(inp.value));
     mark();
+    const lic = el("td", { className: "lic" });
+    const showLic = () => {
+      lic.textContent = "";
+      const v = cleanEmail(inp.value) ? licenseText(cleanEmail(inp.value)) : null; // null＝還沒讀到或不是有效信箱，不顯示
+      if (v === "loading") lic.append(el("span", { className: "lic-none", textContent: "讀取中…" }));
+      else if (Array.isArray(v) && v.length) v.forEach((n) => lic.append(el("span", { className: "lic-chip", textContent: n })));
+      else if (Array.isArray(v)) lic.append(el("span", { className: "lic-none", textContent: "目前沒有這四種授權" }));
+    };
+    tr.showLic = showLic; showLic();
     inp.addEventListener("input", () => {
-      r.email = inp.value; mark();
+      r.email = inp.value; mark(); showLic();
       if (r === rows[rows.length - 1] && inp.value.trim()) { rows.push(blank()); body.append(makeRow(rows[rows.length - 1], rows.length - 1)); }
       updateSum();
     });
@@ -49,10 +58,11 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo }) {
     sel.value = r.action; tint(); sel.addEventListener("change", () => { r.action = sel.value; tint(); updateSum(); });
     const del = el("button", { className: "x", type: "button", title: "刪除這一列", ariaLabel: `刪除第 ${i + 1} 列`, textContent: "×" });
     del.addEventListener("click", () => { rows.splice(i, 1); trimBlanks(); render(); });
-    tr.append(el("td", {}, inp), el("td", {}, sel), el("td", { className: "act" }, del));
+    tr.append(el("td", {}, inp), lic, el("td", {}, sel), el("td", { className: "act" }, del));
     return tr;
   }
 
+  const refreshLicenses = () => [...body.rows].forEach((tr) => tr.showLic?.());
   function render() { body.textContent = ""; rows.forEach((r, i) => body.append(makeRow(r, i))); updateSum(); }
 
   // 合併匯入的列：已存在的信箱更新動作，新的接在後面；mode=replace 則整張換掉
@@ -164,5 +174,5 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo }) {
   };
 
   render();
-  return { getLists: () => listsFromRows(rows), setRows: (items) => { rows = items.map((x) => ({ ...x })); trimBlanks(); render(); }, clear: () => { rows = [blank()]; render(); }, count: () => rows.filter((r) => r.email.trim()).length };
+  return { refreshLicenses, getLists: () => listsFromRows(rows), setRows: (items) => { rows = items.map((x) => ({ ...x })); trimBlanks(); render(); }, clear: () => { rows = [blank()]; render(); }, count: () => rows.filter((r) => r.email.trim()).length };
 }

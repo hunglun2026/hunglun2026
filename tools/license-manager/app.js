@@ -1,5 +1,5 @@
 // 畫面與流程：四步一頁。邏輯在 logic.js，與 Google 溝通在 api.js。
-import { SKUS, DEFAULT_MAX, HARD_MAX, planMany, totalCounts, checkAvailable, verifyMany, executeMany } from "./logic.js?v=20261123c";
+import { SKUS, DEFAULT_MAX, HARD_MAX, planMany, totalCounts, checkAvailable, verifyMany, executeMany, licensesOf } from "./logic.js?v=20261123c";
 import { createGrid } from "./grid.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
 import { realApi, demoApi } from "./api.js?v=20261125a";
@@ -9,7 +9,7 @@ const $ = (id) => document.getElementById(id);
 const SCOPES = "openid email https://www.googleapis.com/auth/apps.licensing https://www.googleapis.com/auth/admin.directory.user.readonly";
 const SHEETS_SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly";
 const OP_LABEL = { add: "指派", remove: "收回", skip: "跳過", error: "出錯" };
-const state = { apis: {}, mode: "", token: "", plans: null, keys: [], lists: null, rows: [] };
+const state = { apis: {}, mode: "", token: "", plans: null, keys: [], lists: null, rows: [], held: null };
 
 // ---- 自己做的對話框（不用瀏覽器內建 confirm） ----
 function ask(title, body, yes = "確定", danger = false) {
@@ -43,7 +43,7 @@ function getSheetsToken() {
     }).requestAccessToken();
   });
 }
-const grid = createGrid({ notify: (kind, text) => msg("s2msg", kind, text), askConfirm: ask, getSheetsToken, isDemo: () => demoMode() });
+const grid = createGrid({ notify: (kind, text) => msg("s2msg", kind, text), askConfirm: ask, getSheetsToken, isDemo: () => demoMode(), licenseText: (email) => (state.held ? licensesOf(email, state.held) : state.mode ? "loading" : null) });
 if (/(^|\.)hunglun\.com$/.test(location.hostname)) $("siteLinks").classList.remove("hidden");
 
 // ---- 步驟 2：登入（步驟 1 是先設定，只有說明，沒有程式） ----
@@ -55,11 +55,18 @@ for (const [k, v] of Object.entries(SKUS)) {
   $("availBox").append(row);
   cb.onchange = () => {
     row.classList.toggle("hidden", !cb.checked);
-    if (state.mode === "real") buildApis();
-    if (demoMode()) { state.apis = {}; for (const k2 of chosen()) state.apis[k2] = demoApi(); }
   };
 }
-function buildApis() { state.apis = {}; for (const k of chosen()) state.apis[k] = realApi(state.token, $("domain").value.trim(), SKUS[k]); }
+// 讀四種授權目前的持有者（唯讀），讓名單表格顯示「這個帳號現在有什麼」；失敗就不顯示，不影響其他功能
+async function loadHeld() {
+  state.held = null; grid.refreshLicenses();
+  try {
+    const keys = Object.keys(SKUS), sets = await Promise.all(keys.map((k) => state.apis[k].listHolders()));
+    state.held = Object.fromEntries(keys.map((k, i) => [k, sets[i]]));
+  } catch (e) { state.held = null; msg("s2msg", "warn", "讀不到目前的授權狀況（" + e.message + "），表格不會顯示「目前已有的授權」，但預演仍會重新確認。"); }
+  grid.refreshLicenses();
+}
+function buildApis() { state.apis = {}; for (const k of Object.keys(SKUS)) state.apis[k] = realApi(state.token, $("domain").value.trim(), SKUS[k]); }
 
 function startReal() {
   if (!chosen().length) return msg("s1msg", "err", "請至少勾選一種要管理的授權。");
@@ -76,7 +83,7 @@ function startReal() {
         msg("s1msg", "ok", `已登入：${info.email}`);
       } catch { msg("s1msg", "warn", "已登入，但讀不到帳號資訊，請自己填學校網域。"); }
       if (!$("domain").value) return;
-      state.mode = "real"; buildApis();
+      state.mode = "real"; buildApis(); loadHeld();
       show(2);
     },
   });
@@ -85,10 +92,13 @@ function startReal() {
 $("btnLogin").onclick = startReal;
 $("btnDemo").onclick = () => {
   if (!chosen().length) return msg("s1msg", "err", "請至少勾選一種要管理的授權。");
-  state.mode = "demo"; state.apis = {}; for (const k of chosen()) state.apis[k] = demoApi();
+  state.mode = "demo"; state.apis = {};
+  // 示範：每種授權的持有者不同，名單表格的「目前已有的授權」才看得出差別（AI Pro 與 Plus 的收回位子剛好夠換人，示範才走得通）
+  const HELD = { "ai-pro": ["a", "b", "c", "keep"], "teaching-learning": ["a"], plus: ["a", "b", "c", "keep"], "plus-staff": ["keep"] };
+  for (const k of Object.keys(SKUS)) state.apis[k] = demoApi({ heldBy: HELD[k].map((n) => `${n}@demo.school.tw`) });
   for (const k of chosen()) $("av_" + k).value = 0; // 示範：後台目前沒有空位，要靠收回的位子換人
   grid.setRows([...["d", "e", "f", "n"].map((n) => ({ email: `${n}@demo.school.tw`, action: "add" })), ...["a", "b", "c"].map((n) => ({ email: `${n}@demo.school.tw`, action: "revoke" })), { email: "keep@demo.school.tw", action: "keep" }]);
-  show(2); msg("s2msg", "info", "這是示範資料，不會連到 Google，也不會改到任何真實帳號。名單已先填好，可以直接往下走一遍。");
+  loadHeld(); show(2); msg("s2msg", "info", "這是示範資料，不會連到 Google，也不會改到任何真實帳號。名單已先填好，可以直接往下走一遍。");
 };
 
 // ---- 步驟 3 → 4 ----
@@ -158,6 +168,7 @@ $("btnRun").onclick = async () => {
     problems = verifyMany(state.plans.filter((p) => !result.notRun.includes(p.name)), Object.fromEntries(state.plans.map((p, i) => [p.key, held[i]])));
     if (!problems.length) break;
   }
+  loadHeld();
   problems.forEach((p) => line("驗證失敗：" + p, "l-fail"));
   if (!problems.length && !result.failed && !result.notRun.length) { line("驗證：後台目前持有者與名單一致。", "l-ok"); msg("s4msg", "ok", "完成，後台狀態已和名單一致。"); }
   else msg("s4msg", "err", "有項目沒有完成，請看下方紀錄；可以回到步驟 3 修正後再跑一次（已完成的不會重複異動）。");
