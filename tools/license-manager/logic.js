@@ -88,35 +88,43 @@ export function verifyAfter(actions, holdersNow) {
 }
 
 // 執行：api = {addLicense(email), removeLicense(email)}；回傳 {ok, failed, stopped, rows}
-export async function execute(actions, api, { maxChanges = DEFAULT_MAX, sleep = (s) => new Promise((r) => setTimeout(r, s * 1000)), onRow = () => {}, onWait = () => {} } = {}) {
+export const CONCURRENCY = 5; // 同一類動作（全部收回、全部指派）同時送幾筆；Google 有頻率限制，太多會被擋（2026-11-26 原本一筆一筆做，10 筆要 25 秒）
+export async function execute(actions, api, { maxChanges = DEFAULT_MAX, concurrency = CONCURRENCY, sleep = (s) => new Promise((r) => setTimeout(r, s * 1000)), onRow = () => {}, onWait = () => {} } = {}) {
   const todo = actions.filter((a) => a.op === "add" || a.op === "remove");
   if (todo.length > maxChanges) throw new Error(`要異動 ${todo.length} 位，超過上限 ${maxChanges}，已中止`);
   const result = { ok: 0, failed: 0, already: 0, stopped: "", rows: [] };
   let removedAny = false;
-  for (const a of todo) {
+  // 一筆的完整處理（含額度未釋出的退避重試）。只改自己的 row，計數與停手交給外面
+  const one = async (a) => {
     const row = { time: new Date().toLocaleTimeString("zh-TW", { hour12: false }), email: a.email, op: a.op };
     const waits = a.op === "add" && removedAny ? [...QUOTA_RETRY_WAITS] : [];
     for (;;) {
       try {
         await (a.op === "add" ? api.addLicense(a.email) : api.removeLicense(a.email));
-        row.result = "ok"; result.ok++; removedAny = removedAny || a.op === "remove";
-        break;
+        row.result = "ok"; break;
       } catch (e) {
-        if (a.op === "add" && e.kind === "already") { // 後台已是目標狀態（列表還沒追上時常見）：算成功，不算失敗
-          row.result = "ok"; row.note = "已有授權"; result.ok++; result.already++;
-          break;
-        }
-        if (e.kind === "quota" && waits.length) {
-          const w = waits.shift(); onWait(a.email, w); await sleep(w); continue;
-        }
-        row.result = "fail"; row.kind = e.kind; row.message = e.message; result.failed++;
-        if (e.kind === "forbidden" || e.kind === "quota") result.stopped = `${e.kind}：${e.message}`;
-        break;
+        if (a.op === "add" && e.kind === "already") { row.result = "ok"; row.note = "已有授權"; break; } // 後台已是目標狀態（列表還沒追上時常見）：算成功
+        if (e.kind === "quota" && waits.length) { const w = waits.shift(); onWait(a.email, w); await sleep(w); continue; }
+        row.result = "fail"; row.kind = e.kind; row.message = e.message; break;
       }
     }
-    result.rows.push(row); onRow(row);
-    if (result.stopped) break;
-  }
+    return row;
+  };
+  // 一波：同類動作用 concurrency 個工人同時做；一旦有致命錯誤（沒權限、額度用盡）就不再領新的，已經送出的做完
+  const wave = async (list) => {
+    let next = 0;
+    const lane = async () => {
+      while (next < list.length && !result.stopped) {
+        const a = list[next++], row = await one(a);
+        if (row.result === "ok") { result.ok++; if (row.note) result.already++; if (a.op === "remove") removedAny = true; }
+        else { result.failed++; if (row.kind === "forbidden" || row.kind === "quota") result.stopped = result.stopped || `${row.kind}：${row.message}`; }
+        result.rows.push(row); onRow(row);
+      }
+    };
+    await Promise.all(Array.from({ length: Math.min(concurrency, list.length) }, lane));
+  };
+  await wave(todo.filter((a) => a.op === "remove"));   // 先全部收回，位子才會空出來
+  if (!result.stopped) await wave(todo.filter((a) => a.op === "add"));
   return result;
 }
 
