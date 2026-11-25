@@ -1,6 +1,6 @@
 // 步驟 2 的名單表格（像 Excel 一格一格）與匯入（上傳檔案、Google 試算表、貼上多筆）。
 // 純邏輯在 logic.js，讀檔在 sheet.js，這裡只管畫面。
-import { ACTION_LABEL, MAX_CHANGES, normalizeAction, cleanEmail, listsFromRows, parsePasted, detectTable, rowsFromTable } from "./logic.js?v=20261123c";
+import { ACTION_LABEL, HARD_MAX, normalizeAction, cleanEmail, listsFromRows, parsePasted, detectTable, rowsFromTable } from "./logic.js?v=20261123c";
 import { openFile, googleSheetSource, demoSheetSource, pickBestTab } from "./sheet.js?v=20261123c";
 
 const $ = (id) => document.getElementById(id);
@@ -19,7 +19,7 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo }) {
     $("gSum").innerHTML = "";
     parts.forEach(([k, p]) => $("gSum").append(el("span", { className: `chip c-${k}`, textContent: p })));
     if (l.invalid) $("gSum").append(el("span", { className: "chip bad", textContent: `格式錯誤 ${l.invalid}` }));
-    if (n > MAX_CHANGES) $("gSum").append(el("span", { className: "chip bad", textContent: `要異動 ${n} 位，單次上限 ${MAX_CHANGES}，請分批` }));
+    if (n > HARD_MAX) $("gSum").append(el("span", { className: "chip bad", textContent: `要異動 ${n} 位，單次上限 ${HARD_MAX}，請分批` }));
   }
 
   function makeRow(r, i) {

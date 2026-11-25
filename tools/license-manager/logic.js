@@ -9,7 +9,8 @@ export const SKUS = {
 };
 // Fundamentals、Gmail Only、封存使用者 SKU 受保護，網頁不提供也不接受
 
-export const MAX_CHANGES = 30; // 單次最多異動幾位
+export const DEFAULT_MAX = 500; // 單次執行預設上限；預演畫面可調高，但不超過 HARD_MAX（2026-11-25 Steve 要測極限，原本固定 30）
+export const HARD_MAX = 3000;
 export const QUOTA_RETRY_WAITS = [5, 10, 20, 40, 60]; // 剛收回的位子要幾秒才釋出（2026-11-22 實測）
 
 export function parseEmails(text) {
@@ -87,7 +88,7 @@ export function verifyAfter(actions, holdersNow) {
 }
 
 // 執行：api = {addLicense(email), removeLicense(email)}；回傳 {ok, failed, stopped, rows}
-export async function execute(actions, api, { maxChanges = MAX_CHANGES, sleep = (s) => new Promise((r) => setTimeout(r, s * 1000)), onRow = () => {}, onWait = () => {} } = {}) {
+export async function execute(actions, api, { maxChanges = DEFAULT_MAX, sleep = (s) => new Promise((r) => setTimeout(r, s * 1000)), onRow = () => {}, onWait = () => {} } = {}) {
   const todo = actions.filter((a) => a.op === "add" || a.op === "remove");
   if (todo.length > maxChanges) throw new Error(`要異動 ${todo.length} 位，超過上限 ${maxChanges}，已中止`);
   const result = { ok: 0, failed: 0, already: 0, stopped: "", rows: [] };

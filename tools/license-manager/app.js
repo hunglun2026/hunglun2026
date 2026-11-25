@@ -1,5 +1,5 @@
 // 畫面與流程：四步一頁。邏輯在 logic.js，與 Google 溝通在 api.js。
-import { SKUS, MAX_CHANGES, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js?v=20261123c";
+import { SKUS, DEFAULT_MAX, HARD_MAX, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js?v=20261123c";
 import { createGrid } from "./grid.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
 import { realApi, demoApi } from "./api.js?v=20261125a";
@@ -93,6 +93,7 @@ $("btnPlan").onclick = async () => {
   } finally { $("btnPlan").disabled = false; }
 };
 
+function maxValue() { return Math.min(HARD_MAX, Math.max(1, Math.floor(+$("maxIn").value) || DEFAULT_MAX)); }
 function renderPlan() {
   const { actions, warnings } = state.plan, c = counts(actions);
   $("sum").innerHTML = `<div class="s-remove">收回 ${c.remove}</div><div class="s-add">指派 ${c.add}</div><div class="s-skip">跳過 ${c.skip}</div><div class="s-error">出錯 ${c.error}</div>`;
@@ -103,11 +104,13 @@ function renderPlan() {
     tr.insertCell().appendChild(pill); tr.insertCell().textContent = a.email; tr.insertCell().textContent = a.reason;
   }
   const quota = checkAvailable(actions, $("avail").value);
-  const problems = [...warnings, ...(quota ? [`額度不足：${quota}`] : []), ...(c.error ? ["名單有找不到的人，請回上一步修正"] : []), ...(c.add + c.remove > MAX_CHANGES ? [`要異動 ${c.add + c.remove} 位，超過單次上限 ${MAX_CHANGES}，請回上一步分批`] : [])];
+  const problems = [...warnings, ...(quota ? [`額度不足：${quota}`] : []), ...(c.error ? ["名單有找不到的人，請回上一步修正"] : []), ...(c.add + c.remove > maxValue() ? [`要異動 ${c.add + c.remove} 位，超過單次上限 ${maxValue()}，請調高上方的上限（最高 ${HARD_MAX}），或回上一步分批`] : [])];
   msg("s3msg", problems.length ? "err" : "ok", problems.length ? problems.join("；") : "預演沒有問題。");
   $("btnRun").disabled = problems.length > 0 || c.add + c.remove === 0;
   if (!problems.length && c.add + c.remove === 0) msg("s3msg", "info", "沒有需要異動的項目，目前狀態已經符合名單。");
 }
+$("maxIn").oninput = () => { if (state.plan) renderPlan(); };
+$("maxIn").value = DEFAULT_MAX;
 $("back3").onclick = () => show(2);
 
 // ---- 步驟 5 ----
@@ -117,6 +120,7 @@ $("btnRun").onclick = async () => {
   show(4); state.rows = []; const log = $("log"); log.textContent = ""; msg("s4msg", "info", "執行中，請不要關閉這個分頁…");
   const line = (t, cls = "") => { const s = document.createElement("span"); if (cls) s.className = cls; s.textContent = t + "\n"; log.append(s); log.scrollTop = log.scrollHeight; };
   const result = await execute(state.plan.actions, state.api, {
+    maxChanges: maxValue(),
     onRow: (r) => { state.rows.push(r); line(`${r.time}  ${OP_LABEL[r.op]}  ${r.email}  ${r.result === "ok" ? "成功" + (r.note ? "（" + r.note + "）" : "") : "失敗（" + r.kind + "）" + (r.message || "")}`, r.result === "ok" ? `l-${r.op}` : "l-fail"); },
     onWait: (e, w) => line(`      剛收回的位子還沒釋出，${w} 秒後重試 ${e}`, "l-wait"),
   }).catch((e) => ({ ok: 0, failed: 1, stopped: e.message, rows: [] }));
