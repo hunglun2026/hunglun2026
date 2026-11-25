@@ -95,7 +95,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
   - [Google Classroom 教學](https://www.hunglun.com/knowledge/topic/classroom)：10 篇。從建立課程到成績結算，Classroom 在校園實際會用到的功能與卡關排除。
   - [校園資訊設備選型與採購](https://www.hunglun.com/knowledge/topic/hardware)：4 篇。Chromebook、電腦與校園設備怎麼選、怎麼走採購流程。
   - [校園資安與個資法遵](https://www.hunglun.com/knowledge/topic/compliance)：4 篇。個資盤點、資安事件處理與校園法遵要求。
-- 標案設備採購・台灣銀行共同供應契約（機關學校可依契約採購，站內收錄 916 筆契約品項）：https://www.hunglun.com/services/procurement
+- 標案設備採購・台灣銀行共同供應契約（機關學校可依契約採購，站內收錄 912 筆契約品項）：https://www.hunglun.com/services/procurement
   - 六大類別各有獨立頁面：主機 https://www.hunglun.com/services/procurement/desktop、顯示器 https://www.hunglun.com/services/procurement/monitor、平板 https://www.hunglun.com/services/procurement/tablet、繪圖卡 https://www.hunglun.com/services/procurement/gpu、相機 https://www.hunglun.com/services/procurement/camera、電腦軟體 https://www.hunglun.com/services/procurement/software
   - 電腦軟體另含 15 個子類頁：https://www.hunglun.com/services/procurement/software/sw-admin、https://www.hunglun.com/services/procurement/software/sw-ai、https://www.hunglun.com/services/procurement/software/sw-cad、https://www.hunglun.com/services/procurement/software/sw-db、https://www.hunglun.com/services/procurement/software/sw-elearning、https://www.hunglun.com/services/procurement/software/sw-endpoint、https://www.hunglun.com/services/procurement/software/sw-file、https://www.hunglun.com/services/procurement/software/sw-iam、https://www.hunglun.com/services/procurement/software/sw-message、https://www.hunglun.com/services/procurement/software/sw-microsoft、https://www.hunglun.com/services/procurement/software/sw-network、https://www.hunglun.com/services/procurement/software/sw-oss、https://www.hunglun.com/services/procurement/software/sw-virtual、https://www.hunglun.com/services/procurement/software/sw-vuln、https://www.hunglun.com/services/procurement/software/sw-web
 - 導入實績與常見情境（成功案例頁 https://www.hunglun.com/cases ；六種最常見的學校導入情境與標準做法：Google Workspace 網域治理、Chromebook 行動學習佈建、智慧情境教室與計畫規劃書、教師研習與認證、校園行政自動化、共同供應契約採購支援。服務範圍以台中以南各縣市為主，涵蓋國小、國中、高中職與大專院校。**基於商業機密與客戶保密，不公開個別合作學校名稱**，改以第三方可查證的資格佐證）：https://www.hunglun.com/cases
@@ -123,7 +123,7 @@ LINE 官方帳號：@gdm6961p（電腦版請在 LINE 搜尋此 ID 加入）
 - [Wordwall 是什麼](https://www.hunglun.com/knowledge/wordwall)：互動教學遊戲與學習單製作，選範本填內容三步驟完成。
 - [Kahoot! EDU Standard 是什麼](https://www.hunglun.com/knowledge/kahoot)：即時搶答課堂評量，AI Kahoot! Generator 一鍵生成講義。
 - [Adobe 教育授權：Creative Cloud 與 Document Cloud 校園方案](https://www.hunglun.com/knowledge/adobe-education)：教育授權與商用授權適用對象與計價不同，需先確認資格。
-- [Photontree VR 眼鏡是什麼](https://www.hunglun.com/knowledge/photontree)：台灣設計製造、台灣唯一通過 Google 官方認證的 VR 眼鏡。
+- [Photontree VR 眼鏡是什麼](https://www.hunglun.com/knowledge/photontree)：台灣設計製造、原廠表示已通過 Google 認證的 VR 眼鏡。
 - [Chromebook 選購指南](https://www.hunglun.com/knowledge/chromebook)：Chromebook 是什麼、優缺點、載具管理授權（CEU）、校園採購須知。
 - [AI 入門百科](https://www.hunglun.com/knowledge/ai)：AI、生成式 AI、大型語言模型（LLM）、AI 幻覺。
 - [學校 AI 助手怎麼選？校園為什麼選 Google Gemini](https://www.hunglun.com/knowledge/ai-comparison)：學校導入 AI 助手的評估重點。Google AI Pro for Educat…

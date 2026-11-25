@@ -12,11 +12,11 @@
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
 <link rel="stylesheet" href="/assets/style.css?v=20261124">
 <title>寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技</title>
-<meta name="description" content="學校信箱寄到 Gmail 被退回、錯誤碼 550 5.7.40？多半是網域 DNS 的 MX、SPF、DKIM 設定跑掉。用管理後台截圖，一步一步補好，附給網管的申請信範本。">
+<meta name="description" content="學校信箱寄到 Gmail 被退回、錯誤碼 550 5.7.40？多半是網域缺 DMARC 記錄，也要一併檢查 MX、SPF、DKIM。用管理後台截圖，一步一步補好，附給網管的申請信範本。">
 <link rel="canonical" href="https://www.hunglun.com/knowledge/gmail-dns-setup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技">
-<meta property="og:description" content="Gmail 退信 550 5.7.40 怎麼辦：從管理後台看電子郵件設定狀態，補 MX、SPF、DKIM，附申請信範本。">
+<meta property="og:description" content="Gmail 退信 550 5.7.40 怎麼辦：從管理後台看電子郵件設定狀態，補 DMARC，並檢查 MX、SPF、DKIM，附申請信範本。">
 <meta property="og:url" content="https://www.hunglun.com/knowledge/gmail-dns-setup">
 <meta property="og:image" content="https://www.hunglun.com/assets/og/knowledge-gmail-dns-setup.png?v=5">
 <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技">
-<meta name="twitter:description" content="Gmail 退信 550 5.7.40 怎麼辦：從管理後台看電子郵件設定狀態，補 MX、SPF、DKIM，附申請信範本。">
+<meta name="twitter:description" content="Gmail 退信 550 5.7.40 怎麼辦：從管理後台看電子郵件設定狀態，補 DMARC，並檢查 MX、SPF、DKIM，附申請信範本。">
 <meta name="twitter:image" content="https://www.hunglun.com/assets/og/knowledge-gmail-dns-setup.png?v=5">
 <meta name="twitter:image:alt" content="寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學｜鴻綸科技">
 <script type="application/ld+json">
@@ -50,7 +50,7 @@
       "name": "退信代碼 550 5.7.40 是什麼意思？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Gmail 擋下這封信，因為信上的寄件人網域（From）跟 SPF 或 DKIM 驗證通過的網域對不上。常見原因是網域的 SPF、DKIM 記錄遺失或沒啟用。"
+        "text": "依 Google 官方說明，550 5.7.40 是因為寄件網域沒有 DMARC 記錄，或 DMARC 記錄沒有指定 policy。SPF 與 DKIM 都沒通過則是另一個代碼 550 5.7.26。"
       }
     },
     {
@@ -58,7 +58,7 @@
       "name": "為什麼學校的信箱會突然被 Gmail 退信？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Gmail 要求寄來的信 SPF 或 DKIM 至少通過一項，而且網域要一致。網域註冊搬家、DNS 換主機或管理者異動時，這些記錄可能不見或被改掉，通常要到管理後台的「電子郵件設定狀態」檢查。"
+        "text": "Gmail 要求寄來的信 SPF 或 DKIM 至少通過一項，網域也要有 DMARC 記錄。網域註冊搬家、DNS 換主機或管理者異動時，這些記錄可能不見或被改掉，通常要到管理後台的「電子郵件設定狀態」檢查。"
       }
     },
     {
@@ -66,7 +66,7 @@
       "name": "MX、SPF、DKIM 要補的順序是什麼？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "後台的做法是先補 MX 並完成驗證，再補 DKIM。SPF 是一筆 TXT，可以同一輪一起處理。DMARC 建議最後再加，而且先用 p=none。"
+        "text": "後台的做法是先補 MX 並完成驗證，再補 DKIM。SPF 是一筆 TXT，可以同一輪一起處理。退信代碼是 5.7.40 時 DMARC 必須補，先用 p=none；SPF、DKIM 穩定運作約 48 小時後再加最保險。"
       }
     },
     {
@@ -93,7 +93,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學",
-  "description": "學校信箱寄到 Gmail 被退回、錯誤碼 550 5.7.40？多半是網域 DNS 的 MX、SPF、DKIM 設定跑掉。用管理後台截圖，一步一步補好，附給網管的申請信範本。",
+  "description": "學校信箱寄到 Gmail 被退回、錯誤碼 550 5.7.40？多半是網域缺 DMARC 記錄，也要一併檢查 MX、SPF、DKIM。用管理後台截圖，一步一步補好，附給網管的申請信範本。",
   "image": "https://www.hunglun.com/assets/og/knowledge-gmail-dns-setup.png",
   "datePublished": "2026-11-23",
   "dateModified": "2026-11-23",
@@ -172,7 +172,7 @@
   <div class="wrap">
     <nav class="section-sub reveal" style="margin:0 0 10px;text-align:center;" aria-label="麵包屑"><a href="/knowledge">教學資源</a> ／ <a href="/knowledge/topic/google-ai">Google 與 AI 導入</a> ／ Gmail 退信與 DNS 設定</nav>
     <h1>寄到 Gmail 被退信？學校網域補設 MX、SPF、DKIM 教學</h1>
-    <p>學校的信寄到 Gmail 信箱被退回，退信寫著 550 5.7.40？多半是網域的 DNS 設定跑掉了。Google 管理後台的「電子郵件設定狀態」會顯示 MX、SPF、DKIM 不正確。這篇用後台截圖，一步一步帶你補好。</p>
+    <p>學校的信寄到 Gmail 信箱被退回，退信寫著 550 5.7.40？多半是網域沒有 DMARC 記錄。Google 管理後台的「電子郵件設定狀態」可以一併檢查 MX、SPF、DKIM 是否正常。這篇用後台截圖，一步一步帶你補好。</p>
     <p class="kb-audience" style="margin-top:14px;font-size:0.9rem;color:var(--muted);"><strong>這篇適合：</strong>學校資訊組與負責管理 Google Workspace for Education 的老師，以及需要請市網、教育局或廠商代為修改 DNS 的人。</p>
   </div>
 </div>
@@ -182,9 +182,9 @@
     <div class="kb-quick" data-quick-answer>
       <h2>重點先看</h2>
       <ul>
-        <li><strong>遇到的情況：</strong>寄到 Gmail 的信被退回，錯誤碼 550 5.7.40，意思是寄件人網域跟 SPF、DKIM 驗證的網域對不上。</li>
+        <li><strong>遇到的情況：</strong>寄到 Gmail 的信被退回，錯誤碼 550 5.7.40，官方說明是寄件網域沒有 DMARC 記錄，或 DMARC 記錄沒有指定 policy。</li>
         <li><strong>先看哪裡：</strong>管理後台「帳戶 → 網域 → 管理網域」的「電子郵件設定狀態」，看 MX、SPF、DKIM 哪一項不是正常。</li>
-        <li><strong>要補三種記錄：</strong>MX（收信）、SPF 和 DKIM（寄信證明）。每一項都是先在後台複製，再貼到 DNS 主機。</li>
+        <li><strong>要補的記錄：</strong>5.7.40 要補 DMARC（先用 p=none）；MX（收信）、SPF 和 DKIM（寄信證明）也要一併確認正常。MX、SPF、DKIM 先在後台複製，再貼到 DNS 主機。</li>
         <li><strong>多久生效：</strong>後台狀態頁寫最多 72 小時，DKIM 的官方說明寫最多 48 小時。</li>
       </ul>
     </div>
@@ -197,7 +197,7 @@
            srcset="/assets/images/gmail-dns-bounce-480.webp 480w, /assets/images/gmail-dns-bounce-768.webp 768w, /assets/images/gmail-dns-bounce.webp 1200w"
            sizes="(max-width: 820px) 100vw, 780px"
            width="1200" height="513" loading="lazy" decoding="async" style="filter:none;"
-           alt="Gmail 退信畫面：郵件已遭封鎖，伺服器回應 550 5.7.40，From 標頭與 SPF 或 DKIM 的網域不一致">
+           alt="Gmail 退信畫面：郵件已遭封鎖，伺服器回應 550 5.7.40">
       <figcaption style="text-align:left;">退信通知（收件人信箱已遮蔽）。白話意思：信上寫的寄件人網域，跟實際寄信的驗證網域對不上，Gmail 不收。</figcaption>
     </figure>
 
@@ -368,8 +368,8 @@
 電話：</pre>
     <button type="button" class="fc-copy" data-copy="主旨：申請調整 school.edu.tw 的 Google 郵件 DNS 記錄（MX、SPF、DKIM）&#10;&#10;您好，&#10;&#10;本校 school.edu.tw 使用 Google Workspace 收發信。目前寄到 Gmail 的信會被退回（錯誤碼 550 5.7.40），Google 管理後台的電子郵件設定狀態也顯示記錄不正確。麻煩協助調整以下記錄：&#10;&#10;1. MX（請先刪除 school.edu.tw 原有的 MX，再新增這一筆，TTL 請設最低）&#10;   名稱：school.edu.tw&#10;   優先順序：1&#10;   指向：smtp.google.com.&#10;&#10;2. SPF（若已存在請修改，不要新增第二筆）&#10;   名稱：school.edu.tw&#10;   類型：TXT&#10;   值：v=spf1 include:_spf.google.com ~all&#10;&#10;3. DKIM&#10;   名稱：google._domainkey.school.edu.tw&#10;   類型：TXT&#10;   值：（貼上管理後台產生的 v=DKIM1; k=rsa; p=… 整串）&#10;&#10;備註：&#10;- 名稱若需寫成區域內的短寫法，請依貴單位格式轉換。&#10;- 麻煩在放學後或假日處理，MX 的刪除與新增請連續完成。&#10;- 完成後請回覆，本校會到後台按「開始驗證」。&#10;&#10;謝謝您的協助。&#10;&#10;學校：&#10;聯絡人：&#10;電話：" data-label="複製申請信">複製申請信</button>
 
-    <h2>七、DMARC：最後再加，而且先寬鬆</h2>
-    <p>DMARC 是更上一層的規則。Google 建議 SPF、DKIM 穩定運作 48 小時之後再加，起手先用「只觀察、不處理」：</p>
+    <h2>七、DMARC：5.7.40 一定要補，而且先寬鬆</h2>
+    <p>退信代碼是 5.7.40 時，這一步一定要做：DMARC 是更上一層的規則，沒有這筆記錄就會被擋。Google 建議 SPF、DKIM 穩定運作 48 小時之後再加，起手先用「只觀察、不處理」：</p>
     <table>
       <thead><tr><th>完整名稱</th><th>類型</th><th>值</th></tr></thead>
       <tbody><tr><td><code>_dmarc.school.edu.tw</code></td><td>TXT</td><td><code>v=DMARC1; p=none;</code></td></tr></tbody>
@@ -395,15 +395,15 @@
     <h2>常見問題</h2>
     <details class="faq-item">
       <summary>退信代碼 550 5.7.40 是什麼意思？</summary>
-      <div class="faq-a">Gmail 擋下這封信，因為信上的寄件人網域（From）跟 SPF 或 DKIM 驗證通過的網域對不上。常見原因是網域的 SPF、DKIM 記錄遺失或沒啟用。</div>
+      <div class="faq-a">依 Google 官方說明，550 5.7.40 是因為寄件網域沒有 DMARC 記錄，或 DMARC 記錄沒有指定 policy。SPF 與 DKIM 都沒通過則是另一個代碼 550 5.7.26。</div>
     </details>
     <details class="faq-item">
       <summary>為什麼學校的信箱會突然被 Gmail 退信？</summary>
-      <div class="faq-a">Gmail 要求寄來的信 SPF 或 DKIM 至少通過一項，而且網域要一致。網域註冊搬家、DNS 換主機或管理者異動時，這些記錄可能不見或被改掉，通常要到管理後台的「電子郵件設定狀態」檢查。</div>
+      <div class="faq-a">Gmail 要求寄來的信 SPF 或 DKIM 至少通過一項，網域也要有 DMARC 記錄。網域註冊搬家、DNS 換主機或管理者異動時，這些記錄可能不見或被改掉，通常要到管理後台的「電子郵件設定狀態」檢查。</div>
     </details>
     <details class="faq-item">
       <summary>MX、SPF、DKIM 要補的順序是什麼？</summary>
-      <div class="faq-a">後台的做法是先補 MX 並完成驗證，再補 DKIM。SPF 是一筆 TXT，可以同一輪一起處理。DMARC 建議最後再加，而且先用 p=none。</div>
+      <div class="faq-a">後台的做法是先補 MX 並完成驗證，再補 DKIM。SPF 是一筆 TXT，可以同一輪一起處理。退信代碼是 5.7.40 時 DMARC 必須補，先用 p=none；SPF、DKIM 穩定運作約 48 小時後再加最保險。</div>
     </details>
     <details class="faq-item">
       <summary>DNS 不是學校自己管，怎麼辦？</summary>
@@ -475,7 +475,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.47</span></div>  </div>
+    <div class="copyright">© 2026 鴻綸科技股份有限公司 Hunglun Technology Co., Ltd. All rights reserved. <span class="site-version">v1.43.48</span></div>  </div>
 </footer>
 <div class="contact-fab" role="complementary" aria-label="快速聯絡">
   <span class="fab-label">線上諮詢</span>

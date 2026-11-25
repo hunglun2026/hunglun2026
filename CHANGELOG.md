@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.48（2026-11-25）
+
+全站文章事實查證（169 頁，對照官方頁面原文）後的第一輪更正。確定錯誤已改：寄到 Gmail 退信 550 5.7.40 的原因是缺 DMARC（原寫成 SPF／DKIM）；CEU 授權只能在硬體故障時轉移到同型號機器；Gemini Notebook 檢查大綱不限 Ultra；Vids 音樂額度 Teaching and Learning 增購為 50 與 20 次；Meet 各版本單場上限都是 24 小時、Teaching and Learning 加購也能錄影；Gemini 學生專區 EEA 也可用；Expert Intelligence 管理員可控制；Google 認證講師申請條件、考試作答時間、教練時數改為官方寫法；Classroom 情境感知存取與評分量表版本說法；AI 素養認證場次更新為官網現列的 12 月 19 日；共同供應契約品項數 916 更正為 912。查不到官方原文的說法（Photontree「唯一認證」、Padlet 單檔上限、部分額度）改成保守寫法或標註不一致。
+
 ## v1.43.47（2026-11-25）
 
 更正 Google 認證考試費用：依 Google 官方 FAQ 與語言說明頁，Certified Educator Level 1、Level 2 考試在所有開放語言都免費（繁體中文在內），Trainer 技能測驗也免費；原本寫「部分語言免費」「以官方公告為準」不正確。Trainer 課程本身的費用官方沒寫，標「無法確認」。
