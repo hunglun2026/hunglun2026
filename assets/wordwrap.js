@@ -32,8 +32,9 @@
   });
   var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n,list=[];
   while((n=w.nextNode())){if(HAN.test(n.nodeValue)&&!n.parentElement.closest(SKIP))list.push(n);}
-  list.forEach(function(n){
+  function wrap(n){
     var s=n.nodeValue,frag=null,last=0;
+    if(!n.parentNode)return;
     for(var g of seg.segment(s)){
       var i=g.index;
       if(!i||!gap(s,i,g.segment.length))continue;
@@ -45,7 +46,18 @@
     if(!frag)return;
     frag.appendChild(document.createTextNode(s.slice(last)));
     n.parentNode.replaceChild(frag,n);
-  });
+  }
+  // 行動版 4 倍降速下，一次處理全頁會讓第一個畫面晚約 0.7 秒（2026-11-25 量測）：
+  // 開頭 HEAD 段（標題與第一屏）同步做，其餘等瀏覽器閒置時分批做，畫面外的字不會看到跳動。
+  var HEAD=40,BATCH=40,i0=0;
+  for(;i0<list.length&&i0<HEAD;i0++)wrap(list[i0]);
+  function rest(){
+    var end=Math.min(i0+BATCH,list.length);
+    for(;i0<end;i0++)wrap(list[i0]);
+    if(i0<list.length)idle(rest);
+  }
+  var idle=window.requestIdleCallback?function(f){requestIdleCallback(f,{timeout:300})}:function(f){setTimeout(f,16)};
+  if(i0<list.length)idle(rest);
   var st=document.createElement("style");
   // 內文不用 pretty：它為了不留短尾行會把整個詞推到下一行，keep-all 下一行就空出一大塊；尾段防孤字交給 main.js 的 .nowrap
   st.textContent=".wb-root{word-break:keep-all;overflow-wrap:break-word}.wb-root :is(p,li,dd,figcaption,.faq-a,.kn-d,.section-sub){text-wrap:wrap}";
