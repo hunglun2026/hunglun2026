@@ -55,7 +55,7 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo, license
     inp.addEventListener("keydown", (ev) => { if (ev.key === "Enter") { ev.preventDefault(); body.rows[i + 1]?.querySelector("input")?.focus(); } });
     const sel = el("select", { ariaLabel: `第 ${i + 1} 列動作` });
     for (const [k, v] of Object.entries(ACTION_LABEL)) sel.add(new Option(v, k));
-    const tint = () => { sel.className = `a-${sel.value}`; };
+    const tint = () => { sel.className = `a-${sel.value}`; tr.className = `g-${sel.value}`; }; // 整列依動作上色：指派淺藍、收回淺紅
     sel.value = r.action; tint(); sel.addEventListener("change", () => { r.action = sel.value; tint(); updateSum(); });
     const del = el("button", { className: "x", type: "button", title: "刪除這一列", ariaLabel: `刪除第 ${i + 1} 列`, textContent: "×" });
     del.addEventListener("click", () => { rows.splice(i, 1); trimBlanks(); render(); });
