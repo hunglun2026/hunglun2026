@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.44（2026-11-25）
+
+作者頁〈Steve Shen〉職稱改為「Google 認證講師」，與文章 schema 的 jobTitle 一致。
+
 ## v1.43.43（2026-11-25）
 
 新增作者頁〈Steve Shen〉（`/author/steve-shen`，ProfilePage 加 Person schema，職稱鴻綸科技講師，只寫站上已有的事實）。136 個頁面的作者從「鴻綸科技 Steve」改為連到作者頁的 Steve Shen，文章 schema 的 author 補 @id 與 url。新增 `sitemap/apply-author.py`（冪等），`new-article.py` 模板同步。
