@@ -130,10 +130,10 @@
   <section class="card hidden" id="s1">
     <h2>步驟 2：登入並選擇授權</h2>
     <p class="hint"><b>直接按下面的「用 Google 管理員帳號登入」就可以了，其他欄位都是選填，不用填。</b>需要具備「授權管理」權限的管理員帳號。我們不會要求密碼，登入視窗是 Google 自己的。</p>
-    <label for="sku">要管理哪一種授權<small>　已先選好，要換別種再選</small></label>
-    <select id="sku"></select>
-    <label for="avail">目前可用授權數（選填，可以留空）<small>　後台「帳單 > 訂閱」可以看到，填了會幫你防呆</small></label>
-    <input type="number" id="avail" min="0" placeholder="例如 10">
+    <label>要管理哪些授權<small>　可以勾選多種，同一份名單會對每一種各做一遍；已先勾好第一種，要多種就多勾</small></label>
+    <div id="skuBox" class="skus"></div>
+    <label>各授權目前可用數（選填，可以留空）<small>　後台「帳單 > 訂閱」可以看到，填了會幫你防呆</small></label>
+    <div id="availBox" class="avails"></div>
     <label for="domain">學校網域（不用填）<small>　登入後會自動帶入</small></label>
     <input type="text" id="domain" placeholder="例如 school.edu.tw">
     <div class="row">

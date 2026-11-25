@@ -120,6 +120,41 @@ export async function execute(actions, api, { maxChanges = DEFAULT_MAX, sleep = 
   return result;
 }
 
+// ================= 一次多種授權（2026-11-25）=================
+// 做法：同一份名單、同一個動作，對每一種勾選的授權各跑一遍（預演、額度、執行、驗證都以授權為單位）。
+// 規則與單一授權完全相同，只是外面多一層迴圈，所以不改 planRotation／execute／verifyAfter。
+
+// holdersBy：{授權代號: Set(信箱)}。回傳 [{key, name, plan:{actions,warnings,conflicts}}]
+export function planMany(keys, { add, revoke, keep = [], users, holdersBy }) {
+  return keys.map((key) => ({ key, name: SKUS[key].name, plan: planRotation({ add, revoke, keep, users, holders: holdersBy[key] }) }));
+}
+export function totalCounts(plans) {
+  const t = { add: 0, remove: 0, skip: 0, error: 0 };
+  for (const p of plans) { const c = counts(p.plan.actions); for (const k of Object.keys(t)) t[k] += c[k]; }
+  return t;
+}
+// 一種一種依序做。任何一種遇到致命錯誤（沒權限、名額不足）就停手，後面還沒做的授權列在 notRun，不硬衝。
+// apiFor(key) 回傳那種授權的 api；onRow 的資料會帶 license（授權名稱）。
+export async function executeMany(plans, apiFor, { maxChanges = DEFAULT_MAX, sleep, onRow = () => {}, onWait = () => {}, onLicense = () => {} } = {}) {
+  const total = { ok: 0, failed: 0, already: 0, stopped: "", notRun: [], rows: [] };
+  for (const p of plans) {
+    const c = counts(p.plan.actions);
+    if (c.add + c.remove === 0) continue;
+    if (total.stopped) { total.notRun.push(p.name); continue; }
+    onLicense(p);
+    const opts = { maxChanges, onRow: (row) => { row.license = p.name; total.rows.push(row); onRow(row, p); }, onWait: (email, w) => onWait(email, w, p) };
+    if (sleep) opts.sleep = sleep;
+    const r = await execute(p.plan.actions, apiFor(p.key), opts).catch((e) => ({ ok: 0, failed: 1, already: 0, stopped: e.message, rows: [] }));
+    total.ok += r.ok; total.failed += r.failed; total.already += r.already || 0;
+    if (r.stopped) total.stopped = `${p.name}：${r.stopped}`;
+  }
+  return total;
+}
+// holdersBy：執行後重新讀到的 {授權代號: Set}。問題訊息前面加授權名稱，才分得出是哪一種。
+export function verifyMany(plans, holdersBy) {
+  return plans.flatMap((p) => verifyAfter(p.plan.actions, holdersBy[p.key]).map((m) => (plans.length > 1 ? `${p.name}：${m}` : m)));
+}
+
 // ================= 名單表格與匯入辨識（純邏輯） =================
 export const EMAIL_RE = /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/;
 export const ACTION_LABEL = { add: "指派", revoke: "收回", keep: "保留不動" };
