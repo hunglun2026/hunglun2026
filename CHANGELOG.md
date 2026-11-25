@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.45（2026-11-25）
+
+依 SEO 健檢修正：首頁標題「全站導覽」改為「鴻綸科技｜Google for Education 認證夥伴，教師研習與導入」；Google 合作夥伴頁「服務範圍」改為「台南新營在地服務，範圍涵蓋全台」並寫出地址；llms.txt 教學資源條目縮成一句（96KB 降到 57KB，完整內容留在 llms-full.txt）；活動頁 24 個 Event 補 eventStatus；服務頁移除沒有網址的情境 ItemList；兩篇最新消息的資料來源補上官方與報導連結。
+
 ## v1.43.44（2026-11-25）
 
 作者頁〈Steve Shen〉職稱改為「Google 認證講師」，與文章 schema 的 jobTitle 一致。
