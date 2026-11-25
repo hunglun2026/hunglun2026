@@ -1,5 +1,5 @@
 // 帳號批次作業：批次新增帳號、批次轉移組織單位。純邏輯在 accounts_logic.js，API 在 accounts_api.js，表格在 table.js。
-import { CREATE_FIELDS, MOVE_FIELDS, planCreate, planMove, countOps, runPool, normalizeOu } from "./accounts_logic.js?v=20261123c";
+import { CREATE_FIELDS, planCreate, countOps, runPool, normalizeOu } from "./accounts_logic.js?v=20261123c";
 import { dirApi, demoDirApi, ACCOUNT_SCOPES } from "./accounts_api.js?v=20261125a";
 import { createTable } from "./table.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
@@ -51,14 +51,11 @@ $("btnLogin").onclick = () => tokenClient(SCOPES, async (token) => {
 $("btnDemo").onclick = () => { state.domain = "demo.school.tw"; enter(demoDirApi(), "示範模式（不連 Google）"); };
 if (/(^|\.)hunglun\.com$/.test(location.hostname)) $("siteLinks").classList.remove("hidden");
 
-// ---------- 兩個表格 ----------
+// ---------- 表格 ----------
 const common = { askConfirm: ask, getSheetsToken, isDemo: () => state.api?.mode === "demo", ouListId: "ouList" };
 const gridC = createTable({ ...common, root: $("gridC"), notify: (k, t) => msg("msgC", k, t), rowLimit: MAX_OPS,
   fields: [{ key: "full", label: "姓名", placeholder: "王小明（或分填下面姓氏、名字）", width: 160 }, { key: "last", label: "姓氏", width: 80 }, { key: "first", label: "名字", width: 90 }, { key: "email", label: "電子郵件", placeholder: "s001@school.edu.tw" }, { key: "password", label: "密碼（留白＝系統產生）", type: "password", width: 150 }, { key: "ou", label: "組織單位", type: "ou", placeholder: "/學生/一年級", width: 160 }],
   importFields: CREATE_FIELDS });
-const gridM = createTable({ ...common, root: $("gridM"), notify: (k, t) => msg("msgM", k, t), rowLimit: MAX_OPS,
-  fields: [{ key: "email", label: "電子郵件", placeholder: "s001@school.edu.tw" }, { key: "ou", label: "目標組織單位", type: "ou", placeholder: "/學生/二年級", width: 260 }], importFields: MOVE_FIELDS });
-$("tabs").onclick = (e) => { const t = e.target.dataset?.t; if (!t) return; document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.t === t)); $("p-create").classList.toggle("hidden", t !== "create"); $("p-move").classList.toggle("hidden", t !== "move"); };
 
 // ---------- 預演畫面 ----------
 function showPlan(outId, kind, plan, extra) {
@@ -88,13 +85,9 @@ $("planC").onclick = () => {
   const domains = new Set([...state.users.keys()].map((e) => e.split("@")[1]));
   showPlan("outC", "create", planCreate(rows, { existing: new Set(state.users.keys()), ous: state.ous, domains, defaultOu: normalizeOu($("defOuC").value, state.domain), domain: state.domain }), {});
 };
-$("planM").onclick = () => {
-  const rows = gridM.getRows(); if (!rows.length) return msg("msgM", "err", "表格是空的，請至少填一位。");
-  msg("msgM", "", ""); showPlan("outM", "move", planMove(rows, { users: state.users, ous: state.ous, domain: state.domain }), {});
-};
 $("exportOu").onclick = async () => {
   try { await downloadXlsx("使用者與組織單位.xlsx", ["電子郵件", "姓名", "組織單位", "狀態"], [...state.users.values()].map((u) => [u.email, u.name, u.ou, u.suspended ? "停權" : "啟用"]), [34, 18, 30, 8]); }
-  catch (e) { msg("msgM", "err", e.message); }
+  catch (e) { msg("msgC", "err", e.message); }
 };
 
 // ---------- 執行與驗證 ----------

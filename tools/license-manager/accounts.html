@@ -4,60 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>鴻綸教育帳號批次作業</title>
+<meta http-equiv="refresh" content="0; url=/tools/account-mover/create/">
+<title>帳號批次作業已搬家</title>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css?v=45">
-<link rel="stylesheet" href="style.css?v=20261124c">
-<style>
-.tabs{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
-.tabs button{background:#e5e7eb;color:var(--sub);border-color:#e5e7eb}
-.tabs button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
-.pill.p-create{background:#dbeafe;color:#1e40af}.pill.p-move{background:#e0e7ff;color:#3730a3}
-</style>
 </head>
-<body>
-<header>
-  <p id="siteLinks" class="hidden" style="margin:0 0 6px;font-size:13px"><a href="/tools/commercial" style="color:#cbd5e1">← 回商用工具</a>　<a href="/tools/license-manager/" style="color:#cbd5e1">授權管理</a>　<a href="manual.html#accounts" style="color:#cbd5e1" target="_blank" rel="noopener">使用說明書</a></p>
-  <h1>鴻綸教育帳號批次作業</h1>
-  <p>批次新增帳號、批次轉移組織單位。用你自己的管理員帳號登入，資料只在你的瀏覽器與 Google 之間往來</p>
-</header>
-<main>
-  <section class="card" id="login">
-    <h2>登入</h2>
-    <p class="hint">需要具備「使用者管理」權限的管理員帳號（新增、移動使用者）。我們不會要求密碼，登入視窗是 Google 自己的。</p>
-    <div class="row"><button id="btnLogin">用 Google 管理員帳號登入</button><button id="btnDemo" class="ghost">先用示範資料練習（不連 Google）</button></div>
-    <div id="loginMsg"></div>
-  </section>
-
-  <div id="app" class="hidden">
-    <div class="msg info" id="who"></div>
-    <div class="tabs" id="tabs"><button data-t="create" class="on">批次新增帳號</button><button data-t="move">批次轉移組織單位</button></div>
-
-    <section class="card" id="p-create">
-      <h2>批次新增帳號</h2>
-      <p class="hint">每一列一個新帳號。姓名可以填「姓名」一欄，系統自動拆成姓氏與名字（複姓會處理，仍請預演時檢查）。密碼留白，系統會產生 12 碼隨機密碼，完成後可下載帳號與密碼清單。新帳號預設「第一次登入要改密碼」。</p>
-      <div class="f"><label for="defOuC">沒填組織單位的列，放到：</label><input type="text" id="defOuC" value="/" list="ouList"></div>
-      <div id="gridC"></div>
-      <div id="msgC"></div>
-      <div class="row"><button id="planC">預演</button></div>
-      <div id="outC"></div>
-    </section>
-
-    <section class="card hidden" id="p-move">
-      <h2>批次轉移組織單位</h2>
-      <p class="hint">每一列一個帳號與它要去的組織單位。預演會顯示「從哪個組織單位到哪個」，已經在目標單位的會跳過。轉移前請記下原本的單位（結果檔也會附上）。</p>
-      <div id="gridM"></div>
-      <div id="msgM"></div>
-      <div class="row"><button id="planM">預演</button><button class="ghost" id="exportOu" type="button">下載目前所有使用者與組織單位（Excel）</button></div>
-      <div id="outM"></div>
-    </section>
-  </div>
-</main>
-<datalist id="ouList"></datalist>
-
-<dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
-
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<script type="module" src="accounts.js?v=20261125a"></script>
+<body style="font-family:'Noto Sans TC',sans-serif;padding:32px 16px;line-height:1.8">
+<p>帳號批次作業（批次新增帳號、搬移組織單位）已搬到新的位置：<a href="/tools/account-mover/create/">鴻綸帳號批次作業</a>。</p>
 </body>
 </html>
