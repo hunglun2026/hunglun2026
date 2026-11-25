@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.47（2026-11-25）
+
+更正 Google 認證考試費用：依 Google 官方 FAQ 與語言說明頁，Certified Educator Level 1、Level 2 考試在所有開放語言都免費（繁體中文在內），Trainer 技能測驗也免費；原本寫「部分語言免費」「以官方公告為準」不正確。Trainer 課程本身的費用官方沒寫，標「無法確認」。
+
 ## v1.43.46（2026-11-25）
 
 官網拿掉自家與第三方的金額，改成「以官方公告為準」或「依需求報價」：網站設計服務頁的單頁式網站起價、Gemini 4 Argon 的 API 價格、Google 認證考試費與 Trainer 測驗費、AI 素養認證報名費與退款手續費、平板計畫補助上限。台灣銀行共同供應契約的決標單價範圍保留。llms.txt 與 llms-full.txt 同步。
