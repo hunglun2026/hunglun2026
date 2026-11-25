@@ -146,6 +146,7 @@
 
   <section class="card hidden" id="s2">
     <h2>步驟 3：填名單</h2>
+    <div class="chosen" id="chosenBar2"></div>
     <p class="hint">每一列一個帳號，選它要「指派、收回、保留不動」。可以直接在格子裡打字、從 Excel 貼上多列，或上傳檔案讓系統自動辨識。<b>名單以外的人完全不會被動到。</b></p>
     <div class="toolbar">
       <button class="ghost" id="gFile" type="button">上傳檔案（CSV、Excel）</button>
@@ -169,6 +170,7 @@
 
   <section class="card hidden" id="s3">
     <h2>步驟 4：預演（還沒有改任何東西）</h2>
+    <div class="chosen" id="chosenBar3"></div>
     <p class="hint">確認下面的清單正確，才按「執行」。順序是先收回、再指派。</p>
     <div class="sum" id="sum"></div>
     <div class="f"><label for="maxIn">這次最多異動幾位（安全上限，超過會擋下；最高 3000）</label><input type="number" id="maxIn" min="1" max="3000" value="500"></div>

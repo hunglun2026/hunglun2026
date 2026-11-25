@@ -33,6 +33,7 @@ export function createGrid({ notify, askConfirm, getSheetsToken, isDemo, license
       lic.textContent = "";
       const v = cleanEmail(inp.value) ? licenseText(cleanEmail(inp.value)) : null; // null＝還沒讀到或不是有效信箱，不顯示
       if (v === "loading") lic.append(el("span", { className: "lic-none", textContent: "讀取中…" }));
+      else if (v === "unknown") lic.append(el("span", { className: "lic-bad", textContent: "目錄裡找不到這個帳號" }));
       else if (Array.isArray(v) && v.length) v.forEach((n) => lic.append(el("span", { className: "lic-chip", textContent: n })));
       else if (Array.isArray(v)) lic.append(el("span", { className: "lic-none", textContent: "目前沒有這四種授權" }));
     };

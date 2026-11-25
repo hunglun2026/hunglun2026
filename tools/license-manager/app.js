@@ -9,7 +9,7 @@ const $ = (id) => document.getElementById(id);
 const SCOPES = "openid email https://www.googleapis.com/auth/apps.licensing https://www.googleapis.com/auth/admin.directory.user.readonly";
 const SHEETS_SCOPE = "https://www.googleapis.com/auth/spreadsheets.readonly";
 const OP_LABEL = { add: "指派", remove: "收回", skip: "跳過", error: "出錯" };
-const state = { apis: {}, mode: "", token: "", plans: null, keys: [], lists: null, rows: [], held: null };
+const state = { apis: {}, mode: "", token: "", plans: null, keys: [], lists: null, rows: [], held: null, known: null };
 
 // ---- 自己做的對話框（不用瀏覽器內建 confirm） ----
 function ask(title, body, yes = "確定", danger = false) {
@@ -25,11 +25,19 @@ function msg(id, kind, text) { $(id).innerHTML = text ? `<div class="msg ${kind}
 function show(n) {
   for (let i = 0; i <= 4; i++) $("s" + i).classList.toggle("hidden", i !== n);
   document.querySelectorAll("#steps li").forEach((li) => { const s = +li.dataset.s; li.className = s === n ? "on" : s < n ? "done" : ""; });
+  if (n === 2 || n === 3) renderChosenBar(n);
   window.scrollTo(0, 0);
 }
 // 勾選的授權（至少一種），依 SKUS 的順序
 const chosen = () => Object.keys(SKUS).filter((k) => $("sk_" + k)?.checked);
 const demoMode = () => state.mode === "demo";
+// 名單頁與預演頁最上方：這次要處理的授權（名單裡的指派、收回都是針對這幾種）。預演頁用實際算預演的那幾種。
+function renderChosenBar(n) {
+  const keys = n === 3 && state.keys.length ? state.keys : chosen(), bar = $("chosenBar" + n); bar.textContent = "";
+  const b = document.createElement("b"); b.textContent = "目前要指派的授權："; bar.append(b);
+  keys.forEach((k) => bar.append(Object.assign(document.createElement("span"), { className: "pick", textContent: SKUS[k].name })));
+  bar.append(Object.assign(document.createElement("small"), { textContent: n === 2 ? "名單裡的「指派」「收回」都是針對上面這幾種；要增減請按最下面的「上一步」回到步驟 2 重新勾選。" : "預演與執行都只動上面這幾種授權。" }));
+}
 
 // ---- 名單表格（步驟 3） ----
 // 讀取試算表的權限只在使用者按「匯入 Google 試算表」時才額外請求（漸進授權），平常登入只要授權管理與讀取使用者
@@ -43,7 +51,7 @@ function getSheetsToken() {
     }).requestAccessToken();
   });
 }
-const grid = createGrid({ notify: (kind, text) => msg("s2msg", kind, text), askConfirm: ask, getSheetsToken, isDemo: () => demoMode(), licenseText: (email) => (state.held ? licensesOf(email, state.held) : state.mode ? "loading" : null) });
+const grid = createGrid({ notify: (kind, text) => msg("s2msg", kind, text), askConfirm: ask, getSheetsToken, isDemo: () => demoMode(), licenseText: (email) => (state.held ? (state.known && !state.known.has(email) ? "unknown" : licensesOf(email, state.held)) : state.mode ? "loading" : null) });
 if (/(^|\.)hunglun\.com$/.test(location.hostname)) $("siteLinks").classList.remove("hidden");
 
 // ---- 步驟 2：登入（步驟 1 是先設定，只有說明，沒有程式） ----
@@ -59,9 +67,10 @@ for (const [k, v] of Object.entries(SKUS)) {
 }
 // 讀四種授權目前的持有者（唯讀），讓名單表格顯示「這個帳號現在有什麼」；失敗就不顯示，不影響其他功能
 async function loadHeld() {
-  state.held = null; grid.refreshLicenses();
+  state.held = null; state.known = null; grid.refreshLicenses();
   try {
-    const keys = Object.keys(SKUS), sets = await Promise.all(keys.map((k) => state.apis[k].listHolders()));
+    const keys = Object.keys(SKUS), [users, ...sets] = await Promise.all([state.apis[keys[0]].listUsers(), ...keys.map((k) => state.apis[k].listHolders())]);
+    state.known = new Set(users.map((u) => u.email.toLowerCase()));
     state.held = Object.fromEntries(keys.map((k, i) => [k, sets[i]]));
   } catch (e) { state.held = null; msg("s2msg", "warn", "讀不到目前的授權狀況（" + e.message + "），表格不會顯示「目前已有的授權」，但預演仍會重新確認。"); }
   grid.refreshLicenses();
