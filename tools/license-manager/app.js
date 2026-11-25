@@ -2,7 +2,7 @@
 import { SKUS, MAX_CHANGES, planRotation, counts, checkAvailable, verifyAfter, execute } from "./logic.js?v=20261123c";
 import { createGrid } from "./grid.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
-import { realApi, demoApi } from "./api.js?v=20261123c";
+import { realApi, demoApi } from "./api.js?v=20261125a";
 import { CLIENT_ID } from "./config.js?v=20261124e";
 
 const $ = (id) => document.getElementById(id);

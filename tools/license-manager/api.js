@@ -3,7 +3,7 @@ import { classify } from "./logic.js";
 
 const DIR = "https://admin.googleapis.com/admin/directory/v1/users";
 const LIC = "https://licensing.googleapis.com/apps/licensing/v1";
-async function call(token, url, init = {}, retries = 4) {
+export async function call(token, url, init = {}, retries = 4) {
   for (let i = 0; i <= retries; i++) {
     const res = await fetch(url, { ...init, headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } });
     if (res.ok) return res.status === 204 ? {} : res.json().catch(() => ({}));

@@ -1,6 +1,6 @@
 // 帳號批次作業：批次新增帳號、批次轉移組織單位。純邏輯在 accounts_logic.js，API 在 accounts_api.js，表格在 table.js。
 import { CREATE_FIELDS, MOVE_FIELDS, planCreate, planMove, countOps, runPool, normalizeOu } from "./accounts_logic.js?v=20261123c";
-import { dirApi, demoDirApi, ACCOUNT_SCOPES } from "./accounts_api.js?v=20261123c";
+import { dirApi, demoDirApi, ACCOUNT_SCOPES } from "./accounts_api.js?v=20261125a";
 import { createTable } from "./table.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
 import { CLIENT_ID } from "./config.js?v=20261124e";

@@ -1,5 +1,5 @@
 // 帳號與組織單位的 Directory API（需要 admin.directory.user 寫入權限與 admin.directory.orgunit.readonly）
-import { call } from "./api.js?v=20261123c";
+import { call } from "./api.js?v=20261125a";
 
 const DIR = "https://admin.googleapis.com/admin/directory/v1";
 export const ACCOUNT_SCOPES = "https://www.googleapis.com/auth/admin.directory.user https://www.googleapis.com/auth/admin.directory.orgunit.readonly";
