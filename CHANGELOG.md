@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.43（2026-11-25）
+
+新增作者頁〈Steve Shen〉（`/author/steve-shen`，ProfilePage 加 Person schema，職稱鴻綸科技講師，只寫站上已有的事實）。136 個頁面的作者從「鴻綸科技 Steve」改為連到作者頁的 Steve Shen，文章 schema 的 author 補 @id 與 url。新增 `sitemap/apply-author.py`（冪等），`new-article.py` 模板同步。
+
 ## v1.43.42（2026-11-25）
 
 修正〈Gemini 學生專區開放教育版〉頁面的更新日期：頁首已寫 11 月 4 日更新，但「最後更新」、`dateModified` 與 sitemap 的 lastmod 還停在 10 月，三處改為 2026-11-04。
