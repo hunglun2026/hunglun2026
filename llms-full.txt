@@ -4581,6 +4581,9 @@ Google 官方明確列為不符合資格的機構類型包括：社區中心、�
 申請流程：四個步驟
 步驟一：提出申請
 兩種入口：學校已經有 Workspace 訂閱的話，用管理員帳號登入後填升級表單送出；從零開始的話，到 Google for Education 的註冊頁填機構資料，閱讀並同意 Google Workspace for Education School Consent 條款後送出。
+從零開始申請：Google Workspace for Education 註冊頁
+已有 Workspace，升級成教育版：用超級管理員帳號登入後，開啟管理主控台的網域頁面，依畫面指示送出升級表單
+官方說明頁：Get started with Google Workspace for Education
 步驟二：驗證網域擁有權
 如果網域是註冊過程中直接跟 Google 買的，或這個網域先前已經驗證過，這一步可以跳過。其餘情況都要證明「這個網域確實是你們的」，最常見的做法是在 DNS 加一筆 Google 指定的 TXT 記錄。
 這一步是實務上最容易卡住的地方，通常是三種狀況：一是學校網域掛在教育網路中心或外包廠商手上，校內沒人有 DNS 權限；二是網域續費過期或聯絡人早已離職；三是加了 TXT 卻沒生效。DNS 有傳播延遲，加完等幾分鐘到幾小時是正常的，不要一直重加。動手前先確認「誰能改這個網域的 DNS」，比什麼都重要。
