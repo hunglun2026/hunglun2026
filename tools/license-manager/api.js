@@ -15,14 +15,16 @@ export async function call(token, url, init = {}, retries = 4) {
   }
 }
 
-export function realApi(token, domain, { product, sku }) {
+// foreign：操作的學校網域跟登入帳號的網域不同（例如經銷商替學校操作）。此時列使用者要指定學校網域，
+// 否則 my_customer 會列到登入帳號自己的公司。
+export function realApi(token, domain, { product, sku }, foreign = false) {
   const base = `${LIC}/product/${product}/sku/${sku}`;
   return {
     mode: "real",
     async listUsers() {
       const out = []; let pt = "";
       do {
-        const r = await call(token, `${DIR}?customer=my_customer&maxResults=500&fields=nextPageToken,users(primaryEmail,suspended,archived)${pt ? `&pageToken=${pt}` : ""}`);
+        const r = await call(token, `${DIR}?${foreign ? `domain=${encodeURIComponent(domain)}` : "customer=my_customer"}&maxResults=500&fields=nextPageToken,users(primaryEmail,suspended,archived)${pt ? `&pageToken=${pt}` : ""}`);
         for (const u of r.users || []) out.push({ email: u.primaryEmail.toLowerCase(), suspended: !!u.suspended, archived: !!u.archived });
         pt = r.nextPageToken || "";
       } while (pt);

@@ -2,7 +2,7 @@
 import { SKUS, DEFAULT_MAX, HARD_MAX, planMany, totalCounts, checkAvailable, verifyMany, executeMany, licensesOf } from "./logic.js?v=20261123c";
 import { createGrid } from "./grid.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
-import { realApi, demoApi } from "./api.js?v=20261125a";
+import { realApi, demoApi } from "./api.js?v=20261126a";
 import { CLIENT_ID } from "./config.js?v=20261124e";
 
 const $ = (id) => document.getElementById(id);
@@ -34,6 +34,7 @@ const demoMode = () => state.mode === "demo";
 // 名單頁與預演頁最上方：這次要處理的授權（名單裡的指派、收回都是針對這幾種）。預演頁用實際算預演的那幾種。
 function renderChosenBar(n) {
   const keys = n === 3 && state.keys.length ? state.keys : chosen(), bar = $("chosenBar" + n); bar.textContent = "";
+  const sc = document.createElement("b"); sc.textContent = demoMode() ? "學校：示範資料　" : `學校網域：${schoolDomain()}　`; bar.append(sc);
   const b = document.createElement("b"); b.textContent = "目前要指派的授權："; bar.append(b);
   keys.forEach((k) => bar.append(Object.assign(document.createElement("span"), { className: "pick", textContent: SKUS[k].name })));
   bar.append(Object.assign(document.createElement("small"), { textContent: n === 2 ? "名單裡的「指派」「收回」都是針對上面這幾種；要增減請按最下面的「上一步」回到步驟 2 重新勾選。" : "預演與執行都只動上面這幾種授權。" }));
@@ -75,10 +76,12 @@ async function loadHeld() {
   } catch (e) { state.held = null; msg("s2msg", "warn", "讀不到目前的授權狀況（" + e.message + "），表格不會顯示「目前已有的授權」，但預演仍會重新確認。"); }
   grid.refreshLicenses();
 }
-function buildApis() { state.apis = {}; for (const k of Object.keys(SKUS)) state.apis[k] = realApi(state.token, $("domain").value.trim(), SKUS[k]); }
+const schoolDomain = () => $("domain").value.trim().toLowerCase().replace(/^@/, "");
+function buildApis() { state.apis = {}; const d = schoolDomain(); for (const k of Object.keys(SKUS)) state.apis[k] = realApi(state.token, d, SKUS[k], !!state.loginDomain && state.loginDomain !== d); }
 
 function startReal() {
   if (!chosen().length) return msg("s1msg", "err", "請至少勾選一種要管理的授權。");
+  if (schoolDomain() && !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(schoolDomain())) return msg("s1msg", "err", "學校網域格式不對，例如 school.edu.tw；不填的話會用登入帳號的網域。");
   if (!CLIENT_ID) return msg("s1msg", "err", "這個網站還沒設定登入用的用戶端 ID（config.js），請聯絡提供這個系統的廠商。");
   if (!window.google?.accounts) return msg("s1msg", "warn", "Google 登入元件還沒載入完成，請稍等幾秒再按一次。");
   const client = google.accounts.oauth2.initTokenClient({
@@ -88,10 +91,13 @@ function startReal() {
       state.token = r.access_token;
       try {
         const info = await (await fetch("https://www.googleapis.com/oauth2/v3/userinfo", { headers: { Authorization: `Bearer ${r.access_token}` } })).json();
-        if (!$("domain").value) $("domain").value = (info.email || "").split("@")[1] || "";
-        msg("s1msg", "ok", `已登入：${info.email}`);
-      } catch { msg("s1msg", "warn", "已登入，但讀不到帳號資訊，請自己填學校網域。"); }
-      if (!$("domain").value) return;
+        state.loginDomain = ((info.email || "").split("@")[1] || "").toLowerCase();
+        const typed = !!schoolDomain();
+        if (!typed) $("domain").value = state.loginDomain;
+        const d = schoolDomain();
+        msg("s1msg", state.loginDomain && state.loginDomain !== d ? "warn" : "ok", `已登入：${info.email}。這次要處理的學校：${d}` + (typed ? "" : "（沒填網域，已用登入帳號的網域；若要處理別間學校，請回上一步填網域）") + (state.loginDomain && state.loginDomain !== d ? "（和登入帳號的網域不同，請確認這個帳號有權限管理該校）" : ""));
+      } catch { state.loginDomain = ""; msg("s1msg", "warn", "已登入，但讀不到帳號資訊，請自己填學校網域。"); }
+      if (!schoolDomain()) return;
       state.mode = "real"; buildApis(); loadHeld();
       show(2);
     },
@@ -160,7 +166,7 @@ $("back3").onclick = () => show(2);
 // ---- 步驟 5 ----
 $("btnRun").onclick = async () => {
   const c = totalCounts(state.plans), many = state.plans.length > 1;
-  if (!(await ask("確定要執行嗎？", `即將收回 ${c.remove} 筆、指派 ${c.add} 筆的授權${many ? `（共 ${state.plans.length} 種授權，一種一種依序做）` : ""}，這會直接改到後台。`, "確定執行", true))) return;
+  if (!(await ask("確定要執行嗎？", `學校：${demoMode() ? "示範資料" : schoolDomain()}。即將收回 ${c.remove} 筆、指派 ${c.add} 筆的授權${many ? `（共 ${state.plans.length} 種授權，一種一種依序做）` : ""}，這會直接改到後台。`, "確定執行", true))) return;
   show(4); state.rows = []; const log = $("log"); log.textContent = ""; msg("s4msg", "info", "執行中，請不要關閉這個分頁…");
   const line = (t, cls = "") => { const s = document.createElement("span"); if (cls) s.className = cls; s.textContent = t + "\n"; log.append(s); log.scrollTop = log.scrollHeight; };
   const result = await executeMany(state.plans, (k) => state.apis[k], {
