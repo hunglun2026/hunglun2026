@@ -56,7 +56,7 @@ export function demoScheduleApi({ staff = true } = {}) {
       await nap(); checkDomain(b); const p = plan(b);
       if (!p.safe) throw new Error("預演沒過，不能建立：" + p.reasons.join("；"));
       const id = nextId++; const status = staff ? "active" : "pending_approval";
-      rows.push({ id, domain: b.domain, sku: b.sku, type: b.type, runDates: p.dates, status, dryRunOnly: true, runs: [], testOk: false, approvedBy: staff ? "shen@gfeh.org" : null, createdBy: staff ? "shen@gfeh.org" : "admin@demo.school.tw" });
+      rows.push({ id, domain: b.domain, sku: b.sku, type: b.type, runTime: b.runTime || "03:00", runDates: p.dates, status, dryRunOnly: true, runs: [], testOk: false, approvedBy: staff ? "shen@gfeh.org" : null, createdBy: staff ? "shen@gfeh.org" : "admin@demo.school.tw" });
       return { id, status, notes: [] };
     },
     async list() { await nap(); return { schedules: rows.map((r) => ({ ...r })) }; },

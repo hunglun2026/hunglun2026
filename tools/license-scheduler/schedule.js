@@ -1,9 +1,9 @@
 // 排程頁的畫面與流程。純邏輯在 schedule-lib.js，連後端與示範版在 schedule-api.js。
 // 使用者輸入的文字（信箱、網域）一律用 textContent 放進畫面，不用 innerHTML。
 import { SKUS } from "./logic.js?v=20261123c";
-import { CLIENT_ID, SCHEDULER_API } from "./config.js?v=20261126d";
-import { realScheduleApi, demoScheduleApi } from "./schedule-api.js?v=20261126d";
-import { STATUS_LABEL, TYPE_LABEL, buildBody, describeNext, describeRun, allowedActions, errorText, twToday } from "./schedule-lib.js?v=20261126d";
+import { CLIENT_ID, SCHEDULER_API } from "./config.js?v=20261126e";
+import { realScheduleApi, demoScheduleApi } from "./schedule-api.js?v=20261126e";
+import { STATUS_LABEL, TYPE_LABEL, buildBody, describeNext, describeRun, allowedActions, errorText, twToday } from "./schedule-lib.js?v=20261126e";
 
 const $ = (id) => document.getElementById(id);
 const state = { api: null, me: null, token: "", lastBody: null };
@@ -61,7 +61,7 @@ function addMonthRow(month = "") {
 $("addMonth").onclick = () => addMonthRow();
 addMonthRow();
 const readForm = () => buildBody({
-  domain: $("domain").value, sku: $("sku").value, type: typeOf(), runDate: $("runDate").value, add: $("add").value, revoke: $("revoke").value, keep: $("keep").value,
+  domain: $("domain").value, sku: $("sku").value, type: typeOf(), runDate: $("runDate").value, runTime: $("runTime").value, add: $("add").value, revoke: $("revoke").value, keep: $("keep").value,
   months: [...$("months").children].map((r) => ({ month: r.querySelector("[data-k=month]").value, list: r.querySelector("[data-k=list]").value })),
 });
 

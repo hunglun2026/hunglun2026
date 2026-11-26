@@ -15,7 +15,7 @@ export const twToday = (now = Date.now()) => new Date(now + 8 * 3600e3).toISOStr
 
 // form: {domain, sku, type, runDate, add, revoke, keep（文字）, months:[{month:"2026-12", list:文字}]}
 export function buildBody(form) {
-  const body = { domain: String(form.domain || "").trim().toLowerCase(), sku: form.sku, type: form.type, keep: parseEmails(form.keep) };
+  const body = { domain: String(form.domain || "").trim().toLowerCase(), sku: form.sku, type: form.type, keep: parseEmails(form.keep), runTime: String(form.runTime || "").trim() || "03:00" };
   if (form.type === "single") { body.runDate = String(form.runDate || "").trim(); body.add = parseEmails(form.add); body.revoke = parseEmails(form.revoke); }
   else {
     body.months = {};
@@ -24,11 +24,11 @@ export function buildBody(form) {
   return body;
 }
 
-// 下一次執行的說明（台灣時間，每天 03:00 跑）
+// 下一次執行的說明（台灣時間；s.runTime 沒有的舊資料當作 03:00）
 export function describeNext(s, today = twToday()) {
   if (["done", "overdue", "needs_attention"].includes(s.status)) return "";
   const dates = (s.runDates || []).filter((d) => d >= today);
-  return dates.length ? `${dates[0]} 03:00（台灣時間）` : "沒有後續日期";
+  return dates.length ? `${dates[0]} ${s.runTime || "03:00"}（台灣時間）` : "沒有後續日期";
 }
 export function describeRun(r) {
   if (!r) return "還沒執行過";

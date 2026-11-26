@@ -23,7 +23,7 @@
 <header>
   <p style="margin:0 0 6px;font-size:13px"><a href="/tools/license-manager/" style="color:#cbd5e1">← 回「立即執行」</a>　<a href="/tools/commercial" style="color:#cbd5e1">回商用工具</a></p>
   <h1>鴻綸教育授權自動排程</h1>
-  <p>先設好日期與名單，到期由系統每天凌晨 3 點（台灣時間）自動檢查並執行，不用有人登入</p>
+  <p>先設好日期與名單，到期由系統每分鐘自動檢查，時間一到就執行（台灣時間，可指定到分鐘），不用有人登入</p>
 </header>
 <main>
   <section class="card" id="login">
@@ -49,8 +49,10 @@
         <label style="font-weight:400;margin:0"><input type="radio" name="type" value="single" checked> 單次轉移（某一天收回一批、指派另一批）</label>
         <label style="font-weight:400;margin:0"><input type="radio" name="type" value="monthly"> 每月輪替（每月 1 號換一批）</label>
       </div>
+      <label for="runTime">執行時間（台灣時間，24 小時制，到分鐘）<small>　單次是當天這個時間，每月輪替是每月 1 號這個時間；測試可以填幾分鐘後</small></label>
+      <input type="text" id="runTime" value="03:00" placeholder="14:30" autocomplete="off" style="max-width:140px">
       <div id="singleBox">
-        <label for="runDate">執行日期（台灣時間，當天凌晨 3 點執行）</label><input type="text" id="runDate" placeholder="2026-12-01" autocomplete="off">
+        <label for="runDate">執行日期（台灣時間）</label><input type="text" id="runDate" placeholder="2026-12-01" autocomplete="off">
         <div class="two">
           <div><label for="add">要指派的帳號<small>　一行一個</small></label><textarea id="add"></textarea></div>
           <div><label for="revoke">要收回的帳號<small>　一行一個</small></label><textarea id="revoke"></textarea></div>
@@ -98,6 +100,6 @@
 
 <dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script type="module" src="schedule.js?v=20261126d"></script>
+<script type="module" src="schedule.js?v=20261126e"></script>
 </body>
 </html>
