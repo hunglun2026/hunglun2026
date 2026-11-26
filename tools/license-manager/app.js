@@ -3,7 +3,7 @@ import { SKUS, DEFAULT_MAX, HARD_MAX, planMany, totalCounts, checkAvailable, ver
 import { createGrid } from "./grid.js?v=20261123c";
 import { downloadXlsx } from "./export.js?v=20261123c";
 import { realApi, demoApi } from "./api.js?v=20261126a";
-import { CLIENT_ID } from "./config.js?v=20261124e";
+import { CLIENT_ID } from "./config.js?v=20261126d";
 
 const $ = (id) => document.getElementById(id);
 const SCOPES = "openid email https://www.googleapis.com/auth/apps.licensing https://www.googleapis.com/auth/admin.directory.user.readonly";

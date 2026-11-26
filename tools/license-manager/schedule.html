@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>鴻綸教育授權自動排程</title>
+<link rel="stylesheet" href="style.css?v=20261123c">
+<style>
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .mo{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:#f8fafc}
+  .mo .row{margin-top:6px}
+  .pill,.tag{white-space:nowrap}
+  .tag{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12px;font-weight:700;background:#e5e7eb;color:#4b5563}
+  .tag.live{background:#dcfce7;color:#166534}.tag.warn{background:#fde68a;color:#92400e}.tag.stop{background:#fee2e2;color:#991b1b}
+  td .row{margin:4px 0 0;gap:6px}td button{padding:4px 10px;font-size:13px}
+  .modebar{padding:8px 12px;border-radius:8px;background:#fef3c7;color:#92400e;font-size:14px;margin:0 0 12px}
+</style>
+</head>
+<body>
+<header>
+  <p style="margin:0 0 6px;font-size:13px"><a href="index.html" style="color:#cbd5e1">← 回「立即執行」</a>　<a href="/tools/commercial" style="color:#cbd5e1">回商用工具</a></p>
+  <h1>鴻綸教育授權自動排程</h1>
+  <p>先設好日期與名單，到期由系統每天凌晨 3 點（台灣時間）自動檢查並執行，不用有人登入</p>
+</header>
+<main>
+  <section class="card" id="login">
+    <h2>登入</h2>
+    <p class="hint">用 Google 帳號登入。學校管理員只看得到、改得到自己學校的排程；學校建立的排程要鴻綸核准後才會生效。</p>
+    <div id="gbtn"></div>
+    <div class="row"><button class="ghost" id="demoStaff">示範：用鴻綸身分練習（不連線）</button><button class="ghost" id="demoSchool">示範：用學校管理員身分練習（不連線）</button></div>
+    <div id="loginMsg"></div>
+  </section>
+
+  <div id="app" class="hidden">
+    <div class="modebar hidden" id="modebar"></div>
+    <p class="hint" id="who"></p>
+
+    <section class="card">
+      <h2>新增排程</h2>
+      <div class="two">
+        <div><label for="domain">學校網域</label><input type="text" id="domain" placeholder="例如 school.edu.tw" autocomplete="off"></div>
+        <div><label for="sku">授權種類</label><select id="sku"></select></div>
+      </div>
+      <label>類型</label>
+      <div class="row" style="margin-top:0">
+        <label style="font-weight:400;margin:0"><input type="radio" name="type" value="single" checked> 單次轉移（某一天收回一批、指派另一批）</label>
+        <label style="font-weight:400;margin:0"><input type="radio" name="type" value="monthly"> 每月輪替（每月 1 號換一批）</label>
+      </div>
+      <div id="singleBox">
+        <label for="runDate">執行日期（台灣時間，當天凌晨 3 點執行）</label><input type="text" id="runDate" placeholder="2026-12-01" autocomplete="off">
+        <div class="two">
+          <div><label for="add">要指派的帳號<small>　一行一個</small></label><textarea id="add"></textarea></div>
+          <div><label for="revoke">要收回的帳號<small>　一行一個</small></label><textarea id="revoke"></textarea></div>
+        </div>
+      </div>
+      <div id="monthlyBox" class="hidden">
+        <p class="hint" style="margin-top:12px">每個月放一批人：這個月 1 號，這批人沒有授權就指派，其他月份那些人還有授權就收回。同一個人不能排在兩個月。</p>
+        <div id="months"></div>
+        <button class="ghost" id="addMonth">＋ 新增一個月</button>
+      </div>
+      <label for="keep">永遠不要動的帳號（保留名單，選填）</label><textarea id="keep" style="min-height:70px"></textarea>
+      <div class="row"><button id="btnPreview">預演</button></div>
+      <div id="formMsg"></div>
+    </section>
+
+    <section class="card hidden" id="previewCard">
+      <h2>預演結果</h2>
+      <p class="hint" id="previewHint"></p>
+      <div class="sum" id="sum"></div>
+      <div class="box"><table><thead><tr><th>動作</th><th>帳號</th><th>說明</th></tr></thead><tbody id="planRows"></tbody></table></div>
+      <div id="previewMsg"></div>
+      <div class="row"><button id="btnCreate">建立排程</button></div>
+    </section>
+
+    <section class="card">
+      <h2>所有排程</h2>
+      <p class="hint">新建的排程一開始都是「只預演」：到期只算預演並通知，不會寫入。鴻綸手動測試通過後，才能改成正式執行。</p>
+      <div class="box"><table><thead><tr><th>#</th><th>學校／授權</th><th>類型</th><th>下次執行</th><th>狀態</th><th>最近一次</th><th>動作</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <div id="listMsg"></div>
+      <div class="row"><button class="ghost" id="btnRefresh">重新整理</button></div>
+    </section>
+
+    <section class="card hidden" id="staffCard">
+      <h2>鴻綸管理</h2>
+      <div class="two">
+        <div><label for="sDomain">登記學校網域</label><input type="text" id="sDomain" placeholder="school.edu.tw" autocomplete="off"></div>
+        <div><label for="sAdmin">該校管理員信箱（服務帳號要扮演的人）</label><input type="text" id="sAdmin" placeholder="admin@school.edu.tw" autocomplete="off"></div>
+      </div>
+      <p class="hint" style="margin-top:8px">登記前，該校的超級管理員要先到後台「安全性 > API 控制 > 網域全域委派」加我們的用戶端 ID。登記時系統會真的測一次能不能讀到使用者。</p>
+      <div class="row"><button id="btnSchool">登記學校</button><button class="danger" id="btnPause">全域暫停所有排程</button></div>
+      <div id="staffMsg"></div>
+    </section>
+  </div>
+</main>
+
+<dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script type="module" src="schedule.js?v=20261126d"></script>
+</body>
+</html>
