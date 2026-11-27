@@ -151,6 +151,7 @@ html.lenis{scroll-behavior: auto}
 .l-svc-panel[hidden]{display:none}
 .l-svc-panel-d{color:var(--muted);font-size:.95rem;margin-top:22px}
 .l-svc-panel .l-services-grid{margin-top:14px}
+@media (min-width:601px){.l-svc-panel .l-services-grid:has(> :nth-child(4):last-child){grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.l-svc-tabs{gap:6px;margin-top:18px}.l-svc-tab{flex:1 1 calc(50% - 6px);padding:8px 10px;font-size:.88rem;line-height:1.3}}
 @media (prefers-reduced-motion:reduce){.l-svc-tab{transition:none}}
 /* 階段二：頁尾上方「鴻綸數位實驗室」橫幅與收合的工具矩陣 */
