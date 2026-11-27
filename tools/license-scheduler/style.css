@@ -90,3 +90,7 @@ button.sm{padding:5px 12px;font-size:14px}
 .mo .mx{margin-left:auto;padding:4px 12px;font-size:14px}
 .mo.dup{border-color:#ef4444;background:#fef2f2}.mo .dupmsg{margin:6px 0 0;color:#b91c1c;font-size:14px;font-weight:700}
 @media(max-width:520px){.mgrid{grid-template-columns:repeat(3,1fr)}}
+
+.mo .mdt{display:grid;grid-template-columns:auto 170px auto 130px;gap:6px 10px;align-items:center;margin:10px 0}.mo .mdt label{margin:0;font-size:14px}.mo .mdt input{width:100%}
+@media(max-width:520px){.mo .mdt{grid-template-columns:auto 1fr}}
+.mo .mdt{justify-content:start}

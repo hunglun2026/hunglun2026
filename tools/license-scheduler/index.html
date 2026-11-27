@@ -7,7 +7,7 @@
 <title>鴻綸教育授權自動排程</title>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css?v=45">
-<link rel="stylesheet" href="style.css?v=20261127d">
+<link rel="stylesheet" href="style.css?v=20261127e">
 <style>
   .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
   .mo{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:#f8fafc}
@@ -47,9 +47,9 @@
       <label>類型</label>
       <div class="row" style="margin-top:0">
         <label style="font-weight:400;margin:0"><input type="radio" name="type" value="single" checked> 單次轉移（某一天收回一批、指派另一批）</label>
-        <label style="font-weight:400;margin:0"><input type="radio" name="type" value="monthly"> 每月輪替（每月 1 號換一批）</label>
+        <label style="font-weight:400;margin:0"><input type="radio" name="type" value="monthly"> 每月輪替（每個月換一批，日期時間自己指定）</label>
       </div>
-      <label for="runTime">執行時間（台灣時間，24 小時制，到分鐘）<small>　單次是當天這個時間，每月輪替是每月 1 號這個時間；測試可以填幾分鐘後</small></label>
+      <label for="runTime">執行時間（台灣時間，24 小時制，到分鐘）<small>　單次是當天這個時間；每月輪替是每一批預設的時間，每一批也可以自己改；測試可以填幾分鐘後</small></label>
       <input type="text" id="runTime" value="03:00" placeholder="14:30" autocomplete="off" style="max-width:140px">
       <div id="singleBox">
         <label for="runDate">執行日期（台灣時間）</label><input type="text" id="runDate" placeholder="2026-12-01" autocomplete="off">
@@ -59,11 +59,11 @@
         </div>
       </div>
       <div id="monthlyBox" class="hidden">
-        <p class="hint" style="margin-top:12px">每個月 1 號換一批人：那個月的人沒有授權就指派，其他月份的人還有授權就收回。先選要排哪幾個月，再把每個月的老師貼進去。同一個人不能排在兩個月。</p>
+        <p class="hint" style="margin-top:12px">每一批人在你指定的那一天、那一分鐘換：那一批的人沒有授權就指派，其他批的人還有授權就收回。先選要排哪幾個月（系統先幫你填好預設日期），再把每一批的老師貼進去，日期和時間每一批都可以自己改成任何日子。同一個人不能排在兩批。</p>
         <div class="mpick">
           <div class="mquick">
             <span>從</span><select id="mFrom"></select><span>開始，連續</span><select id="mCount"></select><span>個月</span>
-            <button class="ghost" id="mApply" type="button">加入這些月份</button>
+            <span>預設每月</span><select id="mDay"></select><button class="ghost" id="mApply" type="button">加入這些月份</button>
           </div>
           <div class="mquick"><span class="hintline">快速：</span>
             <button class="ghost sm" type="button" data-q="3">3 個月</button><button class="ghost sm" type="button" data-q="6">半年（6 個月）</button><button class="ghost sm" type="button" data-q="12">一整年（12 個月）</button>
@@ -71,7 +71,7 @@
           <div class="mcal">
             <div class="mhead"><button class="ghost sm" id="yPrev" type="button" aria-label="上一年">◀</button><b id="yLabel"></b><button class="ghost sm" id="yNext" type="button" aria-label="下一年">▶</button></div>
             <div class="mgrid" id="mGrid"></div>
-            <p class="hint" style="margin:8px 0 0">點月份就是加入或移除；藍色是已加入，灰色是已經過了不能排。</p>
+            <p class="hint" style="margin:8px 0 0">點月份就是加入或移除；藍色是已加入，灰色是已經過了不能排。加入後每一批的日期和時間都可以再改。</p>
           </div>
         </div>
         <div id="monthTotal" class="hint"></div>
@@ -87,7 +87,7 @@
       <h2>預演結果</h2>
       <p class="hint" id="previewHint"></p>
       <div class="sum" id="sum"></div>
-      <div class="box hidden" id="monthSumBox" style="margin-bottom:12px"><table><thead><tr><th>月份（每月 1 號）</th><th>指派</th><th>預期收回（上一批）</th></tr></thead><tbody id="monthSumRows"></tbody></table></div>
+      <div class="box hidden" id="monthSumBox" style="margin-bottom:12px"><table><thead><tr><th>日期與時間（台灣時間）</th><th>指派</th><th>預期收回（上一批）</th></tr></thead><tbody id="monthSumRows"></tbody></table></div>
       <div class="box"><table><thead><tr><th>動作</th><th>帳號</th><th>說明</th></tr></thead><tbody id="planRows"></tbody></table></div>
       <div id="previewMsg"></div>
       <div class="row"><button id="btnCreate">建立排程</button></div>
@@ -116,6 +116,6 @@
 
 <dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script type="module" src="schedule.js?v=20261127d"></script>
+<script type="module" src="schedule.js?v=20261127e"></script>
 </body>
 </html>

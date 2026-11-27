@@ -1,9 +1,9 @@
 // 排程頁的畫面與流程。純邏輯在 schedule-lib.js，連後端與示範版在 schedule-api.js。
 // 使用者輸入的文字（信箱、網域）一律用 textContent 放進畫面，不用 innerHTML。
 import { SKUS, parseEmails } from "./logic.js?v=20261123c";
-import { CLIENT_ID, SCHEDULER_API } from "./config.js?v=20261127d";
-import { realScheduleApi, demoScheduleApi } from "./schedule-api.js?v=20261127d";
-import { STATUS_LABEL, TYPE_LABEL, buildBody, describeNext, describeRun, allowedActions, errorText, twToday, addMonths, monthLabel, firstSelectable, monthRange, findDupes, monthlySummary } from "./schedule-lib.js?v=20261127d";
+import { CLIENT_ID, SCHEDULER_API } from "./config.js?v=20261127e";
+import { realScheduleApi, demoScheduleApi } from "./schedule-api.js?v=20261127e";
+import { STATUS_LABEL, TYPE_LABEL, buildBody, describeNext, describeRun, allowedActions, errorText, twToday, addMonths, monthLabel, firstSelectable, monthRange, findDupes, monthlySummary, dateInMonth, keyDate, batchKey, dateLabel } from "./schedule-lib.js?v=20261127e";
 
 const $ = (id) => document.getElementById(id);
 const state = { api: null, me: null, token: "", lastBody: null };
@@ -51,57 +51,71 @@ for (const [k, v] of Object.entries(SKUS)) $("sku").append(el("option", { value:
 const typeOf = () => document.querySelector("input[name=type]:checked").value;
 function syncType() { $("singleBox").classList.toggle("hidden", typeOf() !== "single"); $("monthlyBox").classList.toggle("hidden", typeOf() !== "monthly"); $("previewCard").classList.add("hidden"); }
 document.querySelectorAll("input[name=type]").forEach((r) => (r.onchange = syncType));
-// ---------- 每月輪替：選月份（年曆＋快速選）→ 每個月一張名單卡 ----------
+// ---------- 每月輪替：選月份（年曆＋快速選）→ 每一批一張卡，日期與時間（到分鐘）都可以自己指定 ----------
 const cards = () => [...$("months").children];
-const monthsData = () => cards().map((r) => ({ month: r.dataset.month, list: r.querySelector("textarea").value }));
+const dateIn = (r) => r.querySelector("input[type=date]"), timeIn = (r) => r.querySelector("input[type=time]");
+const cardKey = (r) => batchKey(dateIn(r).value, timeIn(r).value);
+const monthsData = () => cards().map((r) => ({ month: cardKey(r), list: r.querySelector("textarea").value }));
 const MIN_MONTH = () => firstSelectable(twToday());
 let calYear = Number(MIN_MONTH().slice(0, 4));
+const sortCards = () => cards().sort((a, b) => (cardKey(a) < cardKey(b) ? -1 : 1)).forEach((c) => $("months").append(c));
 
 function refreshMonths() {
-  const data = monthsData(), dupes = findDupes(data), dupEmails = Object.keys(dupes);
+  sortCards();
+  const data = monthsData(), dupes = findDupes(data), dupEmails = Object.keys(dupes), today = twToday();
+  const dayCount = {}; data.forEach((m) => { const d = keyDate(m.month); dayCount[d] = (dayCount[d] || 0) + 1; });
   for (const r of cards()) {
-    const mine = parseEmails(r.querySelector("textarea").value), bad = mine.filter((e) => dupes[e]);
+    const key = cardKey(r), d = keyDate(key), mine = parseEmails(r.querySelector("textarea").value), bad = mine.filter((e) => dupes[e]);
     const n = r.querySelector(".badge"); n.textContent = `${mine.length} 位`; n.classList.toggle("zero", mine.length === 0);
-    r.classList.toggle("dup", bad.length > 0);
-    const dm = r.querySelector(".dupmsg"); dm.textContent = bad.length ? `重複：${bad.slice(0, 3).join("、")}${bad.length > 3 ? ` 等 ${bad.length} 位` : ""} 也排在 ${[...new Set(bad.flatMap((e) => dupes[e]))].filter((m) => m !== r.dataset.month).map(monthLabel).join("、")}，同一人只能排一個月` : "";
+    r.querySelector(".mt").textContent = d ? `${dateLabel(key)} 換這批` : "請選日期";
+    const notes = [];
+    if (!d) notes.push("還沒選日期");
+    else if (d < today) notes.push("這個日期已經過了，請改成今天或之後");
+    if (d && dayCount[d] > 1) notes.push("同一天只能有一批，請改日期");
+    if (bad.length) notes.push(`重複：${bad.slice(0, 3).join("、")}${bad.length > 3 ? ` 等 ${bad.length} 位` : ""} 也排在 ${[...new Set(bad.flatMap((e) => dupes[e]))].filter((m) => m !== key).map(dateLabel).join("、")}，同一人只能排一批`);
+    r.classList.toggle("dup", notes.length > 0); r.querySelector(".dupmsg").textContent = notes.join("；");
   }
-  $("monthTotal").textContent = data.length ? `已排 ${data.length} 個月（${monthLabel(data[0].month)} 到 ${monthLabel(data.at(-1).month)}），共 ${data.reduce((a, m) => a + parseEmails(m.list).length, 0)} 位${dupEmails.length ? `；有 ${dupEmails.length} 位重複，請修正` : ""}` : "還沒選月份，請從上面的年曆點月份，或用「連續幾個月」。";
+  $("monthTotal").textContent = data.length ? `已排 ${data.length} 批（${dateLabel(data[0].month)} 到 ${dateLabel(data.at(-1).month)}），共 ${data.reduce((a, m) => a + parseEmails(m.list).length, 0)} 位${dupEmails.length ? `；有 ${dupEmails.length} 位重複，請修正` : ""}` : "還沒選日期，請從上面的年曆點月份，或用「連續幾個月」，每一批再自己改日期和時間。";
   $("monthTotal").style.color = dupEmails.length ? "var(--err)" : "";
   renderCal(); $("previewCard").classList.add("hidden");
 }
 function addMonthCard(ym) {
-  if (ym < MIN_MONTH() || cards().some((r) => r.dataset.month === ym)) return;
-  const row = el("div", { className: "mo" }); row.dataset.month = ym;
-  const ta = el("textarea", { placeholder: "這個月要有授權的帳號，一行一個（可直接從試算表貼上整欄）" }); ta.style.minHeight = "90px"; ta.oninput = refreshMonths;
+  const today = twToday(); let d = dateInMonth(ym, $("mDay").value); if (d < today) d = today.slice(0, 7) === ym ? today : d;
+  const row = el("div", { className: "mo" });
+  const dt = el("input", { type: "date", value: d, min: today }); dt.onchange = refreshMonths;
+  const tm = el("input", { type: "time", value: $("runTime").value || "03:00", step: "60" }); tm.onchange = refreshMonths;
+  const ta = el("textarea", { placeholder: "這一批要有授權的帳號，一行一個（可直接從試算表貼上整欄）" }); ta.style.minHeight = "90px"; ta.oninput = refreshMonths;
   row.append(
-    el("div", { className: "mh" }, el("strong", { textContent: `${monthLabel(ym)} 1 號換這批` }), el("span", { className: "badge", textContent: "0 位" }),
-      el("button", { className: "ghost mx", type: "button", textContent: "移除這個月", onclick: () => removeMonthCard(row) })),
+    el("div", { className: "mh" }, el("strong", { className: "mt" }), el("span", { className: "badge", textContent: "0 位" }),
+      el("button", { className: "ghost mx", type: "button", textContent: "移除這一批", onclick: () => removeCards([row]) })),
+    el("div", { className: "mdt" }, el("label", { textContent: "日期" }), dt, el("label", { textContent: "時間（到分鐘）" }), tm),
     ta, el("div", { className: "dupmsg" }));
   $("months").append(row);
-  [...$("months").children].sort((a, b) => (a.dataset.month < b.dataset.month ? -1 : 1)).forEach((c) => $("months").append(c));
 }
-async function removeMonthCard(row) {
-  if (row.querySelector("textarea").value.trim() && !(await ask("移除這個月？", `${monthLabel(row.dataset.month)} 已經貼了名單，移除後名單會不見。`, "移除", true))) return;
-  row.remove(); refreshMonths();
+async function removeCards(rows) {
+  const filled = rows.filter((r) => r.querySelector("textarea").value.trim());
+  if (filled.length && !(await ask("移除這一批？", `${rows.length > 1 ? "這個月的 " + rows.length + " 批" : "這一批"}已經貼了名單，移除後名單會不見。`, "移除", true))) return;
+  rows.forEach((r) => r.remove()); refreshMonths();
 }
 function renderCal() {
-  const have = new Set(cards().map((r) => r.dataset.month)), min = MIN_MONTH();
+  const have = new Set(cards().map((r) => keyDate(cardKey(r)).slice(0, 7))), min = MIN_MONTH();
   $("yLabel").textContent = `${calYear} 年`; $("yPrev").disabled = `${calYear - 1}-12` < min;
   $("mGrid").textContent = "";
   for (let m = 1; m <= 12; m++) {
     const ym = `${calYear}-${String(m).padStart(2, "0")}`;
     const b = el("button", { type: "button", textContent: `${m} 月`, disabled: ym < min, className: have.has(ym) ? "on" : "" });
-    b.onclick = () => { if (have.has(ym)) removeMonthCard(cards().find((r) => r.dataset.month === ym)); else { addMonthCard(ym); refreshMonths(); } };
+    b.onclick = () => { if (have.has(ym)) removeCards(cards().filter((r) => keyDate(cardKey(r)).slice(0, 7) === ym)); else { addMonthCard(ym); refreshMonths(); } };
     $("mGrid").append(b);
   }
 }
 $("yPrev").onclick = () => { calYear--; renderCal(); }; $("yNext").onclick = () => { calYear++; renderCal(); };
 for (let i = 0; i < 24; i++) { const ym = addMonths(MIN_MONTH(), i); $("mFrom").append(el("option", { value: ym, textContent: monthLabel(ym) })); }
 for (let n = 1; n <= 12; n++) $("mCount").append(el("option", { value: String(n), textContent: String(n), selected: n === 3 }));
-function applyRange(count) { for (const ym of monthRange($("mFrom").value, count)) addMonthCard(ym); calYear = Number($("mFrom").value.slice(0, 4)); refreshMonths(); }
+for (let d = 1; d <= 31; d++) $("mDay").append(el("option", { value: String(d), textContent: `${d} 號` }));
+function applyRange(count) { for (const ym of monthRange($("mFrom").value, count)) { if (!cards().some((r) => keyDate(cardKey(r)).slice(0, 7) === ym)) addMonthCard(ym); } calYear = Number($("mFrom").value.slice(0, 4)); refreshMonths(); }
 $("mApply").onclick = () => applyRange(Number($("mCount").value));
 document.querySelectorAll("[data-q]").forEach((b) => (b.onclick = () => { $("mCount").value = b.dataset.q; applyRange(Number(b.dataset.q)); }));
-$("mClear").onclick = async () => { if (!cards().length || !(await ask("清空全部月份？", "所有月份和已貼的名單都會不見。", "清空", true))) return; $("months").textContent = ""; refreshMonths(); };
+$("mClear").onclick = async () => { if (!cards().length || !(await ask("清空全部批次？", "所有批次和已貼的名單都會不見。", "清空", true))) return; $("months").textContent = ""; refreshMonths(); };
 refreshMonths();
 const readForm = () => buildBody({
   domain: $("domain").value, sku: $("sku").value, type: typeOf(), runDate: $("runDate").value, runTime: $("runTime").value, add: $("add").value, revoke: $("revoke").value, keep: $("keep").value,
@@ -111,12 +125,12 @@ const readForm = () => buildBody({
 const OP = { add: "指派", remove: "收回", skip: "跳過", error: "出錯" };
 function renderPreview(r, body) {
   $("previewCard").classList.remove("hidden");
-  $("previewHint").textContent = `以 ${r.runDate} 這一天的規則預演（每月輪替只預演第一個月）。系統當下讀到學校的實際狀況。`;
+  $("previewHint").textContent = `以 ${r.runDate} 這一天的規則預演（每月輪替只預演最早那一批）。系統當下讀到學校的實際狀況。`;
   const c = r.counts; $("sum").textContent = "";
   for (const [k, cls] of [["remove", "s-remove"], ["add", "s-add"], ["skip", "s-skip"], ["error", "s-error"]]) $("sum").append(el("div", { className: cls, textContent: `${OP[k]} ${c[k]}` }));
   const ms = body.type === "monthly" ? monthlySummary(body.months ? Object.entries(body.months).map(([month, l]) => ({ month, list: l.join("\n") })) : []) : [];
   $("monthSumBox").classList.toggle("hidden", !ms.length); $("monthSumRows").textContent = "";
-  for (const m of ms) { const tr = $("monthSumRows").insertRow(); tr.insertCell().textContent = monthLabel(m.month); tr.insertCell().textContent = `${m.add} 位`; tr.insertCell().textContent = m.remove ? `${m.remove} 位` : "沒有（第一批）"; if (m.empty) tr.style.background = "#fef3c7"; }
+  for (const m of ms) { const tr = $("monthSumRows").insertRow(); tr.insertCell().textContent = dateLabel(m.month); tr.insertCell().textContent = `${m.add} 位`; tr.insertCell().textContent = m.remove ? `${m.remove} 位` : "沒有（第一批）"; if (m.empty) tr.style.background = "#fef3c7"; }
   const tb = $("planRows"); tb.textContent = "";
   for (const a of r.actions) {
     const tr = tb.insertRow(); tr.className = `r-${a.op}`;

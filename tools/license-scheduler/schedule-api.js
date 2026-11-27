@@ -37,13 +37,13 @@ export function demoScheduleApi({ staff = true } = {}) {
   const nap = () => new Promise((r) => setTimeout(r, 250));
   const need = (id) => { const s = rows.find((x) => x.id === id); if (!s) throw new Error("找不到這筆排程"); return s; };
   const plan = (b) => {
-    const dates = b.type === "single" ? [b.runDate] : Object.keys(b.months || {}).sort().map((m) => `${m}-01`);
+    const dates = b.type === "single" ? [b.runDate] : Object.keys(b.months || {}).sort().map((m) => (m.length === 7 ? `${m}-01` : m.slice(0, 10)));
     let add = b.add || [], revoke = b.revoke || [];
     if (b.type === "monthly") { const first = Object.keys(b.months).sort()[0]; add = b.months[first]; revoke = Object.entries(b.months).filter(([m]) => m !== first).flatMap(([, l]) => l); }
     const p = planRotation({ add, revoke, keep: b.keep || [], users, holders });
     const counts = { add: 0, remove: 0, skip: 0, error: 0 }; p.actions.forEach((a) => counts[a.op]++);
     const reasons = []; if (counts.error) reasons.push(`有 ${counts.error} 筆出錯（例如目錄裡找不到這個使用者）`);
-    return { runDate: dates[0], counts, safe: !reasons.length, reasons, warnings: p.warnings, actions: p.actions, conflicts: { blocked: [], notes: [] }, dates };
+    return { runDate: dates[0], counts, safe: !reasons.length, reasons, warnings: p.warnings, actions: p.actions, conflicts: { blocked: [], notes: [] }, dates, times: b.type === "monthly" ? Object.fromEntries(Object.keys(b.months || {}).filter((m) => m.length > 10).map((m) => [m.slice(0, 10), m.slice(11)])) : {} };
   };
   const checkDomain = (b) => { if (!schools.some((s) => s.domain === b.domain)) throw Object.assign(new Error(`${b.domain} 還沒登記，請聯絡鴻綸登記這間學校（示範版只有 demo.school.tw）`), { status: 404 }); };
   return {
@@ -56,7 +56,7 @@ export function demoScheduleApi({ staff = true } = {}) {
       await nap(); checkDomain(b); const p = plan(b);
       if (!p.safe) throw new Error("預演沒過，不能建立：" + p.reasons.join("；"));
       const id = nextId++; const status = staff ? "active" : "pending_approval";
-      rows.push({ id, domain: b.domain, sku: b.sku, type: b.type, runTime: b.runTime || "03:00", runDates: p.dates, status, dryRunOnly: true, runs: [], testOk: false, approvedBy: staff ? "shen@gfeh.org" : null, createdBy: staff ? "shen@gfeh.org" : "admin@demo.school.tw" });
+      rows.push({ id, domain: b.domain, sku: b.sku, type: b.type, runTime: b.runTime || "03:00", runDates: p.dates, runTimes: p.times, status, dryRunOnly: true, runs: [], testOk: false, approvedBy: staff ? "shen@gfeh.org" : null, createdBy: staff ? "shen@gfeh.org" : "admin@demo.school.tw" });
       return { id, status, notes: [] };
     },
     async list() { await nap(); return { schedules: rows.map((r) => ({ ...r })) }; },

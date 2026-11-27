@@ -28,7 +28,7 @@ export function buildBody(form) {
 export function describeNext(s, today = twToday()) {
   if (["done", "overdue", "needs_attention"].includes(s.status)) return "";
   const dates = (s.runDates || []).filter((d) => d >= today);
-  return dates.length ? `${dates[0]} ${s.runTime || "03:00"}（台灣時間）` : "沒有後續日期";
+  return dates.length ? `${dates[0]} ${s.runTimes?.[dates[0]] || s.runTime || "03:00"}（台灣時間）` : "沒有後續日期";
 }
 export function describeRun(r) {
   if (!r) return "還沒執行過";
@@ -53,11 +53,18 @@ export function allowedActions(me, s) {
 export const errorText = (e) => (e && e.message) || "發生未知錯誤";
 
 // ---------- 每月輪替的月份選擇（純邏輯，畫面在 schedule.js） ----------
-// ym 一律是 "YYYY-MM"。每月輪替固定每月 1 號執行，所以只選月份。
+// ym 是 "YYYY-MM"。每月輪替的每一批可以指定任何日期與時間（到分鐘），批次的鍵是 "YYYY-MM-DD HH:MM"（沒寫時間就用排程預設）。
 export const addMonths = (ym, n) => { const [y, m] = ym.split("-").map(Number); const i = y * 12 + (m - 1) + n; return `${Math.floor(i / 12)}-${String((i % 12) + 1).padStart(2, "0")}`; };
 export const monthLabel = (ym) => `${ym.slice(0, 4)} 年 ${Number(ym.slice(5))} 月`;
-// 可以選的最早月份：今天剛好是 1 號就是本月（執行時間還沒到也行），否則是下個月
-export const firstSelectable = (today = twToday()) => (today.slice(8) === "01" ? today.slice(0, 7) : addMonths(today.slice(0, 7), 1));
+// 可以選的最早月份：本月（日期已過的批次由預演擋下，並在卡片上標紅）
+export const firstSelectable = (today = twToday()) => today.slice(0, 7);
+export const daysInMonth = (ym) => new Date(Date.UTC(Number(ym.slice(0, 4)), Number(ym.slice(5, 7)), 0)).getUTCDate();
+// 某月的第幾號（超過該月天數就用月底，例如 31 號在 2 月變 28 號），回傳 "YYYY-MM-DD"
+export const dateInMonth = (ym, day) => `${ym}-${String(Math.min(Math.max(1, Number(day) || 1), daysInMonth(ym))).padStart(2, "0")}`;
+export const keyDate = (key) => String(key).slice(0, 10);
+export const keyTime = (key) => (String(key).length > 10 ? String(key).slice(11) : "");
+export const batchKey = (date, time) => (time ? `${date} ${time}` : date);
+export const dateLabel = (key) => { const d = keyDate(key), t = keyTime(key); return `${d.slice(0, 4)} 年 ${Number(d.slice(5, 7))} 月 ${Number(d.slice(8, 10))} 號${t ? ` ${t}` : ""}`; };
 export const monthRange = (start, count) => Array.from({ length: count }, (_, i) => addMonths(start, i));
 // months：[{month, list(文字)}]。回傳 {信箱: [出現的月份…]}，只留出現在 2 個以上月份的人
 export function findDupes(months) {
