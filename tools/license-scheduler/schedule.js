@@ -1,9 +1,9 @@
 // 排程頁的畫面與流程。純邏輯在 schedule-lib.js，連後端與示範版在 schedule-api.js。
 // 使用者輸入的文字（信箱、網域）一律用 textContent 放進畫面，不用 innerHTML。
 import { SKUS, parseEmails } from "./logic.js?v=20261123c";
-import { CLIENT_ID, SCHEDULER_API } from "./config.js?v=20261127e";
-import { realScheduleApi, demoScheduleApi } from "./schedule-api.js?v=20261127e";
-import { STATUS_LABEL, TYPE_LABEL, buildBody, describeNext, describeRun, allowedActions, errorText, twToday, addMonths, monthLabel, firstSelectable, monthRange, findDupes, monthlySummary, dateInMonth, keyDate, batchKey, dateLabel } from "./schedule-lib.js?v=20261127e";
+import { CLIENT_ID, SCHEDULER_API } from "./config.js?v=20261127f";
+import { realScheduleApi, demoScheduleApi } from "./schedule-api.js?v=20261127f";
+import { STATUS_LABEL, TYPE_LABEL, buildBody, describeNext, describeRun, allowedActions, errorText, twToday, addMonths, monthLabel, firstSelectable, monthRange, findDupes, monthlySummary, dateInMonth, keyDate, batchKey, dateLabel } from "./schedule-lib.js?v=20261127f";
 
 const $ = (id) => document.getElementById(id);
 const state = { api: null, me: null, token: "", lastBody: null };
@@ -79,8 +79,8 @@ function refreshMonths() {
   $("monthTotal").style.color = dupEmails.length ? "var(--err)" : "";
   renderCal(); $("previewCard").classList.add("hidden");
 }
-function addMonthCard(ym) {
-  const today = twToday(); let d = dateInMonth(ym, $("mDay").value); if (d < today) d = today.slice(0, 7) === ym ? today : d;
+function addMonthCard(ym, forcedDate) {
+  const today = twToday(); let d = forcedDate || dateInMonth(ym, $("mDay").value); if (!forcedDate && d < today) d = today.slice(0, 7) === ym ? today : d;
   const row = el("div", { className: "mo" });
   const dt = el("input", { type: "date", value: d, min: today }); dt.onchange = refreshMonths;
   const tm = el("input", { type: "time", value: $("runTime").value || "03:00", step: "60" }); tm.onchange = refreshMonths;
@@ -115,6 +115,8 @@ for (let d = 1; d <= 31; d++) $("mDay").append(el("option", { value: String(d), 
 function applyRange(count) { for (const ym of monthRange($("mFrom").value, count)) { if (!cards().some((r) => keyDate(cardKey(r)).slice(0, 7) === ym)) addMonthCard(ym); } calYear = Number($("mFrom").value.slice(0, 4)); refreshMonths(); }
 $("mApply").onclick = () => applyRange(Number($("mCount").value));
 document.querySelectorAll("[data-q]").forEach((b) => (b.onclick = () => { $("mCount").value = b.dataset.q; applyRange(Number(b.dataset.q)); }));
+const nextDay = (d) => new Date(Date.parse(`${d}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+$("mAddOne").onclick = () => { const ds = cards().map((r) => keyDate(cardKey(r))).filter(Boolean).sort(); const d = ds.length ? nextDay(ds.at(-1)) : twToday(); addMonthCard(d.slice(0, 7), d); refreshMonths(); };
 $("mClear").onclick = async () => { if (!cards().length || !(await ask("清空全部批次？", "所有批次和已貼的名單都會不見。", "清空", true))) return; $("months").textContent = ""; refreshMonths(); };
 refreshMonths();
 const readForm = () => buildBody({

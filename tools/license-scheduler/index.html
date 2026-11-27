@@ -7,7 +7,7 @@
 <title>鴻綸教育授權自動排程</title>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css?v=45">
-<link rel="stylesheet" href="style.css?v=20261127e">
+<link rel="stylesheet" href="style.css?v=20261127f">
 <style>
   .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
   .mo{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:#f8fafc}
@@ -76,7 +76,7 @@
         </div>
         <div id="monthTotal" class="hint"></div>
         <div id="months"></div>
-        <div class="row"><button class="ghost" id="mClear" type="button">清空全部月份</button></div>
+        <div class="row"><button class="ghost" id="mAddOne" type="button">＋ 新增一批（自己選日期）</button><button class="ghost" id="mClear" type="button">清空全部批次</button></div>
       </div>
       <label for="keep">永遠不要動的帳號（保留名單，選填）</label><textarea id="keep" style="min-height:70px"></textarea>
       <div class="row"><button id="btnPreview">預演</button></div>
@@ -116,6 +116,6 @@
 
 <dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script type="module" src="schedule.js?v=20261127e"></script>
+<script type="module" src="schedule.js?v=20261127f"></script>
 </body>
 </html>
