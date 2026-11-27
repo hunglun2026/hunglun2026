@@ -51,3 +51,22 @@ export function allowedActions(me, s) {
 }
 
 export const errorText = (e) => (e && e.message) || "發生未知錯誤";
+
+// ---------- 每月輪替的月份選擇（純邏輯，畫面在 schedule.js） ----------
+// ym 一律是 "YYYY-MM"。每月輪替固定每月 1 號執行，所以只選月份。
+export const addMonths = (ym, n) => { const [y, m] = ym.split("-").map(Number); const i = y * 12 + (m - 1) + n; return `${Math.floor(i / 12)}-${String((i % 12) + 1).padStart(2, "0")}`; };
+export const monthLabel = (ym) => `${ym.slice(0, 4)} 年 ${Number(ym.slice(5))} 月`;
+// 可以選的最早月份：今天剛好是 1 號就是本月（執行時間還沒到也行），否則是下個月
+export const firstSelectable = (today = twToday()) => (today.slice(8) === "01" ? today.slice(0, 7) : addMonths(today.slice(0, 7), 1));
+export const monthRange = (start, count) => Array.from({ length: count }, (_, i) => addMonths(start, i));
+// months：[{month, list(文字)}]。回傳 {信箱: [出現的月份…]}，只留出現在 2 個以上月份的人
+export function findDupes(months) {
+  const seen = new Map();
+  for (const m of months) for (const e of parseEmails(m.list)) { if (!seen.has(e)) seen.set(e, []); if (!seen.get(e).includes(m.month)) seen.get(e).push(m.month); }
+  return Object.fromEntries([...seen].filter(([, v]) => v.length > 1));
+}
+// 預演用的每月總覽：每個月指派幾位、預期收回幾位（收回上一個月那批；第一個月沒有）。和後端 expectedChanges 同一套規則
+export function monthlySummary(months) {
+  const rows = months.filter((m) => m.month).map((m) => ({ month: m.month, n: parseEmails(m.list).length })).sort((a, b) => (a.month < b.month ? -1 : 1));
+  return rows.map((r, i) => ({ month: r.month, add: r.n, remove: i ? rows[i - 1].n : 0, empty: r.n === 0 }));
+}

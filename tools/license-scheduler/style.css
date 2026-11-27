@@ -73,3 +73,20 @@ select.a-add{background:transparent;color:#1d4ed8;font-weight:700}select.a-revok
 .lic-bad{display:inline-block;margin:2px 0;padding:2px 0;color:#b91c1c;font-weight:700}
 .chosen{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;font-size:14px;line-height:2}.chosen b{margin-right:6px}.pick{display:inline-block;margin:0 6px 0 0;padding:3px 12px;border-radius:999px;background:#059669;color:#fff;font-weight:700}.chosen small{display:block;color:#047857;line-height:1.6}
 table.grid tbody tr.g-add td:not(.idx){background:#dbeafe}table.grid tbody tr.g-revoke td:not(.idx){background:#fecaca}table.grid tbody tr.g-add td.idx{background:#bfdbfe;color:#1e40af}table.grid tbody tr.g-revoke td.idx{background:#fca5a5;color:#991b1b}table.grid tbody tr.g-add input:focus,table.grid tbody tr.g-add select:focus{background:#eff6ff}table.grid tbody tr.g-revoke input:focus,table.grid tbody tr.g-revoke select:focus{background:#fef2f2}.lic-chip{background:#fff;border:1px solid #bae6fd}
+
+/* 每月輪替：月份選擇（年曆＋快速選）與月份卡 */
+.mpick{border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0;background:#f8fafc}
+.mquick{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}.mquick select{width:auto;min-width:110px}.mquick .hintline{color:var(--sub);font-size:14px}
+button.sm{padding:5px 12px;font-size:14px}
+.mhead{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:8px}.mhead b{font-size:18px;min-width:90px;text-align:center}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mgrid button{padding:10px 0;background:#fff;color:var(--text);border:1px solid #cbd5e1;font-weight:400}
+.mgrid button.on{background:var(--pri);border-color:var(--pri);color:#fff;font-weight:700}
+.mgrid button:disabled{background:#e5e7eb;color:#9ca3af;border-color:#e5e7eb;cursor:not-allowed}
+.mo{border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0;background:#fff}
+.mo .mh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.mo .mh strong{font-size:16px}
+.mo .badge{padding:2px 10px;border-radius:999px;background:#e0f2fe;color:#075985;font-size:13px;font-weight:700}
+.mo .badge.zero{background:#fef3c7;color:#92400e}
+.mo .mx{margin-left:auto;padding:4px 12px;font-size:14px}
+.mo.dup{border-color:#ef4444;background:#fef2f2}.mo .dupmsg{margin:6px 0 0;color:#b91c1c;font-size:14px;font-weight:700}
+@media(max-width:520px){.mgrid{grid-template-columns:repeat(3,1fr)}}

@@ -7,7 +7,7 @@
 <title>鴻綸教育授權自動排程</title>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/hunglun-notosanstc-core.woff2?v=100" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css?v=45">
-<link rel="stylesheet" href="style.css?v=20261127c">
+<link rel="stylesheet" href="style.css?v=20261127d">
 <style>
   .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
   .mo{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:#f8fafc}
@@ -21,7 +21,7 @@
 </head>
 <body>
 <header>
-  <p style="margin:0 0 6px;font-size:13px"><a href="/tools/license-manager/" style="color:#cbd5e1">← 回「立即執行」</a>　<a href="/tools/commercial" style="color:#cbd5e1">回商用工具</a></p>
+  <p style="margin:0 0 6px;font-size:13px"><a href="/tools/license-manager/" style="color:#cbd5e1">← 回「立即執行」</a>　<a href="/tools/commercial" style="color:#cbd5e1">回商用工具</a>　<a href="schedule-guide.html" style="color:#fde68a;font-weight:700">教學說明</a></p>
   <h1>鴻綸教育授權自動排程</h1>
   <p>先設好日期與名單，到期由系統每分鐘自動檢查，時間一到就執行（台灣時間，可指定到分鐘），不用有人登入</p>
 </header>
@@ -59,9 +59,24 @@
         </div>
       </div>
       <div id="monthlyBox" class="hidden">
-        <p class="hint" style="margin-top:12px">每個月放一批人：這個月 1 號，這批人沒有授權就指派，其他月份那些人還有授權就收回。同一個人不能排在兩個月。</p>
+        <p class="hint" style="margin-top:12px">每個月 1 號換一批人：那個月的人沒有授權就指派，其他月份的人還有授權就收回。先選要排哪幾個月，再把每個月的老師貼進去。同一個人不能排在兩個月。</p>
+        <div class="mpick">
+          <div class="mquick">
+            <span>從</span><select id="mFrom"></select><span>開始，連續</span><select id="mCount"></select><span>個月</span>
+            <button class="ghost" id="mApply" type="button">加入這些月份</button>
+          </div>
+          <div class="mquick"><span class="hintline">快速：</span>
+            <button class="ghost sm" type="button" data-q="3">3 個月</button><button class="ghost sm" type="button" data-q="6">半年（6 個月）</button><button class="ghost sm" type="button" data-q="12">一整年（12 個月）</button>
+          </div>
+          <div class="mcal">
+            <div class="mhead"><button class="ghost sm" id="yPrev" type="button" aria-label="上一年">◀</button><b id="yLabel"></b><button class="ghost sm" id="yNext" type="button" aria-label="下一年">▶</button></div>
+            <div class="mgrid" id="mGrid"></div>
+            <p class="hint" style="margin:8px 0 0">點月份就是加入或移除；藍色是已加入，灰色是已經過了不能排。</p>
+          </div>
+        </div>
+        <div id="monthTotal" class="hint"></div>
         <div id="months"></div>
-        <button class="ghost" id="addMonth">＋ 新增一個月</button>
+        <div class="row"><button class="ghost" id="mClear" type="button">清空全部月份</button></div>
       </div>
       <label for="keep">永遠不要動的帳號（保留名單，選填）</label><textarea id="keep" style="min-height:70px"></textarea>
       <div class="row"><button id="btnPreview">預演</button></div>
@@ -72,6 +87,7 @@
       <h2>預演結果</h2>
       <p class="hint" id="previewHint"></p>
       <div class="sum" id="sum"></div>
+      <div class="box hidden" id="monthSumBox" style="margin-bottom:12px"><table><thead><tr><th>月份（每月 1 號）</th><th>指派</th><th>預期收回（上一批）</th></tr></thead><tbody id="monthSumRows"></tbody></table></div>
       <div class="box"><table><thead><tr><th>動作</th><th>帳號</th><th>說明</th></tr></thead><tbody id="planRows"></tbody></table></div>
       <div id="previewMsg"></div>
       <div class="row"><button id="btnCreate">建立排程</button></div>
@@ -100,6 +116,6 @@
 
 <dialog id="dlg"><h3 id="dlgT"></h3><p id="dlgB"></p><div class="row" style="justify-content:flex-end"><button class="ghost" id="dlgNo">取消</button><button id="dlgYes">確定</button></div></dialog>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script type="module" src="schedule.js?v=20261126e"></script>
+<script type="module" src="schedule.js?v=20261127d"></script>
 </body>
 </html>

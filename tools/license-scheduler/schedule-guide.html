@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>授權自動排程 教學說明</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--sub:#6b7280;--line:#e5e7eb;--pri:#1d4ed8;--ok:#047857;--warn:#b45309;--err:#b91c1c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 "Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}
+header{background:#0f172a;color:#fff;padding:18px 20px}
+header h1{margin:0;font-size:20px}
+header p{margin:4px 0 0;color:#cbd5e1;font-size:14px}
+header a{color:#cbd5e1}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:18px}
+nav.toc ol{margin:6px 0 0;padding-left:22px;columns:2;column-gap:28px}
+@media (max-width:640px){nav.toc ol{columns:1}}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:16px}
+h2{margin:0 0 10px;font-size:19px}
+h3{margin:18px 0 6px;font-size:16px}
+p{margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:10px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+.box{border-radius:10px;padding:10px 14px;margin:12px 0;font-size:15px}
+.note{background:#eff6ff;border:1px solid #bfdbfe}
+.warn{background:#fffbeb;border:1px solid #fde68a}
+.bad{background:#fef2f2;border:1px solid #fecaca}
+code{font-family:Consolas,"Noto Sans TC",monospace;background:#f1f5f9;border-radius:6px;padding:1px 5px;font-size:14px}
+ol.steps{padding-left:22px}
+ol.steps li{margin:6px 0}
+figure{margin:12px 0}
+figure img{max-width:100%;border:1px solid var(--line);border-radius:10px;display:block}
+figcaption{color:var(--sub);font-size:13.5px;margin-top:4px}
+.tag{display:inline-block;border-radius:999px;padding:0 9px;font-size:13px;font-weight:600;background:#e0f2fe;color:#075985}
+footer{color:var(--sub);font-size:13px;text-align:center;margin-top:20px}
+@media print{header{background:#fff;color:#000}header a,header p{color:#000}body{background:#fff}section{break-inside:avoid;border-color:#ccc}}
+</style>
+</head>
+<body>
+<header>
+  <h1>授權自動排程 教學說明</h1>
+  <p>先排好日期和名單，時間到系統自己換授權，不用有人在電腦前。<a href="./">回排程頁</a></p>
+</header>
+<div class="wrap">
+
+<nav class="toc"><b>目錄</b>
+  <ol>
+    <li><a href="#what">這是做什麼的</a></li>
+    <li><a href="#before">開始前要準備</a></li>
+    <li><a href="#single">做法一：單次轉移</a></li>
+    <li><a href="#monthly">做法二：每月輪替（可排整年）</a></li>
+    <li><a href="#preview">預演怎麼看</a></li>
+    <li><a href="#go">建立後：測試、改正式、自動執行</a></li>
+    <li><a href="#status">狀態對照表</a></li>
+    <li><a href="#guard">系統怎麼保護你</a></li>
+    <li><a href="#faq">常見問題</a></li>
+  </ol>
+</nav>
+
+<section id="what">
+  <h2>1. 這是做什麼的</h2>
+  <p>老師的 Google 授權（例如 Education Plus、Google AI Pro for Education）名額有限，常常要輪流給不同的人用。以前要有人記得在那天登入後台、一個一個改。排程把這件事交給系統：你先說「哪一天、幾點、收回誰、指派誰」，時間到就自動做，做完會通知鴻綸。</p>
+  <table>
+    <tr><th>情境</th><th>用哪種</th></tr>
+    <tr><td>某一天，把一批人的授權換給另一批人</td><td>單次轉移</td></tr>
+    <tr><td>1 月給這 5 位、2 月換另外 5 位、3 月再換另外 5 位，每個月 1 號自動換，可以一次排一整年</td><td>每月輪替</td></tr>
+  </table>
+</section>
+
+<section id="before">
+  <h2>2. 開始前要準備</h2>
+  <ol class="steps">
+    <li><b>誰能建排程</b>：鴻綸人員，或已登記學校的管理員。學校管理員只看得到、改得到自己學校的排程；學校建立的排程要等鴻綸核准才會生效。</li>
+    <li><b>學校要先登記</b>：鴻綸在頁面最下方「鴻綸管理」填學校網域和該校管理員信箱，按「登記學校」，系統會真的讀一次使用者來確認連得上。登記前，該校超級管理員要先到後台「安全性 &gt; API 控制 &gt; 網域全域委派」加上我們的用戶端 ID。</li>
+    <li><b>名單用信箱</b>：一行一個完整信箱（可以從試算表直接貼上整欄），大小寫不分，重複的會自動合併。</li>
+    <li><b>登入</b>：按「使用 Google 帳戶登入」，用管理員帳號登入。第一次進站會先要站台密碼。</li>
+  </ol>
+  <figure><img src="img/sched-1-login.png" alt="登入畫面（示範）"><figcaption>登入畫面。也可以按下面兩個「示範」按鈕先練習，示範不連線、不會動到真實授權。</figcaption></figure>
+</section>
+
+<section id="single">
+  <h2>3. 做法一：單次轉移</h2>
+  <ol class="steps">
+    <li>填<b>學校網域</b>，選<b>授權種類</b>。</li>
+    <li>類型選「單次轉移」。</li>
+    <li>填<b>執行日期</b>（例如 <code>2027-01-05</code>）和<b>執行時間</b>（台灣時間，24 小時制，例如 <code>14:30</code>）。沒填時間就是凌晨 03:00。</li>
+    <li>左邊貼<b>要指派的帳號</b>，右邊貼<b>要收回的帳號</b>，一行一個。</li>
+    <li>有人絕對不能動（例如校長），貼在「永遠不要動的帳號」。</li>
+    <li>按「預演」，確認沒問題再按「建立排程」。</li>
+  </ol>
+  <figure><img src="img/sched-2-single.png" alt="單次轉移表單（示範）"><figcaption>單次轉移的表單。</figcaption></figure>
+  <div class="box note">想測試？執行時間填幾分鐘後就好。日期今天、時間還沒到才建得起來。</div>
+</section>
+
+<section id="monthly">
+  <h2>4. 做法二：每月輪替（可排整年）</h2>
+  <p>每月輪替固定在「每月 1 號」的你指定的時間執行。到了某個月 1 號，系統做兩件事：<b>那個月的人沒有授權就指派</b>，<b>其他月份的人如果還有授權就收回</b>。所以你只要排好每個月是哪一批人，之後完全自動。</p>
+  <h3>步驟 A：選月份（兩種方式，結果一樣）</h3>
+  <ul>
+    <li><b>連續幾個月</b>：選「從哪個月開始，連續幾個月」按「加入這些月份」。也可以直接按「3 個月」「半年」「一整年」。</li>
+    <li><b>年曆點選</b>：在年曆上點月份，藍色就是已加入，再點一次就移除。按旁邊的 ◀ ▶ 換年份。</li>
+  </ul>
+  <p>已經過了的月份是灰色，不能選。兩種方式可以混用，例如先選「一整年」，再把不需要的月份點掉。</p>
+  <figure><img src="img/sched-3-calendar.png" alt="月份選擇區（示範）"><figcaption>月份選擇：連續幾個月、快速鍵、年曆。</figcaption></figure>
+  <h3>步驟 B：每個月貼一批人</h3>
+  <p>每選一個月，下面就多一張卡片，標題是「2027 年 1 月 1 號換這批」，右上角顯示這批有幾位。把那個月要有授權的老師貼進去。移除有貼名單的月份時，系統會先問你。</p>
+  <figure><img src="img/sched-4-card.png" alt="月份卡片（示範）"><figcaption>每個月一張卡片，會即時算人數。</figcaption></figure>
+  <h3>防呆：同一個人不能排在兩個月</h3>
+  <p>如果同一位老師出現在兩個月，兩張卡片都會變紅，並寫出是誰、還排在哪個月，上方的總計也會提醒。修正之前，預演會被擋下。</p>
+  <figure><img src="img/sched-5-dup.png" alt="重複提醒（示範）"><figcaption>重複的人會被標出來。</figcaption></figure>
+  <div class="box note"><b>排一整年的範例</b>：選「一整年」，12 張卡片各貼 5 位老師，按預演看總覽，再建立排程。一筆排程就管完 12 個月，不用每個月來設定。</div>
+</section>
+
+<section id="preview">
+  <h2>5. 預演怎麼看</h2>
+  <p>預演不會改任何授權，只是讀學校「現在」的狀況，算出如果現在執行會做什麼。</p>
+  <table>
+    <tr><th>顏色</th><th>意思</th></tr>
+    <tr><td><span class="tag" style="background:#dcfce7;color:#166534">指派</span></td><td>這個人現在沒有授權，到時會給他</td></tr>
+    <tr><td><span class="tag" style="background:#fee2e2;color:#991b1b">收回</span></td><td>這個人現在有授權，到時會收回</td></tr>
+    <tr><td><span class="tag" style="background:#e5e7eb;color:#4b5563">跳過</span></td><td>已經是想要的狀態，不用動</td></tr>
+    <tr><td><span class="tag" style="background:#fef3c7;color:#92400e">出錯</span></td><td>例如這個信箱在學校目錄裡找不到；有出錯就不能建立</td></tr>
+  </table>
+  <p>每月輪替另外有一張「每月總覽」：每個月指派幾位、預期收回幾位（收回上一個月那批）。月份沒有人會用黃底標出，請確認是不是漏貼。</p>
+  <figure><img src="img/sched-6-summary.png" alt="每月總覽（示範）"><figcaption>每月總覽。排整年時一眼就能檢查。</figcaption></figure>
+  <div class="box warn">每月輪替的預演只拿「第一個月」的規則對照學校現況。後面的月份要等前面的月份執行完才有東西可收，所以預演看到的收回數可能是 0，這是正常的。</div>
+</section>
+
+<section id="go">
+  <h2>6. 建立後：測試、改正式、自動執行</h2>
+  <ol class="steps">
+    <li><b>建立排程</b>：按「建立排程」後會跳出確認，再按一次才算建立。鴻綸建立的直接生效；學校建立的要等鴻綸核准。</li>
+    <li><b>新排程一律「只預演」</b>：到時間只會算一遍並通知，不會寫入，這是保險。</li>
+    <li><b>手動測試</b>（鴻綸操作）：在列表按「手動測試」，系統馬上用學校現況算一次，顯示「手動測試通過（指派 x、收回 y）」。測試也只預演，不寫入。</li>
+    <li><b>改正式執行</b>：測試通過才按得下去。按了之後，到期就會真的收回與指派。</li>
+    <li><b>自動執行</b>：系統每分鐘檢查一次。時間到就做，每筆約幾秒，做完會通知鴻綸，列表狀態變成「已完成」。</li>
+  </ol>
+  <div class="box note"><b>想在同一天分好幾個時間做（連鎖）</b>：可以一次把整串排好。例如 10:00 授權 A 組、10:05 收回 A 組並授權 B 組、10:10 收回 B 組。同一天不同時間，系統會依時間先後執行。</div>
+</section>
+
+<section id="status">
+  <h2>7. 狀態對照表</h2>
+  <table>
+    <tr><th>狀態</th><th>意思</th><th>要做什麼</th></tr>
+    <tr><td>待鴻綸核准</td><td>學校建立的，還沒生效</td><td>鴻綸按「核准」</td></tr>
+    <tr><td>排程中</td><td>正常等著到期</td><td>不用做什麼</td></tr>
+    <tr><td>已暫停</td><td>被暫停，不會執行</td><td>要執行就按「恢復」</td></tr>
+    <tr><td>已完成</td><td>做完了</td><td>可以刪除，或留著當紀錄</td></tr>
+    <tr><td>逾期未執行</td><td>到期後超過 3 天都沒做成，系統不再自動補跑</td><td>確認原因，重新排一筆</td></tr>
+    <tr><td>需要人處理</td><td>安全檢查沒過，整批沒有執行（沒有改任何授權）</td><td>看最近一次的說明，修好名單後請鴻綸按「恢復」</td></tr>
+  </table>
+  <p>暫時性的失敗（例如 Google 暫時連不上）系統會 10 分鐘後自動再試，不用處理。</p>
+</section>
+
+<section id="guard">
+  <h2>8. 系統怎麼保護你</h2>
+  <table>
+    <tr><th>保護</th><th>怎麼運作</th></tr>
+    <tr><td>先預演、先測試</td><td>新排程只預演；手動測試通過才能改成正式執行</td></tr>
+    <tr><td>同一時間不能互相打架</td><td>同一天同一個時間，同一人被兩筆排程往相反方向動，會擋下。同一天不同時間則依先後執行並提醒</td></tr>
+    <tr><td>同一人不能排兩個月</td><td>每月輪替會標紅並擋住預演</td></tr>
+    <tr><td>名單預期數檢查</td><td>執行時，實際要做的筆數必須和名單預期差不多（容許差至少 3 筆或 20%）。差太多就整批不執行，標「需要人處理」</td></tr>
+    <tr><td>筆數上限</td><td>單次預設最多 500 位，最高 3000 位</td></tr>
+    <tr><td>名額不夠時停手</td><td>Google 回報名額不足就立刻停止，不會硬做；已經做完的不會回復，狀態會標「需要人處理」並通知鴻綸</td></tr>
+    <tr><td>保留名單</td><td>「永遠不要動的帳號」任何情況都不會被收回或指派</td></tr>
+    <tr><td>做完會驗證</td><td>寫完會等一下再重讀，確認授權真的換過去，不一致才算有問題</td></tr>
+    <tr><td>個資</td><td>名單在排程完成 30 天後清空，執行紀錄留 1 年，且信箱只顯示第一個字母和網域（例如 t***@school.edu.tw）</td></tr>
+  </table>
+</section>
+
+<section id="faq">
+  <h2>9. 常見問題</h2>
+  <h3>建立排程按鈕是灰的？</h3>
+  <p>先按「預演」。預演上方如果有紅字，照紅字修正（常見：信箱找不到、同一人排兩個月、跟別筆排程同一時間打架）。</p>
+  <h3>預演說「今天幾點已經過了」？</h3>
+  <p>執行時間要晚於現在（台灣時間）。想測試就填幾分鐘後。</p>
+  <h3>預演很多人「找不到使用者」？</h3>
+  <p>信箱打錯，或那個帳號不在這個網域。老師換了帳號的話要用新的。</p>
+  <h3>時間到了沒有動作？</h3>
+  <p>先看狀態：是不是還是「只預演」（沒改成正式執行）、是不是「已暫停」、是不是「需要人處理」。系統每分鐘檢查一次，所以最多晚一分鐘。</p>
+  <h3>做到一半讀授權，看到一部分人換了一部分沒有？</h3>
+  <p>正常。每位老師約 2.7 秒，50 位大約要兩分鐘。等狀態變成「已完成」再看。</p>
+  <h3>系統剛好沒醒，錯過了時間怎麼辦？</h3>
+  <p>到期日起 3 天內會自動補跑，補跑後結果和準時執行一樣。超過 3 天標「逾期」，不會自動做，避免在你不知道的時候動授權。</p>
+  <h3>可以反悔嗎？</h3>
+  <p>還沒執行的排程可以按「暫停」或「刪除」。已經執行的，要再排一筆反向的排程（例如把剛指派的人收回）。</p>
+</section>
+
+<footer>鴻綸科技 授權自動排程 教學說明　圖片皆為示範資料</footer>
+</div>
+</body>
+</html>
