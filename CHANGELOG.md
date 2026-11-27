@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.52（2026-11-27）
+
+最新消息新增〈Gemini Bots 傳聞：只有一則貼文，Google 沒公告〉：X 上 11/26 的貼文預告 Gemini Bots，查不到 Google 官方公告，功能、時程、教育版是否提供都標「無法確認」；Neon 一項對照 Google 官方 11/18 發表的 Gemini 4 Neon 文章。
+
 ## v1.43.51（2026-11-26）
 
 〈學校 Google 帳號怎麼申請〉步驟一補上實際入口連結：從零開始的 Workspace for Education 註冊頁、已有 Workspace 的升級入口（管理主控台網域頁面）、Google 官方說明頁。
