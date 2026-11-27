@@ -3,6 +3,10 @@
 本網站的版本號採 SemVer（主.次.修）。單一來源是根目錄的 `VERSION` 檔，
 頁尾顯示的版本號由 `sitemap/apply-version.py` 依該檔寫入全站頁面。
 
+## v1.43.56（2026-11-27）
+
+主選單「教學資源」下拉新增「Classroom」入口，連到 Classroom 分類頁（`/knowledge/topic/classroom`，含 15 篇 Classroom 相關文章），全站 207 頁都有，增加站內內部連結與曝光。
+
 ## v1.43.55（2026-11-27）
 
 搜尋曝光優化第一輪（依 GSC 近 3 個月實際搜尋字診斷）：Gemini 教育版、Gemini 免費給師生兩篇的延伸閱讀補上學校 AI 助手比較（ai-comparison）與 Gemini 認證（gemini-certification）連結；Gemini 認證頁描述加上「考試免費，但目前沒有中文版」（對照 Google 官方 FAQ 的 13 種考試語言確認）。診斷結論：gemini-flow-howto 曝光 82% 在台灣，主要來自「flow」「google flow」短字，屬找工具入口的搜尋，不改標題；padlet、認證頁標題已含最高曝光搜尋字，不動。
